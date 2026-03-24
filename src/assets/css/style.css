@@ -330,7 +330,7 @@ a:focus-visible {
 
 .profile-photo {
   float: left;
-  width: 275px;
+  width: 265px;
   border-radius: var(--radius-lg);
   object-fit: cover;
   box-shadow: var(--shadow-md);
@@ -1248,7 +1248,7 @@ main.container .page-intro {
 
   /* Hero float: keep float on mobile, just smaller */
   .profile-photo {
-    width: 160px;
+    width: 185px;
     margin: 0.2rem 1.25rem 0.5rem 0;
   }
 
@@ -1363,7 +1363,7 @@ main.container .page-intro {
   }
 
   .profile-photo {
-    width: 130px;
+    width: 150px;
     margin-right: 1rem;
   }
 
