@@ -1677,5 +1677,25 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "university-map-saunders",
+    "title": "Mapping the Structural Divide: U.S. Universities vs AI Disruption",
+    "url": "https://kylesaunders.com/university-map/",
+    "author": "Kyle Saunders",
+    "date": "2026-03",
+    "description": "Interactive map of 1,556 U.S. universities across two dimensions: institutional resilience and post-college market positioning. Visualizes which schools are structurally positioned to weather demographic decline, fiscal stress, and AI disruption. Built with Claude.",
+    "category": "Commentary & Analysis",
+    "subcategory": "Industry Analysis",
+    "tags": [
+      "economics",
+      "labor",
+      "teaching",
+      "tools"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
