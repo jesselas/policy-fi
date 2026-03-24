@@ -1637,7 +1637,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Difference-in-differences analysis of LLM adoption across 25 leading economics journals. Evidence on how AI is changing research output."
   },
   {
     "id": "university-map-saunders",
@@ -1657,7 +1658,8 @@
     "featured": false,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Interactive map of 1,556 U.S. universities showing resilience to AI disruption, demographic decline, and fiscal stress."
   },
   {
     "id": "llm-friendly-academic-papers-goldsmith-pinkham",
@@ -1677,7 +1679,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Proposes bundling papers with llms.txt files and markdown so AI can better understand research limitations and scope."
   },
   {
     "id": "research-paper-disappear-economics-cowen",
@@ -1697,7 +1700,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Cowen argues the research paper is no longer scarce — AI can review and improve any paper. Top journals already experimenting with AI reviewing."
   },
   {
     "id": "claude-code-for-academics-spina",
@@ -1719,7 +1723,8 @@
     "featured": false,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Presentation slides and tools for using Claude Code in academic research, including an \"Editor\" persona for writing."
   },
   {
     "id": "claude-blattman-ai-professionals",
@@ -1740,6 +1745,7 @@
     "featured": false,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Chris Blattman (UChicago Harris) shares AI workflows for knowledge workers — from prompting basics to Claude Code automation, with downloadable templates."
   }
 ]
