@@ -1697,5 +1697,25 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "llm-friendly-academic-papers-goldsmith-pinkham",
+    "title": "LLM-Friendly Academic Papers: A Proposal",
+    "url": "https://paulgp.substack.com/p/llm-friendly-academic-papers-a-proposal",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-03",
+    "description": "Proposes a standard for making academic papers more accessible to LLMs — bundling papers with an llms.txt orientation file and markdown formatting. Addresses the finding that LLM-generated summaries are nearly five times more likely than human-authored ones to overgeneralize scientific conclusions.",
+    "category": "Commentary & Analysis",
+    "subcategory": "Articles & Blog Posts",
+    "tags": [
+      "LLM",
+      "writing",
+      "peer-review",
+      "tools"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
