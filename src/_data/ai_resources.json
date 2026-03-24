@@ -1747,5 +1747,25 @@
     "internal": false,
     "highlight": false,
     "shortDescription": "Chris Blattman (UChicago Harris) shares AI workflows for knowledge workers — from prompting basics to Claude Code automation, with downloadable templates."
+  },
+  {
+    "id": "ai-automation-displacement-imas-shukla",
+    "title": "How Will AI-Driven Automation Actually Affect Jobs?",
+    "url": "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
+    "author": "Alex Imas, Soumitra Shukla",
+    "date": "2026-03",
+    "description": "Imas (UChicago Booth) and Shukla (Harvard) argue AI exposure measures are misinterpreted as displacement threats when they indicate task augmentation. The real risk lies in low-dimensional occupations where full automation creates stronger firm incentives to eliminate positions. Uses an O-Ring model to show how partial automation can complement rather than substitute human labor.",
+    "shortDescription": "AI exposure measures predict augmentation, not displacement. The real risk is in low-dimensional jobs where full automation is feasible.",
+    "category": "Research Papers",
+    "subcategory": "Papers & Research",
+    "tags": [
+      "economics",
+      "labor",
+      "LLM"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
