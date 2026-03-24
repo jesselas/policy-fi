@@ -44,7 +44,7 @@ description: "Publications by Jesse Lastunen — tax-benefit microsimulation, so
           <div class="citation-box">
             <div class="citation-text" id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}">{{ pub.citation }}</div>
             <div class="citation-buttons">
-              <button class="citation-copy" data-cite-id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}" data-format="plain" aria-label="Copy citation">Copy</button>
+              <button class="citation-copy" data-cite-id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}" data-format="plain" aria-label="Copy citation">Copy Citation</button>
               <button class="citation-copy" data-bibtex='{"authors":"{{ pub.citation.split(".")[0] | replace("'", "") }}","title":"{{ pub.title | replace("'", "") }}","year":"{{ pub.year }}","venue":"{{ pub.publication | replace("'", "") }}","url":"{{ pub.url or "" }}"}' data-format="bibtex" aria-label="Copy BibTeX">BibTeX</button>
             </div>
           </div>
