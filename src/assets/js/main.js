@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExternalLinks();
   initAccordions();
   initPubToggles();
+  initCitationCopy();
   initResourceFilters();
   initMobileNav();
 });
@@ -132,6 +133,47 @@ function initMobileNav() {
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   }
+}
+
+/* --- Citation Copy Buttons --- */
+function initCitationCopy() {
+  document.querySelectorAll('.citation-copy').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const format = btn.dataset.format;
+      let text = '';
+
+      if (format === 'bibtex') {
+        try {
+          const data = JSON.parse(btn.dataset.bibtex);
+          const key = data.authors.split(',')[0].trim().split(' ').pop().toLowerCase() + data.year;
+          text = '@article{' + key + ',\n';
+          text += '  author = {' + data.authors + '},\n';
+          text += '  title = {' + data.title + '},\n';
+          text += '  year = {' + data.year + '},\n';
+          text += '  journal = {' + data.venue + '}';
+          if (data.url) text += ',\n  url = {' + data.url + '}';
+          text += '\n}';
+        } catch (err) {
+          text = 'Error generating BibTeX';
+        }
+      } else {
+        // Plain citation
+        const citeEl = document.getElementById(btn.dataset.citeId);
+        text = citeEl ? citeEl.textContent.trim() : '';
+      }
+
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1500);
+      });
+    });
+  });
 }
 
 /* --- Search & Filter (AI for Economists page) --- */
