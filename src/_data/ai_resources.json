@@ -1717,5 +1717,25 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "research-paper-disappear-economics-cowen",
+    "title": "When Will the Research Paper Disappear in Economics?",
+    "url": "https://marginalrevolution.com/marginalrevolution/2026/03/when-will-the-research-paper-disappear-in-economics.html",
+    "author": "Tyler Cowen",
+    "date": "2026-03",
+    "description": "Cowen argues the individual research paper is no longer scarce — AI can tweak, improve, or review any paper. Top economics journals are already experimenting with Refine for AI-powered reviewing. Suggests economists should focus on publishing \"the box\" rather than individual papers.",
+    "category": "Commentary & Analysis",
+    "subcategory": "Articles & Blog Posts",
+    "tags": [
+      "economics",
+      "LLM",
+      "writing",
+      "peer-review"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
