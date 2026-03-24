@@ -324,7 +324,7 @@
     "year": 2025,
     "type": "Technical Note",
     "publication": "UNU-WIDER Technical Note Series, 2025",
-    "url": "https://doi.org/10.35188/UNU-WIDER/ISUF5565.",
+    "url": "https://doi.org/10.35188/UNU-WIDER/ISUF5565",
     "abstract": "This technical note documents UGAMOD-TAX, a microsimulation model for personal taxation in Uganda, built using administrative tax records from the Uganda Revenue Authority (URA). It complements the standard survey-based UGAMOD model, developed under UNU-WIDER's SOUTHMOD project, by leveraging detailed PAYE, presumptive tax, and register data. This administrative foundation enables more accurate simulation of specific taxes and their distributional impacts, particularly capturing high-income earners often underrepresented in survey data. This note focuses on the first version of the model, which uses data and tax policy rules from the 2021/2022 financial year. The model enables policymakers to quantitatively evaluate the fiscal and distributional effects of potential tax reforms.",
     "citation": "Kaidu, T., Lastunen, J., Noble, M. & Okello Ayo, J. UGAMOD-TAX: A Microsimulation Model of Taxation in Uganda: Model and Data Documentation, WIDER Technical Note 2025/3, Helsinki: UNU-WIDER, 2025. https://doi.org/10.35188/UNU-WIDER/ISUF5565.",
     "extras": null

@@ -157,7 +157,7 @@
   {
     "id": "users-guide-gpt-llms-econ-research",
     "title": "A User's Guide to GPT and LLMs for Economic Research",
-    "url": "https://kevinbryanecon.com/LLMsforEconResearch.pdf",
+    "url": "https://bcf.princeton.edu/wp-content/uploads/2023/05/A_User_s_Guide_to_GPT_and_LLMs_for_Economic_Research.pdf",
     "author": "Kevin Bryan",
     "date": "2023-05",
     "description": "Kevin Bryan's guide (based on a Markus Academy talk) explaining how LLMs like GPT can assist in economics research tasks (coding, literature review, writing, etc.), with examples and practical tips.",
@@ -722,7 +722,7 @@
   {
     "id": "searchgpt-chatgpt",
     "title": "SearchGPT",
-    "url": "https://chatgpt.com/search",
+    "url": "https://chatgpt.com",
     "author": null,
     "date": null,
     "description": "ChatGPT with real-time web search. Addresses the knowledge cutoff problem and increases answer accuracy with up-to-date facts. Useful for economists looking for most recent stats, news, or policy developments.",
