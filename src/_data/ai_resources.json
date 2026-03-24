@@ -1720,5 +1720,26 @@
     "type": "guide",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "claude-blattman-ai-professionals",
+    "title": "AI for Professionals Who Don't Code",
+    "url": "https://claudeblattman.com/",
+    "author": "Chris Blattman",
+    "date": "2026-01",
+    "description": "Political economist Chris Blattman (UChicago Harris) documents AI tools and workflows for knowledge workers — from chatbot prompting to advanced Claude Code automation. Includes downloadable skills, templates, and case studies for managing scheduling, email, and research without coding.",
+    "category": "Coding with AI",
+    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
+    "tags": [
+      "claude",
+      "coding",
+      "beginner",
+      "tools",
+      "free"
+    ],
+    "featured": false,
+    "type": "guide",
+    "internal": false,
+    "highlight": false
   }
 ]
