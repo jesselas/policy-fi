@@ -1737,5 +1737,27 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "claude-code-for-academics-spina",
+    "title": "Claude Code for Academics (presentation + tools)",
+    "url": "https://github.com/aspi6246/ClaudeCodeTools",
+    "author": "Alessandro Spina",
+    "date": "2026-03",
+    "description": "A gentle introduction to using Claude Code for academics. Includes presentation slides, an \"Editor\" persona for academic writing, and a curated collection of Claude Code tools and workflows for research.",
+    "category": "Coding with AI",
+    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
+    "tags": [
+      "claude",
+      "coding",
+      "writing",
+      "teaching",
+      "free",
+      "open-source"
+    ],
+    "featured": false,
+    "type": "guide",
+    "internal": false,
+    "highlight": false
   }
 ]
