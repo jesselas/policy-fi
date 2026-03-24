@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initPubToggles();
   initCitationCopy();
+  initHighlightTabs();
   initResourceFilters();
   initMobileNav();
 });
@@ -133,6 +134,30 @@ function initMobileNav() {
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   }
+}
+
+/* --- Highlight/Recent Tabs --- */
+function initHighlightTabs() {
+  const tabs = document.querySelectorAll('.highlight-tab');
+  const highlightsPanel = document.getElementById('highlights-panel');
+  const recentPanel = document.getElementById('recent-panel');
+
+  if (!tabs.length || !highlightsPanel || !recentPanel) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      if (tab.dataset.tab === 'highlights') {
+        highlightsPanel.style.display = '';
+        recentPanel.style.display = 'none';
+      } else {
+        highlightsPanel.style.display = 'none';
+        recentPanel.style.display = '';
+      }
+    });
+  });
 }
 
 /* --- Citation Copy Buttons --- */
