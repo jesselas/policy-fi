@@ -330,7 +330,7 @@ a:focus-visible {
 
 .profile-photo {
   float: left;
-  width: 205px;
+  width: 198px;
   border-radius: var(--radius-lg);
   object-fit: cover;
   box-shadow: var(--shadow-md);
