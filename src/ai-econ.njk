@@ -55,9 +55,20 @@ jsonLd:
 
 <p class="page-intro">A curated collection of resources for economists working with AI and LLMs — from research papers and courses to practical tools and coding guides. Maintained by Jesse Lastunen. Last updated: March 2026.</p>
 
+{% set recentEntries = [] %}
+{% set sorted = nonInternal | sort(true, false, 'date') | reverse %}
+{% for entry in sorted %}
+  {% if recentEntries.length < 6 and entry.date %}
+    {% set recentEntries = (recentEntries.push(entry), recentEntries) %}
+  {% endif %}
+{% endfor %}
+
 <div class="info-section">
-  <span class="section-label">Highlights</span>
-  <div class="highlights-grid">
+  <div class="highlight-tabs">
+    <button class="section-label highlight-tab active" data-tab="highlights">Highlights</button>
+    <button class="section-label highlight-tab" data-tab="recent">Recently Added</button>
+  </div>
+  <div class="highlights-grid" id="highlights-panel">
     {% for entry in nonInternal %}
       {% if entry.highlight %}
       <div class="highlight-card">
@@ -66,6 +77,15 @@ jsonLd:
         <div class="highlight-desc">{{ entry.highlightDesc or (entry.description | truncate(180)) }}</div>
       </div>
       {% endif %}
+    {% endfor %}
+  </div>
+  <div class="highlights-grid" id="recent-panel" style="display: none;">
+    {% for entry in recentEntries %}
+    <div class="highlight-card">
+      <div class="highlight-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
+      <div class="highlight-meta">{% if entry.author %}{{ entry.author }}{% endif %}{% if entry.author and entry.date %} · {% endif %}{% if entry.date %}{{ entry.date }}{% endif %}</div>
+      <div class="highlight-desc">{{ entry.description | truncate(180) }}</div>
+    </div>
     {% endfor %}
   </div>
 </div>
