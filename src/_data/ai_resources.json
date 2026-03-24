@@ -700,45 +700,6 @@
     "highlight": false
   },
   {
-    "id": "deepseek-chat",
-    "title": "DeepSeek - Into the Unknown",
-    "url": "https://chat.deepseek.com/",
-    "author": null,
-    "date": null,
-    "description": "Open-source AI chatbot notable for exploratory search capabilities. Unlike normal search which gives well-trodden answers, DeepSeek tries to surface less obvious information and connections. Has a \"DeepThink\" mode for longer multi-step reasoning.",
-    "category": "AI Tools for Research",
-    "subcategory": "Chat & Search Assistants",
-    "tags": [
-      "tools",
-      "LLM",
-      "open-source",
-      "free"
-    ],
-    "featured": false,
-    "type": "tool",
-    "internal": false,
-    "highlight": false
-  },
-  {
-    "id": "searchgpt-chatgpt",
-    "title": "SearchGPT",
-    "url": "https://chatgpt.com",
-    "author": null,
-    "date": null,
-    "description": "ChatGPT with real-time web search. Addresses the knowledge cutoff problem and increases answer accuracy with up-to-date facts. Useful for economists looking for most recent stats, news, or policy developments.",
-    "category": "AI Tools for Research",
-    "subcategory": "Chat & Search Assistants",
-    "tags": [
-      "tools",
-      "GPT",
-      "free"
-    ],
-    "featured": false,
-    "type": "tool",
-    "internal": false,
-    "highlight": false
-  },
-  {
     "id": "manus-ai-agent",
     "title": "Manus - AI Agent",
     "url": "https://manus.im/app",
