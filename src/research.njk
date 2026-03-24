@@ -41,7 +41,13 @@ description: "Publications by Jesse Lastunen — tax-benefit microsimulation, so
           <div class="pub-venue">{{ pub.publication }}</div>
           {% if pub.abstract %}<div class="pub-description">{{ pub.abstract }}</div>{% endif %}
           {% if pub.extras %}<div class="pub-description"><em>{{ pub.extras }}</em></div>{% endif %}
-          <div class="pub-description text-small text-tertiary">{{ pub.citation }}</div>
+          <div class="citation-box">
+            <div class="citation-text" id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}">{{ pub.citation }}</div>
+            <div class="citation-buttons">
+              <button class="citation-copy" data-cite-id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}" data-format="plain" aria-label="Copy citation">Copy</button>
+              <button class="citation-copy" data-bibtex='{"authors":"{{ pub.citation.split(".")[0] | replace("'", "") }}","title":"{{ pub.title | replace("'", "") }}","year":"{{ pub.year }}","venue":"{{ pub.publication | replace("'", "") }}","url":"{{ pub.url or "" }}"}' data-format="bibtex" aria-label="Copy BibTeX">BibTeX</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
