@@ -1,0 +1,227 @@
+/* ==========================================================================
+   policy.fi — Main JavaScript
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initExternalLinks();
+  initAccordions();
+  initPubToggles();
+  initResourceFilters();
+  initMobileNav();
+});
+
+/* --- External links open in new tab --- */
+function initExternalLinks() {
+  document.querySelectorAll('a[href^="http"]').forEach(a => {
+    if (!a.hostname || a.hostname !== window.location.hostname) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    }
+  });
+}
+
+/* --- Accordions --- */
+function initAccordions() {
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const isOpen = header.getAttribute('aria-expanded') === 'true';
+
+      header.setAttribute('aria-expanded', !isOpen);
+      content.classList.toggle('open', !isOpen);
+    });
+
+    // Keyboard support
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        header.click();
+      }
+    });
+  });
+
+  // Set accessibility attributes; respect aria-expanded already set in HTML
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.setAttribute('tabindex', '0');
+    header.setAttribute('role', 'button');
+    // If no aria-expanded set, default to open
+    if (!header.hasAttribute('aria-expanded')) {
+      header.setAttribute('aria-expanded', 'true');
+      const content = header.nextElementSibling;
+      if (content) content.classList.add('open');
+    } else if (header.getAttribute('aria-expanded') === 'true') {
+      const content = header.nextElementSibling;
+      if (content) content.classList.add('open');
+    }
+  });
+}
+
+/* --- Per-Publication Toggles (collapsed by default) --- */
+function initPubToggles() {
+  document.querySelectorAll('.pub-toggle').forEach(toggle => {
+    // Start collapsed
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('tabindex', '0');
+    toggle.setAttribute('role', 'button');
+
+    toggle.addEventListener('click', () => {
+      const details = toggle.nextElementSibling;
+      if (!details) return;
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isOpen);
+      details.classList.toggle('open', !isOpen);
+    });
+
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle.click();
+      }
+    });
+  });
+}
+
+/* --- Mobile Navigation --- */
+function initMobileNav() {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  const header = document.querySelector('.site-header');
+
+  if (!toggle || !links) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close menu when clicking a nav link
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Close menu when tapping outside on mobile
+  document.addEventListener('click', (e) => {
+    if (links.classList.contains('open') && !header.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  // Close menu on resize to desktop
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (window.innerWidth > 768 && links.classList.contains('open')) {
+        closeMenu();
+      }
+    }, 100);
+  });
+
+  function closeMenu() {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+}
+
+/* --- Search & Filter (AI for Economists page) --- */
+function initResourceFilters() {
+  const searchInput = document.getElementById('resource-search');
+  const categoryPills = document.querySelectorAll('#category-filters .filter-pill');
+  const cards = document.querySelectorAll('.resource-card');
+  const groups = document.querySelectorAll('.resource-group');
+  const accordionHeaders = document.querySelectorAll('.resource-group .accordion-header');
+  const countEl = document.getElementById('results-count');
+  const noResults = document.getElementById('no-results');
+  const total = cards.length;
+
+  if (!searchInput || !cards.length) return;
+
+  let activeCategory = 'all';
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    const isFiltering = query || activeCategory !== 'all';
+    let visible = 0;
+
+    cards.forEach(card => {
+      const matchCat = activeCategory === 'all'
+        || card.dataset.category === activeCategory;
+      const matchSearch = !query || card.dataset.searchable.includes(query);
+      const show = matchCat && matchSearch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    // Show/hide category groups
+    groups.forEach(group => {
+      const visibleCards = group.querySelectorAll('.resource-card');
+      let hasVisible = false;
+      visibleCards.forEach(c => {
+        if (c.style.display !== 'none') hasVisible = true;
+      });
+
+      const header = group.querySelector('.accordion-header');
+      const content = group.querySelector('.accordion-content');
+
+      if (!isFiltering) {
+        // Default "All" state: show all groups, but collapsed
+        group.style.display = '';
+        if (header && content) {
+          header.setAttribute('aria-expanded', 'false');
+          content.classList.remove('open');
+        }
+      } else {
+        // Filtering: show groups with matches, auto-expand them
+        group.style.display = hasVisible ? '' : 'none';
+        if (header && content && hasVisible) {
+          header.setAttribute('aria-expanded', 'true');
+          content.classList.add('open');
+        } else if (header && content) {
+          header.setAttribute('aria-expanded', 'false');
+          content.classList.remove('open');
+        }
+      }
+    });
+
+    countEl.textContent = isFiltering
+      ? 'Showing ' + visible + ' of ' + total + ' resources'
+      : total + ' resources — click a category or search to browse';
+    noResults.style.display = (isFiltering && visible === 0) ? '' : 'none';
+  }
+
+  // Search
+  searchInput.addEventListener('input', applyFilters);
+
+  // Category pills
+  categoryPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      categoryPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      activeCategory = pill.dataset.category;
+      applyFilters();
+      const slug = activeCategory === 'all' ? '' : activeCategory.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
+      history.replaceState(null, '', slug ? '#' + slug : window.location.pathname);
+    });
+  });
+
+  // URL hash on load
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const matchPill = Array.from(categoryPills).find(function(p) {
+      const pillSlug = p.dataset.category.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
+      return pillSlug === hash || p.dataset.category === hash;
+    });
+    if (matchPill) matchPill.click();
+  }
+}

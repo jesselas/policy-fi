@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>{{ title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="theme-color" content="#0b525b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="sr-only sr-only-focusable">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="/" class="nav-site-title">Jesse Lastunen</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/"{% if page.url == "/" %} class="active" aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="/research/"{% if page.url == "/research/" %} class="active" aria-current="page"{% endif %}>Research</a></li>
+        <li><a href="/southmod/"{% if page.url == "/southmod/" %} class="active" aria-current="page"{% endif %}>SOUTHMOD</a></li>
+        <li><a href="/ai-econ/"{% if page.url == "/ai-econ/" %} class="active" aria-current="page"{% endif %}>AI for Economists</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ 2026 }} Jesse Lastunen</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
