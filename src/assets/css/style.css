@@ -444,6 +444,30 @@ a:focus-visible {
   padding: 0.3rem 0;
 }
 
+/* --- Datawrapper Map --- */
+.datawrapper-map {
+  margin: 0.75rem 0 0;
+  overflow: hidden;
+}
+
+.datawrapper-map iframe {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .datawrapper-map {
+    max-height: 350px;
+    overflow: hidden;
+    margin: 0.5rem 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .datawrapper-map {
+    max-height: 280px;
+  }
+}
+
 /* --- Accordion --- */
 .accordion-section {
   border: 1px solid var(--border);
