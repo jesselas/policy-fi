@@ -79,10 +79,10 @@
   {
     "id": "simple-macroeconomic-acemoglu",
     "title": "The Simple Macroeconomics of AI",
-    "url": "https://www.dropbox.com/scl/fi/9bglvhbtq1ok196nc69a3/simple-macroeconomic-by-acemoglu.pdf?rlkey=joi5ng994kvvgmvaywvy4pa84&e=1&st=7g2e5m6h&dl=0",
+    "url": "https://www.nber.org/papers/w32487",
     "author": "Daron Acemoglu",
     "date": "2025",
-    "description": "Daron Acemoglu's framework for forecasting AI's impact on growth. It adapts task-based models of automation (Autor et al. 2003) and applies Hulten's theorem to map AI-driven productivity gains to GDP growth. The paper's realistic approach suggests specific functional forms for how AI affects labor and productivity, grounded in empirical estimates.",
+    "description": "Acemoglu evaluates AI's macroeconomic implications using a task-based model. Estimates modest TFP gains (no more than 0.66% over 10 years), arguing early evidence from easy-to-learn tasks may overstate future effects. Published in Economic Policy (2025). See also <a href=\"https://economics.mit.edu/sites/default/files/2024-05/The%20Simple%20Macroeconomics%20of%20AI.pdf\">presentation slides</a>.",
     "category": "Research Papers",
     "subcategory": "Papers & Research",
     "tags": [
