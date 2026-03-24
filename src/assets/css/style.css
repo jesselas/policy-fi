@@ -1148,20 +1148,10 @@ main.container .page-intro {
     display: none;
   }
 
-  /* Hero float: photo above text on mobile */
+  /* Hero float: keep float on mobile, just smaller */
   .profile-photo {
-    float: none;
-    display: block;
-    margin: 0 auto 1rem;
-    width: 150px;
-  }
-
-  .hero-float {
-    text-align: center;
-  }
-
-  .hero-float p {
-    text-align: left;
+    width: 120px;
+    margin: 0.2rem 1.25rem 0.5rem 0;
   }
 
   /* Hero grid fallback */
@@ -1275,7 +1265,8 @@ main.container .page-intro {
   }
 
   .profile-photo {
-    width: 120px;
+    width: 100px;
+    margin-right: 1rem;
   }
 
   /* Accordion body tighter */
