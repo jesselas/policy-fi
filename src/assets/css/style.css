@@ -1034,6 +1034,16 @@ a:focus-visible {
   max-width: 640px;
 }
 
+/* --- Page Updated Note --- */
+.page-updated {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
 /* --- Divider (decorative) --- */
 .divider {
   display: flex;
