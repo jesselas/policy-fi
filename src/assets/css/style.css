@@ -1030,7 +1030,7 @@ a:focus-visible {
   font-size: 1.12rem;
   line-height: 1.65;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   max-width: 640px;
 }
 
