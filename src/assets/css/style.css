@@ -1215,7 +1215,24 @@ main.container .page-intro {
   h2 { font-size: 1.3rem; margin-top: 2rem; }
   h3 { font-size: 1.05rem; }
 
-  /* Nav collapses to hamburger */
+  /* Nav: swap order — hamburger left, name right */
+  .nav-container {
+    flex-direction: row-reverse;
+  }
+
+  .nav-site-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 0.4rem;
+  }
+
+  .nav-site-title::before {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
   .nav-toggle {
     display: flex;
     min-width: 44px;
