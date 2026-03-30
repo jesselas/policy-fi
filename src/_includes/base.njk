@@ -24,7 +24,9 @@
   <meta name="twitter:description" content="{{ description or site.description }}">
   <meta name="twitter:image" content="{{ site.url }}/assets/img/profile.jpg">
 
-  <!-- Favicon -->
+  <!-- Favicon: dark version for light mode, light version for dark mode -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/assets/img/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- Fonts -->
