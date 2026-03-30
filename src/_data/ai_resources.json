@@ -1142,25 +1142,6 @@
     "highlight": false
   },
   {
-    "id": "good-prompts-academic-research-reddit",
-    "title": "Good Prompts for Academic Research (Reddit)",
-    "url": "https://www.reddit.com/r/ChatGPTPromptGenius/comments/171bkic/actually_good_prompts_for_academic_research/",
-    "author": null,
-    "date": null,
-    "description": "Discussion on r/ChatGPTPromptGenius where researchers shared field-tested prompt strategies: literature review prompts, proofreading prompts, data analysis prompts. Vetted to produce useful, not just verbose, results.",
-    "category": "Prompt & Context Engineering",
-    "subcategory": "Academic Research Prompts",
-    "tags": [
-      "GPT",
-      "writing",
-      "economics"
-    ],
-    "featured": false,
-    "type": "other",
-    "internal": false,
-    "highlight": false
-  },
-  {
     "id": "andrew-ng-agentic-reviewer",
     "title": "Andrew NG's Agentic Reviewer: AI for Research Paper Reviews",
     "url": "https://medium.com/data-science-in-your-pocket/andrew-ngs-agentic-reviewer-ai-for-research-paper-reviews-1c2d9cda8086",
