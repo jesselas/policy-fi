@@ -3,71 +3,58 @@
     <clipPath id="clip">
       <circle cx="256" cy="256" r="256"/>
     </clipPath>
-    <radialGradient id="bg" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#121a22"/>
-      <stop offset="100%" stop-color="#060a0e"/>
-    </radialGradient>
     <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f5cc5a" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#f5cc5a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#0b525b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0b525b" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="256" fill="#ffffff"/>
 
   <g clip-path="url(#clip)">
-    <!-- Outer globe ring -->
-    <circle cx="256" cy="256" r="248" fill="none" stroke="#c8d8e0" stroke-width="8" opacity="0.4"/>
+    <circle cx="256" cy="256" r="248" fill="none" stroke="#2a4a54" stroke-width="8" opacity="0.4"/>
 
-    <!-- Globe latitude arcs -->
-    <ellipse cx="256" cy="256" rx="248" ry="120" fill="none" stroke="#b8ccd6" stroke-width="4" opacity="0.25" transform="rotate(-20 256 256)"/>
-    <ellipse cx="256" cy="256" rx="248" ry="120" fill="none" stroke="#b8ccd6" stroke-width="3" opacity="0.14" transform="rotate(25 256 256)"/>
-    <ellipse cx="256" cy="256" rx="248" ry="70" fill="none" stroke="#b8ccd6" stroke-width="2" opacity="0.1" transform="rotate(-8 256 256)"/>
+    <ellipse cx="256" cy="256" rx="248" ry="120" fill="none" stroke="#2a4a54" stroke-width="4" opacity="0.22" transform="rotate(-20 256 256)"/>
+    <ellipse cx="256" cy="256" rx="248" ry="120" fill="none" stroke="#2a4a54" stroke-width="3" opacity="0.12" transform="rotate(25 256 256)"/>
+    <ellipse cx="256" cy="256" rx="248" ry="70" fill="none" stroke="#2a4a54" stroke-width="2" opacity="0.08" transform="rotate(-8 256 256)"/>
+    <ellipse cx="256" cy="256" rx="96" ry="248" fill="none" stroke="#2a4a54" stroke-width="4" opacity="0.22"/>
+    <ellipse cx="256" cy="256" rx="176" ry="248" fill="none" stroke="#2a4a54" stroke-width="3" opacity="0.1"/>
+    <ellipse cx="256" cy="256" rx="40" ry="248" fill="none" stroke="#2a4a54" stroke-width="2" opacity="0.07"/>
 
-    <!-- Globe longitude arcs -->
-    <ellipse cx="256" cy="256" rx="96" ry="248" fill="none" stroke="#b8ccd6" stroke-width="4" opacity="0.25"/>
-    <ellipse cx="256" cy="256" rx="176" ry="248" fill="none" stroke="#b8ccd6" stroke-width="3" opacity="0.12"/>
-    <ellipse cx="256" cy="256" rx="40" ry="248" fill="none" stroke="#b8ccd6" stroke-width="2" opacity="0.08"/>
+    <line x1="96" y1="128" x2="224" y2="208" stroke="#1a3a44" stroke-width="3" opacity="0.3"/>
+    <line x1="224" y1="208" x2="400" y2="144" stroke="#1a3a44" stroke-width="3" opacity="0.3"/>
+    <line x1="224" y1="208" x2="320" y2="352" stroke="#1a3a44" stroke-width="3" opacity="0.3"/>
+    <line x1="320" y1="352" x2="432" y2="304" stroke="#1a3a44" stroke-width="3" opacity="0.3"/>
+    <line x1="96" y1="128" x2="144" y2="336" stroke="#1a3a44" stroke-width="3" opacity="0.3"/>
+    <line x1="144" y1="336" x2="320" y2="352" stroke="#1a3a44" stroke-width="3" opacity="0.3"/>
+    <line x1="400" y1="144" x2="432" y2="304" stroke="#1a3a44" stroke-width="3" opacity="0.3"/>
+    <line x1="224" y1="208" x2="144" y2="336" stroke="#1a3a44" stroke-width="2.5" opacity="0.18"/>
+    <line x1="96" y1="128" x2="400" y2="144" stroke="#1a3a44" stroke-width="2" opacity="0.1"/>
+    <line x1="320" y1="352" x2="208" y2="440" stroke="#1a3a44" stroke-width="2" opacity="0.12"/>
+    <line x1="144" y1="336" x2="80" y2="400" stroke="#1a3a44" stroke-width="2" opacity="0.1"/>
 
-    <!-- Network connection lines -->
-    <line x1="96" y1="128" x2="224" y2="208" stroke="#d0e2ea" stroke-width="3" opacity="0.35"/>
-    <line x1="224" y1="208" x2="400" y2="144" stroke="#d0e2ea" stroke-width="3" opacity="0.35"/>
-    <line x1="224" y1="208" x2="320" y2="352" stroke="#d0e2ea" stroke-width="3" opacity="0.35"/>
-    <line x1="320" y1="352" x2="432" y2="304" stroke="#d0e2ea" stroke-width="3" opacity="0.35"/>
-    <line x1="96" y1="128" x2="144" y2="336" stroke="#d0e2ea" stroke-width="3" opacity="0.35"/>
-    <line x1="144" y1="336" x2="320" y2="352" stroke="#d0e2ea" stroke-width="3" opacity="0.35"/>
-    <line x1="400" y1="144" x2="432" y2="304" stroke="#d0e2ea" stroke-width="3" opacity="0.35"/>
-    <line x1="224" y1="208" x2="144" y2="336" stroke="#d0e2ea" stroke-width="2.5" opacity="0.2"/>
-    <line x1="96" y1="128" x2="400" y2="144" stroke="#d0e2ea" stroke-width="2" opacity="0.12"/>
-    <line x1="320" y1="352" x2="208" y2="440" stroke="#d0e2ea" stroke-width="2" opacity="0.15"/>
-    <line x1="144" y1="336" x2="80" y2="400" stroke="#d0e2ea" stroke-width="2" opacity="0.12"/>
-
-    <!-- Node glows -->
     <circle cx="224" cy="208" r="28" fill="url(#node-glow)"/>
     <circle cx="320" cy="352" r="24" fill="url(#node-glow)"/>
     <circle cx="96" cy="128" r="20" fill="url(#node-glow)"/>
 
-    <!-- Primary data nodes -->
-    <circle cx="96" cy="128" r="14" fill="#f2c856"/>
-    <circle cx="224" cy="208" r="16" fill="#f5cc5a"/>
-    <circle cx="400" cy="144" r="11" fill="#edc050"/>
-    <circle cx="320" cy="352" r="14" fill="#f2c856"/>
-    <circle cx="432" cy="304" r="10" fill="#edc050"/>
-    <circle cx="144" cy="336" r="11" fill="#f5cc5a"/>
+    <circle cx="96" cy="128" r="14" fill="#0b525b"/>
+    <circle cx="224" cy="208" r="16" fill="#0d5e68"/>
+    <circle cx="400" cy="144" r="11" fill="#0b525b"/>
+    <circle cx="320" cy="352" r="14" fill="#0b525b"/>
+    <circle cx="432" cy="304" r="10" fill="#0d5e68"/>
+    <circle cx="144" cy="336" r="11" fill="#0d5e68"/>
 
-    <!-- Secondary nodes -->
-    <circle cx="208" cy="440" r="7" fill="#e0b44d" opacity="0.35"/>
-    <circle cx="80" cy="400" r="6" fill="#e0b44d" opacity="0.25"/>
-    <circle cx="48" cy="256" r="7" fill="#e0b44d" opacity="0.25"/>
-    <circle cx="464" cy="224" r="7" fill="#e0b44d" opacity="0.25"/>
-    <circle cx="256" cy="40" r="7" fill="#e0b44d" opacity="0.25"/>
-    <circle cx="384" cy="420" r="5" fill="#e0b44d" opacity="0.18"/>
-    <circle cx="450" cy="180" r="5" fill="#e0b44d" opacity="0.15"/>
+    <circle cx="208" cy="440" r="7" fill="#0b525b" opacity="0.3"/>
+    <circle cx="80" cy="400" r="6" fill="#0b525b" opacity="0.22"/>
+    <circle cx="48" cy="256" r="7" fill="#0b525b" opacity="0.22"/>
+    <circle cx="464" cy="224" r="7" fill="#0b525b" opacity="0.22"/>
+    <circle cx="256" cy="40" r="7" fill="#0b525b" opacity="0.22"/>
+    <circle cx="384" cy="420" r="5" fill="#0b525b" opacity="0.15"/>
+    <circle cx="450" cy="180" r="5" fill="#0b525b" opacity="0.12"/>
 
-    <!-- Tiny sparkle dots -->
-    <circle cx="170" cy="100" r="2.5" fill="#d8e6ec" opacity="0.15"/>
-    <circle cx="360" cy="260" r="2.5" fill="#d8e6ec" opacity="0.15"/>
-    <circle cx="280" cy="140" r="2" fill="#d8e6ec" opacity="0.12"/>
-    <circle cx="180" cy="280" r="2" fill="#d8e6ec" opacity="0.12"/>
+    <circle cx="170" cy="100" r="2.5" fill="#2a4a54" opacity="0.12"/>
+    <circle cx="360" cy="260" r="2.5" fill="#2a4a54" opacity="0.12"/>
+    <circle cx="280" cy="140" r="2" fill="#2a4a54" opacity="0.1"/>
+    <circle cx="180" cy="280" r="2" fill="#2a4a54" opacity="0.1"/>
   </g>
 </svg>
