@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initPubToggles();
   initCitationCopy();
+  initSeeMore();
   initHighlightTabs();
   initResourceFilters();
   initMobileNav();
@@ -134,6 +135,22 @@ function initMobileNav() {
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   }
+}
+
+/* --- See More Recent --- */
+function initSeeMore() {
+  const btn = document.getElementById('see-more-recent');
+  if (!btn) return;
+
+  let expanded = false;
+
+  btn.addEventListener('click', () => {
+    expanded = !expanded;
+    document.querySelectorAll('.recent-extra').forEach(card => {
+      card.classList.toggle('visible', expanded);
+    });
+    btn.textContent = expanded ? 'Show less' : 'See more recent additions';
+  });
 }
 
 /* --- Highlight/Recent Tabs --- */

@@ -905,6 +905,35 @@ a:focus-visible {
   color: #fff;
 }
 
+/* --- See More Button --- */
+.recent-extra {
+  display: none;
+}
+
+.recent-extra.visible {
+  display: flex;
+}
+
+.see-more-btn {
+  display: block;
+  margin: 0.75rem auto 0;
+  padding: 0.45em 1.4em;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-pure);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.see-more-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* --- Tags / Pills --- */
 .tag {
   display: inline-block;
