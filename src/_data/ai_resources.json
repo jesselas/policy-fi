@@ -1778,7 +1778,12 @@
     "shortDescription": "Bryan reviews 7 books on AI's economic impact in JEL, finding gaps in guidance on transformative AI scenarios policymakers need most.",
     "category": "Research Papers",
     "subcategory": "Papers & Research",
-    "tags": ["economics", "LLM", "advanced", "review"],
+    "tags": [
+      "economics",
+      "LLM",
+      "advanced",
+      "review"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -1794,7 +1799,12 @@
     "shortDescription": "Econometric framework for LLMs in research: high accuracy alone can't protect inference — a small validation sample is needed to debias.",
     "category": "Research Papers",
     "subcategory": "Papers & Research",
-    "tags": ["economics", "LLM", "econometrics", "advanced"],
+    "tags": [
+      "economics",
+      "LLM",
+      "econometrics",
+      "advanced"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -1810,7 +1820,12 @@
     "shortDescription": "Athey & Scott Morton analyze how AI market power creates a 'double harm' for displaced workers through adoption and monopoly pricing.",
     "category": "Research Papers",
     "subcategory": "Papers & Research",
-    "tags": ["economics", "competition", "labor", "policy"],
+    "tags": [
+      "economics",
+      "competition",
+      "labor",
+      "policy"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -1826,7 +1841,12 @@
     "shortDescription": "Korinek's guide to building AI agents that autonomously conduct lit reviews, code, and orchestrate research workflows — with working examples.",
     "category": "Coding with AI",
     "subcategory": "Guides & Tutorials",
-    "tags": ["economics", "LLM", "agents", "coding"],
+    "tags": [
+      "economics",
+      "LLM",
+      "agents",
+      "coding"
+    ],
     "featured": false,
     "type": "guide",
     "internal": false,
@@ -1842,7 +1862,11 @@
     "shortDescription": "Econometric Society meeting at Cornell (June 16-17) bridging CS and economics, with keynotes by Mullainathan, Liang, Wager, and more.",
     "category": "Talks & Videos",
     "subcategory": "Conferences & Events",
-    "tags": ["economics", "conference", "machine learning"],
+    "tags": [
+      "economics",
+      "conference",
+      "machine learning"
+    ],
     "featured": false,
     "type": "other",
     "internal": false,
@@ -1858,7 +1882,11 @@
     "shortDescription": "Flagship NBER Summer Institute session (July 22-24) on digital economics and AI, organized by Brynjolfsson, Goldfarb, and Tucker.",
     "category": "Talks & Videos",
     "subcategory": "Conferences & Events",
-    "tags": ["economics", "conference", "NBER"],
+    "tags": [
+      "economics",
+      "conference",
+      "NBER"
+    ],
     "featured": false,
     "type": "other",
     "internal": false,
@@ -1874,9 +1902,36 @@
     "shortDescription": "Cunningham's accessible breakdown of why LLM measurement error is non-classical and how a validation sample fixes inference.",
     "category": "Commentary & Analysis",
     "subcategory": "Blogs & Commentary",
-    "tags": ["economics", "LLM", "econometrics", "beginner"],
+    "tags": [
+      "economics",
+      "LLM",
+      "econometrics",
+      "beginner"
+    ],
     "featured": false,
     "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "claude-code-economists-goldsmith-pinkham-markus",
+    "title": "Claude Code for Economists (Markus Academy)",
+    "url": "https://www.youtube.com/watch?v=HzgByl5ZsWE",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-03",
+    "description": "Three-part Markus Academy series on using Claude Code for economics research. Part 1: Getting Started. See also <a href=\"https://www.youtube.com/watch?v=Rp17XUPxa4I\">Part 2: Data Analysis</a> and <a href=\"https://www.youtube.com/watch?v=wqLZrKdevHs\">Part 3: Web Scraping</a>.",
+    "shortDescription": "Three-part Markus Academy series: Getting Started, Data Analysis, and Web Scraping with Claude Code for economics research.",
+    "category": "Coding with AI",
+    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
+    "tags": [
+      "claude",
+      "coding",
+      "economics",
+      "free",
+      "beginner"
+    ],
+    "featured": false,
+    "type": "video",
     "internal": false,
     "highlight": false
   }
