@@ -718,42 +718,6 @@
     "highlight": false
   },
   {
-    "id": "copilot-lab-prompts",
-    "title": "Copilot Lab - Prompts",
-    "url": "https://copilot.cloud.microsoft/prompts?ocid=copilot_welcomemail",
-    "author": "Microsoft",
-    "date": null,
-    "description": "Interactive sandbox for learning and experimenting with prompts for Microsoft 365 Copilot. Provides examples across Word, Excel, and other apps.",
-    "category": "AI Tools for Research",
-    "subcategory": "Microsoft Copilot",
-    "tags": [
-      "tools",
-      "beginner"
-    ],
-    "featured": false,
-    "type": "tool",
-    "internal": false,
-    "highlight": false
-  },
-  {
-    "id": "copilot-excel-help",
-    "title": "Copilot in Excel help & learning",
-    "url": "https://copilot.cloud.microsoft/en-US/copilot-excel",
-    "author": "Microsoft",
-    "date": null,
-    "description": "Official guidance on using Copilot within Excel: data exploration, formula generation, and what-if analysis via natural language.",
-    "category": "AI Tools for Research",
-    "subcategory": "Microsoft Copilot",
-    "tags": [
-      "tools",
-      "beginner"
-    ],
-    "featured": false,
-    "type": "tool",
-    "internal": false,
-    "highlight": false
-  },
-  {
     "id": "vscode-stata-kylebutts",
     "title": "kylebutts/vscode-stata - GitHub",
     "url": "https://github.com/kylebutts/vscode-stata",

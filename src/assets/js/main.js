@@ -161,6 +161,8 @@ function initHighlightTabs() {
 
   if (!tabs.length || !highlightsPanel || !recentPanel) return;
 
+  const seeMoreBtn = document.getElementById('see-more-recent');
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
@@ -169,9 +171,11 @@ function initHighlightTabs() {
       if (tab.dataset.tab === 'highlights') {
         highlightsPanel.style.display = '';
         recentPanel.style.display = 'none';
+        if (seeMoreBtn) seeMoreBtn.style.display = 'none';
       } else {
         highlightsPanel.style.display = 'none';
         recentPanel.style.display = '';
+        if (seeMoreBtn) seeMoreBtn.style.display = '';
       }
     });
   });
