@@ -1111,7 +1111,7 @@
     "author": "Anthropic",
     "date": null,
     "description": "Anthropic's official guide with example prompts for Claude. Illustrates techniques like setting role/tone, providing sufficient context, and using few-shot prompting. Each example includes an explanation of why it works well.",
-    "category": "Prompt Engineering",
+    "category": "Prompt & Context Engineering",
     "subcategory": "Guides & Frameworks",
     "tags": [
       "claude",
@@ -1130,7 +1130,7 @@
     "author": null,
     "date": null,
     "description": "Community-created doc on how to optimally provide context to an LLM. Covers strategies for system vs. user message, how to front-load important details, methods to chunk information, and tricks like using delimiters to anchor model attention.",
-    "category": "Prompt Engineering",
+    "category": "Prompt & Context Engineering",
     "subcategory": "Guides & Frameworks",
     "tags": [
       "LLM",
@@ -1148,7 +1148,7 @@
     "author": null,
     "date": null,
     "description": "Discussion on r/ChatGPTPromptGenius where researchers shared field-tested prompt strategies: literature review prompts, proofreading prompts, data analysis prompts. Vetted to produce useful, not just verbose, results.",
-    "category": "Prompt Engineering",
+    "category": "Prompt & Context Engineering",
     "subcategory": "Academic Research Prompts",
     "tags": [
       "GPT",
@@ -1167,7 +1167,7 @@
     "author": "Andrew Ng",
     "date": null,
     "description": "Summary of Andrew Ng's project using an AI agent as a reviewer for research papers. The agent follows a reviewing protocol - reading, checking completeness, critiquing each section. Results matched expert reviewers ~60-70% of the time on decisions.",
-    "category": "Prompt Engineering",
+    "category": "Prompt & Context Engineering",
     "subcategory": "Academic Research Prompts",
     "tags": [
       "peer-review",
