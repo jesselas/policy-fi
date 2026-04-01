@@ -131,6 +131,39 @@ function initMobileNav() {
     }, 100);
   });
 
+  // Swipe up to close menu on mobile
+  let touchStartY = 0;
+  let touchCurrentY = 0;
+
+  links.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+    touchCurrentY = touchStartY;
+  }, { passive: true });
+
+  links.addEventListener('touchmove', (e) => {
+    touchCurrentY = e.touches[0].clientY;
+    const diff = touchCurrentY - touchStartY;
+    // Swiping up — slide menu up in real time
+    if (diff < 0 && links.classList.contains('open')) {
+      links.style.transform = 'translateY(' + diff + 'px)';
+      links.style.opacity = Math.max(0, 1 + diff / 120);
+      links.style.transition = 'none';
+    }
+  }, { passive: true });
+
+  links.addEventListener('touchend', () => {
+    const diff = touchCurrentY - touchStartY;
+    links.style.transition = '';
+    links.style.transform = '';
+    links.style.opacity = '';
+    // If swiped up more than 50px, close
+    if (diff < -50 && links.classList.contains('open')) {
+      closeMenu();
+    } else if (diff > 50 && !links.classList.contains('open')) {
+      // Swipe down on closed menu area — open (handled by toggle)
+    }
+  }, { passive: true });
+
   function closeMenu() {
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
