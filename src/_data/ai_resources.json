@@ -574,7 +574,7 @@
     "author": "LegalNodes",
     "date": "2025-08",
     "description": "Interactive tracker summarizing AI-related laws and proposals across countries. Shows the EU's AI Act status, US sectoral AI bills, China's algorithm regulations, etc. Indicates a trend: many jurisdictions converging on rules for AI transparency, risk assessment, and accountability, though approaches differ.",
-    "category": "Policy & Governance",
+    "category": "Commentary & Analysis",
     "tags": [
       "regulation",
       "ethics"
@@ -592,7 +592,7 @@
     "author": "UK Cabinet Office",
     "date": "2024-01",
     "description": "UK Cabinet Office guidance on using generative AI in government services. Outlines principles: transparency (disclose AI-generated content), accountability (human oversight of AI decisions), and security (ensuring prompts/outputs don't leak sensitive data). Includes use-case examples and procurement standards.",
-    "category": "Policy & Governance",
+    "category": "Commentary & Analysis",
     "tags": [
       "regulation",
       "ethics",
@@ -611,7 +611,7 @@
     "author": "White & Case",
     "date": null,
     "description": "Region-by-region roundup of AI regulatory developments. US tracker covers federal initiatives (NIST AI Risk Framework, draft bills) and state laws on AI. Updated frequently.",
-    "category": "Policy & Governance",
+    "category": "Commentary & Analysis",
     "tags": [
       "regulation",
       "ethics"
@@ -698,24 +698,6 @@
     "internal": false,
     "highlight": false,
     "shortDescription": "\"Talk to Scholar\" feature allowing natural language questions against scholarly literature."
-  },
-  {
-    "id": "manus-ai-agent",
-    "title": "Manus - AI Agent",
-    "url": "https://manus.im/app",
-    "author": "Manus AI",
-    "date": null,
-    "description": "A general autonomous agent platform. Goes beyond chat - Manus can execute tasks across apps and the web: research, create presentations, schedule, draft documents, build simple websites. Works like a virtual executive assistant that not only finds answers but performs actions.",
-    "category": "AI Tools for Research",
-    "tags": [
-      "tools",
-      "LLM"
-    ],
-    "featured": true,
-    "type": "tool",
-    "internal": false,
-    "highlight": false,
-    "shortDescription": "A general autonomous agent platform."
   },
   {
     "id": "vscode-stata-kylebutts",
@@ -1068,24 +1050,6 @@
     "shortDescription": "Thread on using agents (e.g., GPT-Engineer/Manus) to build projects without being a traditional programmer."
   },
   {
-    "id": "llm-interview-questions-pdf",
-    "title": "LLM Interview Questions",
-    "url": "https://drive.google.com/file/d/1wolNOcHzi7-sKhj5Hdh9awC9Z9dWuWMC/view?pli=1",
-    "author": null,
-    "date": null,
-    "description": "PDF compiling common interview questions for roles involving large language models. Covers conceptual and practical questions on transformer architecture, few-shot learning, tokenization, fine-tuning vs. prompting, and evaluation metrics.",
-    "category": "Courses & Learning",
-    "tags": [
-      "LLM",
-      "advanced"
-    ],
-    "featured": false,
-    "type": "other",
-    "internal": false,
-    "highlight": false,
-    "shortDescription": "PDF compiling common interview questions for roles involving large language models."
-  },
-  {
     "id": "openai-o1-agents-use-cases",
     "title": "OpenAI o1 for Agents and AI Use Cases",
     "url": "https://www.youtube.com/watch?v=IBYbLIhYGp8",
@@ -1111,7 +1075,7 @@
     "author": "Anthropic",
     "date": null,
     "description": "Anthropic's official guide with example prompts for Claude. Illustrates techniques like setting role/tone, providing sufficient context, and using few-shot prompting. Each example includes an explanation of why it works well.",
-    "category": "Prompt & Context Engineering",
+    "category": "Coding with AI",
     "tags": [
       "claude",
       "LLM",
@@ -1130,7 +1094,7 @@
     "author": null,
     "date": null,
     "description": "Community-created doc on how to optimally provide context to an LLM. Covers strategies for system vs. user message, how to front-load important details, methods to chunk information, and tricks like using delimiters to anchor model attention.",
-    "category": "Prompt & Context Engineering",
+    "category": "Coding with AI",
     "tags": [
       "LLM",
       "advanced"
@@ -1148,7 +1112,7 @@
     "author": "Andrew Ng",
     "date": null,
     "description": "Summary of Andrew Ng's project using an AI agent as a reviewer for research papers. The agent follows a reviewing protocol - reading, checking completeness, critiquing each section. Results matched expert reviewers ~60-70% of the time on decisions.",
-    "category": "Prompt & Context Engineering",
+    "category": "Coding with AI",
     "tags": [
       "peer-review",
       "LLM",
