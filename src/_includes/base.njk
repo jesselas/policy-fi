@@ -63,11 +63,12 @@
 
   <main id="main-content" class="container">
     {{ content | safe }}
+    {% include "footer-links.njk" %}
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; {{ 2026 }} Jesse Lastunen</p>
+      <p>&copy; {{ currentYear }} Jesse Lastunen</p>
     </div>
   </footer>
 

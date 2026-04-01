@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
 });
 
+/* --- Utility: debounce --- */
+function debounce(fn, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
 /* --- External links open in new tab --- */
 function initExternalLinks() {
   document.querySelectorAll('a[href^="http"]').forEach(a => {
@@ -324,8 +333,8 @@ function initResourceFilters() {
     noResults.style.display = (isFiltering && visible === 0) ? '' : 'none';
   }
 
-  // Search
-  searchInput.addEventListener('input', applyFilters);
+  // Search (debounced to avoid excessive DOM reflows)
+  searchInput.addEventListener('input', debounce(applyFilters, 150));
 
   // Category pills
   categoryPills.forEach(pill => {
@@ -348,4 +357,8 @@ function initResourceFilters() {
     });
     if (matchPill) matchPill.click();
   }
+
+  // Show initial resource count
+  countEl.style.display = '';
+  applyFilters();
 }

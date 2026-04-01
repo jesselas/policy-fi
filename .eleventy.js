@@ -1,6 +1,11 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
+  // Dynamic date values
+  eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
+  eleventyConfig.addGlobalData("buildMonth", new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' }));
+  eleventyConfig.addGlobalData("buildDate", new Date().toISOString().split('T')[0]);
+
   // "First Author, et al." for 3+ authors
   eleventyConfig.addFilter("shortAuthor", function (author) {
     if (!author) return "";
