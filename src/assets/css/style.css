@@ -1271,7 +1271,7 @@ main.container .page-intro {
   }
 
   .nav-links {
-    display: none;
+    display: flex;
     position: absolute;
     top: 3.75rem;
     left: 0;
@@ -1283,10 +1283,30 @@ main.container .page-intro {
     border-bottom: 1px solid var(--border);
     padding: 0.5rem 0;
     box-shadow: var(--shadow-md);
+    /* Slide animation */
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
   }
 
   .nav-links.open {
-    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Hamburger to X animation */
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
   }
 
   /* Touch-friendly tap targets (min 44px) */
