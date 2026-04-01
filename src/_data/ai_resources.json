@@ -7,7 +7,6 @@
     "date": "2026-01",
     "description": "Proposes integrating economic theory into ML via \"theory-guided AI.\" The authors argue that theory aids external validity, but \"particular functional forms we fit to get analytic tractability involve many assumptions that go beyond theoretical restrictions\" (@Afinetheorem). In other words, using structural restrictions can regularize ML models without imposing ad-hoc functional assumptions.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -16,7 +15,8 @@
     "featured": true,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Proposes integrating economic theory into ML via \"theory-guided AI.\" The authors argue that theory aids external validity, but \"particular functional forms..."
   },
   {
     "id": "nber-w34330-making-ai-count",
@@ -26,7 +26,6 @@
     "date": "2025-10",
     "description": "Diane Coyle & John Poquiz discuss how transformative AI challenges current economic statistics. They outline how GDP and productivity measures miss AI-driven outputs and propose new metrics to better capture AI's impact on productivity and output.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "growth",
@@ -35,7 +34,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Diane Coyle & John Poquiz discuss how transformative AI challenges current economic statistics."
   },
   {
     "id": "general-social-agents-manning",
@@ -45,7 +45,6 @@
     "date": "2025-09",
     "description": "Manning & John Horton propose a method to build AI agents grounded in economic theory and data. They create agents using human data from \"seed\" games and theory-based instructions, then show in 883,320 novel game simulations that these agents predict human play better than standard game-theoretic models. This demonstrates AI's potential to generalize behavioral predictions in new strategic settings.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -54,7 +53,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Manning & John Horton propose a method to build AI agents grounded in economic theory and data."
   },
   {
     "id": "ai-assisted-academic-writing-bryan",
@@ -64,7 +64,6 @@
     "date": "2025-02",
     "description": "An experiment where an entire review paper was drafted by OpenAI's GPT-o3. It discusses how academia might adapt to AI-written text, covers current AI capabilities for drafting and literature surveys, weighs benefits vs. risks (misinformation, plagiarism), provides a 10-year outlook, and concludes with recommendations for journals and researchers to harness AI's benefits while safeguarding integrity (e.g. transparency about AI use).",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "writing",
       "LLM",
@@ -74,7 +73,8 @@
     "featured": true,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "An experiment where an entire review paper was drafted by OpenAI's GPT-o3."
   },
   {
     "id": "simple-macroeconomic-acemoglu",
@@ -84,7 +84,6 @@
     "date": "2025",
     "description": "Acemoglu evaluates AI's macroeconomic implications using a task-based model. Estimates modest TFP gains (no more than 0.66% over 10 years), arguing early evidence from easy-to-learn tasks may overstate future effects. Published in Economic Policy (2025). See also <a href=\"https://economics.mit.edu/sites/default/files/2024-05/The%20Simple%20Macroeconomics%20of%20AI.pdf\">presentation slides</a>.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "growth",
@@ -94,17 +93,17 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Acemoglu evaluates AI's macroeconomic implications using a task-based model."
   },
   {
     "id": "llms-collaborate-reason-korinek",
-    "title": "LLMs Learn to Collaborate and Reason - Journal of Economic Literature",
+    "title": "LLMs Learn to Collaborate and Reason (JEL)",
     "url": "https://www.aeaweb.org/content/file?id=21904",
     "author": "Anton Korinek",
     "date": "2024-11",
     "description": "Anton Korinek's JEL article on integrating generative AI into research workflows. It serves as a hands-on guide for using LLMs in economics, with emphasis on model reasoning and collaborative tools for economists.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -113,7 +112,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Anton Korinek's JEL article on integrating generative AI into research workflows."
   },
   {
     "id": "deep-learning-economists-dell",
@@ -123,7 +123,6 @@
     "date": "2024-07",
     "description": "Comprehensive review of deep learning methods for economists (NBER WP 32768). Discusses how CNNs and transformers can impute structure from unstructured data like satellite images or text. Covers classification, record linkage, generative models, and introduces the EconDL companion site with demo notebooks. Emphasizes that with proper tuning, deep nets scale affordably to millions/billions of observations.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "python",
@@ -133,7 +132,8 @@
     "featured": true,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Comprehensive review of deep learning methods for economists (NBER WP 32768)."
   },
   {
     "id": "predicting-social-assistance-bias",
@@ -143,7 +143,6 @@
     "date": "2024-01",
     "description": "Dietrich, Malerba & Gassmann introduce a welfare-based evaluation of bias in ML targeting. Using proxy means test models for cash transfers, they weight targeting errors by income level and show that label biases and unstable model weights substantially understate welfare losses, unfairly disadvantaging some groups.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "development",
@@ -152,7 +151,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Dietrich, Malerba & Gassmann introduce a welfare-based evaluation of bias in ML targeting."
   },
   {
     "id": "users-guide-gpt-llms-econ-research",
@@ -162,7 +162,6 @@
     "date": "2023-05",
     "description": "Kevin Bryan's guide (based on a Markus Academy talk) explaining how LLMs like GPT can assist in economics research tasks (coding, literature review, writing, etc.), with examples and practical tips.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -172,7 +171,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Kevin Bryan's guide (based on a Markus Academy talk) explaining how LLMs like GPT can assist in economics research tasks (coding, literature review,..."
   },
   {
     "id": "homo-silicus-horton",
@@ -182,7 +182,6 @@
     "date": "2023-04",
     "description": "John J. Horton et al. explore using GPT-3 as \"Homo silicus\" - a simulated economic agent endowed with preferences and information to run virtual economic experiments. They show LLM agents can replicate classic experimental findings and easily test policy variations in silico.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -192,7 +191,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "John J."
   },
   {
     "id": "economics-of-ai-coursera-korinek",
@@ -202,7 +202,6 @@
     "date": "2026-01",
     "description": "A free online course (MA/PhD level) taught by Anton Korinek. Covers: the nature of intelligence and information (Week 1); modeling technological progress with AI (Week 2); AI's impact on economic growth, including scenarios like super-exponential \"singularity\" growth (Week 3); implications for labor markets and inequality (Week 4); and policy responses in the Age of AI (Week 5).",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Educational Resources",
     "tags": [
       "economics",
       "growth",
@@ -213,17 +212,17 @@
     "featured": false,
     "type": "course",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "A free online course (MA/PhD level) taught by Anton Korinek."
   },
   {
     "id": "doing-data-analysis-with-ai-bekes",
-    "title": "Doing Data Analysis with AI - Week 00: AI-Assisted Coding Prep",
+    "title": "Doing Data Analysis with AI (Course)",
     "url": "https://gabors-data-analysis.com/ai-course/week00/",
     "author": "Gabor Bekes",
     "date": "2026-01",
     "description": "An open course by Gabor Bekes for incorporating AI into data analysis workflow. Assumes basic econometrics knowledge and teaches how to use LLMs for coding and research. Weekly modules include: coding with AI (Week 0), LLM Review (Week 1), text-as-data (Weeks 5-6), and AI for research including regression controls, IV, diff-in-diff (Weeks 9-11). Open-source with assignments and an AI glossary.",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Educational Resources",
     "tags": [
       "economics",
       "coding",
@@ -234,7 +233,8 @@
     "featured": false,
     "type": "course",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "An open course by Gabor Bekes for incorporating AI into data analysis workflow."
   },
   {
     "id": "nber-transformative-ai-workshop-2025",
@@ -244,7 +244,6 @@
     "date": "2025-09",
     "description": "An NBER workshop focusing on transformative AI. Researchers presented work on long-term AI impacts - from AI-driven growth models to AI's effect on labor and innovation policy. (Organized by Anton Korinek.)",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Educational Resources",
     "tags": [
       "economics",
       "growth",
@@ -253,7 +252,8 @@
     "featured": false,
     "type": "other",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "An NBER workshop focusing on transformative AI."
   },
   {
     "id": "kevin-bryan-economics-teaching",
@@ -263,7 +263,6 @@
     "date": "2025-09",
     "description": "Details Kevin Bryan's innovative use of AI in economics education. In 2023 he developed AI-based \"virtual TAs\" that answer student questions and generate adaptive quiz questions, greatly improving engagement. Also details his project with Joshua Gans (All Day TA) to personalize learning via AI tutors.",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Educational Resources",
     "tags": [
       "economics",
       "teaching",
@@ -272,7 +271,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Details Kevin Bryan's innovative use of AI in economics education."
   },
   {
     "id": "aea-2026-ai-labor-market-li",
@@ -282,7 +282,6 @@
     "date": "2026-01",
     "description": "A high-profile AEA session featuring economists discussing how AI is affecting labor markets. Topics included new evidence on AI-induced job polarization, the impact of generative AI on programmer productivity, and firms' adoption of AI. Early findings suggest AI can increase productivity within certain high-skill jobs but might enable broader automation of routine cognitive tasks. Friday, Jan 3, 2026, 10:15 AM - 12:15 PM (EST).",
     "category": "Talks & Videos",
-    "subcategory": "Talks & Videos on AI in Economics",
     "tags": [
       "economics",
       "labor",
@@ -291,7 +290,8 @@
     "featured": true,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "A high-profile AEA session featuring economists discussing how AI is affecting labor markets."
   },
   {
     "id": "aea-2026-language-models-economics-ash",
@@ -301,7 +301,6 @@
     "date": "2026-01",
     "description": "AEA 2026 panel focusing on LLM applications in economic research. Presentations covered using LLMs to parse legal and regulatory text, LLM-based agents for conducting simulated experiments (as in Homo Silicus), and improvements in multilingual models for development economics. Sunday, Jan 5, 2026, 10:15 AM - 12:15 PM (EST).",
     "category": "Talks & Videos",
-    "subcategory": "Talks & Videos on AI in Economics",
     "tags": [
       "economics",
       "LLM",
@@ -310,7 +309,8 @@
     "featured": true,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "AEA 2026 panel focusing on LLM applications in economic research."
   },
   {
     "id": "prompting-insights-golub-markus",
@@ -320,7 +320,6 @@
     "date": "2025-12",
     "description": "Benjamin Golub overviews AI tools that can accelerate research. Part 1: introduces Cursor, an AI-enhanced code editor. Part 2: discusses agents and custom tools like Refine.ink for draft review. Emphasizes prompting techniques and \"low-hanging\" uses of AI. (Markus Academy Episode 154)",
     "category": "Talks & Videos",
-    "subcategory": "Talks & Videos on AI in Economics",
     "tags": [
       "economics",
       "tools",
@@ -329,7 +328,8 @@
     "featured": false,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Benjamin Golub overviews AI tools that can accelerate research."
   },
   {
     "id": "cursor-demo-golub",
@@ -339,7 +339,6 @@
     "date": "2025-12",
     "description": "Hands-on Cursor IDE demo showing AI-assisted coding for economic research. Live-codes an example showing how to ask the LLM to generate boilerplate, explain errors, and explore model variations.",
     "category": "Talks & Videos",
-    "subcategory": "Talks & Videos on AI in Economics",
     "tags": [
       "coding",
       "tools",
@@ -348,7 +347,8 @@
     "featured": false,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Hands-on Cursor IDE demo showing AI-assisted coding for economic research."
   },
   {
     "id": "refine-ink-demo-golub",
@@ -358,7 +358,6 @@
     "date": "2025-12",
     "description": "Refine.ink demo showing AI-generated referee-style feedback on a draft (clarity, consistency, missing citations), with emphasis on human judgment. Showcases how AI can assist in the evaluation stage of research.",
     "category": "Talks & Videos",
-    "subcategory": "Talks & Videos on AI in Economics",
     "tags": [
       "tools",
       "writing",
@@ -367,7 +366,8 @@
     "featured": false,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Refine.ink demo showing AI-generated referee-style feedback on a draft (clarity, consistency, missing citations), with emphasis on human judgment."
   },
   {
     "id": "kevin-bryan-gpt-economics-youtube",
@@ -377,7 +377,6 @@
     "date": "2023-05",
     "description": "Markus Academy lecture where Kevin Bryan demonstrates practical ways GPT-4 can augment economic research: debugging Stata code, summarizing literature, checking proofs, with cautions about verification.",
     "category": "Talks & Videos",
-    "subcategory": "Talks & Videos on AI in Economics",
     "tags": [
       "economics",
       "GPT",
@@ -387,7 +386,8 @@
     "featured": false,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Markus Academy lecture where Kevin Bryan demonstrates practical ways GPT-4 can augment economic research: debugging Stata code, summarizing literature,..."
   },
   {
     "id": "brookings-language-models-autor",
@@ -396,8 +396,7 @@
     "author": "David Autor, Anton Korinek",
     "date": "2023-03",
     "description": "A Brookings panel moderated by Anton Korinek with David Autor, plus ChatGPT and Claude as special \"guests.\" They discuss cognitive automation, LLMs augmenting worker productivity, the need for worker retraining and policies.",
-    "category": "Talks & Videos",
-    "subcategory": "Talks & Videos on AI in Economics",
+    "category": "Commentary & Analysis",
     "tags": [
       "economics",
       "labor",
@@ -407,7 +406,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "A Brookings panel moderated by Anton Korinek with David Autor, plus ChatGPT and Claude as special \"guests.\" They discuss cognitive automation, LLMs..."
   },
   {
     "id": "awesome-econ-ai-stuff-mele",
@@ -417,7 +417,6 @@
     "date": null,
     "description": "Curated collection of AI resources for economists: tools, papers, tutorials, and guides for using AI in economic research.",
     "category": "Commentary & Analysis",
-    "subcategory": "Curated Resource Lists",
     "tags": [
       "economics",
       "tools",
@@ -427,7 +426,8 @@
     "type": "other",
     "internal": false,
     "highlight": true,
-    "highlightDesc": "Antonio Mele's comprehensive, frequently updated collection of AI resources for economists — tools, papers, tutorials, and practical guides. An essential starting point."
+    "highlightDesc": "Antonio Mele's comprehensive, frequently updated collection of AI resources for economists — tools, papers, tutorials, and practical guides. An essential starting point.",
+    "shortDescription": "Curated collection of AI resources for economists: tools, papers, tutorials, and guides for using AI in economic research."
   },
   {
     "id": "research-time-of-ai-goldsmith-pinkham",
@@ -437,7 +437,6 @@
     "date": "2026-03",
     "description": "Paul Goldsmith-Pinkham (Assistant Professor of Finance, Yale SOM) argues AI tools compress research timelines while preserving what makes research genuinely valuable. Outlines eight research stages (ideation, design, data assembly, analysis, robustness testing, writing, submission, publication) and argues LLMs accelerate transitions between stages but don't eliminate the need for careful iteration. Addresses two central anxieties: (1) \"slop\" - more papers published faster with less rigor, p-hacking supercharged by automation; and (2) career anxiety - execution skills (coding, writing) now have lower market value. Claude Code features prominently. Key insight: \"The hard part is still knowing where to walk.\" Skills that distinguish good researchers - taste, institutional knowledge, iterative thinking - become more valuable as execution barriers lower.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts on AI & Economics",
     "tags": [
       "economics",
       "writing",
@@ -448,17 +447,17 @@
     "type": "article",
     "internal": false,
     "highlight": true,
-    "highlightDesc": "Paul Goldsmith-Pinkham (Yale) outlines how AI compresses research timelines across eight stages, from ideation to publication. Argues taste and judgment become more valuable as execution costs fall."
+    "highlightDesc": "Paul Goldsmith-Pinkham (Yale) outlines how AI compresses research timelines across eight stages, from ideation to publication. Argues taste and judgment become more valuable as execution costs fall.",
+    "shortDescription": "Paul Goldsmith-Pinkham (Assistant Professor of Finance, Yale SOM) argues AI tools compress research timelines while preserving what makes research genuinely..."
   },
   {
     "id": "antonio-mele-ai-research-thread-1",
-    "title": "Using AI for Economics Research (thread)",
+    "title": "Using AI for Economics Research",
     "url": "https://x.com/antoniomele101/status/2011750733440294984",
     "author": "Antonio Mele",
     "date": "2026-01",
     "description": "Thread with practical tips for economists using AI in daily workflows. Announces a project to make AI coding assistants more useful for day-to-day work - demonstrating how to prompt AI to transform pseudocode into working Stata code, suggest robustness checks. Also teases Refine, his AI referee tool.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts on AI & Economics",
     "tags": [
       "economics",
       "stata",
@@ -468,17 +467,17 @@
     "featured": true,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Thread with practical tips for economists using AI in daily workflows."
   },
   {
     "id": "antonio-mele-ai-research-thread-2",
-    "title": "Advanced AI Uses in Research (thread)",
+    "title": "Advanced AI Uses in Research",
     "url": "https://x.com/antoniomele101/status/2007755521835544666",
     "author": "Antonio Mele",
     "date": "2026-01",
     "description": "Response to Joshua Gans's \"Reflections on Vibe Researching\" post. Reflects on more advanced uses of AI in research: using GPT-4 to verify mathematical derivations, generate synthetic data for testing empirical strategies. Notes current limitations but the promise: \"Yes, AI can produce new maths results, although just incremental progress seems possible for now.\"",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts on AI & Economics",
     "tags": [
       "economics",
       "GPT",
@@ -487,17 +486,17 @@
     "featured": true,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Response to Joshua Gans's \"Reflections on Vibe Researching\" post."
   },
   {
     "id": "ben-golub-ai-research-reflections",
-    "title": "Reflections on AI and Research (thread)",
+    "title": "Reflections on AI and Research",
     "url": "https://x.com/ben_golub/status/2007503688332652892",
     "author": "Ben Golub",
     "date": "2026-01",
     "description": "Ben Golub emphasizes \"low-risk uses of AI\" that are already yielding returns in research - e.g., using GPT-4 to summarize papers or suggest alternative phrasings. Agrees fully AI-generated research is not yet reliable, but tools like Refine help ensure quality. Balanced view: AI won't replace researchers, but researchers who effectively use AI will outpace those who don't.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts on AI & Economics",
     "tags": [
       "economics",
       "GPT",
@@ -506,7 +505,8 @@
     "featured": true,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Ben Golub emphasizes \"low-risk uses of AI\" that are already yielding returns in research - e.g., using GPT-4 to summarize papers or suggest alternative..."
   },
   {
     "id": "vibe-researching-gans",
@@ -516,7 +516,6 @@
     "date": "2026-01",
     "description": "Joshua Gans conducted a year-long experiment with \"AI-first\" research (\"vibe researching\"), using AI at every stage of writing papers in 2025. His conclusion: the experiment ultimately failed. While AI-generated mathematics checked out, theoretical oversights in game theory and equilibrium analysis went undetected until peer review. Reduced friction meant he pursued more mediocre ideas to completion. LLMs present results with false confidence, tempting researchers into believing they've discovered something genuine. Tools used: ChatGPT (o1-pro and 5.2 Pro), Gemini, and Refine.ink. Key takeaway: AI accelerates research substantially but cannot replace human taste, peer judgment, or the value of letting ideas develop naturally. A must-read for academics experimenting with AI in their research process. See also <a href=\"https://x.com/antoniomele101/status/2007755521835544666\">Antonio Mele's response thread</a>.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts on AI & Economics",
     "tags": [
       "economics",
       "GPT",
@@ -527,7 +526,8 @@
     "type": "article",
     "internal": false,
     "highlight": true,
-    "highlightDesc": "Joshua Gans's candid account of a year-long \"AI-first\" research experiment. Conclusion: AI accelerates output but can't replace human taste — and lower friction leads to pursuing weaker ideas."
+    "highlightDesc": "Joshua Gans's candid account of a year-long \"AI-first\" research experiment. Conclusion: AI accelerates output but can't replace human taste — and lower friction leads to pursuing weaker ideas.",
+    "shortDescription": "Joshua Gans conducted a year-long experiment with \"AI-first\" research (\"vibe researching\"), using AI at every stage of writing papers in 2025."
   },
   {
     "id": "prompts-for-economists-cowen",
@@ -537,7 +537,6 @@
     "date": "2024-01",
     "description": "Tyler Cowen shared example prompts and LLM responses covering six domains identified by Anton Korinek (2023 JEL): ideation & feedback, writing assistance, background research, coding help, data analysis, and math derivations. Curated list assembled by Jesse Lastunen. See also the <a href=\"https://sites.google.com/view/lastunen/ai-for-economists\">example prompts page</a>.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts on AI & Economics",
     "tags": [
       "economics",
       "LLM",
@@ -546,7 +545,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Tyler Cowen shared example prompts and LLM responses covering six domains identified by Anton Korinek (2023 JEL): ideation & feedback, writing assistance,..."
   },
   {
     "id": "homepage-anton-korinek",
@@ -556,7 +556,6 @@
     "date": null,
     "description": "Anton Korinek's research page featuring working papers on the economics of AI, including the Generative AI for Economic Research series, AI Governance Handbook, and the Econ TAI Initiative.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts on AI & Economics",
     "tags": [
       "economics",
       "tools",
@@ -565,17 +564,17 @@
     "featured": false,
     "type": "other",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Anton Korinek's research page featuring working papers on the economics of AI, including the Generative AI for Economic Research series, AI Governance..."
   },
   {
     "id": "global-ai-regulations-tracker",
-    "title": "Global AI Regulations Tracker - LegalNodes",
+    "title": "Global AI Regulations Tracker",
     "url": "https://www.legalnodes.com/article/global-ai-regulations-tracker",
     "author": "LegalNodes",
     "date": "2025-08",
     "description": "Interactive tracker summarizing AI-related laws and proposals across countries. Shows the EU's AI Act status, US sectoral AI bills, China's algorithm regulations, etc. Indicates a trend: many jurisdictions converging on rules for AI transparency, risk assessment, and accountability, though approaches differ.",
     "category": "Policy & Governance",
-    "subcategory": "Government & Policy",
     "tags": [
       "regulation",
       "ethics"
@@ -583,7 +582,8 @@
     "featured": true,
     "type": "other",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Interactive tracker summarizing AI-related laws and proposals across countries."
   },
   {
     "id": "generative-ai-framework-hmg-uk",
@@ -593,7 +593,6 @@
     "date": "2024-01",
     "description": "UK Cabinet Office guidance on using generative AI in government services. Outlines principles: transparency (disclose AI-generated content), accountability (human oversight of AI decisions), and security (ensuring prompts/outputs don't leak sensitive data). Includes use-case examples and procurement standards.",
     "category": "Policy & Governance",
-    "subcategory": "Government & Policy",
     "tags": [
       "regulation",
       "ethics",
@@ -602,17 +601,17 @@
     "featured": false,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "UK Cabinet Office guidance on using generative AI in government services."
   },
   {
     "id": "ai-watch-regulatory-tracker-us",
-    "title": "AI Watch: Global Regulatory Tracker (White & Case)",
+    "title": "AI Watch: Global Regulatory Tracker",
     "url": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states",
     "author": "White & Case",
     "date": null,
     "description": "Region-by-region roundup of AI regulatory developments. US tracker covers federal initiatives (NIST AI Risk Framework, draft bills) and state laws on AI. Updated frequently.",
     "category": "Policy & Governance",
-    "subcategory": "Government & Policy",
     "tags": [
       "regulation",
       "ethics"
@@ -620,7 +619,8 @@
     "featured": true,
     "type": "other",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Region-by-region roundup of AI regulatory developments."
   },
   {
     "id": "storm-stanford-knowledge-curation",
@@ -630,7 +630,6 @@
     "date": null,
     "description": "An experimental system that generates a Wikipedia-like report on any topic with the help of AI. Input a topic and STORM will perform web searches, gather information, and interactively help curate it into a structured article with citations. Uses retrieval-augmented generation. Open-source on <a href=\"<a href=\"https://github.com/stanford-oval/storm\">GitHub</a>\">GitHub</a>.",
     "category": "AI Tools for Research",
-    "subcategory": "Research Tools",
     "tags": [
       "tools",
       "LLM",
@@ -639,7 +638,8 @@
     "featured": false,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "An experimental system that generates a Wikipedia-like report on any topic with the help of AI."
   },
   {
     "id": "refine-ink-ai-feedback",
@@ -649,7 +649,6 @@
     "date": null,
     "description": "An AI \"referee\" for academic writing. Upload a draft and Refine returns a report highlighting issues with correctness, clarity, and consistency - e.g. pointing out if a result doesn't follow from the methodology, or if a term is used inconsistently. Built by Yann Calvó López and Benjamin Golub. \"Refine devotes hours of compute to help you find and fix the issues that matter most to readers and reviewers.\"",
     "category": "AI Tools for Research",
-    "subcategory": "Research Tools",
     "tags": [
       "tools",
       "writing",
@@ -659,7 +658,8 @@
     "type": "tool",
     "internal": false,
     "highlight": true,
-    "highlightDesc": "An AI referee for academic writing, built by Yann Calvó López and economist Benjamin Golub. Upload a draft and Refine returns a detailed report on correctness, clarity, and consistency — catching issues before real peer review."
+    "highlightDesc": "An AI referee for academic writing, built by Yann Calvó López and economist Benjamin Golub. Upload a draft and Refine returns a detailed report on correctness, clarity, and consistency — catching issues before real peer review.",
+    "shortDescription": "An AI \"referee\" for academic writing."
   },
   {
     "id": "paperreview-ai-stanford",
@@ -669,7 +669,6 @@
     "date": null,
     "description": "An experimental agent that acts as a conference reviewer. Input a paper or abstract and it produces a referee report: summarizing contributions, listing strengths and weaknesses, and giving a recommendation. Uses chain-of-thought prompting to emulate how a human reviewer would summarize and then critique.",
     "category": "AI Tools for Research",
-    "subcategory": "Research Tools",
     "tags": [
       "tools",
       "peer-review",
@@ -678,7 +677,8 @@
     "featured": true,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "An experimental agent that acts as a conference reviewer."
   },
   {
     "id": "google-scholar-labs",
@@ -688,7 +688,6 @@
     "date": null,
     "description": "\"Talk to Scholar\" feature allowing natural language questions against scholarly literature. Ask a research question and it will synthesize findings from papers with citations. Uses LLMs fine-tuned on academic text combined with Google's vast index of publications.",
     "category": "AI Tools for Research",
-    "subcategory": "Research Tools",
     "tags": [
       "tools",
       "LLM",
@@ -697,7 +696,8 @@
     "featured": true,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "\"Talk to Scholar\" feature allowing natural language questions against scholarly literature."
   },
   {
     "id": "manus-ai-agent",
@@ -707,7 +707,6 @@
     "date": null,
     "description": "A general autonomous agent platform. Goes beyond chat - Manus can execute tasks across apps and the web: research, create presentations, schedule, draft documents, build simple websites. Works like a virtual executive assistant that not only finds answers but performs actions.",
     "category": "AI Tools for Research",
-    "subcategory": "Chat & Search Assistants",
     "tags": [
       "tools",
       "LLM"
@@ -715,17 +714,17 @@
     "featured": true,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "A general autonomous agent platform."
   },
   {
     "id": "vscode-stata-kylebutts",
-    "title": "kylebutts/vscode-stata - GitHub",
+    "title": "Stata Extension for VS Code",
     "url": "https://github.com/kylebutts/vscode-stata",
     "author": "Kyle Butts",
     "date": null,
     "description": "VS Code extension for Stata: syntax highlighting, snippets, and running Stata code from the editor. Lets economists enjoy VS Code's features (multi-cursor editing, Git integration) and AI coding assistants while working on data analysis in Stata.",
     "category": "Coding with AI",
-    "subcategory": "Developer Tools",
     "tags": [
       "stata",
       "coding",
@@ -734,17 +733,17 @@
     "featured": false,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "VS Code extension for Stata: syntax highlighting, snippets, and running Stata code from the editor."
   },
   {
     "id": "stanford-ai-graduate-certificate",
-    "title": "AI Graduate Certificate (Stanford Online)",
+    "title": "AI Graduate Certificate",
     "url": "https://online.stanford.edu/programs/artificial-intelligence-graduate-certificate",
     "author": "Stanford Online",
     "date": null,
     "description": "A credential consisting of several Stanford courses covering core AI concepts. Aimed at professionals who want structured, high-quality education in AI without committing to a full degree.",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Certificates",
     "tags": [
       "LLM",
       "advanced"
@@ -752,7 +751,8 @@
     "featured": false,
     "type": "course",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "A credential consisting of several Stanford courses covering core AI concepts."
   },
   {
     "id": "intro-generative-ai-llms-castelluccio",
@@ -762,7 +762,6 @@
     "date": "2025-05",
     "description": "Introductory slide deck/webinar explaining how generative models work, plus basics of prompting, fine-tuning, and ethical concerns. Valuable for academics new to AI.",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Certificates",
     "tags": [
       "LLM",
       "beginner",
@@ -771,7 +770,8 @@
     "featured": false,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Introductory slide deck/webinar explaining how generative models work, plus basics of prompting, fine-tuning, and ethical concerns."
   },
   {
     "id": "stanford-transformers-llms-course",
@@ -781,7 +781,6 @@
     "date": "2023-09",
     "description": "By Afshine & Shervine Amidi (Adjunct Lecturers at Stanford). Full course (20+ lectures) covering NLP's deep learning evolution: word embeddings, attention, the Transformer architecture, pre-training vs. fine-tuning, RLHF as used in ChatGPT, and strategies for deploying LLMs efficiently. Balances theory with practical insights. Course website: <a href=\"https://cme295.stanford.edu/syllabus/\">cme295.stanford.edu/syllabus</a>",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Certificates",
     "tags": [
       "LLM",
       "advanced",
@@ -790,17 +789,17 @@
     "featured": true,
     "type": "course",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "By Afshine & Shervine Amidi (Adjunct Lecturers at Stanford)."
   },
   {
     "id": "hugging-face-ai-agents-course",
-    "title": "Welcome to the AI Agents Course - Hugging Face",
+    "title": "AI Agents Course",
     "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
     "author": "Hugging Face",
     "date": "2023-01",
     "description": "Free, hands-on course on building autonomous AI agents, from basics through multi-step reasoning agents that combine LLM reasoning with real-world tool use.",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Certificates",
     "tags": [
       "LLM",
       "coding",
@@ -810,7 +809,8 @@
     "featured": false,
     "type": "course",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Free, hands-on course on building autonomous AI agents, from basics through multi-step reasoning agents that combine LLM reasoning with real-world tool use."
   },
   {
     "id": "ml105-agents-crash-course-dali",
@@ -820,7 +820,6 @@
     "date": "2023-01",
     "description": "3-hour crash course covering how autonomous AI agents work: the Perception-Decision-Action loop, examples like AlphaGo and AutoGPT, and building a simple ReAct-style agent. Slides, colab notebook, and YouTube recording available.",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Certificates",
     "tags": [
       "LLM",
       "python",
@@ -830,7 +829,8 @@
     "featured": true,
     "type": "course",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "3-hour crash course covering how autonomous AI agents work: the Perception-Decision-Action loop, examples like AlphaGo and AutoGPT, and building a simple..."
   },
   {
     "id": "awesome-generative-ai-guide",
@@ -840,7 +840,6 @@
     "date": null,
     "description": "Comprehensive, frequently updated resource hub with papers, demos, tutorials, interview prep, and open-source implementations for generative AI. Structured as an \"Awesome List\" with extra guidance.",
     "category": "Courses & Learning",
-    "subcategory": "Courses & Certificates",
     "tags": [
       "LLM",
       "free",
@@ -849,7 +848,8 @@
     "featured": true,
     "type": "other",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Comprehensive, frequently updated resource hub with papers, demos, tutorials, interview prep, and open-source implementations for generative AI."
   },
   {
     "id": "ai-agents-economics-panjwani",
@@ -859,7 +859,6 @@
     "date": null,
     "description": "A practical introduction for economists who want to use AI agents for literature review, coding, data work, replication, writing, and slides without needing an enterprise-sized budget. Part of the AI MBA platform. See also the related <a href=\"<a href=\"https://www.youtube.com/watch?v=YPv9BqweQIo\">VoxDev talk</a>\">VoxDev talk</a>.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "economics",
       "coding",
@@ -870,7 +869,8 @@
     "type": "guide",
     "internal": false,
     "highlight": true,
-    "highlightDesc": "Practical guide for economists on using AI agents for literature review, coding, data work, replication, writing, and slides — without needing an enterprise budget."
+    "highlightDesc": "Practical guide for economists on using AI agents for literature review, coding, data work, replication, writing, and slides — without needing an enterprise budget.",
+    "shortDescription": "A practical introduction for economists who want to use AI agents for literature review, coding, data work, replication, writing, and slides without needing..."
   },
   {
     "id": "claude-code-quant-social-science-cunningham",
@@ -880,7 +880,6 @@
     "date": null,
     "description": "Ongoing series of 34+ walkthroughs and explanations of using Claude Code for quantitative and empirical social science projects. By the author of Causal Inference: The Mixtape. Topics include: workflow optimization with Deming's zero-error philosophy, comparative audits of causal inference packages (Callaway & Sant'Anna), using Claude Code for cannabis research replication, mobile \"Dispatch\" workflows, and philosophical reflections on AI-assisted discovery. A rich, practitioner-oriented resource for economists adopting Claude Code.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -891,7 +890,8 @@
     "type": "guide",
     "internal": false,
     "highlight": true,
-    "highlightDesc": "Scott Cunningham's ongoing series of 34+ walkthroughs using Claude Code for empirical social science — from causal inference package audits to workflow optimization."
+    "highlightDesc": "Scott Cunningham's ongoing series of 34+ walkthroughs using Claude Code for empirical social science — from causal inference package audits to workflow optimization.",
+    "shortDescription": "Ongoing series of 34+ walkthroughs and explanations of using Claude Code for quantitative and empirical social science projects."
   },
   {
     "id": "cursor-claude-code-agentic-workspace-moore",
@@ -901,7 +901,6 @@
     "date": null,
     "description": "Guide on how to build an agentic workspace using Cursor and Claude Code, aimed at non-technical people.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -911,7 +910,8 @@
     "featured": true,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Guide on how to build an agentic workspace using Cursor and Claude Code, aimed at non-technical people."
   },
   {
     "id": "guide-claude-code-2-shubham",
@@ -921,7 +921,6 @@
     "date": null,
     "description": "Guide on using Claude Code 2.0 and getting better at using coding agents.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -930,7 +929,8 @@
     "featured": true,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Guide on using Claude Code 2.0 and getting better at using coding agents."
   },
   {
     "id": "claude-code-setup-santanna",
@@ -940,7 +940,6 @@
     "date": null,
     "description": "Pedro Sant'Anna's personal Claude Code workflow and setup guide.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -949,7 +948,8 @@
     "featured": true,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Pedro Sant'Anna's personal Claude Code workflow and setup guide."
   },
   {
     "id": "using-claude-code-stata-panjwani",
@@ -959,7 +959,6 @@
     "date": null,
     "description": "Guide on using Claude Code with Stata for economics research.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "stata",
@@ -969,7 +968,8 @@
     "featured": true,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Guide on using Claude Code with Stata for economics research."
   },
   {
     "id": "using-git-claude-code-panjwani",
@@ -979,7 +979,6 @@
     "date": null,
     "description": "Guide on using Git with Claude Code for economists.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -988,7 +987,8 @@
     "featured": true,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Guide on using Git with Claude Code for economists."
   },
   {
     "id": "tips-phd-students-backman",
@@ -998,7 +998,6 @@
     "date": null,
     "description": "Comprehensive resource guide covering the \"hidden curriculum\" of academia. Includes dedicated sections on Using AI, LLMs, Claude Code and Cursor (with links to Golub's AI tools overview, Claude Code/Cursor workflows, NotebookLM, AI agents for research) and Claude Code Skills (presentations, posters, feedback systems). Also covers writing, publishing/refereeing, workflow/tables/graphs, presentations, productivity, coding, and stress management. A one-stop hub for PhD students navigating modern academic research.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -1008,7 +1007,8 @@
     "featured": true,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Comprehensive resource guide covering the \"hidden curriculum\" of academia."
   },
   {
     "id": "statquest-josh-starmer",
@@ -1018,7 +1018,6 @@
     "date": null,
     "description": "Clear, visual explanations of statistics and ML concepts. \"Statistics, Machine Learning, Data Science, and AI seem like very scary topics, but since each technique is really just a combination of small and simple steps, they are actually quite simple.\" Great for building intuition on regression, p-values, neural nets, gradient boosting, etc.",
     "category": "Courses & Learning",
-    "subcategory": "Tutorials & Guides",
     "tags": [
       "teaching",
       "beginner",
@@ -1027,7 +1026,8 @@
     "featured": true,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Clear, visual explanations of statistics and ML concepts."
   },
   {
     "id": "starting-new-project-claude-code",
@@ -1036,8 +1036,7 @@
     "author": null,
     "date": null,
     "description": "Step-by-step case study on building an app with Claude Code as a pair programmer, showing an iterative prompt-test-debug loop. Inspiring for people who have ideas but limited coding skills.",
-    "category": "Courses & Learning",
-    "subcategory": "Tutorials & Guides",
+    "category": "Coding with AI",
     "tags": [
       "claude",
       "coding",
@@ -1046,7 +1045,8 @@
     "featured": true,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Step-by-step case study on building an app with Claude Code as a pair programmer, showing an iterative prompt-test-debug loop."
   },
   {
     "id": "code-with-agents-non-technical-tossell",
@@ -1055,8 +1055,7 @@
     "author": "Ben Tossell",
     "date": "2025-12",
     "description": "Thread on using agents (e.g., GPT-Engineer/Manus) to build projects without being a traditional programmer. Main point: being non-technical is no longer a barrier. Focus on problem descriptions and let AI handle implementation.",
-    "category": "Courses & Learning",
-    "subcategory": "Tutorials & Guides",
+    "category": "Coding with AI",
     "tags": [
       "coding",
       "LLM",
@@ -1065,7 +1064,8 @@
     "featured": true,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Thread on using agents (e.g., GPT-Engineer/Manus) to build projects without being a traditional programmer."
   },
   {
     "id": "llm-interview-questions-pdf",
@@ -1075,7 +1075,6 @@
     "date": null,
     "description": "PDF compiling common interview questions for roles involving large language models. Covers conceptual and practical questions on transformer architecture, few-shot learning, tokenization, fine-tuning vs. prompting, and evaluation metrics.",
     "category": "Courses & Learning",
-    "subcategory": "LLM Technical Resources",
     "tags": [
       "LLM",
       "advanced"
@@ -1083,7 +1082,8 @@
     "featured": false,
     "type": "other",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "PDF compiling common interview questions for roles involving large language models."
   },
   {
     "id": "openai-o1-agents-use-cases",
@@ -1093,7 +1093,6 @@
     "date": null,
     "description": "Overview of OpenAI's o1 release with advanced features for building AI agents: extended context windows, improved function calling, and Vision+Voice unified in agents.",
     "category": "Courses & Learning",
-    "subcategory": "LLM Technical Resources",
     "tags": [
       "LLM",
       "GPT",
@@ -1102,17 +1101,17 @@
     "featured": false,
     "type": "video",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Overview of OpenAI's o1 release with advanced features for building AI agents: extended context windows, improved function calling, and Vision+Voice unified..."
   },
   {
     "id": "anthropic-prompt-library",
-    "title": "Prompt Library (Anthropic)",
+    "title": "Prompt Library",
     "url": "https://docs.anthropic.com/claude/prompt-library",
     "author": "Anthropic",
     "date": null,
     "description": "Anthropic's official guide with example prompts for Claude. Illustrates techniques like setting role/tone, providing sufficient context, and using few-shot prompting. Each example includes an explanation of why it works well.",
     "category": "Prompt & Context Engineering",
-    "subcategory": "Guides & Frameworks",
     "tags": [
       "claude",
       "LLM",
@@ -1121,7 +1120,8 @@
     "featured": false,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Anthropic's official guide with example prompts for Claude."
   },
   {
     "id": "context-engineering-guide-google-docs",
@@ -1131,7 +1131,6 @@
     "date": null,
     "description": "Community-created doc on how to optimally provide context to an LLM. Covers strategies for system vs. user message, how to front-load important details, methods to chunk information, and tricks like using delimiters to anchor model attention.",
     "category": "Prompt & Context Engineering",
-    "subcategory": "Guides & Frameworks",
     "tags": [
       "LLM",
       "advanced"
@@ -1139,17 +1138,17 @@
     "featured": false,
     "type": "guide",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Community-created doc on how to optimally provide context to an LLM."
   },
   {
     "id": "andrew-ng-agentic-reviewer",
-    "title": "Andrew NG's Agentic Reviewer: AI for Research Paper Reviews",
+    "title": "Agentic Reviewer: AI for Research Paper Reviews",
     "url": "https://medium.com/data-science-in-your-pocket/andrew-ngs-agentic-reviewer-ai-for-research-paper-reviews-1c2d9cda8086",
     "author": "Andrew Ng",
     "date": null,
     "description": "Summary of Andrew Ng's project using an AI agent as a reviewer for research papers. The agent follows a reviewing protocol - reading, checking completeness, critiquing each section. Results matched expert reviewers ~60-70% of the time on decisions.",
     "category": "Prompt & Context Engineering",
-    "subcategory": "Academic Research Prompts",
     "tags": [
       "peer-review",
       "LLM",
@@ -1158,7 +1157,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Summary of Andrew Ng's project using an AI agent as a reviewer for research papers."
   },
   {
     "id": "ai-futures-model",
@@ -1168,7 +1168,6 @@
     "date": "2025-12",
     "description": "Interactive scenario-planning tool to explore different scenarios for AI development and their socioeconomic impacts. Has sliders for variables like rate of AI progress, alignment success, global coordination. Helps model futures thinking for policymakers.",
     "category": "Commentary & Analysis",
-    "subcategory": "Industry Analysis",
     "tags": [
       "economics",
       "regulation"
@@ -1176,7 +1175,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Interactive scenario-planning tool to explore different scenarios for AI development and their socioeconomic impacts."
   },
   {
     "id": "eric-schmidt-ai-self-improvement",
@@ -1186,7 +1186,6 @@
     "date": "2025-04",
     "description": "Eric Schmidt's stark warning: \"Year 1: AI replaces most programmers; Year 2: recursive self-improvement begins; Years 3-5: AGI; Year 6: ASI.\" Suggests that once AI starts improving itself, it accelerates beyond human control. Added to calls for AI governance.",
     "category": "Commentary & Analysis",
-    "subcategory": "Industry Analysis",
     "tags": [
       "regulation",
       "LLM",
@@ -1195,7 +1194,8 @@
     "featured": false,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Eric Schmidt's stark warning: \"Year 1: AI replaces most programmers; Year 2: recursive self-improvement begins; Years 3-5: AGI; Year 6: ASI.\" Suggests that..."
   },
   {
     "id": "scholar-age-of-ai-cambridge",
@@ -1205,7 +1205,6 @@
     "date": "2024-01",
     "description": "Essay exploring how academia and the identity of scholars evolve with AI tools. Themes: authenticity and originality, skillset shift, ethical norms. Conclusion: being a scholar still means curiosity, rigor, and critical thinking, but tools and workflows will change.",
     "category": "Commentary & Analysis",
-    "subcategory": "Industry Analysis",
     "tags": [
       "ethics",
       "teaching",
@@ -1214,17 +1213,17 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Essay exploring how academia and the identity of scholars evolve with AI tools."
   },
   {
     "id": "bbva-big-data-ai-economy",
-    "title": "Big Data and AI for Economy Monitoring (BBVA Research)",
+    "title": "Big Data and AI for Economy Monitoring",
     "url": "https://www.bbva.com/en/economy-and-finance/bbva-research-launches-a-new-big-data-and-artificial-intelligence-section-to-monitor-the-economy-and-geopolitics-in-real-time/",
     "author": "BBVA Research",
     "date": "2025-11",
     "description": "BBVA's real-time big-data/AI dashboards (card transaction data, mobility data) for nowcasting GDP or consumer confidence. Demonstrates how AI is operationalized to monitor the pulse of the economy and geopolitics in real time.",
     "category": "Commentary & Analysis",
-    "subcategory": "AI at Work",
     "tags": [
       "economics",
       "tools"
@@ -1232,7 +1231,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "BBVA's real-time big-data/AI dashboards (card transaction data, mobility data) for nowcasting GDP or consumer confidence."
   },
   {
     "id": "teaching-gov50-harvard-cunningham",
@@ -1242,7 +1242,6 @@
     "date": "2025-09",
     "description": "Scott Cunningham's notes on introducing students to ChatGPT for coding in R: explaining code, generating example datasets. Candid on-the-ground look at academia's adaptation. Key insight: AI can be a great tutor but we need to teach students to use AI critically.",
     "category": "Commentary & Analysis",
-    "subcategory": "AI at Work",
     "tags": [
       "teaching",
       "r",
@@ -1251,17 +1250,17 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Scott Cunningham's notes on introducing students to ChatGPT for coding in R: explaining code, generating example datasets."
   },
   {
     "id": "afinetheorem-post-o3",
-    "title": "Afinetheorem Post",
+    "title": "AI and Economics Research Roundup (Afinetheorem)",
     "url": "https://x.com/Afinetheorem/status/1886245511046271194/photo/2",
     "author": "Kevin Bryan",
     "date": "2025-02",
     "description": "Kevin Bryan (@Afinetheorem) prompted OpenAI's o3 about academia's future and shared the AI's response. Partly tongue-in-cheek - using AI to advise on AI issues. His timeline provides a real-time chronicle of how a top economist is grappling with and leveraging AI.",
     "category": "Commentary & Analysis",
-    "subcategory": "Twitter/X Threads & Posts to read and summarize",
     "tags": [
       "economics",
       "GPT",
@@ -1270,7 +1269,8 @@
     "featured": false,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Kevin Bryan (@Afinetheorem) prompted OpenAI's o3 about academia's future and shared the AI's response."
   },
   {
     "id": "elicit-ai-research-assistant",
@@ -1280,7 +1280,6 @@
     "date": null,
     "description": "A free tool by Ought that uses language models to help with literature review and Q&A. Ask a research question and it will search academic papers, summarize key findings, extract relevant data or coefficients. Also features paper similarity search and PDF summarization.",
     "category": "AI Tools for Research",
-    "subcategory": "Research Tools",
     "tags": [
       "tools",
       "LLM",
@@ -1290,7 +1289,8 @@
     "featured": false,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "A free tool by Ought that uses language models to help with literature review and Q&A."
   },
   {
     "id": "how-llms-generate-text-learnthatstack",
@@ -1300,7 +1300,6 @@
     "date": "2023-01",
     "description": "Explains tokenization, next-token probabilities, and sampling to demystify how LLMs generate text. Covers greedy vs. temperature sampling and why LLMs sometimes repeat or err.",
     "category": "Courses & Learning",
-    "subcategory": "Tutorials & Guides",
     "tags": [
       "LLM",
       "beginner",
@@ -1309,36 +1308,17 @@
     "featured": true,
     "type": "video",
     "internal": false,
-    "highlight": false
-  },
-  {
-    "id": "antonio-mele-post-twitter",
-    "title": "AI in Research (thread)",
-    "url": "https://x.com/antoniomele101/status/2011750733440294984",
-    "author": "Antonio Mele",
-    "date": "2026-01",
-    "description": "Thread with practical tips for economists using AI in daily workflows.",
-    "category": "Commentary & Analysis",
-    "subcategory": "Twitter/X Threads",
-    "tags": [
-      "economics",
-      "LLM",
-      "tools"
-    ],
-    "featured": false,
-    "type": "thread",
-    "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Explains tokenization, next-token probabilities, and sampling to demystify how LLMs generate text."
   },
   {
     "id": "gary-marcus-ai-limitations",
-    "title": "AI Limitations and Risks (thread)",
+    "title": "AI Limitations and Risks",
     "url": "https://x.com/GaryMarcus/status/1817928914844753973",
     "author": "Gary Marcus",
     "date": "2024-07",
     "description": "Gary Marcus on limitations and risks of AI. Emphasizes robustness, trustworthiness, and the gap between AI output and true understanding. Valuable counterbalance to hype.",
     "category": "Commentary & Analysis",
-    "subcategory": "Twitter/X Threads",
     "tags": [
       "ethics",
       "LLM"
@@ -1346,17 +1326,17 @@
     "featured": false,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Gary Marcus on limitations and risks of AI."
   },
   {
     "id": "luiza-jarovsky-ai-regulation",
-    "title": "AI Governance and Human Rights (thread)",
+    "title": "AI Governance and Human Rights",
     "url": "https://x.com/LuizaJarovsky/status/1810356348145774617",
     "author": "Luiza Jarovsky",
     "date": "2024-07",
     "description": "Legal scholar on AI regulation and ethics. Brings Latin American and human rights angle: highlighting surveillance, data protection (GDPR), and societal impacts on the Global South.",
     "category": "Commentary & Analysis",
-    "subcategory": "Twitter/X Threads",
     "tags": [
       "regulation",
       "ethics"
@@ -1364,17 +1344,17 @@
     "featured": false,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Legal scholar on AI regulation and ethics."
   },
   {
     "id": "john-horton-llm-agents",
-    "title": "LLM Agents and Homo Silicus (thread)",
+    "title": "LLM Agents and Homo Silicus",
     "url": "https://x.com/johnjhorton/status/1801247494443086039",
     "author": "John Horton",
     "date": "2024-06",
     "description": "John Horton on insights from LLM-as-agents work (Homo Silicus): what simulated agents can/cannot capture, and how computational experiments could shape future research.",
     "category": "Commentary & Analysis",
-    "subcategory": "Twitter/X Threads",
     "tags": [
       "economics",
       "LLM"
@@ -1382,7 +1362,8 @@
     "featured": false,
     "type": "thread",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "John Horton on insights from LLM-as-agents work (Homo Silicus): what simulated agents can/cannot capture, and how computational experiments could shape..."
   },
   {
     "id": "nber-w34953-ai-in-science",
@@ -1392,7 +1373,6 @@
     "date": "2026-03",
     "description": "Characterizes AI as a tool for augmentation through enhanced search over combinatorial spaces. Decomposes knowledge production into a multi-stage process revealing a 'jagged frontier' of AI in science, with differential returns across domains (data-rich biology vs. anomaly-sparse physics) and workflow stages. Shows how AI-expert scientists amplify nonlinear productivity gains.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "science",
@@ -1402,7 +1382,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Characterizes AI as a tool for augmentation through enhanced search over combinatorial spaces."
   },
   {
     "id": "nber-w34984-ai-productivity-workforce",
@@ -1412,7 +1393,6 @@
     "date": "2026-03",
     "description": "Surveys corporate executives to develop an index ranking job functions most negatively affected by AI. Provides firm-level evidence on how AI impacts different workforce roles and productivity, with direct evidence from decision-makers.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "labor",
@@ -1422,7 +1402,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Surveys corporate executives to develop an index ranking job functions most negatively affected by AI."
   },
   {
     "id": "nber-w34836-firm-data-on-ai",
@@ -1432,7 +1413,6 @@
     "date": "2026-02",
     "description": "First representative international data on firm-level AI use, surveying ~6,000 executives across the US, UK, Germany, and Australia. Finds ~70% of firms actively use AI but report little impact over the past 3 years, while forecasting AI will boost productivity by 1.4% and cut employment by 0.7% over the next 3 years.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "labor",
@@ -1442,7 +1422,8 @@
     "featured": true,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "First representative international data on firm-level AI use, surveying ~6,000 executives across the US, UK, Germany, and Australia."
   },
   {
     "id": "nber-w34779-ai-economic-future-jones",
@@ -1452,7 +1433,6 @@
     "date": "2026-01",
     "description": "Argues that AI may be fundamentally different from prior general-purpose technologies like electricity or semiconductors, because automating intelligence itself has broader effects. Explores the scenario where machines can perform every cognitive and physical task more cheaply than humans and what economics says about that future.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "growth",
@@ -1462,7 +1442,8 @@
     "featured": true,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Argues that AI may be fundamentally different from prior general-purpose technologies like electricity or semiconductors, because automating intelligence..."
   },
   {
     "id": "imas-ai-productivity-synthesis",
@@ -1472,7 +1453,6 @@
     "date": "2026-03",
     "description": "A living document synthesizing all available studies and data on AI's productivity impact. Reviews the disconnect between micro studies (which overwhelmingly find positive effects, especially for low-skill workers) and macro evidence (which is now beginning to show aggregate gains). Updated regularly as new evidence arrives.",
     "category": "Commentary & Analysis",
-    "subcategory": "Blog Posts & Substacks",
     "tags": [
       "economics",
       "productivity",
@@ -1482,7 +1462,8 @@
     "featured": true,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "A living document synthesizing all available studies and data on AI's productivity impact."
   },
   {
     "id": "piie-ai-labor-market-first-inning",
@@ -1492,7 +1473,6 @@
     "date": "2026-03",
     "description": "PIIE survey of the state of AI-and-labor research. Reviews high-profile studies combining AI exposure measures with employment data, noting mixed results and methodological challenges. Highlights that AI may create entirely new occupations, and productivity research shows benefits but with important caveats.",
     "category": "Commentary & Analysis",
-    "subcategory": "Blog Posts & Substacks",
     "tags": [
       "economics",
       "labor",
@@ -1502,7 +1482,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "PIIE survey of the state of AI-and-labor research."
   },
   {
     "id": "anthropic-economic-index-primitives",
@@ -1512,7 +1493,6 @@
     "date": "2026-01",
     "description": "Introduces five foundational measurements—task complexity, skill level, purpose, AI autonomy, and success—to track AI's economic impacts. Based on privacy-preserving analysis of 2 million conversations. Finds more complex tasks see the largest speed-ups, with college-level tasks sped up 12x.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -1522,7 +1502,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Introduces five foundational measurements—task complexity, skill level, purpose, AI autonomy, and success—to track AI's economic impacts."
   },
   {
     "id": "stata-mcp-server",
@@ -1532,7 +1513,6 @@
     "date": "2026-03",
     "description": "Brings AI capabilities to Stata through the Model Context Protocol (MCP), enabling Claude and other AI assistants to execute Stata commands, run .do files, and interpret economic data directly from code editors like VS Code and Cursor. Supports paper replication, hypothesis testing, and econometrics learning workflows.",
     "category": "AI Tools for Research",
-    "subcategory": "Coding Tools",
     "tags": [
       "Stata",
       "MCP",
@@ -1542,7 +1522,8 @@
     "featured": false,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Brings AI capabilities to Stata through the Model Context Protocol (MCP), enabling Claude and other AI assistants to execute Stata commands, run .do files,..."
   },
   {
     "id": "menu-pricing-llms-arxiv",
@@ -1552,7 +1533,6 @@
     "date": "2026-03",
     "description": "Develops a framework for optimal pricing and product design of LLMs, where a provider sells menus of token budgets to users who differ in their valuations across a continuum of tasks. Applies mechanism design theory to the economics of AI services.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -1562,7 +1542,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false
+    "highlight": false,
+    "shortDescription": "Develops a framework for optimal pricing and product design of LLMs, where a provider sells menus of token budgets to users who differ in their valuations..."
   },
   {
     "id": "llm-adoption-economics-research-feyzollahi",
@@ -1572,7 +1553,6 @@
     "date": "2025",
     "description": "Uses a difference-in-differences framework across 25 leading economics journals over 24 years to measure LLM adoption via linguistic footprints. Finds a 4.76 percentage point increase in LLM-associated terms during 2023–2024, more than doubling from 2.85pp in 2023 to 6.67pp in 2024, documenting rapid integration of language models in economics writing.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -1593,7 +1573,6 @@
     "date": "2026-03",
     "description": "Interactive map of 1,556 U.S. universities across two dimensions: institutional resilience and post-college market positioning. Visualizes which schools are structurally positioned to weather demographic decline, fiscal stress, and AI disruption. Built with Claude.",
     "category": "Commentary & Analysis",
-    "subcategory": "Industry Analysis",
     "tags": [
       "economics",
       "labor",
@@ -1614,7 +1593,6 @@
     "date": "2026-03",
     "description": "Proposes a standard for making academic papers more accessible to LLMs — bundling papers with an llms.txt orientation file and markdown formatting. Addresses the finding that LLM-generated summaries are nearly five times more likely than human-authored ones to overgeneralize scientific conclusions.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts",
     "tags": [
       "LLM",
       "writing",
@@ -1635,7 +1613,6 @@
     "date": "2026-03",
     "description": "Cowen argues the individual research paper is no longer scarce — AI can tweak, improve, or review any paper. Top economics journals are already experimenting with Refine for AI-powered reviewing. Suggests economists should focus on publishing \"the box\" rather than individual papers.",
     "category": "Commentary & Analysis",
-    "subcategory": "Articles & Blog Posts",
     "tags": [
       "economics",
       "LLM",
@@ -1656,7 +1633,6 @@
     "date": "2026-03",
     "description": "A gentle introduction to using Claude Code for academics. Includes presentation slides, an \"Editor\" persona for academic writing, and a curated collection of Claude Code tools and workflows for research.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -1679,7 +1655,6 @@
     "date": "2026-01",
     "description": "Political economist Chris Blattman (UChicago Harris) documents AI tools and workflows for knowledge workers — from chatbot prompting to advanced Claude Code automation. Includes downloadable skills, templates, and case studies for managing scheduling, email, and research without coding.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",
@@ -1702,7 +1677,6 @@
     "description": "Imas (UChicago Booth) and Shukla (Harvard) argue AI exposure measures are misinterpreted as displacement threats when they indicate task augmentation. The real risk lies in low-dimensional occupations where full automation creates stronger firm incentives to eliminate positions. Uses an O-Ring model to show how partial automation can complement rather than substitute human labor.",
     "shortDescription": "AI exposure measures predict augmentation, not displacement. The real risk is in low-dimensional jobs where full automation is feasible.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "labor",
@@ -1722,7 +1696,6 @@
     "description": "Reviews seven books on AI's economic impact, finding strong frameworks for AI as cheap prediction and adoption barriers, but arguing the literature offers little guidance on transformative scenarios — rapid labor churn, scientific acceleration, and existential risk — that policymakers need most.",
     "shortDescription": "Bryan reviews 7 books on AI's economic impact in JEL, finding gaps in guidance on transformative AI scenarios policymakers need most.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -1743,7 +1716,6 @@
     "description": "Provides a rigorous econometric framework for using LLMs in empirical research. For prediction tasks, validity requires 'no training leakage.' For estimation, even high-accuracy LLM labels can bias regressions because errors correlate with covariates — the solution is a small human-coded validation sample to debias outputs. Forthcoming in Annual Review of Economics.",
     "shortDescription": "Econometric framework for LLMs in research: high accuracy alone can't protect inference — a small validation sample is needed to debias.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "LLM",
@@ -1764,7 +1736,6 @@
     "description": "Examines how market power in upstream AI affects downstream prices, industry structure, and welfare. Identifies a 'double harm' for displaced workers who face wage cuts from AI adoption and further harm from monopoly AI pricing. Derives an adoption frontier and policy implications for regulating AI usage and access fees.",
     "shortDescription": "Athey & Scott Morton analyze how AI market power creates a 'double harm' for displaced workers through adoption and monopoly pricing.",
     "category": "Research Papers",
-    "subcategory": "Papers & Research",
     "tags": [
       "economics",
       "competition",
@@ -1784,8 +1755,7 @@
     "date": "2026-01",
     "description": "Comprehensive guide to building AI agents that autonomously conduct literature reviews, write and debug code, and orchestrate entire research workflows. Includes working code examples readers can immediately use. Shows how researchers can build complete analytical tools from English descriptions, handling everything from data uploads to regression analysis to visualization.",
     "shortDescription": "Korinek's guide to building AI agents that autonomously conduct lit reviews, code, and orchestrate research workflows — with working examples.",
-    "category": "Coding with AI",
-    "subcategory": "Guides & Tutorials",
+    "category": "Research Papers",
     "tags": [
       "economics",
       "LLM",
@@ -1793,7 +1763,7 @@
       "coding"
     ],
     "featured": false,
-    "type": "guide",
+    "type": "paper",
     "internal": false,
     "highlight": false
   },
@@ -1806,7 +1776,6 @@
     "description": "Annual meeting at Cornell (June 16-17) fostering interaction between computer science and economics, with emphasis on AI/ML. Keynotes by David Blei, Annie Liang, Sendhil Mullainathan, Aaron Roth, and Stefan Wager. Co-chaired by Francesca Molinari and Éva Tardos.",
     "shortDescription": "Econometric Society meeting at Cornell (June 16-17) bridging CS and economics, with keynotes by Mullainathan, Liang, Wager, and more.",
     "category": "Talks & Videos",
-    "subcategory": "Conferences & Events",
     "tags": [
       "economics",
       "conference",
@@ -1826,7 +1795,6 @@
     "description": "Three-day NBER Summer Institute session (July 22-24) on digital economics and AI, organized by Erik Brynjolfsson, Avi Goldfarb, and Catherine Tucker. Held in Cambridge, MA and streamed on YouTube. One of the premier venues for presenting frontier AI economics research.",
     "shortDescription": "Flagship NBER Summer Institute session (July 22-24) on digital economics and AI, organized by Brynjolfsson, Goldfarb, and Tucker.",
     "category": "Talks & Videos",
-    "subcategory": "Conferences & Events",
     "tags": [
       "economics",
       "conference",
@@ -1846,7 +1814,6 @@
     "description": "Accessible walkthrough of the Ludwig/Mullainathan/Rambachan econometric framework for using LLMs in empirical research. Breaks down the key insight that LLM measurement error is non-classical and correlated with covariates, explaining why a small validation sample is essential for unbiased inference even with highly accurate LLM labels.",
     "shortDescription": "Cunningham's accessible breakdown of why LLM measurement error is non-classical and how a validation sample fixes inference.",
     "category": "Commentary & Analysis",
-    "subcategory": "Blogs & Commentary",
     "tags": [
       "economics",
       "LLM",
@@ -1867,7 +1834,6 @@
     "description": "Three-part Markus Academy series on using Claude Code for economics research. Part 1: Getting Started. See also <a href=\"https://www.youtube.com/watch?v=Rp17XUPxa4I\">Part 2: Data Analysis</a> and <a href=\"https://www.youtube.com/watch?v=wqLZrKdevHs\">Part 3: Web Scraping</a>.",
     "shortDescription": "Three-part Markus Academy series: Getting Started, Data Analysis, and Web Scraping with Claude Code for economics research.",
     "category": "Coding with AI",
-    "subcategory": "Using AI, LLMs, Claude Code and Cursor - Guides",
     "tags": [
       "claude",
       "coding",

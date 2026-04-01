@@ -319,6 +319,12 @@ a:focus-visible {
   display: inline-block;
 }
 
+/* Reset h2 defaults when used as section label (heading hierarchy for SEO) */
+h2.section-label {
+  margin-top: 0;
+  line-height: normal;
+}
+
 /* --- Hero Grid (Home page) --- */
 /* Float-based hero: text wraps around photo */
 .hero-float {
@@ -1483,6 +1489,16 @@ main.container .page-intro {
   .tag {
     font-size: 0.65rem;
     padding: 0.1em 0.45em;
+  }
+}
+
+/* --- Responsive: Very small phone (≤360px) --- */
+@media (max-width: 360px) {
+  .profile-photo {
+    float: none;
+    display: block;
+    width: 140px;
+    margin: 0 auto 1rem;
   }
 }
 
