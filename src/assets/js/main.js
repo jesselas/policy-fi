@@ -96,6 +96,8 @@ function initMobileNav() {
     e.stopPropagation();
     const isOpen = links.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen);
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   // Close menu when clicking a nav link
@@ -167,6 +169,7 @@ function initMobileNav() {
   function closeMenu() {
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
   }
 }
 
