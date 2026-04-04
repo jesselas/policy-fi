@@ -1809,5 +1809,50 @@
     "type": "video",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "forecasting-economic-effects-ai-bryan-karger-halperin",
+    "title": "Forecasting the Economic Effects of AI",
+    "url": "https://forecastingresearch.substack.com/p/forecasting-the-economic-effects-of-ai",
+    "author": "Kevin Bryan, Ezra Karger, Basil Halperin",
+    "date": "2026-04",
+    "description": "Large-scale forecasting exercise surveying 69 leading economists, 52 AI experts, 38 superforecasters, and 401 members of the general public on AI's economic impact. Under rapid AI progress scenarios, economists forecast labor force participation dropping from 62.6% to 55% by 2050, with the richest 10% holding 80% of national wealth. In baseline scenarios, GDP growth and labor participation remain close to today's levels. Over 200 pages of detailed forecasts and methodology.",
+    "shortDescription": "Survey of 69 economists, 52 AI experts, and 38 superforecasters on AI's economic impact — from GDP growth to inequality under multiple scenarios.",
+    "category": "Research Papers",
+    "tags": ["economics", "labor", "growth", "forecasting", "LLM"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "nber-w34854-building-pro-worker-ai",
+    "title": "Building Pro-Worker Artificial Intelligence (NBER WP 34854)",
+    "url": "https://www.nber.org/papers/w34854",
+    "author": "Daron Acemoglu, David Autor, Simon Johnson",
+    "date": "2026-02",
+    "description": "Defines pro-worker technologies as those that expand worker capabilities and make human skills more valuable. Distinguishes five categories of AI-driven technological change: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Argues that policy and design choices can steer AI development toward complementing workers rather than replacing them. Published jointly with Brookings/Hamilton Project.",
+    "shortDescription": "Acemoglu, Autor & Johnson define five categories of AI technological change and argue policy can steer AI toward complementing workers.",
+    "category": "Research Papers",
+    "tags": ["economics", "labor", "policy", "automation"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "nber-w34813-politics-of-ai",
+    "title": "The Politics of AI (NBER WP 34813)",
+    "url": "https://www.nber.org/papers/w34813",
+    "author": "Nicholas Bloom, Christos Makridis",
+    "date": "2026-02",
+    "description": "Uses Gallup Workforce Panel data to examine partisan differences in workplace AI adoption. While Democrats report higher frequent AI use (30.1% vs. 25% for Republicans in Q1 2026), this gap shrinks to statistical insignificance after controlling for education and reverses sign with occupation and industry fixed effects. Suggests the partisan AI divide is driven by educational and occupational sorting, not ideology.",
+    "shortDescription": "Bloom & Makridis find the partisan AI adoption gap is driven by educational and occupational sorting, not ideology — using Gallup data.",
+    "category": "Research Papers",
+    "tags": ["economics", "labor", "LLM", "adoption"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
