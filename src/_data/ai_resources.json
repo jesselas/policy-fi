@@ -1870,5 +1870,35 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "econtalk-ai-employment-education-cowen",
+    "title": "AI, Employment, and Education (EconTalk)",
+    "url": "https://www.econtalk.org/ai-employment-and-education-with-tyler-cowen/",
+    "author": "Tyler Cowen, Russ Roberts",
+    "date": "2026-03",
+    "description": "Tyler Cowen makes the case for integrating AI into higher education and argues college classes should devote significant time to learning how to use AI. Discusses the future of writing and thinking in academia, Cowen's solution to cheating concerns, and whether there's value to education designed to help students become who they want to be rather than ensure mastery of a subject. Cowen also shares how he personally has adapted to AI in his own workflow.",
+    "shortDescription": "Tyler Cowen argues for integrating AI into higher education and shares how he has adapted to AI in his own workflow.",
+    "category": "Talks & Videos",
+    "tags": ["economics", "teaching", "LLM"],
+    "featured": false,
+    "type": "video",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "andrews-thoughts-ai-research",
+    "title": "Some Thoughts on AI and Research",
+    "url": "https://economics.mit.edu/sites/default/files/2026-04/IA%20AI%20note_1.pdf",
+    "author": "Isaiah Andrews",
+    "date": "2026-04",
+    "description": "Clark Medal winner Isaiah Andrews (MIT) wrote this note originally for his PhD advisees, then shared it widely. Lays out scenarios for how AI capabilities might evolve and what each means for economics research careers. Key advice: most students are under-investing in learning these tools; pay for the better models; and learn to audit AI output, since models produce plausible-looking results that can be wrong in ways requiring expertise to detect. Widely discussed after Tyler Cowen highlighted it on Marginal Revolution.",
+    "shortDescription": "Clark Medal winner Isaiah Andrews (MIT) lays out AI scenarios for economics PhD students and advises on adapting research skills.",
+    "category": "Commentary & Analysis",
+    "tags": ["economics", "LLM", "teaching", "career"],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
