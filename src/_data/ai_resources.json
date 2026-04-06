@@ -1791,12 +1791,12 @@
   },
   {
     "id": "claude-code-economists-goldsmith-pinkham-markus",
-    "title": "Claude Code for Economists (Markus Academy)",
+    "title": "Claude Code for Applied Economists (Markus Academy)",
     "url": "https://www.youtube.com/watch?v=HzgByl5ZsWE",
     "author": "Paul Goldsmith-Pinkham",
-    "date": "2026-03",
-    "description": "Three-part Markus Academy series on using Claude Code for economics research. Part 1: Getting Started. See also <a href=\"https://www.youtube.com/watch?v=Rp17XUPxa4I\">Part 2: Data Analysis</a> and <a href=\"https://www.youtube.com/watch?v=wqLZrKdevHs\">Part 3: Web Scraping</a>.",
-    "shortDescription": "Three-part Markus Academy series: Getting Started, Data Analysis, and Web Scraping with Claude Code for economics research.",
+    "date": "2026-04",
+    "description": "Markus Academy mini-series on using Claude Code for applied economics research (4 of 7 episodes released). Part 1: Getting Started. See also <a href=\"https://www.youtube.com/watch?v=Rp17XUPxa4I\">Part 2: Data Analysis</a>, <a href=\"https://www.youtube.com/watch?v=wqLZrKdevHs\">Part 3: Web Scraping</a>, and <a href=\"https://www.youtube.com/watch?v=4uwI1-9DafU\">Part 4: Large Datasets and Structured Databases</a> (working with 291M HMDA mortgage records via Parquet and DuckDB).",
+    "shortDescription": "Markus Academy mini-series on Claude Code for applied economists: Getting Started, Data Analysis, Web Scraping, and Large Datasets & Databases.",
     "category": "Coding with AI",
     "tags": [
       "claude",
@@ -1880,7 +1880,11 @@
     "description": "Tyler Cowen makes the case for integrating AI into higher education and argues college classes should devote significant time to learning how to use AI. Discusses the future of writing and thinking in academia, Cowen's solution to cheating concerns, and whether there's value to education designed to help students become who they want to be rather than ensure mastery of a subject. Cowen also shares how he personally has adapted to AI in his own workflow.",
     "shortDescription": "Tyler Cowen argues for integrating AI into higher education and shares how he has adapted to AI in his own workflow.",
     "category": "Talks & Videos",
-    "tags": ["economics", "teaching", "LLM"],
+    "tags": [
+      "economics",
+      "teaching",
+      "LLM"
+    ],
     "featured": false,
     "type": "video",
     "internal": false,
@@ -1895,7 +1899,12 @@
     "description": "Clark Medal winner Isaiah Andrews (MIT) wrote this note originally for his PhD advisees, then shared it widely. Lays out scenarios for how AI capabilities might evolve and what each means for economics research careers. Key advice: most students are under-investing in learning these tools; pay for the better models; and learn to audit AI output, since models produce plausible-looking results that can be wrong in ways requiring expertise to detect. Widely discussed after Tyler Cowen highlighted it on Marginal Revolution.",
     "shortDescription": "Clark Medal winner Isaiah Andrews (MIT) lays out AI scenarios for economics PhD students and advises on adapting research skills.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "LLM", "teaching", "career"],
+    "tags": [
+      "economics",
+      "LLM",
+      "teaching",
+      "career"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
