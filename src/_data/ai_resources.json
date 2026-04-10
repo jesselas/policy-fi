@@ -857,7 +857,7 @@
   {
     "id": "claude-code-quant-social-science-cunningham",
     "title": "Claude Code for Quantitative Social Science (Substack)",
-    "url": "https://causalinf.substack.com/s/claude-code",
+    "url": "https://causalinf.substack.com/s/claude-code/archive?sort=new",
     "author": "Scott Cunningham",
     "date": null,
     "description": "Ongoing series of 34+ walkthroughs and explanations of using Claude Code for quantitative and empirical social science projects. By the author of Causal Inference: The Mixtape. Topics include: workflow optimization with Deming's zero-error philosophy, comparative audits of causal inference packages (Callaway & Sant'Anna), using Claude Code for cannabis research replication, mobile \"Dispatch\" workflows, and philosophical reflections on AI-assisted discovery. A rich, practitioner-oriented resource for economists adopting Claude Code.",
