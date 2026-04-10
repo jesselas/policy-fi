@@ -1909,5 +1909,163 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "panjwani-codex-vs-claude-economists",
+    "title": "Codex vs. Claude Code for Economists",
+    "url": "https://x.com/aniketapanjwani/status/2042422649880506443",
+    "author": "Aniket Panjwani",
+    "date": "2026-04",
+    "description": "Panjwani compares OpenAI's Codex and Anthropic's Claude Code for economics research workflows, discussing the strengths and trade-offs of each tool for applied economists.",
+    "shortDescription": "Comparison of Codex and Claude Code for economics research workflows, discussing strengths and trade-offs of each tool.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "claude",
+      "codex",
+      "coding",
+      "economics"
+    ],
+    "featured": false,
+    "type": "thread",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "coarse-ink-ai-paper-reviewer",
+    "title": "Coarse — AI Paper Reviewer",
+    "url": "https://coarse.ink/",
+    "author": "David van Dijcke",
+    "date": null,
+    "description": "Open-source AI referee reports for academic papers. No account needed — you pay the API cost directly (typically under $2 per review, 20+ detailed comments). Blind-evaluated against refine.ink, Stanford Agentic Reviewer, and reviewer3.com; scores higher on coverage, specificity, and depth. MIT licensed. See also <a href=\"https://github.com/Davidvandijcke/coarse\">GitHub</a>.",
+    "shortDescription": "Open-source AI referee reports for under $2 per review. Blind-evaluated higher than refine.ink and Stanford Agentic Reviewer.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "tools",
+      "peer-review",
+      "open-source"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "worldbank-rethinking-coding-assessment-ai",
+    "title": "Rethinking Coding Assessment in an AI-Assisted World",
+    "url": "https://blogs.worldbank.org/en/impactevaluations/rethinking-coding-assessment-in-an-ai-assisted-world",
+    "author": "Marina Visintini, Maria Jones, Ankriti Singh",
+    "date": "2026-04",
+    "description": "World Bank Development Impact blog on how AI tools like Claude Code and Stata MCP now score 77–81% on technical hiring assessments — comparable to median applicants. Rather than restricting AI use, the authors propose evaluating how candidates interact with AI tools, including reviewing chat transcripts alongside final code.",
+    "shortDescription": "World Bank blog: AI coding tools now match median applicants on technical hiring tests. Proposes evaluating AI interaction skills instead.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "development",
+      "coding",
+      "labor"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "backman-feedback-machines",
+    "title": "Feedback Machines: AI for Research Paper Review",
+    "url": "https://claesbackman.substack.com/p/feedback-machines-writing-and-editing",
+    "author": "Claes Bäckman",
+    "date": "2026-04",
+    "description": "Two-part series on using AI to review and improve academic papers. Part 1 covers using Cursor and Claude Code for writing, editing, and getting referee-style feedback. <a href=\"https://claesbackman.substack.com/p/feedback-machines-ii-using-ai-to\">Part 2</a> introduces free Claude Code skills for structured paper review, pre-analysis plan review, grant review, and code–paper correspondence checking. All tools available on <a href=\"https://github.com/claesbackman/AI-research-feedback\">GitHub</a>.",
+    "shortDescription": "Two-part series plus free Claude Code skills for paper review, grant review, pre-analysis plans, and code-paper correspondence checks.",
+    "category": "Coding with AI",
+    "tags": [
+      "claude",
+      "coding",
+      "peer-review",
+      "open-source"
+    ],
+    "featured": false,
+    "type": "guide",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "codex-plugin-claude-code",
+    "title": "Codex Plugin for Claude Code",
+    "url": "https://x.com/reach_vb/status/2038670509768839458",
+    "author": "OpenAI",
+    "date": "2026-03",
+    "description": "Official OpenAI plugin that brings Codex into Claude Code workflows. Three commands: /codex:review for a read-only code review, /codex:adversarial-review for a steerable challenge review, and /codex:rescue to hand work off to Codex for a second pass from a different agent. Open source.",
+    "shortDescription": "Official OpenAI plugin for Claude Code: normal review, adversarial review, and task handoff to Codex. Open source.",
+    "category": "Coding with AI",
+    "tags": [
+      "codex",
+      "claude",
+      "coding",
+      "open-source"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "feynman-ai-research-agent",
+    "title": "Feynman — Open Source AI Research Agent",
+    "url": "https://github.com/getcompanion-ai/feynman",
+    "author": "Companion AI",
+    "date": null,
+    "description": "Open-source CLI tool for AI-powered research workflows. Supports deep research briefs with citations, literature reviews, paper auditing against codebases, and experiment replication. Uses multiple research agents (Researcher, Reviewer, Writer, Verifier) with AlphaXiv integration for paper search.",
+    "shortDescription": "Open-source CLI for AI-powered research: deep research briefs, literature reviews, paper audits, and experiment replication.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "tools",
+      "open-source",
+      "research"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "grundl-claude-code-empirical-economist",
+    "title": "Claude Code as an Empirical Economist: Like Humans but Without the Tails (SSRN)",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6219138",
+    "author": "Serafin Grundl",
+    "date": "2026-02",
+    "description": "A 51-page paper from the Federal Reserve Board benchmarking Claude Code as an empirical economist. The subtitle 'Like Humans but Without the Tails' suggests the AI performs comparably to human economists on average but with less variance in output quality.",
+    "shortDescription": "Federal Reserve Board paper benchmarking Claude Code as an empirical economist — comparable to humans on average, with less variance.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "claude",
+      "LLM",
+      "coding"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "anthropic-courses-github",
+    "title": "Anthropic Courses",
+    "url": "https://github.com/anthropics/courses",
+    "author": "Anthropic",
+    "date": null,
+    "description": "Anthropic's official educational repository with five hands-on courses: API Fundamentals, Prompt Engineering Interactive Tutorial, Real World Prompting, Prompt Evaluations, and Tool Use. All courses are Jupyter notebooks with practical exercises.",
+    "shortDescription": "Anthropic's official courses: API fundamentals, prompt engineering, real-world prompting, evaluations, and tool use.",
+    "category": "Courses & Learning",
+    "tags": [
+      "claude",
+      "LLM",
+      "free",
+      "beginner"
+    ],
+    "featured": false,
+    "type": "course",
+    "internal": false,
+    "highlight": false
   }
 ]
