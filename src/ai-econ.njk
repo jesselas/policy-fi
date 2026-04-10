@@ -61,14 +61,14 @@ jsonLd:
   </div>
   <div class="highlights-grid" id="recent-panel">
     {% for entry in recentResources %}
-    <div class="highlight-card{% if loop.index > 6 %} recent-extra{% endif %}">
+    <div class="highlight-card{% if loop.index > 8 %} recent-extra{% endif %}">
       <div class="highlight-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
       <div class="highlight-meta">{% if entry.author %}{{ entry.author | shortAuthor }}{% endif %}{% if entry.author and entry.date %} · {% endif %}{% if entry.date %}{{ entry.date }}{% endif %}</div>
       <div class="highlight-desc">{{ entry.shortDescription or (entry.description | truncate(150)) }}</div>
     </div>
     {% endfor %}
   </div>
-  {% if recentResources.length > 6 %}
+  {% if recentResources.length > 8 %}
   <button class="see-more-btn" id="see-more-recent">See more recent additions</button>
   {% endif %}
   <div class="highlights-grid" id="highlights-panel" style="display: none;">
