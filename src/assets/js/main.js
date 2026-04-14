@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSeeMore();
   initHighlightTabs();
   initResourceFilters();
+  initResourceSort();
   initMobileNav();
 });
 
@@ -262,6 +263,85 @@ function initCitationCopy() {
           btn.textContent = original;
           btn.classList.remove('copied');
         }, 1500);
+      });
+    });
+  });
+}
+
+/* --- Sort resource groups (AI for Economists page) --- */
+function initResourceSort() {
+  const groups = document.querySelectorAll('.resource-group');
+  if (!groups.length) return;
+
+  groups.forEach(group => {
+    const body = group.querySelector('.accordion-body');
+    const buttons = group.querySelectorAll('.sort-btn');
+    if (!body || !buttons.length) return;
+
+    const state = { sort: null, desc: false };
+
+    function cardKey(card, sort) {
+      if (sort === 'added') return parseInt(card.dataset.index, 10) || 0;
+      if (sort === 'date') return card.dataset.date || '';
+      if (sort === 'author') return card.dataset.authorSort || '';
+      return 0;
+    }
+
+    function applySort() {
+      const cards = Array.from(body.querySelectorAll('.resource-card'));
+      const sort = state.sort;
+      const emptyLast = sort === 'date' || sort === 'author';
+
+      cards.sort((a, b) => {
+        const ka = cardKey(a, sort);
+        const kb = cardKey(b, sort);
+
+        if (emptyLast) {
+          const aEmpty = ka === '' || ka == null;
+          const bEmpty = kb === '' || kb == null;
+          if (aEmpty && !bEmpty) return 1;
+          if (!aEmpty && bEmpty) return -1;
+        }
+
+        let cmp;
+        if (typeof ka === 'number' && typeof kb === 'number') {
+          cmp = ka - kb;
+        } else {
+          cmp = String(ka).localeCompare(String(kb));
+        }
+        return state.desc ? -cmp : cmp;
+      });
+
+      cards.forEach(c => body.appendChild(c));
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const sort = btn.dataset.sort;
+
+        if (state.sort === sort) {
+          state.desc = !state.desc;
+        } else {
+          state.sort = sort;
+          // Sensible defaults: newest first for dates, A→Z for names
+          state.desc = (sort === 'added' || sort === 'date');
+        }
+
+        buttons.forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b.classList.toggle('desc', b === btn && state.desc);
+        });
+
+        applySort();
+      });
+
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          btn.click();
+        }
       });
     });
   });
