@@ -14,6 +14,14 @@ module.exports = function (eleventyConfig) {
     return author;
   });
 
+  // Last name of the first author, lowercased — for sorting
+  eleventyConfig.addFilter("lastName", function (author) {
+    if (!author) return "";
+    const firstAuthor = author.split(",")[0].trim();
+    const words = firstAuthor.split(/\s+/);
+    return (words[words.length - 1] || "").toLowerCase();
+  });
+
   return {
     dir: {
       input: "src",

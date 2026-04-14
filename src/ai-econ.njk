@@ -122,13 +122,19 @@ jsonLd:
   {% if catEntries.length > 0 %}
   <div class="accordion-section resource-group" data-group-category="{{ cat }}">
     <div class="accordion-header" aria-expanded="false">
-      <span>{{ cat }} <span class="accordion-count">{{ catEntries.length }}</span></span>
+      <span class="accordion-title">{{ cat }} <span class="accordion-count">{{ catEntries.length }}</span></span>
+      <div class="accordion-sort" role="group" aria-label="Sort {{ cat }}">
+        <span class="sort-label">Sort:</span>
+        <button type="button" class="sort-btn" data-sort="added">Date added</button>
+        <button type="button" class="sort-btn" data-sort="date">Date of reference</button>
+        <button type="button" class="sort-btn" data-sort="author">Last name</button>
+      </div>
       <span class="accordion-indicator"></span>
     </div>
     <div class="accordion-content">
       <div class="accordion-body">
         {% for entry in catEntries %}
-        <div class="resource-card{% if entry.featured %} featured{% endif %}" data-category="{{ entry.category }}" data-type="{{ entry.type }}" data-tags="{{ entry.tags | join(',') }}" data-searchable="{{ (entry.title + ' ' + (entry.author or '') + ' ' + entry.description + ' ' + entry.tags | join(' ')) | lower }}">
+        <div class="resource-card{% if entry.featured %} featured{% endif %}" data-category="{{ entry.category }}" data-type="{{ entry.type }}" data-tags="{{ entry.tags | join(',') }}" data-index="{{ loop.index0 }}" data-date="{{ entry.date or '' }}" data-author-sort="{{ entry.author | lastName }}" data-searchable="{{ (entry.title + ' ' + (entry.author or '') + ' ' + entry.description + ' ' + entry.tags | join(' ')) | lower }}">
           <span class="card-type-icon">{{ typeIcons[entry.type] or "🔗" }}</span>
           <div class="card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
           <div class="card-meta">{% if entry.author %}{{ entry.author }}{% endif %}{% if entry.author and entry.date %} · {% endif %}{% if entry.date %}{{ entry.date }}{% endif %}</div>
