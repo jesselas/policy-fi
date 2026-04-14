@@ -2127,5 +2127,20 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nber-w35046-forecasting-ai-economic-effects",
+    "title": "Forecasting the Economic Effects of AI (NBER WP 35046)",
+    "url": "https://www.nber.org/papers/w35046",
+    "author": "Ezra Karger, Otto Kuusela, Jason Abaluck, Kevin A. Bryan, Basil Halperin, Todd R. Jones, Connacher Murphy, Philip Trammell, Josh Rosenberg, Philip Tetlock, et al.",
+    "date": "2026-04",
+    "description": "Elicits forecasts from five groups — academic economists, AI company employees, policy researchers, accurate forecasters, and the general public — about AI's economic impact. Finds expectations of substantial AI capability advances by 2030, modest labor force participation declines, and 2.5% annual GDP growth. Under a rapid AI advancement scenario, forecasters project ~4% GDP growth and labor force participation falling to 55% by 2050. Expert disagreement stems primarily from differing views on highly capable AI's economic effects rather than on the pace of AI progress.",
+    "shortDescription": "Elicits AI economic forecasts from five expert and public groups; disagreement centers on AI's effects, not the pace of progress.",
+    "category": "Research Papers",
+    "tags": ["economics", "forecasting", "growth", "labor"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
