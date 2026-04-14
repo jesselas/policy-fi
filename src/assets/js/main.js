@@ -278,7 +278,7 @@ function initResourceSort() {
     const buttons = group.querySelectorAll('.sort-btn');
     if (!body || !buttons.length) return;
 
-    const state = { sort: null, desc: false };
+    const state = { sort: 'added', desc: true };
 
     function cardKey(card, sort) {
       if (sort === 'added') return parseInt(card.dataset.index, 10) || 0;
@@ -344,6 +344,14 @@ function initResourceSort() {
         }
       });
     });
+
+    // Apply default sort on load (date added, newest first)
+    const defaultBtn = group.querySelector('.sort-btn[data-sort="' + state.sort + '"]');
+    if (defaultBtn) {
+      defaultBtn.classList.add('active');
+      if (state.desc) defaultBtn.classList.add('desc');
+    }
+    applySort();
   });
 }
 
