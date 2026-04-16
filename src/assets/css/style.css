@@ -340,12 +340,28 @@ h2.section-label {
 .profile-photo {
   float: left;
   width: 265px;
+  height: auto;
   border-radius: var(--radius-lg);
   object-fit: cover;
   box-shadow: var(--shadow-md);
   border: 3px solid var(--bg-pure);
   outline: 1px solid var(--border-light);
   margin: 0.2rem 1.75rem 0.75rem 0;
+}
+
+.hero-heading {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.hero-tagline {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
 }
 
 /* Keep old grid for any page that uses it */

@@ -31,10 +31,17 @@
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.svg">
   <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#0b525b">
 
-  <!-- Fonts -->
+  <!-- Preload hero image on home page -->
+  {% if page.url == "/" %}
+  <link rel="preload" as="image" href="/assets/img/profile.webp" type="image/webp" fetchpriority="high">
+  {% endif %}
+
+  <!-- Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% set fontHref = "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" %}
+  <link rel="preload" as="style" href="{{ fontHref }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ fontHref }}"></noscript>
   <link rel="stylesheet" href="/assets/css/style.css">
 
   {% if jsonLd %}
