@@ -2142,5 +2142,20 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "liu-ai-assistance-reduces-persistence",
+    "title": "AI Assistance Reduces Persistence and Hurts Independent Performance (arXiv)",
+    "url": "https://ai-project-website.github.io/AI-assistance-reduces-persistence/",
+    "author": "Grace Liu, Brian Christian, Tsvetomira Dumbalska, Michiel A. Bakker, Rachit Dubey",
+    "date": "2026-04",
+    "description": "Large-scale experiments show that after just ~10 minutes of AI-assisted problem-solving, participants gave up more frequently and performed worse once the AI was removed, compared to those who never used it. The persistence costs were concentrated among users who prompted AI to solve tasks directly rather than seeking hints. Effects replicated across arithmetic and reading comprehension, suggesting a general consequence of AI-assisted problem-solving rather than a domain-specific one.",
+    "shortDescription": "After ~10 min of AI-assisted problem-solving, users gave up more and performed worse without AI — especially those who sought direct solutions.",
+    "category": "Research Papers",
+    "tags": ["AI", "cognition", "experiment", "productivity"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
