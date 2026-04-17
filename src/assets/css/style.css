@@ -1339,6 +1339,7 @@ main.container .page-intro {
     align-items: center;
     justify-content: flex-end;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .nav-links {
