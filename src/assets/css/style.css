@@ -1335,10 +1335,10 @@ main.container .page-intro {
 
   .nav-toggle {
     display: flex;
-    min-width: 44px;
     min-height: 44px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
   }
 
   .nav-links {
