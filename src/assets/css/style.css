@@ -9,7 +9,7 @@
   --bg-pure: #ffffff;
   --text: #1c1c1c;
   --text-secondary: #5a5a58;
-  --text-tertiary: #8a8a86;
+  --text-tertiary: #6e6e6a;
   --accent: #0b525b;
   --accent-hover: #127681;
   --accent-pale: #e4f0f1;
@@ -145,15 +145,27 @@ hr {
 /* --- Links --- */
 a {
   color: var(--accent);
-  text-decoration: none;
-  transition: color var(--transition);
-  border-bottom: 1px solid transparent;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+  transition: color var(--transition), text-decoration-color var(--transition);
 }
 
 a:hover,
 a:focus-visible {
   color: var(--accent-hover);
-  border-bottom-color: var(--accent-hover);
+  text-decoration-color: var(--accent-hover);
+}
+
+/* UI links (nav, cards, buttons) — no underline */
+.nav-links a,
+.resource-card .card-title a,
+.highlight-card .highlight-title a,
+.pub-entry .pub-title a,
+.site-footer a,
+.filter-pill,
+.nav-site-title {
+  text-decoration: none;
 }
 
 /* --- Container --- */
@@ -388,13 +400,13 @@ h2.section-label {
   font-size: 0.88rem;
 }
 
-.info-block h3 {
+.info-block h2 {
   margin-top: 1.25rem;
   font-size: 0.95rem;
   color: var(--accent);
 }
 
-.info-block h3:first-child {
+.info-block h2:first-child {
   margin-top: 0;
 }
 
