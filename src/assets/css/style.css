@@ -292,7 +292,9 @@ a:focus-visible {
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s ease;
 }
 
 /* --- Footer --- */
@@ -1326,22 +1328,9 @@ main.container .page-intro {
   h2 { font-size: 1.3rem; margin-top: 2rem; }
   h3 { font-size: 1.05rem; }
 
-  /* Nav: swap order — hamburger left, name right */
+  /* Nav: name left, hamburger right */
   .nav-container {
-    flex-direction: row-reverse;
-  }
-
-  .nav-site-title {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    gap: 0.55rem;
-  }
-
-  .nav-site-title::before {
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 0;
+    flex-direction: row;
   }
 
   .nav-toggle {
@@ -1394,13 +1383,15 @@ main.container .page-intro {
     transform: rotate(-45deg) translate(4px, -4px);
   }
 
-  /* Touch-friendly tap targets (min 44px) */
+  /* Touch-friendly tap targets (min 44px), right-aligned */
   .nav-links a {
     padding: 0.85rem 2rem;
     font-size: 0.95rem;
     min-height: 44px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    text-align: right;
   }
 
   .nav-links a.active::after {

@@ -152,6 +152,30 @@ function initMobileNav() {
     touchCurrentY = touchStartY;
   }, { passive: true });
 
+  const bars = toggle.querySelectorAll('.nav-toggle-bar');
+
+  function setBarProgress(t) {
+    // t: 0 = X (open), 1 = hamburger (closed)
+    if (bars.length < 3) return;
+    const angle1 = 45 * (1 - t);
+    const tx1 = 4 * (1 - t);
+    const angle3 = -45 * (1 - t);
+    bars[0].style.transition = 'none';
+    bars[1].style.transition = 'none';
+    bars[2].style.transition = 'none';
+    bars[0].style.transform = 'rotate(' + angle1 + 'deg) translate(' + tx1 + 'px, ' + tx1 + 'px)';
+    bars[1].style.opacity = t;
+    bars[2].style.transform = 'rotate(' + angle3 + 'deg) translate(' + tx1 + 'px, ' + (-tx1) + 'px)';
+  }
+
+  function clearBarProgress() {
+    bars.forEach(b => {
+      b.style.transition = '';
+      b.style.transform = '';
+      b.style.opacity = '';
+    });
+  }
+
   links.addEventListener('touchmove', (e) => {
     touchCurrentY = e.touches[0].clientY;
     const diff = touchCurrentY - touchStartY;
@@ -160,6 +184,9 @@ function initMobileNav() {
       links.style.transform = 'translateY(' + diff + 'px)';
       links.style.opacity = Math.max(0, 1 + diff / 120);
       links.style.transition = 'none';
+      // Animate hamburger icon proportionally (0 = X, 1 = bars)
+      const progress = Math.min(1, Math.max(0, -diff / 50));
+      setBarProgress(progress);
     }
   }, { passive: true });
 
@@ -168,6 +195,7 @@ function initMobileNav() {
     links.style.transition = '';
     links.style.transform = '';
     links.style.opacity = '';
+    clearBarProgress();
     // If swiped up more than 50px, close
     if (diff < -50 && links.classList.contains('open')) {
       closeMenu();
