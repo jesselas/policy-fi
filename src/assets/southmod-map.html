@@ -84,12 +84,14 @@
     font-size: 13px;
     line-height: 1.45;
     box-shadow: 0 6px 20px rgba(20, 30, 50, 0.12);
-    max-width: 260px;
+    width: 280px;
+    box-sizing: border-box;
     opacity: 0;
-    transform: translate(-50%, -100%) translateY(-12px);
     transition: opacity 0.12s ease;
     z-index: 1000;
+    left: 0; top: 0;
   }
+  #tooltip.wide { width: 340px; }
   #tooltip.visible { opacity: 1; }
   #tooltip .tt-model {
     font-weight: 700;
@@ -503,8 +505,13 @@
 <script>
 (function() {
   const tooltip = document.getElementById("tooltip");
+  const mapWrap = document.querySelector(".map-wrap");
+  const PAD = 10;   // keep tooltip this far from map edges
+  const GAP = 16;   // distance from cursor
+  let _currentEl = null;
 
   function show(evt, el) {
+    _currentEl = el;
     const model    = el.getAttribute("data-model")     || "";
     const country  = el.getAttribute("data-country")   || "";
     const program  = el.getAttribute("data-program")   || "";
@@ -513,6 +520,7 @@
     const blurb    = el.getAttribute("data-blurb")     || "";
     const isEuromod = el.classList.contains("euromod");
     tooltip.classList.toggle("is-euromod", isEuromod);
+    tooltip.classList.toggle("wide", !!blurb);
 
     let html = `<div class="tt-model">${model}</div>`
              + `<div class="tt-country">${country}</div>`
@@ -529,23 +537,44 @@
     }
     tooltip.innerHTML = html;
     tooltip.classList.add("visible");
-    move(evt);
+    position(evt);
   }
 
-  function move(evt) {
-    const x = evt.clientX;
-    const y = evt.clientY;
+  function position(evt) {
+    // Measure after content update so size is current.
+    const tt   = tooltip.getBoundingClientRect();
+    const map  = mapWrap.getBoundingClientRect();
+    // Use the larger of viewport and map bounds so tooltip never escapes
+    // the visible region either.
+    const minX = Math.max(map.left,   PAD) + PAD;
+    const maxX = Math.min(map.right,  window.innerWidth  - PAD) - PAD - tt.width;
+    const minY = Math.max(map.top,    PAD) + PAD;
+    const maxY = Math.min(map.bottom, window.innerHeight - PAD) - PAD - tt.height;
+
+    // Preferred: centered above cursor
+    let x = evt.clientX - tt.width / 2;
+    let y = evt.clientY - tt.height - GAP;
+
+    // Vertical flip if no room above
+    if (y < minY) {
+      y = evt.clientY + GAP;
+    }
+    // Clamp inside allowed rect
+    x = Math.max(minX, Math.min(maxX, x));
+    y = Math.max(minY, Math.min(maxY, y));
+
     tooltip.style.left = x + "px";
     tooltip.style.top  = y + "px";
   }
 
   function hide() {
     tooltip.classList.remove("visible");
+    _currentEl = null;
   }
 
   function attach(el) {
     el.addEventListener("mouseenter", e => show(e, el));
-    el.addEventListener("mousemove",  move);
+    el.addEventListener("mousemove",  position);
     el.addEventListener("mouseleave", hide);
     el.addEventListener("click",      () => {
       const url = el.getAttribute("data-url");
@@ -555,6 +584,8 @@
 
   document.querySelectorAll(".country.southmod, .country.euromod, .zanmod-marker")
     .forEach(attach);
+
+  window.addEventListener("scroll", () => { if (_currentEl) hide(); }, {passive: true});
 })();
 </script>
 </body>
