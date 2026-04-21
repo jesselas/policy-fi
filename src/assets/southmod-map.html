@@ -49,29 +49,36 @@
   .zanmod-marker { fill: var(--southmod-b); stroke: #fff; stroke-width: 1.2; cursor: pointer; }
   .zanmod-marker:hover { filter: drop-shadow(0 0 6px rgba(255, 126, 43, 0.7)); }
   .label {
-    font-size: 13px; font-weight: 700; fill: var(--text);
-    paint-order: stroke; stroke: var(--bg); stroke-width: 3.5;
+    font-size: 22px; font-weight: 700; fill: var(--text);
+    paint-order: stroke; stroke: var(--bg); stroke-width: 4.5;
     pointer-events: none;
   }
   /* Edge fade rectangles */
   .fade-left, .fade-right { pointer-events: none; }
 
-  /* Legend */
+  /* Legend (rendered inside the SVG via <foreignObject>) */
   .legend {
-    position: absolute;
-    display: flex; flex-direction: row; gap: 22px;
-    align-items: center;
-    font-size: 14px; font-weight: 600; color: var(--text);
+    display: flex; flex-direction: row; justify-content: center; align-items: center;
+    gap: 48px;
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    padding-top: 18px;
+    font-family: inherit;
+    font-size: 28px; font-weight: 600; color: var(--text);
     white-space: nowrap;
   }
-  .legend-row { display: flex; align-items: center; gap: 10px; }
+  .legend-row { display: flex; align-items: center; gap: 16px; }
   .legend-swatch {
-    width: 28px; height: 18px;
+    width: 56px; height: 36px;
     border: 1px solid;
     flex: 0 0 auto;
   }
   .legend-swatch.southmod { background: linear-gradient(135deg, var(--southmod-a), var(--southmod-b)); border-color: var(--southmod-edge); }
   .legend-swatch.euromod  { background: linear-gradient(135deg, var(--euromod-a),  var(--euromod-b));  border-color: var(--euromod-edge); }
+  @media (max-width: 600px) {
+    .legend { flex-direction: column; gap: 12px; font-size: 40px; padding-top: 8px; }
+    .legend-swatch { width: 72px; height: 46px; }
+  }
 
   /* Tooltip */
   #tooltip {
@@ -111,7 +118,7 @@
 </head>
 <body>
 <div class="map-wrap">
-<svg class="map" viewBox="0 0 1600 882" xmlns="http://www.w3.org/2000/svg" role="img"
+<svg class="map" viewBox="0 0 1600 1002" xmlns="http://www.w3.org/2000/svg" role="img"
      aria-label="World map highlighting SOUTHMOD and other EUROMOD-based microsimulation model countries">
   <defs>
     <!-- SOUTHMOD diagonal gradient -->
@@ -493,12 +500,15 @@
       <text x="1037.02" y="550.33" text-anchor="start" class="label">ZANMOD</text>
     </g>
   </g>
-</svg>
 
-<div class="legend" aria-hidden="true" style="left: 50%; top: 91.41%; transform: translateX(-50%);">
-  <div class="legend-row"><span class="legend-swatch southmod"></span>SOUTHMOD countries</div>
-  <div class="legend-row"><span class="legend-swatch euromod"></span>Other EUROMOD-based models</div>
-</div>
+  <!-- Legend (below the map area) -->
+  <foreignObject x="0" y="920" width="1600" height="82">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="legend" aria-hidden="true">
+      <div class="legend-row"><span class="legend-swatch southmod"></span>SOUTHMOD countries</div>
+      <div class="legend-row"><span class="legend-swatch euromod"></span>Other EUROMOD-based models</div>
+    </div>
+  </foreignObject>
+</svg>
 
 <div id="tooltip" role="tooltip" aria-hidden="true"></div>
 </div>
