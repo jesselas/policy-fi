@@ -40,9 +40,12 @@
   .country.other    { fill: var(--land);          stroke: var(--land-edge);    stroke-width: 0.4; }
   .country.euromod  { fill: url(#euromodGradient); stroke: var(--euromod-edge); stroke-width: 0.45; cursor: pointer; }
   .country.southmod { fill: url(#southmodGradient); stroke: var(--southmod-edge); stroke-width: 0.85; cursor: pointer; filter: url(#southmodGlow); }
-  /* Hover states */
-  .country.euromod:hover  { filter: brightness(1.08) drop-shadow(0 0 6px rgba(80, 110, 160, 0.5)); }
-  .country.southmod:hover { filter: url(#southmodGlow) brightness(1.06) drop-shadow(0 0 12px rgba(255, 126, 43, 0.55)); }
+  /* Hover states (individual country hover + group highlight via legend) */
+  .country.euromod:hover,
+  .country.euromod.hl   { filter: brightness(1.08) drop-shadow(0 0 6px rgba(80, 110, 160, 0.5)); }
+  .country.southmod:hover,
+  .country.southmod.hl  { filter: url(#southmodGlow) brightness(1.06) drop-shadow(0 0 12px rgba(255, 126, 43, 0.55)); }
+  .zanmod-marker.hl     { filter: drop-shadow(0 0 6px rgba(255, 126, 43, 0.7)); }
   /* Leader lines & labels */
   .leader      { stroke: var(--southmod-edge); stroke-width: 0.9; opacity: 0.85; }
   .anchor-dot  { fill: #fff; stroke: var(--southmod-edge); stroke-width: 1; }
@@ -62,12 +65,11 @@
     gap: 48px;
     width: 100%; height: 100%;
     box-sizing: border-box;
-    padding-top: 18px;
     font-family: inherit;
     font-size: 28px; font-weight: 600; color: var(--text);
     white-space: nowrap;
   }
-  .legend-row { display: flex; align-items: center; gap: 16px; }
+  .legend-row { display: flex; align-items: center; gap: 16px; cursor: pointer; }
   .legend-swatch {
     width: 56px; height: 36px;
     border: 1px solid;
@@ -76,8 +78,8 @@
   .legend-swatch.southmod { background: linear-gradient(135deg, var(--southmod-a), var(--southmod-b)); border-color: var(--southmod-edge); }
   .legend-swatch.euromod  { background: linear-gradient(135deg, var(--euromod-a),  var(--euromod-b));  border-color: var(--euromod-edge); }
   @media (max-width: 600px) {
-    .legend { flex-direction: column; gap: 12px; font-size: 40px; padding-top: 8px; }
-    .legend-swatch { width: 72px; height: 46px; }
+    .legend { flex-direction: column; gap: 14px; font-size: 34px; }
+    .legend-swatch { width: 60px; height: 38px; }
   }
 
   /* Tooltip */
@@ -118,7 +120,7 @@
 </head>
 <body>
 <div class="map-wrap">
-<svg class="map" viewBox="0 0 1600 1002" xmlns="http://www.w3.org/2000/svg" role="img"
+<svg class="map" viewBox="0 0 1600 1060" xmlns="http://www.w3.org/2000/svg" role="img"
      aria-label="World map highlighting SOUTHMOD and other EUROMOD-based microsimulation model countries">
   <defs>
     <!-- SOUTHMOD diagonal gradient -->
@@ -502,10 +504,10 @@
   </g>
 
   <!-- Legend (below the map area) -->
-  <foreignObject x="0" y="920" width="1600" height="82">
+  <foreignObject x="0" y="920" width="1600" height="140">
     <div xmlns="http://www.w3.org/1999/xhtml" class="legend" aria-hidden="true">
-      <div class="legend-row"><span class="legend-swatch southmod"></span>SOUTHMOD countries</div>
-      <div class="legend-row"><span class="legend-swatch euromod"></span>Other EUROMOD-based models</div>
+      <div class="legend-row" data-hl="southmod"><span class="legend-swatch southmod"></span>SOUTHMOD countries</div>
+      <div class="legend-row" data-hl="euromod"><span class="legend-swatch euromod"></span>Other EUROMOD-based models</div>
     </div>
   </foreignObject>
 </svg>
@@ -595,6 +597,18 @@
 
   document.querySelectorAll(".country.southmod, .country.euromod, .zanmod-marker")
     .forEach(attach);
+
+  // Group highlight: hovering a legend row highlights all countries in that category.
+  const hlGroups = {
+    southmod: document.querySelectorAll(".country.southmod, .zanmod-marker"),
+    euromod:  document.querySelectorAll(".country.euromod"),
+  };
+  document.querySelectorAll(".legend-row[data-hl]").forEach(row => {
+    const group = row.getAttribute("data-hl");
+    const nodes = hlGroups[group] || [];
+    row.addEventListener("mouseenter", () => nodes.forEach(n => n.classList.add("hl")));
+    row.addEventListener("mouseleave", () => nodes.forEach(n => n.classList.remove("hl")));
+  });
 
   window.addEventListener("scroll", () => { if (_currentEl) hide(); }, {passive: true});
 })();
