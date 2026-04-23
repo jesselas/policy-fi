@@ -132,6 +132,17 @@
     "extras": null
   },
   {
+    "title": "Electricity Tariff and VAT Reform in Ethiopia: Welfare, Poverty, and Cost-of-Living Spillovers",
+    "authors": "Adnan Abdulaziz Shahir",
+    "year": 2026,
+    "type": "Other Published Work",
+    "publication": "UNU-WIDER Working Paper Series, 2026",
+    "url": "https://doi.org/10.35188/UNU-WIDER/2026/713-8",
+    "abstract": "Ethiopia initiated a major electricity sector reform in 2024, significantly increasing tariffs and introducing a value-added tax on electricity consumption to improve the financial sustainability of its state-owned utility. This study assesses the short-term distributional, sectoral, and cost-of-living impacts of this reform. The analysis links a tax-benefit microsimulation model (ETMOD) with a price-based social accounting matrix (SAM) multiplier framework to capture both direct, household-level welfare changes and indirect, economy-wide price transmission effects. The results show the reform is regressive, increasing the national poverty rate by 3.5 percentage points in a static, short-run setting. The tariff increase is the primary driver of this effect, while the VAT has a smaller impact. Indirect effects, transmitted through higher prices for essential goods such as food and water, account for two-thirds of the total poverty impact and are larger than the direct effect of higher electricity bills. Rural and informal households are disproportionately affected. These findings demonstrate that without compensatory measures, electricity pricing reforms necessary for fiscal stability can impose substantial social costs. We conclude that pairing such reforms with targeted social protection is essential to shield vulnerable households from adverse outcomes.",
+    "citation": "Shahir, A.A. & Lastunen, J. Electricity Tariff and VAT Reform in Ethiopia: Welfare, Poverty, and Cost-of-Living Spillovers, WIDER Working Paper 2026/38, Helsinki: UNU-WIDER, 2026. https://doi.org/10.35188/UNU-WIDER/2026/713-8",
+    "extras": null
+  },
+  {
     "title": "Microsimulation of Tax-benefit Systems in the Global South: A Comparative Assessment",
     "authors": "Antoine de Mahieu, Katrin Gasior, H. Xavier Jara, Jukka Pirttilä",
     "year": 2024,
@@ -309,13 +320,13 @@
   },
   {
     "title": "Synthetic Data and AI in Microsimulation Models: A Feasibility Study using GHAMOD",
-    "authors": "Stephan Dietrich, Pia Rattenhuber, Kwabena Adu-Ababio, Prince Baah, Olamide Goriola, Blaise Bay",
+    "authors": "Stephan Dietrich, Pia Rattenhuber, Kwabena Adu-Ababio, Prince Baah, Olamide Goriola, Blaise Bayuo",
     "year": 2026,
     "type": "Technical Note",
-    "publication": "Forthcoming in UNU-WIDER Technical Note Series",
-    "url": null,
-    "abstract": null,
-    "citation": "Lastunen, J., Dietrich, S., Rattenhuber, P., Adu-Ababio, K., Baah, P., Goriola, O. & Bay, B. Synthetic Data and AI in Microsimulation Models: A Feasibility Study using GHAMOD. WIDER Technical Note, UNU-WIDER & ACET, 2026, forthcoming.",
+    "publication": "UNU-WIDER Technical Note Series, 2026",
+    "url": "https://doi.org/10.35188/UNU-WIDER/ATZV1858",
+    "abstract": "This study investigates the feasibility of generating synthetic input data for the Ghanaian tax-benefit microsimulation model (GHAMOD) to address limitations posed by infrequent survey data. Current GHAMOD input datasets are derived from the 2013 and 2017 Ghana Living Standards Surveys. Reliance on such dated household data reduces the accuracy of policy analysis, particularly when failing to account for broader demographic shifts and structural changes that occur between survey rounds. This research explores methodologies ranging from linear interpolation to advanced machine learning techniques, including imputation and predictive modelling, to create synthetic data for intervening years (2014–16) and future years (2018 onwards). By combining existing survey data with complementary external data sources, this study demonstrates that synthetic data generation is a feasible, transformative approach for enhancing the timeliness of fiscal policy analysis. The research establishes a framework for effectively leveraging high-frequency complementary data to bridge temporal gaps, thereby improving the model's predictive capabilities and relevance for analysing the budgetary and distributional impacts of fiscal policies. This report details findings on suitable data and methods, discusses challenges, offers selected case studies, and provides a roadmap for integrating these techniques into national data ecosystems, with potential applications for other tax-benefit microsimulation models in Africa, Asia, and Latin America.",
+    "citation": "Lastunen, J., Dietrich, S., Rattenhuber, P., Adu-Ababio, K., Baah, P., Goriola, O. & Bayuo, B. Synthetic Data and AI in Microsimulation Models: A Feasibility Study using GHAMOD, WIDER Technical Note 2026/2, Helsinki: UNU-WIDER, 2026. https://doi.org/10.35188/UNU-WIDER/ATZV1858",
     "extras": null
   },
   {
