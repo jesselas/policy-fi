@@ -60,3 +60,37 @@ jsonLd:
 
   <p>Discover more about my work or get in touch through the links below.</p>
 </div>
+
+{% if recentResearch and recentResearch.length > 0 %}
+<div class="info-section recent-research">
+  <h2 class="section-label">Recent research</h2>
+  <div class="recent-research-grid">
+    {% for pub in recentResearch %}
+    <div class="pub-entry recent-research-card">
+      <div class="pub-toggle" aria-expanded="false">
+        <span class="pub-toggle-icon"></span>
+        <span class="pub-title">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </span>
+      </div>
+      <div class="recent-research-meta">{{ pub.type }} · {{ pub.year }}</div>
+      <div class="pub-details">
+        <div class="pub-details-inner">
+          {% if pub.authors %}<div class="pub-authors">With: {{ pub.authors }}</div>{% endif %}
+          <div class="pub-venue">{{ pub.publication }}</div>
+          {% if pub.abstract %}<div class="pub-description">{{ pub.abstract }}</div>{% endif %}
+          {% if pub.extras %}<div class="pub-description"><em>{{ pub.extras }}</em></div>{% endif %}
+          <div class="citation-box">
+            <div class="citation-text" id="cite-recent-{{ loop.index0 }}">{{ pub.citation }}</div>
+            <div class="citation-buttons">
+              <button class="citation-copy" data-cite-id="cite-recent-{{ loop.index0 }}" data-format="plain" aria-label="Copy citation">Copy Citation</button>
+              <button class="citation-copy" data-bibtex='{"authors":"{{ pub.citation.split(".")[0] | replace("'", "") }}","title":"{{ pub.title | replace("'", "") }}","year":"{{ pub.year }}","venue":"{{ pub.publication | replace("'", "") }}","url":"{{ pub.url or "" }}"}' data-format="bibtex" aria-label="Copy BibTeX">BibTeX</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
