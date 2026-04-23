@@ -856,6 +856,55 @@ h2.section-label {
   margin-bottom: 0.2rem;
 }
 
+/* --- Recent Research cards (home page) --- */
+.recent-research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+  align-items: start;
+}
+
+.recent-research-card.pub-entry {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  background: var(--accent-faint);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.recent-research-card.pub-entry:hover {
+  border-color: var(--accent-pale);
+  box-shadow: 0 2px 10px rgba(11, 82, 91, 0.06);
+}
+
+.recent-research-card .pub-toggle {
+  align-items: flex-start;
+  padding: 0;
+}
+
+.recent-research-card .pub-title {
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.recent-research-meta {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin: 0.3rem 0 0 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+.recent-research-card .pub-details {
+  padding-left: 1.75rem;
+}
+
+@media (max-width: 720px) {
+  .recent-research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Highlight Tabs --- */
 .highlight-tabs {
   display: flex;
