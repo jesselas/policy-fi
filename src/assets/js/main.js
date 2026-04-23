@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExternalLinks();
   initAccordions();
   initPubToggles();
+  initRecentResearchCards();
   initCitationCopy();
   initSeeMore();
   initHighlightTabs();
@@ -90,6 +91,21 @@ function initPubToggles() {
         e.preventDefault();
         toggle.click();
       }
+    });
+  });
+}
+
+/* --- Recent Research cards: make the whole card a click target --- */
+function initRecentResearchCards() {
+  document.querySelectorAll('.recent-research-card').forEach(card => {
+    const toggle = card.querySelector('.pub-toggle');
+    if (!toggle) return;
+    card.addEventListener('click', (e) => {
+      // Ignore clicks on interactive children or on text meant to be selected.
+      if (e.target.closest('a, button, input, textarea, label, .citation-text')) return;
+      // The pub-toggle has its own handler already; don't double-fire.
+      if (e.target.closest('.pub-toggle')) return;
+      toggle.click();
     });
   });
 }

@@ -506,6 +506,7 @@ h2.section-label {
 .accordion-section:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--accent);
+  background: var(--accent-faint);
 }
 
 .accordion-header {
@@ -879,6 +880,22 @@ h2.section-label {
 .recent-research-card.pub-entry:hover {
   border-color: var(--accent);
   box-shadow: var(--shadow-md);
+  background: var(--accent-faint);
+}
+
+/* Make the whole card a click target with a cursor hint */
+.recent-research-card {
+  cursor: pointer;
+}
+/* Interactive children (links, buttons, citation text) keep their own cursor */
+.recent-research-card a,
+.recent-research-card button,
+.recent-research-card .citation-text {
+  cursor: auto;
+}
+.recent-research-card a,
+.recent-research-card button {
+  cursor: pointer;
 }
 
 .recent-research-card .pub-toggle {
@@ -968,6 +985,7 @@ h2.section-label {
 .highlight-card:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--accent);
+  background: var(--accent-faint);
 }
 
 .highlight-card .highlight-title {
