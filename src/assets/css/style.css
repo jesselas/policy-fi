@@ -505,6 +505,7 @@ h2.section-label {
 
 .accordion-section:hover {
   box-shadow: var(--shadow-md);
+  border-color: var(--accent);
 }
 
 .accordion-header {
@@ -662,7 +663,8 @@ h2.section-label {
 
 .resource-card:hover {
   box-shadow: var(--shadow-md);
-  border-left-color: var(--accent-hover);
+  border-color: var(--accent);
+  border-left-color: var(--accent);
   transform: translateX(2px);
 }
 
@@ -866,21 +868,30 @@ h2.section-label {
 }
 
 .recent-research-card.pub-entry {
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  padding: 0.85rem 1rem;
-  background: var(--accent-faint);
-  transition: border-color var(--transition), box-shadow var(--transition);
+  background: var(--bg-pure);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), border-color var(--transition);
 }
 
 .recent-research-card.pub-entry:hover {
-  border-color: var(--accent-pale);
-  box-shadow: 0 2px 10px rgba(11, 82, 91, 0.06);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
 }
 
 .recent-research-card .pub-toggle {
   align-items: flex-start;
   padding: 0;
+}
+
+.recent-research-card .pub-toggle-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
 }
 
 .recent-research-card .pub-title {
@@ -891,12 +902,16 @@ h2.section-label {
 .recent-research-meta {
   font-size: 0.75rem;
   color: var(--text-tertiary);
-  margin: 0.3rem 0 0 1.75rem;
   letter-spacing: 0.02em;
 }
 
 .recent-research-card .pub-details {
-  padding-left: 1.75rem;
+  padding-left: 1.85rem;
+}
+
+/* Suppress the global section divider that follows Recent research on the home page */
+.recent-research + .divider {
+  display: none;
 }
 
 @media (max-width: 720px) {
