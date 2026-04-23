@@ -54,6 +54,20 @@ function initAccordions() {
     });
   });
 
+  // Clicking the section's background area (not the header, not a resource card)
+  // while the section is open closes it.
+  document.querySelectorAll('.accordion-section').forEach(section => {
+    const header = section.querySelector('.accordion-header');
+    if (!header) return;
+    section.addEventListener('click', (e) => {
+      if (header.getAttribute('aria-expanded') !== 'true') return;
+      if (e.target.closest('.accordion-header')) return;       // header handles itself
+      if (e.target.closest('.resource-card')) return;          // leave cards alone
+      if (e.target.closest('a, button, input, textarea, label, .tag')) return;
+      header.click();
+    });
+  });
+
   // Set accessibility attributes; respect aria-expanded already set in HTML
   document.querySelectorAll('.accordion-header').forEach(header => {
     header.setAttribute('tabindex', '0');
