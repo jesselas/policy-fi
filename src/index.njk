@@ -69,11 +69,13 @@ jsonLd:
     <div class="pub-entry recent-research-card">
       <div class="pub-toggle" aria-expanded="false">
         <span class="pub-toggle-icon"></span>
-        <span class="pub-title">
-          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
-        </span>
+        <div class="pub-toggle-body">
+          <span class="pub-title">
+            {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+          </span>
+          <div class="recent-research-meta">{{ pub.type }} · {{ pub.year }}</div>
+        </div>
       </div>
-      <div class="recent-research-meta">{{ pub.type }} · {{ pub.year }}</div>
       <div class="pub-details">
         <div class="pub-details-inner">
           {% if pub.authors %}<div class="pub-authors">With: {{ pub.authors }}</div>{% endif %}
