@@ -2217,5 +2217,35 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "claude-code-vscode-academic-economists-backman",
+    "title": "Claude Code in VS Code — For Academic Economists: A Practical Guide",
+    "url": "https://claesbackman.com/claude-code-guide.html",
+    "author": "Claes Bäckman",
+    "date": "2026-04",
+    "description": "Practical guide to using Claude Code inside VS Code for academic economic research. Covers installation and setup, recommended extensions for Stata, Python, R, and LaTeX, file format handling, project customization via CLAUDE.md and reusable skill commands, Git integration, and context window management. Tailored to empirical economics workflows such as robustness checks, panel regressions, and research feedback automation.",
+    "shortDescription": "Practical guide for academic economists on installing, configuring, and optimizing Claude Code in VS Code for R, Stata, Python, and LaTeX workflows.",
+    "category": "Coding with AI",
+    "tags": ["claude", "coding", "economics", "VS Code"],
+    "featured": false,
+    "type": "guide",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "coarse-ink-ai-paper-reviewer-van-dijcke",
+    "title": "coarse.ink — Open-Source AI Paper Reviewer",
+    "url": "https://www.coarse.ink",
+    "author": "David Van Dijcke",
+    "date": "2026-04",
+    "description": "Open-source, not-for-profit AI paper reviewer. Plug in a paper, your OpenRouter API key, and email; reviews cost under $2 using SOTA models (Claude Opus, GPT-5.4) or under $1 with open-source models. Returns an interactive panel with major and minor comments traceable to the text and tickable when addressed. Benchmarks at coarse.ink/compare (judged by Gemini-3.1-pro) rival Reviewer3, Refine.ink, and Stanford Agentic Reviewer. Reviews active for 90 days, no data retention, explicit opt-out of training on all model calls.",
+    "shortDescription": "Open-source AI paper reviewer using your OpenRouter key. Costs <$2 per review, rivals Reviewer3/Refine.ink/Stanford Agentic Reviewer. No data retention.",
+    "category": "AI Tools for Research",
+    "tags": ["AI", "peer review", "open source", "economics"],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
