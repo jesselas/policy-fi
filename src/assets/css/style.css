@@ -1514,7 +1514,7 @@ main.container .page-intro {
     transform: none;
   }
 
-  .pub-entry:hover {
+  .pub-entry:not(.recent-research-card):hover {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
@@ -1657,7 +1657,7 @@ main.container .page-intro {
     box-shadow: var(--shadow-sm);
   }
 
-  .pub-entry:hover {
+  .pub-entry:not(.recent-research-card):hover {
     background: transparent;
     margin-left: 0;
     margin-right: 0;
