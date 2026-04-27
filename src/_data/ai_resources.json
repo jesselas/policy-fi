@@ -2307,5 +2307,26 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "ronkko-claude-academic-research",
+    "title": "Claude Academic Research (Claude Code plugin)",
+    "url": "https://github.com/mronkko/claude-academic-research",
+    "author": "Mikko Rönkkö",
+    "date": "2026-04",
+    "description": "A Claude Code plugin for academic research workflows. Bundles eight skills covering MCP-grounded citations, empirical integrity checks, systematic literature reviews, Zotero integration (via Better BibTeX), and parallel-critic manuscript revision. Installs from inside Claude Code via /plugin marketplace add mronkko/claude-academic-research; an interactive /setup wizard configures Zotero and metadata-source credentials. Cross-platform (Windows, macOS, Linux).",
+    "shortDescription": "Claude Code plugin bundling skills for citation grounding, empirical integrity, systematic reviews, Zotero ops and parallel-critic manuscript revision.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "AI",
+      "Claude Code",
+      "academic research",
+      "Zotero",
+      "literature review"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
