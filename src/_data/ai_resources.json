@@ -2328,5 +2328,26 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "aslim-beam-thinking-with-agents",
+    "title": "Thinking with Agents: AI Tools for Teaching and Research (UVM Economics Bootcamp)",
+    "url": "https://thinkingwithagents.github.io/",
+    "author": "Erkmen G. Aslim, Emily Beam",
+    "date": "2026-04",
+    "description": "Two-session bootcamp at the University of Vermont introducing economists to agentic AI tools for research and teaching. Session 1 (Apr 22) covers the difference between chat-based and agentic tools, context windows, standing instructions, voice files, and reusable skills, with live demos of website redesign and custom skill creation. Session 2 (Apr 27) focuses on research pipelines and automation — code and paper auditing, lecture-building, and web scraping workflows. Materials include downloadable PDF slide decks, a setup/prep guide, an Applications & Skills page with custom Claude Code skills (e.g., /code-review, /econ-audit), and a curated outside-resources list.",
+    "shortDescription": "UVM Economics bootcamp slides on agentic AI tools for research and teaching: context windows, voice files, skills, and research pipelines.",
+    "category": "Courses & Learning",
+    "tags": [
+      "economics",
+      "AI",
+      "teaching",
+      "research workflows",
+      "Claude Code"
+    ],
+    "featured": false,
+    "type": "course",
+    "internal": false,
+    "highlight": false
   }
 ]
