@@ -2349,5 +2349,26 @@
     "type": "course",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "dillon-jaffe-immorlica-stanton-shifting-work-patterns-genai",
+    "title": "Shifting Work Patterns with Generative AI (AER: Insights, forthcoming)",
+    "url": "https://www.aeaweb.org/articles?id=10.1257/aeri.20250275",
+    "author": "Eleanor W. Dillon, Sonia Jaffe, Nicole Immorlica, Christopher T. Stanton",
+    "date": "2026-04",
+    "description": "Field experiment across 66 firms and 7,137 knowledge workers randomly given access to a generative AI assistant integrated into the email, meeting, and writing applications they already used. In the second half of the six-month experiment, the 80% of treated workers who actively used the tool spent two fewer hours per week on email and reduced their time working outside regular hours. Beyond these individual time savings the authors detect no shifts in the quantity or composition of workers' tasks, suggesting that broader reallocation of responsibilities requires institutional and team-level changes rather than just individual AI access.",
+    "shortDescription": "Field experiment in 66 firms, 7,137 knowledge workers: GenAI access cut ~2 hrs/week of email but did not shift task composition absent institutional change.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "productivity",
+      "field experiment",
+      "knowledge work"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
