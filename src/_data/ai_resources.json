@@ -2370,5 +2370,47 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "lopez-lira-zeropaper",
+    "title": "ZeroPaper: An Autonomous Research System (SSRN)",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687378",
+    "author": "Alejandro Lopez-Lira",
+    "date": "2026-05",
+    "description": "Companion paper for ZeroPaper (https://github.com/alejandroll10/zeropaper), an end-to-end autonomous research pipeline that takes a domain as input and produces a paper of roughly JFQA quality with no human in the loop between launch and finish. The system is built on three premises — state and control flow live outside the model, every stage is verified rather than trusted, and termination is mechanical — and coordinates ~30 specialized agents across 10 stages and 6 adversarial gates (math audit, novelty check, mechanism review, simulated refereeing) under any of three host runtimes (Claude Code, Codex, or Gemini CLI). The paper sets out the design discipline that makes a pipeline this long terminate without drift: ten premises about LLM behavior and six derived principles. Cost is roughly $2/paper amortized under a flat-fee max subscription (~100 papers/month), versus ~1000× more on pay-per-token APIs. Released under a custom share-alike research-use license — free for non-commercial research and education, but submitting any pipeline-produced work to a journal, preprint server, conference, or thesis committee requires prior written notice, and outputs carry a non-cosmetic provenance watermark.",
+    "shortDescription": "Companion paper for ZeroPaper, an autonomous end-to-end research pipeline (~30 agents, 10 stages, 6 adversarial gates) producing JFQA-quality papers at ~$2 each.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "AI",
+      "research automation",
+      "agents",
+      "academic research",
+      "pipelines"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "bjorkegren-intelligence-plenty-workers-few",
+    "title": "The Intelligence Is Plenty but the Workers Are Few",
+    "url": "https://danbjork.substack.com/p/the-intelligence-is-plenty-but-the",
+    "author": "Dan Björkegren",
+    "date": "2026-04",
+    "description": "Substack essay arguing that advanced AI will play out very differently in low- and middle-income countries than in rich economies. High-income countries can absorb AI by augmenting their large stock of knowledge workers (~41% of employment), but LMICs employ far fewer skilled workers (under 10%), so grafting AI onto a thin layer of expertise yields limited gains. The piece suggests LMICs may benefit more from fully automated intelligence systems that handle complex tasks directly rather than copying wealthy-country adoption patterns — though this requires confronting infrastructure gaps, digital legibility, and institutional constraints. Frames the asymmetry as an opportunity for poorer countries to design novel economic structures around abundant intelligence.",
+    "shortDescription": "Rich vs. poor countries face different AI transitions: with few skilled workers, LMICs may benefit more from fully automated intelligence than augmentation.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "development",
+      "LMIC",
+      "automation"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
