@@ -2412,5 +2412,27 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "maresca-agi-interest-rates",
+    "title": "AGI Could Lower Interest Rates",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6514781",
+    "author": "Caleb Maresca",
+    "date": "2026-05",
+    "description": "Develops a heterogeneous-agent asset pricing model in which transformative AI capable of automating most human labor can lower interest rates even as it dramatically accelerates growth. Under baseline calibrations, the risk-free rate falls to near zero despite growth rising from 2% to 11%, and the equity premium expands from 6% to over 20%. The key mechanism is that labor displacement risk generates massive precautionary saving demand that outweighs the higher productivity effect. Advises caution when interpreting long-term bond yields as a signal of market expectations of transformative AI. Highlighted by <a href=\"https://marginalrevolution.com/marginalrevolution/2026/05/agi-could-lower-interest-rates.html\">Tyler Cowen</a>.",
+    "shortDescription": "Heterogeneous-agent model shows AGI can lower interest rates despite 11% growth, as labor displacement risk drives precautionary saving demand.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "AGI",
+      "interest rates",
+      "asset pricing",
+      "macro"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
