@@ -2434,5 +2434,35 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "davidson-halperin-houlden-korinek-explosive-growth",
+    "title": "When Does Automating AI Research Produce Explosive Growth? (NBER WP 35155)",
+    "url": "https://www.nber.org/papers/w35155",
+    "author": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
+    "date": "2026-05",
+    "description": "Develops a semi-endogenous growth model with an innovation network to study when AI-driven automation of research leads to superexponential ('explosive') growth. Derives a condition under which two reinforcing channels — a technological feedback loop across research sectors and an economic feedback loop where higher output finances more research — overcome diminishing returns to ideas. In a simulation calibrated to AI progress trends, fully automating software research plus modest (5%) automation elsewhere produces a singularity within six years. Includes an interactive online simulator for exploring growth paths.",
+    "shortDescription": "Korinek et al. model when AI automation of research triggers explosive growth; calibrated simulation yields singularity within six years.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "growth", "automation", "singularity"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "afonso-galiani-galvez-sosa-dril-datasets",
+    "title": "Deep Research on a Loop: Using AI Agents to Construct Economic Datasets (NBER WP 35188)",
+    "url": "https://www.nber.org/papers/w35188",
+    "author": "Santiago Afonso, Sebastian Galiani, Ramiro H. Gálvez, Raul A. Sosa",
+    "date": "2026-05",
+    "description": "Proposes DRIL (Deep Research on a Loop), a methodology that uses AI agents to assemble datasets from publicly available sources. DRIL applies a fixed research instrument across a mapped unit space with a two-stage architecture separating design from implementation. Applied to updating the Global Tax Expenditures Database for eight Latin American and Caribbean countries, producing 129 sources and 136 evidence records at the cost of a standard LLM subscription. Argues that even partial automation of dataset construction can shift the production function of empirical economics.",
+    "shortDescription": "DRIL methodology uses AI agents to automate dataset construction from public sources, demonstrated on tax expenditure data for 8 countries.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "data", "agents", "methodology"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
