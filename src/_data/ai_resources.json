@@ -2464,5 +2464,50 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "babina-understanding-firms-ai-efforts",
+    "title": "Understanding Firms' AI Efforts and Their Economic Impact (NBER WP 35123)",
+    "url": "https://www.nber.org/papers/w35123",
+    "author": "Tania Babina",
+    "date": "2026-04",
+    "description": "Reviews firm-level data on artificial intelligence and the emerging evidence on AI's economic effects. Argues that measurement is central: different AI datasets capture different objects (invention vs. use, internal capability vs. outsourcing, realized activity vs. investor perceptions) and can therefore lead to different conclusions. Develops a framework for choosing among these measures and surveys available data sources on firm AI efforts. Synthesizes evidence on AI's effects on firm growth, valuation, productivity, risk, labor, competition, and financial markets.",
+    "shortDescription": "Comprehensive survey of firm-level AI data and evidence on AI's effects on growth, productivity, labor, and competition.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "firms", "productivity", "measurement", "survey"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "beraja-talamas-organizational-learning-technologies",
+    "title": "The Value of Organizational Learning Technologies",
+    "url": "https://conference.nber.org/confer/2026/DTs26/beraja.pdf",
+    "author": "Martin Beraja, Eduard Talamàs",
+    "date": "2026-03",
+    "description": "Introduces a new metric called VOLT (Value of Organizational Learning Technologies) that measures the potential increase in economic output if firms could learn faster. Using 2023 U.S. Census data on business establishments, finds that VOLT for the American economy is approximately 2.0, meaning AI-driven organizational learning technologies have the potential to double aggregate economic output in the long run. Roughly three-quarters of potential gains come from extending firm lifespans rather than boosting productivity directly. Industry-by-industry analysis reveals that knowing how exposed an industry is to LLMs tells almost nothing about how much it stands to gain from AI as an organizational learning tool.",
+    "shortDescription": "New VOLT metric estimates AI-driven organizational learning could double US economic output; industry analysis challenges conventional wisdom.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "growth", "productivity", "firms", "organizational learning"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "openai-prism-research-workspace",
+    "title": "Prism: AI-Native LaTeX Workspace for Scientific Research",
+    "url": "https://openai.com/prism/",
+    "author": null,
+    "date": "2026-01",
+    "description": "Free cloud-based LaTeX editor with AI assistant (GPT-5.2) embedded directly into the research writing workflow. Features include contextual AI assistance with access to the full project, visual-to-code conversion for diagrams, literature search and citation integration, and real-time collaboration. Particularly relevant for economists writing papers with mathematical models and empirical tables. Free for anyone with a ChatGPT account, with enterprise versions for universities forthcoming.",
+    "shortDescription": "Free AI-powered LaTeX workspace for research writing, with contextual AI help, citation tools, and real-time collaboration.",
+    "category": "AI Tools for Research",
+    "tags": ["AI", "tools", "LaTeX", "writing", "research", "collaboration"],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
