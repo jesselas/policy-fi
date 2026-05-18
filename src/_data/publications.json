@@ -287,15 +287,16 @@
     "extras": null
   },
   {
-    "title": "SOUTHMOD Country Report Rwanda: RWAMOD v1.2",
-    "authors": "Antoine de Mahieu, Jeannette Mukangango, Theogene Harerimana, Naphtal Hakizimana, John Karangwa, Aimable Nsabimana, Michael Noble, Gemma Wright",
-    "year": 2025,
+    "title": "SOUTHMOD Country Report Rwanda: RWAMOD v2.0",
+    "authors": "Christian Rwagasana",
+    "year": 2026,
     "type": "Country Report",
-    "publication": "UNU-WIDER Report, 2025",
-    "url": "https://www.wider.unu.edu/publication/southmod-country-report-rwanda-rwamod-v12",
-    "abstract": "This report documents RWAMOD, the SOUTHMOD model developed for Rwanda. This work was carried out by UNU-WIDER, SASPRI, and the Rwanda Revenue Authority (RRA). The results presented in this report are derived using RWAMOD version 1.2, which is part of the SOUTHMOD bundle (SOUTHMOD_A3.0) and runs on EUROMOD software. The report describes the different tax-benefit policies in place, how the microsimulation model picks up these different provisions, and the database on which the model runs. It concludes with a validation of results against external data sources for Rwanda.",
-    "citation": "de Mahieu, A., Mukangango, J., Harerimana, T., Lastunen, J., Hakizimana, N., Karangwa, J., Nsabimana, A., Noble, M. & Wright, G. SOUTHMOD Country Report Rwanda: RWAMOD v1.2, Helsinki: UNU-WIDER, 2025.",
-    "extras": null
+    "publication": "UNU-WIDER Report, 2026",
+    "url": "https://www.wider.unu.edu/publication/southmod-country-report-rwanda-rwamod-v20",
+    "abstract": "This report documents RWAMOD, the SOUTHMOD model developed for Rwanda. This work was carried out by UNU-WIDER, SASPRI, and the Rwanda Revenue Authority (RRA). The results presented in this report are derived using RWAMOD version 2.0, which is part of the SOUTHMOD bundle (SOUTHMOD_A4.0) and runs on EUROMOD software. The report describes the different tax-benefit policies in place, how the microsimulation model picks up these different provisions, and the database on which the model runs. It concludes with a validation of results against external data sources for Rwanda.",
+    "citation": "Rwagasana, C. & Lastunen, J. SOUTHMOD Country Report Rwanda: RWAMOD v2.0, Helsinki: UNU-WIDER, 2026.",
+    "extras": null,
+    "added": "2026-05-18"
   },
   {
     "title": "SOUTHMOD Country Report Viet Nam: VNMOD v3.5",
@@ -309,15 +310,16 @@
     "extras": null
   },
   {
-    "title": "SOUTHMOD Country Report Uganda: UGAMOD v2.2",
-    "authors": "Tina Kaidu, Joseph Okello Ayo",
-    "year": 2025,
+    "title": "SOUTHMOD Country Report Uganda: UGAMOD v3.0",
+    "authors": "Tina Kaidu Barugahara, Joseph Okello Ayo, Katrin Gasior, Nicholas Musoke",
+    "year": 2026,
     "type": "Country Report",
-    "publication": "UNU-WIDER Report, 2025",
-    "url": "https://www.wider.unu.edu/publication/southmod-country-report-uganda-ugamod-v22",
-    "abstract": "This report documents UGAMOD, the SOUTHMOD model developed for Uganda. This work was carried out by Uganda Revenue Authority (URA) in collaboration with the project partners. The results presented in this report are derived using UGAMOD version 2.2, which is part of the SOUTHMOD bundle (SOUTHMOD_A3.0) and runs on EUROMOD software. The report describes the different tax-benefit policies in place, how the microsimulation model picks up these different provisions, and the database on which the model runs. It concludes with a validation of results against external data sources for Rwanda.",
-    "citation": "Kaidu, T., Okello Ayo, J. & Lastunen, J. SOUTHMOD Country Report Rwanda: UGAMOD v1.2, Helsinki: UNU-WIDER, 2025.",
-    "extras": null
+    "publication": "UNU-WIDER Report, 2026",
+    "url": "https://www.wider.unu.edu/publication/southmod-country-report-uganda-ugamod-v30",
+    "abstract": "This report documents UGAMOD, the SOUTHMOD model developed for Uganda. This work was carried out by Uganda Revenue Authority (URA) in collaboration with the project partners. The results presented in this report are derived using UGAMOD version 3.0, which is part of the SOUTHMOD bundle (SOUTHMOD_A4.0) and runs on EUROMOD software. The report describes the different tax-benefit policies in place, how the microsimulation model picks up these different provisions, and the database on which the model runs. It concludes with a validation of results against external data sources for Uganda.",
+    "citation": "Barugahara, T.K., Okello Ayo, J., Lastunen, J., Gasior, K. & Musoke, N. SOUTHMOD Country Report Uganda: UGAMOD v3.0, Helsinki: UNU-WIDER, 2026.",
+    "extras": null,
+    "added": "2026-05-18"
   },
   {
     "title": "Synthetic Data and AI in Microsimulation Models: A Feasibility Study using GHAMOD",
