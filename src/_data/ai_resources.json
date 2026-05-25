@@ -2509,5 +2509,50 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nber-w35110-llm-occupational-exposure-unstable",
+    "title": "How (Un)stable Are LLM Occupational Exposure Scores? (NBER WP 35110)",
+    "url": "https://www.nber.org/papers/w35110",
+    "author": "Michelle Yin, Hoa Vu, Claudia Persico",
+    "date": "2026-04",
+    "description": "Demonstrates that LLM-based occupational AI exposure measures — widely used to estimate AI's labor market effects — are highly fragile. Replicating the dominant rubric with three frontier models on all 18,797 O*NET tasks, mean exposure diverges 3.6-fold (one model rates 14% of tasks as directly exposed while another rates 51%). In difference-in-differences employment regressions, coefficient magnitudes vary 2.4-fold across annotators, and county-level estimates flip sign depending on which model is used. Formalizes this as non-classical measurement error, cautioning against treating evolving LLMs as static instruments.",
+    "shortDescription": "LLM-based AI exposure measures are highly fragile: 3.6-fold divergence across models, with employment regression results flipping sign by annotator.",
+    "category": "Research Papers",
+    "tags": ["economics", "LLM", "labor", "measurement", "methodology"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cunningham-simon-panel-ai-research-production",
+    "title": "What a Panel of Economists Said About AI in the Production of Research",
+    "url": "https://causalinf.substack.com/p/what-a-panel-of-economists-said-about",
+    "author": "Scott Cunningham, Kosali Simon",
+    "date": "2026-05",
+    "description": "Writeup of a moderated panel at the NBER Applications of AI in Healthcare meeting (May 8, 2026) featuring Cunningham, Simon, David Bradford, and Coady Wing, with commentary from Emily Beam, Jason Fletcher, and Paul Goldsmith-Pinkham. Key themes: autonomous AI papers are crossing into top-journal quality distributions but verification doesn't scale; AI-assisted specification searching leaves no audit trail; journal editors face a flood of competent-but-uninteresting submissions; restricted-data norms collide with AI tooling; and incentives — not technology — will determine whether AI makes the field better or just bigger.",
+    "shortDescription": "NBER panel on AI and research production: autonomous papers reaching top-journal quality, verification gaps, and the flood facing journal editors.",
+    "category": "Commentary & Analysis",
+    "tags": ["economics", "AI", "peer-review", "methodology", "research workflows"],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "goldsmith-pinkham-ai-research-o-ring",
+    "title": "AI and the Research O-Ring",
+    "url": "https://paulgp.substack.com/p/ai-and-the-research-o-ring",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-05",
+    "description": "Argues research follows an O-ring production function (Kremer 1993): output is the product of input qualities across stages, so one weak link drags the whole chain down. AI excels at code, tables, and technical error-catching but remains weaker at ideation and writing — and understanding what an AI agent did is itself costly time. Uses METR benchmarks to show that while 50% reliability is growing exponentially, 80% reliability grows from a much lower base with equivalent uncertainty. Warns against nihilism: the set of feasible research questions has expanded, and the interesting question is which problems economists choose to deploy these tools against.",
+    "shortDescription": "Research follows an O-ring production function: AI excels at some inputs but human judgment still anchors the weak links.",
+    "category": "Commentary & Analysis",
+    "tags": ["economics", "AI", "research workflows", "methodology"],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
