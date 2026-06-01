@@ -2554,5 +2554,50 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "ning-li-ideation-bottleneck-ai-econ-research",
+    "title": "The Ideation Bottleneck: Decomposing the Quality Gap Between AI-Generated and Human Economics Research",
+    "url": "https://arxiv.org/abs/2604.03338",
+    "author": "Ning Li",
+    "date": "2026-04",
+    "description": "Analyzes 953 economics papers — 912 AI-generated from the APE project and 41 human papers published in the AER and AEJ: Economic Policy — to decompose the quality gap into idea quality and execution quality. The idea gap is large (human papers achieve 47.1% mean exceptional probability vs. 16.5% for AI; Cohen's d = 2.23), while the execution gap is smaller (4.38/5.0 vs. 3.84). Idea quality accounts for roughly 71% of the overall quality difference. Only 7 AI papers (0.8%) surpass the median human paper on both dimensions simultaneously, suggesting ideation remains the primary bottleneck to competitive AI-generated economics research.",
+    "shortDescription": "Idea quality, not execution, is the main bottleneck: human econ papers score 47% vs. 17% exceptional probability, accounting for 71% of the quality gap.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "research quality", "ideation", "methodology"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cowen-will-ai-kill-research-paper",
+    "title": "Will AI kill the research paper?",
+    "url": "https://marginalrevolution.com/marginalrevolution/2026/05/will-ai-kill-the-research-paper.html",
+    "author": "Tyler Cowen",
+    "date": "2026-05",
+    "description": "Envisions a future where static research papers are replaced by AI-powered 'meta-papers' or 'boxes' — living documents that can be updated with new data, re-run with alternative specifications, and queried by readers in real time. Imagines Fed researchers spending careers improving a monetary-policy meta-paper rather than writing individual papers. Asks whether the people who excel at building these systems will be the same people who become top economists today, and whether the endeavor will be centralized or decentralized.",
+    "shortDescription": "Envisions AI-powered 'meta-papers' replacing static research: living documents updated with new data, alternative specs, and reader queries in real time.",
+    "category": "Commentary & Analysis",
+    "tags": ["economics", "AI", "research workflows", "publishing"],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "lenzu-ai-macroeconomic-challenges-promises",
+    "title": "AI's Macroeconomic Challenges and Promises",
+    "url": "https://libertystreeteconomics.newyorkfed.org/2026/05/ais-macroeconomic-challenges-and-promises/",
+    "author": "Simone Lenzu",
+    "date": "2026-05",
+    "description": "NY Fed Liberty Street Economics post examining the tension between AI's long-run productivity promise and its short-run costs for inflation, real activity, and financial stability. Notes that major AI firms committed ~$300 billion in capex in 2025 across semiconductors, power grids, and specialized labor, with AI-driven demand pushing up prices. Argues the key macro question is whether AI raises productivity faster than it raises adoption costs. Documents how AI companies shifted from retained-earnings-funded investment to raising over $100 billion in new debt by late 2025, with implications for credit markets and financial stability.",
+    "shortDescription": "NY Fed analysis of AI's macro tension: $300B in AI capex drives inflation pressures while long-run productivity gains remain uncertain.",
+    "category": "Commentary & Analysis",
+    "tags": ["economics", "AI", "macro", "inflation", "financial stability", "Federal Reserve"],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
