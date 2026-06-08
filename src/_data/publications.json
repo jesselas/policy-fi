@@ -431,5 +431,29 @@
     "abstract": "This report discusses the mechanisms through which innovations based on information and communication technologies (ICT) may have effects on social inclusion. The report also assesses the dispersion of innovation performance across regions within countries. A core focus of the report is on exploring how innovation policies can contribute to inclusive growth and how they can be implemented efficiently. Moreover, the report discusses the role policies expanding access to higher education can play in supporting inclusive growth.",
     "citation": "OECD, Making Innovation Benefit All: Policies for Inclusive Growth, OECD Publishing, Paris, 2017.",
     "extras": null
+  },
+  {
+    "title": "Tax-benefit Microsimulation Models in the Global South: The Experience of SAMOD, SOUTHMOD and EUROMOD-based Models for Latin America",
+    "authors": "H. Xavier Jara, Katrin Gasior, Pia Rattenhuber",
+    "year": 2026,
+    "type": "Book Chapter",
+    "publication": "EUROMOD: 30 Years of the EU Tax-Benefit Microsimulation Model, Springer, 2026 (forthcoming)",
+    "url": "https://link.springer.com/book/9783032314130",
+    "abstract": "A forthcoming chapter in the EUROMOD 30th-anniversary volume describing the development and use of tax-benefit microsimulation models in the Global South, drawing on the experience of SAMOD, the SOUTHMOD model family, and EUROMOD-based models for Latin America.",
+    "citation": "Jara, H.X., Gasior, K., Lastunen, J. & Rattenhuber, P. Tax-benefit Microsimulation Models in the Global South: The Experience of SAMOD, SOUTHMOD and EUROMOD-based Models for Latin America (in 'EUROMOD: 30 Years of the EU Tax-Benefit Microsimulation Model', edited by Figari, F. & Sutherland, H.), Springer, 2026 (forthcoming).",
+    "extras": null,
+    "added": "2026-06-08"
+  },
+  {
+    "title": "Informal Consumption in the Microsimulation of VAT: Application to Rwanda, Peru, Mozambique, and Uganda",
+    "authors": "R. Chang",
+    "year": 2026,
+    "type": "Other Published Work",
+    "publication": "UNU-WIDER Working Paper Series, 2026 (forthcoming)",
+    "url": "",
+    "abstract": "A forthcoming WIDER working paper examining how to account for informal consumption when modelling value-added tax (VAT) in SOUTHMOD tax-benefit microsimulation models, with applications to Rwanda, Peru, Mozambique, and Uganda.",
+    "citation": "Chang, R. & Lastunen, J. Informal Consumption in the Microsimulation of VAT: Application to Rwanda, Peru, Mozambique, and Uganda, WIDER Working Paper, Helsinki: UNU-WIDER, 2026 (forthcoming).",
+    "extras": null,
+    "added": "2026-06-08"
   }
 ]
