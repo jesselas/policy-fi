@@ -2616,21 +2616,6 @@
     "highlight": false
   },
   {
-    "id": "axiom-math-econlib-formal-verification",
-    "title": "EconLib: AI Formal Verification Comes to Economic Theory",
-    "url": "https://fortune.com/2026/06/01/axiom-math-econlib-antitrust-economic-theory-verified/",
-    "author": null,
-    "date": "2026-06",
-    "description": "Fortune exclusive on EconLib, a project by Axiom Math (a $1.6B AI startup) co-led by Harvard economist Scott Kominers to build a formally verified library of economic theorems using Lean. Their AI prover already flagged a gap in Aumann's 1976 common knowledge theorem — an assumption stated but never proven, on which information economics and US antitrust merger guidelines rest. Kominers argues this could bring 'far more precision and clarity' to the economic models underlying antitrust analysis. Economist Brian Albrecht (ICLE) sees it as promising for formalizing economic theory but notes the big disputes in antitrust are about market definition, not theorem foundations.",
-    "shortDescription": "Axiom Math's AI prover finds gap in Aumann's 1976 theorem; EconLib project aims to formally verify foundational economic results using Lean.",
-    "category": "AI Tools for Research",
-    "tags": ["economics", "AI", "formal verification", "economic theory", "antitrust", "Lean"],
-    "featured": false,
-    "type": "article",
-    "internal": false,
-    "highlight": false
-  },
-  {
     "id": "cowen-sana-ai-summit-economics-talk",
     "title": "Tyler Cowen on the Economics of AI (Sana AI Summit)",
     "url": "https://www.youtube.com/watch?v=aJlg6o0A_Js",
@@ -2640,21 +2625,6 @@
     "shortDescription": "Cowen forecasts AI adds ~0.5pp to growth; argues initiative beats intelligence and organizational frictions limit AI's macro impact.",
     "category": "Talks & Videos",
     "tags": ["economics", "AI", "growth", "labor", "macro"],
-    "featured": false,
-    "type": "video",
-    "internal": false,
-    "highlight": false
-  },
-  {
-    "id": "cowen-tabarrok-openai-economics-of-ai",
-    "title": "Tyler Cowen & Alex Tabarrok Speak to OpenAI on Economics of AI",
-    "url": "https://www.youtube.com/watch?v=eAq1GBUzmlk",
-    "author": "Tyler Cowen, Alex Tabarrok",
-    "date": "2026-06",
-    "description": "Extended discussion between the Marginal Revolution economists and OpenAI on the economics of AI. Topics include AI's impact on labor markets, the future of economic growth, and how intelligence exports are reshaping US trade. Tabarrok has separately argued that US service exports — including AI — already support four times more jobs than manufacturing exports.",
-    "shortDescription": "Marginal Revolution economists discuss AI's economic impact with OpenAI: labor markets, growth prospects, and intelligence as US export.",
-    "category": "Talks & Videos",
-    "tags": ["economics", "AI", "growth", "labor", "trade"],
     "featured": false,
     "type": "video",
     "internal": false,
