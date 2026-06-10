@@ -2304,6 +2304,12 @@ main.container .page-intro {
 .lib-grid .resource-card:nth-child(4) { animation-delay: 0.12s; }
 .lib-grid .resource-card:nth-child(n+5) { animation-delay: 0.15s; }
 
+/* Short sort labels are hidden on desktop (shown on mobile) */
+.sort-short { display: none; }
+
+/* --- Mobile bottom tab bar (hidden on desktop) --- */
+.bottom-nav { display: none; }
+
 /* --- Library responsive --- */
 @media (max-width: 900px) {
   .library-layout {
@@ -2365,6 +2371,61 @@ main.container .page-intro {
   }
 
   .library-toolbar { margin-bottom: 1.25rem; }
+}
+
+/* --- Mobile-only simplifications (AI library) + bottom tab bar --- */
+@media (max-width: 768px) {
+  /* Trim the sidebar to just search + categories */
+  .sidebar-extra,
+  .sidebar-meta { display: none; }
+
+  /* Compact toolbar: short sort labels, view buttons on the same row */
+  .library-toolbar { flex-wrap: nowrap; gap: 0.4rem; }
+  .toolbar-group { gap: 0.3rem; }
+  .toolbar-end { gap: 0.45rem; }
+  .toolbar-label { font-size: 0.56rem; }
+  .sort-btn { font-size: 0.72rem; padding: 0.2em 0.5em; }
+  .sort-full { display: none; }
+  .sort-short { display: inline; }
+
+  /* Bottom tab bar */
+  .bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .bottom-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.5rem 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    text-decoration: none;
+    border-top: 2px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+  }
+
+  .bottom-nav a.active {
+    color: var(--accent);
+    border-top-color: var(--accent);
+  }
+
+  /* Keep the footer clear of the fixed bar */
+  body { padding-bottom: calc(3rem + env(safe-area-inset-bottom)); }
 }
 
 /* --- Pseudo-categories (AI library) --- */
