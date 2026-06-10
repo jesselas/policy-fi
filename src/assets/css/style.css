@@ -1527,7 +1527,7 @@ main.container .page-intro {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--header-bg);
+    background: var(--bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
@@ -1575,6 +1575,13 @@ main.container .page-intro {
 
   .nav-links a.active::after {
     display: none;
+  }
+
+  /* Theme toggle aligns with the right-aligned mobile menu items */
+  .nav-theme-item {
+    justify-content: flex-end;
+    padding: 0.6rem 2rem 0.85rem;
+    margin-left: 0;
   }
 
   /* Hero float: keep float on mobile, just smaller */
@@ -2300,7 +2307,7 @@ main.container .page-intro {
 /* --- Library responsive --- */
 @media (max-width: 900px) {
   .library-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0;
   }
 
@@ -2351,8 +2358,10 @@ main.container .page-intro {
 
   .sidebar-extra .sidebar-label { margin: 0.5rem 0 0.2rem; width: 100%; }
 
+  .lib-section { min-width: 0; }
+
   .lib-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .library-toolbar { margin-bottom: 1.25rem; }
