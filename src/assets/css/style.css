@@ -2405,13 +2405,6 @@ main.container .page-intro {
   overflow: hidden;
 }
 
-/* The map renders on a fixed light background; in dark mode, frame it so it
-   reads as a deliberate figure rather than a bare light rectangle. */
-[data-theme="dark"] .southmod-map-panel .map-container {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-}
-
 @media (max-width: 900px) {
   .southmod-layout {
     grid-template-columns: 1fr;
