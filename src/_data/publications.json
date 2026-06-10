@@ -288,13 +288,13 @@
   },
   {
     "title": "SOUTHMOD Country Report Rwanda: RWAMOD v2.0",
-    "authors": "Christian Rwagasana",
+    "authors": "Christian Shema Rwagasana",
     "year": 2026,
     "type": "Country Report",
     "publication": "UNU-WIDER Report, 2026",
     "url": "https://www.wider.unu.edu/publication/southmod-country-report-rwanda-rwamod-v20",
     "abstract": "This report documents RWAMOD, the SOUTHMOD model developed for Rwanda. This work was carried out by UNU-WIDER, SASPRI, and the Rwanda Revenue Authority (RRA). The results presented in this report are derived using RWAMOD version 2.0, which is part of the SOUTHMOD bundle (SOUTHMOD_A4.0) and runs on EUROMOD software. The report describes the different tax-benefit policies in place, how the microsimulation model picks up these different provisions, and the database on which the model runs. It concludes with a validation of results against external data sources for Rwanda.",
-    "citation": "Rwagasana, C. & Lastunen, J. SOUTHMOD Country Report Rwanda: RWAMOD v2.0, Helsinki: UNU-WIDER, 2026.",
+    "citation": "Rwagasana, C.S. & Lastunen, J. SOUTHMOD Country Report Rwanda: RWAMOD v2.0, Helsinki: UNU-WIDER, 2026.",
     "extras": null,
     "added": "2026-05-18"
   },
