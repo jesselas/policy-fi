@@ -2824,5 +2824,20 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cunningham-panjwani-claude-code-returns-to-expertise",
+    "title": "Claude Code, Economics Research, and the Returns to Expertise (The AI Economist)",
+    "url": "https://aieconomist.io/resources/scott-cunningham-causal-inference-ai",
+    "author": "Scott Cunningham, Aniket Panjwani",
+    "date": "2026-06",
+    "description": "A one-hour interview in which Scott Cunningham joins Aniket Panjwani to discuss what agentic AI changes for empirical economics: faster research production but slower verification, difference-in-differences workflows, cross-language replication and package audits, encoding repeated checks into skills, and why domain expertise still matters when agents can produce polished output. Includes a sectioned companion transcript (some sections require a free newsletter subscription).",
+    "shortDescription": "Hour-long interview with Scott Cunningham on what agentic AI changes for empirical economics — production vs. verification, and the returns to expertise.",
+    "category": "Talks & Videos",
+    "tags": ["economics", "AI", "claude", "coding", "methodology", "peer-review"],
+    "featured": false,
+    "type": "video",
+    "internal": false,
+    "highlight": false
   }
 ]
