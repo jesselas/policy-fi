@@ -2250,12 +2250,13 @@ main.container .page-intro {
 }
 
 .library-content[data-view="list"] .card-top {
-  margin-bottom: 0.15rem;
+  margin-bottom: 0;
   line-height: 1;
 }
 
 .library-content[data-view="list"] .card-title {
   font-size: 0.95rem;
+  margin-top: 0.85rem; /* half of the original 1.75rem h3 gap */
   margin-bottom: 0.1rem;
 }
 
