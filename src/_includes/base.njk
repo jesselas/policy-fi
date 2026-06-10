@@ -86,6 +86,13 @@
     </div>
   </footer>
 
+  <nav class="bottom-nav" aria-label="Quick navigation">
+    <a href="/"{% if page.url == "/" %} class="active" aria-current="page"{% endif %}>Home</a>
+    <a href="/research/"{% if page.url == "/research/" %} class="active" aria-current="page"{% endif %}>Research</a>
+    <a href="/southmod/"{% if page.url == "/southmod/" %} class="active" aria-current="page"{% endif %}>SOUTHMOD</a>
+    <a href="/ai-econ/"{% if page.url == "/ai-econ/" %} class="active" aria-current="page"{% endif %}>AI Econ</a>
+  </nav>
+
   <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
