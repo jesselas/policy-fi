@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light'){t='light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
   <title>{{ title }} | {{ site.title }}</title>
   <meta name="description" content="{{ description or site.description }}">
   <meta name="author" content="Jesse Lastunen">
@@ -39,7 +40,7 @@
   <!-- Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  {% set fontHref = "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" %}
+  {% set fontHref = "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" %}
   <link rel="preload" as="style" href="{{ fontHref }}" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ fontHref }}"></noscript>
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -64,11 +65,17 @@
         <li><a href="/research/"{% if page.url == "/research/" %} class="active" aria-current="page"{% endif %}>Research</a></li>
         <li><a href="/southmod/"{% if page.url == "/southmod/" %} class="active" aria-current="page"{% endif %}>SOUTHMOD</a></li>
         <li><a href="/ai-econ/"{% if page.url == "/ai-econ/" %} class="active" aria-current="page"{% endif %}>AI for Economists</a></li>
+        <li class="nav-theme-item">
+          <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch theme">
+            <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+            <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content" class="container">
+  <main id="main-content" class="container{% if wide %} container-wide{% endif %}">
     {{ content | safe }}
     {% include "footer-links.njk" %}
   </main>
