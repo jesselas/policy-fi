@@ -2183,6 +2183,7 @@ main.container .page-intro {
 .lib-grid .card-title {
   font-size: 1.0rem;
   padding-right: 0;
+  margin-top: 0; /* override base h3 margin-top (1.75rem) */
   margin-bottom: 0.25rem;
   line-height: 1.35;
 }
@@ -2249,14 +2250,13 @@ main.container .page-intro {
 }
 
 .library-content[data-view="list"] .card-top {
-  margin-bottom: 0;
+  margin-bottom: 0.15rem;
   line-height: 1;
 }
 
 .library-content[data-view="list"] .card-title {
   font-size: 0.95rem;
   margin-bottom: 0.1rem;
-  line-height: 1.25;
 }
 
 .library-content[data-view="list"] .card-meta { margin-bottom: 0; }
