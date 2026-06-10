@@ -2,6 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+  /* Mirror the parent site's light/dark theme (same-origin iframe). */
+  (function () {
+    function apply(t) {
+      document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+    }
+    function current() {
+      try {
+        var pt = window.parent && window.parent !== window
+          ? window.parent.document.documentElement.getAttribute('data-theme') : null;
+        if (pt) return pt;
+      } catch (e) {}
+      try { return localStorage.getItem('theme') || 'light'; } catch (e) { return 'light'; }
+    }
+    apply(current());
+    window.addEventListener('storage', function (e) { if (e.key === 'theme') apply(e.newValue); });
+    window.addEventListener('message', function (e) {
+      if (e.data && e.data.type === 'theme') apply(e.data.theme);
+    });
+  })();
+</script>
 <title>SOUTHMOD &amp; EUROMOD-based Microsimulation Models</title>
 <style>
   :root {
@@ -17,6 +38,15 @@
     --southmod-glow: #ff7e2b;
     --text: #1c2937;
     --text-muted: #5a6878;
+  }
+  /* Dark mode: blend with the site's dark background, dark land, light text.
+     Data colours (SOUTHMOD orange, EUROMOD blue) stay vivid. */
+  html[data-theme="dark"] {
+    --bg: #15171a;
+    --land: #262b31;
+    --land-edge: #363c44;
+    --text: #e8e6e1;
+    --text-muted: #9a9893;
   }
   html, body {
     margin: 0; padding: 0;
@@ -103,6 +133,11 @@
   }
   #tooltip.wide { width: 340px; }
   #tooltip.visible { opacity: 1; }
+  html[data-theme="dark"] #tooltip {
+    background: #1c1f23;
+    border-color: #383c42;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+  }
   #tooltip .tt-model {
     font-weight: 700;
     font-size: 14px;
@@ -145,12 +180,12 @@
     </filter>
     <!-- Edge fade-to-bg gradients -->
     <linearGradient id="fadeLeft" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fafaf8" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#fafaf8" stop-opacity="0"/>
+      <stop offset="0%" stop-color="var(--bg)" stop-opacity="1"/>
+      <stop offset="100%" stop-color="var(--bg)" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="fadeRight" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fafaf8" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#fafaf8" stop-opacity="1"/>
+      <stop offset="0%" stop-color="var(--bg)" stop-opacity="0"/>
+      <stop offset="100%" stop-color="var(--bg)" stop-opacity="1"/>
     </linearGradient>
   </defs>
 

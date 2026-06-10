@@ -289,6 +289,10 @@ function initThemeToggle() {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     try { localStorage.setItem('theme', next); } catch (e) {}
+    // Notify same-origin iframes (e.g. the SOUTHMOD map) so they recolor instantly.
+    document.querySelectorAll('iframe').forEach(f => {
+      try { f.contentWindow.postMessage({ type: 'theme', theme: next }, '*'); } catch (e) {}
+    });
   });
 }
 
