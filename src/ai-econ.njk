@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: AI for Economists
+wide: true
 description: "Curated collection of AI and LLM resources for economists — research papers, coding guides, tools, courses, and more. Maintained by Jesse Lastunen."
 jsonLd:
   "@context": "https://schema.org"
@@ -31,16 +32,7 @@ jsonLd:
   "Commentary & Analysis"
 ] %}
 
-{% set typeIcons = {
-  "paper": "📄",
-  "course": "🎓",
-  "video": "▶",
-  "tool": "🔧",
-  "article": "📝",
-  "guide": "📖",
-  "thread": "💬",
-  "other": "🔗"
-} %}
+{% set typeOrderList = ["paper", "guide", "tool", "course", "video", "article", "thread", "other"] %}
 
 {% set nonInternal = [] %}
 {% for entry in ai_resources %}
@@ -49,53 +41,150 @@ jsonLd:
   {% endif %}
 {% endfor %}
 
+{% set recent20 = nonInternal.slice(-20) %}
+
+{% set highlightEntries = [] %}
+{% for entry in nonInternal %}
+  {% if entry.highlight %}
+    {% set highlightEntries = (highlightEntries.push(entry), highlightEntries) %}
+  {% endif %}
+{% endfor %}
+
+{% set presentTypes = [] %}
+{% for t in typeOrderList %}
+  {% set tCount = 0 %}
+  {% for entry in nonInternal %}
+    {% if entry.type == t %}{% set tCount = tCount + 1 %}{% endif %}
+  {% endfor %}
+  {% if tCount > 0 %}
+    {% set presentTypes = (presentTypes.push({ name: t, count: tCount }), presentTypes) %}
+  {% endif %}
+{% endfor %}
+
+{% macro resourceCard(entry, idx) %}
+<article class="resource-card{% if entry.featured %} featured{% endif %}" data-category="{{ entry.category }}" data-type="{{ entry.type }}" data-featured="{{ '1' if entry.featured else '' }}" data-index="{{ idx }}" data-date="{{ entry.date or '' }}" data-author-sort="{{ entry.author | lastName }}" data-searchable="{{ (entry.title + ' ' + (entry.author or '') + ' ' + entry.description + ' ' + entry.tags | join(' ')) | lower }}">
+  <div class="card-top">
+    <span class="card-type">{{ entry.type }}</span>
+    {% if entry.featured %}<span class="card-star" title="Featured">★</span>{% endif %}
+    {% if entry.date %}<span class="card-date">{{ entry.date }}</span>{% endif %}
+  </div>
+  <h3 class="card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+  {% if entry.author %}<div class="card-meta">{{ entry.author }}</div>{% endif %}
+  <div class="card-description">{{ entry.description | safe }}</div>
+  <div class="card-tags">
+    {% for tag in entry.tags %}<span class="tag">{{ tag }}</span> {% endfor %}
+  </div>
+</article>
+{% endmacro %}
+
 <h1>AI for Economists</h1>
 
 <p class="page-intro">A curated collection of resources for economists working with AI and LLMs — from research papers and courses to practical tools and coding guides.</p>
-<p class="page-updated">Last updated: {{ buildMonth }}.</p>
 
-<div class="info-section">
-  <div class="highlight-tabs">
-    <button class="section-label highlight-tab active" data-tab="recent">Recently Added</button>
-    <button class="section-label highlight-tab" data-tab="highlights">Highlights</button>
-  </div>
-  <div class="highlights-grid" id="recent-panel">
-    {% for entry in recentResources %}
-    <div class="highlight-card{% if loop.index > 8 %} recent-extra{% endif %}">
-      <div class="highlight-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
-      <div class="highlight-meta">{% if entry.author %}{{ entry.author | shortAuthor }}{% endif %}{% if entry.author and entry.date %} · {% endif %}{% if entry.date %}{{ entry.date }}{% endif %}</div>
-      <div class="highlight-desc">{{ entry.shortDescription or (entry.description | truncate(150)) }}</div>
+<div class="library-layout">
+
+  <aside class="library-sidebar" aria-label="Library filters and navigation">
+    <div class="sidebar-search search-wrapper">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="search" class="search-input" id="resource-search" placeholder="Search…" aria-label="Search resources">
+      <span class="search-kbd" aria-hidden="true">/</span>
     </div>
-    {% endfor %}
-  </div>
-  {% if recentResources.length > 8 %}
-  <button class="see-more-btn" id="see-more-recent">See more recent additions</button>
-  {% endif %}
-  <div class="highlights-grid" id="highlights-panel" style="display: none;">
-    {% for entry in nonInternal %}
-      {% if entry.highlight %}
-      <div class="highlight-card">
-        <div class="highlight-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
-        <div class="highlight-meta">{% if entry.author %}{{ entry.author | shortAuthor }}{% endif %}{% if entry.author and entry.date %} · {% endif %}{% if entry.date %}{{ entry.date }}{% endif %}</div>
-        <div class="highlight-desc">{{ entry.highlightDesc or (entry.description | truncate(180)) }}</div>
+
+    <span class="sidebar-label">Categories</span>
+    <nav class="cat-nav" id="category-filters" aria-label="Resource categories">
+      <button class="cat-link" data-category="Recently Added">
+        <span class="cat-dot"></span>
+        <span class="cat-name">Recently Added</span>
+        <span class="cat-count">{{ recent20.length }}</span>
+      </button>
+      <button class="cat-link" data-category="Highlights">
+        <span class="cat-dot"></span>
+        <span class="cat-name">Highlights</span>
+        <span class="cat-count">{{ highlightEntries.length }}</span>
+      </button>
+      {% for cat in categoryOrder %}
+        {% set catEntries = [] %}
+        {% for entry in nonInternal %}
+          {% if entry.category == cat %}
+            {% set catEntries = (catEntries.push(entry), catEntries) %}
+          {% endif %}
+        {% endfor %}
+        {% if catEntries.length > 0 %}
+        <button class="cat-link" data-category="{{ cat }}">
+          <span class="cat-dot"></span>
+          <span class="cat-name">{{ cat }}</span>
+          <span class="cat-count">{{ catEntries.length }}</span>
+        </button>
+        {% endif %}
+      {% endfor %}
+    </nav>
+
+    <div class="sidebar-extra">
+      <span class="sidebar-label">Type</span>
+      <div class="type-chips" id="type-filters" role="group" aria-label="Filter by resource type">
+        {% for t in presentTypes %}
+        <button class="type-chip" data-type="{{ t.name }}">{{ t.name }}</button>
+        {% endfor %}
       </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
 
-<div class="divider">·</div>
+      <span class="sidebar-label">Show</span>
+      <button class="featured-toggle" id="featured-toggle" aria-pressed="false">
+        <span class="toggle-track" aria-hidden="true"></span>
+        <span>Featured only</span>
+      </button>
+    </div>
 
-<div class="info-section">
-  <h2 class="section-label">Browse all resources</h2>
+    <div class="sidebar-meta">
+      <span id="results-count">{{ nonInternal.length }} resources</span><br>
+      <button class="sidebar-reset" id="filter-reset">Reset filters</button>
+    </div>
+  </aside>
 
-  <div class="search-wrapper">
-    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-    <input type="search" class="search-input" id="resource-search" placeholder="Search by title, author, or keyword..." aria-label="Search resources">
-  </div>
+  <div class="library-content" data-view="list" id="library-content">
 
-  <div class="filter-pills" id="category-filters">
-    <button class="filter-pill active" data-category="all">All ({{ nonInternal.length }})</button>
+    <div class="library-toolbar">
+      <div class="toolbar-group" id="library-sort" role="group" aria-label="Sort resources">
+        <span class="toolbar-label">Sort</span>
+        <button type="button" class="sort-btn" data-sort="added">Date added</button>
+        <button type="button" class="sort-btn" data-sort="date">Date of reference</button>
+        <button type="button" class="sort-btn" data-sort="author">Last name</button>
+      </div>
+      <div class="toolbar-end">
+      <span class="toolbar-updated">{{ nonInternal.length }} resources · updated {{ buildMonth }}</span>
+      <div class="toolbar-group" role="group" aria-label="View options">
+        <span class="toolbar-label">View</span>
+        <button type="button" class="view-btn" data-view="cards" aria-label="Card view" title="Card view">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+        </button>
+        <button type="button" class="view-btn active" data-view="list" aria-label="List view" title="List view">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+      </div>
+    </div>
+
+    <section class="lib-section" id="recently-added" data-group-category="Recently Added">
+      <h2 class="lib-section-head" data-category="Recently Added">
+        <span class="cat-dot"></span>
+        Recently Added
+        <span class="lib-count">{{ recent20.length }} entries</span>
+      </h2>
+      <div class="lib-grid">
+        {% for entry in recent20 %}{{ resourceCard(entry, loop.index0) }}{% endfor %}
+      </div>
+    </section>
+
+    <section class="lib-section" id="highlights" data-group-category="Highlights">
+      <h2 class="lib-section-head" data-category="Highlights">
+        <span class="cat-dot"></span>
+        Highlights
+        <span class="lib-count">{{ highlightEntries.length }} entries</span>
+      </h2>
+      <div class="lib-grid">
+        {% for entry in highlightEntries %}{{ resourceCard(entry, loop.index0) }}{% endfor %}
+      </div>
+    </section>
+
     {% for cat in categoryOrder %}
       {% set catEntries = [] %}
       {% for entry in nonInternal %}
@@ -104,53 +193,22 @@ jsonLd:
         {% endif %}
       {% endfor %}
       {% if catEntries.length > 0 %}
-      <button class="filter-pill" data-category="{{ cat }}">{{ cat }} ({{ catEntries.length }})</button>
+      <section class="lib-section" id="{{ cat | lower | replace(' & ', '-') | replace(' ', '-') }}" data-group-category="{{ cat }}">
+        <h2 class="lib-section-head" data-category="{{ cat }}">
+          <span class="cat-dot"></span>
+          {{ cat }}
+          <span class="lib-count">{{ catEntries.length }} entries</span>
+        </h2>
+        <div class="lib-grid">
+          {% for entry in catEntries %}{{ resourceCard(entry, loop.index0) }}{% endfor %}
+        </div>
+      </section>
       {% endif %}
     {% endfor %}
-  </div>
 
-  <div class="results-count" id="results-count" style="display:none;"></div>
-</div>
-
-{% for cat in categoryOrder %}
-  {% set catEntries = [] %}
-  {% for entry in nonInternal %}
-    {% if entry.category == cat %}
-      {% set catEntries = (catEntries.push(entry), catEntries) %}
-    {% endif %}
-  {% endfor %}
-  {% if catEntries.length > 0 %}
-  <div class="accordion-section resource-group" data-group-category="{{ cat }}">
-    <div class="accordion-header" aria-expanded="false">
-      <span class="accordion-title">{{ cat }} <span class="accordion-count">{{ catEntries.length }}</span></span>
-      <div class="accordion-sort" role="group" aria-label="Sort {{ cat }}">
-        <span class="sort-label">Sort:</span>
-        <button type="button" class="sort-btn" data-sort="added">Date added</button>
-        <button type="button" class="sort-btn" data-sort="date">Date of reference</button>
-        <button type="button" class="sort-btn" data-sort="author">Last name</button>
-      </div>
-      <span class="accordion-indicator"></span>
+    <div class="no-results" id="no-results" style="display: none;">
+      No resources match your current filters. Try broadening your search or resetting filters.
     </div>
-    <div class="accordion-content">
-      <div class="accordion-body">
-        {% for entry in catEntries %}
-        <div class="resource-card{% if entry.featured %} featured{% endif %}" data-category="{{ entry.category }}" data-type="{{ entry.type }}" data-tags="{{ entry.tags | join(',') }}" data-index="{{ loop.index0 }}" data-date="{{ entry.date or '' }}" data-author-sort="{{ entry.author | lastName }}" data-searchable="{{ (entry.title + ' ' + (entry.author or '') + ' ' + entry.description + ' ' + entry.tags | join(' ')) | lower }}">
-          <span class="card-type-icon">{{ typeIcons[entry.type] or "🔗" }}</span>
-          <div class="card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></div>
-          <div class="card-meta">{% if entry.author %}{{ entry.author }}{% endif %}{% if entry.author and entry.date %} · {% endif %}{% if entry.date %}{{ entry.date }}{% endif %}</div>
-          <div class="card-description">{{ entry.description | safe }}</div>
-          <div class="card-tags">
-            {% for tag in entry.tags %}<span class="tag">{{ tag }}</span> {% endfor %}
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
+
   </div>
-  {% endif %}
-{% endfor %}
-
-<div class="no-results" id="no-results" style="display: none;">
-  No resources match your current filters. Try broadening your search or resetting filters.
 </div>
-

@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initPubToggles();
   initRecentResearchCards();
   initCitationCopy();
-  initSeeMore();
-  initHighlightTabs();
-  initResourceFilters();
-  initResourceSort();
+  initLibrary();
   initMobileNav();
+  initThemeToggle();
 });
 
 /* --- Utility: debounce --- */
@@ -241,50 +239,6 @@ function initMobileNav() {
   }
 }
 
-/* --- See More Recent --- */
-function initSeeMore() {
-  const btn = document.getElementById('see-more-recent');
-  if (!btn) return;
-
-  let expanded = false;
-
-  btn.addEventListener('click', () => {
-    expanded = !expanded;
-    document.querySelectorAll('.recent-extra').forEach(card => {
-      card.classList.toggle('visible', expanded);
-    });
-    btn.textContent = expanded ? 'Show less' : 'See more recent additions';
-  });
-}
-
-/* --- Highlight/Recent Tabs --- */
-function initHighlightTabs() {
-  const tabs = document.querySelectorAll('.highlight-tab');
-  const highlightsPanel = document.getElementById('highlights-panel');
-  const recentPanel = document.getElementById('recent-panel');
-
-  if (!tabs.length || !highlightsPanel || !recentPanel) return;
-
-  const seeMoreBtn = document.getElementById('see-more-recent');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      if (tab.dataset.tab === 'highlights') {
-        highlightsPanel.style.display = '';
-        recentPanel.style.display = 'none';
-        if (seeMoreBtn) seeMoreBtn.style.display = 'none';
-      } else {
-        highlightsPanel.style.display = 'none';
-        recentPanel.style.display = '';
-        if (seeMoreBtn) seeMoreBtn.style.display = '';
-      }
-    });
-  });
-}
-
 /* --- Citation Copy Buttons --- */
 function initCitationCopy() {
   document.querySelectorAll('.citation-copy').forEach(btn => {
@@ -326,185 +280,271 @@ function initCitationCopy() {
   });
 }
 
-/* --- Sort resource groups (AI for Economists page) --- */
-function initResourceSort() {
-  const groups = document.querySelectorAll('.resource-group');
-  if (!groups.length) return;
+/* --- Theme toggle (light/dark) --- */
+function initThemeToggle() {
+  const btn = document.querySelector('.theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+}
 
-  groups.forEach(group => {
-    const body = group.querySelector('.accordion-body');
-    const buttons = group.querySelectorAll('.sort-btn');
-    if (!body || !buttons.length) return;
+/* --- AI Library: section-based browsing, search, filters, sort, views --- */
+function initLibrary() {
+  const content = document.getElementById('library-content');
+  if (!content) return;
 
-    const state = { sort: 'added', desc: true };
+  const searchInput = document.getElementById('resource-search');
+  const catLinks = Array.from(document.querySelectorAll('#category-filters .cat-link'));
+  const typeChips = Array.from(document.querySelectorAll('#type-filters .type-chip'));
+  const featuredToggle = document.getElementById('featured-toggle');
+  const resetBtn = document.getElementById('filter-reset');
+  const countEl = document.getElementById('results-count');
+  const noResults = document.getElementById('no-results');
+  const sections = Array.from(content.querySelectorAll('.lib-section'));
+  const cards = Array.from(content.querySelectorAll('.resource-card'));
+  const sortButtons = Array.from(document.querySelectorAll('#library-sort .sort-btn'));
+  const viewButtons = Array.from(document.querySelectorAll('.view-btn'));
 
-    function cardKey(card, sort) {
-      if (sort === 'added') return parseInt(card.dataset.index, 10) || 0;
-      if (sort === 'date') return card.dataset.date || '';
-      if (sort === 'author') return card.dataset.authorSort || '';
-      return 0;
+  const DEFAULT_SECTION = 'Recently Added';
+
+  const state = {
+    section: DEFAULT_SECTION,
+    types: new Set(),
+    featured: false,
+    query: '',
+    sort: 'added',
+    desc: true
+  };
+
+  const slug = (cat) => cat.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
+
+  /* Sub-filters (everything except the section choice) */
+  function cardMatchesSubFilters(card, ignoreTypes) {
+    if (!ignoreTypes && state.types.size && !state.types.has(card.dataset.type)) return false;
+    if (state.featured && !card.dataset.featured) return false;
+    if (state.query && !card.dataset.searchable.includes(state.query)) return false;
+    return true;
+  }
+
+  function applyFilters() {
+    const isSubFiltering = !!(state.query || state.types.size || state.featured);
+    let visible = 0;
+    let sectionTotal = 0;
+    const activeSection = sections.find(s => s.dataset.groupCategory === state.section);
+    const availableTypes = new Set();
+
+    sections.forEach(section => {
+      const isActive = section === activeSection;
+      section.style.display = isActive ? '' : 'none';
+      const sectionCards = section.querySelectorAll('.resource-card');
+
+      let sectionMatches = 0;
+      sectionCards.forEach(card => {
+        const matches = cardMatchesSubFilters(card, false);
+        if (matches) sectionMatches++;
+        if (isActive) {
+          sectionTotal++;
+          card.style.display = matches ? '' : 'none';
+          if (matches) visible++;
+          // Types available in this section under query/featured (ignoring type filter)
+          if (cardMatchesSubFilters(card, true)) availableTypes.add(card.dataset.type);
+        }
+      });
+
+      // Dim sidebar categories with no matches under current sub-filters
+      const link = catLinks.find(l => l.dataset.category === section.dataset.groupCategory);
+      if (link) link.classList.toggle('is-empty', sectionMatches === 0 && !isActive);
+    });
+
+    // Grey out type chips not available in the selected category
+    typeChips.forEach(chip => {
+      const t = chip.dataset.type;
+      chip.classList.toggle('is-empty', !availableTypes.has(t) && !state.types.has(t));
+    });
+
+    countEl.textContent = isSubFiltering
+      ? 'Showing ' + visible + ' of ' + sectionTotal + ' in ' + state.section
+      : sectionTotal + ' in ' + state.section;
+    if (resetBtn) resetBtn.classList.toggle('visible', isSubFiltering);
+    noResults.style.display = (visible === 0) ? '' : 'none';
+  }
+
+  /* --- Section (category) selection --- */
+  function setSection(cat, updateHash) {
+    state.section = cat;
+    catLinks.forEach(l => {
+      const isActive = l.dataset.category === cat;
+      l.classList.toggle('active', isActive);
+      if (isActive) {
+        l.classList.remove('is-empty');
+        l.setAttribute('aria-current', 'true');
+      } else {
+        l.removeAttribute('aria-current');
+      }
+    });
+    applyFilters();
+    if (updateHash) {
+      history.replaceState(null, '', '#' + slug(cat));
     }
+  }
 
-    function applySort() {
-      const cards = Array.from(body.querySelectorAll('.resource-card'));
-      const sort = state.sort;
-      const emptyLast = sort === 'date' || sort === 'author';
+  catLinks.forEach(link => {
+    link.addEventListener('click', () => setSection(link.dataset.category, true));
+  });
 
-      cards.sort((a, b) => {
-        const ka = cardKey(a, sort);
-        const kb = cardKey(b, sort);
+  /* --- Type chips (multi-select) --- */
+  typeChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const t = chip.dataset.type;
+      if (state.types.has(t)) state.types.delete(t);
+      else state.types.add(t);
+      chip.classList.toggle('active', state.types.has(t));
+      applyFilters();
+    });
+  });
 
+  /* --- Featured toggle --- */
+  if (featuredToggle) {
+    featuredToggle.addEventListener('click', () => {
+      state.featured = !state.featured;
+      featuredToggle.setAttribute('aria-pressed', state.featured);
+      applyFilters();
+    });
+  }
+
+  /* --- Search --- */
+  if (searchInput) {
+    searchInput.addEventListener('input', debounce(() => {
+      state.query = searchInput.value.toLowerCase().trim();
+      applyFilters();
+    }, 150));
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        state.query = '';
+        applyFilters();
+        searchInput.blur();
+      }
+    });
+
+    // "/" focuses search from anywhere on the page
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && !e.metaKey && !e.ctrlKey &&
+          !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  }
+
+  /* --- Reset (clears sub-filters, keeps current category) --- */
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      state.types.clear();
+      state.featured = false;
+      state.query = '';
+      if (searchInput) searchInput.value = '';
+      typeChips.forEach(c => c.classList.remove('active'));
+      if (featuredToggle) featuredToggle.setAttribute('aria-pressed', 'false');
+      applyFilters();
+    });
+  }
+
+  /* --- Sort (within each category section) --- */
+  function cardKey(card, sort) {
+    if (sort === 'added') return parseInt(card.dataset.index, 10) || 0;
+    if (sort === 'date') return card.dataset.date || '';
+    if (sort === 'author') return card.dataset.authorSort || '';
+    return 0;
+  }
+
+  function applySort() {
+    sections.forEach(section => {
+      const grid = section.querySelector('.lib-grid');
+      if (!grid) return;
+      const sectionCards = Array.from(grid.querySelectorAll('.resource-card'));
+      const emptyLast = state.sort === 'date' || state.sort === 'author';
+
+      sectionCards.sort((a, b) => {
+        const ka = cardKey(a, state.sort);
+        const kb = cardKey(b, state.sort);
         if (emptyLast) {
           const aEmpty = ka === '' || ka == null;
           const bEmpty = kb === '' || kb == null;
           if (aEmpty && !bEmpty) return 1;
           if (!aEmpty && bEmpty) return -1;
         }
-
         let cmp;
-        if (typeof ka === 'number' && typeof kb === 'number') {
-          cmp = ka - kb;
-        } else {
-          cmp = String(ka).localeCompare(String(kb));
-        }
+        if (typeof ka === 'number' && typeof kb === 'number') cmp = ka - kb;
+        else cmp = String(ka).localeCompare(String(kb));
         return state.desc ? -cmp : cmp;
       });
 
-      cards.forEach(c => body.appendChild(c));
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const sort = btn.dataset.sort;
-
-        if (state.sort === sort) {
-          state.desc = !state.desc;
-        } else {
-          state.sort = sort;
-          // Sensible defaults: newest first for dates, A→Z for names
-          state.desc = (sort === 'added' || sort === 'date');
-        }
-
-        buttons.forEach(b => {
-          b.classList.toggle('active', b === btn);
-          b.classList.toggle('desc', b === btn && state.desc);
-        });
-
-        applySort();
-      });
-
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          e.stopPropagation();
-          btn.click();
-        }
-      });
+      sectionCards.forEach(c => grid.appendChild(c));
     });
+  }
 
-    // Apply default sort on load (date added, newest first)
-    const defaultBtn = group.querySelector('.sort-btn[data-sort="' + state.sort + '"]');
-    if (defaultBtn) {
-      defaultBtn.classList.add('active');
-      if (state.desc) defaultBtn.classList.add('desc');
-    }
-    applySort();
-  });
-}
-
-/* --- Search & Filter (AI for Economists page) --- */
-function initResourceFilters() {
-  const searchInput = document.getElementById('resource-search');
-  const categoryPills = document.querySelectorAll('#category-filters .filter-pill');
-  const cards = document.querySelectorAll('.resource-card');
-  const groups = document.querySelectorAll('.resource-group');
-  const accordionHeaders = document.querySelectorAll('.resource-group .accordion-header');
-  const countEl = document.getElementById('results-count');
-  const noResults = document.getElementById('no-results');
-  const total = cards.length;
-
-  if (!searchInput || !cards.length) return;
-
-  let activeCategory = 'all';
-
-  function applyFilters() {
-    const query = searchInput.value.toLowerCase().trim();
-    const isFiltering = query || activeCategory !== 'all';
-    let visible = 0;
-
-    cards.forEach(card => {
-      const matchCat = activeCategory === 'all'
-        || card.dataset.category === activeCategory;
-      const matchSearch = !query || card.dataset.searchable.includes(query);
-      const show = matchCat && matchSearch;
-      card.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
-
-    // Show/hide category groups
-    groups.forEach(group => {
-      const visibleCards = group.querySelectorAll('.resource-card');
-      let hasVisible = false;
-      visibleCards.forEach(c => {
-        if (c.style.display !== 'none') hasVisible = true;
-      });
-
-      const header = group.querySelector('.accordion-header');
-      const content = group.querySelector('.accordion-content');
-
-      if (!isFiltering) {
-        // Default "All" state: show all groups, but collapsed
-        group.style.display = '';
-        if (header && content) {
-          header.setAttribute('aria-expanded', 'false');
-          content.classList.remove('open');
-        }
+  sortButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sort = btn.dataset.sort;
+      if (state.sort === sort) {
+        state.desc = !state.desc;
       } else {
-        // Filtering: show groups with matches, auto-expand them
-        group.style.display = hasVisible ? '' : 'none';
-        if (header && content && hasVisible) {
-          header.setAttribute('aria-expanded', 'true');
-          content.classList.add('open');
-        } else if (header && content) {
-          header.setAttribute('aria-expanded', 'false');
-          content.classList.remove('open');
-        }
+        state.sort = sort;
+        // Sensible defaults: newest first for dates, A→Z for names
+        state.desc = (sort === 'added' || sort === 'date');
       }
-    });
-
-    countEl.textContent = isFiltering
-      ? 'Showing ' + visible + ' of ' + total + ' resources'
-      : total + ' resources — click a category or search to browse';
-    noResults.style.display = (isFiltering && visible === 0) ? '' : 'none';
-  }
-
-  // Search (debounced to avoid excessive DOM reflows)
-  searchInput.addEventListener('input', debounce(applyFilters, 150));
-
-  // Category pills
-  categoryPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      categoryPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      activeCategory = pill.dataset.category;
-      applyFilters();
-      const slug = activeCategory === 'all' ? '' : activeCategory.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
-      history.replaceState(null, '', slug ? '#' + slug : window.location.pathname);
+      sortButtons.forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.classList.toggle('desc', b === btn && state.desc);
+      });
+      applySort();
     });
   });
 
-  // URL hash on load
-  const hash = window.location.hash.slice(1);
-  if (hash) {
-    const matchPill = Array.from(categoryPills).find(function(p) {
-      const pillSlug = p.dataset.category.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
-      return pillSlug === hash || p.dataset.category === hash;
-    });
-    if (matchPill) matchPill.click();
+  const defaultSortBtn = sortButtons.find(b => b.dataset.sort === state.sort);
+  if (defaultSortBtn) {
+    defaultSortBtn.classList.add('active');
+    if (state.desc) defaultSortBtn.classList.add('desc');
+  }
+  applySort();
+
+  /* --- View toggle (cards / list), persisted --- */
+  function setView(view) {
+    content.dataset.view = view;
+    viewButtons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
+    try { localStorage.setItem('libView', view); } catch (e) {}
   }
 
-  // Show initial resource count
-  countEl.style.display = '';
-  applyFilters();
+  viewButtons.forEach(btn => {
+    btn.addEventListener('click', () => setView(btn.dataset.view));
+  });
+
+  try {
+    const savedView = localStorage.getItem('libView');
+    if (savedView === 'list' || savedView === 'cards') setView(savedView);
+  } catch (e) {}
+
+  /* --- Card expand/collapse (clamped descriptions, list rows) --- */
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a, button')) return;
+      card.classList.toggle('expanded');
+    });
+  });
+
+  /* --- Initial section: URL hash (back-compat) or default --- */
+  const hash = decodeURIComponent(window.location.hash.slice(1));
+  const hashMatch = hash && catLinks.find(l => slug(l.dataset.category) === hash);
+  if (hashMatch) {
+    setSection(hashMatch.dataset.category, false);
+  } else {
+    setSection(DEFAULT_SECTION, false);
+  }
 }
+
