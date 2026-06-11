@@ -2474,6 +2474,8 @@ main.container .page-intro {
 .southmod-main { min-width: 0; }
 
 .southmod-map-panel {
+  position: sticky;
+  top: 4.75rem;
   background: transparent;
   border: none;
   padding: 0;
@@ -2497,7 +2499,7 @@ main.container .page-intro {
 
 .spotlight-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
   text-decoration: none;
   color: inherit;
@@ -2506,19 +2508,13 @@ main.container .page-intro {
 .spotlight-cover {
   flex: 0 0 38%;
   max-width: 190px;
-  align-self: stretch;
 }
 
 .spotlight-cover picture,
 .spotlight-cover img {
   display: block;
   width: 100%;
-  height: 100%;
-}
-
-.spotlight-cover img {
-  object-fit: contain;
-  object-position: center center;
+  height: auto;
 }
 
 .spotlight-body {
