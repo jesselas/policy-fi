@@ -2492,34 +2492,21 @@ main.container .page-intro {
 
 /* --- SOUTHMOD spotlight / marketing --- */
 .southmod-spotlight {
-  margin-top: 2rem;
+  margin-top: 0.7rem;
 }
 
 .spotlight-card {
   display: flex;
-  align-items: stretch;
-  gap: 0;
-  background: var(--bg-pure);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  align-items: center;
+  gap: 1.5rem;
   text-decoration: none;
   color: inherit;
-  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
-}
-
-.spotlight-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-  border-color: var(--gold-border);
 }
 
 .spotlight-cover {
   flex: 0 0 38%;
   max-width: 190px;
-  background: var(--bg-pure);
-  border-right: 1px solid var(--border-light);
+  align-self: stretch;
 }
 
 .spotlight-cover picture,
@@ -2537,22 +2524,6 @@ main.container .page-intro {
 .spotlight-body {
   flex: 1 1 auto;
   min-width: 0;
-  padding: 1.25rem 1.4rem 1.35rem;
-}
-
-.spotlight-eyebrow {
-  display: inline-block;
-  font-family: var(--font-label);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-text);
-  background: var(--gold-pale);
-  border: 1px solid var(--gold-border);
-  border-radius: 100px;
-  padding: 0.15rem 0.6rem;
-  margin-bottom: 0.7rem;
 }
 
 .spotlight-title {
@@ -2604,12 +2575,12 @@ main.container .page-intro {
 }
 
 @media (max-width: 560px) {
+  .spotlight-card {
+    gap: 1.1rem;
+  }
   .spotlight-cover {
     flex-basis: 40%;
     max-width: 140px;
-  }
-  .spotlight-body {
-    padding: 1rem 1.1rem 1.1rem;
   }
   .spotlight-title {
     font-size: 1.25rem;
