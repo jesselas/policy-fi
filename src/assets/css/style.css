@@ -2310,8 +2310,24 @@ main.container .page-intro {
 /* --- Mobile bottom tab bar (hidden on desktop) --- */
 .bottom-nav { display: none; }
 
-/* --- Library responsive --- */
-@media (max-width: 900px) {
+/* --- Compact two-pane: iPad portrait & phone landscape keep the sidebar,
+   just narrower so the content column stays comfortable. --- */
+@media (min-width: 641px) and (max-width: 900px) {
+  .library-layout {
+    grid-template-columns: 212px minmax(0, 1fr);
+    gap: 1.6rem;
+  }
+
+  .library-sidebar .cat-link { font-size: 0.8rem; padding: 0.4rem 0.5rem; gap: 0.45rem; }
+  .library-sidebar .cat-name { line-height: 1.25; }
+  .library-sidebar .cat-count { font-size: 0.62rem; }
+
+  /* Undo the phone "full-bleed" card margins that the <=768 block applies */
+  .library-content .resource-card { margin-left: 0; margin-right: 0; }
+}
+
+/* --- Library responsive: stacked layout on phones (portrait) --- */
+@media (max-width: 640px) {
   .library-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
@@ -2374,8 +2390,8 @@ main.container .page-intro {
   .library-toolbar { margin-bottom: 1.25rem; }
 }
 
-/* --- Mobile-only simplifications (AI library) + bottom tab bar --- */
-@media (max-width: 768px) {
+/* --- Phone-portrait simplifications (AI library) + bottom tab bar --- */
+@media (max-width: 640px) {
   /* Trim the sidebar to just search + categories */
   .sidebar-extra,
   .sidebar-meta { display: none; }
