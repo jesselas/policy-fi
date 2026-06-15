@@ -2839,5 +2839,50 @@
     "type": "video",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nber-w35290-investment-data-ai-transition",
+    "title": "What Investment Data Implies about the AI Transition (NBER WP 35290)",
+    "url": "https://www.nber.org/papers/w35290",
+    "author": "Jessica Wachter, Jonathan Wachter",
+    "date": "2026-06",
+    "description": "The five largest U.S. tech firms spent $380 billion on capex in 2025 and are forecast to roughly double that in 2026 — risking bankruptcy unless expected profits grow commensurately. Embeds this observation in a two-sector open-economy model with rare productivity booms. Calibrating to observed investment implies a boom raises AI-sector productivity by a factor of 2.7, with additional cumulative GDP growth of 5–58 percentage points by 2030 and AI shares of the economy ranging from 8% to 39%.",
+    "shortDescription": "Big Tech's $380B AI capex implies a 2.7x productivity boom; model projects 5–58pp additional GDP growth by 2030 across scenarios.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "investment", "growth", "macro", "asset pricing"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "toda-can-ai-refute-economic-theory",
+    "title": "Can AI Refute Economic Theory? Evidence from Beyond the Knowledge Cutoff (arXiv)",
+    "url": "https://arxiv.org/abs/2606.05383",
+    "author": "Alexis Akira Toda",
+    "date": "2026-06",
+    "description": "Tests whether AI models (Gemini, Refine, Claude, ChatGPT) can find errors in four published economic theory papers, each containing a known mistake. ChatGPT Pro performed best, occasionally constructing counterexamples and corrected proofs, while other models fared worse. No model located a true error without substantial human guidance. Argues a competent human paired with a frontier model can outperform current peer review, but AI cannot yet refute economic theory on its own. Highlighted by <a href=\"https://marginalrevolution.com/marginalrevolution/2026/06/how-well-does-current-ai-find-errors-in-economics-papers.html\">Tyler Cowen on Marginal Revolution</a>.",
+    "shortDescription": "Tests AI models on finding errors in published economic theory — none succeeded without guidance, but human+AI can outperform peer review.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "peer-review", "theory", "methodology"],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "stanford-ai-economic-indicators",
+    "title": "AI Economic Indicators (Stanford Digital Economy Lab)",
+    "url": "https://digitaleconomy.stanford.edu/publication/ai-economic-indicators-june-2026-update/",
+    "author": "Connacher Murphy, Erik Brynjolfsson",
+    "date": "2026-06",
+    "description": "New freely accessible platform from the Stanford Digital Economy Lab to track how AI is reshaping work, productivity, and value creation. The first release introduces three related efforts: the Canaries Dashboard (tracking employment trends by AI exposure level, built with ADP Research), the Takeoff Tracker (evaluating evidence for AI-driven explosive growth), and regularly updated research notes. Aims to replace anecdotes and lagging indicators with timely, trusted evidence.",
+    "shortDescription": "Stanford's new free platform tracking AI's economic impact — employment canaries, a growth takeoff tracker, and research notes.",
+    "category": "AI Tools for Research",
+    "tags": ["economics", "AI", "measurement", "labor", "growth", "tools"],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
