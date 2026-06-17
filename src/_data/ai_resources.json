@@ -2077,7 +2077,12 @@
     "description": "Investigates how various LLMs behave in the Ultimatum Game, varying stake sizes and opponent type (human vs. AI). Finds that while some models approximate the rational benchmark, a distinct 'altruistic' mode emerges where LLMs propose hyper-fair distributions (>50%). Highlights the need for careful testing before deploying AI agents in economic settings.",
     "shortDescription": "How do LLMs split the pie? Experiments in the Ultimatum Game reveal altruistic, rational, and human-mimicking modes across models.",
     "category": "Research Papers",
-    "tags": ["economics", "LLM", "game theory", "behavioral"],
+    "tags": [
+      "economics",
+      "LLM",
+      "game theory",
+      "behavioral"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2092,7 +2097,13 @@
     "description": "Argues that compute — not human capability — will be the scarce resource in an AGI economy. Most jobs won't be automated because replacing them wouldn't be worth the computing cost, not because they require uniquely human skills. Forthcoming in 'The Economics of Transformative AI' (Agrawal, Brynjolfsson & Korinek, eds.).",
     "shortDescription": "In an AGI world, compute is the scarce resource — most jobs won't be automated because replacing them isn't worth the cost.",
     "category": "Research Papers",
-    "tags": ["economics", "AGI", "labor", "growth", "advanced"],
+    "tags": [
+      "economics",
+      "AGI",
+      "labor",
+      "growth",
+      "advanced"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2107,7 +2118,13 @@
     "description": "Develops an AI-assisted workflow (using Claude Code and ChatGPT) that automates full-paper replication at scale — retrieving materials, reconstructing environments, executing code, and matching outputs to reported estimates. Applied to 384 studies (3,382 models) from top political science journals, finding reproducibility rates rose from 29.6% to 79.8% after data archiving mandates.",
     "shortDescription": "AI-assisted workflow automates large-scale paper replication across 384 studies and 3,382 models from top political science journals.",
     "category": "AI Tools for Research",
-    "tags": ["reproducibility", "LLM", "claude", "coding", "methodology"],
+    "tags": [
+      "reproducibility",
+      "LLM",
+      "claude",
+      "coding",
+      "methodology"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2122,7 +2139,12 @@
     "description": "Argues that AI is a shock to relative prices inside the academic knowledge economy: as routine empirical execution gets cheaper, the value of institutional reasoning, judgment, and price theory rises. Predicts a revival of transaction cost economics and new institutional economics as AI makes it feasible to work with messier, qualitative evidence.",
     "shortDescription": "AI reshapes economics by making empirical execution cheap — elevating the value of institutional reasoning and price theory.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "AI", "methodology", "price theory"],
+    "tags": [
+      "economics",
+      "AI",
+      "methodology",
+      "price theory"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2137,7 +2159,12 @@
     "description": "Elicits forecasts from five groups — academic economists, AI company employees, policy researchers, accurate forecasters, and the general public — about AI's economic impact. Finds expectations of substantial AI capability advances by 2030, modest labor force participation declines, and 2.5% annual GDP growth. Under a rapid AI advancement scenario, forecasters project ~4% GDP growth and labor force participation falling to 55% by 2050. Expert disagreement stems primarily from differing views on highly capable AI's economic effects rather than on the pace of AI progress.",
     "shortDescription": "Elicits AI economic forecasts from five expert and public groups; disagreement centers on AI's effects, not the pace of progress.",
     "category": "Research Papers",
-    "tags": ["economics", "forecasting", "growth", "labor"],
+    "tags": [
+      "economics",
+      "forecasting",
+      "growth",
+      "labor"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2152,7 +2179,12 @@
     "description": "Large-scale experiments show that after just ~10 minutes of AI-assisted problem-solving, participants gave up more frequently and performed worse once the AI was removed, compared to those who never used it. The persistence costs were concentrated among users who prompted AI to solve tasks directly rather than seeking hints. Effects replicated across arithmetic and reading comprehension, suggesting a general consequence of AI-assisted problem-solving rather than a domain-specific one.",
     "shortDescription": "After ~10 min of AI-assisted problem-solving, users gave up more and performed worse without AI — especially those who sought direct solutions.",
     "category": "Research Papers",
-    "tags": ["AI", "cognition", "experiment", "productivity"],
+    "tags": [
+      "AI",
+      "cognition",
+      "experiment",
+      "productivity"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2167,7 +2199,12 @@
     "description": "Examines how AI systems that synthesize population beliefs as training data influence social learning. Using an extended DeGroot model with an AI aggregator, introduces a 'learning gap' metric. Key finding: rapid updating degrades learning, while slower updates and localized aggregators trained on specialized information consistently improve outcomes. Consolidating local systems into a single global aggregator diminishes performance.",
     "shortDescription": "Acemoglu et al. show that AI knowledge aggregators can improve or degrade social learning depending on speed and scope of training.",
     "category": "Research Papers",
-    "tags": ["economics", "LLM", "information", "advanced"],
+    "tags": [
+      "economics",
+      "LLM",
+      "information",
+      "advanced"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2182,7 +2219,12 @@
     "description": "Documents international trade patterns in AI-related goods using an LLM classification tool. AI-related products account for 23% of U.S. imports in 2025, with 73% growth since 2023 vs. 3% for non-AI products. Mexico and Taiwan dominate, accounting for roughly half of all U.S. AI-related trade. The U.S. goods trade deficit would have been nearly $200 billion smaller in 2025 without the AI expansion.",
     "shortDescription": "AI-related goods now account for 23% of U.S. imports, with 73% growth since 2023. Mexico and Taiwan dominate bilateral flows.",
     "category": "Research Papers",
-    "tags": ["economics", "trade", "AI", "measurement"],
+    "tags": [
+      "economics",
+      "trade",
+      "AI",
+      "measurement"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2197,7 +2239,13 @@
     "description": "NY Fed research using the November 2025 Survey of Consumer Expectations. College graduates are more than twice as likely to use AI at work (58.7% vs. 22.9%). Only 15.9% of employers provide AI training despite 38% of workers viewing it as important. Workers without AI training access would accept an 11.4% salary cut to gain it; those with access require a 24.2% raise to give it up.",
     "shortDescription": "NY Fed: Workers value AI training at 11% of salary. College grads are 2x more likely to use AI at work, but only 16% of employers offer training.",
     "category": "Research Papers",
-    "tags": ["economics", "labor", "AI", "training", "adoption"],
+    "tags": [
+      "economics",
+      "labor",
+      "AI",
+      "training",
+      "adoption"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2212,7 +2260,12 @@
     "description": "Argues AI won't cause mass unemployment but will trigger structural economic transformation. Drawing on structural change economics, Girard's mimetic desire theory, and consumer expenditure data, Imas shows that income effects account for over 75% of observed structural change. As commodity production gets automated, spending and employment shift toward a 'relational sector' — nursing, education, hospitality, artisanal work — where human involvement is intrinsic to value.",
     "shortDescription": "Imas argues AI triggers structural change, not mass unemployment — spending shifts toward 'relational' sectors where human involvement is the value.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "labor", "AI", "structural change"],
+    "tags": [
+      "economics",
+      "labor",
+      "AI",
+      "structural change"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2227,7 +2280,12 @@
     "description": "Practical guide to using Claude Code inside VS Code for academic economic research. Covers installation and setup, recommended extensions for Stata, Python, R, and LaTeX, file format handling, project customization via CLAUDE.md and reusable skill commands, Git integration, and context window management. Tailored to empirical economics workflows such as robustness checks, panel regressions, and research feedback automation.",
     "shortDescription": "Practical guide for academic economists on installing, configuring, and optimizing Claude Code in VS Code for R, Stata, Python, and LaTeX workflows.",
     "category": "Coding with AI",
-    "tags": ["claude", "coding", "economics", "VS Code"],
+    "tags": [
+      "claude",
+      "coding",
+      "economics",
+      "VS Code"
+    ],
     "featured": false,
     "type": "guide",
     "internal": false,
@@ -2242,7 +2300,12 @@
     "description": "Open-source, not-for-profit AI paper reviewer. Plug in a paper, your OpenRouter API key, and email; reviews cost under $2 using SOTA models (Claude Opus, GPT-5.4) or under $1 with open-source models. Returns an interactive panel with major and minor comments traceable to the text and tickable when addressed. Benchmarks at coarse.ink/compare (judged by Gemini-3.1-pro) rival Reviewer3, Refine.ink, and Stanford Agentic Reviewer. Reviews active for 90 days, no data retention, explicit opt-out of training on all model calls.",
     "shortDescription": "Open-source AI paper reviewer using your OpenRouter key. Costs <$2 per review, rivals Reviewer3/Refine.ink/Stanford Agentic Reviewer. No data retention.",
     "category": "AI Tools for Research",
-    "tags": ["AI", "peer review", "open source", "economics"],
+    "tags": [
+      "AI",
+      "peer review",
+      "open source",
+      "economics"
+    ],
     "featured": false,
     "type": "tool",
     "internal": false,
@@ -2257,7 +2320,13 @@
     "description": "Federal Reserve FEDS Notes article surveying the state of AI adoption across the U.S. economy. Census data show ~18% of firms adopted AI by year-end 2025, while the Atlanta Fed's Survey of Business Uncertainty estimates 78% of the labor force works at firms that have adopted AI. Adoption is highest in professional services and finance. Newer surveys show a stronger link between adoption rates and firm size.",
     "shortDescription": "Fed survey of U.S. AI adoption: ~18% of firms adopted AI by end-2025, with highest rates in professional services and finance.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "adoption", "measurement", "Federal Reserve"],
+    "tags": [
+      "economics",
+      "AI",
+      "adoption",
+      "measurement",
+      "Federal Reserve"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2272,7 +2341,13 @@
     "description": "St. Louis Fed analysis finding that U.S. firms have a higher share of workers using AI than European firms, and that management practices are a surprisingly powerful predictor of cross-country AI adoption. A one-standard-deviation increase in the management index is associated with a 9.6 percentage point increase in AI adoption. The authors argue that narrowing the U.S.-Europe AI adoption gap may require first narrowing the management gap.",
     "shortDescription": "Management practices are a key predictor of cross-country AI adoption gaps; narrowing U.S.-Europe AI gap may require closing the management gap.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "adoption", "international", "management"],
+    "tags": [
+      "economics",
+      "AI",
+      "adoption",
+      "international",
+      "management"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2287,7 +2362,13 @@
     "description": "IMF staff note synthesizing insights from a high-level workshop and scenario-planning exercise co-organized with EconTAI. Argues AI should be treated as a macro-critical transition rather than a standard technology shock. Macroeconomic outcomes will depend less on frontier capability alone than on the speed and breadth of AI diffusion and institutional readiness. Covers implications for growth, labor markets, equality, financial stability, and governance.",
     "shortDescription": "IMF scenario-planning exercise: AI is a macro-critical transition; outcomes depend on diffusion speed and institutional readiness, not just capability.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "policy", "growth", "IMF"],
+    "tags": [
+      "economics",
+      "AI",
+      "policy",
+      "growth",
+      "IMF"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2302,7 +2383,13 @@
     "description": "Studies generative AI's impact on U.S. households' time allocation using browsing data from 200,000+ home devices (2021–2024). Finds that ChatGPT adoption substantially increases leisure browsing while leaving productive task time unchanged — households primarily use AI for productive non-market tasks (job hunting, travel planning, shopping), freeing up leisure time. Implies large home-productivity gains from generative AI, but raises digital-divide concerns as younger, higher-income users adopt faster.",
     "shortDescription": "ChatGPT boosts home productivity 76–176% on digital chores, but freed time goes to leisure; younger/richer households adopt faster, widening digital divide.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "productivity", "households", "inequality"],
+    "tags": [
+      "economics",
+      "AI",
+      "productivity",
+      "households",
+      "inequality"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2444,7 +2531,13 @@
     "description": "Develops a semi-endogenous growth model with an innovation network to study when AI-driven automation of research leads to superexponential ('explosive') growth. Derives a condition under which two reinforcing channels — a technological feedback loop across research sectors and an economic feedback loop where higher output finances more research — overcome diminishing returns to ideas. In a simulation calibrated to AI progress trends, fully automating software research plus modest (5%) automation elsewhere produces a singularity within six years. Includes an interactive online simulator for exploring growth paths.",
     "shortDescription": "Korinek et al. model when AI automation of research triggers explosive growth; calibrated simulation yields singularity within six years.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "growth", "automation", "singularity"],
+    "tags": [
+      "economics",
+      "AI",
+      "growth",
+      "automation",
+      "singularity"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2459,7 +2552,13 @@
     "description": "Proposes DRIL (Deep Research on a Loop), a methodology that uses AI agents to assemble datasets from publicly available sources. DRIL applies a fixed research instrument across a mapped unit space with a two-stage architecture separating design from implementation. Applied to updating the Global Tax Expenditures Database for eight Latin American and Caribbean countries, producing 129 sources and 136 evidence records at the cost of a standard LLM subscription. Argues that even partial automation of dataset construction can shift the production function of empirical economics.",
     "shortDescription": "DRIL methodology uses AI agents to automate dataset construction from public sources, demonstrated on tax expenditure data for 8 countries.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "data", "agents", "methodology"],
+    "tags": [
+      "economics",
+      "AI",
+      "data",
+      "agents",
+      "methodology"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2474,7 +2573,14 @@
     "description": "Reviews firm-level data on artificial intelligence and the emerging evidence on AI's economic effects. Argues that measurement is central: different AI datasets capture different objects (invention vs. use, internal capability vs. outsourcing, realized activity vs. investor perceptions) and can therefore lead to different conclusions. Develops a framework for choosing among these measures and surveys available data sources on firm AI efforts. Synthesizes evidence on AI's effects on firm growth, valuation, productivity, risk, labor, competition, and financial markets.",
     "shortDescription": "Comprehensive survey of firm-level AI data and evidence on AI's effects on growth, productivity, labor, and competition.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "firms", "productivity", "measurement", "survey"],
+    "tags": [
+      "economics",
+      "AI",
+      "firms",
+      "productivity",
+      "measurement",
+      "survey"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2489,7 +2595,14 @@
     "description": "Introduces a new metric called VOLT (Value of Organizational Learning Technologies) that measures the potential increase in economic output if firms could learn faster. Using 2023 U.S. Census data on business establishments, finds that VOLT for the American economy is approximately 2.0, meaning AI-driven organizational learning technologies have the potential to double aggregate economic output in the long run. Roughly three-quarters of potential gains come from extending firm lifespans rather than boosting productivity directly. Industry-by-industry analysis reveals that knowing how exposed an industry is to LLMs tells almost nothing about how much it stands to gain from AI as an organizational learning tool.",
     "shortDescription": "New VOLT metric estimates AI-driven organizational learning could double US economic output; industry analysis challenges conventional wisdom.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "growth", "productivity", "firms", "organizational learning"],
+    "tags": [
+      "economics",
+      "AI",
+      "growth",
+      "productivity",
+      "firms",
+      "organizational learning"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2504,7 +2617,14 @@
     "description": "Free cloud-based LaTeX editor with AI assistant (GPT-5.2) embedded directly into the research writing workflow. Features include contextual AI assistance with access to the full project, visual-to-code conversion for diagrams, literature search and citation integration, and real-time collaboration. Particularly relevant for economists writing papers with mathematical models and empirical tables. Free for anyone with a ChatGPT account, with enterprise versions for universities forthcoming.",
     "shortDescription": "Free AI-powered LaTeX workspace for research writing, with contextual AI help, citation tools, and real-time collaboration.",
     "category": "AI Tools for Research",
-    "tags": ["AI", "tools", "LaTeX", "writing", "research", "collaboration"],
+    "tags": [
+      "AI",
+      "tools",
+      "LaTeX",
+      "writing",
+      "research",
+      "collaboration"
+    ],
     "featured": false,
     "type": "tool",
     "internal": false,
@@ -2519,7 +2639,13 @@
     "description": "Demonstrates that LLM-based occupational AI exposure measures — widely used to estimate AI's labor market effects — are highly fragile. Replicating the dominant rubric with three frontier models on all 18,797 O*NET tasks, mean exposure diverges 3.6-fold (one model rates 14% of tasks as directly exposed while another rates 51%). In difference-in-differences employment regressions, coefficient magnitudes vary 2.4-fold across annotators, and county-level estimates flip sign depending on which model is used. Formalizes this as non-classical measurement error, cautioning against treating evolving LLMs as static instruments.",
     "shortDescription": "LLM-based AI exposure measures are highly fragile: 3.6-fold divergence across models, with employment regression results flipping sign by annotator.",
     "category": "Research Papers",
-    "tags": ["economics", "LLM", "labor", "measurement", "methodology"],
+    "tags": [
+      "economics",
+      "LLM",
+      "labor",
+      "measurement",
+      "methodology"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2534,7 +2660,13 @@
     "description": "Writeup of a moderated panel at the NBER Applications of AI in Healthcare meeting (May 8, 2026) featuring Cunningham, Simon, David Bradford, and Coady Wing, with commentary from Emily Beam, Jason Fletcher, and Paul Goldsmith-Pinkham. Key themes: autonomous AI papers are crossing into top-journal quality distributions but verification doesn't scale; AI-assisted specification searching leaves no audit trail; journal editors face a flood of competent-but-uninteresting submissions; restricted-data norms collide with AI tooling; and incentives — not technology — will determine whether AI makes the field better or just bigger.",
     "shortDescription": "NBER panel on AI and research production: autonomous papers reaching top-journal quality, verification gaps, and the flood facing journal editors.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "AI", "peer-review", "methodology", "research workflows"],
+    "tags": [
+      "economics",
+      "AI",
+      "peer-review",
+      "methodology",
+      "research workflows"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2549,7 +2681,12 @@
     "description": "Argues research follows an O-ring production function (Kremer 1993): output is the product of input qualities across stages, so one weak link drags the whole chain down. AI excels at code, tables, and technical error-catching but remains weaker at ideation and writing — and understanding what an AI agent did is itself costly time. Uses METR benchmarks to show that while 50% reliability is growing exponentially, 80% reliability grows from a much lower base with equivalent uncertainty. Warns against nihilism: the set of feasible research questions has expanded, and the interesting question is which problems economists choose to deploy these tools against.",
     "shortDescription": "Research follows an O-ring production function: AI excels at some inputs but human judgment still anchors the weak links.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "AI", "research workflows", "methodology"],
+    "tags": [
+      "economics",
+      "AI",
+      "research workflows",
+      "methodology"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2564,7 +2701,13 @@
     "description": "Analyzes 953 economics papers — 912 AI-generated from the APE project and 41 human papers published in the AER and AEJ: Economic Policy — to decompose the quality gap into idea quality and execution quality. The idea gap is large (human papers achieve 47.1% mean exceptional probability vs. 16.5% for AI; Cohen's d = 2.23), while the execution gap is smaller (4.38/5.0 vs. 3.84). Idea quality accounts for roughly 71% of the overall quality difference. Only 7 AI papers (0.8%) surpass the median human paper on both dimensions simultaneously, suggesting ideation remains the primary bottleneck to competitive AI-generated economics research.",
     "shortDescription": "Idea quality, not execution, is the main bottleneck: human econ papers score 47% vs. 17% exceptional probability, accounting for 71% of the quality gap.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "research quality", "ideation", "methodology"],
+    "tags": [
+      "economics",
+      "AI",
+      "research quality",
+      "ideation",
+      "methodology"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2579,7 +2722,12 @@
     "description": "Envisions a future where static research papers are replaced by AI-powered 'meta-papers' or 'boxes' — living documents that can be updated with new data, re-run with alternative specifications, and queried by readers in real time. Imagines Fed researchers spending careers improving a monetary-policy meta-paper rather than writing individual papers. Asks whether the people who excel at building these systems will be the same people who become top economists today, and whether the endeavor will be centralized or decentralized.",
     "shortDescription": "Envisions AI-powered 'meta-papers' replacing static research: living documents updated with new data, alternative specs, and reader queries in real time.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "AI", "research workflows", "publishing"],
+    "tags": [
+      "economics",
+      "AI",
+      "research workflows",
+      "publishing"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2594,7 +2742,14 @@
     "description": "NY Fed Liberty Street Economics post examining the tension between AI's long-run productivity promise and its short-run costs for inflation, real activity, and financial stability. Notes that major AI firms committed ~$300 billion in capex in 2025 across semiconductors, power grids, and specialized labor, with AI-driven demand pushing up prices. Argues the key macro question is whether AI raises productivity faster than it raises adoption costs. Documents how AI companies shifted from retained-earnings-funded investment to raising over $100 billion in new debt by late 2025, with implications for credit markets and financial stability.",
     "shortDescription": "NY Fed analysis of AI's macro tension: $300B in AI capex drives inflation pressures while long-run productivity gains remain uncertain.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "AI", "macro", "inflation", "financial stability", "Federal Reserve"],
+    "tags": [
+      "economics",
+      "AI",
+      "macro",
+      "inflation",
+      "financial stability",
+      "Federal Reserve"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2609,7 +2764,14 @@
     "description": "Published in the Journal of Economic Literature, demonstrates a pipeline for mass-producing academic finance papers using LLMs. After mining 30,000+ potential return predictors from accounting data, the authors use Claude to generate nearly 400 complete, publication-ready papers with distinct theoretical justifications — each indistinguishable from human-authored research. Serves as both a proof of concept for AI-enhanced research efficiency and a cautionary tale about industrializing HARKing (hypothesizing after results are known). Highlighted by <a href=\"https://marginalrevolution.com/marginalrevolution/2026/06/law-professors-prefer-ai-over-peer-answers.html\">Tyler Cowen</a>.",
     "shortDescription": "JEL paper shows LLMs can mass-produce ~400 publication-ready finance papers in 12 hours — a proof of concept and cautionary tale about AI-driven HARKing.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "LLM", "finance", "methodology", "peer-review"],
+    "tags": [
+      "economics",
+      "AI",
+      "LLM",
+      "finance",
+      "methodology",
+      "peer-review"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2624,7 +2786,13 @@
     "description": "Twenty-minute keynote at the Sana AI Summit in New York. Cowen forecasts AI will add roughly half a percentage point to economic growth — a deliberately sober estimate, because organizations and regulators cannot keep up with the technology. Argues that AI will not cause mass unemployment but will change most jobs, and that the real winners will be people who take initiative in figuring out how AI and agents work, not those with the highest raw intelligence.",
     "shortDescription": "Cowen forecasts AI adds ~0.5pp to growth; argues initiative beats intelligence and organizational frictions limit AI's macro impact.",
     "category": "Talks & Videos",
-    "tags": ["economics", "AI", "growth", "labor", "macro"],
+    "tags": [
+      "economics",
+      "AI",
+      "growth",
+      "labor",
+      "macro"
+    ],
     "featured": false,
     "type": "video",
     "internal": false,
@@ -2639,7 +2807,13 @@
     "description": "A practical guide for economists and pre-doc RAs on working with Claude Code, built around \"mindset before tooling\" — the right mental model, setup, hard rules, an FAQ on common mistakes, and the failure modes to watch for. Emphasizes treating AI as a collaborator that needs careful verification rather than relying on prompt-engineering tricks.",
     "shortDescription": "A practical Claude Code guide for economists and RAs — mental model, setup, hard rules, and verification habits over prompt tricks.",
     "category": "Coding with AI",
-    "tags": ["economics", "AI", "claude", "coding", "writing"],
+    "tags": [
+      "economics",
+      "AI",
+      "claude",
+      "coding",
+      "writing"
+    ],
     "featured": false,
     "type": "guide",
     "internal": false,
@@ -2654,7 +2828,11 @@
     "description": "A readable, talk-by-talk transcript of Stanford's 3.5-hour \"Empirical Work in the Age of AI\" conference — featuring Susan Athey, Matt Gentzkow, Andrew Hall, and others — compiled so you can pass the whole thing to a coding agent and extract exactly what is useful for your own work.",
     "shortDescription": "Readable, talk-separated transcript of Stanford's 'Empirical Work in the Age of AI' conference (Athey, Gentzkow, Hall, and others).",
     "category": "Talks & Videos",
-    "tags": ["economics", "AI", "LLM"],
+    "tags": [
+      "economics",
+      "AI",
+      "LLM"
+    ],
     "featured": false,
     "type": "other",
     "internal": false,
@@ -2669,7 +2847,13 @@
     "description": "A free ~4-hour video course on agentic coding with OpenAI Codex aimed at economists and researchers, assuming zero experience. Steps through fundamentals — Skills, MCPs, plugins, Git, subagents, and worktrees — with immediate practical payoff, 229 companion slides, and a capstone that builds a web app from scratch.",
     "shortDescription": "Free 4-hour Codex course for economists — Skills, MCPs, Git, subagents, worktrees, 229 slides, and a build-an-app capstone.",
     "category": "Courses & Learning",
-    "tags": ["economics", "AI", "coding", "course", "free"],
+    "tags": [
+      "economics",
+      "AI",
+      "coding",
+      "course",
+      "free"
+    ],
     "featured": false,
     "type": "course",
     "internal": false,
@@ -2684,7 +2868,14 @@
     "description": "An open-source suite of Claude Code skills for economics research. Its \"/tyler\" skill (named for Tyler Cowen) converts a folder of academic PDFs into a token-efficient markdown wiki — one lightweight file per paper plus an index — so Claude Code can load an entire literature into context without burning tokens on raw PDF parsing. The suite also includes simulated peer review and more.",
     "shortDescription": "Open-source Claude Code skills for economists — '/tyler' turns a folder of PDFs into a token-efficient literature wiki, plus peer review.",
     "category": "Coding with AI",
-    "tags": ["economics", "AI", "claude", "coding", "open-source", "writing"],
+    "tags": [
+      "economics",
+      "AI",
+      "claude",
+      "coding",
+      "open-source",
+      "writing"
+    ],
     "featured": false,
     "type": "tool",
     "internal": false,
@@ -2699,7 +2890,14 @@
     "description": "An open-source, multi-agent reviewer for economics papers that runs locally with Codex. It turns a PDF into a structured, high-quality referee report through a modular, highly customizable pipeline in which every finding is traceable back to a specific agent.",
     "shortDescription": "Open-source multi-agent referee for economics papers — runs locally with Codex, turning a PDF into a structured, fully traceable report.",
     "category": "AI Tools for Research",
-    "tags": ["economics", "AI", "peer-review", "coding", "open-source", "tools"],
+    "tags": [
+      "economics",
+      "AI",
+      "peer-review",
+      "coding",
+      "open-source",
+      "tools"
+    ],
     "featured": false,
     "type": "tool",
     "internal": false,
@@ -2714,7 +2912,15 @@
     "description": "A free, open-source 10-stage academic research pipeline for Claude Code. It hunts references, formats citations, writes section by section, and runs a simulated peer-review panel (including a \"devil's advocate\"), with integrity gates that catch fabricated citations and statistical errors. A full 15,000-word paper runs roughly $4–6 in API credits.",
     "shortDescription": "Free 10-stage Claude Code academic pipeline — deep research, drafting, simulated peer review, and integrity checks for fabricated citations.",
     "category": "Coding with AI",
-    "tags": ["economics", "AI", "claude", "coding", "open-source", "writing", "peer-review"],
+    "tags": [
+      "economics",
+      "AI",
+      "claude",
+      "coding",
+      "open-source",
+      "writing",
+      "peer-review"
+    ],
     "featured": false,
     "type": "tool",
     "internal": false,
@@ -2729,7 +2935,14 @@
     "description": "A five-part, jargon-free tutorial that helps researchers with no technical background get started with Claude Code — installing it like any app, batch-processing dozens of PDFs at once, coding qualitative interview transcripts, and cleaning up messy spreadsheets.",
     "shortDescription": "Five-part, no-jargon tutorial for researchers new to Claude Code — batch-process PDFs, code interview transcripts, and clean messy data.",
     "category": "Coding with AI",
-    "tags": ["economics", "AI", "claude", "coding", "beginner", "writing"],
+    "tags": [
+      "economics",
+      "AI",
+      "claude",
+      "coding",
+      "beginner",
+      "writing"
+    ],
     "featured": false,
     "type": "guide",
     "internal": false,
@@ -2744,7 +2957,13 @@
     "description": "Research from Anthropic's economics team on how AI agents able to execute research end-to-end will reshape social science. It tests coding agents on real social-science tasks and asks to what extent AI may automate innovation and change research productivity.",
     "shortDescription": "Anthropic Economic Research on AI agents that execute social-science research end-to-end — and how far they can automate innovation.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "LLM", "labor", "methodology"],
+    "tags": [
+      "economics",
+      "AI",
+      "LLM",
+      "labor",
+      "methodology"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2759,7 +2978,13 @@
     "description": "Open-source Quarto templates and example project structures for reproducible applied-economics research, designed so AI coding agents work well on top of a fully scripted pipeline from raw data to publishable output (with optional Make and Nix).",
     "shortDescription": "Quarto project templates for reproducible applied-economics research, structured so AI coding agents work cleanly over a scripted pipeline.",
     "category": "Coding with AI",
-    "tags": ["economics", "AI", "coding", "open-source", "tools"],
+    "tags": [
+      "economics",
+      "AI",
+      "coding",
+      "open-source",
+      "tools"
+    ],
     "featured": false,
     "type": "tool",
     "internal": false,
@@ -2774,7 +2999,13 @@
     "description": "A collection of AI tools for economists, including the Econ Journal Matchmaker — which suggests target journals and editors from a paper's abstract or introduction with no login required — and a \"Citation Hallucination Police\" that checks references for fabricated citations.",
     "shortDescription": "AI tools for economists — the no-login Econ Journal Matchmaker (journal/editor suggestions) and a checker for hallucinated citations.",
     "category": "AI Tools for Research",
-    "tags": ["economics", "AI", "tools", "writing", "peer-review"],
+    "tags": [
+      "economics",
+      "AI",
+      "tools",
+      "writing",
+      "peer-review"
+    ],
     "featured": false,
     "type": "tool",
     "internal": false,
@@ -2789,7 +3020,13 @@
     "description": "A preprint testing whether AI coding agents (Claude Code and Codex) match human methodological diversity in a \"many-analysts\" design on an immigration and social-policy hypothesis. The agents reproduce human-like method diversity and broadly similar effect estimates, but show a vulnerability at the interpretation layer — a confirmatory prompt flipped Claude Code's verdict from 10% to 90% support without meaningfully changing the coefficients.",
     "shortDescription": "Preprint: AI agents match human method diversity and effect estimates in a many-analysts design, but their interpretations are easily biased.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "LLM", "methodology", "peer-review"],
+    "tags": [
+      "economics",
+      "AI",
+      "LLM",
+      "methodology",
+      "peer-review"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2804,7 +3041,13 @@
     "description": "A guide for academic economists on syncing Overleaf with VS Code through either GitHub or Dropbox, so you can use Claude Code and Codex on your LaTeX projects while keeping Overleaf's collaborative editing. Recommends GitHub Desktop for versioned work and Dropbox for real-time coauthoring.",
     "shortDescription": "Guide to syncing Overleaf with VS Code (via GitHub or Dropbox) to use Claude Code and Codex on LaTeX while keeping Overleaf collaboration.",
     "category": "Coding with AI",
-    "tags": ["economics", "AI", "claude", "coding", "writing"],
+    "tags": [
+      "economics",
+      "AI",
+      "claude",
+      "coding",
+      "writing"
+    ],
     "featured": false,
     "type": "guide",
     "internal": false,
@@ -2819,7 +3062,12 @@
     "description": "A curated roundup from VoxDev's managing editor of ten of the most interesting recent pieces on AI and development, spanning research and practitioner perspectives — compiled as a counterweight to a development community he argues has been slow to engage with AI's most important questions.",
     "shortDescription": "VoxDev editor's curated roundup of ten standout recent reads on AI and economic development, from researchers and practitioners.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "AI", "development", "commentary"],
+    "tags": [
+      "economics",
+      "AI",
+      "development",
+      "commentary"
+    ],
     "featured": false,
     "type": "article",
     "internal": false,
@@ -2834,7 +3082,14 @@
     "description": "A one-hour interview in which Scott Cunningham joins Aniket Panjwani to discuss what agentic AI changes for empirical economics: faster research production but slower verification, difference-in-differences workflows, cross-language replication and package audits, encoding repeated checks into skills, and why domain expertise still matters when agents can produce polished output. Includes a sectioned companion transcript (some sections require a free newsletter subscription).",
     "shortDescription": "Hour-long interview with Scott Cunningham on what agentic AI changes for empirical economics — production vs. verification, and the returns to expertise.",
     "category": "Talks & Videos",
-    "tags": ["economics", "AI", "claude", "coding", "methodology", "peer-review"],
+    "tags": [
+      "economics",
+      "AI",
+      "claude",
+      "coding",
+      "methodology",
+      "peer-review"
+    ],
     "featured": false,
     "type": "video",
     "internal": false,
@@ -2849,7 +3104,14 @@
     "description": "The five largest U.S. tech firms spent $380 billion on capex in 2025 and are forecast to roughly double that in 2026 — risking bankruptcy unless expected profits grow commensurately. Embeds this observation in a two-sector open-economy model with rare productivity booms. Calibrating to observed investment implies a boom raises AI-sector productivity by a factor of 2.7, with additional cumulative GDP growth of 5–58 percentage points by 2030 and AI shares of the economy ranging from 8% to 39%.",
     "shortDescription": "Big Tech's $380B AI capex implies a 2.7x productivity boom; model projects 5–58pp additional GDP growth by 2030 across scenarios.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "investment", "growth", "macro", "asset pricing"],
+    "tags": [
+      "economics",
+      "AI",
+      "investment",
+      "growth",
+      "macro",
+      "asset pricing"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2864,7 +3126,13 @@
     "description": "Tests whether AI models (Gemini, Refine, Claude, ChatGPT) can find errors in four published economic theory papers, each containing a known mistake. ChatGPT Pro performed best, occasionally constructing counterexamples and corrected proofs, while other models fared worse. No model located a true error without substantial human guidance. Argues a competent human paired with a frontier model can outperform current peer review, but AI cannot yet refute economic theory on its own. Highlighted by <a href=\"https://marginalrevolution.com/marginalrevolution/2026/06/how-well-does-current-ai-find-errors-in-economics-papers.html\">Tyler Cowen on Marginal Revolution</a>.",
     "shortDescription": "Tests AI models on finding errors in published economic theory — none succeeded without guidance, but human+AI can outperform peer review.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "peer-review", "theory", "methodology"],
+    "tags": [
+      "economics",
+      "AI",
+      "peer-review",
+      "theory",
+      "methodology"
+    ],
     "featured": false,
     "type": "paper",
     "internal": false,
@@ -2879,9 +3147,80 @@
     "description": "New freely accessible platform from the Stanford Digital Economy Lab to track how AI is reshaping work, productivity, and value creation. The first release introduces three related efforts: the Canaries Dashboard (tracking employment trends by AI exposure level, built with ADP Research), the Takeoff Tracker (evaluating evidence for AI-driven explosive growth), and regularly updated research notes. Aims to replace anecdotes and lagging indicators with timely, trusted evidence.",
     "shortDescription": "Stanford's new free platform tracking AI's economic impact — employment canaries, a growth takeoff tracker, and research notes.",
     "category": "AI Tools for Research",
-    "tags": ["economics", "AI", "measurement", "labor", "growth", "tools"],
+    "tags": [
+      "economics",
+      "AI",
+      "measurement",
+      "labor",
+      "growth",
+      "tools"
+    ],
     "featured": false,
     "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "nava-revise-applied-paper",
+    "title": "revise-applied-paper: A Claude Code Skill for Refereeing Applied Economics Papers",
+    "url": "https://github.com/noejn2/revise-applied-paper",
+    "author": "Noé J Nava",
+    "date": "2026-06",
+    "description": "An open-source Claude Code skill that acts as an automated journal referee for applied economics manuscripts (.qmd, .md, or .tex). It runs a cold subagent that audits the draft against an ~80-item checklist distilled from Marc F. Bellemare's Doing Economics (MIT Press, 2022), produces a referee report with numbered major and minor comments, then applies editing-level fixes while parking substantive items in a to-do ledger. Runs locally and free on top of Claude, supports interactive and autonomous loop modes, and anchors every comment to a citable authority rather than a model's taste. A writing-craft tool, not scientific peer review.",
+    "shortDescription": "Open-source Claude Code skill that referees applied econ papers against Bellemare's Doing Economics — runs locally, free, anchored to a citable authority.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "Claude Code",
+      "academic-writing",
+      "peer-review",
+      "tools"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "liser-ai-skill-demand-european-firms",
+    "title": "How AI Reshapes Skill Demand in European Firms (LISER Policy Brief)",
+    "url": "https://liser.lu/assets/How-AI-reshapes-skill-demand-in-European-firms-2026-11-en-1.pdf",
+    "author": "Terry Gregory, Najada Feimi, Christina Gathmann, David Marguerit",
+    "date": "2026-06",
+    "description": "LISER policy brief drawing on more than 75 million online job vacancies from Belgium, France, Germany, and Luxembourg between 2018 and 2023 to track how employers' skill requirements evolve as occupations become more exposed to AI. It argues AI is reshaping the content of jobs rather than eliminating them: demand is rising fast for AI-related analytical skills, employers increasingly seek workers who combine analytical tools with judgment and leadership, and the adjustment happens largely within existing occupations. Concludes the policy priority should be reskilling and upskilling within current occupational trajectories.",
+    "shortDescription": "LISER brief using 75M+ EU job vacancies (2018–2023): AI rewires skill demand within occupations rather than replacing jobs.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor",
+      "skills",
+      "Europe",
+      "policy"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "simon-ai-in-economics-roundup",
+    "title": "AI in Economics: A Weekly Research Roundup",
+    "url": "https://franklythecounterfactual.substack.com/p/ai-in-economics",
+    "author": "Kosali Simon",
+    "date": "2026-04",
+    "description": "A weekly Substack newsletter from the O'Neill School of Public and Environmental Affairs at Indiana University that scans new working-paper listings (the NBER 'New This Week' email, the NEP-AIN digest from RePEc, and Google Scholar alerts) and summarizes the most notable new economics research on AI. It covers three angles: AI as a subject of economic study (labor, productivity, trade, public finance), AI as a tool for doing economics (LLMs, ML, agentic coding), and AI as an economic actor (agents that bargain, trade, and compete). Each post offers a paragraph or two per paper with hyperlinked titles; the launch edition includes a full Q1 2026 catch-up archive.",
+    "shortDescription": "Weekly Substack roundup of new AI-in-economics working papers, curated by Kosali Simon (Indiana University) across labor, methods, and AI agents.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "newsletter",
+      "research",
+      "working-papers"
+    ],
+    "featured": false,
+    "type": "article",
     "internal": false,
     "highlight": false
   }
