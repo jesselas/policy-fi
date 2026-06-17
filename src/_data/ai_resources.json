@@ -3223,5 +3223,27 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nosov-research-craft-skill",
+    "title": "research-craft: An Agent Skill for Better Research Loops",
+    "url": "https://github.com/nik1t7n/research-craft-skill",
+    "author": "Nikita Nosov",
+    "date": "2026-06",
+    "description": "An open-source agent skill in the SKILL.md format, installable into Claude Code, Codex, Cursor, Gemini CLI and other agents via the skills CLI, that turns vague research work into a tight loop: choosing better problems, improving inputs, forecasting before experiments, keeping research logs, inspecting failures, and publishing useful artifacts. Based on Vivek's essay 'how to be good at research.' Oriented toward ML/AI experiment design rather than economics specifically, but useful for structuring any empirical research workflow.",
+    "shortDescription": "Open-source agent skill (Claude Code, Codex, Cursor...) for tighter research loops: pick problems, forecast experiments, log, inspect failures.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "AI",
+      "research",
+      "agent-skill",
+      "workflow",
+      "Claude Code",
+      "tools"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
