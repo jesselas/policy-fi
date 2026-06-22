@@ -3245,5 +3245,90 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "kireyev-microeconomics-to-ai-research",
+    "title": "From Microeconomics to AI Research: A Guide for Economists (SSRN)",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6948398",
+    "author": "Pavel Kireyev, Roberto Rafael Maura Rivero",
+    "date": "2026-06",
+    "description": "A 26-page guide arguing that the decisions shaping how AI systems are built and aligned are largely microeconomic problems. It opens with a self-contained primer on the RLHF pipeline, showing that reward modeling, preference aggregation, and policy optimization rest on equivalences with discrete choice, social choice, and principal-agent models. It then maps specific competencies (behavioral economics for annotator biases, mechanism design for feedback elicitation, social choice for preference aggregation, contract theory and information design for alignment, game theory for multi-agent safety, production economics for compute scaling laws) to concrete AI research problems, and closes with practical paths into academia and AI labs plus a companion repository.",
+    "shortDescription": "Guide mapping micro fields (mechanism design, social choice, contract theory) to LLM post-training and alignment, with a path into AI research.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "alignment",
+      "RLHF",
+      "advanced"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "anthropic-agentic-coding-returns-expertise",
+    "title": "Agentic coding and persistent returns to expertise (Anthropic)",
+    "url": "https://www.anthropic.com/research/claude-code-expertise",
+    "author": "Zoe Hitzig, Maxim Massenkoff, Eva Lyubich, Shaoyi Zhang, Ryan Heller, Peter McCrory",
+    "date": "2026-06",
+    "description": "Anthropic Economic Research report based on a privacy-preserving analysis of ~400,000 Claude Code sessions from ~235,000 people (October 2025 to April 2026). It introduces a framework describing what work is done, who does it, and whether it succeeds. Key findings: people make ~70% of planning decisions while Claude makes ~80% of execution decisions; domain expertise (not coding proficiency) drives success, with sessions rated expert reaching verified success more than twice as often as novice ones; non-software occupations succeed within seven points of software engineers; and the estimated value of the typical task rose ~25% over the seven months.",
+    "shortDescription": "Anthropic study of ~400k Claude Code sessions: domain expertise, not coding skill, drives success; non-coders succeed near software engineers.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "Claude Code",
+      "labor",
+      "productivity",
+      "agentic coding"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "panjwani-why-codex-goals-suck",
+    "title": "Why Your Codex Goals Suck",
+    "url": "https://www.youtube.com/watch?v=X_jLUDTHgxg",
+    "author": "Aniket Panjwani",
+    "date": "2026-06",
+    "description": "Short video on how economists can get more out of hours-long Codex and Claude Code 'goals' for research. Panjwani demonstrates converting Kirill Borusyak, Xavier Jaravel, and Jann Spiess's Stata/Python difference-in-differences imputation package into an R package via a ~15-hour overnight Codex goal, emphasizing the importance of defining validation criteria up front rather than leaving them to the agent, and showing how to use Codex and Claude Code together.",
+    "shortDescription": "Video demoing a ~15-hour Codex goal to port a Stata/Python DiD package to R, with tips on defining validation criteria up front.",
+    "category": "Talks & Videos",
+    "tags": [
+      "economics",
+      "Codex",
+      "Claude Code",
+      "agentic coding",
+      "DiD"
+    ],
+    "featured": false,
+    "type": "video",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "copaper-ai-research-coauthor",
+    "title": "CoPaper.AI",
+    "url": "https://www.copaper.ai/",
+    "author": "Stanford REAP / StatsPAI",
+    "date": "2026-06",
+    "description": "An AI research co-authoring platform from Stanford's REAP program (founder Bryce Wang; co-founder and strategic advisor Scott Rozelle). Users upload data (CSV, Excel, JSON, Parquet; up to 20 datasets), set a research direction, and the system generates an empirical paper chapter by chapter with human-in-the-loop review, exporting a complete DOCX with full, reproducible code in Stata, R, and EViews. It supports methods from OLS, logit/probit, fixed effects, and IV to DiD, RDD, synthetic control, decomposition, and causal forests. As a new platform, its track record is still limited.",
+    "shortDescription": "Stanford REAP's AI co-authoring platform: upload data, generate an empirical econ paper chapter by chapter with reproducible Stata/R/EViews code.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "AI tools",
+      "empirical",
+      "reproducibility",
+      "Stata",
+      "R"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
