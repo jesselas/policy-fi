@@ -538,6 +538,9 @@ function initLibrary() {
   cards.forEach(card => {
     card.addEventListener('click', (e) => {
       if (e.target.closest('a, button')) return;
+      // Don't collapse when the click is the end of a text selection (let people select/copy).
+      const selection = window.getSelection();
+      if (selection && selection.toString().length > 0) return;
       card.classList.toggle('expanded');
     });
   });
