@@ -3372,5 +3372,27 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "santanna-claude-code-workflow",
+    "title": "Using Claude Code for academic work",
+    "url": "https://psantanna.com/claude-code-my-workflow/",
+    "author": "Pedro H. C. Sant'Anna",
+    "date": null,
+    "description": "A comprehensive framework for doing academic research with Claude Code, spanning the full lifecycle from papers and data analysis to presentations. It uses 18 specialized agents and an orchestrator pattern that plans, implements, reviews, and verifies work through structured quality gates, with human oversight at each stage. Highlights include a Beamer-to-Quarto conversion pipeline, adversarial review loops, simulated peer review calibrated to major economics journals, and 52+ slash commands automating tasks such as literature review and manuscript evaluation. Reported as adopted across 15+ research groups in economics, energy, political science, and engineering.",
+    "shortDescription": "An end-to-end Claude Code workflow for academic research: 18 specialized agents, an orchestrator pattern, simulated peer review, and 52+ slash commands.",
+    "category": "Coding with AI",
+    "tags": [
+      "economics",
+      "claude",
+      "coding",
+      "workflow",
+      "research"
+    ],
+    "featured": true,
+    "type": "guide",
+    "internal": false,
+    "highlight": true,
+    "highlightDesc": "Pedro Sant'Anna's end-to-end Claude Code workflow for academic research: 18 specialized agents and an orchestrator that plans, implements, reviews, and verifies, plus a Beamer-to-Quarto pipeline, simulated economics-journal peer review, and 52+ slash commands."
   }
 ]
