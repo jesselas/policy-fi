@@ -3330,5 +3330,47 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "demirer-writing-vs-shipping-code",
+    "title": "Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools (SSRN)",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6843118",
+    "author": "Mert Demirer, Leon Musolff, Liyuan Yang",
+    "date": "2026-06",
+    "description": "A matched event-study using data on 100,000+ GitHub developers and their AI-usage telemetry to estimate the productivity effects of successive AI coding tools. Autocomplete, interactive coding agents, and autonomous agents raise commits by 40%, 140%, and 180% respectively, but these gains attenuate up the production chain: the 180% commit effect falls to 50% for projects and just 30% for actual releases. The authors interpret this through a weak-link model with an estimated 0.25 elasticity of substitution between AI and human effort (strong complementarity), and confirm the pattern across four app marketplaces. A MIT Sloan working paper.",
+    "shortDescription": "MIT Sloan event-study of 100k+ GitHub devs: AI coding agents lift commits 180% but only 30% of that reaches actual releases—human bottlenecks bind.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI tools",
+      "productivity",
+      "coding",
+      "software development"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "koren-theorist-toolbox",
+    "title": "Theorist Toolbox: Tools for Agent-Based LLM-Assisted Economic Theory Research (arXiv)",
+    "url": "https://arxiv.org/abs/2606.22337",
+    "author": "Moran Koren",
+    "date": "2026-06",
+    "description": "Argues that by 2026 the binding constraint on machine-assisted economic theory is no longer producing mathematics but trusting it, since a fluent model will prove a false theorem as readily as a true one. Proposes a verification-first protocol instantiated as three methods that differ in how work is checked: a single disciplined pass, an adversarial prover-verifier pair (Claude Opus 4.8 proposing, OpenAI Codex refuting, the author triaging), and a structured multi-agent project with a reviewer gate. Demonstrated on a worked mechanism-design example (a Groves/Pigouvian incentive mechanism for the Gans-Kominers grade-inflation model), concluding that external verification, not model capability, is the key design variable.",
+    "shortDescription": "A verification-first protocol for LLM-assisted economic theory, using an adversarial prover-verifier loop—external checking, not model capability, is key.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "economic theory",
+      "agents",
+      "verification"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
