@@ -536,11 +536,20 @@ function initLibrary() {
 
   /* --- Card expand/collapse (clamped descriptions, list rows) --- */
   cards.forEach(card => {
+    let downX = 0, downY = 0;
+    card.addEventListener('mousedown', (e) => {
+      downX = e.clientX;
+      downY = e.clientY;
+    });
     card.addEventListener('click', (e) => {
       if (e.target.closest('a, button')) return;
-      // Don't collapse when the click is the end of a text selection (let people select/copy).
+      // Don't collapse when the click is the end of a text selection (let people select/copy):
+      // either the pointer moved between press and release (drag-select), or text is selected
+      // (e.g. double-click to select a word).
+      const moved = Math.abs(e.clientX - downX) + Math.abs(e.clientY - downY) > 6;
       const selection = window.getSelection();
-      if (selection && selection.toString().length > 0) return;
+      const hasSelection = selection && selection.toString().length > 0;
+      if (moved || hasSelection) return;
       card.classList.toggle('expanded');
     });
   });
