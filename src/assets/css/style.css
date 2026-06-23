@@ -1319,7 +1319,7 @@ h2.section-label {
 .page-intro {
   font-family: var(--font-heading);
   font-size: 1.12rem;
-  line-height: 1.65;
+  line-height: 1.4;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
   max-width: 640px;
