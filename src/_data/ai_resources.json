@@ -3394,5 +3394,89 @@
     "internal": false,
     "highlight": true,
     "highlightDesc": "Pedro Sant'Anna's end-to-end Claude Code workflow for academic research: 18 specialized agents and an orchestrator that plans, implements, reviews, and verifies, plus a Beamer-to-Quarto pipeline, simulated economics-journal peer review, and 52+ slash commands."
+  },
+  {
+    "id": "kato-ai-economist-agent",
+    "title": "AI Economist Agent: An Agentic Framework for Model-Grounded Economic Analysis (arXiv)",
+    "url": "https://arxiv.org/abs/2606.20041",
+    "author": "Masahiro Kato",
+    "date": "2026-06",
+    "description": "Proposes a RAG-based \"AI economist agent\" that grounds LLM-generated economic narratives in economic theory and real-world data. Rather than producing quantitative claims with the language model alone, agents plan the analysis, retrieve evidence from knowledge graphs, select appropriate models, and generate reports linked to explicit model-based computations. Demonstrated on two applications: economist report generation for U.S. inflation persistence and Federal Reserve policy, and bank stress-test narratives for U.S. commercial real estate refinancing stress.",
+    "shortDescription": "A RAG-based AI economist agent that grounds LLM narratives in economic theory and data, shown on U.S. inflation/Fed policy and bank stress-test reports.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "agents",
+      "RAG",
+      "macroeconomics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "chaisemartin-chatdid-gpt",
+    "title": "ChatDiD",
+    "url": "https://chatgpt.com/g/g-6a20206ca0508191bcbb14e28b35a5b6-chatdid",
+    "author": "Clément de Chaisemartin",
+    "date": "2026-06",
+    "description": "A custom GPT offering expert guidance on difference-in-differences (DiD), including the de Chaisemartin–D'Haultfoeuille heterogeneity-robust estimators and their Stata/R packages (e.g., did_multiplegt). It helps researchers choose the right DiD estimator for their design and accompanies the authors' forthcoming textbook, Causal Inference with Differences-in-Differences: Credible Answers to Hard Questions (Princeton University Press).",
+    "shortDescription": "A custom GPT by Clément de Chaisemartin for difference-in-differences—pick the right estimator and use the de Chaisemartin–D'Haultfoeuille packages.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "DiD",
+      "econometrics",
+      "causal inference",
+      "GPT"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "scholara-systematic-reviews",
+    "title": "Scholara",
+    "url": "https://www.scholara.ai/",
+    "author": null,
+    "date": "2026-06",
+    "description": "An AI platform (by Stematic Labs) that automates the systematic-review and meta-analysis workflow end to end: building PICO/MeSH search strategies across PubMed, Cochrane, and other databases; triple-agent consensus abstract screening with recorded rationales; schema-based data extraction from PDFs linked back to source paragraphs; and publication-ready forest plots. It is PRISMA-2020 oriented and generates audit-ready flow diagrams, aimed at evidence-synthesis teams across the social and health sciences.",
+    "shortDescription": "AI systematic-review tool: PICO/MeSH search building, triple-agent abstract screening, PDF data extraction, forest plots, PRISMA-ready audit trails.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "AI tools",
+      "systematic review",
+      "meta-analysis",
+      "literature review",
+      "evidence synthesis"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "academic-humanizer-skill",
+    "title": "academic-humanizer: Strip AI-Writing Tells from Papers and Grant Proposals",
+    "url": "https://github.com/AIScientists-Dev/academic-humanizer",
+    "author": null,
+    "date": "2026-06",
+    "description": "An open-source skill for Claude Code, Codex, and similar agents that edits AI-polished academic prose to remove tell-tale AI patterns (\"In recent years…\", \"paves the way\", rule-of-three, over-long sentences, em-dashes) while preserving scholarly voice, hedging, definitions, citations, and every number. It matches claims to evidence (no verb stronger than the data) and has a dedicated grant-proposal mode tuned to NSF/NIH structure and first-page primacy. The rules were derived by comparing AI drafts against the team's accepted papers and funded proposals.",
+    "shortDescription": "A Claude Code/Codex skill that removes AI-writing tells from papers and NSF/NIH proposals while keeping scholarly voice, citations, and numbers intact.",
+    "category": "Coding with AI",
+    "tags": [
+      "academic writing",
+      "AI",
+      "claude",
+      "coding",
+      "grants"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
