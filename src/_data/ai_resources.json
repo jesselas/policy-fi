@@ -3478,5 +3478,24 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nber-w35374-practitioners-guide-llms-economic-history",
+    "title": "A Practitioner's Guide to Using Large Language Models and Generative AI in Economic History (NBER WP 35374)",
+    "url": "https://www.nber.org/papers/w35374",
+    "author": "Andreas Ferrara",
+    "date": "2026-06",
+    "description": "A hands-on guide for researchers new to LLMs, setting out a step-by-step workflow for turning a research idea into working code and data. It describes the four main ways of interacting with an LLM (chat window, editor-integrated assistants, agentic coding tools, and the API) and works through practitioner decisions in sequence: whether an LLM is the right tool, whether data may be sent to one, how to select models, write prompts, manage context limits, and control costs, and finally how to validate, reproduce, document, and correct LLM-generated measures in regression settings. Includes worked examples with replication files, such as classifying emotions in paintings and linking historical census records.",
+    "shortDescription": "Andreas Ferrara's step-by-step workflow for using LLMs in research: model selection, prompting, cost control, and validating LLM-generated measures.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "coding"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
