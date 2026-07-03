@@ -3497,5 +3497,25 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "jackson-ai-benefits-costs-inequality",
+    "title": "The Economic Benefits and Costs of AI and Policies to Mitigate AI's Impact on Inequality (arXiv)",
+    "url": "https://arxiv.org/abs/2607.01101",
+    "author": "Matthew O. Jackson, Zafer Kanik",
+    "date": "2026-07",
+    "description": "Models how increasingly productive AI reshapes labor reallocation and wages across worker categories: those essential to AI development see faster wage growth, workers displaced by AI experience falling wages in absolute and relative terms, and workers in final-goods production track overall output. Contrasting competitive versus monopolistic AI production (monopoly restricts deployment and slows the transition), it derives optimal tax and regulatory policies that achieve Pareto improvements and shows these differ depending on whether AI production is competitive.",
+    "shortDescription": "How productive AI reshapes wages and inequality, and which tax/regulatory policies yield Pareto improvements under competitive vs. monopolistic AI.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "inequality",
+      "policy"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
