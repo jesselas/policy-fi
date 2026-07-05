@@ -3517,5 +3517,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "goldsmith-pinkham-integration-collaboration-ai-research",
+    "title": "Integration and Collaboration in AI Research Work",
+    "url": "https://paulgp.substack.com/p/integration-and-collaboration-in",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-07",
+    "description": "The capstone (Video 8) of Paul Goldsmith-Pinkham's Markus Academy series on Claude Code. It demonstrates a practical verification workflow for AI-generated research using git, GitHub, and issue tracking, worked through an IPO event study. The central argument: AI has slashed the cost of producing work, but verification remains expensive, creating \"verification debt\" that researchers must manage systematically through structured review processes borrowed from software engineering.",
+    "shortDescription": "Capstone of Goldsmith-Pinkham's Claude Code series: a git/GitHub workflow for verifying AI-generated research and managing \"verification debt.\"",
+    "category": "Coding with AI",
+    "tags": [
+      "claude",
+      "coding",
+      "economics"
+    ],
+    "featured": false,
+    "type": "guide",
+    "internal": false,
+    "highlight": false
   }
 ]
