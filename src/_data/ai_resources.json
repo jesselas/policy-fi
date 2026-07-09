@@ -3536,5 +3536,25 @@
     "type": "guide",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "backman-ai-research-feedback-skills",
+    "title": "AI Research Feedback: Claude Code Skills for Peer Review",
+    "url": "https://github.com/claesbackman/AI-research-feedback",
+    "author": "Claes Bäckman",
+    "date": "2026-07",
+    "description": "A collection of open-source Claude Code skills for academic research review, developed by economist Claes Bäckman. Includes a full 8-agent referee-style paper review (review-paper), a fast 2-agent check (review-paper-light), a paper-code reproducibility and alignment audit (review-paper-code), a pre-analysis plan review (review-pap), and a grant proposal review (review-grant). Installed as slash commands in Claude Code (e.g. /review-paper). A July 2026 update added strict scope discipline so agents only read the paper's source files, and replaced hallucinated novelty judgments with an adversarial advocate-vs-skeptic method.",
+    "shortDescription": "Open-source Claude Code skills for academic peer review: 8-agent paper review, reproducibility audits, pre-analysis plan and grant proposal reviews.",
+    "category": "Coding with AI",
+    "tags": [
+      "claude",
+      "coding",
+      "peer-review",
+      "economics"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
