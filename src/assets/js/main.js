@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initPubToggles();
   initRecentResearchCards();
+  initRecentResearchEqualHeight();
   initCitationCopy();
   initLibrary();
   initMobileNav();
@@ -120,6 +121,47 @@ function initRecentResearchCards() {
       toggle.click();
     });
   });
+}
+
+/* --- Recent Research cards: equalise collapsed height of row-mates ---
+   Pads each card's toggle header (not the card, and not the expandable
+   details) up to the tallest header in its grid row, so collapsed boxes line
+   up. Because it only touches the always-visible header, expanding one card
+   never changes its neighbour. Re-runs on resize and once fonts have loaded. */
+function initRecentResearchEqualHeight() {
+  const grid = document.querySelector('.recent-research-grid');
+  if (!grid) return;
+  const cards = Array.from(grid.querySelectorAll('.recent-research-card'));
+  if (cards.length < 2) return;
+
+  const equalize = () => {
+    const toggles = cards
+      .map(card => card.querySelector('.pub-toggle'))
+      .filter(Boolean);
+    // Reset so we measure natural header heights and regroup rows cleanly.
+    toggles.forEach(t => { t.style.minHeight = ''; });
+    // Group cards by grid row (row-mates share the same offsetTop).
+    const rows = new Map();
+    cards.forEach(card => {
+      const top = card.offsetTop;
+      if (!rows.has(top)) rows.set(top, []);
+      rows.get(top).push(card);
+    });
+    rows.forEach(rowCards => {
+      const rowToggles = rowCards
+        .map(card => card.querySelector('.pub-toggle'))
+        .filter(Boolean);
+      const max = rowToggles.reduce((m, t) => Math.max(m, t.offsetHeight), 0);
+      rowToggles.forEach(t => { t.style.minHeight = max + 'px'; });
+    });
+  };
+
+  equalize();
+  window.addEventListener('resize', debounce(equalize, 150));
+  window.addEventListener('load', equalize);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(equalize);
+  }
 }
 
 /* --- Mobile Navigation --- */
