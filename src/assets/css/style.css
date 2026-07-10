@@ -1001,6 +1001,14 @@ h2.section-label {
 .recent-research-card .pub-toggle {
   align-items: flex-start;
   padding: 0;
+  /* Collapsed row-mates are padded to equal height via this variable, set per
+     row by initRecentResearchEqualHeight() in main.js. It is cleared when the
+     card is open so the details keep their natural spacing under the header. */
+  min-height: var(--rr-collapsed-min-h, 0);
+}
+
+.recent-research-card .pub-toggle[aria-expanded="true"] {
+  min-height: 0;
 }
 
 .recent-research-card .pub-toggle-body {

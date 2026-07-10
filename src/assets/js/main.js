@@ -139,7 +139,7 @@ function initRecentResearchEqualHeight() {
       .map(card => card.querySelector('.pub-toggle'))
       .filter(Boolean);
     // Reset so we measure natural header heights and regroup rows cleanly.
-    toggles.forEach(t => { t.style.minHeight = ''; });
+    toggles.forEach(t => { t.style.removeProperty('--rr-collapsed-min-h'); });
     // Group cards by grid row (row-mates share the same offsetTop).
     const rows = new Map();
     cards.forEach(card => {
@@ -152,7 +152,9 @@ function initRecentResearchEqualHeight() {
         .map(card => card.querySelector('.pub-toggle'))
         .filter(Boolean);
       const max = rowToggles.reduce((m, t) => Math.max(m, t.offsetHeight), 0);
-      rowToggles.forEach(t => { t.style.minHeight = max + 'px'; });
+      // Set a floor for the collapsed height; CSS drops it to 0 when the card
+      // is open (aria-expanded="true") so details keep standard spacing.
+      rowToggles.forEach(t => { t.style.setProperty('--rr-collapsed-min-h', max + 'px'); });
     });
   };
 
