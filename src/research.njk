@@ -16,28 +16,11 @@ jsonLd:
 
 <h1>Research</h1>
 
-{% set typeOrder = ["Book Chapter", "Peer Reviewed", "Other Published Work", "Country Report", "Technical Note", "PhD Dissertation", "Research Assistance"] %}
-{% set typeLabels = {
-  "Book Chapter": "Book chapters",
-  "Peer Reviewed": "Peer reviewed",
-  "Other Published Work": "Other published works",
-  "Country Report": "Country reports",
-  "Technical Note": "Technical notes",
-  "PhD Dissertation": "PhD dissertation",
-  "Research Assistance": "Research assistance"
-} %}
-
-{% for type in typeOrder %}
-  {% set pubs = [] %}
-  {% for pub in publications %}
-    {% if pub.type == type %}
-      {% set pubs = (pubs.push(pub), pubs) %}
-    {% endif %}
-  {% endfor %}
-  {% if pubs.length > 0 %}
+{% for section in researchSections %}
+  {% set type = section.type %}
   <div class="info-section">
-    <h2 class="section-label">{{ typeLabels[type] }}</h2>
-    {% for pub in pubs %}
+    <h2 class="section-label">{{ section.label }}</h2>
+    {% for pub in section.pubs %}
     <div class="pub-entry">
       <div class="pub-toggle" aria-expanded="false">
         <span class="pub-toggle-icon"></span>
@@ -64,7 +47,6 @@ jsonLd:
     </div>
     {% endfor %}
   </div>
-  {% endif %}
 {% endfor %}
 
 <div class="divider">·</div>

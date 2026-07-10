@@ -961,7 +961,9 @@ h2.section-label {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 0.75rem;
-  align-items: start;
+  /* Cards in the same row share the height of the taller one (e.g. a two-line
+     title next to a one-line title) so collapsed boxes line up evenly. */
+  align-items: stretch;
 }
 
 .recent-research-card.pub-entry {
