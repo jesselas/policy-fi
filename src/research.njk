@@ -51,6 +51,7 @@ jsonLd:
           <div class="pub-venue">{{ pub.publication }}</div>
           {% if pub.abstract %}<div class="pub-description">{{ pub.abstract }}</div>{% endif %}
           {% if pub.extras %}<div class="pub-description"><em>{{ pub.extras }}</em></div>{% endif %}
+          {% if pub.coverage %}<div class="pub-description">{{ pub.coverage | safe }}</div>{% endif %}
           <div class="citation-box">
             <div class="citation-text" id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}">{{ pub.citation }}</div>
             <div class="citation-buttons">
