@@ -455,5 +455,17 @@
     "citation": "Chang, R. & Lastunen, J. Informal Consumption in the Microsimulation of VAT: Application to Rwanda, Peru, Mozambique, and Uganda, WIDER Working Paper, Helsinki: UNU-WIDER, 2026 (forthcoming).",
     "extras": null,
     "added": "2026-06-08"
+  },
+  {
+    "title": "The emergence of tax-benefit microsimulation models in the Global South",
+    "authors": "H. Xavier Jara, Katrin Gasior, Pia Rattenhuber",
+    "year": 2026,
+    "type": "Other Published Work",
+    "publication": "UNU-WIDER Working Paper Series, 2026",
+    "url": "https://doi.org/10.35188/UNU-WIDER/2026/748-0",
+    "abstract": "This paper examines the experience of building and using tax-benefit microsimulation models for countries in the Global South within the EUROMOD framework, drawing on SAMOD, the SOUTHMOD model family, and EUROMOD-based models for Latin America. It reviews the research contributions these tools have enabled — spanning distributional analysis, work incentives, informal employment, and automatic stabilization — and discusses the challenges of maintaining and updating them, as well as the opportunities they open for new avenues of research to strengthen social protection and fiscal capacity in developing economies.",
+    "citation": "Jara, H.X., Gasior, K., Lastunen, J. & Rattenhuber, P. The emergence of tax-benefit microsimulation models in the Global South, WIDER Working Paper 2026/80, Helsinki: UNU-WIDER, 2026. https://doi.org/10.35188/UNU-WIDER/2026/748-0",
+    "extras": null,
+    "added": "2026-04-22"
   }
 ]
