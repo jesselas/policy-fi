@@ -3597,5 +3597,24 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "albrecht-where-returns-to-ai-go",
+    "title": "Where the Returns to AI Go",
+    "url": "https://www.economicforces.xyz/p/where-the-returns-to-ai-go",
+    "author": "Brian Albrecht",
+    "date": "2026-07",
+    "description": "An Economic Forces essay applying price theory to the AI boom: distinguishing creating value from capturing it, and arguing that even if AI generates enormous value, the returns need not flow to the big model labs — they accrue to whoever owns the genuinely scarce, complementary resources. A corrective to both AI 'boomer' and 'doomer' assumptions about where the money goes.",
+    "shortDescription": "Price-theory take on who actually captures AI's economic returns — model labs, workers, or owners of scarce complementary inputs.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "commentary"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
