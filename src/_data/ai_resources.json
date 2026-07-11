@@ -3556,5 +3556,20 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "gans-microeconomics-of-ai",
+    "title": "The Microeconomics of Artificial Intelligence",
+    "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
+    "author": "Joshua Gans",
+    "date": "2025",
+    "description": "An open-access MIT Press monograph treating AI as statistical prediction that enhances (and sometimes enables) decision-making, analysed with microeconomic tools. Gans focuses on impacts within firms and industries rather than economy-wide employment and productivity: the supply and production characteristics of AI, the drivers of demand for prediction, how supply and demand set a price for predictions and how market structure shapes that price, and the key policy trade-offs for antitrust, privacy, and other regulation. The full text is free under a CC BY-NC-ND licence.",
+    "shortDescription": "Joshua Gans's open-access MIT Press book analysing AI as prediction through microeconomics — demand, supply, pricing, market structure, and policy.",
+    "category": "Research Papers",
+    "tags": ["economics", "AI", "microeconomics", "book", "open-access"],
+    "featured": false,
+    "type": "other",
+    "internal": false,
+    "highlight": false
   }
 ]
