@@ -3566,9 +3566,35 @@
     "description": "An open-access MIT Press monograph treating AI as statistical prediction that enhances (and sometimes enables) decision-making, analysed with microeconomic tools. Gans focuses on impacts within firms and industries rather than economy-wide employment and productivity: the supply and production characteristics of AI, the drivers of demand for prediction, how supply and demand set a price for predictions and how market structure shapes that price, and the key policy trade-offs for antitrust, privacy, and other regulation. The full text is free under a CC BY-NC-ND licence.",
     "shortDescription": "Joshua Gans's open-access MIT Press book analysing AI as prediction through microeconomics — demand, supply, pricing, market structure, and policy.",
     "category": "Research Papers",
-    "tags": ["economics", "AI", "microeconomics", "book", "open-access"],
+    "tags": [
+      "economics",
+      "AI",
+      "microeconomics",
+      "book",
+      "open-access"
+    ],
     "featured": false,
     "type": "other",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "hanney-voxdev-ai-development",
+    "title": "AI and development economics: Early evidence and how to keep up",
+    "url": "https://voxdev.org/topic/ai-and-development-economics-early-evidence-and-how-keep",
+    "author": "Oliver Hanney",
+    "date": "2026-07",
+    "description": "A continually updated VoxDev resource bank (last refreshed 8 July 2026) compiling the best sources on AI and development economics: early evidence on AI's impacts in low- and middle-income countries, what development organisations are working on, how development economists can use AI in their research, and how to keep up. Argues the field risks failing on AI's most important questions and points to early examples of the work needed.",
+    "shortDescription": "VoxDev editor Oliver Hanney's living bank of the best sources on AI and development economics — evidence, tools, and how to keep up.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "development",
+      "commentary"
+    ],
+    "featured": false,
+    "type": "article",
     "internal": false,
     "highlight": false
   }
