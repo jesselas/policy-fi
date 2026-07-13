@@ -2353,7 +2353,8 @@
     "featured": false,
     "type": "article",
     "internal": false,
-    "highlight": false
+    "highlight": true,
+    "highlightDesc": "St. Louis Fed evidence on why AI adoption varies across countries: US firms out-adopt European ones, and management practices are a surprisingly strong predictor — a one-SD better management index maps to +9.6pp adoption. Closing the cross-country AI gap may mean closing the management gap first."
   },
   {
     "id": "imf-ai-scenario-planning-exercise",
@@ -3160,8 +3161,7 @@
     "featured": false,
     "type": "tool",
     "internal": false,
-    "highlight": true,
-    "highlightDesc": "Stanford Digital Economy Lab's live, free dashboard for tracking AI's economic footprint in near real time — employment 'canaries' by AI-exposure level, a growth-takeoff tracker, and running research notes. Timely evidence instead of anecdotes and lagging indicators."
+    "highlight": false
   },
   {
     "id": "nava-revise-applied-paper",
