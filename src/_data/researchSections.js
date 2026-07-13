@@ -2,6 +2,8 @@ const publications = require('./publications.json');
 
 // Grouping and within-section ordering for the /research page.
 // Sections appear in `typeOrder`; within each section, newest first:
+//   0. entries flagged `pinLast: true` always sort to the bottom of their
+//      section, regardless of date,
 //   1. year descending,
 //   2. then `added` ISO date descending (a more recently added entry sits
 //      higher; entries without `added` sort after those that have one),
@@ -32,6 +34,7 @@ module.exports = typeOrder
       .map((p, idx) => ({ ...p, _idx: idx }))
       .filter((p) => p.type === type)
       .sort((a, b) => {
+        if (!!a.pinLast !== !!b.pinLast) return a.pinLast ? 1 : -1;
         if ((b.year || 0) !== (a.year || 0)) return (b.year || 0) - (a.year || 0);
         const aAdded = a.added || '';
         const bAdded = b.added || '';
