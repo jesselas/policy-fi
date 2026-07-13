@@ -7,8 +7,8 @@ const publications = require('./publications.json');
 //      higher; entries without `added` sort after those that have one),
 //   3. then original publications.json order as a stable tiebreaker.
 const typeOrder = [
-  'Book Chapter',
   'Peer Reviewed',
+  'Book Chapter',
   'Other Published Work',
   'Country Report',
   'Technical Note',
