@@ -33,10 +33,11 @@
     "extras": null
   },
   {
-    "title": "Talousshokit hyvinvoinnin haasteena",
+    "title": "Talousshokit hyvinvoinnin haasteena (Economic shocks as a challenge to well-being)",
     "authors": "Milla Nyyssölä, Lauri Heimo, Kristiina Karjanlahti, Nea Tiililä",
     "year": 2026,
     "type": "Book Chapter",
+    "pinLast": true,
     "publication": "Globaali sosiaalipolitiikka, Vastapaino, 2026",
     "url": "https://vastapaino.fi/sivu/tuote/globaali-sosiaalipolitiikka/5353614",
     "abstract": "This chapter provides the first Finnish-language overview of the types of economic and social policies that low- and middle-income countries implemented to mitigate the negative effects of economic shocks, how successful or effective these policies were, and how policy measures taken during crises affect post-crisis policies. The topic is assessed through both a social policy and an economic lens.",
