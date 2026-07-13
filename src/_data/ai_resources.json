@@ -1386,7 +1386,8 @@
     "featured": true,
     "type": "paper",
     "internal": false,
-    "highlight": false,
+    "highlight": true,
+    "highlightDesc": "A landmark, representative international benchmark of firm-level AI adoption — a survey of ~6,000 executives across the US, UK, Germany, and Australia by Bloom, Davis, Barrero and co-authors. About 70% of firms report using AI, though self-reported impact so far is small.",
     "shortDescription": "First representative international data on firm-level AI use, surveying ~6,000 executives across the US, UK, Germany, and Australia."
   },
   {
@@ -1466,7 +1467,8 @@
     "featured": false,
     "type": "paper",
     "internal": false,
-    "highlight": false,
+    "highlight": true,
+    "highlightDesc": "A usage-based measurement of how AI is actually used across the economy, built from a privacy-preserving analysis of ~2 million conversations. Defines five economic primitives — task complexity, skill, purpose, autonomy, and success — to track AI's real-world impact.",
     "shortDescription": "Introduces five foundational measurements—task complexity, skill level, purpose, AI autonomy, and success—to track AI's economic impacts."
   },
   {
@@ -3158,7 +3160,8 @@
     "featured": false,
     "type": "tool",
     "internal": false,
-    "highlight": false
+    "highlight": true,
+    "highlightDesc": "Stanford Digital Economy Lab's live, free dashboard for tracking AI's economic footprint in near real time — employment 'canaries' by AI-exposure level, a growth-takeoff tracker, and running research notes. Timely evidence instead of anecdotes and lagging indicators."
   },
   {
     "id": "nava-revise-applied-paper",
