@@ -56,6 +56,17 @@
     "extras": null
   },
   {
+    "title": "The Potential Economic Value of Unlicensed Spectrum in the 5.9 GHz Frequency Band",
+    "authors": "Diana Gehlhaus, Nicholas Martin, Marjory S. Blumenthal, Philip Armour",
+    "year": 2018,
+    "type": "Peer Reviewed",
+    "publication": "RAND Corporation, 2018",
+    "url": "https://doi.org/10.7249/RR2720",
+    "abstract": "Wireless communications — particularly those enabled by WiFi — play an indispensable role in generating economic prosperity and opportunity, yet there are few empirically driven estimates on how WiFi contributes to the economy. This report helps fill this gap by estimating the potential economic value of the 5.9 GHz frequency band — this portion of spectrum was allocated by the Federal Communications Commission for short-range vehicle-to-vehicle communications in 1999, but, as of 2018, reconsidering this band for WiFi use has become a subject of discussion. The authors detail two approaches for estimating the 5.9 GHz band's potential contribution to U.S. gross domestic product. They also estimate the band's contribution to consumer surplus and producer surplus, provide a sensitivity analysis for the estimates, and consider how current trends and potential future policies, such as privacy regulation, trade policy, and fifth-generation (5G) network deployment, could affect the estimates. The goal of these estimates is to help inform the ongoing debate regarding the 5.9 GHz band. This debate is particularly important because decisions made regarding this the allocation of this frequency band could set a precedent for future unlicensed spectrum policymaking.",
+    "citation": "Gehlhaus Carew, D., Martin, N., Blumenthal, M., Armour, P. & Lastunen, J. The Potential Economic Value of Unlicensed Spectrum in the 5.9 GHz Frequency Band: Insights for Future Spectrum Allocation Policy, RAND Corporation, RR-2720-COMC, 2018. https://doi.org/10.7249/RR2720",
+    "extras": null
+  },
+  {
     "title": "Understanding the Economic Benefit Associated with Research and Services at NIOSH",
     "authors": "Benjamin M. Miller, David Metz, Troy D. Smith, Eric Landree, Christopher Nelson",
     "year": 2018,
@@ -86,17 +97,6 @@
     "url": "https://doi.org/10.7249/RR4201",
     "abstract": "The National Institute for Occupational Safety and Health (NIOSH) helps ensure U.S. workers operate in safe and healthful working conditions by funding related efforts by external researchers; developing and testing engineering controls, personal protective equipment, and other technologies; and providing educational information, guidance, and training, as well as other services. NIOSH must prioritize its investments in workplace safety and health to make the best use of available funding and must also demonstrate the value of that funding. However, there are a number of challenges in understanding the benefits associated with this or any agency's research activities. In an earlier study, RAND researchers developed an approach for estimating these benefits and demonstrated the approach using three case studies. NIOSH then asked RAND to further build upon that work by developing a process for selecting case studies for evaluation, applying that selection process to a list of ten potential case studies, and selecting three case studies from this list for detailed analysis. In this report, the authors define and document a process for selecting case studies of the economic benefits of research and services at NIOSH and evaluate benefits associated with three selected cases. Together, this body of research helps build a foundation for evaluating the broader societal benefits provided by NIOSH, both by providing quantitative estimates of the benefits associated with specific NIOSH activities and by providing NIOSH with methods and examples for consistently evaluating the societal impact of its own work.",
     "citation": "Miller, B., Metz, D., Smith, T.D. & Lastunen, J. Selecting and Evaluating Case Studies of the Economic Benefits of Research and Services at the National Institute for Occupational Safety and Health: Case Studies on Personal Dust Monitors for Coal Miners, Improved Ambulance Design, and Amputation Surveillance, RAND Corporation, RR-4201-NIOSH, 2020. https://doi.org/10.7249/RR4201",
-    "extras": null
-  },
-  {
-    "title": "The Potential Economic Value of Unlicensed Spectrum in the 5.9 GHz Frequency Band",
-    "authors": "Diana Gehlhaus, Nicholas Martin, Marjory S. Blumenthal, Philip Armour",
-    "year": 2018,
-    "type": "Peer Reviewed",
-    "publication": "RAND Corporation, 2018",
-    "url": "https://doi.org/10.7249/RR2720",
-    "abstract": "Wireless communications — particularly those enabled by WiFi — play an indispensable role in generating economic prosperity and opportunity, yet there are few empirically driven estimates on how WiFi contributes to the economy. This report helps fill this gap by estimating the potential economic value of the 5.9 GHz frequency band — this portion of spectrum was allocated by the Federal Communications Commission for short-range vehicle-to-vehicle communications in 1999, but, as of 2018, reconsidering this band for WiFi use has become a subject of discussion. The authors detail two approaches for estimating the 5.9 GHz band's potential contribution to U.S. gross domestic product. They also estimate the band's contribution to consumer surplus and producer surplus, provide a sensitivity analysis for the estimates, and consider how current trends and potential future policies, such as privacy regulation, trade policy, and fifth-generation (5G) network deployment, could affect the estimates. The goal of these estimates is to help inform the ongoing debate regarding the 5.9 GHz band. This debate is particularly important because decisions made regarding this the allocation of this frequency band could set a precedent for future unlicensed spectrum policymaking.",
-    "citation": "Gehlhaus Carew, D., Martin, N., Blumenthal, M., Armour, P. & Lastunen, J. The Potential Economic Value of Unlicensed Spectrum in the 5.9 GHz Frequency Band: Insights for Future Spectrum Allocation Policy, RAND Corporation, RR-2720-COMC, 2018. https://doi.org/10.7249/RR2720",
     "extras": null
   },
   {
