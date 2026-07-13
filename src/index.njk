@@ -80,10 +80,10 @@ jsonLd:
         <div class="pub-details-inner">
           {% if pub.authors %}<div class="pub-authors">With: {{ pub.authors }}</div>{% endif %}
           <div class="pub-venue">{{ pub.publication }}</div>
-          {% if pub.abstract %}<div class="pub-description">{{ pub.abstract }}</div>{% endif %}
-          {% if pub.extras %}<div class="pub-description"><em>{{ pub.extras }}</em></div>{% endif %}
+          {% if pub.abstract %}<div class="pub-description">{{ pub.abstract | linkify | safe }}</div>{% endif %}
+          {% if pub.extras %}<div class="pub-description"><em>{{ pub.extras | linkify | safe }}</em></div>{% endif %}
           <div class="citation-box">
-            <div class="citation-text" id="cite-recent-{{ loop.index0 }}">{{ pub.citation }}</div>
+            <div class="citation-text" id="cite-recent-{{ loop.index0 }}">{{ pub.citation | linkify | safe }}</div>
             <div class="citation-buttons">
               <button class="citation-copy" data-cite-id="cite-recent-{{ loop.index0 }}" data-format="plain" aria-label="Copy citation">Copy Citation</button>
               <button class="citation-copy" data-bibtex='{"authors":"{{ pub.citation.split(".")[0] | replace("'", "") }}","title":"{{ pub.title | replace("'", "") }}","year":"{{ pub.year }}","venue":"{{ pub.publication | replace("'", "") }}","url":"{{ pub.url or "" }}"}' data-format="bibtex" aria-label="Copy BibTeX">BibTeX</button>
