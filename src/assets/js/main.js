@@ -378,45 +378,64 @@ function initLibrary() {
     return true;
   }
 
+  // "Recently Added" and "Highlights" are duplicate views of cards that also
+  // live in the category sections, so they are hidden during a global search to
+  // avoid listing a resource twice.
+  const DUPLICATE_SECTIONS = new Set(['Recently Added', 'Highlights']);
+
   function applyFilters() {
     const isSubFiltering = !!(state.query || state.types.size || state.featured);
+    // From the default "Recently Added" view, a search query searches the ENTIRE
+    // library (results grouped by category, each resource shown once) instead of
+    // only the 20 recent cards. Selecting a specific category first scopes the
+    // search back to that category.
+    const globalSearch = !!state.query && state.section === DEFAULT_SECTION;
+
     let visible = 0;
     let sectionTotal = 0;
     const activeSection = sections.find(s => s.dataset.groupCategory === state.section);
     const availableTypes = new Set();
 
     sections.forEach(section => {
-      const isActive = section === activeSection;
-      section.style.display = isActive ? '' : 'none';
+      const inScope = globalSearch
+        ? !DUPLICATE_SECTIONS.has(section.dataset.groupCategory)
+        : section === activeSection;
       const sectionCards = section.querySelectorAll('.resource-card');
 
       let sectionMatches = 0;
+      let sectionVisible = 0;
       sectionCards.forEach(card => {
         const matches = cardMatchesSubFilters(card, false);
         if (matches) sectionMatches++;
-        if (isActive) {
+        if (inScope) {
           sectionTotal++;
           card.style.display = matches ? '' : 'none';
-          if (matches) visible++;
-          // Types available in this section under query/featured (ignoring type filter)
+          if (matches) { visible++; sectionVisible++; }
+          // Types available in scope under query/featured (ignoring type filter)
           if (cardMatchesSubFilters(card, true)) availableTypes.add(card.dataset.type);
         }
       });
 
+      // In global search, drop category sections with no matches so we don't show
+      // an empty heading; otherwise a section shows only when it's the active one.
+      section.style.display = (inScope && (!globalSearch || sectionVisible > 0)) ? '' : 'none';
+
       // Dim sidebar categories with no matches under current sub-filters
       const link = catLinks.find(l => l.dataset.category === section.dataset.groupCategory);
-      if (link) link.classList.toggle('is-empty', sectionMatches === 0 && !isActive);
+      if (link) link.classList.toggle('is-empty', sectionMatches === 0 && section !== activeSection);
     });
 
-    // Grey out type chips not available in the selected category
+    // Grey out type chips not available in scope
     typeChips.forEach(chip => {
       const t = chip.dataset.type;
       chip.classList.toggle('is-empty', !availableTypes.has(t) && !state.types.has(t));
     });
 
-    countEl.textContent = isSubFiltering
-      ? 'Showing ' + visible + ' of ' + sectionTotal + ' in ' + state.section
-      : sectionTotal + ' in ' + state.section;
+    countEl.textContent = globalSearch
+      ? 'Showing ' + visible + ' across all resources'
+      : (isSubFiltering
+          ? 'Showing ' + visible + ' of ' + sectionTotal + ' in ' + state.section
+          : sectionTotal + ' in ' + state.section);
     if (resetBtn) resetBtn.classList.toggle('visible', isSubFiltering);
     noResults.style.display = (visible === 0) ? '' : 'none';
   }
