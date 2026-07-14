@@ -12,8 +12,8 @@ const typeOrder = [
   'Peer Reviewed',
   'Book Chapter',
   'Other Published Work',
-  'Country Report',
   'Technical Note',
+  'Country Report',
   'PhD Dissertation',
   'Research Assistance',
 ];
