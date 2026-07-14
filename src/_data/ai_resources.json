@@ -3619,5 +3619,20 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "stanford-we-must-act-now-ai-statement",
+    "title": "\"We Must Act Now\": Sixteen Nobel Laureates Join Leading Economists and AI Researchers in Call to Prepare for AI's Economic Transformation",
+    "url": "https://digitaleconomy.stanford.edu/news/wemustactnow/",
+    "author": null,
+    "date": "2026-07",
+    "description": "A Stanford Digital Economy Lab announcement of an open statement signed by 16 Nobel laureates and more than 200 economists and AI researchers. It warns that AI could drive an economic transformation on the scale of the Industrial Revolution but far faster, and urges policymakers, economists, and technology leaders to prepare institutions and policies now so the gains are shared broadly rather than concentrated among a few.",
+    "shortDescription": "Statement by 16 Nobel laureates and 200+ economists and AI researchers urging urgent action so AI's economic transformation benefits society broadly.",
+    "category": "Commentary & Analysis",
+    "tags": ["economics", "AI", "policy", "statement"],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
