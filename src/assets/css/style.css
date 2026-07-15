@@ -1481,10 +1481,10 @@ button:focus-visible {
   }
 }
 
-main.container {
-  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-
+/* Note: no whole-page fade on main.container — it made the entire page fade in
+   from opacity:0 on every load, which showed as a subtle whole-page "flash" when
+   Chrome discarded and silently reloaded heavy background tabs (Research/AI).
+   Only smaller header/hero elements animate in. */
 main.container h1 {
   animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.05s both;
 }
@@ -1493,6 +1493,19 @@ main.container .hero-float,
 main.container .hero-grid,
 main.container .page-intro {
   animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.12s both;
+}
+
+/* Respect users who prefer less motion — and avoid any entry-fade flashes. */
+@media (prefers-reduced-motion: reduce) {
+  main.container h1,
+  main.container .hero-float,
+  main.container .hero-grid,
+  main.container .page-intro,
+  .lib-grid .resource-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* --- Responsive: Tablet landscape (≤1024px) --- */
