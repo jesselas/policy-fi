@@ -1,0 +1,15 @@
+{
+  "name": "Jesse Lastunen — policy.fi",
+  "short_name": "policy.fi",
+  "description": "Personal academic website of Jesse Lastunen — tax-benefit microsimulation, social policy, and AI in economics.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "lang": "en",
+  "theme_color": "#0b525b",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "/assets/img/apple-touch-icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "maskable" }
+  ]
+}

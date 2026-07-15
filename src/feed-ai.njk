@@ -1,0 +1,25 @@
+---
+permalink: /ai-econ/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AI for Economists — curated by Jesse Lastunen</title>
+  <subtitle>New resources in the curated AI &amp; LLM library for economists.</subtitle>
+  <link href="{{ site.url }}/ai-econ/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/ai-econ/" rel="alternate" type="text/html"/>
+  <id>{{ site.url }}/ai-econ/</id>
+  <updated>{{ buildDate }}T00:00:00Z</updated>
+  <author><name>Jesse Lastunen</name><uri>{{ site.url }}</uri></author>
+  {%- for entry in feedAiResources %}
+  <entry>
+    <title>{{ entry.title }}</title>
+    <link href="{{ entry.url }}" rel="alternate" type="text/html"/>
+    <id>{{ entry.id }}</id>
+    <updated>{{ entry.updated }}</updated>
+    <category term="{{ entry.category }}"/>
+    <author><name>{{ entry.author }}</name></author>
+    <summary>{{ entry.summary }}</summary>
+  </entry>
+  {%- endfor %}
+</feed>
