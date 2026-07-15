@@ -3629,9 +3629,34 @@
     "description": "A Stanford Digital Economy Lab announcement of an open statement signed by 16 Nobel laureates and more than 200 economists and AI researchers. It warns that AI could drive an economic transformation on the scale of the Industrial Revolution but far faster, and urges policymakers, economists, and technology leaders to prepare institutions and policies now so the gains are shared broadly rather than concentrated among a few.",
     "shortDescription": "Statement by 16 Nobel laureates and 200+ economists and AI researchers urging urgent action so AI's economic transformation benefits society broadly.",
     "category": "Commentary & Analysis",
-    "tags": ["economics", "AI", "policy", "statement"],
+    "tags": [
+      "economics",
+      "AI",
+      "policy",
+      "statement"
+    ],
     "featured": false,
     "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "sikic-wiiw-agentic-pipeline-econ-research",
+    "title": "AI in Economics Research: From Frontier Ideas to a Working Agentic Pipeline (wiiw seminar)",
+    "url": "https://lusiki.github.io/AI_workshop_wiiw/",
+    "author": "Luka Šikić",
+    "date": "2026-07",
+    "description": "Materials from a Vienna Institute for International Economic Studies (wiiw) seminar on running AI agents in empirical economics while preserving scientific integrity. Includes reveal.js slides, a PDF, a one-page handout, and a fully cloneable repository that reproduces an event-study estimation pipeline (R, Quarto, targets) on live Eurostat data, with a \"plan gate\" where economists approve agent proposals and a \"provenance gate\" ensuring every reported number traces to computed output.",
+    "shortDescription": "wiiw seminar with slides, handout, and a cloneable repo reproducing an agentic event-study pipeline (R/Quarto/targets) with plan and provenance gates.",
+    "category": "Coding with AI",
+    "tags": [
+      "economics",
+      "LLM",
+      "agents",
+      "reproducibility"
+    ],
+    "featured": false,
+    "type": "guide",
     "internal": false,
     "highlight": false
   }
