@@ -1,0 +1,23 @@
+---
+permalink: /research/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jesse Lastunen — Research</title>
+  <subtitle>Publications by Jesse Lastunen — tax-benefit microsimulation, social policy, and AI in economics.</subtitle>
+  <link href="{{ site.url }}/research/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/research/" rel="alternate" type="text/html"/>
+  <id>{{ site.url }}/research/</id>
+  <updated>{{ buildDate }}T00:00:00Z</updated>
+  <author><name>Jesse Lastunen</name><uri>{{ site.url }}</uri></author>
+  {%- for pub in feedResearch %}
+  <entry>
+    <title>{{ pub.title }}</title>
+    <link href="{{ pub.url }}" rel="alternate" type="text/html"/>
+    <id>{{ pub.id }}</id>
+    <updated>{{ pub.updated }}</updated>
+    <summary>{{ pub.summary }}</summary>
+  </entry>
+  {%- endfor %}
+</feed>
