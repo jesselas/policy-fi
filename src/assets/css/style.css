@@ -5,6 +5,7 @@
 
 /* --- Custom Properties --- */
 :root {
+  color-scheme: light;
   --bg: #fafaf8;
   --bg-pure: #ffffff;
   --text: #1c1c1c;
@@ -96,6 +97,9 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Paint the root canvas in the theme background so navigations never flash the
+     browser's default (black in dark-OS mode) before <body> paints. */
+  background-color: var(--bg);
 }
 
 body {

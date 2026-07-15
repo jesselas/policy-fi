@@ -392,6 +392,7 @@ function initThemeToggle() {
     const root = document.documentElement;
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
+    root.style.colorScheme = next;
     try { localStorage.setItem('theme', next); } catch (e) {}
     // Notify same-origin iframes (e.g. the SOUTHMOD map) so they recolor instantly.
     document.querySelectorAll('iframe').forEach(f => {
