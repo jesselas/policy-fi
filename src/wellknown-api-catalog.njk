@@ -1,0 +1,23 @@
+---
+permalink: /.well-known/api-catalog
+eleventyExcludeFromCollections: true
+eleventyAllowMissingExtension: true
+---
+{
+  "linkset": [
+    {
+      "anchor": "https://policy.fi/",
+      "service-doc": [
+        { "href": "https://policy.fi/llms.txt", "type": "text/plain", "title": "LLM guidance (llms.txt)" }
+      ],
+      "describedby": [
+        { "href": "https://policy.fi/sitemap.xml", "type": "application/xml", "title": "Sitemap" },
+        { "href": "https://policy.fi/.well-known/agent-skills/index.json", "type": "application/json", "title": "Agent skills index" }
+      ],
+      "related": [
+        { "href": "https://policy.fi/research/feed.xml", "type": "application/atom+xml", "title": "Research publications feed" },
+        { "href": "https://policy.fi/ai-econ/feed.xml", "type": "application/atom+xml", "title": "AI for Economists library feed" }
+      ]
+    }
+  ]
+}

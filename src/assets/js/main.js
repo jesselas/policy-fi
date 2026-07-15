@@ -12,7 +12,67 @@ document.addEventListener('DOMContentLoaded', () => {
   initLibrary();
   initMobileNav();
   initThemeToggle();
+  initWebMCP();
 });
+
+/* --- WebMCP: expose site tools to in-browser AI agents ---
+   Feature-detected against navigator.modelContext; a no-op in browsers/agents
+   that don't implement WebMCP. Registers read-only tools an agent can call to
+   navigate the site and search the AI-for-economists library. */
+function initWebMCP() {
+  try {
+    const mc = navigator.modelContext;
+    if (!mc || typeof mc.provideContext !== 'function') return;
+
+    const text = (obj) => ({ content: [{ type: 'text', text: JSON.stringify(obj) }] });
+
+    const tools = [
+      {
+        name: 'list_site_pages',
+        description: "List the main pages of Jesse Lastunen's site (policy.fi) with their URLs.",
+        inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+        execute: async () => text([
+          { title: 'Home', url: 'https://policy.fi/' },
+          { title: 'Research (publications)', url: 'https://policy.fi/research/' },
+          { title: 'SOUTHMOD', url: 'https://policy.fi/southmod/' },
+          { title: 'AI for Economists (curated library)', url: 'https://policy.fi/ai-econ/' },
+        ]),
+      },
+    ];
+
+    // Only offer the library search where the resource cards are present.
+    const cards = Array.from(document.querySelectorAll('.resource-card'));
+    if (cards.length) {
+      tools.push({
+        name: 'search_ai_econ_library',
+        description: 'Search the curated "AI for Economists" library (research papers, courses, coding guides, tools, commentary). Returns matching resources with title, author, category and URL.',
+        inputSchema: {
+          type: 'object',
+          properties: { query: { type: 'string', description: 'Keywords to search titles, authors, descriptions and tags.' } },
+          required: ['query'],
+          additionalProperties: false,
+        },
+        execute: async ({ query }) => {
+          const q = String(query || '').toLowerCase().trim();
+          const results = cards
+            .filter((c) => !q || (c.dataset.searchable || '').includes(q))
+            .slice(0, 25)
+            .map((c) => ({
+              title: (c.querySelector('.card-title') || {}).textContent?.trim() || '',
+              author: (c.querySelector('.card-meta') || {}).textContent?.trim() || null,
+              category: c.dataset.category || null,
+              url: (c.querySelector('.card-title a') || {}).href || null,
+            }));
+          return text({ count: results.length, results });
+        },
+      });
+    }
+
+    mc.provideContext({ tools });
+  } catch (e) {
+    /* WebMCP unavailable or shape changed — ignore. */
+  }
+}
 
 /* --- Utility: debounce --- */
 function debounce(fn, delay) {
