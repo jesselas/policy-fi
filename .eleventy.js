@@ -1,5 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // Unlisted files served at the site root (e.g. shareable PDFs).
+  eleventyConfig.addPassthroughCopy({ "src/downloads": "/" });
 
   // Dynamic date values
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
