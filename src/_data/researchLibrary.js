@@ -13,11 +13,11 @@ const researchSections = require('./researchSections.js');
 //   in publications.json carries a `topics` array drawn from this set.
 
 const topics = [
-  'Taxes & benefits',
-  'Poverty & inequality',
   'AI & technology',
   'Data & methods',
-  'Labour & skills',
+  'Labor & skills',
+  'Taxes & benefits',
+  'Poverty & inequality',
 ];
 
 const recent = publications
