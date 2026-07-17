@@ -1,0 +1,10 @@
+{
+  "detector": {
+    "ignoreRules": [
+      "em-dash-overuse",
+      "numbered-section-markers",
+      "marketing-buzzword",
+      "single-font"
+    ]
+  }
+}

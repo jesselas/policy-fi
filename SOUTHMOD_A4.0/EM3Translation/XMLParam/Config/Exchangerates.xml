@@ -1,0 +1,1204 @@
+﻿<RootElement>
+  <EXRATEs>
+    <EXRATE>
+      <Country>BO</Country>
+      <June30>-1</June30>
+      <YearAverage>2.639060974</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>bo_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>BO</Country>
+      <June30>-1</June30>
+      <YearAverage>2.582664967</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>bo_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>BO</Country>
+      <June30>-1</June30>
+      <YearAverage>2.473956823</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>bo_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>BO</Country>
+      <June30>-1</June30>
+      <YearAverage>2.36914897</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>bo_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>BO</Country>
+      <June30>-1</June30>
+      <YearAverage>2.291184187</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>bo_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>BO</Country>
+      <June30>-1</June30>
+      <YearAverage>2.372349977</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>bo_2025</SysName>
+      <SysName>bo_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1226.73291</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2014</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1285.027954</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1298.142578</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1328.016602</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1322.160522</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1312.630493</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1270.743652</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1340.326416</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1363.444336</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1425.433838</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1443.718506</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>CO</Country>
+      <June30>-1</June30>
+      <YearAverage>1480.02063</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>co_2025</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.527572334</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2011</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.549960852</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2012</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.541</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2014</SysName>
+      <SysName>ec_2013</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.549392939</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.543826103</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.528539717</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.517270744</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.49470225</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.473994911</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.448739469</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.428711295</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.42327106</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EC</Country>
+      <June30>-1</June30>
+      <YearAverage>0.434001893</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ec_2025</SysName>
+      <SysName>ec_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>7.066470146</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2014</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>7.654185772</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>7.91032505</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>8.336392403</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>9.31989193</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>10.36759758</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>11.79116535</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>13.73111248</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>17.26062965</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>22.1447773</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ET</Country>
+      <June30>-1</June30>
+      <YearAverage>27.14391708</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>et_2025</SysName>
+      <SysName>et_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>0.871647775</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2013</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>1.025692344</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2014</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>1.231947899</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>1.492734313</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>1.693591118</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>1.819233775</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>1.900217533</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>2.032516718</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>2.148745775</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>2.571043491</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>3.477062702</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>GH</Country>
+      <June30>-1</June30>
+      <YearAverage>4.233402729</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>gh_2025</SysName>
+      <SysName>gh_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>18.523</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>20.186</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>23.344</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>23.551</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>23.379</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>22.756</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>22.907</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>23.34</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>23.723</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>MZ</Country>
+      <June30>-1</June30>
+      <YearAverage>24.336</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>mz_2025</SysName>
+      <SysName>mz_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>PE</Country>
+      <June30>-1</June30>
+      <YearAverage>1.731280804</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>pe_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>PE</Country>
+      <June30>-1</June30>
+      <YearAverage>1.70620811</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>pe_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>PE</Country>
+      <June30>-1</June30>
+      <YearAverage>1.733540058</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>pe_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>PE</Country>
+      <June30>-1</June30>
+      <YearAverage>1.69120729</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>pe_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>PE</Country>
+      <June30>-1</June30>
+      <YearAverage>1.735887885</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>pe_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>PE</Country>
+      <June30>-1</June30>
+      <YearAverage>1.782302737</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>pe_2025</SysName>
+      <SysName>pe_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>320.420105</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>312.6655273</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>311.8612061</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>321.4724426</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>300.0285034</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>324.3429871</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>350.4863281</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>RW</Country>
+      <June30>-1</June30>
+      <YearAverage>355.0855713</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>rw_2025</SysName>
+      <SysName>rw_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>650.2379761</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2012</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>806.4526367</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>852.166687</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>889.4487305</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>849.0432129</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>815.9642944</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>779.0391846</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>762.958374</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>731.8582764</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>TZ</Country>
+      <June30>-1</June30>
+      <YearAverage>725.8522949</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>tz_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1196.839478</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1251.634033</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1253.709961</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1258.258911</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1240.85022</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1203.160767</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1178.371948</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1214.197144</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>UG</Country>
+      <June30>-1</June30>
+      <YearAverage>1244.299927</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>ug_2025</SysName>
+      <SysName>ug_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.308346272</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2013</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.3799963</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2014</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.290148735</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.163831234</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.211599827</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.275825977</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.191188335</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.064953804</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>7.12001133</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>6.941452026</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>6.840611935</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>VN</Country>
+      <June30>-1</June30>
+      <YearAverage>6.956927776</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>vn_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>2.247210026</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2010</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>3.350555658</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2015</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>3.85590291</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2016</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>4.162864208</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2017</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>4.447628975</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2018</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>4.827852726</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>5.529107571</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>6.441287041</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>6.381812572</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>6.597186089</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZM</Country>
+      <June30>-1</June30>
+      <YearAverage>7.36967802</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zm_2025</SysName>
+      <SysName>zm_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZN</Country>
+      <June30>-1</June30>
+      <YearAverage>815.9642944</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zn_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZN</Country>
+      <June30>-1</June30>
+      <YearAverage>779.0391846</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zn_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZN</Country>
+      <June30>-1</June30>
+      <YearAverage>762.958374</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zn_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZN</Country>
+      <June30>-1</June30>
+      <YearAverage>731.8582764</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zn_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZN</Country>
+      <June30>-1</June30>
+      <YearAverage>725.8522949</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zn_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>ZN</Country>
+      <June30>-1</June30>
+      <YearAverage>730.4243164</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>zn_2025</SysName>
+      <SysName>zn_2024</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EG</Country>
+      <June30>-1</June30>
+      <YearAverage>3.893379688</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>eg_2019</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EG</Country>
+      <June30>-1</June30>
+      <YearAverage>3.695092678</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>eg_2020</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EG</Country>
+      <June30>-1</June30>
+      <YearAverage>3.85461998</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>eg_2021</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EG</Country>
+      <June30>-1</June30>
+      <YearAverage>3.973224163</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>eg_2022</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EG</Country>
+      <June30>-1</June30>
+      <YearAverage>4.786316872</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>eg_2023</SysName>
+    </EXRATE>
+    <EXRATE>
+      <Country>EG</Country>
+      <June30>-1</June30>
+      <YearAverage>6.247820377</YearAverage>
+      <FirstSemester>-1</FirstSemester>
+      <SecondSemester>-1</SecondSemester>
+      <Default>Year Average</Default>
+      <SysName>eg_2025</SysName>
+      <SysName>eg_2024</SysName>
+    </EXRATE>
+  </EXRATEs>
+</RootElement>

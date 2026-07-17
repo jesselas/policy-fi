@@ -1,0 +1,4714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AI for Economists | Jesse Lastunen</title>
+  <meta name="description" content="Curated collection of AI and LLM resources for economists — research papers, coding guides, tools, courses, and more. Maintained by Jesse Lastunen.">
+  <meta name="author" content="Jesse Lastunen">
+  <meta name="theme-color" content="#0b525b">
+  <link rel="canonical" href="https://policy.fi/ai-econ/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI for Economists | Jesse Lastunen">
+  <meta property="og:description" content="Curated collection of AI and LLM resources for economists — research papers, coding guides, tools, courses, and more. Maintained by Jesse Lastunen.">
+  <meta property="og:url" content="https://policy.fi/ai-econ/">
+  <meta property="og:site_name" content="Jesse Lastunen">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://policy.fi/assets/img/profile.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jesselastunen">
+  <meta name="twitter:title" content="AI for Economists | Jesse Lastunen">
+  <meta name="twitter:description" content="Curated collection of AI and LLM resources for economists — research papers, coding guides, tools, courses, and more. Maintained by Jesse Lastunen.">
+  <meta name="twitter:image" content="https://policy.fi/assets/img/profile.jpg">
+
+  <!-- Favicons: dark/light mode + Apple touch + Safari pinned -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/assets/img/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.svg">
+  <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#0b525b">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI for Economists","url":"https://policy.fi/ai-econ/","description":"Curated collection of AI and LLM resources for economists — research papers, coding guides, tools, courses, and more.","author":{"@type":"Person","name":"Jesse Lastunen","url":"https://policy.fi"},"about":[{"@type":"Thing","name":"Artificial Intelligence in Economics"},{"@type":"Thing","name":"Large Language Models for Economic Research"},{"@type":"Thing","name":"AI Tools for Economists"}],"keywords":"AI economics, LLM economists, AI tools research, Claude Code economics, generative AI research, prompts for economists"}</script>
+  
+</head>
+<body>
+  <a href="#main-content" class="sr-only sr-only-focusable">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="/" class="nav-site-title">Jesse Lastunen</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/southmod/">SOUTHMOD</a></li>
+        <li><a href="/ai-econ/" class="active" aria-current="page">AI for Economists</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container">
+    
+
+
+
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<h1>AI for Economists</h1>
+
+<p class="page-intro">A curated collection of resources for economists working with AI and LLMs — from research papers and courses to practical tools and coding guides.</p>
+<p class="page-updated">Last updated: April 2026.</p>
+
+<div class="info-section">
+  <div class="highlight-tabs">
+    <button class="section-label highlight-tab active" data-tab="recent">Recently Added</button>
+    <button class="section-label highlight-tab" data-tab="highlights">Highlights</button>
+  </div>
+  <div class="highlights-grid" id="recent-panel">
+    
+    <div class="highlight-card">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w34813">The Politics of AI (NBER WP 34813)</a></div>
+      <div class="highlight-meta">Nicholas Bloom, Christos Makridis · 2026-02</div>
+      <div class="highlight-desc">Bloom &amp; Makridis find the partisan AI adoption gap is driven by educational and occupational sorting, not ideology — using Gallup data.</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w34854">Building Pro-Worker Artificial Intelligence (NBER WP 34854)</a></div>
+      <div class="highlight-meta">Daron Acemoglu, et al. · 2026-02</div>
+      <div class="highlight-desc">Acemoglu, Autor &amp; Johnson define five categories of AI technological change and argue policy can steer AI toward complementing workers.</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-title"><a href="https://forecastingresearch.substack.com/p/forecasting-the-economic-effects-of-ai">Forecasting the Economic Effects of AI</a></div>
+      <div class="highlight-meta">Kevin Bryan, et al. · 2026-04</div>
+      <div class="highlight-desc">Survey of 69 economists, 52 AI experts, and 38 superforecasters on AI&#39;s economic impact — from GDP growth to inequality under multiple scenarios.</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-title"><a href="https://www.youtube.com/watch?v=HzgByl5ZsWE">Claude Code for Economists (Markus Academy)</a></div>
+      <div class="highlight-meta">Paul Goldsmith-Pinkham · 2026-03</div>
+      <div class="highlight-desc">Three-part Markus Academy series: Getting Started, Data Analysis, and Web Scraping with Claude Code for economics research.</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-title"><a href="https://causalinf.substack.com/p/explainer-of-ludwig-mullainathan">Explainer of Ludwig, Mullainathan and Rambachan&#39;s Econometrics of LLM Paper</a></div>
+      <div class="highlight-meta">Scott Cunningham · 2026-03</div>
+      <div class="highlight-desc">Cunningham&#39;s accessible breakdown of why LLM measurement error is non-classical and how a validation sample fixes inference.</div>
+    </div>
+    
+    <div class="highlight-card">
+      <div class="highlight-title"><a href="https://www.nber.org/conferences/si-2026-digital-economics-and-artificial-intelligence">NBER Summer Institute 2026: Digital Economics and Artificial Intelligence</a></div>
+      <div class="highlight-meta">2026-07</div>
+      <div class="highlight-desc">Flagship NBER Summer Institute session (July 22-24) on digital economics and AI, organized by Brynjolfsson, Goldfarb, and Tucker.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/16/2026-ESIFEconomics-and-AIML-Meeting">2026 ESIF Economics and AI+ML Meeting (Econometric Society)</a></div>
+      <div class="highlight-meta">2026-06</div>
+      <div class="highlight-desc">Econometric Society meeting at Cornell (June 16-17) bridging CS and economics, with keynotes by Mullainathan, Liang, Wager, and more.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w34202">AI Agents for Economic Research (NBER WP 34202)</a></div>
+      <div class="highlight-meta">Anton Korinek · 2026-01</div>
+      <div class="highlight-desc">Korinek&#39;s guide to building AI agents that autonomously conduct lit reviews, code, and orchestrate research workflows — with working examples.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w34444">Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</a></div>
+      <div class="highlight-meta">Susan Athey, Fiona Scott Morton · 2025-11</div>
+      <div class="highlight-desc">Athey &amp; Scott Morton analyze how AI market power creates a &#39;double harm&#39; for displaced workers through adoption and monopoly pricing.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w33344">Large Language Models: An Applied Econometric Framework (NBER WP 33344)</a></div>
+      <div class="highlight-meta">Jens Ludwig, et al. · 2025-12</div>
+      <div class="highlight-desc">Econometric framework for LLMs in research: high accuracy alone can&#39;t protect inference — a small validation sample is needed to debias.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.aeaweb.org/articles?id=10.1257%2Fjel.20251799">The Economic Impacts of Artificial Intelligence: A Multidisciplinary, Multi-book Review (JEL)</a></div>
+      <div class="highlight-meta">Kevin A. Bryan · 2026-03</div>
+      <div class="highlight-desc">Bryan reviews 7 books on AI&#39;s economic impact in JEL, finding gaps in guidance on transformative AI scenarios policymakers need most.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually">How Will AI-Driven Automation Actually Affect Jobs?</a></div>
+      <div class="highlight-meta">Alex Imas, Soumitra Shukla · 2026-03</div>
+      <div class="highlight-desc">AI exposure measures predict augmentation, not displacement. The real risk is in low-dimensional jobs where full automation is feasible.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://claudeblattman.com/">AI for Professionals Who Don&#39;t Code</a></div>
+      <div class="highlight-meta">Chris Blattman · 2026-01</div>
+      <div class="highlight-desc">Chris Blattman (UChicago Harris) shares AI workflows for knowledge workers — from prompting basics to Claude Code automation, with downloadable templates.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://github.com/aspi6246/ClaudeCodeTools">Claude Code for Academics (presentation + tools)</a></div>
+      <div class="highlight-meta">Alessandro Spina · 2026-03</div>
+      <div class="highlight-desc">Presentation slides and tools for using Claude Code in academic research, including an &quot;Editor&quot; persona for writing.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://marginalrevolution.com/marginalrevolution/2026/03/when-will-the-research-paper-disappear-in-economics.html">When Will the Research Paper Disappear in Economics?</a></div>
+      <div class="highlight-meta">Tyler Cowen · 2026-03</div>
+      <div class="highlight-desc">Cowen argues the research paper is no longer scarce — AI can review and improve any paper. Top journals already experimenting with AI reviewing.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://paulgp.substack.com/p/llm-friendly-academic-papers-a-proposal">LLM-Friendly Academic Papers: A Proposal</a></div>
+      <div class="highlight-meta">Paul Goldsmith-Pinkham · 2026-03</div>
+      <div class="highlight-desc">Proposes bundling papers with llms.txt files and markdown so AI can better understand research limitations and scope.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://kylesaunders.com/university-map/">Mapping the Structural Divide: U.S. Universities vs AI Disruption</a></div>
+      <div class="highlight-meta">Kyle Saunders · 2026-03</div>
+      <div class="highlight-desc">Interactive map of 1,556 U.S. universities showing resilience to AI disruption, demographic decline, and fiscal stress.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176525001028">The Adoption of Large Language Models in Economics Research (Economics Letters)</a></div>
+      <div class="highlight-meta">Maryam Feyzollahi, Nima Rafizadeh · 2025</div>
+      <div class="highlight-desc">Difference-in-differences analysis of LLM adoption across 25 leading economics journals. Evidence on how AI is changing research output.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://arxiv.org/abs/2502.07736">Menu Pricing of Large Language Models</a></div>
+      <div class="highlight-meta">Dirk Bergemann, et al. · 2026-03</div>
+      <div class="highlight-desc">Develops a framework for optimal pricing and product design of LLMs, where a provider sells menus of token budgets to users who differ in their valuations...</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://deepecon.ai/projects/stata-mcp">Stata MCP Server</a></div>
+      <div class="highlight-meta">Thomas Monk · 2026-03</div>
+      <div class="highlight-desc">Brings AI capabilities to Stata through the Model Context Protocol (MCP), enabling Claude and other AI assistants to execute Stata commands, run .do files,...</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.anthropic.com/research/economic-index-primitives">The Anthropic Economic Index: Economic Primitives</a></div>
+      <div class="highlight-meta">Ruth Appel, et al. · 2026-01</div>
+      <div class="highlight-desc">Introduces five foundational measurements—task complexity, skill level, purpose, AI autonomy, and success—to track AI&#39;s economic impacts.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning">Research on AI and the labor market is still in the first inning</a></div>
+      <div class="highlight-meta">Jed Kolko · 2026-03</div>
+      <div class="highlight-desc">PIIE survey of the state of AI-and-labor research.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://aleximas.substack.com/p/what-is-the-impact-of-ai-on-productivity">What is the impact of AI on productivity?</a></div>
+      <div class="highlight-meta">Alex Imas · 2026-03</div>
+      <div class="highlight-desc">A living document synthesizing all available studies and data on AI&#39;s productivity impact.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w34779">A.I. and Our Economic Future (NBER WP 34779)</a></div>
+      <div class="highlight-meta">Charles I. Jones · 2026-01</div>
+      <div class="highlight-desc">Argues that AI may be fundamentally different from prior general-purpose technologies like electricity or semiconductors, because automating intelligence...</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w34836">Firm Data on AI (NBER WP 34836)</a></div>
+      <div class="highlight-meta">Ivan Yotzov, et al. · 2026-02</div>
+      <div class="highlight-desc">First representative international data on firm-level AI use, surveying ~6,000 executives across the US, UK, Germany, and Australia.</div>
+    </div>
+    
+    <div class="highlight-card recent-extra">
+      <div class="highlight-title"><a href="https://www.nber.org/papers/w34984">Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives (NBER WP 34984)</a></div>
+      <div class="highlight-meta">Salomé Baslandze, et al. · 2026-03</div>
+      <div class="highlight-desc">Surveys corporate executives to develop an index ranking job functions most negatively affected by AI.</div>
+    </div>
+    
+  </div>
+  
+  <button class="see-more-btn" id="see-more-recent">See more recent additions</button>
+  
+  <div class="highlights-grid" id="highlights-panel" style="display: none;">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <div class="highlight-card">
+        <div class="highlight-title"><a href="https://meleantonio.github.io/awesome-econ-ai-stuff/">Awesome Econ AI Stuff (GitHub)</a></div>
+        <div class="highlight-meta">Antonio Mele</div>
+        <div class="highlight-desc">Antonio Mele&#39;s comprehensive, frequently updated collection of AI resources for economists — tools, papers, tutorials, and practical guides. An essential starting point.</div>
+      </div>
+      
+    
+      
+      <div class="highlight-card">
+        <div class="highlight-title"><a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a></div>
+        <div class="highlight-meta">Paul Goldsmith-Pinkham · 2026-03</div>
+        <div class="highlight-desc">Paul Goldsmith-Pinkham (Yale) outlines how AI compresses research timelines across eight stages, from ideation to publication. Argues taste and judgment become more valuable as execution costs fall.</div>
+      </div>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <div class="highlight-card">
+        <div class="highlight-title"><a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">Reflections on Vibe Researching (in 2025)</a></div>
+        <div class="highlight-meta">Joshua Gans · 2026-01</div>
+        <div class="highlight-desc">Joshua Gans&#39;s candid account of a year-long &quot;AI-first&quot; research experiment. Conclusion: AI accelerates output but can&#39;t replace human taste — and lower friction leads to pursuing weaker ideas.</div>
+      </div>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <div class="highlight-card">
+        <div class="highlight-title"><a href="https://www.refine.ink/">Refine.ink - AI-powered feedback for researchers</a></div>
+        <div class="highlight-meta">Yann Calvó López, Benjamin Golub</div>
+        <div class="highlight-desc">An AI referee for academic writing, built by Yann Calvó López and economist Benjamin Golub. Upload a draft and Refine returns a detailed report on correctness, clarity, and consistency — catching issues before real peer review.</div>
+      </div>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <div class="highlight-card">
+        <div class="highlight-title"><a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">AI Agents for Economics Research</a></div>
+        <div class="highlight-meta">Aniket Panjwani</div>
+        <div class="highlight-desc">Practical guide for economists on using AI agents for literature review, coding, data work, replication, writing, and slides — without needing an enterprise budget.</div>
+      </div>
+      
+    
+      
+      <div class="highlight-card">
+        <div class="highlight-title"><a href="https://causalinf.substack.com/s/claude-code">Claude Code for Quantitative Social Science (Substack)</a></div>
+        <div class="highlight-meta">Scott Cunningham</div>
+        <div class="highlight-desc">Scott Cunningham&#39;s ongoing series of 34+ walkthroughs using Claude Code for empirical social science — from causal inference package audits to workflow optimization.</div>
+      </div>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+<div class="divider">·</div>
+
+<div class="info-section">
+  <h2 class="section-label">Browse all resources</h2>
+
+  <div class="search-wrapper">
+    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <input type="search" class="search-input" id="resource-search" placeholder="Search by title, author, or keyword..." aria-label="Search resources">
+  </div>
+
+  <div class="filter-pills" id="category-filters">
+    <button class="filter-pill active" data-category="all">All (96)</button>
+    
+      
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+      
+      <button class="filter-pill" data-category="Research Papers">Research Papers (25)</button>
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+      <button class="filter-pill" data-category="Courses &amp; Learning">Courses &amp; Learning (13)</button>
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+      
+      <button class="filter-pill" data-category="Coding with AI">Coding with AI (17)</button>
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+      <button class="filter-pill" data-category="AI Tools for Research">AI Tools for Research (6)</button>
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+      <button class="filter-pill" data-category="Talks &amp; Videos">Talks &amp; Videos (8)</button>
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+      <button class="filter-pill" data-category="Commentary &amp; Analysis">Commentary &amp; Analysis (27)</button>
+      
+    
+  </div>
+
+  <div class="results-count" id="results-count" style="display:none;"></div>
+</div>
+
+
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+  <div class="accordion-section resource-group" data-group-category="Research Papers">
+    <div class="accordion-header" aria-expanded="false">
+      <span>Research Papers <span class="accordion-count">25</span></span>
+      <span class="accordion-indicator"></span>
+    </div>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        
+        <div class="resource-card featured" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,advanced" data-searchable="teaching economics to the machines (nber wp 34713) kevin a. bryan proposes integrating economic theory into ml via &quot;theory-guided ai.&quot; the authors argue that theory aids external validity, but &quot;particular functional forms we fit to get analytic tractability involve many assumptions that go beyond theoretical restrictions&quot; (@afinetheorem). in other words, using structural restrictions can regularize ml models without imposing ad-hoc functional assumptions. economics llm advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34713">Teaching Economics to the Machines (NBER WP 34713)</a></div>
+          <div class="card-meta">Kevin A. Bryan · 2026-01</div>
+          <div class="card-description">Proposes integrating economic theory into ML via "theory-guided AI." The authors argue that theory aids external validity, but "particular functional forms we fit to get analytic tractability involve many assumptions that go beyond theoretical restrictions" (@Afinetheorem). In other words, using structural restrictions can regularize ML models without imposing ad-hoc functional assumptions.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,growth,advanced" data-searchable="making ai count: the next measurement frontier (nber wp 34330) diane coyle, john poquiz diane coyle &amp; john poquiz discuss how transformative ai challenges current economic statistics. they outline how gdp and productivity measures miss ai-driven outputs and propose new metrics to better capture ai&#39;s impact on productivity and output. economics growth advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/system/files/working_papers/w34330/w34330.pdf">Making AI Count: The Next Measurement Frontier (NBER WP 34330)</a></div>
+          <div class="card-meta">Diane Coyle, John Poquiz · 2025-10</div>
+          <div class="card-description">Diane Coyle & John Poquiz discuss how transformative AI challenges current economic statistics. They outline how GDP and productivity measures miss AI-driven outputs and propose new metrics to better capture AI's impact on productivity and output.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">growth</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,advanced" data-searchable="general social agents benjamin manning, john horton manning &amp; john horton propose a method to build ai agents grounded in economic theory and data. they create agents using human data from &quot;seed&quot; games and theory-based instructions, then show in 883,320 novel game simulations that these agents predict human play better than standard game-theoretic models. this demonstrates ai&#39;s potential to generalize behavioral predictions in new strategic settings. economics llm advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://benjaminmanning.io/files/optimize.pdf">General Social Agents</a></div>
+          <div class="card-meta">Benjamin Manning, John Horton · 2025-09</div>
+          <div class="card-description">Manning & John Horton propose a method to build AI agents grounded in economic theory and data. They create agents using human data from "seed" games and theory-based instructions, then show in 883,320 novel game simulations that these agents predict human play better than standard game-theoretic models. This demonstrates AI's potential to generalize behavioral predictions in new strategic settings.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Research Papers" data-type="paper" data-tags="writing,LLM,GPT,ethics" data-searchable="ai-assisted academic writing in quantitative social science kevin a. bryan an experiment where an entire review paper was drafted by openai&#39;s gpt-o3. it discusses how academia might adapt to ai-written text, covers current ai capabilities for drafting and literature surveys, weighs benefits vs. risks (misinformation, plagiarism), provides a 10-year outlook, and concludes with recommendations for journals and researchers to harness ai&#39;s benefits while safeguarding integrity (e.g. transparency about ai use). writing llm gpt ethics">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://kevinbryanecon.com/o3WhatCanWeDo.pdf">AI-Assisted Academic Writing in Quantitative Social Science</a></div>
+          <div class="card-meta">Kevin A. Bryan · 2025-02</div>
+          <div class="card-description">An experiment where an entire review paper was drafted by OpenAI's GPT-o3. It discusses how academia might adapt to AI-written text, covers current AI capabilities for drafting and literature surveys, weighs benefits vs. risks (misinformation, plagiarism), provides a 10-year outlook, and concludes with recommendations for journals and researchers to harness AI's benefits while safeguarding integrity (e.g. transparency about AI use).</div>
+          <div class="card-tags">
+            <span class="tag">writing</span> <span class="tag">LLM</span> <span class="tag">GPT</span> <span class="tag">ethics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,growth,labor,advanced" data-searchable="the simple macroeconomics of ai daron acemoglu acemoglu evaluates ai&#39;s macroeconomic implications using a task-based model. estimates modest tfp gains (no more than 0.66% over 10 years), arguing early evidence from easy-to-learn tasks may overstate future effects. published in economic policy (2025). see also &lt;a href=&quot;https://economics.mit.edu/sites/default/files/2024-05/the%20simple%20macroeconomics%20of%20ai.pdf&quot;&gt;presentation slides&lt;/a&gt;. economics growth labor advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI</a></div>
+          <div class="card-meta">Daron Acemoglu · 2025</div>
+          <div class="card-description">Acemoglu evaluates AI's macroeconomic implications using a task-based model. Estimates modest TFP gains (no more than 0.66% over 10 years), arguing early evidence from easy-to-learn tasks may overstate future effects. Published in Economic Policy (2025). See also <a href="https://economics.mit.edu/sites/default/files/2024-05/The%20Simple%20Macroeconomics%20of%20AI.pdf">presentation slides</a>.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">growth</span> <span class="tag">labor</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,tools" data-searchable="llms learn to collaborate and reason (jel) anton korinek anton korinek&#39;s jel article on integrating generative ai into research workflows. it serves as a hands-on guide for using llms in economics, with emphasis on model reasoning and collaborative tools for economists. economics llm tools">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.aeaweb.org/content/file?id=21904">LLMs Learn to Collaborate and Reason (JEL)</a></div>
+          <div class="card-meta">Anton Korinek · 2024-11</div>
+          <div class="card-description">Anton Korinek's JEL article on integrating generative AI into research workflows. It serves as a hands-on guide for using LLMs in economics, with emphasis on model reasoning and collaborative tools for economists.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Research Papers" data-type="paper" data-tags="economics,python,LLM,advanced" data-searchable="deep learning for economists melissa dell comprehensive review of deep learning methods for economists (nber wp 32768). discusses how cnns and transformers can impute structure from unstructured data like satellite images or text. covers classification, record linkage, generative models, and introduces the econdl companion site with demo notebooks. emphasizes that with proper tuning, deep nets scale affordably to millions/billions of observations. economics python llm advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://arxiv.org/pdf/2407.15339">Deep Learning for Economists</a></div>
+          <div class="card-meta">Melissa Dell · 2024-07</div>
+          <div class="card-description">Comprehensive review of deep learning methods for economists (NBER WP 32768). Discusses how CNNs and transformers can impute structure from unstructured data like satellite images or text. Covers classification, record linkage, generative models, and introduces the EconDL companion site with demo notebooks. Emphasizes that with proper tuning, deep nets scale affordably to millions/billions of observations.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">python</span> <span class="tag">LLM</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,development,ethics" data-searchable="predicting social assistance beneficiaries dietrich, malerba, gassmann dietrich, malerba &amp; gassmann introduce a welfare-based evaluation of bias in ml targeting. using proxy means test models for cash transfers, they weight targeting errors by income level and show that label biases and unstable model weights substantially understate welfare losses, unfairly disadvantaging some groups. economics development ethics">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/EE62DC0645275778D744ACAA3E3254BE/S263232492300038Xa.pdf/predicting-social-assistance-beneficiaries-on-the-social-welfare-damage-of-data-biases.pdf">Predicting Social Assistance Beneficiaries</a></div>
+          <div class="card-meta">Dietrich, Malerba, Gassmann · 2024-01</div>
+          <div class="card-description">Dietrich, Malerba & Gassmann introduce a welfare-based evaluation of bias in ML targeting. Using proxy means test models for cash transfers, they weight targeting errors by income level and show that label biases and unstable model weights substantially understate welfare losses, unfairly disadvantaging some groups.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">development</span> <span class="tag">ethics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,GPT,coding" data-searchable="a user&#39;s guide to gpt and llms for economic research kevin bryan kevin bryan&#39;s guide (based on a markus academy talk) explaining how llms like gpt can assist in economics research tasks (coding, literature review, writing, etc.), with examples and practical tips. economics llm gpt coding">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://bcf.princeton.edu/wp-content/uploads/2023/05/A_User_s_Guide_to_GPT_and_LLMs_for_Economic_Research.pdf">A User&#39;s Guide to GPT and LLMs for Economic Research</a></div>
+          <div class="card-meta">Kevin Bryan · 2023-05</div>
+          <div class="card-description">Kevin Bryan's guide (based on a Markus Academy talk) explaining how LLMs like GPT can assist in economics research tasks (coding, literature review, writing, etc.), with examples and practical tips.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">GPT</span> <span class="tag">coding</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,GPT,microsimulation" data-searchable="large language models as simulated economic agents: homo silicus (nber) john j. horton john j. horton et al. explore using gpt-3 as &quot;homo silicus&quot; - a simulated economic agent endowed with preferences and information to run virtual economic experiments. they show llm agents can replicate classic experimental findings and easily test policy variations in silico. economics llm gpt microsimulation">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/system/files/working_papers/w31122/w31122.pdf">Large Language Models as Simulated Economic Agents: Homo Silicus (NBER)</a></div>
+          <div class="card-meta">John J. Horton · 2023-04</div>
+          <div class="card-description">John J. Horton et al. explore using GPT-3 as "Homo silicus" - a simulated economic agent endowed with preferences and information to run virtual economic experiments. They show LLM agents can replicate classic experimental findings and easily test policy variations in silico.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">GPT</span> <span class="tag">microsimulation</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,science,productivity,advanced" data-searchable="ai in science (nber wp 34953) ajay k. agrawal, john mchale, alexander oettl characterizes ai as a tool for augmentation through enhanced search over combinatorial spaces. decomposes knowledge production into a multi-stage process revealing a &#39;jagged frontier&#39; of ai in science, with differential returns across domains (data-rich biology vs. anomaly-sparse physics) and workflow stages. shows how ai-expert scientists amplify nonlinear productivity gains. economics science productivity advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34953">AI in Science (NBER WP 34953)</a></div>
+          <div class="card-meta">Ajay K. Agrawal, John McHale, Alexander Oettl · 2026-03</div>
+          <div class="card-description">Characterizes AI as a tool for augmentation through enhanced search over combinatorial spaces. Decomposes knowledge production into a multi-stage process revealing a 'jagged frontier' of AI in science, with differential returns across domains (data-rich biology vs. anomaly-sparse physics) and workflow stages. Shows how AI-expert scientists amplify nonlinear productivity gains.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">science</span> <span class="tag">productivity</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,labor,productivity,advanced" data-searchable="artificial intelligence, productivity, and the workforce: evidence from corporate executives (nber wp 34984) salomé baslandze, zachary edwards, john graham, ty mcclure, brent h. meyer, michael sparks, sonya r. waddell, daniel weitz surveys corporate executives to develop an index ranking job functions most negatively affected by ai. provides firm-level evidence on how ai impacts different workforce roles and productivity, with direct evidence from decision-makers. economics labor productivity advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34984">Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives (NBER WP 34984)</a></div>
+          <div class="card-meta">Salomé Baslandze, Zachary Edwards, John Graham, Ty McClure, Brent H. Meyer, Michael Sparks, Sonya R. Waddell, Daniel Weitz · 2026-03</div>
+          <div class="card-description">Surveys corporate executives to develop an index ranking job functions most negatively affected by AI. Provides firm-level evidence on how AI impacts different workforce roles and productivity, with direct evidence from decision-makers.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">productivity</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Research Papers" data-type="paper" data-tags="economics,labor,productivity,firms" data-searchable="firm data on ai (nber wp 34836) ivan yotzov, jose maria barrero, nicholas bloom, philip bunn, steven j. davis, et al. first representative international data on firm-level ai use, surveying ~6,000 executives across the us, uk, germany, and australia. finds ~70% of firms actively use ai but report little impact over the past 3 years, while forecasting ai will boost productivity by 1.4% and cut employment by 0.7% over the next 3 years. economics labor productivity firms">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34836">Firm Data on AI (NBER WP 34836)</a></div>
+          <div class="card-meta">Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven J. Davis, et al. · 2026-02</div>
+          <div class="card-description">First representative international data on firm-level AI use, surveying ~6,000 executives across the US, UK, Germany, and Australia. Finds ~70% of firms actively use AI but report little impact over the past 3 years, while forecasting AI will boost productivity by 1.4% and cut employment by 0.7% over the next 3 years.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">productivity</span> <span class="tag">firms</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Research Papers" data-type="paper" data-tags="economics,growth,automation,advanced" data-searchable="a.i. and our economic future (nber wp 34779) charles i. jones argues that ai may be fundamentally different from prior general-purpose technologies like electricity or semiconductors, because automating intelligence itself has broader effects. explores the scenario where machines can perform every cognitive and physical task more cheaply than humans and what economics says about that future. economics growth automation advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34779">A.I. and Our Economic Future (NBER WP 34779)</a></div>
+          <div class="card-meta">Charles I. Jones · 2026-01</div>
+          <div class="card-description">Argues that AI may be fundamentally different from prior general-purpose technologies like electricity or semiconductors, because automating intelligence itself has broader effects. Explores the scenario where machines can perform every cognitive and physical task more cheaply than humans and what economics says about that future.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">growth</span> <span class="tag">automation</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,productivity,measurement" data-searchable="the anthropic economic index: economic primitives ruth appel, maxim massenkoff, peter mccrory, miles mccain, ryan heller, tyler neylon, alex tamkin introduces five foundational measurements—task complexity, skill level, purpose, ai autonomy, and success—to track ai&#39;s economic impacts. based on privacy-preserving analysis of 2 million conversations. finds more complex tasks see the largest speed-ups, with college-level tasks sped up 12x. economics llm productivity measurement">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.anthropic.com/research/economic-index-primitives">The Anthropic Economic Index: Economic Primitives</a></div>
+          <div class="card-meta">Ruth Appel, Maxim Massenkoff, Peter McCrory, Miles McCain, Ryan Heller, Tyler Neylon, Alex Tamkin · 2026-01</div>
+          <div class="card-description">Introduces five foundational measurements—task complexity, skill level, purpose, AI autonomy, and success—to track AI's economic impacts. Based on privacy-preserving analysis of 2 million conversations. Finds more complex tasks see the largest speed-ups, with college-level tasks sped up 12x.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">productivity</span> <span class="tag">measurement</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,pricing,mechanism design" data-searchable="menu pricing of large language models dirk bergemann, alessandro bonatti, alex smolin develops a framework for optimal pricing and product design of llms, where a provider sells menus of token budgets to users who differ in their valuations across a continuum of tasks. applies mechanism design theory to the economics of ai services. economics llm pricing mechanism design">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://arxiv.org/abs/2502.07736">Menu Pricing of Large Language Models</a></div>
+          <div class="card-meta">Dirk Bergemann, Alessandro Bonatti, Alex Smolin · 2026-03</div>
+          <div class="card-description">Develops a framework for optimal pricing and product design of LLMs, where a provider sells menus of token budgets to users who differ in their valuations across a continuum of tasks. Applies mechanism design theory to the economics of AI services.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">pricing</span> <span class="tag">mechanism design</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,writing,adoption" data-searchable="the adoption of large language models in economics research (economics letters) maryam feyzollahi, nima rafizadeh uses a difference-in-differences framework across 25 leading economics journals over 24 years to measure llm adoption via linguistic footprints. finds a 4.76 percentage point increase in llm-associated terms during 2023–2024, more than doubling from 2.85pp in 2023 to 6.67pp in 2024, documenting rapid integration of language models in economics writing. economics llm writing adoption">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176525001028">The Adoption of Large Language Models in Economics Research (Economics Letters)</a></div>
+          <div class="card-meta">Maryam Feyzollahi, Nima Rafizadeh · 2025</div>
+          <div class="card-description">Uses a difference-in-differences framework across 25 leading economics journals over 24 years to measure LLM adoption via linguistic footprints. Finds a 4.76 percentage point increase in LLM-associated terms during 2023–2024, more than doubling from 2.85pp in 2023 to 6.67pp in 2024, documenting rapid integration of language models in economics writing.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">writing</span> <span class="tag">adoption</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="article" data-tags="economics,labor,LLM" data-searchable="how will ai-driven automation actually affect jobs? alex imas, soumitra shukla imas (uchicago booth) and shukla (harvard) argue ai exposure measures are misinterpreted as displacement threats when they indicate task augmentation. the real risk lies in low-dimensional occupations where full automation creates stronger firm incentives to eliminate positions. uses an o-ring model to show how partial automation can complement rather than substitute human labor. economics labor llm">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually">How Will AI-Driven Automation Actually Affect Jobs?</a></div>
+          <div class="card-meta">Alex Imas, Soumitra Shukla · 2026-03</div>
+          <div class="card-description">Imas (UChicago Booth) and Shukla (Harvard) argue AI exposure measures are misinterpreted as displacement threats when they indicate task augmentation. The real risk lies in low-dimensional occupations where full automation creates stronger firm incentives to eliminate positions. Uses an O-Ring model to show how partial automation can complement rather than substitute human labor.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,advanced,review" data-searchable="the economic impacts of artificial intelligence: a multidisciplinary, multi-book review (jel) kevin a. bryan reviews seven books on ai&#39;s economic impact, finding strong frameworks for ai as cheap prediction and adoption barriers, but arguing the literature offers little guidance on transformative scenarios — rapid labor churn, scientific acceleration, and existential risk — that policymakers need most. economics llm advanced review">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.aeaweb.org/articles?id=10.1257%2Fjel.20251799">The Economic Impacts of Artificial Intelligence: A Multidisciplinary, Multi-book Review (JEL)</a></div>
+          <div class="card-meta">Kevin A. Bryan · 2026-03</div>
+          <div class="card-description">Reviews seven books on AI's economic impact, finding strong frameworks for AI as cheap prediction and adoption barriers, but arguing the literature offers little guidance on transformative scenarios — rapid labor churn, scientific acceleration, and existential risk — that policymakers need most.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">advanced</span> <span class="tag">review</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,econometrics,advanced" data-searchable="large language models: an applied econometric framework (nber wp 33344) jens ludwig, sendhil mullainathan, ashesh rambachan provides a rigorous econometric framework for using llms in empirical research. for prediction tasks, validity requires &#39;no training leakage.&#39; for estimation, even high-accuracy llm labels can bias regressions because errors correlate with covariates — the solution is a small human-coded validation sample to debias outputs. forthcoming in annual review of economics. economics llm econometrics advanced">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w33344">Large Language Models: An Applied Econometric Framework (NBER WP 33344)</a></div>
+          <div class="card-meta">Jens Ludwig, Sendhil Mullainathan, Ashesh Rambachan · 2025-12</div>
+          <div class="card-description">Provides a rigorous econometric framework for using LLMs in empirical research. For prediction tasks, validity requires 'no training leakage.' For estimation, even high-accuracy LLM labels can bias regressions because errors correlate with covariates — the solution is a small human-coded validation sample to debias outputs. Forthcoming in Annual Review of Economics.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">econometrics</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,competition,labor,policy" data-searchable="artificial intelligence, competition, and welfare (nber wp 34444) susan athey, fiona scott morton examines how market power in upstream ai affects downstream prices, industry structure, and welfare. identifies a &#39;double harm&#39; for displaced workers who face wage cuts from ai adoption and further harm from monopoly ai pricing. derives an adoption frontier and policy implications for regulating ai usage and access fees. economics competition labor policy">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34444">Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</a></div>
+          <div class="card-meta">Susan Athey, Fiona Scott Morton · 2025-11</div>
+          <div class="card-description">Examines how market power in upstream AI affects downstream prices, industry structure, and welfare. Identifies a 'double harm' for displaced workers who face wage cuts from AI adoption and further harm from monopoly AI pricing. Derives an adoption frontier and policy implications for regulating AI usage and access fees.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">competition</span> <span class="tag">labor</span> <span class="tag">policy</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,LLM,agents,coding" data-searchable="ai agents for economic research (nber wp 34202) anton korinek comprehensive guide to building ai agents that autonomously conduct literature reviews, write and debug code, and orchestrate entire research workflows. includes working code examples readers can immediately use. shows how researchers can build complete analytical tools from english descriptions, handling everything from data uploads to regression analysis to visualization. economics llm agents coding">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34202">AI Agents for Economic Research (NBER WP 34202)</a></div>
+          <div class="card-meta">Anton Korinek · 2026-01</div>
+          <div class="card-description">Comprehensive guide to building AI agents that autonomously conduct literature reviews, write and debug code, and orchestrate entire research workflows. Includes working code examples readers can immediately use. Shows how researchers can build complete analytical tools from English descriptions, handling everything from data uploads to regression analysis to visualization.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">agents</span> <span class="tag">coding</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,labor,growth,forecasting,LLM" data-searchable="forecasting the economic effects of ai kevin bryan, ezra karger, basil halperin large-scale forecasting exercise surveying 69 leading economists, 52 ai experts, 38 superforecasters, and 401 members of the general public on ai&#39;s economic impact. under rapid ai progress scenarios, economists forecast labor force participation dropping from 62.6% to 55% by 2050, with the richest 10% holding 80% of national wealth. in baseline scenarios, gdp growth and labor participation remain close to today&#39;s levels. over 200 pages of detailed forecasts and methodology. economics labor growth forecasting llm">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://forecastingresearch.substack.com/p/forecasting-the-economic-effects-of-ai">Forecasting the Economic Effects of AI</a></div>
+          <div class="card-meta">Kevin Bryan, Ezra Karger, Basil Halperin · 2026-04</div>
+          <div class="card-description">Large-scale forecasting exercise surveying 69 leading economists, 52 AI experts, 38 superforecasters, and 401 members of the general public on AI's economic impact. Under rapid AI progress scenarios, economists forecast labor force participation dropping from 62.6% to 55% by 2050, with the richest 10% holding 80% of national wealth. In baseline scenarios, GDP growth and labor participation remain close to today's levels. Over 200 pages of detailed forecasts and methodology.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">growth</span> <span class="tag">forecasting</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,labor,policy,automation" data-searchable="building pro-worker artificial intelligence (nber wp 34854) daron acemoglu, david autor, simon johnson defines pro-worker technologies as those that expand worker capabilities and make human skills more valuable. distinguishes five categories of ai-driven technological change: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. argues that policy and design choices can steer ai development toward complementing workers rather than replacing them. published jointly with brookings/hamilton project. economics labor policy automation">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34854">Building Pro-Worker Artificial Intelligence (NBER WP 34854)</a></div>
+          <div class="card-meta">Daron Acemoglu, David Autor, Simon Johnson · 2026-02</div>
+          <div class="card-description">Defines pro-worker technologies as those that expand worker capabilities and make human skills more valuable. Distinguishes five categories of AI-driven technological change: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Argues that policy and design choices can steer AI development toward complementing workers rather than replacing them. Published jointly with Brookings/Hamilton Project.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">policy</span> <span class="tag">automation</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Research Papers" data-type="paper" data-tags="economics,labor,LLM,adoption" data-searchable="the politics of ai (nber wp 34813) nicholas bloom, christos makridis uses gallup workforce panel data to examine partisan differences in workplace ai adoption. while democrats report higher frequent ai use (30.1% vs. 25% for republicans in q1 2026), this gap shrinks to statistical insignificance after controlling for education and reverses sign with occupation and industry fixed effects. suggests the partisan ai divide is driven by educational and occupational sorting, not ideology. economics labor llm adoption">
+          <span class="card-type-icon">📄</span>
+          <div class="card-title"><a href="https://www.nber.org/papers/w34813">The Politics of AI (NBER WP 34813)</a></div>
+          <div class="card-meta">Nicholas Bloom, Christos Makridis · 2026-02</div>
+          <div class="card-description">Uses Gallup Workforce Panel data to examine partisan differences in workplace AI adoption. While Democrats report higher frequent AI use (30.1% vs. 25% for Republicans in Q1 2026), this gap shrinks to statistical insignificance after controlling for education and reverses sign with occupation and industry fixed effects. Suggests the partisan AI divide is driven by educational and occupational sorting, not ideology.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">LLM</span> <span class="tag">adoption</span> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <div class="accordion-section resource-group" data-group-category="Courses &amp; Learning">
+    <div class="accordion-header" aria-expanded="false">
+      <span>Courses &amp; Learning <span class="accordion-count">13</span></span>
+      <span class="accordion-indicator"></span>
+    </div>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="course" data-tags="economics,growth,labor,free,beginner" data-searchable="the economics of ai (coursera) anton korinek a free online course (ma/phd level) taught by anton korinek. covers: the nature of intelligence and information (week 1); modeling technological progress with ai (week 2); ai&#39;s impact on economic growth, including scenarios like super-exponential &quot;singularity&quot; growth (week 3); implications for labor markets and inequality (week 4); and policy responses in the age of ai (week 5). economics growth labor free beginner">
+          <span class="card-type-icon">🎓</span>
+          <div class="card-title"><a href="https://www.coursera.org/learn/economics-of-ai/">The Economics of AI (Coursera)</a></div>
+          <div class="card-meta">Anton Korinek · 2026-01</div>
+          <div class="card-description">A free online course (MA/PhD level) taught by Anton Korinek. Covers: the nature of intelligence and information (Week 1); modeling technological progress with AI (Week 2); AI's impact on economic growth, including scenarios like super-exponential "singularity" growth (Week 3); implications for labor markets and inequality (Week 4); and policy responses in the Age of AI (Week 5).</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">growth</span> <span class="tag">labor</span> <span class="tag">free</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="course" data-tags="economics,coding,LLM,free,open-source" data-searchable="doing data analysis with ai (course) gabor bekes an open course by gabor bekes for incorporating ai into data analysis workflow. assumes basic econometrics knowledge and teaches how to use llms for coding and research. weekly modules include: coding with ai (week 0), llm review (week 1), text-as-data (weeks 5-6), and ai for research including regression controls, iv, diff-in-diff (weeks 9-11). open-source with assignments and an ai glossary. economics coding llm free open-source">
+          <span class="card-type-icon">🎓</span>
+          <div class="card-title"><a href="https://gabors-data-analysis.com/ai-course/week00/">Doing Data Analysis with AI (Course)</a></div>
+          <div class="card-meta">Gabor Bekes · 2026-01</div>
+          <div class="card-description">An open course by Gabor Bekes for incorporating AI into data analysis workflow. Assumes basic econometrics knowledge and teaches how to use LLMs for coding and research. Weekly modules include: coding with AI (Week 0), LLM Review (Week 1), text-as-data (Weeks 5-6), and AI for research including regression controls, IV, diff-in-diff (Weeks 9-11). Open-source with assignments and an AI glossary.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">coding</span> <span class="tag">LLM</span> <span class="tag">free</span> <span class="tag">open-source</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="other" data-tags="economics,growth,labor" data-searchable="economics of transformative ai workshop (nber, 2025) anton korinek an nber workshop focusing on transformative ai. researchers presented work on long-term ai impacts - from ai-driven growth models to ai&#39;s effect on labor and innovation policy. (organized by anton korinek.) economics growth labor">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://www.nber.org/conferences/economics-transformative-ai-workshop-fall-2025">Economics of Transformative AI Workshop (NBER, 2025)</a></div>
+          <div class="card-meta">Anton Korinek · 2025-09</div>
+          <div class="card-description">An NBER workshop focusing on transformative AI. Researchers presented work on long-term AI impacts - from AI-driven growth models to AI's effect on labor and innovation policy. (Organized by Anton Korinek.)</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">growth</span> <span class="tag">labor</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="article" data-tags="economics,teaching,LLM" data-searchable="ai in economics teaching kevin a. bryan details kevin bryan&#39;s innovative use of ai in economics education. in 2023 he developed ai-based &quot;virtual tas&quot; that answer student questions and generate adaptive quiz questions, greatly improving engagement. also details his project with joshua gans (all day ta) to personalize learning via ai tutors. economics teaching llm">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://www.kevinbryanecon.com/teaching.html">AI in Economics Teaching</a></div>
+          <div class="card-meta">Kevin A. Bryan · 2025-09</div>
+          <div class="card-description">Details Kevin Bryan's innovative use of AI in economics education. In 2023 he developed AI-based "virtual TAs" that answer student questions and generate adaptive quiz questions, greatly improving engagement. Also details his project with Joshua Gans (All Day TA) to personalize learning via AI tutors.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">teaching</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="course" data-tags="LLM,advanced" data-searchable="ai graduate certificate stanford online a credential consisting of several stanford courses covering core ai concepts. aimed at professionals who want structured, high-quality education in ai without committing to a full degree. llm advanced">
+          <span class="card-type-icon">🎓</span>
+          <div class="card-title"><a href="https://online.stanford.edu/programs/artificial-intelligence-graduate-certificate">AI Graduate Certificate</a></div>
+          <div class="card-meta">Stanford Online</div>
+          <div class="card-description">A credential consisting of several Stanford courses covering core AI concepts. Aimed at professionals who want structured, high-quality education in AI without committing to a full degree.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="thread" data-tags="LLM,beginner,teaching" data-searchable="introduction to generative ai and llms carlotta castelluccio introductory slide deck/webinar explaining how generative models work, plus basics of prompting, fine-tuning, and ethical concerns. valuable for academics new to ai. llm beginner teaching">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/lawrenceng119/status/1918917926067024191">Introduction to Generative AI and LLMs</a></div>
+          <div class="card-meta">Carlotta Castelluccio · 2025-05</div>
+          <div class="card-description">Introductory slide deck/webinar explaining how generative models work, plus basics of prompting, fine-tuning, and ethical concerns. Valuable for academics new to AI.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">beginner</span> <span class="tag">teaching</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Courses &amp; Learning" data-type="course" data-tags="LLM,advanced,free" data-searchable="stanford transformers &amp; llms course (cme 295) - playlist afshine amidi, shervine amidi by afshine &amp; shervine amidi (adjunct lecturers at stanford). full course (20+ lectures) covering nlp&#39;s deep learning evolution: word embeddings, attention, the transformer architecture, pre-training vs. fine-tuning, rlhf as used in chatgpt, and strategies for deploying llms efficiently. balances theory with practical insights. course website: &lt;a href=&quot;https://cme295.stanford.edu/syllabus/&quot;&gt;cme295.stanford.edu/syllabus&lt;/a&gt; llm advanced free">
+          <span class="card-type-icon">🎓</span>
+          <div class="card-title"><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy">Stanford Transformers &amp; LLMs Course (CME 295) - Playlist</a></div>
+          <div class="card-meta">Afshine Amidi, Shervine Amidi · 2023-09</div>
+          <div class="card-description">By Afshine & Shervine Amidi (Adjunct Lecturers at Stanford). Full course (20+ lectures) covering NLP's deep learning evolution: word embeddings, attention, the Transformer architecture, pre-training vs. fine-tuning, RLHF as used in ChatGPT, and strategies for deploying LLMs efficiently. Balances theory with practical insights. Course website: <a href="https://cme295.stanford.edu/syllabus/">cme295.stanford.edu/syllabus</a></div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">advanced</span> <span class="tag">free</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="course" data-tags="LLM,coding,free,beginner" data-searchable="ai agents course hugging face free, hands-on course on building autonomous ai agents, from basics through multi-step reasoning agents that combine llm reasoning with real-world tool use. llm coding free beginner">
+          <span class="card-type-icon">🎓</span>
+          <div class="card-title"><a href="https://huggingface.co/learn/agents-course/en/unit0/introduction">AI Agents Course</a></div>
+          <div class="card-meta">Hugging Face · 2023-01</div>
+          <div class="card-description">Free, hands-on course on building autonomous AI agents, from basics through multi-step reasoning agents that combine LLM reasoning with real-world tool use.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">coding</span> <span class="tag">free</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Courses &amp; Learning" data-type="course" data-tags="LLM,python,free,beginner" data-searchable="mini crash course on agentic ai rola dali 3-hour crash course covering how autonomous ai agents work: the perception-decision-action loop, examples like alphago and autogpt, and building a simple react-style agent. slides, colab notebook, and youtube recording available. llm python free beginner">
+          <span class="card-type-icon">🎓</span>
+          <div class="card-title"><a href="https://github.com/rdali/ML105_Agents">Mini Crash Course on Agentic AI</a></div>
+          <div class="card-meta">Rola Dali · 2023-01</div>
+          <div class="card-description">3-hour crash course covering how autonomous AI agents work: the Perception-Decision-Action loop, examples like AlphaGo and AutoGPT, and building a simple ReAct-style agent. Slides, colab notebook, and YouTube recording available.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">python</span> <span class="tag">free</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Courses &amp; Learning" data-type="other" data-tags="LLM,free,open-source" data-searchable="awesome generative ai guide (github) aishwarya naresh reganti comprehensive, frequently updated resource hub with papers, demos, tutorials, interview prep, and open-source implementations for generative ai. structured as an &quot;awesome list&quot; with extra guidance. llm free open-source">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://github.com/aishwaryanr/awesome-generative-ai-guide/tree/main">Awesome Generative AI Guide (GitHub)</a></div>
+          <div class="card-meta">Aishwarya Naresh Reganti</div>
+          <div class="card-description">Comprehensive, frequently updated resource hub with papers, demos, tutorials, interview prep, and open-source implementations for generative AI. Structured as an "Awesome List" with extra guidance.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">free</span> <span class="tag">open-source</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Courses &amp; Learning" data-type="video" data-tags="teaching,beginner,free" data-searchable="statquest: statistics &amp; ml explained josh starmer clear, visual explanations of statistics and ml concepts. &quot;statistics, machine learning, data science, and ai seem like very scary topics, but since each technique is really just a combination of small and simple steps, they are actually quite simple.&quot; great for building intuition on regression, p-values, neural nets, gradient boosting, etc. teaching beginner free">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/@statquest">StatQuest: Statistics &amp; ML Explained</a></div>
+          <div class="card-meta">Josh Starmer</div>
+          <div class="card-description">Clear, visual explanations of statistics and ML concepts. "Statistics, Machine Learning, Data Science, and AI seem like very scary topics, but since each technique is really just a combination of small and simple steps, they are actually quite simple." Great for building intuition on regression, p-values, neural nets, gradient boosting, etc.</div>
+          <div class="card-tags">
+            <span class="tag">teaching</span> <span class="tag">beginner</span> <span class="tag">free</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Courses &amp; Learning" data-type="video" data-tags="LLM,GPT,tools" data-searchable="openai o1 for agents and ai use cases openai overview of openai&#39;s o1 release with advanced features for building ai agents: extended context windows, improved function calling, and vision+voice unified in agents. llm gpt tools">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/watch?v=IBYbLIhYGp8">OpenAI o1 for Agents and AI Use Cases</a></div>
+          <div class="card-meta">OpenAI</div>
+          <div class="card-description">Overview of OpenAI's o1 release with advanced features for building AI agents: extended context windows, improved function calling, and Vision+Voice unified in agents.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">GPT</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Courses &amp; Learning" data-type="video" data-tags="LLM,beginner,free" data-searchable="how llms actually generate text learnthatstack explains tokenization, next-token probabilities, and sampling to demystify how llms generate text. covers greedy vs. temperature sampling and why llms sometimes repeat or err. llm beginner free">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/watch?v=NKnZYvZA7w4">How LLMs Actually Generate Text</a></div>
+          <div class="card-meta">LearnThatStack · 2023-01</div>
+          <div class="card-description">Explains tokenization, next-token probabilities, and sampling to demystify how LLMs generate text. Covers greedy vs. temperature sampling and why LLMs sometimes repeat or err.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">beginner</span> <span class="tag">free</span> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <div class="accordion-section resource-group" data-group-category="Coding with AI">
+    <div class="accordion-header" aria-expanded="false">
+      <span>Coding with AI <span class="accordion-count">17</span></span>
+      <span class="accordion-indicator"></span>
+    </div>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        
+        <div class="resource-card" data-category="Coding with AI" data-type="tool" data-tags="stata,coding,tools" data-searchable="stata extension for vs code kyle butts vs code extension for stata: syntax highlighting, snippets, and running stata code from the editor. lets economists enjoy vs code&#39;s features (multi-cursor editing, git integration) and ai coding assistants while working on data analysis in stata. stata coding tools">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://github.com/kylebutts/vscode-stata">Stata Extension for VS Code</a></div>
+          <div class="card-meta">Kyle Butts</div>
+          <div class="card-description">VS Code extension for Stata: syntax highlighting, snippets, and running Stata code from the editor. Lets economists enjoy VS Code's features (multi-cursor editing, Git integration) and AI coding assistants while working on data analysis in Stata.</div>
+          <div class="card-tags">
+            <span class="tag">stata</span> <span class="tag">coding</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="guide" data-tags="economics,coding,claude,tools" data-searchable="ai agents for economics research aniket panjwani a practical introduction for economists who want to use ai agents for literature review, coding, data work, replication, writing, and slides without needing an enterprise-sized budget. part of the ai mba platform. see also the related &lt;a href=&quot;&lt;a href=&quot;https://www.youtube.com/watch?v=ypv9bqweqio&quot;&gt;voxdev talk&lt;/a&gt;&quot;&gt;voxdev talk&lt;/a&gt;. economics coding claude tools">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">AI Agents for Economics Research</a></div>
+          <div class="card-meta">Aniket Panjwani</div>
+          <div class="card-description">A practical introduction for economists who want to use AI agents for literature review, coding, data work, replication, writing, and slides without needing an enterprise-sized budget. Part of the AI MBA platform. See also the related <a href="<a href="https://www.youtube.com/watch?v=YPv9BqweQIo">VoxDev talk</a>">VoxDev talk</a>.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">coding</span> <span class="tag">claude</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="guide" data-tags="claude,coding,economics,tools" data-searchable="claude code for quantitative social science (substack) scott cunningham ongoing series of 34+ walkthroughs and explanations of using claude code for quantitative and empirical social science projects. by the author of causal inference: the mixtape. topics include: workflow optimization with deming&#39;s zero-error philosophy, comparative audits of causal inference packages (callaway &amp; sant&#39;anna), using claude code for cannabis research replication, mobile &quot;dispatch&quot; workflows, and philosophical reflections on ai-assisted discovery. a rich, practitioner-oriented resource for economists adopting claude code. claude coding economics tools">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://causalinf.substack.com/s/claude-code">Claude Code for Quantitative Social Science (Substack)</a></div>
+          <div class="card-meta">Scott Cunningham</div>
+          <div class="card-description">Ongoing series of 34+ walkthroughs and explanations of using Claude Code for quantitative and empirical social science projects. By the author of Causal Inference: The Mixtape. Topics include: workflow optimization with Deming's zero-error philosophy, comparative audits of causal inference packages (Callaway & Sant'Anna), using Claude Code for cannabis research replication, mobile "Dispatch" workflows, and philosophical reflections on AI-assisted discovery. A rich, practitioner-oriented resource for economists adopting Claude Code.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">economics</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="thread" data-tags="claude,coding,beginner,tools" data-searchable="building an agentic workspace with cursor + claude code olivia moore guide on how to build an agentic workspace using cursor and claude code, aimed at non-technical people. claude coding beginner tools">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/omooretweets/status/2014010732061638949">Building an Agentic Workspace with Cursor + Claude Code</a></div>
+          <div class="card-meta">Olivia Moore</div>
+          <div class="card-description">Guide on how to build an agentic workspace using Cursor and Claude Code, aimed at non-technical people.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">beginner</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="guide" data-tags="claude,coding,tools" data-searchable="getting better at using coding agents sankalp shubham guide on using claude code 2.0 and getting better at using coding agents. claude coding tools">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/">Getting Better at Using Coding Agents</a></div>
+          <div class="card-meta">Sankalp Shubham</div>
+          <div class="card-description">Guide on using Claude Code 2.0 and getting better at using coding agents.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="guide" data-tags="claude,coding,tools" data-searchable="my claude code setup pedro h. c. sant&#39;anna pedro sant&#39;anna&#39;s personal claude code workflow and setup guide. claude coding tools">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://psantanna.com/claude-code-my-workflow/">My Claude Code Setup</a></div>
+          <div class="card-meta">Pedro H. C. Sant&#39;Anna</div>
+          <div class="card-description">Pedro Sant'Anna's personal Claude Code workflow and setup guide.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="thread" data-tags="claude,stata,coding,economics" data-searchable="using claude code with stata aniket panjwani guide on using claude code with stata for economics research. claude stata coding economics">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/aniketapanjwani/status/2021663279307706372">Using Claude Code with Stata</a></div>
+          <div class="card-meta">Aniket Panjwani</div>
+          <div class="card-description">Guide on using Claude Code with Stata for economics research.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">stata</span> <span class="tag">coding</span> <span class="tag">economics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="thread" data-tags="claude,coding,tools" data-searchable="using git with claude code aniket panjwani guide on using git with claude code for economists. claude coding tools">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/aniketapanjwani/status/2025248300115358066">Using Git with Claude Code</a></div>
+          <div class="card-meta">Aniket Panjwani</div>
+          <div class="card-description">Guide on using Git with Claude Code for economists.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="guide" data-tags="claude,coding,teaching,economics" data-searchable="tips for phd students claes backman comprehensive resource guide covering the &quot;hidden curriculum&quot; of academia. includes dedicated sections on using ai, llms, claude code and cursor (with links to golub&#39;s ai tools overview, claude code/cursor workflows, notebooklm, ai agents for research) and claude code skills (presentations, posters, feedback systems). also covers writing, publishing/refereeing, workflow/tables/graphs, presentations, productivity, coding, and stress management. a one-stop hub for phd students navigating modern academic research. claude coding teaching economics">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://sites.google.com/view/claesbackman/tips-for-phd-students">Tips for PhD Students</a></div>
+          <div class="card-meta">Claes Backman</div>
+          <div class="card-description">Comprehensive resource guide covering the "hidden curriculum" of academia. Includes dedicated sections on Using AI, LLMs, Claude Code and Cursor (with links to Golub's AI tools overview, Claude Code/Cursor workflows, NotebookLM, AI agents for research) and Claude Code Skills (presentations, posters, feedback systems). Also covers writing, publishing/refereeing, workflow/tables/graphs, presentations, productivity, coding, and stress management. A one-stop hub for PhD students navigating modern academic research.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">teaching</span> <span class="tag">economics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="guide" data-tags="claude,coding,beginner" data-searchable="starting a new project with claude code  step-by-step case study on building an app with claude code as a pair programmer, showing an iterative prompt-test-debug loop. inspiring for people who have ideas but limited coding skills. claude coding beginner">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://content-visualizer.vercel.app/public/fIOMcEXnJz">Starting a New Project with Claude Code</a></div>
+          <div class="card-meta"></div>
+          <div class="card-description">Step-by-step case study on building an app with Claude Code as a pair programmer, showing an iterative prompt-test-debug loop. Inspiring for people who have ideas but limited coding skills.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Coding with AI" data-type="thread" data-tags="coding,LLM,beginner" data-searchable="coding with agents without being technical ben tossell thread on using agents (e.g., gpt-engineer/manus) to build projects without being a traditional programmer. main point: being non-technical is no longer a barrier. focus on problem descriptions and let ai handle implementation. coding llm beginner">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/bentossell/status/2006352820140749073">Coding with Agents Without Being Technical</a></div>
+          <div class="card-meta">Ben Tossell · 2025-12</div>
+          <div class="card-description">Thread on using agents (e.g., GPT-Engineer/Manus) to build projects without being a traditional programmer. Main point: being non-technical is no longer a barrier. Focus on problem descriptions and let AI handle implementation.</div>
+          <div class="card-tags">
+            <span class="tag">coding</span> <span class="tag">LLM</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Coding with AI" data-type="guide" data-tags="claude,LLM,beginner" data-searchable="prompt library anthropic anthropic&#39;s official guide with example prompts for claude. illustrates techniques like setting role/tone, providing sufficient context, and using few-shot prompting. each example includes an explanation of why it works well. claude llm beginner">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://docs.anthropic.com/claude/prompt-library">Prompt Library</a></div>
+          <div class="card-meta">Anthropic</div>
+          <div class="card-description">Anthropic's official guide with example prompts for Claude. Illustrates techniques like setting role/tone, providing sufficient context, and using few-shot prompting. Each example includes an explanation of why it works well.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">LLM</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Coding with AI" data-type="guide" data-tags="LLM,advanced" data-searchable="context engineering guide - google docs  community-created doc on how to optimally provide context to an llm. covers strategies for system vs. user message, how to front-load important details, methods to chunk information, and tricks like using delimiters to anchor model attention. llm advanced">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://docs.google.com/document/d/1JU8w-E4LlseFZm-ag22GSBU5A2rp2nb7iFGBNAbFL7k/edit?tab=t.0#heading=h.rzqkvs1h1moi">Context Engineering Guide - Google Docs</a></div>
+          <div class="card-meta"></div>
+          <div class="card-description">Community-created doc on how to optimally provide context to an LLM. Covers strategies for system vs. user message, how to front-load important details, methods to chunk information, and tricks like using delimiters to anchor model attention.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Coding with AI" data-type="article" data-tags="peer-review,LLM,tools" data-searchable="agentic reviewer: ai for research paper reviews andrew ng summary of andrew ng&#39;s project using an ai agent as a reviewer for research papers. the agent follows a reviewing protocol - reading, checking completeness, critiquing each section. results matched expert reviewers ~60-70% of the time on decisions. peer-review llm tools">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://medium.com/data-science-in-your-pocket/andrew-ngs-agentic-reviewer-ai-for-research-paper-reviews-1c2d9cda8086">Agentic Reviewer: AI for Research Paper Reviews</a></div>
+          <div class="card-meta">Andrew Ng</div>
+          <div class="card-description">Summary of Andrew Ng's project using an AI agent as a reviewer for research papers. The agent follows a reviewing protocol - reading, checking completeness, critiquing each section. Results matched expert reviewers ~60-70% of the time on decisions.</div>
+          <div class="card-tags">
+            <span class="tag">peer-review</span> <span class="tag">LLM</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Coding with AI" data-type="guide" data-tags="claude,coding,writing,teaching,free,open-source" data-searchable="claude code for academics (presentation + tools) alessandro spina a gentle introduction to using claude code for academics. includes presentation slides, an &quot;editor&quot; persona for academic writing, and a curated collection of claude code tools and workflows for research. claude coding writing teaching free open-source">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://github.com/aspi6246/ClaudeCodeTools">Claude Code for Academics (presentation + tools)</a></div>
+          <div class="card-meta">Alessandro Spina · 2026-03</div>
+          <div class="card-description">A gentle introduction to using Claude Code for academics. Includes presentation slides, an "Editor" persona for academic writing, and a curated collection of Claude Code tools and workflows for research.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">writing</span> <span class="tag">teaching</span> <span class="tag">free</span> <span class="tag">open-source</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Coding with AI" data-type="guide" data-tags="claude,coding,beginner,tools,free" data-searchable="ai for professionals who don&#39;t code chris blattman political economist chris blattman (uchicago harris) documents ai tools and workflows for knowledge workers — from chatbot prompting to advanced claude code automation. includes downloadable skills, templates, and case studies for managing scheduling, email, and research without coding. claude coding beginner tools free">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://claudeblattman.com/">AI for Professionals Who Don&#39;t Code</a></div>
+          <div class="card-meta">Chris Blattman · 2026-01</div>
+          <div class="card-description">Political economist Chris Blattman (UChicago Harris) documents AI tools and workflows for knowledge workers — from chatbot prompting to advanced Claude Code automation. Includes downloadable skills, templates, and case studies for managing scheduling, email, and research without coding.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">beginner</span> <span class="tag">tools</span> <span class="tag">free</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Coding with AI" data-type="video" data-tags="claude,coding,economics,free,beginner" data-searchable="claude code for economists (markus academy) paul goldsmith-pinkham three-part markus academy series on using claude code for economics research. part 1: getting started. see also &lt;a href=&quot;https://www.youtube.com/watch?v=rp17xupxa4i&quot;&gt;part 2: data analysis&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=wqlzrkdevhs&quot;&gt;part 3: web scraping&lt;/a&gt;. claude coding economics free beginner">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/watch?v=HzgByl5ZsWE">Claude Code for Economists (Markus Academy)</a></div>
+          <div class="card-meta">Paul Goldsmith-Pinkham · 2026-03</div>
+          <div class="card-description">Three-part Markus Academy series on using Claude Code for economics research. Part 1: Getting Started. See also <a href="https://www.youtube.com/watch?v=Rp17XUPxa4I">Part 2: Data Analysis</a> and <a href="https://www.youtube.com/watch?v=wqLZrKdevHs">Part 3: Web Scraping</a>.</div>
+          <div class="card-tags">
+            <span class="tag">claude</span> <span class="tag">coding</span> <span class="tag">economics</span> <span class="tag">free</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <div class="accordion-section resource-group" data-group-category="AI Tools for Research">
+    <div class="accordion-header" aria-expanded="false">
+      <span>AI Tools for Research <span class="accordion-count">6</span></span>
+      <span class="accordion-indicator"></span>
+    </div>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        
+        <div class="resource-card" data-category="AI Tools for Research" data-type="tool" data-tags="tools,LLM,open-source" data-searchable="storm: ai-powered research reports (stanford) stanford oval lab an experimental system that generates a wikipedia-like report on any topic with the help of ai. input a topic and storm will perform web searches, gather information, and interactively help curate it into a structured article with citations. uses retrieval-augmented generation. open-source on &lt;a href=&quot;&lt;a href=&quot;https://github.com/stanford-oval/storm&quot;&gt;github&lt;/a&gt;&quot;&gt;github&lt;/a&gt;. tools llm open-source">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://storm.genie.stanford.edu/">STORM: AI-Powered Research Reports (Stanford)</a></div>
+          <div class="card-meta">Stanford OVAL Lab</div>
+          <div class="card-description">An experimental system that generates a Wikipedia-like report on any topic with the help of AI. Input a topic and STORM will perform web searches, gather information, and interactively help curate it into a structured article with citations. Uses retrieval-augmented generation. Open-source on <a href="<a href="https://github.com/stanford-oval/storm">GitHub</a>">GitHub</a>.</div>
+          <div class="card-tags">
+            <span class="tag">tools</span> <span class="tag">LLM</span> <span class="tag">open-source</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="AI Tools for Research" data-type="tool" data-tags="tools,writing,peer-review" data-searchable="refine.ink - ai-powered feedback for researchers yann calvó lópez, benjamin golub an ai &quot;referee&quot; for academic writing. upload a draft and refine returns a report highlighting issues with correctness, clarity, and consistency - e.g. pointing out if a result doesn&#39;t follow from the methodology, or if a term is used inconsistently. built by yann calvó lópez and benjamin golub. &quot;refine devotes hours of compute to help you find and fix the issues that matter most to readers and reviewers.&quot; tools writing peer-review">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://www.refine.ink/">Refine.ink - AI-powered feedback for researchers</a></div>
+          <div class="card-meta">Yann Calvó López, Benjamin Golub</div>
+          <div class="card-description">An AI "referee" for academic writing. Upload a draft and Refine returns a report highlighting issues with correctness, clarity, and consistency - e.g. pointing out if a result doesn't follow from the methodology, or if a term is used inconsistently. Built by Yann Calvó López and Benjamin Golub. "Refine devotes hours of compute to help you find and fix the issues that matter most to readers and reviewers."</div>
+          <div class="card-tags">
+            <span class="tag">tools</span> <span class="tag">writing</span> <span class="tag">peer-review</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="AI Tools for Research" data-type="tool" data-tags="tools,peer-review,LLM" data-searchable="paperreview.ai - stanford agentic paper reviewer stanford crfm an experimental agent that acts as a conference reviewer. input a paper or abstract and it produces a referee report: summarizing contributions, listing strengths and weaknesses, and giving a recommendation. uses chain-of-thought prompting to emulate how a human reviewer would summarize and then critique. tools peer-review llm">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://paperreview.ai/">PaperReview.ai - Stanford Agentic Paper Reviewer</a></div>
+          <div class="card-meta">Stanford CRFM</div>
+          <div class="card-description">An experimental agent that acts as a conference reviewer. Input a paper or abstract and it produces a referee report: summarizing contributions, listing strengths and weaknesses, and giving a recommendation. Uses chain-of-thought prompting to emulate how a human reviewer would summarize and then critique.</div>
+          <div class="card-tags">
+            <span class="tag">tools</span> <span class="tag">peer-review</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="AI Tools for Research" data-type="tool" data-tags="tools,LLM,free" data-searchable="google scholar labs - ask questions from papers google &quot;talk to scholar&quot; feature allowing natural language questions against scholarly literature. ask a research question and it will synthesize findings from papers with citations. uses llms fine-tuned on academic text combined with google&#39;s vast index of publications. tools llm free">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://scholar.google.com/scholar_labs/search?hl=en">Google Scholar Labs - Ask questions from papers</a></div>
+          <div class="card-meta">Google</div>
+          <div class="card-description">"Talk to Scholar" feature allowing natural language questions against scholarly literature. Ask a research question and it will synthesize findings from papers with citations. Uses LLMs fine-tuned on academic text combined with Google's vast index of publications.</div>
+          <div class="card-tags">
+            <span class="tag">tools</span> <span class="tag">LLM</span> <span class="tag">free</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="AI Tools for Research" data-type="tool" data-tags="tools,LLM,peer-review,free" data-searchable="elicit: the ai research assistant ought a free tool by ought that uses language models to help with literature review and q&amp;a. ask a research question and it will search academic papers, summarize key findings, extract relevant data or coefficients. also features paper similarity search and pdf summarization. tools llm peer-review free">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://elicit.com/">Elicit: The AI Research Assistant</a></div>
+          <div class="card-meta">Ought</div>
+          <div class="card-description">A free tool by Ought that uses language models to help with literature review and Q&A. Ask a research question and it will search academic papers, summarize key findings, extract relevant data or coefficients. Also features paper similarity search and PDF summarization.</div>
+          <div class="card-tags">
+            <span class="tag">tools</span> <span class="tag">LLM</span> <span class="tag">peer-review</span> <span class="tag">free</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="AI Tools for Research" data-type="tool" data-tags="Stata,MCP,coding,economics" data-searchable="stata mcp server thomas monk brings ai capabilities to stata through the model context protocol (mcp), enabling claude and other ai assistants to execute stata commands, run .do files, and interpret economic data directly from code editors like vs code and cursor. supports paper replication, hypothesis testing, and econometrics learning workflows. stata mcp coding economics">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://deepecon.ai/projects/stata-mcp">Stata MCP Server</a></div>
+          <div class="card-meta">Thomas Monk · 2026-03</div>
+          <div class="card-description">Brings AI capabilities to Stata through the Model Context Protocol (MCP), enabling Claude and other AI assistants to execute Stata commands, run .do files, and interpret economic data directly from code editors like VS Code and Cursor. Supports paper replication, hypothesis testing, and econometrics learning workflows.</div>
+          <div class="card-tags">
+            <span class="tag">Stata</span> <span class="tag">MCP</span> <span class="tag">coding</span> <span class="tag">economics</span> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <div class="accordion-section resource-group" data-group-category="Talks &amp; Videos">
+    <div class="accordion-header" aria-expanded="false">
+      <span>Talks &amp; Videos <span class="accordion-count">8</span></span>
+      <span class="accordion-indicator"></span>
+    </div>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        
+        <div class="resource-card featured" data-category="Talks &amp; Videos" data-type="video" data-tags="economics,labor,LLM" data-searchable="ai and the labor market (aea 2026, li) danielle li a high-profile aea session featuring economists discussing how ai is affecting labor markets. topics included new evidence on ai-induced job polarization, the impact of generative ai on programmer productivity, and firms&#39; adoption of ai. early findings suggest ai can increase productivity within certain high-skill jobs but might enable broader automation of routine cognitive tasks. friday, jan 3, 2026, 10:15 am - 12:15 pm (est). economics labor llm">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">AI and the Labor Market (AEA 2026, Li)</a></div>
+          <div class="card-meta">Danielle Li · 2026-01</div>
+          <div class="card-description">A high-profile AEA session featuring economists discussing how AI is affecting labor markets. Topics included new evidence on AI-induced job polarization, the impact of generative AI on programmer productivity, and firms' adoption of AI. Early findings suggest AI can increase productivity within certain high-skill jobs but might enable broader automation of routine cognitive tasks. Friday, Jan 3, 2026, 10:15 AM - 12:15 PM (EST).</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Talks &amp; Videos" data-type="video" data-tags="economics,LLM,development" data-searchable="language models for economics (aea 2026, ash) elliott ash aea 2026 panel focusing on llm applications in economic research. presentations covered using llms to parse legal and regulatory text, llm-based agents for conducting simulated experiments (as in homo silicus), and improvements in multilingual models for development economics. sunday, jan 5, 2026, 10:15 am - 12:15 pm (est). economics llm development">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">Language Models for Economics (AEA 2026, Ash)</a></div>
+          <div class="card-meta">Elliott Ash · 2026-01</div>
+          <div class="card-description">AEA 2026 panel focusing on LLM applications in economic research. Presentations covered using LLMs to parse legal and regulatory text, LLM-based agents for conducting simulated experiments (as in Homo Silicus), and improvements in multilingual models for development economics. Sunday, Jan 5, 2026, 10:15 AM - 12:15 PM (EST).</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">development</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Talks &amp; Videos" data-type="video" data-tags="economics,tools,coding" data-searchable="modern ai for economics research (markus academy) benjamin golub benjamin golub overviews ai tools that can accelerate research. part 1: introduces cursor, an ai-enhanced code editor. part 2: discusses agents and custom tools like refine.ink for draft review. emphasizes prompting techniques and &quot;low-hanging&quot; uses of ai. (markus academy episode 154) economics tools coding">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/watch?v=ixyzgnmqAiU">Modern AI for Economics Research (Markus Academy)</a></div>
+          <div class="card-meta">Benjamin Golub · 2025-12</div>
+          <div class="card-description">Benjamin Golub overviews AI tools that can accelerate research. Part 1: introduces Cursor, an AI-enhanced code editor. Part 2: discusses agents and custom tools like Refine.ink for draft review. Emphasizes prompting techniques and "low-hanging" uses of AI. (Markus Academy Episode 154)</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">tools</span> <span class="tag">coding</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Talks &amp; Videos" data-type="video" data-tags="coding,tools,LLM" data-searchable="using llms with cursor for economics benjamin golub hands-on cursor ide demo showing ai-assisted coding for economic research. live-codes an example showing how to ask the llm to generate boilerplate, explain errors, and explore model variations. coding tools llm">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/watch?v=gb9v5ze0zhU">Using LLMs with Cursor for Economics</a></div>
+          <div class="card-meta">Benjamin Golub · 2025-12</div>
+          <div class="card-description">Hands-on Cursor IDE demo showing AI-assisted coding for economic research. Live-codes an example showing how to ask the LLM to generate boilerplate, explain errors, and explore model variations.</div>
+          <div class="card-tags">
+            <span class="tag">coding</span> <span class="tag">tools</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Talks &amp; Videos" data-type="video" data-tags="tools,writing,peer-review" data-searchable="refine.ink demo for economics research benjamin golub refine.ink demo showing ai-generated referee-style feedback on a draft (clarity, consistency, missing citations), with emphasis on human judgment. showcases how ai can assist in the evaluation stage of research. tools writing peer-review">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/watch?v=SAXElKwksM8">Refine.ink Demo for Economics Research</a></div>
+          <div class="card-meta">Benjamin Golub · 2025-12</div>
+          <div class="card-description">Refine.ink demo showing AI-generated referee-style feedback on a draft (clarity, consistency, missing citations), with emphasis on human judgment. Showcases how AI can assist in the evaluation stage of research.</div>
+          <div class="card-tags">
+            <span class="tag">tools</span> <span class="tag">writing</span> <span class="tag">peer-review</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Talks &amp; Videos" data-type="video" data-tags="economics,GPT,stata,LLM" data-searchable="a user&#39;s guide to gpt/llms for economic research (video) kevin bryan markus academy lecture where kevin bryan demonstrates practical ways gpt-4 can augment economic research: debugging stata code, summarizing literature, checking proofs, with cautions about verification. economics gpt stata llm">
+          <span class="card-type-icon">▶</span>
+          <div class="card-title"><a href="https://www.youtube.com/watch?v=LJGQjozWr0E">A User&#39;s Guide to GPT/LLMs for Economic Research (video)</a></div>
+          <div class="card-meta">Kevin Bryan · 2023-05</div>
+          <div class="card-description">Markus Academy lecture where Kevin Bryan demonstrates practical ways GPT-4 can augment economic research: debugging Stata code, summarizing literature, checking proofs, with cautions about verification.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">GPT</span> <span class="tag">stata</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Talks &amp; Videos" data-type="other" data-tags="economics,conference,machine learning" data-searchable="2026 esif economics and ai+ml meeting (econometric society)  annual meeting at cornell (june 16-17) fostering interaction between computer science and economics, with emphasis on ai/ml. keynotes by david blei, annie liang, sendhil mullainathan, aaron roth, and stefan wager. co-chaired by francesca molinari and éva tardos. economics conference machine learning">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/16/2026-ESIFEconomics-and-AIML-Meeting">2026 ESIF Economics and AI+ML Meeting (Econometric Society)</a></div>
+          <div class="card-meta">2026-06</div>
+          <div class="card-description">Annual meeting at Cornell (June 16-17) fostering interaction between computer science and economics, with emphasis on AI/ML. Keynotes by David Blei, Annie Liang, Sendhil Mullainathan, Aaron Roth, and Stefan Wager. Co-chaired by Francesca Molinari and Éva Tardos.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">conference</span> <span class="tag">machine learning</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Talks &amp; Videos" data-type="other" data-tags="economics,conference,NBER" data-searchable="nber summer institute 2026: digital economics and artificial intelligence  three-day nber summer institute session (july 22-24) on digital economics and ai, organized by erik brynjolfsson, avi goldfarb, and catherine tucker. held in cambridge, ma and streamed on youtube. one of the premier venues for presenting frontier ai economics research. economics conference nber">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://www.nber.org/conferences/si-2026-digital-economics-and-artificial-intelligence">NBER Summer Institute 2026: Digital Economics and Artificial Intelligence</a></div>
+          <div class="card-meta">2026-07</div>
+          <div class="card-description">Three-day NBER Summer Institute session (July 22-24) on digital economics and AI, organized by Erik Brynjolfsson, Avi Goldfarb, and Catherine Tucker. Held in Cambridge, MA and streamed on YouTube. One of the premier venues for presenting frontier AI economics research.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">conference</span> <span class="tag">NBER</span> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <div class="accordion-section resource-group" data-group-category="Commentary &amp; Analysis">
+    <div class="accordion-header" aria-expanded="false">
+      <span>Commentary &amp; Analysis <span class="accordion-count">27</span></span>
+      <span class="accordion-indicator"></span>
+    </div>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,labor,LLM,claude" data-searchable="impact of language models on cognitive automation (brookings) david autor, anton korinek a brookings panel moderated by anton korinek with david autor, plus chatgpt and claude as special &quot;guests.&quot; they discuss cognitive automation, llms augmenting worker productivity, the need for worker retraining and policies. economics labor llm claude">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://www.brookings.edu/articles/exploring-the-impact-of-language-models/">Impact of Language Models on Cognitive Automation (Brookings)</a></div>
+          <div class="card-meta">David Autor, Anton Korinek · 2023-03</div>
+          <div class="card-description">A Brookings panel moderated by Anton Korinek with David Autor, plus ChatGPT and Claude as special "guests." They discuss cognitive automation, LLMs augmenting worker productivity, the need for worker retraining and policies.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">LLM</span> <span class="tag">claude</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="other" data-tags="economics,tools,LLM" data-searchable="awesome econ ai stuff (github) antonio mele curated collection of ai resources for economists: tools, papers, tutorials, and guides for using ai in economic research. economics tools llm">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://meleantonio.github.io/awesome-econ-ai-stuff/">Awesome Econ AI Stuff (GitHub)</a></div>
+          <div class="card-meta">Antonio Mele</div>
+          <div class="card-description">Curated collection of AI resources for economists: tools, papers, tutorials, and guides for using AI in economic research.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">tools</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,writing,claude,coding" data-searchable="research in the time of ai paul goldsmith-pinkham paul goldsmith-pinkham (assistant professor of finance, yale som) argues ai tools compress research timelines while preserving what makes research genuinely valuable. outlines eight research stages (ideation, design, data assembly, analysis, robustness testing, writing, submission, publication) and argues llms accelerate transitions between stages but don&#39;t eliminate the need for careful iteration. addresses two central anxieties: (1) &quot;slop&quot; - more papers published faster with less rigor, p-hacking supercharged by automation; and (2) career anxiety - execution skills (coding, writing) now have lower market value. claude code features prominently. key insight: &quot;the hard part is still knowing where to walk.&quot; skills that distinguish good researchers - taste, institutional knowledge, iterative thinking - become more valuable as execution barriers lower. economics writing claude coding">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a></div>
+          <div class="card-meta">Paul Goldsmith-Pinkham · 2026-03</div>
+          <div class="card-description">Paul Goldsmith-Pinkham (Assistant Professor of Finance, Yale SOM) argues AI tools compress research timelines while preserving what makes research genuinely valuable. Outlines eight research stages (ideation, design, data assembly, analysis, robustness testing, writing, submission, publication) and argues LLMs accelerate transitions between stages but don't eliminate the need for careful iteration. Addresses two central anxieties: (1) "slop" - more papers published faster with less rigor, p-hacking supercharged by automation; and (2) career anxiety - execution skills (coding, writing) now have lower market value. Claude Code features prominently. Key insight: "The hard part is still knowing where to walk." Skills that distinguish good researchers - taste, institutional knowledge, iterative thinking - become more valuable as execution barriers lower.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">writing</span> <span class="tag">claude</span> <span class="tag">coding</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="economics,stata,tools,coding" data-searchable="using ai for economics research antonio mele thread with practical tips for economists using ai in daily workflows. announces a project to make ai coding assistants more useful for day-to-day work - demonstrating how to prompt ai to transform pseudocode into working stata code, suggest robustness checks. also teases refine, his ai referee tool. economics stata tools coding">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/antoniomele101/status/2011750733440294984">Using AI for Economics Research</a></div>
+          <div class="card-meta">Antonio Mele · 2026-01</div>
+          <div class="card-description">Thread with practical tips for economists using AI in daily workflows. Announces a project to make AI coding assistants more useful for day-to-day work - demonstrating how to prompt AI to transform pseudocode into working Stata code, suggest robustness checks. Also teases Refine, his AI referee tool.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">stata</span> <span class="tag">tools</span> <span class="tag">coding</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="economics,GPT,advanced" data-searchable="advanced ai uses in research antonio mele response to joshua gans&#39;s &quot;reflections on vibe researching&quot; post. reflects on more advanced uses of ai in research: using gpt-4 to verify mathematical derivations, generate synthetic data for testing empirical strategies. notes current limitations but the promise: &quot;yes, ai can produce new maths results, although just incremental progress seems possible for now.&quot; economics gpt advanced">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/antoniomele101/status/2007755521835544666">Advanced AI Uses in Research</a></div>
+          <div class="card-meta">Antonio Mele · 2026-01</div>
+          <div class="card-description">Response to Joshua Gans's "Reflections on Vibe Researching" post. Reflects on more advanced uses of AI in research: using GPT-4 to verify mathematical derivations, generate synthetic data for testing empirical strategies. Notes current limitations but the promise: "Yes, AI can produce new maths results, although just incremental progress seems possible for now."</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">GPT</span> <span class="tag">advanced</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="economics,GPT,tools" data-searchable="reflections on ai and research ben golub ben golub emphasizes &quot;low-risk uses of ai&quot; that are already yielding returns in research - e.g., using gpt-4 to summarize papers or suggest alternative phrasings. agrees fully ai-generated research is not yet reliable, but tools like refine help ensure quality. balanced view: ai won&#39;t replace researchers, but researchers who effectively use ai will outpace those who don&#39;t. economics gpt tools">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/ben_golub/status/2007503688332652892">Reflections on AI and Research</a></div>
+          <div class="card-meta">Ben Golub · 2026-01</div>
+          <div class="card-description">Ben Golub emphasizes "low-risk uses of AI" that are already yielding returns in research - e.g., using GPT-4 to summarize papers or suggest alternative phrasings. Agrees fully AI-generated research is not yet reliable, but tools like Refine help ensure quality. Balanced view: AI won't replace researchers, but researchers who effectively use AI will outpace those who don't.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">GPT</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,GPT,writing,peer-review" data-searchable="reflections on vibe researching (in 2025) joshua gans joshua gans conducted a year-long experiment with &quot;ai-first&quot; research (&quot;vibe researching&quot;), using ai at every stage of writing papers in 2025. his conclusion: the experiment ultimately failed. while ai-generated mathematics checked out, theoretical oversights in game theory and equilibrium analysis went undetected until peer review. reduced friction meant he pursued more mediocre ideas to completion. llms present results with false confidence, tempting researchers into believing they&#39;ve discovered something genuine. tools used: chatgpt (o1-pro and 5.2 pro), gemini, and refine.ink. key takeaway: ai accelerates research substantially but cannot replace human taste, peer judgment, or the value of letting ideas develop naturally. a must-read for academics experimenting with ai in their research process. see also &lt;a href=&quot;https://x.com/antoniomele101/status/2007755521835544666&quot;&gt;antonio mele&#39;s response thread&lt;/a&gt;. economics gpt writing peer-review">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">Reflections on Vibe Researching (in 2025)</a></div>
+          <div class="card-meta">Joshua Gans · 2026-01</div>
+          <div class="card-description">Joshua Gans conducted a year-long experiment with "AI-first" research ("vibe researching"), using AI at every stage of writing papers in 2025. His conclusion: the experiment ultimately failed. While AI-generated mathematics checked out, theoretical oversights in game theory and equilibrium analysis went undetected until peer review. Reduced friction meant he pursued more mediocre ideas to completion. LLMs present results with false confidence, tempting researchers into believing they've discovered something genuine. Tools used: ChatGPT (o1-pro and 5.2 Pro), Gemini, and Refine.ink. Key takeaway: AI accelerates research substantially but cannot replace human taste, peer judgment, or the value of letting ideas develop naturally. A must-read for academics experimenting with AI in their research process. See also <a href="https://x.com/antoniomele101/status/2007755521835544666">Antonio Mele's response thread</a>.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">GPT</span> <span class="tag">writing</span> <span class="tag">peer-review</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,LLM,GPT" data-searchable="prompts for economists (marginal revolution) tyler cowen tyler cowen shared example prompts and llm responses covering six domains identified by anton korinek (2023 jel): ideation &amp; feedback, writing assistance, background research, coding help, data analysis, and math derivations. curated list assembled by jesse lastunen. see also the &lt;a href=&quot;https://sites.google.com/view/lastunen/ai-for-economists&quot;&gt;example prompts page&lt;/a&gt;. economics llm gpt">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://marginalrevolution.com/marginalrevolution/2024/01/prompts-for-economists.html">Prompts for Economists (Marginal Revolution)</a></div>
+          <div class="card-meta">Tyler Cowen · 2024-01</div>
+          <div class="card-description">Tyler Cowen shared example prompts and LLM responses covering six domains identified by Anton Korinek (2023 JEL): ideation & feedback, writing assistance, background research, coding help, data analysis, and math derivations. Curated list assembled by Jesse Lastunen. See also the <a href="https://sites.google.com/view/lastunen/ai-for-economists">example prompts page</a>.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">GPT</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="other" data-tags="economics,tools,LLM" data-searchable="economics of ai research anton korinek anton korinek&#39;s research page featuring working papers on the economics of ai, including the generative ai for economic research series, ai governance handbook, and the econ tai initiative. economics tools llm">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://www.korinek.com/research#h.p_ID_54">Economics of AI Research</a></div>
+          <div class="card-meta">Anton Korinek</div>
+          <div class="card-description">Anton Korinek's research page featuring working papers on the economics of AI, including the Generative AI for Economic Research series, AI Governance Handbook, and the Econ TAI Initiative.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">tools</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="other" data-tags="regulation,ethics" data-searchable="global ai regulations tracker legalnodes interactive tracker summarizing ai-related laws and proposals across countries. shows the eu&#39;s ai act status, us sectoral ai bills, china&#39;s algorithm regulations, etc. indicates a trend: many jurisdictions converging on rules for ai transparency, risk assessment, and accountability, though approaches differ. regulation ethics">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://www.legalnodes.com/article/global-ai-regulations-tracker">Global AI Regulations Tracker</a></div>
+          <div class="card-meta">LegalNodes · 2025-08</div>
+          <div class="card-description">Interactive tracker summarizing AI-related laws and proposals across countries. Shows the EU's AI Act status, US sectoral AI bills, China's algorithm regulations, etc. Indicates a trend: many jurisdictions converging on rules for AI transparency, risk assessment, and accountability, though approaches differ.</div>
+          <div class="card-tags">
+            <span class="tag">regulation</span> <span class="tag">ethics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="guide" data-tags="regulation,ethics,LLM" data-searchable="generative ai framework for hmg - gov.uk uk cabinet office uk cabinet office guidance on using generative ai in government services. outlines principles: transparency (disclose ai-generated content), accountability (human oversight of ai decisions), and security (ensuring prompts/outputs don&#39;t leak sensitive data). includes use-case examples and procurement standards. regulation ethics llm">
+          <span class="card-type-icon">📖</span>
+          <div class="card-title"><a href="https://www.gov.uk/government/publications/generative-ai-framework-for-hmg">Generative AI Framework for HMG - GOV.UK</a></div>
+          <div class="card-meta">UK Cabinet Office · 2024-01</div>
+          <div class="card-description">UK Cabinet Office guidance on using generative AI in government services. Outlines principles: transparency (disclose AI-generated content), accountability (human oversight of AI decisions), and security (ensuring prompts/outputs don't leak sensitive data). Includes use-case examples and procurement standards.</div>
+          <div class="card-tags">
+            <span class="tag">regulation</span> <span class="tag">ethics</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="other" data-tags="regulation,ethics" data-searchable="ai watch: global regulatory tracker white &amp; case region-by-region roundup of ai regulatory developments. us tracker covers federal initiatives (nist ai risk framework, draft bills) and state laws on ai. updated frequently. regulation ethics">
+          <span class="card-type-icon">🔗</span>
+          <div class="card-title"><a href="https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states">AI Watch: Global Regulatory Tracker</a></div>
+          <div class="card-meta">White &amp; Case</div>
+          <div class="card-description">Region-by-region roundup of AI regulatory developments. US tracker covers federal initiatives (NIST AI Risk Framework, draft bills) and state laws on AI. Updated frequently.</div>
+          <div class="card-tags">
+            <span class="tag">regulation</span> <span class="tag">ethics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,regulation" data-searchable="ai futures model: scenario planning tool  interactive scenario-planning tool to explore different scenarios for ai development and their socioeconomic impacts. has sliders for variables like rate of ai progress, alignment success, global coordination. helps model futures thinking for policymakers. economics regulation">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://www.aifuturesmodel.com/about">AI Futures Model: Scenario Planning Tool</a></div>
+          <div class="card-meta">2025-12</div>
+          <div class="card-description">Interactive scenario-planning tool to explore different scenarios for AI development and their socioeconomic impacts. Has sliders for variables like rate of AI progress, alignment success, global coordination. Helps model futures thinking for policymakers.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">regulation</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="regulation,LLM,ethics" data-searchable="ai self-improvement and recursive progress eric schmidt eric schmidt&#39;s stark warning: &quot;year 1: ai replaces most programmers; year 2: recursive self-improvement begins; years 3-5: agi; year 6: asi.&quot; suggests that once ai starts improving itself, it accelerates beyond human control. added to calls for ai governance. regulation llm ethics">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/vitrupo/status/1911934053378588842">AI Self-Improvement and Recursive Progress</a></div>
+          <div class="card-meta">Eric Schmidt · 2025-04</div>
+          <div class="card-description">Eric Schmidt's stark warning: "Year 1: AI replaces most programmers; Year 2: recursive self-improvement begins; Years 3-5: AGI; Year 6: ASI." Suggests that once AI starts improving itself, it accelerates beyond human control. Added to calls for AI governance.</div>
+          <div class="card-tags">
+            <span class="tag">regulation</span> <span class="tag">LLM</span> <span class="tag">ethics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="ethics,teaching,LLM" data-searchable="what does it mean to be a scholar in an age of ai? - cambridge judge cambridge judge business school essay exploring how academia and the identity of scholars evolve with ai tools. themes: authenticity and originality, skillset shift, ethical norms. conclusion: being a scholar still means curiosity, rigor, and critical thinking, but tools and workflows will change. ethics teaching llm">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://www.jbs.cam.ac.uk/2024/what-does-it-mean-to-be-a-scholar-in-an-age-of-ai/">What does it mean to be a scholar in an age of AI? - Cambridge Judge</a></div>
+          <div class="card-meta">Cambridge Judge Business School · 2024-01</div>
+          <div class="card-description">Essay exploring how academia and the identity of scholars evolve with AI tools. Themes: authenticity and originality, skillset shift, ethical norms. Conclusion: being a scholar still means curiosity, rigor, and critical thinking, but tools and workflows will change.</div>
+          <div class="card-tags">
+            <span class="tag">ethics</span> <span class="tag">teaching</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,tools" data-searchable="big data and ai for economy monitoring bbva research bbva&#39;s real-time big-data/ai dashboards (card transaction data, mobility data) for nowcasting gdp or consumer confidence. demonstrates how ai is operationalized to monitor the pulse of the economy and geopolitics in real time. economics tools">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://www.bbva.com/en/economy-and-finance/bbva-research-launches-a-new-big-data-and-artificial-intelligence-section-to-monitor-the-economy-and-geopolitics-in-real-time/">Big Data and AI for Economy Monitoring</a></div>
+          <div class="card-meta">BBVA Research · 2025-11</div>
+          <div class="card-description">BBVA's real-time big-data/AI dashboards (card transaction data, mobility data) for nowcasting GDP or consumer confidence. Demonstrates how AI is operationalized to monitor the pulse of the economy and geopolitics in real time.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="teaching,r,GPT" data-searchable="teaching gov 50 with ai at harvard scott cunningham scott cunningham&#39;s notes on introducing students to chatgpt for coding in r: explaining code, generating example datasets. candid on-the-ground look at academia&#39;s adaptation. key insight: ai can be a great tutor but we need to teach students to use ai critically. teaching r gpt">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://causalinf.substack.com/p/day-4-of-teaching-gov-50-at-harvard">Teaching Gov 50 with AI at Harvard</a></div>
+          <div class="card-meta">Scott Cunningham · 2025-09</div>
+          <div class="card-description">Scott Cunningham's notes on introducing students to ChatGPT for coding in R: explaining code, generating example datasets. Candid on-the-ground look at academia's adaptation. Key insight: AI can be a great tutor but we need to teach students to use AI critically.</div>
+          <div class="card-tags">
+            <span class="tag">teaching</span> <span class="tag">r</span> <span class="tag">GPT</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="economics,GPT,LLM" data-searchable="ai and economics research roundup (afinetheorem) kevin bryan kevin bryan (@afinetheorem) prompted openai&#39;s o3 about academia&#39;s future and shared the ai&#39;s response. partly tongue-in-cheek - using ai to advise on ai issues. his timeline provides a real-time chronicle of how a top economist is grappling with and leveraging ai. economics gpt llm">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/Afinetheorem/status/1886245511046271194/photo/2">AI and Economics Research Roundup (Afinetheorem)</a></div>
+          <div class="card-meta">Kevin Bryan · 2025-02</div>
+          <div class="card-description">Kevin Bryan (@Afinetheorem) prompted OpenAI's o3 about academia's future and shared the AI's response. Partly tongue-in-cheek - using AI to advise on AI issues. His timeline provides a real-time chronicle of how a top economist is grappling with and leveraging AI.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">GPT</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="ethics,LLM" data-searchable="ai limitations and risks gary marcus gary marcus on limitations and risks of ai. emphasizes robustness, trustworthiness, and the gap between ai output and true understanding. valuable counterbalance to hype. ethics llm">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/GaryMarcus/status/1817928914844753973">AI Limitations and Risks</a></div>
+          <div class="card-meta">Gary Marcus · 2024-07</div>
+          <div class="card-description">Gary Marcus on limitations and risks of AI. Emphasizes robustness, trustworthiness, and the gap between AI output and true understanding. Valuable counterbalance to hype.</div>
+          <div class="card-tags">
+            <span class="tag">ethics</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="regulation,ethics" data-searchable="ai governance and human rights luiza jarovsky legal scholar on ai regulation and ethics. brings latin american and human rights angle: highlighting surveillance, data protection (gdpr), and societal impacts on the global south. regulation ethics">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/LuizaJarovsky/status/1810356348145774617">AI Governance and Human Rights</a></div>
+          <div class="card-meta">Luiza Jarovsky · 2024-07</div>
+          <div class="card-description">Legal scholar on AI regulation and ethics. Brings Latin American and human rights angle: highlighting surveillance, data protection (GDPR), and societal impacts on the Global South.</div>
+          <div class="card-tags">
+            <span class="tag">regulation</span> <span class="tag">ethics</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="thread" data-tags="economics,LLM" data-searchable="llm agents and homo silicus john horton john horton on insights from llm-as-agents work (homo silicus): what simulated agents can/cannot capture, and how computational experiments could shape future research. economics llm">
+          <span class="card-type-icon">💬</span>
+          <div class="card-title"><a href="https://x.com/johnjhorton/status/1801247494443086039">LLM Agents and Homo Silicus</a></div>
+          <div class="card-meta">John Horton · 2024-06</div>
+          <div class="card-description">John Horton on insights from LLM-as-agents work (Homo Silicus): what simulated agents can/cannot capture, and how computational experiments could shape future research.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card featured" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,productivity,labor,LLM" data-searchable="what is the impact of ai on productivity? alex imas a living document synthesizing all available studies and data on ai&#39;s productivity impact. reviews the disconnect between micro studies (which overwhelmingly find positive effects, especially for low-skill workers) and macro evidence (which is now beginning to show aggregate gains). updated regularly as new evidence arrives. economics productivity labor llm">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://aleximas.substack.com/p/what-is-the-impact-of-ai-on-productivity">What is the impact of AI on productivity?</a></div>
+          <div class="card-meta">Alex Imas · 2026-03</div>
+          <div class="card-description">A living document synthesizing all available studies and data on AI's productivity impact. Reviews the disconnect between micro studies (which overwhelmingly find positive effects, especially for low-skill workers) and macro evidence (which is now beginning to show aggregate gains). Updated regularly as new evidence arrives.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">productivity</span> <span class="tag">labor</span> <span class="tag">LLM</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,labor,productivity,policy" data-searchable="research on ai and the labor market is still in the first inning jed kolko piie survey of the state of ai-and-labor research. reviews high-profile studies combining ai exposure measures with employment data, noting mixed results and methodological challenges. highlights that ai may create entirely new occupations, and productivity research shows benefits but with important caveats. economics labor productivity policy">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning">Research on AI and the labor market is still in the first inning</a></div>
+          <div class="card-meta">Jed Kolko · 2026-03</div>
+          <div class="card-description">PIIE survey of the state of AI-and-labor research. Reviews high-profile studies combining AI exposure measures with employment data, noting mixed results and methodological challenges. Highlights that AI may create entirely new occupations, and productivity research shows benefits but with important caveats.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">productivity</span> <span class="tag">policy</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="tool" data-tags="economics,labor,teaching,tools" data-searchable="mapping the structural divide: u.s. universities vs ai disruption kyle saunders interactive map of 1,556 u.s. universities across two dimensions: institutional resilience and post-college market positioning. visualizes which schools are structurally positioned to weather demographic decline, fiscal stress, and ai disruption. built with claude. economics labor teaching tools">
+          <span class="card-type-icon">🔧</span>
+          <div class="card-title"><a href="https://kylesaunders.com/university-map/">Mapping the Structural Divide: U.S. Universities vs AI Disruption</a></div>
+          <div class="card-meta">Kyle Saunders · 2026-03</div>
+          <div class="card-description">Interactive map of 1,556 U.S. universities across two dimensions: institutional resilience and post-college market positioning. Visualizes which schools are structurally positioned to weather demographic decline, fiscal stress, and AI disruption. Built with Claude.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">labor</span> <span class="tag">teaching</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="LLM,writing,peer-review,tools" data-searchable="llm-friendly academic papers: a proposal paul goldsmith-pinkham proposes a standard for making academic papers more accessible to llms — bundling papers with an llms.txt orientation file and markdown formatting. addresses the finding that llm-generated summaries are nearly five times more likely than human-authored ones to overgeneralize scientific conclusions. llm writing peer-review tools">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://paulgp.substack.com/p/llm-friendly-academic-papers-a-proposal">LLM-Friendly Academic Papers: A Proposal</a></div>
+          <div class="card-meta">Paul Goldsmith-Pinkham · 2026-03</div>
+          <div class="card-description">Proposes a standard for making academic papers more accessible to LLMs — bundling papers with an llms.txt orientation file and markdown formatting. Addresses the finding that LLM-generated summaries are nearly five times more likely than human-authored ones to overgeneralize scientific conclusions.</div>
+          <div class="card-tags">
+            <span class="tag">LLM</span> <span class="tag">writing</span> <span class="tag">peer-review</span> <span class="tag">tools</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,LLM,writing,peer-review" data-searchable="when will the research paper disappear in economics? tyler cowen cowen argues the individual research paper is no longer scarce — ai can tweak, improve, or review any paper. top economics journals are already experimenting with refine for ai-powered reviewing. suggests economists should focus on publishing &quot;the box&quot; rather than individual papers. economics llm writing peer-review">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://marginalrevolution.com/marginalrevolution/2026/03/when-will-the-research-paper-disappear-in-economics.html">When Will the Research Paper Disappear in Economics?</a></div>
+          <div class="card-meta">Tyler Cowen · 2026-03</div>
+          <div class="card-description">Cowen argues the individual research paper is no longer scarce — AI can tweak, improve, or review any paper. Top economics journals are already experimenting with Refine for AI-powered reviewing. Suggests economists should focus on publishing "the box" rather than individual papers.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">writing</span> <span class="tag">peer-review</span> 
+          </div>
+        </div>
+        
+        <div class="resource-card" data-category="Commentary &amp; Analysis" data-type="article" data-tags="economics,LLM,econometrics,beginner" data-searchable="explainer of ludwig, mullainathan and rambachan&#39;s econometrics of llm paper scott cunningham accessible walkthrough of the ludwig/mullainathan/rambachan econometric framework for using llms in empirical research. breaks down the key insight that llm measurement error is non-classical and correlated with covariates, explaining why a small validation sample is essential for unbiased inference even with highly accurate llm labels. economics llm econometrics beginner">
+          <span class="card-type-icon">📝</span>
+          <div class="card-title"><a href="https://causalinf.substack.com/p/explainer-of-ludwig-mullainathan">Explainer of Ludwig, Mullainathan and Rambachan&#39;s Econometrics of LLM Paper</a></div>
+          <div class="card-meta">Scott Cunningham · 2026-03</div>
+          <div class="card-description">Accessible walkthrough of the Ludwig/Mullainathan/Rambachan econometric framework for using LLMs in empirical research. Breaks down the key insight that LLM measurement error is non-classical and correlated with covariates, explaining why a small validation sample is essential for unbiased inference even with highly accurate LLM labels.</div>
+          <div class="card-tags">
+            <span class="tag">economics</span> <span class="tag">LLM</span> <span class="tag">econometrics</span> <span class="tag">beginner</span> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+
+<div class="no-results" id="no-results" style="display: none;">
+  No resources match your current filters. Try broadening your search or resetting filters.
+</div>
+
+
+    <div class="divider">·</div>
+
+<div class="info-section compact-section">
+  <span class="section-label">Links</span>
+  <div class="info-grid info-grid-3col">
+    <div class="info-block">
+      <h3>CV/Profile</h3>
+      <ul class="info-list">
+        <li><a href="https://www.wider.unu.edu/sites/default/files/CV_Jesse_Lastunen_October_2025_4ed23fe2d3128d35f62cd79d1b9ec3b9.pdf">CV</a></li>
+        <li><a href="https://orcid.org/0000-0001-6241-7504">ORCID</a></li>
+        <li><a href="https://www.wider.unu.edu/expert/jesse-lastunen">UNU-WIDER profile</a></li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h3>Publications</h3>
+      <ul class="info-list">
+        <li><a href="https://scholar.google.com/citations?user=TGdgvgIAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a href="https://www.rand.org/pubs/authors/l/lastunen_jesse.html">RAND Publications</a></li>
+        <li><a href="https://econpapers.repec.org/RAS/pla1105.htm">EconPapers</a> & <a href="https://ideas.repec.org/f/pla1105.html">IDEAS</a></li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h3>Social media</h3>
+      <ul class="info-list">
+        <li><a href="https://twitter.com/jesselastunen">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/lastunen/">LinkedIn</a></li>
+        <li><a href="https://github.com/jesselas">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="info-section compact-section">
+  <span class="section-label">Contact</span>
+  <p>Get in touch at lastunen(at)wider.unu.edu</p>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Jesse Lastunen</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

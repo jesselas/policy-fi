@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Economists | Jesse Lastunen</title>
+  <meta name="description" content="Curated collection of AI and LLM resources for economists.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,520;7..72,650&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="site-title" href="../index.html">Jesse Lastunen</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../research/">Research</a>
+      <a href="../southmod/">SOUTHMOD</a>
+      <a class="active" href="../ai-econ/">AI for Economists</a>
+    </nav>
+  </header>
+
+  <main class="page-shell two-column" id="content">
+    <aside class="page-index" aria-label="AI resource categories">
+      <a href="#recently-added">Recently added</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#research-papers">Research Papers</a>
+      <a href="#courses-learning">Courses &amp; Learning</a>
+      <a href="#coding-with-ai">Coding with AI</a>
+      <a href="#ai-tools-for-research">AI Tools for Research</a>
+      <a href="#talks-videos">Talks &amp; Videos</a>
+      <a href="#commentary-analysis">Commentary &amp; Analysis</a>
+    </aside>
+
+    <article class="article-body wide-article">
+      <h1>AI for Economists</h1>
+      <p class="page-intro">A curated collection of resources for economists working with AI and LLMs — from research papers and courses to practical tools and coding guides.</p>
+
+      <section class="content-section first stats-panel" aria-label="Resource category counts">
+        <div><span>56</span>Research Papers</div>
+        <div><span>16</span>Courses &amp; Learning</div>
+        <div><span>28</span>Coding with AI</div>
+        <div><span>21</span>AI Tools for Research</div>
+        <div><span>13</span>Talks &amp; Videos</div>
+        <div><span>39</span>Commentary &amp; Analysis</div>
+      </section>
+
+      <section class="content-section" id="highlights">
+        <h2>Highlights</h2>
+        <div class="resource-grid">
+          <article class="resource-card">
+            <p class="pub-meta">Commentary &amp; Analysis · other</p>
+            <h3><a href="https://meleantonio.github.io/awesome-econ-ai-stuff/">Awesome Econ AI Stuff (GitHub)</a></h3>
+            <p>Antonio Mele</p>
+            <p>Curated collection of AI resources for economists: tools, papers, tutorials, and guides for using AI in economic research.</p>
+          </article>
+          <article class="resource-card">
+            <p class="pub-meta">Commentary &amp; Analysis · article</p>
+            <h3><a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a></h3>
+            <p>Paul Goldsmith-Pinkham</p>
+            <p>Paul Goldsmith-Pinkham (Assistant Professor of Finance, Yale SOM) argues AI tools compress research timelines while preserving what makes research genuinely valuable. Outlines eight research stages (ideation, design, data assembly, analysis, robustness testing, writing, submission, publication) and argues LLMs accelerate transitions between stages but don't eliminate the need for careful iteration. Addresses two central anxieties: (1) "slop" - more papers published faster with less rigor, p-hacking supercharged by automation; and (2) career anxiety - execution skills (coding, writing) now have lower market value. Claude Code features prominently. Key insight: "The hard part is still knowing where to walk." Skills that distinguish good researchers - taste, institutional knowledge, iterative thinking - become more valuable as execution barriers lower.</p>
+          </article>
+          <article class="resource-card">
+            <p class="pub-meta">Commentary &amp; Analysis · article</p>
+            <h3><a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">Reflections on Vibe Researching (in 2025)</a></h3>
+            <p>Joshua Gans</p>
+            <p>Joshua Gans conducted a year-long experiment with "AI-first" research ("vibe researching"), using AI at every stage of writing papers in 2025. His conclusion: the experiment ultimately failed. While AI-generated mathematics checked out, theoretical oversights in game theory and equilibrium analysis went undetected until peer review. Reduced friction meant he pursued more mediocre ideas to completion. LLMs present results with false confidence, tempting researchers into believing they've discovered something genuine. Tools used: ChatGPT (o1-pro and 5.2 Pro), Gemini, and Refine.ink. Key takeaway: AI accelerates research substantially but cannot replace human taste, peer judgment, or the value of letting ideas develop naturally. A must-read for academics experimenting with AI in their research process. See also <a href="https://x.com/antoniomele101/status/2007755521835544666">Antonio Mele's response thread</a>.</p>
+          </article>
+          <article class="resource-card">
+            <p class="pub-meta">AI Tools for Research · tool</p>
+            <h3><a href="https://www.refine.ink/">Refine.ink - AI-powered feedback for researchers</a></h3>
+            <p>Yann Calvó López, Benjamin Golub</p>
+            <p>An AI "referee" for academic writing. Upload a draft and Refine returns a report highlighting issues with correctness, clarity, and consistency - e.g. pointing out if a result doesn't follow from the methodology, or if a term is used inconsistently. Built by Yann Calvó López and Benjamin Golub. "Refine devotes hours of compute to help you find and fix the issues that matter most to readers and reviewers."</p>
+          </article>
+          <article class="resource-card">
+            <p class="pub-meta">Coding with AI · guide</p>
+            <h3><a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">AI Agents for Economics Research</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>A practical introduction for economists who want to use AI agents for literature review, coding, data work, replication, writing, and slides without needing an enterprise-sized budget. Part of the AI MBA platform. See also the related <a href="<a href="https://www.youtube.com/watch?v=YPv9BqweQIo">VoxDev talk</a>">VoxDev talk</a>.</p>
+          </article>
+          <article class="resource-card">
+            <p class="pub-meta">Coding with AI · guide</p>
+            <h3><a href="https://causalinf.substack.com/s/claude-code/archive?sort=new">Claude Code for Quantitative Social Science (Substack)</a></h3>
+            <p>Scott Cunningham</p>
+            <p>Ongoing series of 34+ walkthroughs and explanations of using Claude Code for quantitative and empirical social science projects. By the author of Causal Inference: The Mixtape. Topics include: workflow optimization with Deming's zero-error philosophy, comparative audits of causal inference packages (Callaway & Sant'Anna), using Claude Code for cannabis research replication, mobile "Dispatch" workflows, and philosophical reflections on AI-assisted discovery. A rich, practitioner-oriented resource for economists adopting Claude Code.</p>
+          </article>
+          <article class="resource-card">
+            <p class="pub-meta">Coding with AI · guide</p>
+            <h3><a href="https://psantanna.com/claude-code-my-workflow/">Using Claude Code for academic work</a></h3>
+            <p>Pedro H. C. Sant'Anna</p>
+            <p>A comprehensive framework for doing academic research with Claude Code, spanning the full lifecycle from papers and data analysis to presentations. It uses 18 specialized agents and an orchestrator pattern that plans, implements, reviews, and verifies work through structured quality gates, with human oversight at each stage. Highlights include a Beamer-to-Quarto conversion pipeline, adversarial review loops, simulated peer review calibrated to major economics journals, and 52+ slash commands automating tasks such as literature review and manuscript evaluation. Reported as adopted across 15+ research groups in economics, energy, political science, and engineering.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="recently-added">
+        <h2>Recently added</h2>
+        <div class="publication-list compact resource-list-mock">
+          <article class="publication">
+            <p class="pub-meta">Coding with AI · tool</p>
+            <h3><a href="https://github.com/AIScientists-Dev/academic-humanizer">academic-humanizer: Strip AI-Writing Tells from Papers and Grant Proposals</a></h3>
+            
+            <p>An open-source skill for Claude Code, Codex, and similar agents that edits AI-polished academic prose to remove tell-tale AI patterns ("In recent years…", "paves the way", rule-of-three, over-long sentences, em-dashes) while preserving scholarly voice, hedging, definitions, citations, and every number. It matches claims to evidence (no verb stronger than the data) and has a dedicated grant-proposal mode tuned to NSF/NIH structure and first-page primacy. The rules were derived by comparing AI drafts against the team's accepted papers and funded proposals.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">AI Tools for Research · tool</p>
+            <h3><a href="https://www.scholara.ai/">Scholara</a></h3>
+            
+            <p>An AI platform (by Stematic Labs) that automates the systematic-review and meta-analysis workflow end to end: building PICO/MeSH search strategies across PubMed, Cochrane, and other databases; triple-agent consensus abstract screening with recorded rationales; schema-based data extraction from PDFs linked back to source paragraphs; and publication-ready forest plots. It is PRISMA-2020 oriented and generates audit-ready flow diagrams, aimed at evidence-synthesis teams across the social and health sciences.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">AI Tools for Research · tool</p>
+            <h3><a href="https://chatgpt.com/g/g-6a20206ca0508191bcbb14e28b35a5b6-chatdid">ChatDiD</a></h3>
+            <p>Clément de Chaisemartin</p>
+            <p>A custom GPT offering expert guidance on difference-in-differences (DiD), including the de Chaisemartin–D'Haultfoeuille heterogeneity-robust estimators and their Stata/R packages (e.g., did_multiplegt). It helps researchers choose the right DiD estimator for their design and accompanies the authors' forthcoming textbook, Causal Inference with Differences-in-Differences: Credible Answers to Hard Questions (Princeton University Press).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · paper</p>
+            <h3><a href="https://arxiv.org/abs/2606.20041">AI Economist Agent: An Agentic Framework for Model-Grounded Economic Analysis (arXiv)</a></h3>
+            <p>Masahiro Kato</p>
+            <p>Proposes a RAG-based "AI economist agent" that grounds LLM-generated economic narratives in economic theory and real-world data. Rather than producing quantitative claims with the language model alone, agents plan the analysis, retrieve evidence from knowledge graphs, select appropriate models, and generate reports linked to explicit model-based computations. Demonstrated on two applications: economist report generation for U.S. inflation persistence and Federal Reserve policy, and bank stress-test narratives for U.S. commercial real estate refinancing stress.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Coding with AI · guide</p>
+            <h3><a href="https://psantanna.com/claude-code-my-workflow/">Using Claude Code for academic work</a></h3>
+            <p>Pedro H. C. Sant'Anna</p>
+            <p>A comprehensive framework for doing academic research with Claude Code, spanning the full lifecycle from papers and data analysis to presentations. It uses 18 specialized agents and an orchestrator pattern that plans, implements, reviews, and verifies work through structured quality gates, with human oversight at each stage. Highlights include a Beamer-to-Quarto conversion pipeline, adversarial review loops, simulated peer review calibrated to major economics journals, and 52+ slash commands automating tasks such as literature review and manuscript evaluation. Reported as adopted across 15+ research groups in economics, energy, political science, and engineering.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · paper</p>
+            <h3><a href="https://arxiv.org/abs/2606.22337">Theorist Toolbox: Tools for Agent-Based LLM-Assisted Economic Theory Research (arXiv)</a></h3>
+            <p>Moran Koren</p>
+            <p>Argues that by 2026 the binding constraint on machine-assisted economic theory is no longer producing mathematics but trusting it, since a fluent model will prove a false theorem as readily as a true one. Proposes a verification-first protocol instantiated as three methods that differ in how work is checked: a single disciplined pass, an adversarial prover-verifier pair (Claude Opus 4.8 proposing, OpenAI Codex refuting, the author triaging), and a structured multi-agent project with a reviewer gate. Demonstrated on a worked mechanism-design example (a Groves/Pigouvian incentive mechanism for the Gans-Kominers grade-inflation model), concluding that external verification, not model capability, is the key design variable.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · paper</p>
+            <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6843118">Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools (SSRN)</a></h3>
+            <p>Mert Demirer, Leon Musolff, Liyuan Yang</p>
+            <p>A matched event-study using data on 100,000+ GitHub developers and their AI-usage telemetry to estimate the productivity effects of successive AI coding tools. Autocomplete, interactive coding agents, and autonomous agents raise commits by 40%, 140%, and 180% respectively, but these gains attenuate up the production chain: the 180% commit effect falls to 50% for projects and just 30% for actual releases. The authors interpret this through a weak-link model with an estimated 0.25 elasticity of substitution between AI and human effort (strong complementarity), and confirm the pattern across four app marketplaces. A MIT Sloan working paper.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">AI Tools for Research · tool</p>
+            <h3><a href="https://www.copaper.ai/">CoPaper.AI</a></h3>
+            <p>Stanford REAP / StatsPAI</p>
+            <p>An AI research co-authoring platform from Stanford's REAP program (founder Bryce Wang; co-founder and strategic advisor Scott Rozelle). Users upload data (CSV, Excel, JSON, Parquet; up to 20 datasets), set a research direction, and the system generates an empirical paper chapter by chapter with human-in-the-loop review, exporting a complete DOCX with full, reproducible code in Stata, R, and EViews. It supports methods from OLS, logit/probit, fixed effects, and IV to DiD, RDD, synthetic control, decomposition, and causal forests. As a new platform, its track record is still limited.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Talks &amp; Videos · video</p>
+            <h3><a href="https://www.youtube.com/watch?v=X_jLUDTHgxg">Why Your Codex Goals Suck</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>Short video on how economists can get more out of hours-long Codex and Claude Code 'goals' for research. Panjwani demonstrates converting Kirill Borusyak, Xavier Jaravel, and Jann Spiess's Stata/Python difference-in-differences imputation package into an R package via a ~15-hour overnight Codex goal, emphasizing the importance of defining validation criteria up front rather than leaving them to the agent, and showing how to use Codex and Claude Code together.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · article</p>
+            <h3><a href="https://www.anthropic.com/research/claude-code-expertise">Agentic coding and persistent returns to expertise (Anthropic)</a></h3>
+            <p>Zoe Hitzig, Maxim Massenkoff, Eva Lyubich, Shaoyi Zhang, Ryan Heller, Peter McCrory</p>
+            <p>Anthropic Economic Research report based on a privacy-preserving analysis of ~400,000 Claude Code sessions from ~235,000 people (October 2025 to April 2026). It introduces a framework describing what work is done, who does it, and whether it succeeds. Key findings: people make ~70% of planning decisions while Claude makes ~80% of execution decisions; domain expertise (not coding proficiency) drives success, with sessions rated expert reaching verified success more than twice as often as novice ones; non-software occupations succeed within seven points of software engineers; and the estimated value of the typical task rose ~25% over the seven months.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · paper</p>
+            <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6948398">From Microeconomics to AI Research: A Guide for Economists (SSRN)</a></h3>
+            <p>Pavel Kireyev, Roberto Rafael Maura Rivero</p>
+            <p>A 26-page guide arguing that the decisions shaping how AI systems are built and aligned are largely microeconomic problems. It opens with a self-contained primer on the RLHF pipeline, showing that reward modeling, preference aggregation, and policy optimization rest on equivalences with discrete choice, social choice, and principal-agent models. It then maps specific competencies (behavioral economics for annotator biases, mechanism design for feedback elicitation, social choice for preference aggregation, contract theory and information design for alignment, game theory for multi-agent safety, production economics for compute scaling laws) to concrete AI research problems, and closes with practical paths into academia and AI labs plus a companion repository.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">AI Tools for Research · tool</p>
+            <h3><a href="https://github.com/nik1t7n/research-craft-skill">research-craft: An Agent Skill for Better Research Loops</a></h3>
+            <p>Nikita Nosov</p>
+            <p>An open-source agent skill in the SKILL.md format, installable into Claude Code, Codex, Cursor, Gemini CLI and other agents via the skills CLI, that turns vague research work into a tight loop: choosing better problems, improving inputs, forecasting before experiments, keeping research logs, inspecting failures, and publishing useful artifacts. Based on Vivek's essay 'how to be good at research.' Oriented toward ML/AI experiment design rather than economics specifically, but useful for structuring any empirical research workflow.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Commentary &amp; Analysis · article</p>
+            <h3><a href="https://franklythecounterfactual.substack.com/p/ai-in-economics">AI in Economics: A Weekly Research Roundup</a></h3>
+            <p>Kosali Simon</p>
+            <p>A weekly Substack newsletter from the O'Neill School of Public and Environmental Affairs at Indiana University that scans new working-paper listings (the NBER 'New This Week' email, the NEP-AIN digest from RePEc, and Google Scholar alerts) and summarizes the most notable new economics research on AI. It covers three angles: AI as a subject of economic study (labor, productivity, trade, public finance), AI as a tool for doing economics (LLMs, ML, agentic coding), and AI as an economic actor (agents that bargain, trade, and compete). Each post offers a paragraph or two per paper with hyperlinked titles; the launch edition includes a full Q1 2026 catch-up archive.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · paper</p>
+            <h3><a href="https://liser.lu/assets/How-AI-reshapes-skill-demand-in-European-firms-2026-11-en-1.pdf">How AI Reshapes Skill Demand in European Firms (LISER Policy Brief)</a></h3>
+            <p>Terry Gregory, Najada Feimi, Christina Gathmann, David Marguerit</p>
+            <p>LISER policy brief drawing on more than 75 million online job vacancies from Belgium, France, Germany, and Luxembourg between 2018 and 2023 to track how employers' skill requirements evolve as occupations become more exposed to AI. It argues AI is reshaping the content of jobs rather than eliminating them: demand is rising fast for AI-related analytical skills, employers increasingly seek workers who combine analytical tools with judgment and leadership, and the adjustment happens largely within existing occupations. Concludes the policy priority should be reskilling and upskilling within current occupational trajectories.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">AI Tools for Research · tool</p>
+            <h3><a href="https://github.com/noejn2/revise-applied-paper">revise-applied-paper: A Claude Code Skill for Refereeing Applied Economics Papers</a></h3>
+            <p>Noé J Nava</p>
+            <p>An open-source Claude Code skill that acts as an automated journal referee for applied economics manuscripts (.qmd, .md, or .tex). It runs a cold subagent that audits the draft against an ~80-item checklist distilled from Marc F. Bellemare's Doing Economics (MIT Press, 2022), produces a referee report with numbered major and minor comments, then applies editing-level fixes while parking substantive items in a to-do ledger. Runs locally and free on top of Claude, supports interactive and autonomous loop modes, and anchors every comment to a citable authority rather than a model's taste. A writing-craft tool, not scientific peer review.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">AI Tools for Research · tool</p>
+            <h3><a href="https://digitaleconomy.stanford.edu/publication/ai-economic-indicators-june-2026-update/">AI Economic Indicators (Stanford Digital Economy Lab)</a></h3>
+            <p>Connacher Murphy, Erik Brynjolfsson</p>
+            <p>New freely accessible platform from the Stanford Digital Economy Lab to track how AI is reshaping work, productivity, and value creation. The first release introduces three related efforts: the Canaries Dashboard (tracking employment trends by AI exposure level, built with ADP Research), the Takeoff Tracker (evaluating evidence for AI-driven explosive growth), and regularly updated research notes. Aims to replace anecdotes and lagging indicators with timely, trusted evidence.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · paper</p>
+            <h3><a href="https://arxiv.org/abs/2606.05383">Can AI Refute Economic Theory? Evidence from Beyond the Knowledge Cutoff (arXiv)</a></h3>
+            <p>Alexis Akira Toda</p>
+            <p>Tests whether AI models (Gemini, Refine, Claude, ChatGPT) can find errors in four published economic theory papers, each containing a known mistake. ChatGPT Pro performed best, occasionally constructing counterexamples and corrected proofs, while other models fared worse. No model located a true error without substantial human guidance. Argues a competent human paired with a frontier model can outperform current peer review, but AI cannot yet refute economic theory on its own. Highlighted by <a href="https://marginalrevolution.com/marginalrevolution/2026/06/how-well-does-current-ai-find-errors-in-economics-papers.html">Tyler Cowen on Marginal Revolution</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Research Papers · paper</p>
+            <h3><a href="https://www.nber.org/papers/w35290">What Investment Data Implies about the AI Transition (NBER WP 35290)</a></h3>
+            <p>Jessica Wachter, Jonathan Wachter</p>
+            <p>The five largest U.S. tech firms spent $380 billion on capex in 2025 and are forecast to roughly double that in 2026 — risking bankruptcy unless expected profits grow commensurately. Embeds this observation in a two-sector open-economy model with rare productivity booms. Calibrating to observed investment implies a boom raises AI-sector productivity by a factor of 2.7, with additional cumulative GDP growth of 5–58 percentage points by 2030 and AI shares of the economy ranging from 8% to 39%.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Talks &amp; Videos · video</p>
+            <h3><a href="https://aieconomist.io/resources/scott-cunningham-causal-inference-ai">Claude Code, Economics Research, and the Returns to Expertise (The AI Economist)</a></h3>
+            <p>Scott Cunningham, Aniket Panjwani</p>
+            <p>A one-hour interview in which Scott Cunningham joins Aniket Panjwani to discuss what agentic AI changes for empirical economics: faster research production but slower verification, difference-in-differences workflows, cross-language replication and package audits, encoding repeated checks into skills, and why domain expertise still matters when agents can produce polished output. Includes a sectioned companion transcript (some sections require a free newsletter subscription).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">Commentary &amp; Analysis · article</p>
+            <h3><a href="https://olihanney.substack.com/p/10-things-on-ai-and-development">10 Things on AI and Development</a></h3>
+            <p>Oliver Hanney</p>
+            <p>A curated roundup from VoxDev's managing editor of ten of the most interesting recent pieces on AI and development, spanning research and practitioner perspectives — compiled as a counterweight to a development community he argues has been slow to engage with AI's most important questions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="research-papers">
+        <h2>Research Papers</h2>
+        <div class="publication-list compact resource-list-mock">
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-01</p>
+            <h3><a href="https://www.nber.org/papers/w34713">Teaching Economics to the Machines (NBER WP 34713)</a></h3>
+            <p>Kevin A. Bryan</p>
+            <p>Proposes integrating economic theory into ML via "theory-guided AI." The authors argue that theory aids external validity, but "particular functional forms we fit to get analytic tractability involve many assumptions that go beyond theoretical restrictions" (@Afinetheorem). In other words, using structural restrictions can regularize ML models without imposing ad-hoc functional assumptions.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025-10</p>
+            <h3><a href="https://www.nber.org/system/files/working_papers/w34330/w34330.pdf">Making AI Count: The Next Measurement Frontier (NBER WP 34330)</a></h3>
+            <p>Diane Coyle, John Poquiz</p>
+            <p>Diane Coyle & John Poquiz discuss how transformative AI challenges current economic statistics. They outline how GDP and productivity measures miss AI-driven outputs and propose new metrics to better capture AI's impact on productivity and output.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025-09</p>
+            <h3><a href="https://benjaminmanning.io/files/optimize.pdf">General Social Agents</a></h3>
+            <p>Benjamin Manning, John Horton</p>
+            <p>Manning & John Horton propose a method to build AI agents grounded in economic theory and data. They create agents using human data from "seed" games and theory-based instructions, then show in 883,320 novel game simulations that these agents predict human play better than standard game-theoretic models. This demonstrates AI's potential to generalize behavioral predictions in new strategic settings.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025-02</p>
+            <h3><a href="https://kevinbryanecon.com/o3WhatCanWeDo.pdf">AI-Assisted Academic Writing in Quantitative Social Science</a></h3>
+            <p>Kevin A. Bryan</p>
+            <p>An experiment where an entire review paper was drafted by OpenAI's GPT-o3. It discusses how academia might adapt to AI-written text, covers current AI capabilities for drafting and literature surveys, weighs benefits vs. risks (misinformation, plagiarism), provides a 10-year outlook, and concludes with recommendations for journals and researchers to harness AI's benefits while safeguarding integrity (e.g. transparency about AI use).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025</p>
+            <h3><a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI (NBER WP 32487)</a></h3>
+            <p>Daron Acemoglu</p>
+            <p>Acemoglu evaluates AI's macroeconomic implications using a task-based model. Estimates modest TFP gains (no more than 0.66% over 10 years), arguing early evidence from easy-to-learn tasks may overstate future effects. Published in Economic Policy (2025). See also <a href="https://economics.mit.edu/sites/default/files/2024-05/The%20Simple%20Macroeconomics%20of%20AI.pdf">presentation slides</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2024-11</p>
+            <h3><a href="https://www.aeaweb.org/content/file?id=21904">LLMs Learn to Collaborate and Reason (JEL)</a></h3>
+            <p>Anton Korinek</p>
+            <p>Anton Korinek's JEL article on integrating generative AI into research workflows. It serves as a hands-on guide for using LLMs in economics, with emphasis on model reasoning and collaborative tools for economists.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2024-07</p>
+            <h3><a href="https://arxiv.org/pdf/2407.15339">Deep Learning for Economists</a></h3>
+            <p>Melissa Dell</p>
+            <p>Comprehensive review of deep learning methods for economists (NBER WP 32768). Discusses how CNNs and transformers can impute structure from unstructured data like satellite images or text. Covers classification, record linkage, generative models, and introduces the EconDL companion site with demo notebooks. Emphasizes that with proper tuning, deep nets scale affordably to millions/billions of observations.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2024-01</p>
+            <h3><a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/EE62DC0645275778D744ACAA3E3254BE/S263232492300038Xa.pdf/predicting-social-assistance-beneficiaries-on-the-social-welfare-damage-of-data-biases.pdf">Predicting Social Assistance Beneficiaries</a></h3>
+            <p>Dietrich, Malerba, Gassmann</p>
+            <p>Dietrich, Malerba & Gassmann introduce a welfare-based evaluation of bias in ML targeting. Using proxy means test models for cash transfers, they weight targeting errors by income level and show that label biases and unstable model weights substantially understate welfare losses, unfairly disadvantaging some groups.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2023-05</p>
+            <h3><a href="https://bcf.princeton.edu/wp-content/uploads/2023/05/A_User_s_Guide_to_GPT_and_LLMs_for_Economic_Research.pdf">A User's Guide to GPT and LLMs for Economic Research</a></h3>
+            <p>Kevin Bryan</p>
+            <p>Kevin Bryan's guide (based on a Markus Academy talk) explaining how LLMs like GPT can assist in economics research tasks (coding, literature review, writing, etc.), with examples and practical tips.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2023-04</p>
+            <h3><a href="https://www.nber.org/system/files/working_papers/w31122/w31122.pdf">Large Language Models as Simulated Economic Agents: Homo Silicus (NBER WP 31122)</a></h3>
+            <p>John J. Horton</p>
+            <p>John J. Horton et al. explore using GPT-3 as "Homo silicus" - a simulated economic agent endowed with preferences and information to run virtual economic experiments. They show LLM agents can replicate classic experimental findings and easily test policy variations in silico.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://www.nber.org/papers/w34953">AI in Science (NBER WP 34953)</a></h3>
+            <p>Ajay K. Agrawal, John McHale, Alexander Oettl</p>
+            <p>Characterizes AI as a tool for augmentation through enhanced search over combinatorial spaces. Decomposes knowledge production into a multi-stage process revealing a 'jagged frontier' of AI in science, with differential returns across domains (data-rich biology vs. anomaly-sparse physics) and workflow stages. Shows how AI-expert scientists amplify nonlinear productivity gains.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://www.nber.org/papers/w34984">Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives (NBER WP 34984)</a></h3>
+            <p>Salomé Baslandze, Zachary Edwards, John Graham, Ty McClure, Brent H. Meyer, Michael Sparks, Sonya R. Waddell, Daniel Weitz</p>
+            <p>Surveys corporate executives to develop an index ranking job functions most negatively affected by AI. Provides firm-level evidence on how AI impacts different workforce roles and productivity, with direct evidence from decision-makers.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-02</p>
+            <h3><a href="https://www.nber.org/papers/w34836">Firm Data on AI (NBER WP 34836)</a></h3>
+            <p>Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven J. Davis, et al.</p>
+            <p>First representative international data on firm-level AI use, surveying ~6,000 executives across the US, UK, Germany, and Australia. Finds ~70% of firms actively use AI but report little impact over the past 3 years, while forecasting AI will boost productivity by 1.4% and cut employment by 0.7% over the next 3 years.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-01</p>
+            <h3><a href="https://www.nber.org/papers/w34779">A.I. and Our Economic Future (NBER WP 34779)</a></h3>
+            <p>Charles I. Jones</p>
+            <p>Argues that AI may be fundamentally different from prior general-purpose technologies like electricity or semiconductors, because automating intelligence itself has broader effects. Explores the scenario where machines can perform every cognitive and physical task more cheaply than humans and what economics says about that future.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-01</p>
+            <h3><a href="https://www.anthropic.com/research/economic-index-primitives">The Anthropic Economic Index: Economic Primitives</a></h3>
+            <p>Ruth Appel, Maxim Massenkoff, Peter McCrory, Miles McCain, Ryan Heller, Tyler Neylon, Alex Tamkin</p>
+            <p>Introduces five foundational measurements—task complexity, skill level, purpose, AI autonomy, and success—to track AI's economic impacts. Based on privacy-preserving analysis of 2 million conversations. Finds more complex tasks see the largest speed-ups, with college-level tasks sped up 12x.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://arxiv.org/abs/2502.07736">Menu Pricing of Large Language Models</a></h3>
+            <p>Dirk Bergemann, Alessandro Bonatti, Alex Smolin</p>
+            <p>Develops a framework for optimal pricing and product design of LLMs, where a provider sells menus of token budgets to users who differ in their valuations across a continuum of tasks. Applies mechanism design theory to the economics of AI services.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025</p>
+            <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176525001028">The Adoption of Large Language Models in Economics Research (Economics Letters)</a></h3>
+            <p>Maryam Feyzollahi, Nima Rafizadeh</p>
+            <p>Uses a difference-in-differences framework across 25 leading economics journals over 24 years to measure LLM adoption via linguistic footprints. Finds a 4.76 percentage point increase in LLM-associated terms during 2023–2024, more than doubling from 2.85pp in 2023 to 6.67pp in 2024, documenting rapid integration of language models in economics writing.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-03</p>
+            <h3><a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually">How Will AI-Driven Automation Actually Affect Jobs?</a></h3>
+            <p>Alex Imas, Soumitra Shukla</p>
+            <p>Imas (UChicago Booth) and Shukla (Harvard) argue AI exposure measures are misinterpreted as displacement threats when they indicate task augmentation. The real risk lies in low-dimensional occupations where full automation creates stronger firm incentives to eliminate positions. Uses an O-Ring model to show how partial automation can complement rather than substitute human labor.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://www.aeaweb.org/articles?id=10.1257%2Fjel.20251799">The Economic Impacts of Artificial Intelligence: A Multidisciplinary, Multi-book Review (JEL)</a></h3>
+            <p>Kevin A. Bryan</p>
+            <p>Reviews seven books on AI's economic impact, finding strong frameworks for AI as cheap prediction and adoption barriers, but arguing the literature offers little guidance on transformative scenarios — rapid labor churn, scientific acceleration, and existential risk — that policymakers need most.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025-12</p>
+            <h3><a href="https://www.nber.org/papers/w33344">Large Language Models: An Applied Econometric Framework (NBER WP 33344)</a></h3>
+            <p>Jens Ludwig, Sendhil Mullainathan, Ashesh Rambachan</p>
+            <p>Provides a rigorous econometric framework for using LLMs in empirical research. For prediction tasks, validity requires 'no training leakage.' For estimation, even high-accuracy LLM labels can bias regressions because errors correlate with covariates — the solution is a small human-coded validation sample to debias outputs. Forthcoming in Annual Review of Economics.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025-11</p>
+            <h3><a href="https://www.nber.org/papers/w34444">Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</a></h3>
+            <p>Susan Athey, Fiona Scott Morton</p>
+            <p>Examines how market power in upstream AI affects downstream prices, industry structure, and welfare. Identifies a 'double harm' for displaced workers who face wage cuts from AI adoption and further harm from monopoly AI pricing. Derives an adoption frontier and policy implications for regulating AI usage and access fees.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-01</p>
+            <h3><a href="https://www.nber.org/papers/w34202">AI Agents for Economic Research (NBER WP 34202)</a></h3>
+            <p>Anton Korinek</p>
+            <p>Comprehensive guide to building AI agents that autonomously conduct literature reviews, write and debug code, and orchestrate entire research workflows. Includes working code examples readers can immediately use. Shows how researchers can build complete analytical tools from English descriptions, handling everything from data uploads to regression analysis to visualization.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://forecastingresearch.substack.com/p/forecasting-the-economic-effects-of-ai">Forecasting the Economic Effects of AI</a></h3>
+            <p>Forecasting Research Institute</p>
+            <p>Large-scale forecasting exercise surveying 69 leading economists, 52 AI experts, 38 superforecasters, and 401 members of the general public on AI's economic impact. Under rapid AI progress scenarios, economists forecast labor force participation dropping from 62.6% to 55% by 2050, with the richest 10% holding 80% of national wealth. In baseline scenarios, GDP growth and labor participation remain close to today's levels. Over 200 pages of detailed forecasts and methodology.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-02</p>
+            <h3><a href="https://www.nber.org/papers/w34854">Building Pro-Worker Artificial Intelligence (NBER WP 34854)</a></h3>
+            <p>Daron Acemoglu, David Autor, Simon Johnson</p>
+            <p>Defines pro-worker technologies as those that expand worker capabilities and make human skills more valuable. Distinguishes five categories of AI-driven technological change: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Argues that policy and design choices can steer AI development toward complementing workers rather than replacing them. Published jointly with Brookings/Hamilton Project.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-02</p>
+            <h3><a href="https://www.nber.org/papers/w34813">The Politics of AI (NBER WP 34813)</a></h3>
+            <p>Nicholas Bloom, Christos Makridis</p>
+            <p>Uses Gallup Workforce Panel data to examine partisan differences in workplace AI adoption. While Democrats report higher frequent AI use (30.1% vs. 25% for Republicans in Q1 2026), this gap shrinks to statistical insignificance after controlling for education and reverses sign with occupation and industry fixed effects. Suggests the partisan AI divide is driven by educational and occupational sorting, not ideology.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-02</p>
+            <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6219138">Claude Code as an Empirical Economist: Like Humans but Without the Tails (SSRN)</a></h3>
+            <p>Serafin Grundl</p>
+            <p>A 51-page paper from the Federal Reserve Board benchmarking Claude Code as an empirical economist. The subtitle 'Like Humans but Without the Tails' suggests the AI performs comparably to human economists on average but with less variance in output quality.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://www.nber.org/papers/w34919">How Does AI Distribute the Pie? Large Language Models and the Ultimatum Game (NBER WP 34919)</a></h3>
+            <p>Douglas K.G. Araujo, Harald Uhlig</p>
+            <p>Investigates how various LLMs behave in the Ultimatum Game, varying stake sizes and opponent type (human vs. AI). Finds that while some models approximate the rational benchmark, a distinct 'altruistic' mode emerges where LLMs propose hyper-fair distributions (>50%). Highlights the need for careful testing before deploying AI agents in economic settings.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2025-10</p>
+            <h3><a href="https://www.nber.org/papers/w34423">We Won't Be Missed: Work and Growth in the AGI World (NBER WP 34423)</a></h3>
+            <p>Pascual Restrepo</p>
+            <p>Argues that compute — not human capability — will be the scarce resource in an AGI economy. Most jobs won't be automated because replacing them wouldn't be worth the computing cost, not because they require uniquely human skills. Forthcoming in 'The Economics of Transformative AI' (Agrawal, Brynjolfsson & Korinek, eds.).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://www.nber.org/papers/w35046">Forecasting the Economic Effects of AI (NBER WP 35046)</a></h3>
+            <p>Ezra Karger, Otto Kuusela, Jason Abaluck, Kevin A. Bryan, Basil Halperin, Todd R. Jones, Connacher Murphy, Philip Trammell, Josh Rosenberg, Philip Tetlock, et al.</p>
+            <p>Elicits forecasts from five groups — academic economists, AI company employees, policy researchers, accurate forecasters, and the general public — about AI's economic impact. Finds expectations of substantial AI capability advances by 2030, modest labor force participation declines, and 2.5% annual GDP growth. Under a rapid AI advancement scenario, forecasters project ~4% GDP growth and labor force participation falling to 55% by 2050. Expert disagreement stems primarily from differing views on highly capable AI's economic effects rather than on the pace of AI progress.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://ai-project-website.github.io/AI-assistance-reduces-persistence/">AI Assistance Reduces Persistence and Hurts Independent Performance (arXiv)</a></h3>
+            <p>Grace Liu, Brian Christian, Tsvetomira Dumbalska, Michiel A. Bakker, Rachit Dubey</p>
+            <p>Large-scale experiments show that after just ~10 minutes of AI-assisted problem-solving, participants gave up more frequently and performed worse once the AI was removed, compared to those who never used it. The persistence costs were concentrated among users who prompted AI to solve tasks directly rather than seeking hints. Effects replicated across arithmetic and reading comprehension, suggesting a general consequence of AI-assisted problem-solving rather than a domain-specific one.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://www.nber.org/papers/w35036">How AI Aggregation Affects Knowledge (NBER WP 35036)</a></h3>
+            <p>Daron Acemoglu, Tianyi Lin, Asuman Ozdaglar, James Siderius</p>
+            <p>Examines how AI systems that synthesize population beliefs as training data influence social learning. Using an extended DeGroot model with an AI aggregator, introduces a 'learning gap' metric. Key finding: rapid updating degrades learning, while slower updates and localized aggregators trained on specialized information consistently improve outcomes. Consolidating local systems into a single global aggregator diminishes performance.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://www.nber.org/papers/w35053">Trade in AI-Related Products (NBER WP 35053)</a></h3>
+            <p>Michael E. Waugh</p>
+            <p>Documents international trade patterns in AI-related goods using an LLM classification tool. AI-related products account for 23% of U.S. imports in 2025, with 73% growth since 2023 vs. 3% for non-AI products. Mexico and Taiwan dominate, accounting for roughly half of all U.S. AI-related trade. The U.S. goods trade deficit would have been nearly $200 billion smaller in 2025 without the AI expansion.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/">Use of Gen AI in the Workplace and the Value of Access to Training</a></h3>
+            <p>Ali Hashim, Gizem Kosar, Wilbert van der Klaauw</p>
+            <p>NY Fed research using the November 2025 Survey of Consumer Expectations. College graduates are more than twice as likely to use AI at work (58.7% vs. 22.9%). Only 15.9% of employers provide AI training despite 38% of workers viewing it as important. Workers without AI training access would accept an 11.4% salary cut to gain it; those with access require a 24.2% raise to give it up.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html">Monitoring AI Adoption in the US Economy (FEDS Notes)</a></h3>
+            <p>Jeffrey S. Allen</p>
+            <p>Federal Reserve FEDS Notes article surveying the state of AI adoption across the U.S. economy. Census data show ~18% of firms adopted AI by year-end 2025, while the Atlanta Fed's Survey of Business Uncertainty estimates 78% of the labor force works at firms that have adopted AI. Adoption is highest in professional services and finance. Newer surveys show a stronger link between adoption rates and firm size.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://www.stlouisfed.org/on-the-economy/2026/apr/why-does-ai-adoption-differ-so-much-countries">Why Does AI Adoption Differ So Much across Countries?</a></h3>
+            <p>Alexander Bick, Adam Blandin, David Deming, Nicola Fuchs-Schündeln, Jonas Jessen</p>
+            <p>St. Louis Fed analysis finding that U.S. firms have a higher share of workers using AI than European firms, and that management practices are a surprisingly powerful predictor of cross-country AI adoption. A one-standard-deviation increase in the management index is associated with a 9.6 percentage point increase in AI adoption. The authors argue that narrowing the U.S.-Europe AI adoption gap may require first narrowing the management gap.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924">Global Economic and Financial Implications of AI: Lessons from a Scenario Planning Exercise (IMF Note)</a></h3>
+            <p>Karim Barhoumi, Fabia A. de Carvalho, Michael Gorbanyov, Yosuke Kido, David Koll, Dragana Ostojic, Baoping Shang, Natalia T. Tamirisa, Sally Toms, Era Dabla-Norris, Anh D. M. Nguyen, Yunhui Zhao</p>
+            <p>IMF staff note synthesizing insights from a high-level workshop and scenario-planning exercise co-organized with EconTAI. Argues AI should be treated as a macro-critical transition rather than a standard technology shock. Macroeconomic outcomes will depend less on frontier capability alone than on the speed and breadth of AI diffusion and institutional readiness. Covers implications for growth, labor markets, equality, financial stability, and governance.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://arxiv.org/abs/2603.03144">The Household Impact of Generative AI: Evidence from Internet Browsing Behavior (arXiv)</a></h3>
+            <p>Michael Blank, Gregor Schubert, Miao Ben Zhang</p>
+            <p>Studies generative AI's impact on U.S. households' time allocation using browsing data from 200,000+ home devices (2021–2024). Finds that ChatGPT adoption substantially increases leisure browsing while leaving productive task time unchanged — households primarily use AI for productive non-market tasks (job hunting, travel planning, shopping), freeing up leisure time. Implies large home-productivity gains from generative AI, but raises digital-divide concerns as younger, higher-income users adopt faster.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://www.aeaweb.org/articles?id=10.1257/aeri.20250275">Shifting Work Patterns with Generative AI (AER: Insights, forthcoming)</a></h3>
+            <p>Eleanor W. Dillon, Sonia Jaffe, Nicole Immorlica, Christopher T. Stanton</p>
+            <p>Field experiment across 66 firms and 7,137 knowledge workers randomly given access to a generative AI assistant integrated into the email, meeting, and writing applications they already used. In the second half of the six-month experiment, the 80% of treated workers who actively used the tool spent two fewer hours per week on email and reduced their time working outside regular hours. Beyond these individual time savings the authors detect no shifts in the quantity or composition of workers' tasks, suggesting that broader reallocation of responsibilities requires institutional and team-level changes rather than just individual AI access.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-05</p>
+            <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6514781">AGI Could Lower Interest Rates</a></h3>
+            <p>Caleb Maresca</p>
+            <p>Develops a heterogeneous-agent asset pricing model in which transformative AI capable of automating most human labor can lower interest rates even as it dramatically accelerates growth. Under baseline calibrations, the risk-free rate falls to near zero despite growth rising from 2% to 11%, and the equity premium expands from 6% to over 20%. The key mechanism is that labor displacement risk generates massive precautionary saving demand that outweighs the higher productivity effect. Advises caution when interpreting long-term bond yields as a signal of market expectations of transformative AI. Highlighted by <a href="https://marginalrevolution.com/marginalrevolution/2026/05/agi-could-lower-interest-rates.html">Tyler Cowen</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-05</p>
+            <h3><a href="https://www.nber.org/papers/w35155">When Does Automating AI Research Produce Explosive Growth? (NBER WP 35155)</a></h3>
+            <p>Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek</p>
+            <p>Develops a semi-endogenous growth model with an innovation network to study when AI-driven automation of research leads to superexponential ('explosive') growth. Derives a condition under which two reinforcing channels — a technological feedback loop across research sectors and an economic feedback loop where higher output finances more research — overcome diminishing returns to ideas. In a simulation calibrated to AI progress trends, fully automating software research plus modest (5%) automation elsewhere produces a singularity within six years. Includes an interactive online simulator for exploring growth paths.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-05</p>
+            <h3><a href="https://www.nber.org/papers/w35188">Deep Research on a Loop: Using AI Agents to Construct Economic Datasets (NBER WP 35188)</a></h3>
+            <p>Santiago Afonso, Sebastian Galiani, Ramiro H. Gálvez, Raul A. Sosa</p>
+            <p>Proposes DRIL (Deep Research on a Loop), a methodology that uses AI agents to assemble datasets from publicly available sources. DRIL applies a fixed research instrument across a mapped unit space with a two-stage architecture separating design from implementation. Applied to updating the Global Tax Expenditures Database for eight Latin American and Caribbean countries, producing 129 sources and 136 evidence records at the cost of a standard LLM subscription. Argues that even partial automation of dataset construction can shift the production function of empirical economics.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://www.nber.org/papers/w35123">Understanding Firms' AI Efforts and Their Economic Impact (NBER WP 35123)</a></h3>
+            <p>Tania Babina</p>
+            <p>Reviews firm-level data on artificial intelligence and the emerging evidence on AI's economic effects. Argues that measurement is central: different AI datasets capture different objects (invention vs. use, internal capability vs. outsourcing, realized activity vs. investor perceptions) and can therefore lead to different conclusions. Develops a framework for choosing among these measures and surveys available data sources on firm AI efforts. Synthesizes evidence on AI's effects on firm growth, valuation, productivity, risk, labor, competition, and financial markets.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://conference.nber.org/confer/2026/DTs26/beraja.pdf">The Value of Organizational Learning Technologies</a></h3>
+            <p>Martin Beraja, Eduard Talamàs</p>
+            <p>Introduces a new metric called VOLT (Value of Organizational Learning Technologies) that measures the potential increase in economic output if firms could learn faster. Using 2023 U.S. Census data on business establishments, finds that VOLT for the American economy is approximately 2.0, meaning AI-driven organizational learning technologies have the potential to double aggregate economic output in the long run. Roughly three-quarters of potential gains come from extending firm lifespans rather than boosting productivity directly. Industry-by-industry analysis reveals that knowing how exposed an industry is to LLMs tells almost nothing about how much it stands to gain from AI as an organizational learning tool.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://www.nber.org/papers/w35110">How (Un)stable Are LLM Occupational Exposure Scores? (NBER WP 35110)</a></h3>
+            <p>Michelle Yin, Hoa Vu, Claudia Persico</p>
+            <p>Demonstrates that LLM-based occupational AI exposure measures — widely used to estimate AI's labor market effects — are highly fragile. Replicating the dominant rubric with three frontier models on all 18,797 O*NET tasks, mean exposure diverges 3.6-fold (one model rates 14% of tasks as directly exposed while another rates 51%). In difference-in-differences employment regressions, coefficient magnitudes vary 2.4-fold across annotators, and county-level estimates flip sign depending on which model is used. Formalizes this as non-classical measurement error, cautioning against treating evolving LLMs as static instruments.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-04</p>
+            <h3><a href="https://arxiv.org/abs/2604.03338">The Ideation Bottleneck: Decomposing the Quality Gap Between AI-Generated and Human Economics Research</a></h3>
+            <p>Ning Li</p>
+            <p>Analyzes 953 economics papers — 912 AI-generated from the APE project and 41 human papers published in the AER and AEJ: Economic Policy — to decompose the quality gap into idea quality and execution quality. The idea gap is large (human papers achieve 47.1% mean exceptional probability vs. 16.5% for AI; Cohen's d = 2.23), while the execution gap is smaller (4.38/5.0 vs. 3.84). Idea quality accounts for roughly 71% of the overall quality difference. Only 7 AI papers (0.8%) surpass the median human paper on both dimensions simultaneously, suggesting ideation remains the primary bottleneck to competitive AI-generated economics research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-03</p>
+            <h3><a href="https://www.aeaweb.org/articles?id=10.1257/jel.20251821">Artificial Intelligence–Powered (Finance) Scholarship (JEL)</a></h3>
+            <p>Robert Novy-Marx, Mihail Velikov</p>
+            <p>Published in the Journal of Economic Literature, demonstrates a pipeline for mass-producing academic finance papers using LLMs. After mining 30,000+ potential return predictors from accounting data, the authors use Claude to generate nearly 400 complete, publication-ready papers with distinct theoretical justifications — each indistinguishable from human-authored research. Serves as both a proof of concept for AI-enhanced research efficiency and a cautionary tale about industrializing HARKing (hypothesizing after results are known). Highlighted by <a href="https://marginalrevolution.com/marginalrevolution/2026/06/law-professors-prefer-ai-over-peer-answers.html">Tyler Cowen</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-05</p>
+            <h3><a href="https://www.anthropic.com/research/coding-agents-social-sciences">Coding Agents in the Social Sciences (Anthropic Economic Research)</a></h3>
+            <p>Thomas Lyttelton, Maxim Massenkoff, Nathan Wilmers</p>
+            <p>Research from Anthropic's economics team on how AI agents able to execute research end-to-end will reshape social science. It tests coding agents on real social-science tasks and asks to what extent AI may automate innovation and change research productivity.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-05</p>
+            <h3><a href="https://malizad.github.io/AICodingAgents_Method.pdf">AI Coding Agents in Social Science: Methodologically Diverse, Empirically Consistent, Interpretively Vulnerable</a></h3>
+            <p>Meysam Alizadeh, Fabrizio Gilardi, Mohsen Mosleh, Enkelejda Kasneci</p>
+            <p>A preprint testing whether AI coding agents (Claude Code and Codex) match human methodological diversity in a "many-analysts" design on an immigration and social-policy hypothesis. The agents reproduce human-like method diversity and broadly similar effect estimates, but show a vulnerability at the interpretation layer — a confirmatory prompt flipped Claude Code's verdict from 10% to 90% support without meaningfully changing the coefficients.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-06</p>
+            <h3><a href="https://www.nber.org/papers/w35290">What Investment Data Implies about the AI Transition (NBER WP 35290)</a></h3>
+            <p>Jessica Wachter, Jonathan Wachter</p>
+            <p>The five largest U.S. tech firms spent $380 billion on capex in 2025 and are forecast to roughly double that in 2026 — risking bankruptcy unless expected profits grow commensurately. Embeds this observation in a two-sector open-economy model with rare productivity booms. Calibrating to observed investment implies a boom raises AI-sector productivity by a factor of 2.7, with additional cumulative GDP growth of 5–58 percentage points by 2030 and AI shares of the economy ranging from 8% to 39%.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-06</p>
+            <h3><a href="https://arxiv.org/abs/2606.05383">Can AI Refute Economic Theory? Evidence from Beyond the Knowledge Cutoff (arXiv)</a></h3>
+            <p>Alexis Akira Toda</p>
+            <p>Tests whether AI models (Gemini, Refine, Claude, ChatGPT) can find errors in four published economic theory papers, each containing a known mistake. ChatGPT Pro performed best, occasionally constructing counterexamples and corrected proofs, while other models fared worse. No model located a true error without substantial human guidance. Argues a competent human paired with a frontier model can outperform current peer review, but AI cannot yet refute economic theory on its own. Highlighted by <a href="https://marginalrevolution.com/marginalrevolution/2026/06/how-well-does-current-ai-find-errors-in-economics-papers.html">Tyler Cowen on Marginal Revolution</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-06</p>
+            <h3><a href="https://liser.lu/assets/How-AI-reshapes-skill-demand-in-European-firms-2026-11-en-1.pdf">How AI Reshapes Skill Demand in European Firms (LISER Policy Brief)</a></h3>
+            <p>Terry Gregory, Najada Feimi, Christina Gathmann, David Marguerit</p>
+            <p>LISER policy brief drawing on more than 75 million online job vacancies from Belgium, France, Germany, and Luxembourg between 2018 and 2023 to track how employers' skill requirements evolve as occupations become more exposed to AI. It argues AI is reshaping the content of jobs rather than eliminating them: demand is rising fast for AI-related analytical skills, employers increasingly seek workers who combine analytical tools with judgment and leadership, and the adjustment happens largely within existing occupations. Concludes the policy priority should be reskilling and upskilling within current occupational trajectories.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-06</p>
+            <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6948398">From Microeconomics to AI Research: A Guide for Economists (SSRN)</a></h3>
+            <p>Pavel Kireyev, Roberto Rafael Maura Rivero</p>
+            <p>A 26-page guide arguing that the decisions shaping how AI systems are built and aligned are largely microeconomic problems. It opens with a self-contained primer on the RLHF pipeline, showing that reward modeling, preference aggregation, and policy optimization rest on equivalences with discrete choice, social choice, and principal-agent models. It then maps specific competencies (behavioral economics for annotator biases, mechanism design for feedback elicitation, social choice for preference aggregation, contract theory and information design for alignment, game theory for multi-agent safety, production economics for compute scaling laws) to concrete AI research problems, and closes with practical paths into academia and AI labs plus a companion repository.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-06</p>
+            <h3><a href="https://www.anthropic.com/research/claude-code-expertise">Agentic coding and persistent returns to expertise (Anthropic)</a></h3>
+            <p>Zoe Hitzig, Maxim Massenkoff, Eva Lyubich, Shaoyi Zhang, Ryan Heller, Peter McCrory</p>
+            <p>Anthropic Economic Research report based on a privacy-preserving analysis of ~400,000 Claude Code sessions from ~235,000 people (October 2025 to April 2026). It introduces a framework describing what work is done, who does it, and whether it succeeds. Key findings: people make ~70% of planning decisions while Claude makes ~80% of execution decisions; domain expertise (not coding proficiency) drives success, with sessions rated expert reaching verified success more than twice as often as novice ones; non-software occupations succeed within seven points of software engineers; and the estimated value of the typical task rose ~25% over the seven months.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-06</p>
+            <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6843118">Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools (SSRN)</a></h3>
+            <p>Mert Demirer, Leon Musolff, Liyuan Yang</p>
+            <p>A matched event-study using data on 100,000+ GitHub developers and their AI-usage telemetry to estimate the productivity effects of successive AI coding tools. Autocomplete, interactive coding agents, and autonomous agents raise commits by 40%, 140%, and 180% respectively, but these gains attenuate up the production chain: the 180% commit effect falls to 50% for projects and just 30% for actual releases. The authors interpret this through a weak-link model with an estimated 0.25 elasticity of substitution between AI and human effort (strong complementarity), and confirm the pattern across four app marketplaces. A MIT Sloan working paper.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-06</p>
+            <h3><a href="https://arxiv.org/abs/2606.22337">Theorist Toolbox: Tools for Agent-Based LLM-Assisted Economic Theory Research (arXiv)</a></h3>
+            <p>Moran Koren</p>
+            <p>Argues that by 2026 the binding constraint on machine-assisted economic theory is no longer producing mathematics but trusting it, since a fluent model will prove a false theorem as readily as a true one. Proposes a verification-first protocol instantiated as three methods that differ in how work is checked: a single disciplined pass, an adversarial prover-verifier pair (Claude Opus 4.8 proposing, OpenAI Codex refuting, the author triaging), and a structured multi-agent project with a reviewer gate. Demonstrated on a worked mechanism-design example (a Groves/Pigouvian incentive mechanism for the Gans-Kominers grade-inflation model), concluding that external verification, not model capability, is the key design variable.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-06</p>
+            <h3><a href="https://arxiv.org/abs/2606.20041">AI Economist Agent: An Agentic Framework for Model-Grounded Economic Analysis (arXiv)</a></h3>
+            <p>Masahiro Kato</p>
+            <p>Proposes a RAG-based "AI economist agent" that grounds LLM-generated economic narratives in economic theory and real-world data. Rather than producing quantitative claims with the language model alone, agents plan the analysis, retrieve evidence from knowledge graphs, select appropriate models, and generate reports linked to explicit model-based computations. Demonstrated on two applications: economist report generation for U.S. inflation persistence and Federal Reserve policy, and bank stress-test narratives for U.S. commercial real estate refinancing stress.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="courses-learning">
+        <h2>Courses &amp; Learning</h2>
+        <div class="publication-list compact resource-list-mock">
+          <article class="publication">
+            <p class="pub-meta">course · 2026-01</p>
+            <h3><a href="https://www.coursera.org/learn/economics-of-ai/">The Economics of AI (Coursera)</a></h3>
+            <p>Anton Korinek</p>
+            <p>A free online course (MA/PhD level) taught by Anton Korinek. Covers: the nature of intelligence and information (Week 1); modeling technological progress with AI (Week 2); AI's impact on economic growth, including scenarios like super-exponential "singularity" growth (Week 3); implications for labor markets and inequality (Week 4); and policy responses in the Age of AI (Week 5).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course · 2026-01</p>
+            <h3><a href="https://gabors-data-analysis.com/ai-course/week00/">Doing Data Analysis with AI (Course)</a></h3>
+            <p>Gabor Bekes</p>
+            <p>An open course by Gabor Bekes for incorporating AI into data analysis workflow. Assumes basic econometrics knowledge and teaches how to use LLMs for coding and research. Weekly modules include: coding with AI (Week 0), LLM Review (Week 1), text-as-data (Weeks 5-6), and AI for research including regression controls, IV, diff-in-diff (Weeks 9-11). Open-source with assignments and an AI glossary.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other · 2025-09</p>
+            <h3><a href="https://www.nber.org/conferences/economics-transformative-ai-workshop-fall-2025">Economics of Transformative AI Workshop (NBER, 2025)</a></h3>
+            <p>Anton Korinek</p>
+            <p>An NBER workshop focusing on transformative AI. Researchers presented work on long-term AI impacts - from AI-driven growth models to AI's effect on labor and innovation policy. (Organized by Anton Korinek.)</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2025-09</p>
+            <h3><a href="https://www.kevinbryanecon.com/teaching.html">AI in Economics Teaching</a></h3>
+            <p>Kevin A. Bryan</p>
+            <p>Details Kevin Bryan's innovative use of AI in economics education. In 2023 he developed AI-based "virtual TAs" that answer student questions and generate adaptive quiz questions, greatly improving engagement. Also details his project with Joshua Gans (All Day TA) to personalize learning via AI tutors.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course</p>
+            <h3><a href="https://online.stanford.edu/programs/artificial-intelligence-graduate-certificate">AI Graduate Certificate</a></h3>
+            <p>Stanford Online</p>
+            <p>A credential consisting of several Stanford courses covering core AI concepts. Aimed at professionals who want structured, high-quality education in AI without committing to a full degree.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2025-05</p>
+            <h3><a href="https://x.com/lawrenceng119/status/1918917926067024191">Introduction to Generative AI and LLMs</a></h3>
+            <p>Carlotta Castelluccio</p>
+            <p>Introductory slide deck/webinar explaining how generative models work, plus basics of prompting, fine-tuning, and ethical concerns. Valuable for academics new to AI.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course · 2023-09</p>
+            <h3><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy">Stanford Transformers &amp; LLMs Course (CME 295) - Playlist</a></h3>
+            <p>Afshine Amidi, Shervine Amidi</p>
+            <p>By Afshine & Shervine Amidi (Adjunct Lecturers at Stanford). Full course (20+ lectures) covering NLP's deep learning evolution: word embeddings, attention, the Transformer architecture, pre-training vs. fine-tuning, RLHF as used in ChatGPT, and strategies for deploying LLMs efficiently. Balances theory with practical insights. Course website: <a href="https://cme295.stanford.edu/syllabus/">cme295.stanford.edu/syllabus</a></p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course · 2023-01</p>
+            <h3><a href="https://huggingface.co/learn/agents-course/en/unit0/introduction">AI Agents Course</a></h3>
+            <p>Hugging Face</p>
+            <p>Free, hands-on course on building autonomous AI agents, from basics through multi-step reasoning agents that combine LLM reasoning with real-world tool use.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course · 2023-01</p>
+            <h3><a href="https://github.com/rdali/ML105_Agents">Mini Crash Course on Agentic AI</a></h3>
+            <p>Rola Dali</p>
+            <p>3-hour crash course covering how autonomous AI agents work: the Perception-Decision-Action loop, examples like AlphaGo and AutoGPT, and building a simple ReAct-style agent. Slides, colab notebook, and YouTube recording available.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other</p>
+            <h3><a href="https://github.com/aishwaryanr/awesome-generative-ai-guide/tree/main">Awesome Generative AI Guide (GitHub)</a></h3>
+            <p>Aishwarya Naresh Reganti</p>
+            <p>Comprehensive, frequently updated resource hub with papers, demos, tutorials, interview prep, and open-source implementations for generative AI. Structured as an "Awesome List" with extra guidance.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video</p>
+            <h3><a href="https://www.youtube.com/@statquest">StatQuest: Statistics &amp; ML Explained</a></h3>
+            <p>Josh Starmer</p>
+            <p>Clear, visual explanations of statistics and ML concepts. "Statistics, Machine Learning, Data Science, and AI seem like very scary topics, but since each technique is really just a combination of small and simple steps, they are actually quite simple." Great for building intuition on regression, p-values, neural nets, gradient boosting, etc.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video</p>
+            <h3><a href="https://www.youtube.com/watch?v=IBYbLIhYGp8">OpenAI o1 for Agents and AI Use Cases</a></h3>
+            <p>OpenAI</p>
+            <p>Overview of OpenAI's o1 release with advanced features for building AI agents: extended context windows, improved function calling, and Vision+Voice unified in agents.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2023-01</p>
+            <h3><a href="https://www.youtube.com/watch?v=NKnZYvZA7w4">How LLMs Actually Generate Text</a></h3>
+            <p>LearnThatStack</p>
+            <p>Explains tokenization, next-token probabilities, and sampling to demystify how LLMs generate text. Covers greedy vs. temperature sampling and why LLMs sometimes repeat or err.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course</p>
+            <h3><a href="https://github.com/anthropics/courses">Anthropic Courses</a></h3>
+            <p>Anthropic</p>
+            <p>Anthropic's official educational repository with five hands-on courses: API Fundamentals, Prompt Engineering Interactive Tutorial, Real World Prompting, Prompt Evaluations, and Tool Use. All courses are Jupyter notebooks with practical exercises.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course · 2026-04</p>
+            <h3><a href="https://thinkingwithagents.github.io/">Thinking with Agents: AI Tools for Teaching and Research (UVM Economics Bootcamp)</a></h3>
+            <p>Erkmen G. Aslim, Emily Beam</p>
+            <p>Two-session bootcamp at the University of Vermont introducing economists to agentic AI tools for research and teaching. Session 1 (Apr 22) covers the difference between chat-based and agentic tools, context windows, standing instructions, voice files, and reusable skills, with live demos of website redesign and custom skill creation. Session 2 (Apr 27) focuses on research pipelines and automation — code and paper auditing, lecture-building, and web scraping workflows. Materials include downloadable PDF slide decks, a setup/prep guide, an Applications & Skills page with custom Claude Code skills (e.g., /code-review, /econ-audit), and a curated outside-resources list.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">course · 2026-05</p>
+            <h3><a href="https://youtu.be/j7d5rs0iMlE">OpenAI Codex Full Course: Build &amp; Ship</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>A free ~4-hour video course on agentic coding with OpenAI Codex aimed at economists and researchers, assuming zero experience. Steps through fundamentals — Skills, MCPs, plugins, Git, subagents, and worktrees — with immediate practical payoff, 229 companion slides, and a capstone that builds a web app from scratch.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="coding-with-ai">
+        <h2>Coding with AI</h2>
+        <div class="publication-list compact resource-list-mock">
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://github.com/kylebutts/vscode-stata">Stata Extension for VS Code</a></h3>
+            <p>Kyle Butts</p>
+            <p>VS Code extension for Stata: syntax highlighting, snippets, and running Stata code from the editor. Lets economists enjoy VS Code's features (multi-cursor editing, Git integration) and AI coding assistants while working on data analysis in Stata.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">AI Agents for Economics Research</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>A practical introduction for economists who want to use AI agents for literature review, coding, data work, replication, writing, and slides without needing an enterprise-sized budget. Part of the AI MBA platform. See also the related <a href="<a href="https://www.youtube.com/watch?v=YPv9BqweQIo">VoxDev talk</a>">VoxDev talk</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://causalinf.substack.com/s/claude-code/archive?sort=new">Claude Code for Quantitative Social Science (Substack)</a></h3>
+            <p>Scott Cunningham</p>
+            <p>Ongoing series of 34+ walkthroughs and explanations of using Claude Code for quantitative and empirical social science projects. By the author of Causal Inference: The Mixtape. Topics include: workflow optimization with Deming's zero-error philosophy, comparative audits of causal inference packages (Callaway & Sant'Anna), using Claude Code for cannabis research replication, mobile "Dispatch" workflows, and philosophical reflections on AI-assisted discovery. A rich, practitioner-oriented resource for economists adopting Claude Code.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread</p>
+            <h3><a href="https://x.com/omooretweets/status/2014010732061638949">Building an Agentic Workspace with Cursor + Claude Code</a></h3>
+            <p>Olivia Moore</p>
+            <p>Guide on how to build an agentic workspace using Cursor and Claude Code, aimed at non-technical people.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/">Getting Better at Using Coding Agents</a></h3>
+            <p>Sankalp Shubham</p>
+            <p>Guide on using Claude Code 2.0 and getting better at using coding agents.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://psantanna.com/claude-code-my-workflow/">My Claude Code Setup</a></h3>
+            <p>Pedro H. C. Sant'Anna</p>
+            <p>Pedro Sant'Anna's personal Claude Code workflow and setup guide.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread</p>
+            <h3><a href="https://x.com/aniketapanjwani/status/2021663279307706372">Using Claude Code with Stata</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>Guide on using Claude Code with Stata for economics research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread</p>
+            <h3><a href="https://x.com/aniketapanjwani/status/2025248300115358066">Using Git with Claude Code</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>Guide on using Git with Claude Code for economists.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://sites.google.com/view/claesbackman/tips-for-phd-students">Tips for PhD Students</a></h3>
+            <p>Claes Backman</p>
+            <p>Comprehensive resource guide covering the "hidden curriculum" of academia. Includes dedicated sections on Using AI, LLMs, Claude Code and Cursor (with links to Golub's AI tools overview, Claude Code/Cursor workflows, NotebookLM, AI agents for research) and Claude Code Skills (presentations, posters, feedback systems). Also covers writing, publishing/refereeing, workflow/tables/graphs, presentations, productivity, coding, and stress management. A one-stop hub for PhD students navigating modern academic research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://content-visualizer.vercel.app/public/fIOMcEXnJz">Starting a New Project with Claude Code</a></h3>
+            
+            <p>Step-by-step case study on building an app with Claude Code as a pair programmer, showing an iterative prompt-test-debug loop. Inspiring for people who have ideas but limited coding skills.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2025-12</p>
+            <h3><a href="https://x.com/bentossell/status/2006352820140749073">Coding with Agents Without Being Technical</a></h3>
+            <p>Ben Tossell</p>
+            <p>Thread on using agents (e.g., GPT-Engineer/Manus) to build projects without being a traditional programmer. Main point: being non-technical is no longer a barrier. Focus on problem descriptions and let AI handle implementation.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://docs.anthropic.com/claude/prompt-library">Prompt Library</a></h3>
+            <p>Anthropic</p>
+            <p>Anthropic's official guide with example prompts for Claude. Illustrates techniques like setting role/tone, providing sufficient context, and using few-shot prompting. Each example includes an explanation of why it works well.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://docs.google.com/document/d/1JU8w-E4LlseFZm-ag22GSBU5A2rp2nb7iFGBNAbFL7k/edit?tab=t.0#heading=h.rzqkvs1h1moi">Context Engineering Guide - Google Docs</a></h3>
+            
+            <p>Community-created doc on how to optimally provide context to an LLM. Covers strategies for system vs. user message, how to front-load important details, methods to chunk information, and tricks like using delimiters to anchor model attention.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article</p>
+            <h3><a href="https://medium.com/data-science-in-your-pocket/andrew-ngs-agentic-reviewer-ai-for-research-paper-reviews-1c2d9cda8086">Agentic Reviewer: AI for Research Paper Reviews</a></h3>
+            <p>Andrew Ng</p>
+            <p>Summary of Andrew Ng's project using an AI agent as a reviewer for research papers. The agent follows a reviewing protocol - reading, checking completeness, critiquing each section. Results matched expert reviewers ~60-70% of the time on decisions.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2026-03</p>
+            <h3><a href="https://github.com/aspi6246/ClaudeCodeTools">Claude Code for Academics (presentation + tools)</a></h3>
+            <p>Alessandro Spina</p>
+            <p>A gentle introduction to using Claude Code for academics. Includes presentation slides, an "Editor" persona for academic writing, and a curated collection of Claude Code tools and workflows for research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2026-01</p>
+            <h3><a href="https://claudeblattman.com/">AI for Professionals Who Don't Code</a></h3>
+            <p>Chris Blattman</p>
+            <p>Political economist Chris Blattman (UChicago Harris) documents AI tools and workflows for knowledge workers — from chatbot prompting to advanced Claude Code automation. Includes downloadable skills, templates, and case studies for managing scheduling, email, and research without coding.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2026-04</p>
+            <h3><a href="https://www.youtube.com/watch?v=HzgByl5ZsWE">Claude Code for Applied Economists (Markus Academy)</a></h3>
+            <p>Paul Goldsmith-Pinkham</p>
+            <p>Markus Academy mini-series on using Claude Code for applied economics research (5 of 7 episodes released). Part 1: Getting Started. See also <a href="https://www.youtube.com/watch?v=Rp17XUPxa4I">Part 2: Data Analysis</a>, <a href="https://www.youtube.com/watch?v=wqLZrKdevHs">Part 3: Web Scraping</a>, <a href="https://www.youtube.com/watch?v=4uwI1-9DafU">Part 4: Large Datasets and Structured Databases</a>, and <a href="https://www.youtube.com/watch?v=BxfSiB3Moyo">Part 5: Writing & Thinking</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2026-04</p>
+            <h3><a href="https://claesbackman.substack.com/p/feedback-machines-writing-and-editing">Feedback Machines: AI for Research Paper Review</a></h3>
+            <p>Claes Bäckman</p>
+            <p>Two-part series on using AI to review and improve academic papers. Part 1 covers using Cursor and Claude Code for writing, editing, and getting referee-style feedback. <a href="https://claesbackman.substack.com/p/feedback-machines-ii-using-ai-to">Part 2</a> introduces free Claude Code skills for structured paper review, pre-analysis plan review, grant review, and code–paper correspondence checking. All tools available on <a href="https://github.com/claesbackman/AI-research-feedback">GitHub</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-03</p>
+            <h3><a href="https://x.com/reach_vb/status/2038670509768839458">Codex Plugin for Claude Code</a></h3>
+            <p>OpenAI</p>
+            <p>Official OpenAI plugin that brings Codex into Claude Code workflows. Three commands: /codex:review for a read-only code review, /codex:adversarial-review for a steerable challenge review, and /codex:rescue to hand work off to Codex for a second pass from a different agent. Open source.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2026-04</p>
+            <h3><a href="https://claesbackman.com/claude-code-guide.html">Claude Code in VS Code — For Academic Economists: A Practical Guide</a></h3>
+            <p>Claes Bäckman</p>
+            <p>Practical guide to using Claude Code inside VS Code for academic economic research. Covers installation and setup, recommended extensions for Stata, Python, R, and LaTeX, file format handling, project customization via CLAUDE.md and reusable skill commands, Git integration, and context window management. Tailored to empirical economics workflows such as robustness checks, panel regressions, and research feedback automation.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2026-05</p>
+            <h3><a href="https://adrienmatray-ai.com">An AI Guide for Economists</a></h3>
+            <p>Adrien Matray</p>
+            <p>A practical guide for economists and pre-doc RAs on working with Claude Code, built around "mindset before tooling" — the right mental model, setup, hard rules, an FAQ on common mistakes, and the failure modes to watch for. Emphasizes treating AI as a collaborator that needs careful verification rather than relying on prompt-engineering tricks.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-05</p>
+            <h3><a href="https://github.com/johanfourieza/econtools">econtools: Claude Code Skills for Economics Research</a></h3>
+            <p>Johan Fourie</p>
+            <p>An open-source suite of Claude Code skills for economics research. Its "/tyler" skill (named for Tyler Cowen) converts a folder of academic PDFs into a token-efficient markdown wiki — one lightweight file per paper plus an index — so Claude Code can load an entire literature into context without burning tokens on raw PDF parsing. The suite also includes simulated peer review and more.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-05</p>
+            <h3><a href="https://github.com/Imbad0202/academic-research-skills">Academic Research Skills: A 10-Stage Claude Code Pipeline</a></h3>
+            <p>Cheng-I Wu</p>
+            <p>A free, open-source 10-stage academic research pipeline for Claude Code. It hunts references, formats citations, writes section by section, and runs a simulated peer-review panel (including a "devil's advocate"), with integrity gates that catch fabricated citations and statistical errors. A full 15,000-word paper runs roughly $4–6 in API credits.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2026-05</p>
+            <h3><a href="https://www.linkedin.com/pulse/claude-code-101-academic-researchers-mushtaq-bilal-phd-h6cke">Claude Code 101 for Academic Researchers</a></h3>
+            <p>Mushtaq Bilal</p>
+            <p>A five-part, jargon-free tutorial that helps researchers with no technical background get started with Claude Code — installing it like any app, batch-processing dozens of PDFs at once, coding qualitative interview transcripts, and cleaning up messy spreadsheets.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-05</p>
+            <h3><a href="https://github.com/simonreif/zewwwwEcon">zewwwwEcon: Quarto Templates for Applied Economics</a></h3>
+            <p>Simon Reif</p>
+            <p>Open-source Quarto templates and example project structures for reproducible applied-economics research, designed so AI coding agents work well on top of a fully scripted pipeline from raw data to publishable output (with optional Make and Nix).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2026-05</p>
+            <h3><a href="https://claesbackman.com/overleaf-vscode-guide.html">Linking VS Code and Overleaf — For Academic Economists</a></h3>
+            <p>Claes Bäckman</p>
+            <p>A guide for academic economists on syncing Overleaf with VS Code through either GitHub or Dropbox, so you can use Claude Code and Codex on your LaTeX projects while keeping Overleaf's collaborative editing. Recommends GitHub Desktop for versioned work and Dropbox for real-time coauthoring.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide</p>
+            <h3><a href="https://psantanna.com/claude-code-my-workflow/">Using Claude Code for academic work</a></h3>
+            <p>Pedro H. C. Sant'Anna</p>
+            <p>A comprehensive framework for doing academic research with Claude Code, spanning the full lifecycle from papers and data analysis to presentations. It uses 18 specialized agents and an orchestrator pattern that plans, implements, reviews, and verifies work through structured quality gates, with human oversight at each stage. Highlights include a Beamer-to-Quarto conversion pipeline, adversarial review loops, simulated peer review calibrated to major economics journals, and 52+ slash commands automating tasks such as literature review and manuscript evaluation. Reported as adopted across 15+ research groups in economics, energy, political science, and engineering.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-06</p>
+            <h3><a href="https://github.com/AIScientists-Dev/academic-humanizer">academic-humanizer: Strip AI-Writing Tells from Papers and Grant Proposals</a></h3>
+            
+            <p>An open-source skill for Claude Code, Codex, and similar agents that edits AI-polished academic prose to remove tell-tale AI patterns ("In recent years…", "paves the way", rule-of-three, over-long sentences, em-dashes) while preserving scholarly voice, hedging, definitions, citations, and every number. It matches claims to evidence (no verb stronger than the data) and has a dedicated grant-proposal mode tuned to NSF/NIH structure and first-page primacy. The rules were derived by comparing AI drafts against the team's accepted papers and funded proposals.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="ai-tools-for-research">
+        <h2>AI Tools for Research</h2>
+        <div class="publication-list compact resource-list-mock">
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://storm.genie.stanford.edu/">STORM: AI-Powered Research Reports (Stanford)</a></h3>
+            <p>Stanford OVAL Lab</p>
+            <p>An experimental system that generates a Wikipedia-like report on any topic with the help of AI. Input a topic and STORM will perform web searches, gather information, and interactively help curate it into a structured article with citations. Uses retrieval-augmented generation. Open-source on <a href="<a href="https://github.com/stanford-oval/storm">GitHub</a>">GitHub</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://www.refine.ink/">Refine.ink - AI-powered feedback for researchers</a></h3>
+            <p>Yann Calvó López, Benjamin Golub</p>
+            <p>An AI "referee" for academic writing. Upload a draft and Refine returns a report highlighting issues with correctness, clarity, and consistency - e.g. pointing out if a result doesn't follow from the methodology, or if a term is used inconsistently. Built by Yann Calvó López and Benjamin Golub. "Refine devotes hours of compute to help you find and fix the issues that matter most to readers and reviewers."</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://paperreview.ai/">PaperReview.ai - Stanford Agentic Paper Reviewer</a></h3>
+            <p>Stanford CRFM</p>
+            <p>An experimental agent that acts as a conference reviewer. Input a paper or abstract and it produces a referee report: summarizing contributions, listing strengths and weaknesses, and giving a recommendation. Uses chain-of-thought prompting to emulate how a human reviewer would summarize and then critique.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://scholar.google.com/scholar_labs/search?hl=en">Google Scholar Labs - Ask questions from papers</a></h3>
+            <p>Google</p>
+            <p>"Talk to Scholar" feature allowing natural language questions against scholarly literature. Ask a research question and it will synthesize findings from papers with citations. Uses LLMs fine-tuned on academic text combined with Google's vast index of publications.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://elicit.com/">Elicit: The AI Research Assistant</a></h3>
+            <p>Ought</p>
+            <p>A free tool by Ought that uses language models to help with literature review and Q&A. Ask a research question and it will search academic papers, summarize key findings, extract relevant data or coefficients. Also features paper similarity search and PDF summarization.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-03</p>
+            <h3><a href="https://deepecon.ai/projects/stata-mcp">Stata MCP Server</a></h3>
+            <p>Thomas Monk</p>
+            <p>Brings AI capabilities to Stata through the Model Context Protocol (MCP), enabling Claude and other AI assistants to execute Stata commands, run .do files, and interpret economic data directly from code editors like VS Code and Cursor. Supports paper replication, hypothesis testing, and econometrics learning workflows.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://coarse.ink/">Coarse — AI Paper Reviewer</a></h3>
+            <p>David van Dijcke</p>
+            <p>Open-source AI referee reports for academic papers. No account needed — you pay the API cost directly (typically under $2 per review, 20+ detailed comments). Blind-evaluated against refine.ink, Stanford Agentic Reviewer, and reviewer3.com; scores higher on coverage, specificity, and depth. MIT licensed. See also <a href="https://github.com/Davidvandijcke/coarse">GitHub</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool</p>
+            <h3><a href="https://github.com/getcompanion-ai/feynman">Feynman — Open Source AI Research Agent</a></h3>
+            <p>Companion AI</p>
+            <p>Open-source CLI tool for AI-powered research workflows. Supports deep research briefs with citations, literature reviews, paper auditing against codebases, and experiment replication. Uses multiple research agents (Researcher, Reviewer, Writer, Verifier) with AlphaXiv integration for paper search.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-02</p>
+            <h3><a href="https://arxiv.org/abs/2602.16733">Scaling Reproducibility: An AI-Assisted Workflow for Large-Scale Replication and Reanalysis (arXiv)</a></h3>
+            <p>Yiqing Xu, Leo Yang</p>
+            <p>Develops an AI-assisted workflow (using Claude Code and ChatGPT) that automates full-paper replication at scale — retrieving materials, reconstructing environments, executing code, and matching outputs to reported estimates. Applied to 384 studies (3,382 models) from top political science journals, finding reproducibility rates rose from 29.6% to 79.8% after data archiving mandates.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-04</p>
+            <h3><a href="https://www.coarse.ink">coarse.ink — Open-Source AI Paper Reviewer</a></h3>
+            <p>David Van Dijcke</p>
+            <p>Open-source, not-for-profit AI paper reviewer. Plug in a paper, your OpenRouter API key, and email; reviews cost under $2 using SOTA models (Claude Opus, GPT-5.4) or under $1 with open-source models. Returns an interactive panel with major and minor comments traceable to the text and tickable when addressed. Benchmarks at coarse.ink/compare (judged by Gemini-3.1-pro) rival Reviewer3, Refine.ink, and Stanford Agentic Reviewer. Reviews active for 90 days, no data retention, explicit opt-out of training on all model calls.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-04</p>
+            <h3><a href="https://github.com/mronkko/claude-academic-research">Claude Academic Research (Claude Code plugin)</a></h3>
+            <p>Mikko Rönkkö</p>
+            <p>A Claude Code plugin for academic research workflows. Bundles eight skills covering MCP-grounded citations, empirical integrity checks, systematic literature reviews, Zotero integration (via Better BibTeX), and parallel-critic manuscript revision. Installs from inside Claude Code via /plugin marketplace add mronkko/claude-academic-research; an interactive /setup wizard configures Zotero and metadata-source credentials. Cross-platform (Windows, macOS, Linux).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">paper · 2026-05</p>
+            <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687378">ZeroPaper: An Autonomous Research System (SSRN)</a></h3>
+            <p>Alejandro Lopez-Lira</p>
+            <p>Companion paper for ZeroPaper (https://github.com/alejandroll10/zeropaper), an end-to-end autonomous research pipeline that takes a domain as input and produces a paper of roughly JFQA quality with no human in the loop between launch and finish. The system is built on three premises — state and control flow live outside the model, every stage is verified rather than trusted, and termination is mechanical — and coordinates ~30 specialized agents across 10 stages and 6 adversarial gates (math audit, novelty check, mechanism review, simulated refereeing) under any of three host runtimes (Claude Code, Codex, or Gemini CLI). The paper sets out the design discipline that makes a pipeline this long terminate without drift: ten premises about LLM behavior and six derived principles. Cost is roughly $2/paper amortized under a flat-fee max subscription (~100 papers/month), versus ~1000× more on pay-per-token APIs. Released under a custom share-alike research-use license — free for non-commercial research and education, but submitting any pipeline-produced work to a journal, preprint server, conference, or thesis committee requires prior written notice, and outputs carry a non-cosmetic provenance watermark.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-01</p>
+            <h3><a href="https://openai.com/prism/">Prism: AI-Native LaTeX Workspace for Scientific Research</a></h3>
+            
+            <p>Free cloud-based LaTeX editor with AI assistant (GPT-5.2) embedded directly into the research writing workflow. Features include contextual AI assistance with access to the full project, visual-to-code conversion for diagrams, literature search and citation integration, and real-time collaboration. Particularly relevant for economists writing papers with mathematical models and empirical tables. Free for anyone with a ChatGPT account, with enterprise versions for universities forthcoming.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-05</p>
+            <h3><a href="https://github.com/Ingar30/reviewer">Reviewer: Multi-Agent Referee for Economics Papers</a></h3>
+            <p>Ingar Haaland</p>
+            <p>An open-source, multi-agent reviewer for economics papers that runs locally with Codex. It turns a PDF into a structured, high-quality referee report through a modular, highly customizable pipeline in which every finding is traceable back to a specific agent.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-05</p>
+            <h3><a href="http://ricardotruglia.bol.ucla.edu/ai-tools.html">Econ Journal Matchmaker and Other AI Tools for Economists</a></h3>
+            <p>Ricardo Perez-Truglia</p>
+            <p>A collection of AI tools for economists, including the Econ Journal Matchmaker — which suggests target journals and editors from a paper's abstract or introduction with no login required — and a "Citation Hallucination Police" that checks references for fabricated citations.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-06</p>
+            <h3><a href="https://digitaleconomy.stanford.edu/publication/ai-economic-indicators-june-2026-update/">AI Economic Indicators (Stanford Digital Economy Lab)</a></h3>
+            <p>Connacher Murphy, Erik Brynjolfsson</p>
+            <p>New freely accessible platform from the Stanford Digital Economy Lab to track how AI is reshaping work, productivity, and value creation. The first release introduces three related efforts: the Canaries Dashboard (tracking employment trends by AI exposure level, built with ADP Research), the Takeoff Tracker (evaluating evidence for AI-driven explosive growth), and regularly updated research notes. Aims to replace anecdotes and lagging indicators with timely, trusted evidence.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-06</p>
+            <h3><a href="https://github.com/noejn2/revise-applied-paper">revise-applied-paper: A Claude Code Skill for Refereeing Applied Economics Papers</a></h3>
+            <p>Noé J Nava</p>
+            <p>An open-source Claude Code skill that acts as an automated journal referee for applied economics manuscripts (.qmd, .md, or .tex). It runs a cold subagent that audits the draft against an ~80-item checklist distilled from Marc F. Bellemare's Doing Economics (MIT Press, 2022), produces a referee report with numbered major and minor comments, then applies editing-level fixes while parking substantive items in a to-do ledger. Runs locally and free on top of Claude, supports interactive and autonomous loop modes, and anchors every comment to a citable authority rather than a model's taste. A writing-craft tool, not scientific peer review.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-06</p>
+            <h3><a href="https://github.com/nik1t7n/research-craft-skill">research-craft: An Agent Skill for Better Research Loops</a></h3>
+            <p>Nikita Nosov</p>
+            <p>An open-source agent skill in the SKILL.md format, installable into Claude Code, Codex, Cursor, Gemini CLI and other agents via the skills CLI, that turns vague research work into a tight loop: choosing better problems, improving inputs, forecasting before experiments, keeping research logs, inspecting failures, and publishing useful artifacts. Based on Vivek's essay 'how to be good at research.' Oriented toward ML/AI experiment design rather than economics specifically, but useful for structuring any empirical research workflow.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-06</p>
+            <h3><a href="https://www.copaper.ai/">CoPaper.AI</a></h3>
+            <p>Stanford REAP / StatsPAI</p>
+            <p>An AI research co-authoring platform from Stanford's REAP program (founder Bryce Wang; co-founder and strategic advisor Scott Rozelle). Users upload data (CSV, Excel, JSON, Parquet; up to 20 datasets), set a research direction, and the system generates an empirical paper chapter by chapter with human-in-the-loop review, exporting a complete DOCX with full, reproducible code in Stata, R, and EViews. It supports methods from OLS, logit/probit, fixed effects, and IV to DiD, RDD, synthetic control, decomposition, and causal forests. As a new platform, its track record is still limited.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-06</p>
+            <h3><a href="https://chatgpt.com/g/g-6a20206ca0508191bcbb14e28b35a5b6-chatdid">ChatDiD</a></h3>
+            <p>Clément de Chaisemartin</p>
+            <p>A custom GPT offering expert guidance on difference-in-differences (DiD), including the de Chaisemartin–D'Haultfoeuille heterogeneity-robust estimators and their Stata/R packages (e.g., did_multiplegt). It helps researchers choose the right DiD estimator for their design and accompanies the authors' forthcoming textbook, Causal Inference with Differences-in-Differences: Credible Answers to Hard Questions (Princeton University Press).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-06</p>
+            <h3><a href="https://www.scholara.ai/">Scholara</a></h3>
+            
+            <p>An AI platform (by Stematic Labs) that automates the systematic-review and meta-analysis workflow end to end: building PICO/MeSH search strategies across PubMed, Cochrane, and other databases; triple-agent consensus abstract screening with recorded rationales; schema-based data extraction from PDFs linked back to source paragraphs; and publication-ready forest plots. It is PRISMA-2020 oriented and generates audit-ready flow diagrams, aimed at evidence-synthesis teams across the social and health sciences.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="talks-videos">
+        <h2>Talks &amp; Videos</h2>
+        <div class="publication-list compact resource-list-mock">
+          <article class="publication">
+            <p class="pub-meta">video · 2026-01</p>
+            <h3><a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">AI and the Labor Market (AEA 2026, Li)</a></h3>
+            <p>Danielle Li</p>
+            <p>A high-profile AEA session featuring economists discussing how AI is affecting labor markets. Topics included new evidence on AI-induced job polarization, the impact of generative AI on programmer productivity, and firms' adoption of AI. Early findings suggest AI can increase productivity within certain high-skill jobs but might enable broader automation of routine cognitive tasks. Friday, Jan 3, 2026, 10:15 AM - 12:15 PM (EST).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2026-01</p>
+            <h3><a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">Language Models for Economics (AEA 2026, Ash)</a></h3>
+            <p>Elliott Ash</p>
+            <p>AEA 2026 panel focusing on LLM applications in economic research. Presentations covered using LLMs to parse legal and regulatory text, LLM-based agents for conducting simulated experiments (as in Homo Silicus), and improvements in multilingual models for development economics. Sunday, Jan 5, 2026, 10:15 AM - 12:15 PM (EST).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2025-12</p>
+            <h3><a href="https://www.youtube.com/watch?v=ixyzgnmqAiU">Modern AI for Economics Research (Markus Academy)</a></h3>
+            <p>Benjamin Golub</p>
+            <p>Benjamin Golub overviews AI tools that can accelerate research. Part 1: introduces Cursor, an AI-enhanced code editor. Part 2: discusses agents and custom tools like Refine.ink for draft review. Emphasizes prompting techniques and "low-hanging" uses of AI. (Markus Academy Episode 154)</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2025-12</p>
+            <h3><a href="https://www.youtube.com/watch?v=gb9v5ze0zhU">Using LLMs with Cursor for Economics</a></h3>
+            <p>Benjamin Golub</p>
+            <p>Hands-on Cursor IDE demo showing AI-assisted coding for economic research. Live-codes an example showing how to ask the LLM to generate boilerplate, explain errors, and explore model variations.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2025-12</p>
+            <h3><a href="https://www.youtube.com/watch?v=SAXElKwksM8">Refine.ink Demo for Economics Research</a></h3>
+            <p>Benjamin Golub</p>
+            <p>Refine.ink demo showing AI-generated referee-style feedback on a draft (clarity, consistency, missing citations), with emphasis on human judgment. Showcases how AI can assist in the evaluation stage of research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2023-05</p>
+            <h3><a href="https://www.youtube.com/watch?v=LJGQjozWr0E">A User's Guide to GPT/LLMs for Economic Research (video)</a></h3>
+            <p>Kevin Bryan</p>
+            <p>Markus Academy lecture where Kevin Bryan demonstrates practical ways GPT-4 can augment economic research: debugging Stata code, summarizing literature, checking proofs, with cautions about verification.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other · 2026-06</p>
+            <h3><a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/16/2026-ESIFEconomics-and-AIML-Meeting">2026 ESIF Economics and AI+ML Meeting (Econometric Society)</a></h3>
+            
+            <p>Annual meeting at Cornell (June 16-17) fostering interaction between computer science and economics, with emphasis on AI/ML. Keynotes by David Blei, Annie Liang, Sendhil Mullainathan, Aaron Roth, and Stefan Wager. Co-chaired by Francesca Molinari and Éva Tardos.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other · 2026-07</p>
+            <h3><a href="https://www.nber.org/conferences/si-2026-digital-economics-and-artificial-intelligence">NBER Summer Institute 2026: Digital Economics and Artificial Intelligence</a></h3>
+            
+            <p>Three-day NBER Summer Institute session (July 22-24) on digital economics and AI, organized by Erik Brynjolfsson, Avi Goldfarb, and Catherine Tucker. Held in Cambridge, MA and streamed on YouTube. One of the premier venues for presenting frontier AI economics research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2026-03</p>
+            <h3><a href="https://www.econtalk.org/ai-employment-and-education-with-tyler-cowen/">AI, Employment, and Education (EconTalk)</a></h3>
+            <p>Tyler Cowen, Russ Roberts</p>
+            <p>Tyler Cowen makes the case for integrating AI into higher education and argues college classes should devote significant time to learning how to use AI. Discusses the future of writing and thinking in academia, Cowen's solution to cheating concerns, and whether there's value to education designed to help students become who they want to be rather than ensure mastery of a subject. Cowen also shares how he personally has adapted to AI in his own workflow.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2026-06</p>
+            <h3><a href="https://www.youtube.com/watch?v=aJlg6o0A_Js">Tyler Cowen on the Economics of AI (Sana AI Summit)</a></h3>
+            <p>Tyler Cowen</p>
+            <p>Twenty-minute keynote at the Sana AI Summit in New York. Cowen forecasts AI will add roughly half a percentage point to economic growth — a deliberately sober estimate, because organizations and regulators cannot keep up with the technology. Argues that AI will not cause mass unemployment but will change most jobs, and that the real winners will be people who take initiative in figuring out how AI and agents work, not those with the highest raw intelligence.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other · 2026-05</p>
+            <h3><a href="https://aieconomist.io/resources/empirical-work-in-the-age-of-ai">Empirical Work in the Age of AI (Stanford conference transcript)</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>A readable, talk-by-talk transcript of Stanford's 3.5-hour "Empirical Work in the Age of AI" conference — featuring Susan Athey, Matt Gentzkow, Andrew Hall, and others — compiled so you can pass the whole thing to a coding agent and extract exactly what is useful for your own work.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2026-06</p>
+            <h3><a href="https://aieconomist.io/resources/scott-cunningham-causal-inference-ai">Claude Code, Economics Research, and the Returns to Expertise (The AI Economist)</a></h3>
+            <p>Scott Cunningham, Aniket Panjwani</p>
+            <p>A one-hour interview in which Scott Cunningham joins Aniket Panjwani to discuss what agentic AI changes for empirical economics: faster research production but slower verification, difference-in-differences workflows, cross-language replication and package audits, encoding repeated checks into skills, and why domain expertise still matters when agents can produce polished output. Includes a sectioned companion transcript (some sections require a free newsletter subscription).</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">video · 2026-06</p>
+            <h3><a href="https://www.youtube.com/watch?v=X_jLUDTHgxg">Why Your Codex Goals Suck</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>Short video on how economists can get more out of hours-long Codex and Claude Code 'goals' for research. Panjwani demonstrates converting Kirill Borusyak, Xavier Jaravel, and Jann Spiess's Stata/Python difference-in-differences imputation package into an R package via a ~15-hour overnight Codex goal, emphasizing the importance of defining validation criteria up front rather than leaving them to the agent, and showing how to use Codex and Claude Code together.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="commentary-analysis">
+        <h2>Commentary &amp; Analysis</h2>
+        <div class="publication-list compact resource-list-mock">
+          <article class="publication">
+            <p class="pub-meta">article · 2023-03</p>
+            <h3><a href="https://www.brookings.edu/articles/exploring-the-impact-of-language-models/">Impact of Language Models on Cognitive Automation (Brookings)</a></h3>
+            <p>David Autor, Anton Korinek</p>
+            <p>A Brookings panel moderated by Anton Korinek with David Autor, plus ChatGPT and Claude as special "guests." They discuss cognitive automation, LLMs augmenting worker productivity, the need for worker retraining and policies.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other</p>
+            <h3><a href="https://meleantonio.github.io/awesome-econ-ai-stuff/">Awesome Econ AI Stuff (GitHub)</a></h3>
+            <p>Antonio Mele</p>
+            <p>Curated collection of AI resources for economists: tools, papers, tutorials, and guides for using AI in economic research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-03</p>
+            <h3><a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a></h3>
+            <p>Paul Goldsmith-Pinkham</p>
+            <p>Paul Goldsmith-Pinkham (Assistant Professor of Finance, Yale SOM) argues AI tools compress research timelines while preserving what makes research genuinely valuable. Outlines eight research stages (ideation, design, data assembly, analysis, robustness testing, writing, submission, publication) and argues LLMs accelerate transitions between stages but don't eliminate the need for careful iteration. Addresses two central anxieties: (1) "slop" - more papers published faster with less rigor, p-hacking supercharged by automation; and (2) career anxiety - execution skills (coding, writing) now have lower market value. Claude Code features prominently. Key insight: "The hard part is still knowing where to walk." Skills that distinguish good researchers - taste, institutional knowledge, iterative thinking - become more valuable as execution barriers lower.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2026-01</p>
+            <h3><a href="https://x.com/antoniomele101/status/2011750733440294984">Using AI for Economics Research</a></h3>
+            <p>Antonio Mele</p>
+            <p>Thread with practical tips for economists using AI in daily workflows. Announces a project to make AI coding assistants more useful for day-to-day work - demonstrating how to prompt AI to transform pseudocode into working Stata code, suggest robustness checks. Also teases Refine, his AI referee tool.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2026-01</p>
+            <h3><a href="https://x.com/antoniomele101/status/2007755521835544666">Advanced AI Uses in Research</a></h3>
+            <p>Antonio Mele</p>
+            <p>Response to Joshua Gans's "Reflections on Vibe Researching" post. Reflects on more advanced uses of AI in research: using GPT-4 to verify mathematical derivations, generate synthetic data for testing empirical strategies. Notes current limitations but the promise: "Yes, AI can produce new maths results, although just incremental progress seems possible for now."</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2026-01</p>
+            <h3><a href="https://x.com/ben_golub/status/2007503688332652892">Reflections on AI and Research</a></h3>
+            <p>Ben Golub</p>
+            <p>Ben Golub emphasizes "low-risk uses of AI" that are already yielding returns in research - e.g., using GPT-4 to summarize papers or suggest alternative phrasings. Agrees fully AI-generated research is not yet reliable, but tools like Refine help ensure quality. Balanced view: AI won't replace researchers, but researchers who effectively use AI will outpace those who don't.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-01</p>
+            <h3><a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">Reflections on Vibe Researching (in 2025)</a></h3>
+            <p>Joshua Gans</p>
+            <p>Joshua Gans conducted a year-long experiment with "AI-first" research ("vibe researching"), using AI at every stage of writing papers in 2025. His conclusion: the experiment ultimately failed. While AI-generated mathematics checked out, theoretical oversights in game theory and equilibrium analysis went undetected until peer review. Reduced friction meant he pursued more mediocre ideas to completion. LLMs present results with false confidence, tempting researchers into believing they've discovered something genuine. Tools used: ChatGPT (o1-pro and 5.2 Pro), Gemini, and Refine.ink. Key takeaway: AI accelerates research substantially but cannot replace human taste, peer judgment, or the value of letting ideas develop naturally. A must-read for academics experimenting with AI in their research process. See also <a href="https://x.com/antoniomele101/status/2007755521835544666">Antonio Mele's response thread</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2024-01</p>
+            <h3><a href="https://marginalrevolution.com/marginalrevolution/2024/01/prompts-for-economists.html">Prompts for Economists (Marginal Revolution)</a></h3>
+            <p>Tyler Cowen</p>
+            <p>Tyler Cowen shared example prompts and LLM responses covering six domains identified by Anton Korinek (2023 JEL): ideation & feedback, writing assistance, background research, coding help, data analysis, and math derivations. Curated list assembled by Jesse Lastunen. See also the <a href="https://sites.google.com/view/lastunen/ai-for-economists">example prompts page</a>.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other</p>
+            <h3><a href="https://www.korinek.com/research#h.p_ID_54">Economics of AI Research</a></h3>
+            <p>Anton Korinek</p>
+            <p>Anton Korinek's research page featuring working papers on the economics of AI, including the Generative AI for Economic Research series, AI Governance Handbook, and the Econ TAI Initiative.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other · 2025-08</p>
+            <h3><a href="https://www.legalnodes.com/article/global-ai-regulations-tracker">Global AI Regulations Tracker</a></h3>
+            <p>LegalNodes</p>
+            <p>Interactive tracker summarizing AI-related laws and proposals across countries. Shows the EU's AI Act status, US sectoral AI bills, China's algorithm regulations, etc. Indicates a trend: many jurisdictions converging on rules for AI transparency, risk assessment, and accountability, though approaches differ.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">guide · 2024-01</p>
+            <h3><a href="https://www.gov.uk/government/publications/generative-ai-framework-for-hmg">Generative AI Framework for HMG - GOV.UK</a></h3>
+            <p>UK Cabinet Office</p>
+            <p>UK Cabinet Office guidance on using generative AI in government services. Outlines principles: transparency (disclose AI-generated content), accountability (human oversight of AI decisions), and security (ensuring prompts/outputs don't leak sensitive data). Includes use-case examples and procurement standards.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">other</p>
+            <h3><a href="https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states">AI Watch: Global Regulatory Tracker</a></h3>
+            <p>White &amp; Case</p>
+            <p>Region-by-region roundup of AI regulatory developments. US tracker covers federal initiatives (NIST AI Risk Framework, draft bills) and state laws on AI. Updated frequently.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2025-12</p>
+            <h3><a href="https://www.aifuturesmodel.com/about">AI Futures Model: Scenario Planning Tool</a></h3>
+            
+            <p>Interactive scenario-planning tool to explore different scenarios for AI development and their socioeconomic impacts. Has sliders for variables like rate of AI progress, alignment success, global coordination. Helps model futures thinking for policymakers.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2025-04</p>
+            <h3><a href="https://x.com/vitrupo/status/1911934053378588842">AI Self-Improvement and Recursive Progress</a></h3>
+            <p>Eric Schmidt</p>
+            <p>Eric Schmidt's stark warning: "Year 1: AI replaces most programmers; Year 2: recursive self-improvement begins; Years 3-5: AGI; Year 6: ASI." Suggests that once AI starts improving itself, it accelerates beyond human control. Added to calls for AI governance.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2024-01</p>
+            <h3><a href="https://www.jbs.cam.ac.uk/2024/what-does-it-mean-to-be-a-scholar-in-an-age-of-ai/">What does it mean to be a scholar in an age of AI? - Cambridge Judge</a></h3>
+            <p>Cambridge Judge Business School</p>
+            <p>Essay exploring how academia and the identity of scholars evolve with AI tools. Themes: authenticity and originality, skillset shift, ethical norms. Conclusion: being a scholar still means curiosity, rigor, and critical thinking, but tools and workflows will change.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2025-11</p>
+            <h3><a href="https://www.bbva.com/en/economy-and-finance/bbva-research-launches-a-new-big-data-and-artificial-intelligence-section-to-monitor-the-economy-and-geopolitics-in-real-time/">Big Data and AI for Economy Monitoring</a></h3>
+            <p>BBVA Research</p>
+            <p>BBVA's real-time big-data/AI dashboards (card transaction data, mobility data) for nowcasting GDP or consumer confidence. Demonstrates how AI is operationalized to monitor the pulse of the economy and geopolitics in real time.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2025-09</p>
+            <h3><a href="https://causalinf.substack.com/p/day-4-of-teaching-gov-50-at-harvard">Teaching Gov 50 with AI at Harvard</a></h3>
+            <p>Scott Cunningham</p>
+            <p>Scott Cunningham's notes on introducing students to ChatGPT for coding in R: explaining code, generating example datasets. Candid on-the-ground look at academia's adaptation. Key insight: AI can be a great tutor but we need to teach students to use AI critically.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2025-02</p>
+            <h3><a href="https://x.com/Afinetheorem/status/1886245511046271194/photo/2">AI and Economics Research Roundup (Afinetheorem)</a></h3>
+            <p>Kevin Bryan</p>
+            <p>Kevin Bryan (@Afinetheorem) prompted OpenAI's o3 about academia's future and shared the AI's response. Partly tongue-in-cheek - using AI to advise on AI issues. His timeline provides a real-time chronicle of how a top economist is grappling with and leveraging AI.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2024-07</p>
+            <h3><a href="https://x.com/GaryMarcus/status/1817928914844753973">AI Limitations and Risks</a></h3>
+            <p>Gary Marcus</p>
+            <p>Gary Marcus on limitations and risks of AI. Emphasizes robustness, trustworthiness, and the gap between AI output and true understanding. Valuable counterbalance to hype.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2024-07</p>
+            <h3><a href="https://x.com/LuizaJarovsky/status/1810356348145774617">AI Governance and Human Rights</a></h3>
+            <p>Luiza Jarovsky</p>
+            <p>Legal scholar on AI regulation and ethics. Brings Latin American and human rights angle: highlighting surveillance, data protection (GDPR), and societal impacts on the Global South.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2024-06</p>
+            <h3><a href="https://x.com/johnjhorton/status/1801247494443086039">LLM Agents and Homo Silicus</a></h3>
+            <p>John Horton</p>
+            <p>John Horton on insights from LLM-as-agents work (Homo Silicus): what simulated agents can/cannot capture, and how computational experiments could shape future research.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-03</p>
+            <h3><a href="https://aleximas.substack.com/p/what-is-the-impact-of-ai-on-productivity">What is the impact of AI on productivity?</a></h3>
+            <p>Alex Imas</p>
+            <p>A living document synthesizing all available studies and data on AI's productivity impact. Reviews the disconnect between micro studies (which overwhelmingly find positive effects, especially for low-skill workers) and macro evidence (which is now beginning to show aggregate gains). Updated regularly as new evidence arrives.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-03</p>
+            <h3><a href="https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning">Research on AI and the labor market is still in the first inning</a></h3>
+            <p>Jed Kolko</p>
+            <p>PIIE survey of the state of AI-and-labor research. Reviews high-profile studies combining AI exposure measures with employment data, noting mixed results and methodological challenges. Highlights that AI may create entirely new occupations, and productivity research shows benefits but with important caveats.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">tool · 2026-03</p>
+            <h3><a href="https://kylesaunders.com/university-map/">Mapping the Structural Divide: U.S. Universities vs AI Disruption</a></h3>
+            <p>Kyle Saunders</p>
+            <p>Interactive map of 1,556 U.S. universities across two dimensions: institutional resilience and post-college market positioning. Visualizes which schools are structurally positioned to weather demographic decline, fiscal stress, and AI disruption. Built with Claude.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-03</p>
+            <h3><a href="https://paulgp.substack.com/p/llm-friendly-academic-papers-a-proposal">LLM-Friendly Academic Papers: A Proposal</a></h3>
+            <p>Paul Goldsmith-Pinkham</p>
+            <p>Proposes a standard for making academic papers more accessible to LLMs — bundling papers with an llms.txt orientation file and markdown formatting. Addresses the finding that LLM-generated summaries are nearly five times more likely than human-authored ones to overgeneralize scientific conclusions.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-03</p>
+            <h3><a href="https://marginalrevolution.com/marginalrevolution/2026/03/when-will-the-research-paper-disappear-in-economics.html">When Will the Research Paper Disappear in Economics?</a></h3>
+            <p>Tyler Cowen</p>
+            <p>Cowen argues the individual research paper is no longer scarce — AI can tweak, improve, or review any paper. Top economics journals are already experimenting with Refine for AI-powered reviewing. Suggests economists should focus on publishing "the box" rather than individual papers.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-03</p>
+            <h3><a href="https://causalinf.substack.com/p/explainer-of-ludwig-mullainathan">Explainer of Ludwig, Mullainathan and Rambachan's Econometrics of LLM Paper</a></h3>
+            <p>Scott Cunningham</p>
+            <p>Accessible walkthrough of the Ludwig/Mullainathan/Rambachan econometric framework for using LLMs in empirical research. Breaks down the key insight that LLM measurement error is non-classical and correlated with covariates, explaining why a small validation sample is essential for unbiased inference even with highly accurate LLM labels.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://economics.mit.edu/sites/default/files/2026-04/IA%20AI%20note_1.pdf">Some Thoughts on AI and Research</a></h3>
+            <p>Isaiah Andrews</p>
+            <p>Clark Medal winner Isaiah Andrews (MIT) wrote this note originally for his PhD advisees, then shared it widely. Lays out scenarios for how AI capabilities might evolve and what each means for economics research careers. Key advice: most students are under-investing in learning these tools; pay for the better models; and learn to audit AI output, since models produce plausible-looking results that can be wrong in ways requiring expertise to detect. Widely discussed after Tyler Cowen highlighted it on Marginal Revolution.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">thread · 2026-04</p>
+            <h3><a href="https://x.com/aniketapanjwani/status/2042422649880506443">Codex vs. Claude Code for Economists</a></h3>
+            <p>Aniket Panjwani</p>
+            <p>Panjwani compares OpenAI's Codex and Anthropic's Claude Code for economics research workflows, discussing the strengths and trade-offs of each tool for applied economists.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://blogs.worldbank.org/en/impactevaluations/rethinking-coding-assessment-in-an-ai-assisted-world">Rethinking Coding Assessment in an AI-Assisted World</a></h3>
+            <p>Marina Visintini, Maria Jones, Ankriti Singh</p>
+            <p>World Bank Development Impact blog on how AI tools like Claude Code and Stata MCP now score 77–81% on technical hiring assessments — comparable to median applicants. Rather than restricting AI use, the authors propose evaluating how candidates interact with AI tools, including reviewing chat transcripts alongside final code.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://knowledgeproblem.substack.com/p/ai-price-theory-and-the-future-of">AI, Price Theory, and the Future of Economics Research</a></h3>
+            <p>Lynne Kiesling</p>
+            <p>Argues that AI is a shock to relative prices inside the academic knowledge economy: as routine empirical execution gets cheaper, the value of institutional reasoning, judgment, and price theory rises. Predicts a revival of transaction cost economics and new institutional economics as AI makes it feasible to work with messier, qualitative evidence.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://aleximas.substack.com/p/what-will-be-scarce">What Will Be Scarce?</a></h3>
+            <p>Alex Imas</p>
+            <p>Argues AI won't cause mass unemployment but will trigger structural economic transformation. Drawing on structural change economics, Girard's mimetic desire theory, and consumer expenditure data, Imas shows that income effects account for over 75% of observed structural change. As commodity production gets automated, spending and employment shift toward a 'relational sector' — nursing, education, hospitality, artisanal work — where human involvement is intrinsic to value.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://danbjork.substack.com/p/the-intelligence-is-plenty-but-the">The Intelligence Is Plenty but the Workers Are Few</a></h3>
+            <p>Dan Björkegren</p>
+            <p>Substack essay arguing that advanced AI will play out very differently in low- and middle-income countries than in rich economies. High-income countries can absorb AI by augmenting their large stock of knowledge workers (~41% of employment), but LMICs employ far fewer skilled workers (under 10%), so grafting AI onto a thin layer of expertise yields limited gains. The piece suggests LMICs may benefit more from fully automated intelligence systems that handle complex tasks directly rather than copying wealthy-country adoption patterns — though this requires confronting infrastructure gaps, digital legibility, and institutional constraints. Frames the asymmetry as an opportunity for poorer countries to design novel economic structures around abundant intelligence.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-05</p>
+            <h3><a href="https://causalinf.substack.com/p/what-a-panel-of-economists-said-about">What a Panel of Economists Said About AI in the Production of Research</a></h3>
+            <p>Scott Cunningham, Kosali Simon</p>
+            <p>Writeup of a moderated panel at the NBER Applications of AI in Healthcare meeting (May 8, 2026) featuring Cunningham, Simon, David Bradford, and Coady Wing, with commentary from Emily Beam, Jason Fletcher, and Paul Goldsmith-Pinkham. Key themes: autonomous AI papers are crossing into top-journal quality distributions but verification doesn't scale; AI-assisted specification searching leaves no audit trail; journal editors face a flood of competent-but-uninteresting submissions; restricted-data norms collide with AI tooling; and incentives — not technology — will determine whether AI makes the field better or just bigger.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-05</p>
+            <h3><a href="https://paulgp.substack.com/p/ai-and-the-research-o-ring">AI and the Research O-Ring</a></h3>
+            <p>Paul Goldsmith-Pinkham</p>
+            <p>Argues research follows an O-ring production function (Kremer 1993): output is the product of input qualities across stages, so one weak link drags the whole chain down. AI excels at code, tables, and technical error-catching but remains weaker at ideation and writing — and understanding what an AI agent did is itself costly time. Uses METR benchmarks to show that while 50% reliability is growing exponentially, 80% reliability grows from a much lower base with equivalent uncertainty. Warns against nihilism: the set of feasible research questions has expanded, and the interesting question is which problems economists choose to deploy these tools against.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-05</p>
+            <h3><a href="https://marginalrevolution.com/marginalrevolution/2026/05/will-ai-kill-the-research-paper.html">Will AI kill the research paper?</a></h3>
+            <p>Tyler Cowen</p>
+            <p>Envisions a future where static research papers are replaced by AI-powered 'meta-papers' or 'boxes' — living documents that can be updated with new data, re-run with alternative specifications, and queried by readers in real time. Imagines Fed researchers spending careers improving a monetary-policy meta-paper rather than writing individual papers. Asks whether the people who excel at building these systems will be the same people who become top economists today, and whether the endeavor will be centralized or decentralized.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-05</p>
+            <h3><a href="https://libertystreeteconomics.newyorkfed.org/2026/05/ais-macroeconomic-challenges-and-promises/">AI's Macroeconomic Challenges and Promises</a></h3>
+            <p>Simone Lenzu</p>
+            <p>NY Fed Liberty Street Economics post examining the tension between AI's long-run productivity promise and its short-run costs for inflation, real activity, and financial stability. Notes that major AI firms committed ~$300 billion in capex in 2025 across semiconductors, power grids, and specialized labor, with AI-driven demand pushing up prices. Argues the key macro question is whether AI raises productivity faster than it raises adoption costs. Documents how AI companies shifted from retained-earnings-funded investment to raising over $100 billion in new debt by late 2025, with implications for credit markets and financial stability.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-05</p>
+            <h3><a href="https://olihanney.substack.com/p/10-things-on-ai-and-development">10 Things on AI and Development</a></h3>
+            <p>Oliver Hanney</p>
+            <p>A curated roundup from VoxDev's managing editor of ten of the most interesting recent pieces on AI and development, spanning research and practitioner perspectives — compiled as a counterweight to a development community he argues has been slow to engage with AI's most important questions.</p>
+          </article>
+          <article class="publication">
+            <p class="pub-meta">article · 2026-04</p>
+            <h3><a href="https://franklythecounterfactual.substack.com/p/ai-in-economics">AI in Economics: A Weekly Research Roundup</a></h3>
+            <p>Kosali Simon</p>
+            <p>A weekly Substack newsletter from the O'Neill School of Public and Environmental Affairs at Indiana University that scans new working-paper listings (the NBER 'New This Week' email, the NEP-AIN digest from RePEc, and Google Scholar alerts) and summarizes the most notable new economics research on AI. It covers three angles: AI as a subject of economic study (labor, productivity, trade, public finance), AI as a tool for doing economics (LLMs, ML, agentic coding), and AI as an economic actor (agents that bargain, trade, and compete). Each post offers a paragraph or two per paper with hyperlinked titles; the launch edition includes a full Q1 2026 catch-up archive.</p>
+          </article>
+        </div>
+      </section>
+    </article>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

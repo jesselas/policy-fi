@@ -1,0 +1,239 @@
+﻿<DataConfig xmlns="http://euromod.com/DataConfig.xsd">
+  <DataBase>
+    <ID>0a0e137c-3551-45cf-9f16-594886242e6f</ID>
+    <Name>eg_2019_a1</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection>2019</YearCollection>
+    <YearInc>2019</YearInc>
+    <Currency>national</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>yes</ReadXVariables>
+    <ListStringOutVar />
+    <CoicopVersion />
+    <DBSystemConfig>
+      <SystemID>e71e1518-2bf6-4835-afd8-c14f350bc107</SystemID>
+      <SystemName>EG_2019</SystemName>
+      <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</SwitchablePolicyID>
+        <SystemID>e71e1518-2bf6-4835-afd8-c14f350bc107</SystemID>
+        <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f91b2952-00f2-4191-b3ac-d050f28375ce</SwitchablePolicyID>
+        <SystemID>e71e1518-2bf6-4835-afd8-c14f350bc107</SystemID>
+        <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</SwitchablePolicyID>
+        <SystemID>e71e1518-2bf6-4835-afd8-c14f350bc107</SystemID>
+        <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>6d804522-11d6-484e-83f7-47f26c607afe</SystemID>
+      <SystemName>EG_2020</SystemName>
+      <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</SwitchablePolicyID>
+        <SystemID>6d804522-11d6-484e-83f7-47f26c607afe</SystemID>
+        <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f91b2952-00f2-4191-b3ac-d050f28375ce</SwitchablePolicyID>
+        <SystemID>6d804522-11d6-484e-83f7-47f26c607afe</SystemID>
+        <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</SwitchablePolicyID>
+        <SystemID>6d804522-11d6-484e-83f7-47f26c607afe</SystemID>
+        <DataBaseID>0a0e137c-3551-45cf-9f16-594886242e6f</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</ID>
+    <Name>eg_2021_a1</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection>2021</YearCollection>
+    <YearInc>2021</YearInc>
+    <Currency>national</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>yes</ReadXVariables>
+    <ListStringOutVar />
+    <CoicopVersion />
+    <DBSystemConfig>
+      <SystemID>cc37d7b1-9cac-4f68-b5a0-ad1628117491</SystemID>
+      <SystemName>EG_2021</SystemName>
+      <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</SwitchablePolicyID>
+        <SystemID>cc37d7b1-9cac-4f68-b5a0-ad1628117491</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f91b2952-00f2-4191-b3ac-d050f28375ce</SwitchablePolicyID>
+        <SystemID>cc37d7b1-9cac-4f68-b5a0-ad1628117491</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</SwitchablePolicyID>
+        <SystemID>cc37d7b1-9cac-4f68-b5a0-ad1628117491</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>ee6107a1-6a26-4a48-9a23-7b38531640e4</SystemID>
+      <SystemName>EG_2022</SystemName>
+      <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</SwitchablePolicyID>
+        <SystemID>ee6107a1-6a26-4a48-9a23-7b38531640e4</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f91b2952-00f2-4191-b3ac-d050f28375ce</SwitchablePolicyID>
+        <SystemID>ee6107a1-6a26-4a48-9a23-7b38531640e4</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</SwitchablePolicyID>
+        <SystemID>ee6107a1-6a26-4a48-9a23-7b38531640e4</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>9940436b-4b2f-4a2e-af24-ea4d731518d4</SystemID>
+      <SystemName>EG_2023</SystemName>
+      <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</SwitchablePolicyID>
+        <SystemID>9940436b-4b2f-4a2e-af24-ea4d731518d4</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f91b2952-00f2-4191-b3ac-d050f28375ce</SwitchablePolicyID>
+        <SystemID>9940436b-4b2f-4a2e-af24-ea4d731518d4</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</SwitchablePolicyID>
+        <SystemID>9940436b-4b2f-4a2e-af24-ea4d731518d4</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>f63e6274-9973-464f-b65f-72df46a70b52</SystemID>
+      <SystemName>EG_2024</SystemName>
+      <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</SwitchablePolicyID>
+        <SystemID>f63e6274-9973-464f-b65f-72df46a70b52</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f91b2952-00f2-4191-b3ac-d050f28375ce</SwitchablePolicyID>
+        <SystemID>f63e6274-9973-464f-b65f-72df46a70b52</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</SwitchablePolicyID>
+        <SystemID>f63e6274-9973-464f-b65f-72df46a70b52</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>e08665d1-6ef4-4d88-bc47-5a1b84ab3d2b</SystemID>
+      <SystemName>EG_2025</SystemName>
+      <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</SwitchablePolicyID>
+        <SystemID>e08665d1-6ef4-4d88-bc47-5a1b84ab3d2b</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>f91b2952-00f2-4191-b3ac-d050f28375ce</SwitchablePolicyID>
+        <SystemID>e08665d1-6ef4-4d88-bc47-5a1b84ab3d2b</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</SwitchablePolicyID>
+        <SystemID>e08665d1-6ef4-4d88-bc47-5a1b84ab3d2b</SystemID>
+        <DataBaseID>6dadab49-26db-4f8a-8d8e-38ed5b01f6a4</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+  </DataBase>
+  <Extension>
+    <ID>f04a554d-19c0-40ba-8d85-a5cebc33b28c</ID>
+    <Name>Extreme poverty line</Name>
+    <ShortName>POV</ShortName>
+    <Look>|BUTTON_COLOR=-16760704|</Look>
+  </Extension>
+  <Extension>
+    <ID>f91b2952-00f2-4191-b3ac-d050f28375ce</ID>
+    <Name>Benefit Roll-out adjustment</Name>
+    <ShortName>BRO</ShortName>
+    <Look>|BUTTON_COLOR=-1468806|</Look>
+  </Extension>
+  <Extension>
+    <ID>dd97f4a3-e368-446e-8cb8-2298fdabaa0c</ID>
+    <Name>Poverty scale choice</Name>
+    <ShortName>PSCH</ShortName>
+    <Look>|BUTTON_COLOR=-65536|</Look>
+  </Extension>
+</DataConfig>

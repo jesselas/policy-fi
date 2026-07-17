@@ -1,0 +1,12 @@
+{
+  "files": [
+    "src/**/*.njk",
+    "src/assets/css/style.css",
+    "mock-policy-fi/**/*.html",
+    "mock-policy-fi/**/*.css",
+    "mock-policy-fi/**/*.js"
+  ],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}

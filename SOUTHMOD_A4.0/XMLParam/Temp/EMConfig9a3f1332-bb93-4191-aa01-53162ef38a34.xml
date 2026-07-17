@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<EMConfig>
+  <ERRLOG_FILE>\\mac\home\desktop\projects\myproject2\southmod_a4.0_rw\output\202606181039_errlog.txt</ERRLOG_FILE>
+  <LOG_WARNINGS>yes</LOG_WARNINGS>
+  <EMVERSION>southmod_a4.0_rw</EMVERSION>
+  <UIVERSION>3.8.3</UIVERSION>
+  <PARAMPATH>\\mac\home\desktop\projects\myproject2\southmod_a4.0_rw\XMLParam\Countries\RW\</PARAMPATH>
+  <CONFIGPATH>\\mac\home\desktop\projects\myproject2\southmod_a4.0_rw\XMLParam\Config\</CONFIGPATH>
+  <OUTPUTPATH>\\mac\home\desktop\projects\myproject2\southmod_a4.0_rw\output\</OUTPUTPATH>
+  <DATAPATH>\\mac\home\desktop\projects\myproject2\southmod_a4.0_rw\input\</DATAPATH>
+  <EMCONTENTPATH>\\mac\home\desktop\projects\myproject2\southmod_a4.0_rw\</EMCONTENTPATH>
+  <HEADER_DATE>202606181039</HEADER_DATE>
+  <OUTFILE_DATE>-</OUTFILE_DATE>
+  <LOG_RUNTIME>no</LOG_RUNTIME>
+  <DECSIGN_PARAM>.</DECSIGN_PARAM>
+  <STARTHH>-1</STARTHH>
+  <LASTHH>-1</LASTHH>
+  <COUNTRY_FILE>RW.xml</COUNTRY_FILE>
+  <DATACONFIG_FILE>RW_DataConfig.xml</DATACONFIG_FILE>
+  <DATASET_ID>e1885e59-b3ed-4354-b0df-5616bc7a412e</DATASET_ID>
+  <SYSTEM_ID>d1fcb821-aa62-4245-9e58-f6d1f1d055b9</SYSTEM_ID>
+  <POLICY_SWITCH>POV=744b32fa-c0c0-414f-b3fe-86d4796c5af1=off</POLICY_SWITCH>
+  <POLICY_SWITCH>FOR=0815f060-e18d-419e-a5f7-1d9421401d0b=off</POLICY_SWITCH>
+  <POLICY_SWITCH>MOD=cc1795e3-48cb-47f9-beb0-5727a424750d=off</POLICY_SWITCH>
+  <LAST_RUN>yes</LAST_RUN>
+</EMConfig>

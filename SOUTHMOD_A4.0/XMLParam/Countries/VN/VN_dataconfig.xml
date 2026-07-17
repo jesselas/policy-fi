@@ -1,0 +1,602 @@
+﻿<DataConfig xmlns="http://euromod.com/DataConfig.xsd">
+  <DataBase>
+    <ID>a58caeb8-3e38-4907-9839-bce35fbf6051</ID>
+    <Name>vn_2020_a2</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection>2020</YearCollection>
+    <YearInc>2020</YearInc>
+    <Currency>national</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>yes</ReadXVariables>
+    <ListStringOutVar />
+    <DBSystemConfig>
+      <SystemID>fed0447c-cbd1-4fd5-a689-ff82ecadf871</SystemID>
+      <SystemName>VN_2013</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>fed0447c-cbd1-4fd5-a689-ff82ecadf871</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a6ec38c9-7740-4cdd-b32b-34cd37b8258b</SystemID>
+      <SystemName>VN_2014</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>a6ec38c9-7740-4cdd-b32b-34cd37b8258b</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c295adba-e849-471a-806c-3e17529f57c6</SystemID>
+      <SystemName>VN_2015</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>c295adba-e849-471a-806c-3e17529f57c6</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>b319ad5c-0be1-40bc-9958-82e30e9b23f3</SystemID>
+      <SystemName>VN_2016</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>b319ad5c-0be1-40bc-9958-82e30e9b23f3</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>5595659c-07a2-4735-801d-41a6747fbc11</SystemID>
+      <SystemName>VN_2017</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>5595659c-07a2-4735-801d-41a6747fbc11</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>7d113ef3-45ce-4b51-8d3e-ede1505a8597</SystemID>
+      <SystemName>VN_2018</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>7d113ef3-45ce-4b51-8d3e-ede1505a8597</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>44f22b0f-e2d8-4efd-ba82-a827db6cc5c3</SystemID>
+      <SystemName>VN_2019</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>44f22b0f-e2d8-4efd-ba82-a827db6cc5c3</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>72314c96-adbe-4418-aa65-e8345ae79012</SystemID>
+      <SystemName>VN_2020</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>32ff6069-e8fc-4b05-8627-aefe075b921b</SwitchablePolicyID>
+        <SystemID>72314c96-adbe-4418-aa65-e8345ae79012</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[on]]></Value>
+      </PolicySwitch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>72314c96-adbe-4418-aa65-e8345ae79012</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>89655063-b3dc-49b2-83f6-b2195ddcc8af</SystemID>
+      <SystemName>VN_2021</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>89655063-b3dc-49b2-83f6-b2195ddcc8af</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>16637658-41f0-48d2-9676-d0466b0ae81a</SystemID>
+      <SystemName>VN_2022</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>16637658-41f0-48d2-9676-d0466b0ae81a</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>bce62282-b772-49f6-a8d1-006b69aa631a</SystemID>
+      <SystemName>VN_2023</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>bce62282-b772-49f6-a8d1-006b69aa631a</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>2d38a538-d7d0-46d5-88aa-816fcd1ea185</SystemID>
+      <SystemName>VN_2024</SystemName>
+      <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>2d38a538-d7d0-46d5-88aa-816fcd1ea185</SystemID>
+        <DataBaseID>a58caeb8-3e38-4907-9839-bce35fbf6051</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</ID>
+    <Name>vn_2016_a6</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection>2016</YearCollection>
+    <YearInc>2016</YearInc>
+    <Currency>national</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>yes</ReadXVariables>
+    <ListStringOutVar />
+    <DBSystemConfig>
+      <SystemID>fed0447c-cbd1-4fd5-a689-ff82ecadf871</SystemID>
+      <SystemName>VN_2013</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>fed0447c-cbd1-4fd5-a689-ff82ecadf871</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a6ec38c9-7740-4cdd-b32b-34cd37b8258b</SystemID>
+      <SystemName>VN_2014</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>a6ec38c9-7740-4cdd-b32b-34cd37b8258b</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c295adba-e849-471a-806c-3e17529f57c6</SystemID>
+      <SystemName>VN_2015</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>c295adba-e849-471a-806c-3e17529f57c6</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>b319ad5c-0be1-40bc-9958-82e30e9b23f3</SystemID>
+      <SystemName>VN_2016</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>b319ad5c-0be1-40bc-9958-82e30e9b23f3</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>5595659c-07a2-4735-801d-41a6747fbc11</SystemID>
+      <SystemName>VN_2017</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>5595659c-07a2-4735-801d-41a6747fbc11</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>7d113ef3-45ce-4b51-8d3e-ede1505a8597</SystemID>
+      <SystemName>VN_2018</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>7d113ef3-45ce-4b51-8d3e-ede1505a8597</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>44f22b0f-e2d8-4efd-ba82-a827db6cc5c3</SystemID>
+      <SystemName>VN_2019</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>44f22b0f-e2d8-4efd-ba82-a827db6cc5c3</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>72314c96-adbe-4418-aa65-e8345ae79012</SystemID>
+      <SystemName>VN_2020</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>72314c96-adbe-4418-aa65-e8345ae79012</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>89655063-b3dc-49b2-83f6-b2195ddcc8af</SystemID>
+      <SystemName>VN_2021</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>89655063-b3dc-49b2-83f6-b2195ddcc8af</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>16637658-41f0-48d2-9676-d0466b0ae81a</SystemID>
+      <SystemName>VN_2022</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>16637658-41f0-48d2-9676-d0466b0ae81a</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>bce62282-b772-49f6-a8d1-006b69aa631a</SystemID>
+      <SystemName>VN_2023</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>bce62282-b772-49f6-a8d1-006b69aa631a</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>2d38a538-d7d0-46d5-88aa-816fcd1ea185</SystemID>
+      <SystemName>VN_2024</SystemName>
+      <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>2d38a538-d7d0-46d5-88aa-816fcd1ea185</SystemID>
+        <DataBaseID>cadb8796-4ccc-4387-acab-6f8d797d6ca7</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>07f2d20f-c478-4978-a50b-ae3822f1c87b</ID>
+    <Name>vn_2018_a6</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection>2018</YearCollection>
+    <YearInc>2018</YearInc>
+    <Currency>national</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>yes</ReadXVariables>
+    <ListStringOutVar />
+    <DBSystemConfig>
+      <SystemID>fed0447c-cbd1-4fd5-a689-ff82ecadf871</SystemID>
+      <SystemName>VN_2013</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>fed0447c-cbd1-4fd5-a689-ff82ecadf871</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a6ec38c9-7740-4cdd-b32b-34cd37b8258b</SystemID>
+      <SystemName>VN_2014</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>a6ec38c9-7740-4cdd-b32b-34cd37b8258b</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c295adba-e849-471a-806c-3e17529f57c6</SystemID>
+      <SystemName>VN_2015</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>c295adba-e849-471a-806c-3e17529f57c6</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>b319ad5c-0be1-40bc-9958-82e30e9b23f3</SystemID>
+      <SystemName>VN_2016</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>b319ad5c-0be1-40bc-9958-82e30e9b23f3</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>5595659c-07a2-4735-801d-41a6747fbc11</SystemID>
+      <SystemName>VN_2017</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>5595659c-07a2-4735-801d-41a6747fbc11</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>7d113ef3-45ce-4b51-8d3e-ede1505a8597</SystemID>
+      <SystemName>VN_2018</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>7d113ef3-45ce-4b51-8d3e-ede1505a8597</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>44f22b0f-e2d8-4efd-ba82-a827db6cc5c3</SystemID>
+      <SystemName>VN_2019</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>44f22b0f-e2d8-4efd-ba82-a827db6cc5c3</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>72314c96-adbe-4418-aa65-e8345ae79012</SystemID>
+      <SystemName>VN_2020</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>72314c96-adbe-4418-aa65-e8345ae79012</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>89655063-b3dc-49b2-83f6-b2195ddcc8af</SystemID>
+      <SystemName>VN_2021</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>89655063-b3dc-49b2-83f6-b2195ddcc8af</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>16637658-41f0-48d2-9676-d0466b0ae81a</SystemID>
+      <SystemName>VN_2022</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>16637658-41f0-48d2-9676-d0466b0ae81a</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>bce62282-b772-49f6-a8d1-006b69aa631a</SystemID>
+      <SystemName>VN_2023</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>bce62282-b772-49f6-a8d1-006b69aa631a</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>2d38a538-d7d0-46d5-88aa-816fcd1ea185</SystemID>
+      <SystemName>VN_2024</SystemName>
+      <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+      <PolicySwitch>
+        <SwitchablePolicyID>aa18f8c6-1b51-42c0-b098-e52b44b17601</SwitchablePolicyID>
+        <SystemID>2d38a538-d7d0-46d5-88aa-816fcd1ea185</SystemID>
+        <DataBaseID>07f2d20f-c478-4978-a50b-ae3822f1c87b</DataBaseID>
+        <Value><![CDATA[off]]></Value>
+      </PolicySwitch>
+    </DBSystemConfig>
+  </DataBase>
+  <Extension>
+    <ID>32ff6069-e8fc-4b05-8627-aefe075b921b</ID>
+    <Name>Full Year Adjustment</Name>
+    <ShortName>FYA</ShortName>
+    <Look>|BUTTON_COLOR=-1468806|</Look>
+  </Extension>
+  <Extension>
+    <ID>aa18f8c6-1b51-42c0-b098-e52b44b17601</ID>
+    <Name>Upper Poverty Line</Name>
+    <ShortName>POV</ShortName>
+    <Look>|BUTTON_COLOR=-16744193|</Look>
+  </Extension>
+</DataConfig>
