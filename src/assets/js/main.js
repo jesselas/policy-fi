@@ -464,11 +464,15 @@ function initLibrary() {
     let sectionTotal = 0;
     const activeSection = sections.find(s => s.dataset.groupCategory === state.section);
     const availableTypes = new Set();
+    // On the default view, any sub-filter searches the whole library, so compute
+    // chip availability over that same (deduped) global scope — otherwise types
+    // absent from Recently Added would show greyed even though selecting them works.
+    const availGlobal = globalSearch || state.section === DEFAULT_SECTION;
 
     sections.forEach(section => {
-      const inScope = globalSearch
-        ? !DUPLICATE_SECTIONS.has(section.dataset.groupCategory)
-        : section === activeSection;
+      const cat = section.dataset.groupCategory;
+      const inScope = globalSearch ? !DUPLICATE_SECTIONS.has(cat) : section === activeSection;
+      const inAvailScope = availGlobal ? !DUPLICATE_SECTIONS.has(cat) : section === activeSection;
       const sectionCards = section.querySelectorAll('.resource-card');
 
       let sectionMatches = 0;
@@ -476,12 +480,12 @@ function initLibrary() {
       sectionCards.forEach(card => {
         const matches = cardMatchesSubFilters(card, false);
         if (matches) sectionMatches++;
+        // Types available under query/featured (ignoring the type filter itself)
+        if (inAvailScope && cardMatchesSubFilters(card, true)) availableTypes.add(card.dataset.type);
         if (inScope) {
           sectionTotal++;
           card.style.display = matches ? '' : 'none';
           if (matches) { visible++; sectionVisible++; }
-          // Types available in scope under query/featured (ignoring type filter)
-          if (cardMatchesSubFilters(card, true)) availableTypes.add(card.dataset.type);
         }
       });
 
@@ -766,11 +770,15 @@ function initResearchLibrary() {
     let sectionTotal = 0;
     const activeSection = sections.find(s => s.dataset.groupCategory === state.section);
     const availableTopics = new Set();
+    // On the default view, any sub-filter searches the whole library, so compute
+    // chip availability over that same (deduped) global scope — otherwise topics
+    // absent from Recently Added would show greyed even though selecting them works.
+    const availGlobal = globalSearch || state.section === DEFAULT_SECTION;
 
     sections.forEach(section => {
-      const inScope = globalSearch
-        ? !DUPLICATE_SECTIONS.has(section.dataset.groupCategory)
-        : section === activeSection;
+      const cat = section.dataset.groupCategory;
+      const inScope = globalSearch ? !DUPLICATE_SECTIONS.has(cat) : section === activeSection;
+      const inAvailScope = availGlobal ? !DUPLICATE_SECTIONS.has(cat) : section === activeSection;
       const sectionCards = section.querySelectorAll('.research-card');
 
       let sectionMatches = 0;
@@ -778,12 +786,12 @@ function initResearchLibrary() {
       sectionCards.forEach(card => {
         const matches = cardMatchesSubFilters(card, false);
         if (matches) sectionMatches++;
+        // Topics available under the current query (ignoring the topic filter itself)
+        if (inAvailScope && cardMatchesSubFilters(card, true)) cardTopics(card).forEach(t => availableTopics.add(t));
         if (inScope) {
           sectionTotal++;
           card.style.display = matches ? '' : 'none';
           if (matches) { visible++; sectionVisible++; }
-          // Topics available in scope under the current query (ignoring topic filter)
-          if (cardMatchesSubFilters(card, true)) cardTopics(card).forEach(t => availableTopics.add(t));
         }
       });
 
