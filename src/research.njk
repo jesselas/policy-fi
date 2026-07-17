@@ -20,6 +20,15 @@ jsonLd:
 {% set topics = researchLibrary.topics %}
 
 {% macro pubCard(pub, idx, sectionSlug) %}
+{% set typeShort = {
+  "Peer Reviewed": "Peer reviewed",
+  "Book Chapter": "Chapter",
+  "Other Published Work": "Other",
+  "Technical Note": "Tech note",
+  "Country Report": "Report",
+  "PhD Dissertation": "PhD",
+  "Research Assistance": "Research asst."
+} %}
 <div class="research-card pub-entry" data-category="{{ pub.type }}" data-topics="{{ pub.topics | join('|') }}" data-added="{{ pub.added or '' }}" data-year="{{ pub.year }}" data-searchable="{{ (pub.title + ' ' + (pub.authors or '') + ' ' + (pub.abstract or '') + ' ' + (pub.publication or '') + ' ' + (pub.topics | join(' '))) | lower }}">
   <div class="pub-toggle" aria-expanded="false">
     <span class="pub-toggle-icon"></span>
@@ -27,8 +36,11 @@ jsonLd:
       <span class="pub-title">
         {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
       </span>
-      <div class="research-card-meta">{{ pub.type }} · {{ pub.year }}</div>
       {% if pub.authors %}<div class="pub-authors">With: {{ pub.authors }}</div>{% endif %}
+    </div>
+    <div class="research-card-aside">
+      <span class="card-type">{{ typeShort[pub.type] or pub.type }}</span>
+      <span class="card-date">{{ pub.year }}</span>
     </div>
   </div>
   <div class="pub-details">
@@ -51,9 +63,9 @@ jsonLd:
 
 <h1>Research</h1>
 
-<p class="page-intro">Publications spanning tax-benefit microsimulation, social protection, poverty and inequality, and the economics of technology. Search or filter by publication type and topic area; open any entry for its abstract and a copy-ready citation.</p>
+<p class="page-intro">List of publications. Search or filter by publication type and topic area; open any entry for its abstract and a copy-ready citation.</p>
 
-<div class="library-layout">
+<div class="library-layout research-library">
 
   <aside class="library-sidebar" aria-label="Research filters and navigation">
     <div class="sidebar-search search-wrapper">

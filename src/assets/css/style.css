@@ -48,6 +48,15 @@
   --cat-commentary: #6b7280;
   --cat-intorgs: #2563eb;
   --cat-simdata: #7c3aed;
+  /* Research page category palette (lighter, more varied than the AI palette) */
+  --rcat-recent: #cf9526;
+  --rcat-peer: #1f9aa8;
+  --rcat-chapter: #8360c8;
+  --rcat-other: #3f82d4;
+  --rcat-technote: #e0654f;
+  --rcat-report: #2fa06b;
+  --rcat-phd: #cc5b95;
+  --rcat-assist: #6f77cc;
 }
 
 /* --- Dark theme --- */
@@ -84,6 +93,15 @@
   --cat-commentary: #9aa3b0;
   --cat-intorgs: #7da8f0;
   --cat-simdata: #a785f0;
+  /* Research page category palette (lifted for dark bg) */
+  --rcat-recent: #e6b455;
+  --rcat-peer: #52c3d1;
+  --rcat-chapter: #ab8ee0;
+  --rcat-other: #72a6ec;
+  --rcat-technote: #ef8b76;
+  --rcat-report: #58c48d;
+  --rcat-phd: #e585bb;
+  --rcat-assist: #969fe8;
   color-scheme: dark;
 }
 
@@ -833,15 +851,17 @@ h2.section-label {
 .resource-card[data-category="International Organizations"], [data-category="International Organizations"] { --cat: var(--cat-intorgs); }
 .resource-card[data-category="Simulation & Data"], [data-category="Simulation & Data"] { --cat: var(--cat-simdata); }
 
-/* Research page: one accent per publication type (dots + card left borders) */
-[data-category="Recently Added"] { --cat: var(--cat-talks); }
-[data-category="Peer Reviewed"] { --cat: var(--cat-research); }
-[data-category="Book Chapter"] { --cat: var(--cat-tools); }
-[data-category="Other Published Work"] { --cat: var(--cat-policy); }
-[data-category="Technical Note"] { --cat: var(--cat-coding); }
-[data-category="Country Report"] { --cat: var(--cat-courses); }
-[data-category="PhD Dissertation"] { --cat: var(--cat-prompts); }
-[data-category="Research Assistance"] { --cat: var(--cat-commentary); }
+/* Research page: one accent per publication type (dots + card left borders).
+   Scoped under .research-library so it overrides the AI page's generic
+   Recently-Added/Highlights --cat rules without affecting /ai-econ/. */
+.research-library [data-category="Recently Added"] { --cat: var(--rcat-recent); }
+.research-library [data-category="Peer Reviewed"] { --cat: var(--rcat-peer); }
+.research-library [data-category="Book Chapter"] { --cat: var(--rcat-chapter); }
+.research-library [data-category="Other Published Work"] { --cat: var(--rcat-other); }
+.research-library [data-category="Technical Note"] { --cat: var(--rcat-technote); }
+.research-library [data-category="Country Report"] { --cat: var(--rcat-report); }
+.research-library [data-category="PhD Dissertation"] { --cat: var(--rcat-phd); }
+.research-library [data-category="Research Assistance"] { --cat: var(--rcat-assist); }
 
 .resource-card[data-category] { border-left-color: var(--cat, var(--accent)); }
 
@@ -2382,22 +2402,41 @@ main.container .page-intro {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.25rem;
   min-width: 0;
 }
+
+/* Right-aligned meta column: shortened type over year, both category-tied */
+.research-card .pub-toggle { gap: 0.5rem; }
+
+.research-card-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  flex-shrink: 0;
+  padding-left: 0.85rem;
+  text-align: right;
+}
+
+.research-card-aside .card-type { color: var(--cat, var(--accent)); }
+.research-card-aside .card-date { margin: 0; }
 
 .research-card .pub-title {
   font-size: 0.98rem;
   line-height: 1.35;
 }
 
-.research-card-meta {
-  font-size: 0.75rem;
-  color: var(--text-tertiary);
-  letter-spacing: 0.02em;
-}
-
 .research-card .pub-authors { margin-top: 0; }
+
+/* Card view drops the type/year column — cards get the full width for titles */
+.library-content[data-view="cards"] .research-card .research-card-aside { display: none; }
+
+/* List view: tighter vertical padding so rows read as a compact list */
+.library-content[data-view="list"] .lib-grid .research-card {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 
 .research-card .pub-details {
   padding-left: 1.85rem;
