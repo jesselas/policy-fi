@@ -3659,5 +3659,25 @@
     "type": "guide",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "firestone-empirical-agent",
+    "title": "empirical_agent: Sandboxing and Scoring Agentic LLMs on Econometric Replication",
+    "url": "https://github.com/SimonFirestone1/empirical_agent",
+    "author": "Simon Firestone",
+    "date": "2026-07",
+    "description": "An open-source, end-to-end framework for running, sandboxing, and scoring agentic LLMs on complex data-science and econometric replication tasks. It pairs a claude-empirical-harness that executes agents in isolated Docker environments across repeated trials with econbench_framework, a YAML-configurable scoring system that grades agent outputs against econometric benchmarks (including a pre-built Wallace housing-investment benchmark) using both automated validation and LLM-based scoring. Firestone reports replicating two graduate-level economics papers five times each, concluding that Claude and Codex agents are \"at least as good as an Economics Ph.D. student who has finished their first semester.\"",
+    "shortDescription": "Open framework to sandbox and score agentic LLMs (Claude, Codex) on econometric replication tasks, with Docker isolation and benchmark grading.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "LLM",
+      "agents",
+      "reproducibility"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
