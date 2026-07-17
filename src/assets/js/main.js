@@ -453,11 +453,12 @@ function initLibrary() {
 
   function applyFilters() {
     const isSubFiltering = !!(state.query || state.types.size || state.featured);
-    // From the default "Recently Added" view, a search query searches the ENTIRE
-    // library (results grouped by category, each resource shown once) instead of
-    // only the 20 recent cards. Selecting a specific category first scopes the
-    // search back to that category.
-    const globalSearch = !!state.query && state.section === DEFAULT_SECTION;
+    // From the default "Recently Added" view, any sub-filter (search query, type
+    // chip, or Featured) filters the ENTIRE library (results grouped by category,
+    // each resource shown once) instead of only the recent cards — otherwise a
+    // type like "tool" would only match the few in Recently Added. Selecting a
+    // specific category first scopes the search/filters back to that category.
+    const globalSearch = isSubFiltering && state.section === DEFAULT_SECTION;
 
     let visible = 0;
     let sectionTotal = 0;
@@ -754,10 +755,12 @@ function initResearchLibrary() {
 
   function applyFilters() {
     const isSubFiltering = !!(state.query || state.topics.size);
-    // From the default "Recently Added" view, a search query searches ALL
-    // publications (grouped by type, each shown once). Selecting a specific
-    // category first scopes the search back to that category.
-    const globalSearch = !!state.query && state.section === DEFAULT_SECTION;
+    // From the default "Recently Added" view, any sub-filter (search query or a
+    // topic-area selection) filters ALL publications (grouped by type, each shown
+    // once) — otherwise a broad topic like "AI & technology" would only match the
+    // few cards that happen to be in Recently Added. Selecting a specific category
+    // first scopes the search/topic filter back to that category.
+    const globalSearch = isSubFiltering && state.section === DEFAULT_SECTION;
 
     let visible = 0;
     let sectionTotal = 0;
