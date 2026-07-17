@@ -17,7 +17,7 @@ const topics = [
   'Data & methods',
   'Labor & skills',
   'Microsim',
-  'Inequality',
+  'Poverty & Inequality',
 ];
 
 const recent = publications
