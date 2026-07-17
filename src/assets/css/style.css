@@ -833,6 +833,16 @@ h2.section-label {
 .resource-card[data-category="International Organizations"], [data-category="International Organizations"] { --cat: var(--cat-intorgs); }
 .resource-card[data-category="Simulation & Data"], [data-category="Simulation & Data"] { --cat: var(--cat-simdata); }
 
+/* Research page: one accent per publication type (dots + card left borders) */
+[data-category="Recently Added"] { --cat: var(--cat-talks); }
+[data-category="Peer Reviewed"] { --cat: var(--cat-research); }
+[data-category="Book Chapter"] { --cat: var(--cat-tools); }
+[data-category="Other Published Work"] { --cat: var(--cat-policy); }
+[data-category="Technical Note"] { --cat: var(--cat-coding); }
+[data-category="Country Report"] { --cat: var(--cat-courses); }
+[data-category="PhD Dissertation"] { --cat: var(--cat-prompts); }
+[data-category="Research Assistance"] { --cat: var(--cat-commentary); }
+
 .resource-card[data-category] { border-left-color: var(--cat, var(--accent)); }
 
 /* --- Publication Entries (Research page) --- */
@@ -2342,6 +2352,7 @@ main.container .page-intro {
   margin: 0;
   background: var(--bg-pure);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--cat, var(--accent));
   border-radius: var(--radius-lg);
   padding: 1rem 1.15rem;
   box-shadow: var(--shadow-sm);
