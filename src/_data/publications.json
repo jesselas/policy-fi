@@ -10,8 +10,8 @@
     "citation": "Lastunen, J., Shahir, A.A., Rattenhuber, P., Adu-Ababio, K. & Oliveira, R.C. Performance of Tax-benefit Systems during the COVID-19 Pandemic in Sub-Saharan Africa: A Comparative Perspective (in 'Poor Protection: The Role of Tax-benefit Systems in the Developing World', edited by Jouste, J., Kanbur, R., Pirttilä, J. & Rattenhuber, P.), Oxford University Press, 2025.",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -25,8 +25,8 @@
     "citation": "de Mahieu, A. & Lastunen, J. The Cushioning Effects of Tax-benefit Policies in Viet Nam during the COVID-19 Pandemic (in 'Poor Protection: The Role of Tax-benefit Systems in the Developing World', edited by Jouste, J., Kanbur, R., Pirttilä, J. & Rattenhuber, P.), Oxford University Press, 2025.",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -40,8 +40,8 @@
     "citation": "Oliveira, R., Lastunen, J., Rattenhuber, P., Samarin, M. & Shahir, A.A. The Role of Social Protection and Tax Policies in Cushioning Crisis Impacts on Income and Poverty in Low- and Middle-income Countries: A Rapid Scoping Review (in 'Poor Protection: The Role of Tax-benefit Systems in the Developing World', edited by Jouste, J., Kanbur, R., Pirttilä, J. & Rattenhuber, P.), Oxford University Press, 2025.",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -57,8 +57,8 @@
     "coverage": "Related coverage: <a href=\"https://www.sttinfo.fi/tiedote/72172196/helleaallot-pandemiat-ja-hintashokit-paljastavat-sosiaaliturvan-aukot?publisherId=69818396&amp;lang=fi\" target=\"_blank\" rel=\"noopener\">LABORE press release on the book (in Finnish)</a>.",
     "extras": "Finnish abstract: Luku tarjoaa ensimmäisen suomenkielisen kokoavan katsauksen siihen, millaista talous- ja sosiaalipolitiikkaa matalan ja keskitulotason maat ovat käytännössä harjoittaneet lievittääkseen talousshokkien negatiivisia vaikutuksia, kuinka onnistunutta tai tehokasta tämä politiikka on viime aikoina ollut ja miten kriisien aikana toteutetut politiikkatoimet vaikuttavat politiikkaan kriisien jälkeen. Aihetta lähestytään sekä sosiaalipolitiikan että taloustieteen näkökulmasta.",
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "citation": "Gehlhaus Carew, D., Martin, N., Blumenthal, M., Armour, P. & Lastunen, J. The Potential Economic Value of Unlicensed Spectrum in the 5.9 GHz Frequency Band: Insights for Future Spectrum Allocation Policy, RAND Corporation, RR-2720-COMC, 2018. https://doi.org/10.7249/RR2720",
     "extras": null,
     "topics": [
-      "AI & technology"
+      "AI & Tech"
     ]
   },
   {
@@ -114,7 +114,7 @@
     "citation": "Andrew, M., Marler, T. & Lastunen, J., Acheson-Field, H. & Popper, S. An Analysis of Education and Training Programs in Advanced Manufacturing Using Robotics, RAND Corporation, RR-4244-ARMIP, 2020. https://doi.org/10.7249/RR4244",
     "extras": "Blog: https://www.rand.org/pubs/research_briefs/RB10122.html",
     "topics": [
-      "AI & technology",
+      "AI & Tech",
       "Labor & skills"
     ]
   },
@@ -157,7 +157,7 @@
     "citation": "Silberglitt, R., Lastunen, J., Lauland, A., Watson, M. & Eusebi, C.A. Wearable Technologies for Law Enforcement: Multi-functional Vest System Options, RAND Corporation, Justice Policy Program, National Institute of Justice, RR-2012-NIJ, 2017. https://doi.org/10.7249/RR2012",
     "extras": null,
     "topics": [
-      "AI & technology"
+      "AI & Tech"
     ]
   },
   {
@@ -171,7 +171,7 @@
     "citation": "Melin, G., Zuijdam, F., Good, B., Angelis, J., Enberg, J., Fikkers, D.J., Puukka, J., Swenning, A., Kosk, K., Lastunen, J. & Zege, S. Towards a Future Proof System for Higher Education and Research in Finland, Publications of the Ministry of Education and Culture, 2015: 11, Ministry of Education and Culture, Department for Higher Education and Science Policy, 2015. http://urn.fi/URN:ISBN:978-952-263-349-1",
     "extras": null,
     "topics": [
-      "AI & technology",
+      "AI & Tech",
       "Labor & skills"
     ]
   },
@@ -187,8 +187,8 @@
     "extras": null,
     "added": "2026-04-23",
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -202,8 +202,8 @@
     "citation": "Lastunen, J., de Mahieu, A., Gasior, K., Jara, H.X., Pirttilä, J., Microsimulation of Tax-benefit Systems in the Global South: A Comparative Assessment, WIDER Working Paper 2024/35. Helsinki: UNU-WIDER, 2024. https://doi.org/10.35188/UNU-WIDER/2024/439-9",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -217,8 +217,8 @@
     "citation": "Lastunen, J., Shahir, A.A., Rattenhuber, P., Adu-Ababio, K. & Oliveira, R.C. Performance of Tax-benefit Systems amid COVID-19 Crises in Sub-Saharan Africa: A Comparative Perspective, WIDER Working Paper 130/2023, Helsinki: UNU-WIDER, 2023. https://doi.org/10.35188/UNU-WIDER/2023/438-0",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -232,8 +232,8 @@
     "citation": "de Mahieu, A. & Lastunen, J. Addressing Poverty and Inequality in Viet Nam during the COVID-19 Pandemic: An Examination of the Alleviating Impact of Tax and Benefit Measures, WIDER Working Paper 2023/120, Helsinki: UNU-WIDER, 2023. https://doi.org/10.35188/UNU-WIDER/2023/428-1",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -247,8 +247,8 @@
     "citation": "Oliveira, R., Lastunen, J., Rattenhuber, P., Samarin, M. & Shahir, A.A. The Role of Social Protection and Tax Policies in Cushioning Crisis Impacts on Income and Poverty in Low- and Middle-income Countries: A Rapid Scoping Review, WIDER Working Paper 2023/6. Helsinki: UNU-WIDER, 2023. https://doi.org/10.35188/UNU-WIDER/2023/314-7",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -262,8 +262,8 @@
     "citation": "de Mahieu, A., Lastunen, J., Mukangango, J. & Harerimana, T. Evaluating the Impact of the 2023–2024 Personal Income Tax Reform in Rwanda: An Analysis using Tax-benefit Microsimulation Modelling, WIDER Working Paper 2023/73, Helsinki: UNU-WIDER, 2023. https://doi.org/10.35188/UNU-WIDER/2023/381-9",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -278,7 +278,7 @@
     "extras": null,
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -292,8 +292,8 @@
     "citation": "Wandaogo, A.-A., Sawadogo, F. & Lastunen, J. Does the Adoption of Peer-to-government Mobile Payments Improve Tax Revenue Mobilization in Developing Countries?, WIDER Working Paper 2022/18, Helsinki: UNU-WIDER, 2022. https://doi.org/10.35188/UNU-WIDER/2022/149-5",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "AI & technology"
+      "Microsim",
+      "AI & Tech"
     ]
   },
   {
@@ -307,7 +307,7 @@
     "citation": "Waiswa, R., Lastunen, J., Wright, G., Noble, M., Okello Ayo, J., Isingoma, N.M., Kaidu, T., Kavuma, S., Arinaitwe, I., Mwesigye, M., Asiimwe, W. & Rattenhuber, P. An Assessment of Presumptive Tax in Uganda: Evaluating the 2020 reform and four alternative reform scenarios using UGAMOD, a tax-benefit microsimulation model for Uganda, WIDER Working Paper 2021/163, Helsinki: UNU-WIDER, 2021. https://doi.org/10.35188/UNU-WIDER/2021/103-7",
     "extras": null,
     "topics": [
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -321,7 +321,7 @@
     "citation": "Waiswa, R., Lastunen, J., Wright, G., Noble, M., Okello Ayo, J., Isingoma, N.M., Kaidu, T., Kavuma, S., Arinaitwe, I., Mwesigye, M., Asiimwe, W. & Rattenhuber, P. New Directions for Presumptive Tax in Uganda, WIDER Policy Brief 2021/8, Helsinki: UNU-WIDER, 2021.",
     "extras": null,
     "topics": [
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -335,8 +335,8 @@
     "citation": "Lastunen, J., Rattenhuber, P., Adu-Ababio, K., Gasior, K., Jara, X.H., Jouste, M., McLennan, D., Nichelatti, E., Oliveira, R.C., Pirttilä, J., Richiardi, M. & Wright, G. The Mitigating Role of Tax and Benefit Rescue Packages for Poverty and Inequality in Africa amid the COVID-19 Pandemic, WIDER Working Paper 2021/148, Helsinki: UNU-WIDER, 2021. https://doi.org/10.35188/UNU-WIDER/2021/088-7",
     "extras": null,
     "topics": [
-      "Taxes & benefits",
-      "Poverty & inequality"
+      "Microsim",
+      "Inequality"
     ]
   },
   {
@@ -350,8 +350,8 @@
     "citation": "Lastunen, J., Wright, G., Noble, M., Waiswa, R., Okello Ayo, J. & Isingoma, N.M. Distributional Effects of the COVID-19 Pandemic in Uganda, WIDER Policy Brief 2021/5, Helsinki: UNU-WIDER, 2021.",
     "extras": null,
     "topics": [
-      "Poverty & inequality",
-      "Taxes & benefits"
+      "Inequality",
+      "Microsim"
     ]
   },
   {
@@ -365,7 +365,7 @@
     "citation": "Lastunen, J. Scenarios of the Role of Autonomous Vehicles in Society: Estimating the Net Impact on Professional Driving Jobs, research report, Internet Association, 2018.",
     "extras": null,
     "topics": [
-      "AI & technology",
+      "AI & Tech",
       "Labor & skills"
     ]
   },
@@ -380,7 +380,7 @@
     "citation": "Chen, J., Kumar, K.B., Lastunen, J., Nataraj, S., Nowak, S. & Carter, P. Modeling Outcomes Based on Inequality in Labor Earnings (MOBILE): Model Overview and Policy Experiments, a report describing a general equilibrium model on the U.S. labor market, RAND Corporation, 2017.",
     "extras": null,
     "topics": [
-      "Poverty & inequality",
+      "Inequality",
       "Data & methods"
     ]
   },
@@ -397,7 +397,7 @@
     "added": "2026-05-18",
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -412,7 +412,7 @@
     "extras": null,
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -428,7 +428,7 @@
     "added": "2026-05-18",
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -443,7 +443,7 @@
     "extras": null,
     "added": "2026-04-23",
     "topics": [
-      "AI & technology",
+      "AI & Tech",
       "Data & methods"
     ]
   },
@@ -459,7 +459,7 @@
     "extras": null,
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -474,7 +474,7 @@
     "extras": null,
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -489,7 +489,7 @@
     "extras": null,
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -518,7 +518,7 @@
     "extras": null,
     "topics": [
       "Data & methods",
-      "Taxes & benefits"
+      "Microsim"
     ]
   },
   {
@@ -546,7 +546,7 @@
     "citation": "Lastunen, J. Technological Change and the Skill Premium: 21st Century Evidence, doctoral dissertation, Pardee RAND Graduate School, 2020. Published by the RAND Corporation (RGSD-A1167-1), 2021. https://doi.org/10.7249/RGSDA1167-1",
     "extras": null,
     "topics": [
-      "AI & technology",
+      "AI & Tech",
       "Labor & skills"
     ]
   },
@@ -561,7 +561,7 @@
     "citation": "National Academies of Sciences, Engineering, and Medicine, Advancing Automated and Connected Vehicles: Policy and Planning Strategies for State and Local Transportation Agencies, Research Report 845, Washington, DC: The National Academies Press, 2017. https://doi.org/10.17226/24872",
     "extras": null,
     "topics": [
-      "AI & technology"
+      "AI & Tech"
     ]
   },
   {
@@ -575,8 +575,8 @@
     "citation": "OECD, Making Innovation Benefit All: Policies for Inclusive Growth, OECD Publishing, Paris, 2017.",
     "extras": null,
     "topics": [
-      "AI & technology",
-      "Poverty & inequality"
+      "AI & Tech",
+      "Inequality"
     ]
   },
   {
@@ -591,7 +591,7 @@
     "extras": null,
     "added": "2026-06-08",
     "topics": [
-      "Taxes & benefits",
+      "Microsim",
       "Data & methods"
     ]
   },
@@ -607,7 +607,7 @@
     "extras": null,
     "added": "2026-06-08",
     "topics": [
-      "Taxes & benefits",
+      "Microsim",
       "Data & methods"
     ]
   },
@@ -623,7 +623,7 @@
     "extras": null,
     "added": "2026-04-22",
     "topics": [
-      "Taxes & benefits",
+      "Microsim",
       "Data & methods"
     ]
   }
