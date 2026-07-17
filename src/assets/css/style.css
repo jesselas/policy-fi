@@ -118,6 +118,12 @@ html {
   /* Paint the root canvas in the theme background so navigations never flash the
      browser's default (black in dark-OS mode) before <body> paints. */
   background-color: var(--bg);
+  /* Always reserve the vertical scrollbar track so expanding a card (or any
+     content that crosses the viewport-height threshold) doesn't make the
+     scrollbar appear/disappear — which would shift the centered layout
+     sideways. Harmless no-op where the OS uses overlay scrollbars. */
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 body {
