@@ -2368,6 +2368,12 @@ main.container .page-intro {
    class from .resource-card so the AI page's clamp/expand rules never apply;
    disclosure runs through .pub-details.open (initPubToggles), so the only
    card-vs-list difference is the grid column count. */
+/* Let each card grow on its own when expanded; without this the grid's default
+   align-items: stretch makes a collapsed row-mate stretch to the height of an
+   expanded neighbour (a large empty box that also swallows taps meant for the
+   card below). Scoped to the research grid so the AI page keeps its uniform rows. */
+.research-library .lib-grid { align-items: start; }
+
 .lib-grid .research-card {
   margin: 0;
   background: var(--bg-pure);
