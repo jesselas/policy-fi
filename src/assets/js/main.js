@@ -9,7 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initRecentResearchCards();
   initRecentResearchEqualHeight();
   initCitationCopy();
-  initLibrary();
+  // The AI page and the Research page share the same library markup/ids, so run
+  // exactly one library controller per page: the research variant when research
+  // cards are present, the AI variant otherwise (a no-op on pages with neither).
+  if (document.querySelector('.research-card')) {
+    initResearchLibrary();
+  } else {
+    initLibrary();
+  }
   initMobileNav();
   initThemeToggle();
   initWebMCP();
@@ -679,6 +686,284 @@ function initLibrary() {
   });
 
   /* --- Initial section: URL hash (back-compat) or default --- */
+  const hash = decodeURIComponent(window.location.hash.slice(1));
+  const hashMatch = hash && catLinks.find(l => slug(l.dataset.category) === hash);
+  if (hashMatch) {
+    setSection(hashMatch.dataset.category, false);
+  } else {
+    setSection(DEFAULT_SECTION, false);
+  }
+}
+
+/* --- Research library (/research/) ---
+   A focused adaptation of initLibrary() for the publications library. Kept
+   separate so the AI page (initLibrary) stays untouched. Differences:
+     - the sub-filter is a multi-value "Topic area" (data-topics, pipe-joined)
+       instead of the AI page's single-value data-type,
+     - sorts are "Date added" (data-added, ISO) and "Date of reference"
+       (data-year); there is no author sort and no featured toggle,
+     - disclosure + citation copy are handled globally by initPubToggles() and
+       initCitationCopy(); this controller only adds whole-card click-to-toggle,
+     - the view preference persists under its own key ('researchView'). */
+function initResearchLibrary() {
+  const content = document.getElementById('library-content');
+  if (!content || !content.querySelector('.research-card')) return;
+
+  const searchInput = document.getElementById('resource-search');
+  const catLinks = Array.from(document.querySelectorAll('#category-filters .cat-link'));
+  const topicChips = Array.from(document.querySelectorAll('#type-filters .type-chip'));
+  const resetBtn = document.getElementById('filter-reset');
+  const countEl = document.getElementById('results-count');
+  const noResults = document.getElementById('no-results');
+  const sections = Array.from(content.querySelectorAll('.lib-section'));
+  const cards = Array.from(content.querySelectorAll('.research-card'));
+  const sortButtons = Array.from(document.querySelectorAll('#library-sort .sort-btn'));
+  const viewButtons = Array.from(document.querySelectorAll('.view-btn'));
+
+  const DEFAULT_SECTION = 'Recently Added';
+
+  const state = {
+    section: DEFAULT_SECTION,
+    topics: new Set(),
+    query: '',
+    sort: 'added',
+    desc: true
+  };
+
+  const slug = (cat) => cat.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
+
+  // Topic labels contain spaces and ampersands, so they are pipe-joined in the
+  // data attribute rather than space-joined (unlike the AI page's data-type).
+  const cardTopics = (card) => (card.dataset.topics || '').split('|').filter(Boolean);
+
+  /* Sub-filters (everything except the section choice) */
+  function cardMatchesSubFilters(card, ignoreTopics) {
+    if (!ignoreTopics && state.topics.size) {
+      const ts = cardTopics(card);
+      let any = false;
+      state.topics.forEach(t => { if (ts.includes(t)) any = true; });
+      if (!any) return false;
+    }
+    if (state.query && !card.dataset.searchable.includes(state.query)) return false;
+    return true;
+  }
+
+  // "Recently Added" duplicates cards that also live in the type sections, so it
+  // is hidden during a global search to avoid listing a publication twice.
+  const DUPLICATE_SECTIONS = new Set(['Recently Added']);
+
+  function applyFilters() {
+    const isSubFiltering = !!(state.query || state.topics.size);
+    // From the default "Recently Added" view, a search query searches ALL
+    // publications (grouped by type, each shown once). Selecting a specific
+    // category first scopes the search back to that category.
+    const globalSearch = !!state.query && state.section === DEFAULT_SECTION;
+
+    let visible = 0;
+    let sectionTotal = 0;
+    const activeSection = sections.find(s => s.dataset.groupCategory === state.section);
+    const availableTopics = new Set();
+
+    sections.forEach(section => {
+      const inScope = globalSearch
+        ? !DUPLICATE_SECTIONS.has(section.dataset.groupCategory)
+        : section === activeSection;
+      const sectionCards = section.querySelectorAll('.research-card');
+
+      let sectionMatches = 0;
+      let sectionVisible = 0;
+      sectionCards.forEach(card => {
+        const matches = cardMatchesSubFilters(card, false);
+        if (matches) sectionMatches++;
+        if (inScope) {
+          sectionTotal++;
+          card.style.display = matches ? '' : 'none';
+          if (matches) { visible++; sectionVisible++; }
+          // Topics available in scope under the current query (ignoring topic filter)
+          if (cardMatchesSubFilters(card, true)) cardTopics(card).forEach(t => availableTopics.add(t));
+        }
+      });
+
+      // In global search, drop type sections with no matches so we don't show an
+      // empty heading; otherwise a section shows only when it's the active one.
+      section.style.display = (inScope && (!globalSearch || sectionVisible > 0)) ? '' : 'none';
+
+      // Dim sidebar categories with no matches under current sub-filters
+      const link = catLinks.find(l => l.dataset.category === section.dataset.groupCategory);
+      if (link) link.classList.toggle('is-empty', sectionMatches === 0 && section !== activeSection);
+    });
+
+    // Grey out topic chips not available in scope
+    topicChips.forEach(chip => {
+      const t = chip.dataset.topic;
+      chip.classList.toggle('is-empty', !availableTopics.has(t) && !state.topics.has(t));
+    });
+
+    countEl.textContent = globalSearch
+      ? 'Showing ' + visible + ' across all publications'
+      : (isSubFiltering
+          ? 'Showing ' + visible + ' of ' + sectionTotal + ' in ' + state.section
+          : sectionTotal + ' in ' + state.section);
+    if (resetBtn) resetBtn.classList.toggle('visible', isSubFiltering);
+    noResults.style.display = (visible === 0) ? '' : 'none';
+  }
+
+  /* --- Section (category) selection --- */
+  function setSection(cat, updateHash) {
+    state.section = cat;
+    catLinks.forEach(l => {
+      const isActive = l.dataset.category === cat;
+      l.classList.toggle('active', isActive);
+      if (isActive) {
+        l.classList.remove('is-empty');
+        l.setAttribute('aria-current', 'true');
+      } else {
+        l.removeAttribute('aria-current');
+      }
+    });
+    applyFilters();
+    if (updateHash) {
+      history.replaceState(null, '', '#' + slug(cat));
+    }
+  }
+
+  catLinks.forEach(link => {
+    link.addEventListener('click', () => setSection(link.dataset.category, true));
+  });
+
+  /* --- Topic chips (multi-select) --- */
+  topicChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const t = chip.dataset.topic;
+      if (state.topics.has(t)) state.topics.delete(t);
+      else state.topics.add(t);
+      chip.classList.toggle('active', state.topics.has(t));
+      applyFilters();
+    });
+  });
+
+  /* --- Search --- */
+  if (searchInput) {
+    searchInput.addEventListener('input', debounce(() => {
+      state.query = searchInput.value.toLowerCase().trim();
+      applyFilters();
+    }, 150));
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        state.query = '';
+        applyFilters();
+        searchInput.blur();
+      }
+    });
+
+    // "/" focuses search from anywhere on the page
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && !e.metaKey && !e.ctrlKey &&
+          !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  }
+
+  /* --- Reset (clears sub-filters, keeps current category) --- */
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      state.topics.clear();
+      state.query = '';
+      if (searchInput) searchInput.value = '';
+      topicChips.forEach(c => c.classList.remove('active'));
+      applyFilters();
+    });
+  }
+
+  /* --- Sort (within each section) --- */
+  function cardKey(card, sort) {
+    if (sort === 'added') return card.dataset.added || '';
+    if (sort === 'date') return card.dataset.year || '';
+    return '';
+  }
+
+  function applySort() {
+    sections.forEach(section => {
+      const grid = section.querySelector('.lib-grid');
+      if (!grid) return;
+      const sectionCards = Array.from(grid.querySelectorAll('.research-card'));
+      // Entries without the sort key sort last (mainly `added`, absent on most).
+      const emptyLast = true;
+
+      sectionCards.sort((a, b) => {
+        const ka = cardKey(a, state.sort);
+        const kb = cardKey(b, state.sort);
+        if (emptyLast) {
+          const aEmpty = ka === '' || ka == null;
+          const bEmpty = kb === '' || kb == null;
+          if (aEmpty && !bEmpty) return 1;
+          if (!aEmpty && bEmpty) return -1;
+        }
+        const cmp = String(ka).localeCompare(String(kb));
+        return state.desc ? -cmp : cmp;
+      });
+
+      sectionCards.forEach(c => grid.appendChild(c));
+    });
+  }
+
+  sortButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sort = btn.dataset.sort;
+      if (state.sort === sort) {
+        state.desc = !state.desc;
+      } else {
+        state.sort = sort;
+        state.desc = true; // newest first by default for both date sorts
+      }
+      sortButtons.forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.classList.toggle('desc', b === btn && state.desc);
+      });
+      applySort();
+    });
+  });
+
+  const defaultSortBtn = sortButtons.find(b => b.dataset.sort === state.sort);
+  if (defaultSortBtn) {
+    defaultSortBtn.classList.add('active');
+    if (state.desc) defaultSortBtn.classList.add('desc');
+  }
+  applySort();
+
+  /* --- View toggle (cards / list), persisted under its own key --- */
+  function setView(view) {
+    content.dataset.view = view;
+    viewButtons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
+    try { localStorage.setItem('researchView', view); } catch (e) {}
+  }
+
+  viewButtons.forEach(btn => {
+    btn.addEventListener('click', () => setView(btn.dataset.view));
+  });
+
+  try {
+    const savedView = localStorage.getItem('researchView');
+    if (savedView === 'list' || savedView === 'cards') setView(savedView);
+  } catch (e) {}
+
+  /* --- Whole-card click-to-toggle (disclosure itself handled by initPubToggles) --- */
+  cards.forEach(card => {
+    const toggle = card.querySelector('.pub-toggle');
+    if (!toggle) return;
+    card.addEventListener('click', (e) => {
+      // Ignore clicks on interactive children, selectable citation text, or the
+      // toggle header (which fires its own handler) to avoid double-toggling.
+      if (e.target.closest('a, button, input, textarea, label, .citation-text, .pub-toggle')) return;
+      toggle.click();
+    });
+  });
+
+  /* --- Initial section: URL hash (deep link) or default --- */
   const hash = decodeURIComponent(window.location.hash.slice(1));
   const hashMatch = hash && catLinks.find(l => slug(l.dataset.category) === hash);
   if (hashMatch) {

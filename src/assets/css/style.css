@@ -2333,6 +2333,72 @@ main.container .page-intro {
 .lib-grid .resource-card:nth-child(4) { animation-delay: 0.12s; }
 .lib-grid .resource-card:nth-child(n+5) { animation-delay: 0.15s; }
 
+/* --- Research library cards (/research/) ---
+   Boxed, collapsible publication cards in the shared library grid. A distinct
+   class from .resource-card so the AI page's clamp/expand rules never apply;
+   disclosure runs through .pub-details.open (initPubToggles), so the only
+   card-vs-list difference is the grid column count. */
+.lib-grid .research-card {
+  margin: 0;
+  background: var(--bg-pure);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: box-shadow var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.lib-grid .research-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  background: var(--accent-faint);
+}
+
+/* Interactive children keep their own cursor */
+.research-card a,
+.research-card button,
+.research-card .citation-text { cursor: auto; }
+.research-card a,
+.research-card button { cursor: pointer; }
+
+.research-card .pub-toggle {
+  align-items: flex-start;
+  padding: 0;
+}
+
+.research-card .pub-toggle-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.research-card .pub-title {
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.research-card-meta {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.research-card .pub-authors { margin-top: 0; }
+
+.research-card .pub-details {
+  padding-left: 1.85rem;
+}
+
+/* List view keeps the boxed cards but stacks them one per row. The shared list
+   rule zeroes the grid gap (suited to borderless resource rows), so restore a
+   gap for these boxed cards. */
+.library-content[data-view="list"] .lib-grid:has(.research-card) {
+  gap: 0.75rem;
+}
+
 /* Short sort labels are hidden on desktop (shown on mobile) */
 .sort-short { display: none; }
 

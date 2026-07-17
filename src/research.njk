@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Research
+wide: true
 description: "Publications by Jesse Lastunen — tax-benefit microsimulation, social policy, COVID-19 impacts, and AI in economics."
 jsonLd:
   "@context": "https://schema.org"
@@ -14,40 +15,137 @@ jsonLd:
     url: "https://policy.fi"
 ---
 
-<h1>Research</h1>
+{% set categories = researchLibrary.categories %}
+{% set recent = researchLibrary.recent %}
+{% set topics = researchLibrary.topics %}
 
-{% for section in researchSections %}
-  {% set type = section.type %}
-  <div class="info-section">
-    <h2 class="section-label">{{ section.label }}</h2>
-    {% for pub in section.pubs %}
-    <div class="pub-entry">
-      <div class="pub-toggle" aria-expanded="false">
-        <span class="pub-toggle-icon"></span>
-        <span class="pub-title">
-          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
-        </span>
-      </div>
-      <div class="pub-details">
-        <div class="pub-details-inner">
-          {% if pub.authors %}<div class="pub-authors">With: {{ pub.authors }}</div>{% endif %}
-          <div class="pub-venue">{{ pub.publication }}</div>
-          {% if pub.abstract %}<div class="pub-description">{{ pub.abstract | linkify | safe }}</div>{% endif %}
-          {% if pub.extras %}<div class="pub-description"><em>{{ pub.extras | linkify | safe }}</em></div>{% endif %}
-          {% if pub.coverage %}<div class="pub-description">{{ pub.coverage | safe }}</div>{% endif %}
-          <div class="citation-box">
-            <div class="citation-text" id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}">{{ pub.citation | linkify | safe }}</div>
-            <div class="citation-buttons">
-              <button class="citation-copy" data-cite-id="cite-{{ loop.index0 }}-{{ type | lower | replace(' ', '-') }}" data-format="plain" aria-label="Copy citation">Copy Citation</button>
-              <button class="citation-copy" data-bibtex='{"authors":"{{ pub.citation.split(".")[0] | replace("'", "") }}","title":"{{ pub.title | replace("'", "") }}","year":"{{ pub.year }}","venue":"{{ pub.publication | replace("'", "") }}","url":"{{ pub.url or "" }}"}' data-format="bibtex" aria-label="Copy BibTeX">BibTeX</button>
-            </div>
-          </div>
+{% macro pubCard(pub, idx, sectionSlug) %}
+<div class="research-card pub-entry" data-category="{{ pub.type }}" data-topics="{{ pub.topics | join('|') }}" data-added="{{ pub.added or '' }}" data-year="{{ pub.year }}" data-searchable="{{ (pub.title + ' ' + (pub.authors or '') + ' ' + (pub.abstract or '') + ' ' + (pub.publication or '') + ' ' + (pub.topics | join(' '))) | lower }}">
+  <div class="pub-toggle" aria-expanded="false">
+    <span class="pub-toggle-icon"></span>
+    <div class="pub-toggle-body">
+      <span class="pub-title">
+        {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      </span>
+      <div class="research-card-meta">{{ pub.type }} · {{ pub.year }}</div>
+      {% if pub.authors %}<div class="pub-authors">With: {{ pub.authors }}</div>{% endif %}
+    </div>
+  </div>
+  <div class="pub-details">
+    <div class="pub-details-inner">
+      <div class="pub-venue">{{ pub.publication }}</div>
+      {% if pub.abstract %}<div class="pub-description">{{ pub.abstract | linkify | safe }}</div>{% endif %}
+      {% if pub.extras %}<div class="pub-description"><em>{{ pub.extras | linkify | safe }}</em></div>{% endif %}
+      {% if pub.coverage %}<div class="pub-description">{{ pub.coverage | safe }}</div>{% endif %}
+      <div class="citation-box">
+        <div class="citation-text" id="cite-{{ sectionSlug }}-{{ idx }}">{{ pub.citation | linkify | safe }}</div>
+        <div class="citation-buttons">
+          <button class="citation-copy" data-cite-id="cite-{{ sectionSlug }}-{{ idx }}" data-format="plain" aria-label="Copy citation">Copy Citation</button>
+          <button class="citation-copy" data-bibtex='{"authors":"{{ pub.citation.split(".")[0] | replace("'", "") }}","title":"{{ pub.title | replace("'", "") }}","year":"{{ pub.year }}","venue":"{{ pub.publication | replace("'", "") }}","url":"{{ pub.url or "" }}"}' data-format="bibtex" aria-label="Copy BibTeX">BibTeX</button>
         </div>
       </div>
     </div>
-    {% endfor %}
   </div>
-{% endfor %}
+</div>
+{% endmacro %}
+
+<h1>Research</h1>
+
+<p class="page-intro">Publications spanning tax-benefit microsimulation, social protection, poverty and inequality, and the economics of technology. Search or filter by publication type and topic area; open any entry for its abstract and a copy-ready citation.</p>
+
+<div class="library-layout">
+
+  <aside class="library-sidebar" aria-label="Research filters and navigation">
+    <div class="sidebar-search search-wrapper">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="search" class="search-input" id="resource-search" placeholder="Search…" aria-label="Search publications">
+      <span class="search-kbd" aria-hidden="true">/</span>
+    </div>
+
+    <span class="sidebar-label">Categories</span>
+    <nav class="cat-nav" id="category-filters" aria-label="Publication categories">
+      <button class="cat-link" data-category="Recently Added">
+        <span class="cat-dot"></span>
+        <span class="cat-name">Recently Added</span>
+        <span class="cat-count">{{ recent.length }}</span>
+      </button>
+      {% for cat in categories %}
+      <button class="cat-link" data-category="{{ cat.type }}">
+        <span class="cat-dot"></span>
+        <span class="cat-name">{{ cat.label }}</span>
+        <span class="cat-count">{{ cat.pubs.length }}</span>
+      </button>
+      {% endfor %}
+    </nav>
+
+    <div class="sidebar-extra">
+      <span class="sidebar-label">Topic area</span>
+      <div class="type-chips" id="type-filters" role="group" aria-label="Filter by topic area">
+        {% for topic in topics %}
+        <button class="type-chip" data-topic="{{ topic }}">{{ topic }}</button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="sidebar-meta">
+      <span id="results-count">{{ publications.length }} publications</span><br>
+      <button class="sidebar-reset" id="filter-reset">Reset filters</button>
+    </div>
+  </aside>
+
+  <div class="library-content" data-view="list" id="library-content">
+
+    <div class="library-toolbar">
+      <div class="toolbar-group" id="library-sort" role="group" aria-label="Sort publications">
+        <span class="toolbar-label">Sort</span>
+        <button type="button" class="sort-btn" data-sort="added"><span class="sort-full">Date added</span><span class="sort-short">Added</span></button>
+        <button type="button" class="sort-btn" data-sort="date"><span class="sort-full">Date of reference</span><span class="sort-short">Date</span></button>
+      </div>
+      <div class="toolbar-end">
+      <span class="toolbar-updated">{{ publications.length }} publications · updated {{ buildMonth }}</span>
+      <div class="toolbar-group" role="group" aria-label="View options">
+        <span class="toolbar-label">View</span>
+        <button type="button" class="view-btn" data-view="cards" aria-label="Card view" title="Card view">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+        </button>
+        <button type="button" class="view-btn active" data-view="list" aria-label="List view" title="List view">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+      </div>
+    </div>
+
+    <section class="lib-section" id="recently-added" data-group-category="Recently Added">
+      <h2 class="lib-section-head" data-category="Recently Added">
+        <span class="cat-dot"></span>
+        Recently Added
+        <span class="lib-count">{{ recent.length }} entries</span>
+      </h2>
+      <div class="lib-grid">
+        {% for pub in recent %}{{ pubCard(pub, loop.index0, 'recently-added') }}{% endfor %}
+      </div>
+    </section>
+
+    {% for cat in categories %}
+      {% set catSlug = cat.type | lower | replace(' ', '-') %}
+      <section class="lib-section" id="{{ catSlug }}" data-group-category="{{ cat.type }}">
+        <h2 class="lib-section-head" data-category="{{ cat.type }}">
+          <span class="cat-dot"></span>
+          {{ cat.label }}
+          <span class="lib-count">{{ cat.pubs.length }} entries</span>
+        </h2>
+        <div class="lib-grid">
+          {% for pub in cat.pubs %}{{ pubCard(pub, loop.index0, catSlug) }}{% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+
+    <div class="no-results" id="no-results" style="display: none;">
+      No publications match your current filters. Try broadening your search or resetting filters.
+    </div>
+
+  </div>
+</div>
 
 <div class="divider">·</div>
 
@@ -88,4 +186,3 @@ jsonLd:
 
 <!-- Machine-readable publication record for search engines and AI agents -->
 <script type="application/ld+json">{{ publicationsSchema | dump | safe }}</script>
-
