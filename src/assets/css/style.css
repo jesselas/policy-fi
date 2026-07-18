@@ -1943,6 +1943,12 @@ main.container .page-intro {
   pointer-events: none;
 }
 
+/* The "/" is a keyboard shortcut hint (press / to focus search) — meaningless
+   on touch devices without a physical keyboard, so hide it there. */
+@media (hover: none) and (pointer: coarse) {
+  .search-kbd { display: none; }
+}
+
 /* Category nav */
 .cat-nav {
   display: flex;
@@ -2462,6 +2468,12 @@ main.container .page-intro {
   text-align: right;
 }
 
+/* The aside is first in the DOM (so phones need no reordering); on wider
+   screens move it back to the right of the title. */
+@media (min-width: 641px) {
+  .research-card .research-card-aside { order: 1; }
+}
+
 .research-card-aside .card-type { color: var(--cat, var(--accent)); }
 .research-card-aside .card-date { margin: 0; }
 
@@ -2504,16 +2516,21 @@ main.container .page-intro {
 @media (max-width: 640px) {
   .research-card .pub-toggle-icon { display: none; }
 
+  /* Plain column stack (not flex-wrap + flex-basis:100%, which renders
+     inconsistently across engines and could drop the card's inner padding in
+     Firefox/Safari). align-items:stretch makes both rows full width. */
   .research-card .pub-toggle {
-    flex-wrap: wrap;
-    gap: 0.1rem 0.5rem;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.15rem;
   }
 
-  /* Category (left) + year (right) become a full-width row above the title */
+  /* Category (left) + year (right) become a full-width row above the title.
+     The aside is first in the DOM (before the body), so on phones it lands on
+     top with no reordering — matching the AI card's naturally-ordered layout. */
   .research-card .research-card-aside {
-    order: -1;
-    flex: 0 0 100%;
+    flex: none;
+    min-width: 0;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
@@ -2525,8 +2542,8 @@ main.container .page-intro {
   /* Card view hides the aside on desktop — show it (as the top row) on phones */
   .library-content[data-view="cards"] .research-card .research-card-aside { display: flex; }
 
-  .research-card .pub-toggle-body { flex: 0 0 100%; }
-  .research-card .pub-details { padding-left: 0; }
+  .research-card .pub-toggle-body { flex: none; min-width: 0; }
+  .research-card .pub-details { padding-left: 0; min-width: 0; }
 
   /* Card view: show a 3-line abstract preview so boxes read like the AI page's
      cards. Hidden once the entry is expanded (the full abstract is in details). */
