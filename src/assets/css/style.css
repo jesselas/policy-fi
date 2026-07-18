@@ -2460,6 +2460,10 @@ main.container .page-intro {
 
 .research-card .pub-authors { margin-top: 0; }
 
+/* Abstract preview: hidden by default; shown clamped only in phone card view
+   (see the max-width:640px block) so those cards read like the AI page's. */
+.research-card-excerpt { display: none; }
+
 /* Card view drops the type/year column — cards get the full width for titles */
 .library-content[data-view="cards"] .research-card .research-card-aside { display: none; }
 
@@ -2511,6 +2515,22 @@ main.container .page-intro {
 
   .research-card .pub-toggle-body { flex: 0 0 100%; }
   .research-card .pub-details { padding-left: 0; }
+
+  /* Card view: show a 3-line abstract preview so boxes read like the AI page's
+     cards. Hidden once the entry is expanded (the full abstract is in details). */
+  .library-content[data-view="cards"] .research-card .research-card-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0.4rem;
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+  .library-content[data-view="cards"] .research-card .pub-toggle[aria-expanded="true"] .research-card-excerpt {
+    display: none;
+  }
 
   /* List view: borderless rows with no gaps, like the AI library */
   .library-content[data-view="list"] .lib-grid:has(.research-card) { gap: 0; }

@@ -37,6 +37,7 @@ jsonLd:
         {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
       </span>
       {% if pub.authors %}<div class="pub-authors">With: {{ pub.authors }}</div>{% endif %}
+      {% if pub.abstract %}<div class="research-card-excerpt">{{ pub.abstract }}</div>{% endif %}
     </div>
     <div class="research-card-aside">
       <span class="card-type">{{ typeShort[pub.type] or pub.type }}</span>
