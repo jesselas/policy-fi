@@ -1094,6 +1094,10 @@ h2.section-label {
   text-underline-offset: 3px;
 }
 
+@media (max-width: 640px) {
+  .recent-research-more { text-align: left; }
+}
+
 /* Suppress the global section divider that follows Recent research on the home page */
 .recent-research + .divider {
   display: none;

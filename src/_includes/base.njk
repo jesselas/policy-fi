@@ -101,6 +101,29 @@
     <a href="/southmod/"{% if page.url == "/southmod/" %} class="active" aria-current="page"{% endif %}>SOUTHMOD</a>
   </nav>
 
+  <script>
+  /* Apply the saved view and the default (Recently Added / hash) section
+     immediately, so the library doesn't flash its default list layout with
+     every section visible for a beat while the deferred main.js downloads. */
+  (function(){
+    var c=document.getElementById('library-content');
+    if(!c) return;
+    try{
+      var key=document.querySelector('.research-card')?'researchView':'libView';
+      var v=localStorage.getItem(key);
+      if(v==='cards'||v==='list') c.dataset.view=v;
+    }catch(e){}
+    try{
+      var hash=decodeURIComponent(location.hash.slice(1));
+      var secs=c.querySelectorAll('.lib-section');
+      for(var i=0;i<secs.length;i++){
+        var cat=secs[i].getAttribute('data-group-category')||'';
+        var slug=cat.toLowerCase().replace(/\s+&\s+/g,'-').replace(/\s+/g,'-');
+        secs[i].style.display=(hash?slug===hash:cat==='Recently Added')?'':'none';
+      }
+    }catch(e){}
+  })();
+  </script>
   <script src="/assets/js/main.js?v={{ buildId }}" defer></script>
 </body>
 </html>
