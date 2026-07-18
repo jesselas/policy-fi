@@ -722,7 +722,6 @@ function initResearchLibrary() {
   const noResults = document.getElementById('no-results');
   const sections = Array.from(content.querySelectorAll('.lib-section'));
   const cards = Array.from(content.querySelectorAll('.research-card'));
-  const sortButtons = Array.from(document.querySelectorAll('#library-sort .sort-btn'));
   const viewButtons = Array.from(document.querySelectorAll('.view-btn'));
 
   const DEFAULT_SECTION = 'Recently Added';
@@ -730,9 +729,7 @@ function initResearchLibrary() {
   const state = {
     section: DEFAULT_SECTION,
     topics: new Set(),
-    query: '',
-    sort: 'added',
-    desc: true
+    query: ''
   };
 
   const slug = (cat) => cat.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-');
@@ -890,61 +887,8 @@ function initResearchLibrary() {
     });
   }
 
-  /* --- Sort (within each section) --- */
-  function cardKey(card, sort) {
-    if (sort === 'added') return card.dataset.added || '';
-    if (sort === 'date') return card.dataset.year || '';
-    return '';
-  }
-
-  function applySort() {
-    sections.forEach(section => {
-      const grid = section.querySelector('.lib-grid');
-      if (!grid) return;
-      const sectionCards = Array.from(grid.querySelectorAll('.research-card'));
-      // Entries without the sort key sort last (mainly `added`, absent on most).
-      const emptyLast = true;
-
-      sectionCards.sort((a, b) => {
-        const ka = cardKey(a, state.sort);
-        const kb = cardKey(b, state.sort);
-        if (emptyLast) {
-          const aEmpty = ka === '' || ka == null;
-          const bEmpty = kb === '' || kb == null;
-          if (aEmpty && !bEmpty) return 1;
-          if (!aEmpty && bEmpty) return -1;
-        }
-        const cmp = String(ka).localeCompare(String(kb));
-        return state.desc ? -cmp : cmp;
-      });
-
-      sectionCards.forEach(c => grid.appendChild(c));
-    });
-  }
-
-  sortButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const sort = btn.dataset.sort;
-      if (state.sort === sort) {
-        state.desc = !state.desc;
-      } else {
-        state.sort = sort;
-        state.desc = true; // newest first by default for both date sorts
-      }
-      sortButtons.forEach(b => {
-        b.classList.toggle('active', b === btn);
-        b.classList.toggle('desc', b === btn && state.desc);
-      });
-      applySort();
-    });
-  });
-
-  const defaultSortBtn = sortButtons.find(b => b.dataset.sort === state.sort);
-  if (defaultSortBtn) {
-    defaultSortBtn.classList.add('active');
-    if (state.desc) defaultSortBtn.classList.add('desc');
-  }
-  applySort();
+  /* Sorting removed: entries render in their source order (per section, newest
+     by year first, from researchSections.js). */
 
   /* --- View toggle (cards / list), persisted under its own key ---
      Phones are list-only (the toggle is hidden and card view had cross-engine
