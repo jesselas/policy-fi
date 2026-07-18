@@ -1074,6 +1074,25 @@ h2.section-label {
   padding-left: 1.85rem;
 }
 
+/* "Browse all publications" link below the Recent research grid */
+.recent-research-more {
+  margin-top: 1.1rem;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+}
+
+.recent-research-more a {
+  color: var(--accent);
+  border-bottom: none;
+}
+
+.recent-research-more a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Suppress the global section divider that follows Recent research on the home page */
 .recent-research + .divider {
   display: none;
@@ -2459,6 +2478,52 @@ main.container .page-intro {
    gap for these boxed cards. */
 .library-content[data-view="list"] .lib-grid:has(.research-card) {
   gap: 0.75rem;
+}
+
+/* --- Phones: research entries adopt the AI-library list structure ---
+   No disclosure triangle; the category label sits top-left (with the year
+   top-right) above the title; list view uses borderless, gap-less rows. This
+   avoids the desktop toggle/aside layout that reflowed awkwardly on narrow
+   screens, and matches the AI page's proven mobile look. */
+@media (max-width: 640px) {
+  .research-card .pub-toggle-icon { display: none; }
+
+  .research-card .pub-toggle {
+    flex-wrap: wrap;
+    gap: 0.1rem 0.5rem;
+    align-items: baseline;
+  }
+
+  /* Category (left) + year (right) become a full-width row above the title */
+  .research-card .research-card-aside {
+    order: -1;
+    flex: 0 0 100%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-left: 0;
+    text-align: left;
+    margin-bottom: 0.1rem;
+  }
+  /* Card view hides the aside on desktop — show it (as the top row) on phones */
+  .library-content[data-view="cards"] .research-card .research-card-aside { display: flex; }
+
+  .research-card .pub-toggle-body { flex: 0 0 100%; }
+  .research-card .pub-details { padding-left: 0; }
+
+  /* List view: borderless rows with no gaps, like the AI library */
+  .library-content[data-view="list"] .lib-grid:has(.research-card) { gap: 0; }
+  .library-content[data-view="list"] .lib-grid .research-card {
+    background: transparent;
+    border: none;
+    border-left: 2px solid var(--cat, var(--accent));
+    border-bottom: 1px solid var(--border-light);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.7rem 0.85rem;
+  }
+  .library-content[data-view="list"] .lib-grid .research-card:hover { background: transparent; }
 }
 
 /* Short sort labels are hidden on desktop (shown on mobile) */
