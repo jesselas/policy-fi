@@ -2405,6 +2405,10 @@ main.container .page-intro {
 
 .lib-grid .research-card {
   margin: 0;
+  /* A grid item defaults to min-width:auto, so long content (e.g. a citation
+     URL) could force the card wider than its track and overflow the screen.
+     min-width:0 keeps every card within the column. */
+  min-width: 0;
   background: var(--bg-pure);
   border: 1px solid var(--border);
   border-left: 3px solid var(--cat, var(--accent));
