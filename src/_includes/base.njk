@@ -109,9 +109,13 @@
     var c=document.getElementById('library-content');
     if(!c) return;
     try{
-      var key=document.querySelector('.research-card')?'researchView':'libView';
-      var v=localStorage.getItem(key);
-      if(v==='cards'||v==='list') c.dataset.view=v;
+      var isResearch=!!document.querySelector('.research-card');
+      if(isResearch&&window.matchMedia('(max-width:640px)').matches){
+        c.dataset.view='list'; /* phones: Research is list-only */
+      }else{
+        var v=localStorage.getItem(isResearch?'researchView':'libView');
+        if(v==='cards'||v==='list') c.dataset.view=v;
+      }
     }catch(e){}
     try{
       var hash=decodeURIComponent(location.hash.slice(1));
