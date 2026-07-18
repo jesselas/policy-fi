@@ -50,7 +50,7 @@
   {% set fontHref = "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" %}
   <link rel="preload" as="style" href="{{ fontHref }}" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ fontHref }}"></noscript>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v={{ buildId }}">
 
   <script type="application/ld+json">{{ siteSchema | dump | safe }}</script>
   {% if jsonLd %}
@@ -101,6 +101,6 @@
     <a href="/southmod/"{% if page.url == "/southmod/" %} class="active" aria-current="page"{% endif %}>SOUTHMOD</a>
   </nav>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v={{ buildId }}" defer></script>
 </body>
 </html>
