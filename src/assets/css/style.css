@@ -2514,9 +2514,9 @@ main.container .page-intro {
    avoids the desktop toggle/aside layout that reflowed awkwardly on narrow
    screens, and matches the AI page's proven mobile look. */
 @media (max-width: 640px) {
-  /* Phones: Research is list-only — the card view rendered inconsistently
-     across engines, so drop its view toggle (the AI page keeps its own). */
-  .research-library .toolbar-group[aria-label="View options"] { display: none; }
+  /* Phones: Research is list-only (no sort, no view toggle), so the toolbar
+     has nothing to show — hide it. The AI page keeps its own toolbar. */
+  .research-library .library-toolbar { display: none; }
 
   .research-card .pub-toggle-icon { display: none; }
 
