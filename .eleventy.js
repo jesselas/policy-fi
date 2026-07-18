@@ -7,6 +7,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
   eleventyConfig.addGlobalData("buildMonth", new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' }));
   eleventyConfig.addGlobalData("buildDate", new Date().toISOString().split('T')[0]);
+  // Unique per build — appended to CSS/JS URLs so a deploy always busts the
+  // browser cache (visitors never get stale styles/scripts after an update).
+  eleventyConfig.addGlobalData("buildId", String(Date.now()));
 
   // "First Author, et al." for 3+ authors
   eleventyConfig.addFilter("shortAuthor", function (author) {

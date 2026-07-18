@@ -860,7 +860,7 @@ h2.section-label {
 /* Research page: one accent per publication type (dots + card left borders).
    Scoped under .research-library so it overrides the AI page's generic
    Recently-Added/Highlights --cat rules without affecting /ai-econ/. */
-.research-library [data-category="Recently Added"] { --cat: var(--rcat-recent); }
+.research-library [data-category="Recently Added"] { --cat: var(--text); }
 .research-library [data-category="Peer Reviewed"] { --cat: var(--rcat-peer); }
 .research-library [data-category="Book Chapter"] { --cat: var(--rcat-chapter); }
 .research-library [data-category="Other Published Work"] { --cat: var(--rcat-other); }
@@ -980,6 +980,7 @@ h2.section-label {
   margin-top: 0.35rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 /* Lists inside publication details — match description font */
@@ -1205,6 +1206,9 @@ h2.section-label {
   line-height: 1.55;
   color: var(--text-secondary);
   user-select: all;
+  /* Long DOIs/URLs must break instead of forcing horizontal overflow on
+     narrow screens (which shifts the whole card sideways). */
+  overflow-wrap: anywhere;
 }
 
 .citation-buttons {
@@ -2395,9 +2399,9 @@ main.container .page-intro {
    card-vs-list difference is the grid column count. */
 /* Let each card grow on its own when expanded; without this the grid's default
    align-items: stretch makes a collapsed row-mate stretch to the height of an
-   expanded neighbour (a large empty box that also swallows taps meant for the
-   card below). Scoped to the research grid so the AI page keeps its uniform rows. */
-.research-library .lib-grid { align-items: start; }
+   expanded neighbour — a large empty box that also swallows taps meant for the
+   card below. Applies to both the research and AI libraries. */
+.lib-grid { align-items: start; }
 
 .lib-grid .research-card {
   margin: 0;
@@ -2691,7 +2695,7 @@ main.container .page-intro {
 }
 
 /* --- Pseudo-categories (AI library) --- */
-[data-category="Recently Added"] { --cat: var(--accent); }
+[data-category="Recently Added"] { --cat: var(--text); }
 [data-category="Highlights"] { --cat: var(--gold); }
 
 .type-chip.is-empty {
