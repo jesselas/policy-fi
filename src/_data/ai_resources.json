@@ -3679,5 +3679,43 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "ma-grand-to-ground",
+    "title": "Grand-to-Ground (G2G): An Adversarial Research Loop for AI-Assisted Social Science",
+    "url": "https://github.com/HongtaoMa1/grand-to-ground",
+    "author": "Hongtao Ma",
+    "date": "2026-07",
+    "description": "An open-source Claude plugin (v0.1.0, MIT-licensed) that orchestrates an eight-phase, Lakatos-inspired research cycle for AI-assisted social science, aimed first at economics and finance. It turns broad theoretical frameworks into falsifiable questions using a deducer agent plus three independent critic agents (logic, evidence, novelty), a tribunal for adversarial review, automated falsifiability scoring, and plain-Markdown programme state, with human researchers as final arbiters.",
+    "shortDescription": "Open-source Claude plugin running an 8-phase, Lakatos-inspired adversarial research loop with critic agents for economics and finance research.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "LLM",
+      "agents"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "borri-tsyvinski-liu-ai-premium",
+    "title": "AI Premium (NBER)",
+    "url": "https://www.nber.org/papers/w35451",
+    "author": "Nicola Borri, Aleh Tsyvinski, Yukun Liu",
+    "date": "2026-07",
+    "description": "Using 380 trillion tokens of realized AI consumption from over 400 large language models (OpenRouter data, ~2% of global monthly token use), the authors construct an AI Factor and estimate firm-level AI Betas. High-AI-beta firms earn higher subsequent returns, with a value-weighted strategy earning 64.1 basis points weekly; the premium concentrates in intensive, frontier-oriented AI use, is absent in emerging markets, and interaction-and-communication occupations show higher market-implied AI exposure than analytical roles. The paper offers early evidence of an emerging agentic economy.",
+    "shortDescription": "NBER paper mining 380 trillion AI tokens across 400+ LLMs to build an AI Factor and document a large, tradable AI Premium in stock returns.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "asset pricing"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
