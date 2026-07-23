@@ -3717,5 +3717,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "castaldi-measuring-ai-innovation-trademarks",
+    "title": "Measuring AI Innovation with Trademark Data (arXiv)",
+    "url": "https://arxiv.org/abs/2607.18795",
+    "author": "C. Castaldi, F. Castellacci, A. Fronzetti Colladon, L. Segneri, F. Venturini",
+    "date": "2026-07",
+    "description": "This research note argues that trademark data can complement patents for mapping the development and diffusion of AI. AI trademarks reveal how firms exploit AI to develop new goods and services, and offer a timely, globally available source that spans all economic sectors; the authors illustrate the approach with an empirical exploration of Italian firms and discuss how AI trademarks can be used at different levels of analysis to study AI's spread.",
+    "shortDescription": "Research note proposing AI trademark data as a timely, cross-sector complement to patents for measuring the development and diffusion of AI.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "innovation"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
