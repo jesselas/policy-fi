@@ -3736,5 +3736,44 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "zhu-pai-econ-claude",
+    "title": "pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development (arXiv)",
+    "url": "https://arxiv.org/abs/2607.21268",
+    "author": "Chen Zhu, Xiaolu Wang, Weilong Zhang",
+    "date": "2026-07",
+    "description": "Proposes a system in which Claude-based agents coordinate through a shared workspace of inspectable intermediate records, with diagnostic gates and human checkpoints, for economic theory development where no cheap, machine-readable correctness signal exists. Across five economic tasks the gated architecture improved mean failure severity from 1.58 to 1.16 and usefulness from 2.60 to 3.10; in one case it rejected a false market-structure premise that the agents would otherwise have perpetuated, preserving human authority over consequential decisions.",
+    "shortDescription": "Claude-based multi-agent architecture with diagnostic gates and human checkpoints for AI-assisted economic theory development.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "claude",
+      "agents"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "rothschild-evolution-digital-search",
+    "title": "The Evolution of Digital Search: From Blue Links to Delegated Decision-Making (arXiv)",
+    "url": "https://arxiv.org/abs/2607.21459",
+    "author": "David M. Rothschild, Nicole Immorlica, Brendan Lucier, Markus Mobius, Aleksandrs Slivkins",
+    "date": "2026-07",
+    "description": "Argues digital search is shifting from human keyword queries toward AI agents that interpret natural-language goals and return recommendations or execute decisions. The authors contend that outcomes will depend less on algorithmic refinements than on system design—information access, option presentation, transparency, and fair competition—and show how relatively modest design choices shape market efficiency, consumer welfare, and competitive dynamics in agent-driven marketplaces.",
+    "shortDescription": "How AI agents are reshaping digital search into delegated decision-making, and why system design shapes competition and consumer welfare.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "markets"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
