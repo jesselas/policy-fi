@@ -3775,5 +3775,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "dumlao-genai-grades-satisfaction",
+    "title": "Generative AI Availability, Grades, and Student Satisfaction at a Large University (arXiv)",
+    "url": "https://arxiv.org/abs/2607.21534",
+    "author": "James M. Zumel Dumlao, Meng Wang, Zhonghan Xie, Junyao Hu, Ivan Bar, George Chaney III, Henry Gold, Misha Teplitskiy",
+    "date": "2026-07",
+    "description": "Using 2015–2025 administrative data from a large U.S. university, the authors classify courses by their susceptibility to AI use and estimate the effect of generative-AI availability on outcomes. They find no significant differential effect of GenAI availability on grades overall or among previously lower-performing students, and similarly muted effects on self-reported understanding — evidence against fears of AI-driven grade inflation.",
+    "shortDescription": "Empirical study finds no differential effect of generative-AI availability on grades or self-reported understanding at a large U.S. university.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "education"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
