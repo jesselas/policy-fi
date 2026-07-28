@@ -47,7 +47,11 @@
      keeps each hue and re-tunes lightness for a dark ground rather than
      reusing the light values.
      Light 4.9:1–6.7:1 on #fafaf8/#ffffff; dark 6.7:1–9.4:1 on #15171a/#1c1f23. */
-  --cat-1: #8f6a00; /* gold   — Highlights / Peer reviewed */
+  --cat-1: #c9a84c; /* gold   — Highlights / Peer reviewed; same as the ★ */
+  /* Slot 1 doubles as the colour of 0.62rem uppercase card banners, where the
+     star's gold only reaches 2.3:1. --cat-ink carries a darkened version for
+     text; every other slot passes on its own and needs no override. */
+  --cat-1-ink: #8f6a00;
   --cat-2: #2159cf; /* blue   */
   --cat-3: #bb2f5e; /* rose   */
   --cat-4: #0e7490; /* teal   */
@@ -81,7 +85,8 @@
   --gold-text: #d4b35e;
   /* Same seven hues, re-tuned for a dark ground: lighter and less saturated so
      they carry on #15171a / #1c1f23 without glowing. 6.7:1–8.8:1. */
-  --cat-1: #dcb75f; /* gold   — Highlights / Peer reviewed */
+  --cat-1: #d4b35e; /* gold   — Highlights / Peer reviewed; same as the ★ */
+  --cat-1-ink: #d4b35e; /* already 8.2:1 on the dark ground; no darkening needed */
   --cat-2: #7fa8f7; /* blue   */
   --cat-3: #f0849f; /* rose   */
   --cat-4: #45c2d6; /* teal   */
@@ -830,23 +835,12 @@ h2.section-label {
   gap: 0.3rem;
 }
 
-/* Featured cards */
-.resource-card.featured {
-  border-left-color: var(--gold);
-  background: linear-gradient(135deg, var(--bg-pure) 0%, var(--gold-pale) 100%);
-}
-
-.resource-card.featured:hover {
-  border-left-color: var(--gold);
-}
-
 /* Category-specific accent color (left borders, dots, type labels).
    Slots follow SIDEBAR ROW ORDER, counting from the first row below
    "Recently Added" — so row N here is the same colour as row N on
-   /research/ below. Highlights is that first row on this page, which is why
-   it takes slot 1 rather than its own gold (the gold `.featured` star and
-   card treatment are unaffected). */
-[data-category="Highlights"] { --cat: var(--cat-1); }
+   /research/ below. Highlights is that first row on this page, and slot 1 is
+   the ★ gold, so the swatch and the star on highlighted cards match. */
+[data-category="Highlights"] { --cat: var(--cat-1); --cat-ink: var(--cat-1-ink); }
 .resource-card[data-category="Research Papers"], [data-category="Research Papers"] { --cat: var(--cat-2); }
 .resource-card[data-category="Courses & Learning"], [data-category="Courses & Learning"] { --cat: var(--cat-3); }
 .resource-card[data-category="Coding with AI"], [data-category="Coding with AI"] { --cat: var(--cat-4); }
@@ -864,7 +858,7 @@ h2.section-label {
    Scoped under .research-library so it overrides the AI page's generic
    Recently-Added/Highlights --cat rules without affecting /ai-econ/. */
 .research-library [data-category="Recently Added"] { --cat: var(--text); }
-.research-library [data-category="Peer Reviewed"] { --cat: var(--cat-1); }
+.research-library [data-category="Peer Reviewed"] { --cat: var(--cat-1); --cat-ink: var(--cat-1-ink); }
 .research-library [data-category="Book Chapter"] { --cat: var(--cat-2); }
 .research-library [data-category="Technical Note"] { --cat: var(--cat-3); }
 .research-library [data-category="Working Paper"] { --cat: var(--cat-4); }
@@ -2083,66 +2077,6 @@ main.container .page-intro {
   color: var(--bg);
 }
 
-/* Featured toggle */
-.featured-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  background: transparent;
-  border: none;
-  padding: 0.3rem 0.1rem;
-  cursor: pointer;
-  transition: color var(--transition);
-}
-
-.featured-toggle:hover { color: var(--text); }
-
-.featured-toggle .toggle-track {
-  width: 28px;
-  height: 16px;
-  border-radius: 8px;
-  background: var(--border);
-  position: relative;
-  transition: background var(--transition);
-  flex-shrink: 0;
-}
-
-.featured-toggle .toggle-track::after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--bg-pure);
-  transition: transform var(--transition);
-  box-shadow: var(--shadow-sm);
-}
-
-.featured-toggle[aria-pressed="true"] .toggle-track {
-  background: var(--gold);
-}
-
-.featured-toggle[aria-pressed="true"] .toggle-track::after {
-  transform: translateX(12px);
-}
-
-/* Sidebar footer info */
-.sidebar-meta {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--text-tertiary);
-  margin-top: 1.25rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--border-light);
-  line-height: 1.7;
-}
-
 .sidebar-reset {
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -2292,7 +2226,8 @@ main.container .page-intro {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--cat, var(--accent));
+  /* --cat-ink where a slot's display colour is too light to set text in */
+  color: var(--cat-ink, var(--cat, var(--accent)));
 }
 
 .card-star {
@@ -2497,7 +2432,7 @@ main.container .page-intro {
   .research-card .research-card-aside { order: 1; }
 }
 
-.research-card-aside .card-type { color: var(--cat, var(--accent)); }
+.research-card-aside .card-type { color: var(--cat-ink, var(--cat, var(--accent))); }
 .research-card-aside .card-date { margin: 0; }
 
 .research-card .pub-title {
