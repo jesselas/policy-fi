@@ -62,10 +62,10 @@ jsonLd:
 {% endfor %}
 
 {% macro resourceCard(entry, idx) %}
-<article class="resource-card{% if entry.featured %} featured{% endif %}" data-category="{{ entry.category }}" data-type="{{ entry.type }}" data-featured="{{ '1' if entry.featured else '' }}" data-index="{{ idx }}" data-date="{{ entry.date or '' }}" data-author-sort="{{ entry.author | lastName }}" data-searchable="{{ (entry.title + ' ' + (entry.author or '') + ' ' + entry.description + ' ' + entry.tags | join(' ')) | lower }}">
+<article class="resource-card" data-category="{{ entry.category }}" data-type="{{ entry.type }}" data-index="{{ idx }}" data-date="{{ entry.date or '' }}" data-author-sort="{{ entry.author | lastName }}" data-searchable="{{ (entry.title + ' ' + (entry.author or '') + ' ' + entry.description + ' ' + entry.tags | join(' ')) | lower }}">
   <div class="card-top">
     <span class="card-type">{{ entry.type }}</span>
-    {% if entry.featured %}<span class="card-star" title="Featured">★</span>{% endif %}
+    {% if entry.highlight %}<span class="card-star" title="Highlight">★</span>{% endif %}
     {% if entry.date %}<span class="card-date">{{ entry.date }}</span>{% endif %}
   </div>
   <h3 class="card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
@@ -126,12 +126,6 @@ jsonLd:
         <button class="type-chip" data-type="{{ t.name }}">{{ t.name }}</button>
         {% endfor %}
       </div>
-
-      <span class="sidebar-label">Show</span>
-      <button class="featured-toggle" id="featured-toggle" aria-pressed="false">
-        <span class="toggle-track" aria-hidden="true"></span>
-        <span>Featured only</span>
-      </button>
     </div>
 
     <div class="sidebar-meta">

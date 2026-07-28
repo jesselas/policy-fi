@@ -567,7 +567,6 @@ function initLibrary() {
   const searchInput = document.getElementById('resource-search');
   const catLinks = Array.from(document.querySelectorAll('#category-filters .cat-link'));
   const typeChips = Array.from(document.querySelectorAll('#type-filters .type-chip'));
-  const featuredToggle = document.getElementById('featured-toggle');
   const resetBtn = document.getElementById('filter-reset');
   const countEl = document.getElementById('results-count');
   const noResults = document.getElementById('no-results');
@@ -581,7 +580,6 @@ function initLibrary() {
   const state = {
     section: DEFAULT_SECTION,
     types: new Set(),
-    featured: false,
     query: '',
     sort: 'added',
     desc: true
@@ -592,7 +590,6 @@ function initLibrary() {
   /* Sub-filters (everything except the section choice) */
   function cardMatchesSubFilters(card, ignoreTypes) {
     if (!ignoreTypes && state.types.size && !state.types.has(card.dataset.type)) return false;
-    if (state.featured && !card.dataset.featured) return false;
     if (state.query && !card.dataset.searchable.includes(state.query)) return false;
     return true;
   }
@@ -603,9 +600,9 @@ function initLibrary() {
   const DUPLICATE_SECTIONS = new Set(['Recently Added', 'Highlights']);
 
   function applyFilters() {
-    const isSubFiltering = !!(state.query || state.types.size || state.featured);
-    // From the default "Recently Added" view, any sub-filter (search query, type
-    // chip, or Featured) filters the ENTIRE library (results grouped by category,
+    const isSubFiltering = !!(state.query || state.types.size);
+    // From the default "Recently Added" view, any sub-filter (search query or
+    // type chip) filters the ENTIRE library (results grouped by category,
     // each resource shown once) instead of only the recent cards — otherwise a
     // type like "tool" would only match the few in Recently Added. Selecting a
     // specific category first scopes the search/filters back to that category.
@@ -631,7 +628,7 @@ function initLibrary() {
       sectionCards.forEach(card => {
         const matches = cardMatchesSubFilters(card, false);
         if (matches) sectionMatches++;
-        // Types available under query/featured (ignoring the type filter itself)
+        // Types available under the current query (ignoring the type filter itself)
         if (inAvailScope && cardMatchesSubFilters(card, true)) availableTypes.add(card.dataset.type);
         if (inScope) {
           sectionTotal++;
@@ -698,15 +695,6 @@ function initLibrary() {
     });
   });
 
-  /* --- Featured toggle --- */
-  if (featuredToggle) {
-    featuredToggle.addEventListener('click', () => {
-      state.featured = !state.featured;
-      featuredToggle.setAttribute('aria-pressed', state.featured);
-      applyFilters();
-    });
-  }
-
   /* --- Search --- */
   if (searchInput) {
     searchInput.addEventListener('input', debounce(() => {
@@ -737,11 +725,9 @@ function initLibrary() {
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       state.types.clear();
-      state.featured = false;
       state.query = '';
       if (searchInput) searchInput.value = '';
       typeChips.forEach(c => c.classList.remove('active'));
-      if (featuredToggle) featuredToggle.setAttribute('aria-pressed', 'false');
       applyFilters();
     });
   }
@@ -857,7 +843,7 @@ function initLibrary() {
      - the sub-filter is a multi-value "Topic area" (data-topics, pipe-joined)
        instead of the AI page's single-value data-type,
      - sorts are "Date added" (data-added, ISO) and "Date of reference"
-       (data-year); there is no author sort and no featured toggle,
+       (data-year); there is no author sort,
      - disclosure + citation copy are handled globally by initPubToggles() and
        initCitationCopy(); this controller only adds whole-card click-to-toggle,
      - the view preference persists under its own key ('researchView'). */
