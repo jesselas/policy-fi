@@ -11,8 +11,8 @@ const publications = require('./publications.json');
 const typeOrder = [
   'Peer Reviewed',
   'Book Chapter',
-  'Working Paper',
   'Technical Note',
+  'Working Paper',
   'Report',
   'PhD Dissertation',
   'Research Assistance',
