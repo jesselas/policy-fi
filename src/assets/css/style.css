@@ -2077,6 +2077,17 @@ main.container .page-intro {
   color: var(--bg);
 }
 
+/* Sidebar footer info */
+.sidebar-meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  margin-top: 1.25rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border-light);
+  line-height: 1.7;
+}
+
 .sidebar-reset {
   font-family: var(--font-mono);
   font-size: 0.68rem;
