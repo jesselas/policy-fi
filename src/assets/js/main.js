@@ -17,10 +17,65 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     initLibrary();
   }
+  initAuthorEtAl();
   initMobileNav();
   initThemeToggle();
   initWebMCP();
 });
+
+/* --- Author lists: trim long ones to a single line with "et al." ---
+   Resource cards carry up to a dozen names, which wrap to three lines in card
+   view. The card and list views differ enough in width (about 45 vs 98
+   characters at desktop) that a single server-rendered string can't suit both,
+   so trim in the browser against the measured width and re-fit whenever it
+   changes. Without JS the full list renders and wraps, as before. */
+function initAuthorEtAl() {
+  const metas = Array.from(document.querySelectorAll('.card-meta'));
+  if (!metas.length) return;
+
+  metas.forEach(m => {
+    if (m.dataset.fullAuthors === undefined) m.dataset.fullAuthors = m.textContent.trim();
+  });
+
+  const SUFFIX = ', et al.';
+
+  function shorten(full, budget) {
+    if (full.length <= budget) return full;
+    const names = full.split(/,\s*/).filter(Boolean);
+    // Some sources already end in "et al."; drop it so we don't double up
+    if (/^et al\.?$/i.test(names[names.length - 1])) names.pop();
+    // "et al." has to stand in for at least two names to be worth the trade
+    if (names.length < 3) return full;
+    let k = names.length - 2;
+    while (k > 1 && (names.slice(0, k).join(', ') + SUFFIX).length > budget) k--;
+    return names.slice(0, k).join(', ') + SUFFIX;
+  }
+
+  function refit() {
+    // Every card shares a width within a view, so one visible probe is enough
+    const probe = metas.find(m => m.offsetParent !== null);
+    if (!probe) return;
+    const width = probe.getBoundingClientRect().width;
+    if (!width) return;
+    const cs = getComputedStyle(probe);
+    const ctx = refit.ctx || (refit.ctx = document.createElement('canvas').getContext('2d'));
+    ctx.font = cs.fontStyle + ' ' + cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
+    const charWidth = ctx.measureText('M').width; // the card meta font is monospace
+    if (!charWidth) return;
+    const budget = Math.floor(width / charWidth);
+    metas.forEach(m => {
+      const next = shorten(m.dataset.fullAuthors, budget);
+      if (m.textContent !== next) m.textContent = next;
+    });
+  }
+
+  refit();
+  // Re-fit on the view toggle (card/list widths differ) and on resize
+  document.querySelectorAll('.view-btn').forEach(b => b.addEventListener('click', () => setTimeout(refit, 0)));
+  window.addEventListener('resize', debounce(refit, 150));
+  // The mono webfont loads async; the character width changes when it lands
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refit);
+}
 
 /* --- WebMCP: expose site tools to in-browser AI agents ---
    Feature-detected against navigator.modelContext; a no-op in browsers/agents
