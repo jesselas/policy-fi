@@ -38,17 +38,21 @@
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --gold-text: #856404;
   /* Category palette — one scale shared by both libraries. Slot N is the Nth
-     main category in the sidebar on BOTH /research/ and /ai-econ/, so the two
-     pages read as the same system. Hues are spread for separation at dot size
-     (min Lab dE 21); the dark set below keeps each hue and re-tunes lightness
-     for a dark ground rather than reusing the light values.
-     Light values sit at 4.6:1–6.7:1 against #fafaf8 / #ffffff. */
-  --cat-1: #0e7490; /* teal   */
-  --cat-2: #7b3ab8; /* purple */
-  --cat-3: #177f3c; /* green  */
-  --cat-4: #a4620a; /* amber  */
-  --cat-5: #bb2f5e; /* rose   */
-  --cat-6: #2159cf; /* blue   */
+     sidebar row below "Recently Added" on BOTH /research/ and /ai-econ/, so
+     the two pages read as the same system. Slot 1 is gold: Highlights and
+     Peer reviewed, the lead row on each page.
+     Ordering: the sequence is arranged so neighbouring rows sit far apart in
+     hue — every adjacent pair is ≥57 Lab dE, and the two closest colours in
+     the set (teal/slate, dE 21) land four rows apart. The dark set below
+     keeps each hue and re-tunes lightness for a dark ground rather than
+     reusing the light values.
+     Light 4.9:1–6.7:1 on #fafaf8/#ffffff; dark 6.7:1–9.4:1 on #15171a/#1c1f23. */
+  --cat-1: #8a6410; /* gold   — Highlights / Peer reviewed */
+  --cat-2: #2159cf; /* blue   */
+  --cat-3: #bb2f5e; /* rose   */
+  --cat-4: #0e7490; /* teal   */
+  --cat-5: #7b3ab8; /* purple */
+  --cat-6: #177f3c; /* green  */
   --cat-7: #5c6673; /* slate  */
 }
 
@@ -77,12 +81,12 @@
   --gold-text: #d4b35e;
   /* Same seven hues, re-tuned for a dark ground: lighter and less saturated so
      they carry on #15171a / #1c1f23 without glowing. 6.7:1–8.8:1. */
-  --cat-1: #45c2d6; /* teal   */
-  --cat-2: #c294ee; /* purple */
-  --cat-3: #4fc584; /* green  */
-  --cat-4: #dfae52; /* amber  */
-  --cat-5: #f0849f; /* rose   */
-  --cat-6: #7fa8f7; /* blue   */
+  --cat-1: #dcb75f; /* gold   — Highlights / Peer reviewed */
+  --cat-2: #7fa8f7; /* blue   */
+  --cat-3: #f0849f; /* rose   */
+  --cat-4: #45c2d6; /* teal   */
+  --cat-5: #c294ee; /* purple */
+  --cat-6: #4fc584; /* green  */
   --cat-7: #9ba6b4; /* slate  */
   color-scheme: dark;
 }
