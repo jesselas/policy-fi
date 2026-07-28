@@ -97,6 +97,11 @@ jsonLd:
         <span class="cat-name">Recently Added</span>
         <span class="cat-count">{{ recent20.length }}</span>
       </button>
+      <button class="cat-link" data-category="Highlights">
+        <span class="cat-dot"></span>
+        <span class="cat-name">Highlights</span>
+        <span class="cat-count">{{ highlightEntries.length }}</span>
+      </button>
       {% for cat in categoryOrder %}
         {% set catEntries = [] %}
         {% for entry in nonInternal %}
@@ -112,14 +117,6 @@ jsonLd:
         </button>
         {% endif %}
       {% endfor %}
-      {#- Highlights sits after the colour-coded categories so that row N here
-          carries the same colour as row N on /research/, which has no
-          equivalent second pinned entry. -#}
-      <button class="cat-link" data-category="Highlights">
-        <span class="cat-dot"></span>
-        <span class="cat-name">Highlights</span>
-        <span class="cat-count">{{ highlightEntries.length }}</span>
-      </button>
     </nav>
 
     <div class="sidebar-extra">
@@ -177,6 +174,17 @@ jsonLd:
       </div>
     </section>
 
+    <section class="lib-section" id="highlights" data-group-category="Highlights">
+      <h2 class="lib-section-head" data-category="Highlights">
+        <span class="cat-dot"></span>
+        Highlights
+        <span class="lib-count">{{ highlightEntries.length }} entries</span>
+      </h2>
+      <div class="lib-grid">
+        {% for entry in highlightEntries %}{{ resourceCard(entry, loop.index0) }}{% endfor %}
+      </div>
+    </section>
+
     {% for cat in categoryOrder %}
       {% set catEntries = [] %}
       {% for entry in nonInternal %}
@@ -197,18 +205,6 @@ jsonLd:
       </section>
       {% endif %}
     {% endfor %}
-
-    {# Ordered to match the sidebar, where Highlights follows the categories. #}
-    <section class="lib-section" id="highlights" data-group-category="Highlights">
-      <h2 class="lib-section-head" data-category="Highlights">
-        <span class="cat-dot"></span>
-        Highlights
-        <span class="lib-count">{{ highlightEntries.length }} entries</span>
-      </h2>
-      <div class="lib-grid">
-        {% for entry in highlightEntries %}{{ resourceCard(entry, loop.index0) }}{% endfor %}
-      </div>
-    </section>
 
     <div class="no-results" id="no-results" style="display: none;">
       No resources match your current filters. Try broadening your search or resetting filters.
