@@ -47,7 +47,7 @@
      keeps each hue and re-tunes lightness for a dark ground rather than
      reusing the light values.
      Light 4.9:1–6.7:1 on #fafaf8/#ffffff; dark 6.7:1–9.4:1 on #15171a/#1c1f23. */
-  --cat-1: #8a6410; /* gold   — Highlights / Peer reviewed */
+  --cat-1: #8f6a00; /* gold   — Highlights / Peer reviewed */
   --cat-2: #2159cf; /* blue   */
   --cat-3: #bb2f5e; /* rose   */
   --cat-4: #0e7490; /* teal   */
