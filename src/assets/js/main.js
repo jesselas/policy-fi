@@ -352,7 +352,7 @@ function initMobileNav() {
   /* Swipe to OPEN: drag down anywhere on the top bar, or drag from the
      top-right corner in any direction between straight left and straight
      down. The panel follows the finger and opens past the threshold. */
-  const OPEN_DISTANCE = 46;   // px of travel that counts as a full pull
+  const OPEN_COMMIT = 50;     // px of travel that commits to opening
   const ENGAGE_SLOP = 6;      // px before we decide the gesture is ours
   let openGesture = null;
 
@@ -366,11 +366,14 @@ function initMobileNav() {
     return null;
   }
 
-  function previewOpen(progress) {
+  /* The panel hangs off the top of its own box, so translating it down by
+     the finger's travel makes it track the finger 1:1 — the mirror image of
+     the swipe-up-to-close drag. */
+  function previewOpen(travel, panelHeight) {
     links.style.transition = 'none';
-    links.style.transform = 'translateY(' + (-110 + 110 * progress) + '%)';
-    links.style.opacity = String(progress);
-    setBarProgress(1 - progress);
+    links.style.transform = 'translateY(' + Math.min(0, travel - panelHeight) + 'px)';
+    links.style.opacity = String(Math.min(1, travel / 80));
+    setBarProgress(1 - Math.min(1, travel / OPEN_COMMIT));
   }
 
   function resetPreview() {
@@ -385,7 +388,11 @@ function initMobileNav() {
     const t = e.touches[0];
     const zone = openZoneAt(t.clientX, t.clientY);
     if (!zone) return;
-    openGesture = { x: t.clientX, y: t.clientY, zone, engaged: false, progress: 0 };
+    openGesture = {
+      x: t.clientX, y: t.clientY, zone,
+      engaged: false, travel: 0,
+      h: links.offsetHeight || 240 // measured once; the drag reads it per move
+    };
     // Only listen non-passively while a candidate gesture is live, so normal
     // scrolling keeps the passive-listener fast path.
     document.addEventListener('touchmove', onOpenMove, { passive: false });
@@ -406,8 +413,8 @@ function initMobileNav() {
       openGesture.engaged = true;
     }
 
-    openGesture.progress = Math.max(0, Math.min(1, Math.max(dy, -dx) / OPEN_DISTANCE));
-    previewOpen(openGesture.progress);
+    openGesture.travel = Math.max(0, dy, -dx);
+    previewOpen(openGesture.travel, openGesture.h);
     if (e.cancelable) e.preventDefault();
   }
 
@@ -417,7 +424,7 @@ function initMobileNav() {
     openGesture = null;
     if (!g || !g.engaged) return;
     resetPreview();
-    if (commit && g.progress >= 0.7) {
+    if (commit && g.travel >= OPEN_COMMIT) {
       openMenu();
       swallowClickUntil = Date.now() + 500;
     }
