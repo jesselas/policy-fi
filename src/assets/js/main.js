@@ -241,8 +241,13 @@ function initMobileNav() {
 
   if (!toggle || !links) return;
 
+  // Swallow the click that trails a swipe-open, so the gesture doesn't
+  // immediately toggle the menu back shut.
+  let swallowClickUntil = 0;
+
   toggle.addEventListener('click', (e) => {
     e.stopPropagation();
+    if (Date.now() < swallowClickUntil) return;
     const isOpen = links.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen);
     // Prevent body scroll when menu is open
@@ -258,6 +263,7 @@ function initMobileNav() {
 
   // Close menu when tapping outside on mobile
   document.addEventListener('click', (e) => {
+    if (Date.now() < swallowClickUntil) return;
     if (links.classList.contains('open') && !header.contains(e.target)) {
       closeMenu();
     }
@@ -342,6 +348,89 @@ function initMobileNav() {
       // Swipe down on closed menu area — open (handled by toggle)
     }
   }, { passive: true });
+
+  /* Swipe to OPEN: drag down anywhere on the top bar, or drag from the
+     top-right corner in any direction between straight left and straight
+     down. The panel follows the finger and opens past the threshold. */
+  const OPEN_DISTANCE = 46;   // px of travel that counts as a full pull
+  const ENGAGE_SLOP = 6;      // px before we decide the gesture is ours
+  let openGesture = null;
+
+  function openZoneAt(x, y) {
+    if (!window.matchMedia('(max-width: 768px)').matches) return null;
+    const bar = header.getBoundingClientRect();
+    // Corner wins over the bar: the top-right corner sits inside the header,
+    // and it accepts a wider range of directions.
+    if (y >= 0 && y <= bar.bottom + 40 && x >= window.innerWidth - 90) return 'corner';
+    if (y >= 0 && y <= bar.bottom) return 'bar';
+    return null;
+  }
+
+  function previewOpen(progress) {
+    links.style.transition = 'none';
+    links.style.transform = 'translateY(' + (-110 + 110 * progress) + '%)';
+    links.style.opacity = String(progress);
+    setBarProgress(1 - progress);
+  }
+
+  function resetPreview() {
+    links.style.transition = '';
+    links.style.transform = '';
+    links.style.opacity = '';
+    clearBarProgress();
+  }
+
+  document.addEventListener('touchstart', (e) => {
+    if (links.classList.contains('open') || e.touches.length !== 1) return;
+    const t = e.touches[0];
+    const zone = openZoneAt(t.clientX, t.clientY);
+    if (!zone) return;
+    openGesture = { x: t.clientX, y: t.clientY, zone, engaged: false, progress: 0 };
+    // Only listen non-passively while a candidate gesture is live, so normal
+    // scrolling keeps the passive-listener fast path.
+    document.addEventListener('touchmove', onOpenMove, { passive: false });
+  }, { passive: true });
+
+  function onOpenMove(e) {
+    if (!openGesture || !e.touches.length) return;
+    const t = e.touches[0];
+    const dx = t.clientX - openGesture.x;
+    const dy = t.clientY - openGesture.y;
+
+    if (!openGesture.engaged) {
+      if (Math.abs(dx) < ENGAGE_SLOP && Math.abs(dy) < ENGAGE_SLOP) return;
+      const downward = dy > 0 && dy >= Math.abs(dx);
+      // From the corner, anything in the left→down quadrant counts
+      const leftward = openGesture.zone === 'corner' && dx < 0 && dy > -ENGAGE_SLOP;
+      if (!downward && !leftward) { openGesture = null; return; }
+      openGesture.engaged = true;
+    }
+
+    openGesture.progress = Math.max(0, Math.min(1, Math.max(dy, -dx) / OPEN_DISTANCE));
+    previewOpen(openGesture.progress);
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function endOpenGesture(commit) {
+    document.removeEventListener('touchmove', onOpenMove, { passive: false });
+    const g = openGesture;
+    openGesture = null;
+    if (!g || !g.engaged) return;
+    resetPreview();
+    if (commit && g.progress >= 0.7) {
+      openMenu();
+      swallowClickUntil = Date.now() + 500;
+    }
+  }
+
+  document.addEventListener('touchend', () => endOpenGesture(true), { passive: true });
+  document.addEventListener('touchcancel', () => endOpenGesture(false), { passive: true });
+
+  function openMenu() {
+    links.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
 
   function closeMenu() {
     links.classList.remove('open');
