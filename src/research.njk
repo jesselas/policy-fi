@@ -23,9 +23,9 @@ jsonLd:
 {% set typeShort = {
   "Peer Reviewed": "Peer reviewed",
   "Book Chapter": "Chapter",
-  "Other Published Work": "Other",
+  "Working Paper": "Working paper",
   "Technical Note": "Tech note",
-  "Country Report": "Report",
+  "Report": "Report",
   "PhD Dissertation": "PhD",
   "Research Assistance": "Research asst."
 } %}
@@ -33,7 +33,15 @@ jsonLd:
   <div class="pub-toggle" aria-expanded="false">
     <span class="pub-toggle-icon"></span>
     <div class="research-card-aside">
-      <span class="card-type">{{ typeShort[pub.type] or pub.type }}</span>
+      {#- "Reports & briefs" holds three distinct things, so the banner is
+          per item rather than per category; every other type uses typeShort. -#}
+      <span class="card-type">
+        {%- if pub.type == "Report" -%}
+          {%- if "Policy Brief" in pub.publication -%}Policy brief
+          {%- elif "Country Report" in pub.title -%}Country report
+          {%- else -%}Report{%- endif -%}
+        {%- else -%}{{ typeShort[pub.type] or pub.type }}{%- endif -%}
+      </span>
       <span class="card-date">{{ pub.year }}</span>
     </div>
     <div class="pub-toggle-body">
