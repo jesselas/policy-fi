@@ -829,18 +829,23 @@ h2.section-label {
 }
 
 /* Category-specific accent color (left borders, dots, type labels).
-   AI-for-Economists sidebar order — slots 1–6. */
-.resource-card[data-category="Research Papers"], [data-category="Research Papers"] { --cat: var(--cat-1); }
-.resource-card[data-category="Courses & Learning"], [data-category="Courses & Learning"] { --cat: var(--cat-2); }
-.resource-card[data-category="Coding with AI"], [data-category="Coding with AI"] { --cat: var(--cat-3); }
-.resource-card[data-category="AI Tools for Research"], [data-category="AI Tools for Research"] { --cat: var(--cat-4); }
-.resource-card[data-category="Talks & Videos"], [data-category="Talks & Videos"] { --cat: var(--cat-5); }
-.resource-card[data-category="Commentary & Analysis"], [data-category="Commentary & Analysis"] { --cat: var(--cat-6); }
+   Slots follow SIDEBAR ROW ORDER, counting from the first row below
+   "Recently Added" — so row N here is the same colour as row N on
+   /research/ below. Highlights is that first row on this page, which is why
+   it takes slot 1 rather than its own gold (the gold `.featured` star and
+   card treatment are unaffected). */
+[data-category="Highlights"] { --cat: var(--cat-1); }
+.resource-card[data-category="Research Papers"], [data-category="Research Papers"] { --cat: var(--cat-2); }
+.resource-card[data-category="Courses & Learning"], [data-category="Courses & Learning"] { --cat: var(--cat-3); }
+.resource-card[data-category="Coding with AI"], [data-category="Coding with AI"] { --cat: var(--cat-4); }
+.resource-card[data-category="AI Tools for Research"], [data-category="AI Tools for Research"] { --cat: var(--cat-5); }
+.resource-card[data-category="Talks & Videos"], [data-category="Talks & Videos"] { --cat: var(--cat-6); }
+.resource-card[data-category="Commentary & Analysis"], [data-category="Commentary & Analysis"] { --cat: var(--cat-7); }
 /* Categories with no entries today; kept so a future one is never unstyled. */
-.resource-card[data-category="Policy & Governance"], [data-category="Policy & Governance"] { --cat: var(--cat-7); }
+.resource-card[data-category="Policy & Governance"], [data-category="Policy & Governance"] { --cat: var(--cat-6); }
 .resource-card[data-category="Prompt Engineering"], [data-category="Prompt Engineering"] { --cat: var(--cat-4); }
-.resource-card[data-category="International Organizations"], [data-category="International Organizations"] { --cat: var(--cat-6); }
-.resource-card[data-category="Simulation & Data"], [data-category="Simulation & Data"] { --cat: var(--cat-2); }
+.resource-card[data-category="International Organizations"], [data-category="International Organizations"] { --cat: var(--cat-7); }
+.resource-card[data-category="Simulation & Data"], [data-category="Simulation & Data"] { --cat: var(--cat-3); }
 
 /* Research page: one accent per publication type (dots + card left borders),
    in sidebar order, so slot N matches slot N on /ai-econ/ above.
@@ -2745,7 +2750,9 @@ main.container .page-intro {
 
 /* --- Pseudo-categories (AI library) --- */
 [data-category="Recently Added"] { --cat: var(--text); }
-[data-category="Highlights"] { --cat: var(--gold); }
+/* Highlights takes its slot colour from the category block above (it is the
+   first sidebar row below Recently Added, matching Peer reviewed on
+   /research/); it is not gold. */
 
 .type-chip.is-empty {
   opacity: 0.35;
