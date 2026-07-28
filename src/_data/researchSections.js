@@ -11,9 +11,9 @@ const publications = require('./publications.json');
 const typeOrder = [
   'Peer Reviewed',
   'Book Chapter',
-  'Other Published Work',
+  'Working Paper',
   'Technical Note',
-  'Country Report',
+  'Report',
   'PhD Dissertation',
   'Research Assistance',
 ];
@@ -21,8 +21,10 @@ const typeOrder = [
 const typeLabels = {
   'Book Chapter': 'Book chapters',
   'Peer Reviewed': 'Peer reviewed',
-  'Other Published Work': 'Other published works',
-  'Country Report': 'Country reports',
+  'Working Paper': 'Working papers',
+  // Holds the SOUTHMOD country reports, WIDER policy briefs and institutional
+  // reports; the per-item card banner says which of the three each one is.
+  'Report': 'Reports & briefs',
   'Technical Note': 'Technical notes',
   'PhD Dissertation': 'PhD dissertation',
   'Research Assistance': 'Research assistance',

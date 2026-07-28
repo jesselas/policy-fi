@@ -73,7 +73,15 @@ jsonLd:
           <span class="pub-title">
             {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
           </span>
-          <div class="recent-research-meta">{{ pub.type }} · {{ pub.year }}</div>
+          {#- "Report" covers country reports, policy briefs and institutional
+              reports, so name the specific one — same rule as /research/. -#}
+          <div class="recent-research-meta">
+            {%- if pub.type == "Report" -%}
+              {%- if "Policy Brief" in pub.publication -%}Policy Brief
+              {%- elif "Country Report" in pub.title -%}Country Report
+              {%- else -%}Report{%- endif -%}
+            {%- else -%}{{ pub.type }}{%- endif %} · {{ pub.year }}
+          </div>
         </div>
       </div>
       <div class="pub-details">

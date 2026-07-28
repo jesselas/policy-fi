@@ -822,6 +822,15 @@ function initResearchLibrary() {
 
   const DEFAULT_SECTION = 'Recently Added';
 
+  /* data-category holds the raw publication type ("Report"); the sidebar shows
+     the display label ("Reports & briefs"). Use the label in the results line. */
+  const catLabels = {};
+  catLinks.forEach(l => {
+    const name = l.querySelector('.cat-name');
+    if (name) catLabels[l.dataset.category] = name.textContent.trim();
+  });
+  const catLabel = (cat) => catLabels[cat] || cat;
+
   const state = {
     section: DEFAULT_SECTION,
     topics: new Set(),
@@ -906,8 +915,8 @@ function initResearchLibrary() {
     countEl.textContent = globalSearch
       ? 'Showing ' + visible + ' across all publications'
       : (isSubFiltering
-          ? 'Showing ' + visible + ' of ' + sectionTotal + ' in ' + state.section
-          : sectionTotal + ' in ' + state.section);
+          ? 'Showing ' + visible + ' of ' + sectionTotal + ' in ' + catLabel(state.section)
+          : sectionTotal + ' in ' + catLabel(state.section));
     if (resetBtn) resetBtn.classList.toggle('visible', isSubFiltering);
     noResults.style.display = (visible === 0) ? '' : 'none';
   }

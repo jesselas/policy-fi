@@ -7,8 +7,8 @@ const site = require('./site.json');
 const TYPE_MAP = {
   'Book Chapter': 'Chapter',
   'Peer Reviewed': 'ScholarlyArticle',
-  'Other Published Work': 'ScholarlyArticle',
-  'Country Report': 'Report',
+  'Working Paper': 'ScholarlyArticle',
+  'Report': 'Report',
   'Technical Note': 'ScholarlyArticle',
   'PhD Dissertation': 'Thesis',
   'Research Assistance': 'CreativeWork',

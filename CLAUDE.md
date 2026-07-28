@@ -17,7 +17,8 @@ When adding entries to `src/_data/publications.json`:
 
 1. Include an **`added: "YYYY-MM-DD"` field** with the date the entry is added. The home page "Recent research" section (`src/_data/recentResearch.js`) sorts by this field and shows the top two. Without it, the entry still appears on `/research/` but won't rise to the home page card.
 2. The `authors` field lists co-authors excluding Jesse; the `citation` field lists all authors including Jesse.
-3. `type` must match one of the categories in `research.njk` (`Book Chapter`, `Peer Reviewed`, `Other Published Work`, `Country Report`, `Technical Note`, `PhD Dissertation`, `Research Assistance`) — entries are grouped by type on the research page.
+3. `type` must match one of the categories in `research.njk` (`Book Chapter`, `Peer Reviewed`, `Working Paper`, `Report`, `Technical Note`, `PhD Dissertation`, `Research Assistance`) — entries are grouped by type on the research page.
+4. `Report` covers SOUTHMOD country reports, policy briefs and institutional reports; it displays as "Reports & briefs". The card banner is derived per item — `Policy Brief` in `publication` → "Policy brief", `Country Report` in `title` → "Country report", otherwise "Report" — so keep those strings intact when adding one.
 
 ## Fetching blocked resource URLs (verification)
 
