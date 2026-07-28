@@ -37,26 +37,19 @@
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --gold-text: #856404;
-  /* Category palette */
-  --cat-research: #0b525b;
-  --cat-courses: #2a7f62;
-  --cat-tools: #5b4a8a;
-  --cat-coding: #c05746;
-  --cat-talks: #b08c3e;
-  --cat-policy: #3a6ea5;
-  --cat-prompts: #7a5230;
-  --cat-commentary: #6b7280;
-  --cat-intorgs: #2563eb;
-  --cat-simdata: #7c3aed;
-  /* Research page category palette (lighter, more varied than the AI palette) */
-  --rcat-recent: #cf9526;
-  --rcat-peer: #1f9aa8;
-  --rcat-chapter: #8360c8;
-  --rcat-other: #3f82d4;
-  --rcat-technote: #e0654f;
-  --rcat-report: #2fa06b;
-  --rcat-phd: #cc5b95;
-  --rcat-assist: #6f77cc;
+  /* Category palette — one scale shared by both libraries. Slot N is the Nth
+     main category in the sidebar on BOTH /research/ and /ai-econ/, so the two
+     pages read as the same system. Hues are spread for separation at dot size
+     (min Lab dE 21); the dark set below keeps each hue and re-tunes lightness
+     for a dark ground rather than reusing the light values.
+     Light values sit at 4.6:1–6.7:1 against #fafaf8 / #ffffff. */
+  --cat-1: #0e7490; /* teal   */
+  --cat-2: #7b3ab8; /* purple */
+  --cat-3: #177f3c; /* green  */
+  --cat-4: #a4620a; /* amber  */
+  --cat-5: #bb2f5e; /* rose   */
+  --cat-6: #2159cf; /* blue   */
+  --cat-7: #5c6673; /* slate  */
 }
 
 /* --- Dark theme --- */
@@ -82,26 +75,15 @@
   --shadow-md: 0 2px 10px rgba(0,0,0,0.45);
   --shadow-lg: 0 4px 20px rgba(0,0,0,0.5);
   --gold-text: #d4b35e;
-  /* Category palette (lifted for dark bg) */
-  --cat-research: #5db5c0;
-  --cat-courses: #58b893;
-  --cat-tools: #9d8ad0;
-  --cat-coding: #e08573;
-  --cat-talks: #d4b35e;
-  --cat-policy: #6fa3d8;
-  --cat-prompts: #c09068;
-  --cat-commentary: #9aa3b0;
-  --cat-intorgs: #7da8f0;
-  --cat-simdata: #a785f0;
-  /* Research page category palette (lifted for dark bg) */
-  --rcat-recent: #e6b455;
-  --rcat-peer: #52c3d1;
-  --rcat-chapter: #ab8ee0;
-  --rcat-other: #72a6ec;
-  --rcat-technote: #ef8b76;
-  --rcat-report: #58c48d;
-  --rcat-phd: #e585bb;
-  --rcat-assist: #969fe8;
+  /* Same seven hues, re-tuned for a dark ground: lighter and less saturated so
+     they carry on #15171a / #1c1f23 without glowing. 6.7:1–8.8:1. */
+  --cat-1: #45c2d6; /* teal   */
+  --cat-2: #c294ee; /* purple */
+  --cat-3: #4fc584; /* green  */
+  --cat-4: #dfae52; /* amber  */
+  --cat-5: #f0849f; /* rose   */
+  --cat-6: #7fa8f7; /* blue   */
+  --cat-7: #9ba6b4; /* slate  */
   color-scheme: dark;
 }
 
@@ -846,29 +828,32 @@ h2.section-label {
   border-left-color: var(--gold);
 }
 
-/* Category-specific accent color (left borders, dots, type labels) */
-.resource-card[data-category="Research Papers"], [data-category="Research Papers"] { --cat: var(--cat-research); }
-.resource-card[data-category="Courses & Learning"], [data-category="Courses & Learning"] { --cat: var(--cat-courses); }
-.resource-card[data-category="AI Tools for Research"], [data-category="AI Tools for Research"] { --cat: var(--cat-tools); }
-.resource-card[data-category="Coding with AI"], [data-category="Coding with AI"] { --cat: var(--cat-coding); }
-.resource-card[data-category="Talks & Videos"], [data-category="Talks & Videos"] { --cat: var(--cat-talks); }
-.resource-card[data-category="Policy & Governance"], [data-category="Policy & Governance"] { --cat: var(--cat-policy); }
-.resource-card[data-category="Prompt Engineering"], [data-category="Prompt Engineering"] { --cat: var(--cat-prompts); }
-.resource-card[data-category="Commentary & Analysis"], [data-category="Commentary & Analysis"] { --cat: var(--cat-commentary); }
-.resource-card[data-category="International Organizations"], [data-category="International Organizations"] { --cat: var(--cat-intorgs); }
-.resource-card[data-category="Simulation & Data"], [data-category="Simulation & Data"] { --cat: var(--cat-simdata); }
+/* Category-specific accent color (left borders, dots, type labels).
+   AI-for-Economists sidebar order — slots 1–6. */
+.resource-card[data-category="Research Papers"], [data-category="Research Papers"] { --cat: var(--cat-1); }
+.resource-card[data-category="Courses & Learning"], [data-category="Courses & Learning"] { --cat: var(--cat-2); }
+.resource-card[data-category="Coding with AI"], [data-category="Coding with AI"] { --cat: var(--cat-3); }
+.resource-card[data-category="AI Tools for Research"], [data-category="AI Tools for Research"] { --cat: var(--cat-4); }
+.resource-card[data-category="Talks & Videos"], [data-category="Talks & Videos"] { --cat: var(--cat-5); }
+.resource-card[data-category="Commentary & Analysis"], [data-category="Commentary & Analysis"] { --cat: var(--cat-6); }
+/* Categories with no entries today; kept so a future one is never unstyled. */
+.resource-card[data-category="Policy & Governance"], [data-category="Policy & Governance"] { --cat: var(--cat-7); }
+.resource-card[data-category="Prompt Engineering"], [data-category="Prompt Engineering"] { --cat: var(--cat-4); }
+.resource-card[data-category="International Organizations"], [data-category="International Organizations"] { --cat: var(--cat-6); }
+.resource-card[data-category="Simulation & Data"], [data-category="Simulation & Data"] { --cat: var(--cat-2); }
 
-/* Research page: one accent per publication type (dots + card left borders).
+/* Research page: one accent per publication type (dots + card left borders),
+   in sidebar order, so slot N matches slot N on /ai-econ/ above.
    Scoped under .research-library so it overrides the AI page's generic
    Recently-Added/Highlights --cat rules without affecting /ai-econ/. */
 .research-library [data-category="Recently Added"] { --cat: var(--text); }
-.research-library [data-category="Peer Reviewed"] { --cat: var(--rcat-peer); }
-.research-library [data-category="Book Chapter"] { --cat: var(--rcat-chapter); }
-.research-library [data-category="Other Published Work"] { --cat: var(--rcat-other); }
-.research-library [data-category="Technical Note"] { --cat: var(--rcat-technote); }
-.research-library [data-category="Country Report"] { --cat: var(--rcat-report); }
-.research-library [data-category="PhD Dissertation"] { --cat: var(--rcat-phd); }
-.research-library [data-category="Research Assistance"] { --cat: var(--rcat-assist); }
+.research-library [data-category="Peer Reviewed"] { --cat: var(--cat-1); }
+.research-library [data-category="Book Chapter"] { --cat: var(--cat-2); }
+.research-library [data-category="Technical Note"] { --cat: var(--cat-3); }
+.research-library [data-category="Working Paper"] { --cat: var(--cat-4); }
+.research-library [data-category="Report"] { --cat: var(--cat-5); }
+.research-library [data-category="PhD Dissertation"] { --cat: var(--cat-6); }
+.research-library [data-category="Research Assistance"] { --cat: var(--cat-7); }
 
 .resource-card[data-category] { border-left-color: var(--cat, var(--accent)); }
 
