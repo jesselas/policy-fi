@@ -1599,16 +1599,32 @@ main.container .page-intro {
   h2 { font-size: 1.3rem; margin-top: 2rem; }
   h3 { font-size: 1.05rem; }
 
-  /* Nav: name left, hamburger right */
+  /* Nav: name left, theme + hamburger right */
   .nav-container {
     flex-direction: row;
+  }
+
+  /* Optical centering: the em box is centred, but Newsreader's ascent leaves
+     the letterforms ~2px above the bar's midline. Its neighbours here are two
+     geometrically centred icons, so nudge the type down to match them. */
+  .nav-site-title {
+    position: relative;
+    top: 2px;
+  }
+
+  /* …and re-seat the dot on the cap-height centre (margin-bottom raises an
+     inline-block aligned to `middle`; it needs cap-height − x-height). */
+  .nav-site-title::before {
+    margin-bottom: 0.24em;
   }
 
   .nav-toggle {
     display: flex;
     min-height: 44px;
     align-items: center;
-    justify-content: flex-end;
+    /* Column flex: this centers the three bars in the tap box, so the middle
+       bar lands on the bar's vertical centre. (flex-end sat them 6px low.) */
+    justify-content: center;
     padding: 0.5rem 0.5rem 0.5rem 0.7rem;
     -webkit-tap-highlight-color: transparent;
   }
