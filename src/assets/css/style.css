@@ -1612,19 +1612,31 @@ main.container .page-intro {
     -webkit-tap-highlight-color: transparent;
   }
 
+  /* The top bar owns its touches so the swipe-to-open gesture can't be
+     stolen by page scroll / pull-to-refresh. */
+  .site-header {
+    touch-action: none;
+  }
+
   .nav-links {
     display: flex;
     position: absolute;
     top: 3.75rem;
-    left: 0;
-    right: 0;
+    left: auto;
+    right: 0.75rem;
+    width: max-content;
+    min-width: 9.5rem;
+    max-width: min(78vw, 18rem);
     flex-direction: column;
     background: var(--bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0.5rem 0;
-    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 0.4rem 0;
+    box-shadow: var(--shadow-lg);
+    transform-origin: top right;
     z-index: -1;
     /* Slide animation */
     transform: translateY(-110%);
@@ -1656,24 +1668,31 @@ main.container .page-intro {
 
   /* Touch-friendly tap targets (min 44px), right-aligned */
   .nav-links a {
-    padding: 0.85rem 2rem;
+    padding: 0.8rem 1.25rem;
     font-size: 0.95rem;
     min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     text-align: right;
+    white-space: nowrap;
+    border-radius: 0;
+  }
+
+  .nav-links a.active {
+    background: var(--accent-faint);
   }
 
   .nav-links a.active::after {
     display: none;
   }
 
-  /* Theme toggle aligns with the right-aligned mobile menu items */
+  /* Theme toggle sits under a hairline, aligned with the menu items */
   .nav-theme-item {
     justify-content: flex-end;
-    padding: 0.6rem 2rem 0.85rem;
-    margin-left: 0;
+    padding: 0.55rem 1.25rem 0.35rem;
+    margin: 0.35rem 0 0;
+    border-top: 1px solid var(--border-light);
   }
 
   /* Hero float: keep float on mobile, just smaller */
