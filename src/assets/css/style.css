@@ -279,6 +279,12 @@ a:focus-visible {
   border-bottom: none;
   letter-spacing: -0.02em;
   transition: color var(--transition);
+  /* Optical centering: the em box centres, but Newsreader's ascent leaves the
+     letterforms ~2px above the bar's midline. The nav links (Plus Jakarta Sans
+     at 0.88rem) already land centred, as do the theme circle and hamburger, so
+     the title is the only thing that needs nudging — at every width. */
+  position: relative;
+  top: 2px;
 }
 
 .nav-site-title:hover {
@@ -296,7 +302,9 @@ a:focus-visible {
   border-radius: 50%;
   margin-right: 0.5rem;
   vertical-align: middle;
-  margin-bottom: 2px;
+  /* `middle` centres on baseline + x-height/2; landing on the cap-height
+     centre instead needs margin-bottom = cap-height − x-height (~0.24em). */
+  margin-bottom: 0.24em;
 }
 
 .nav-links {
@@ -1596,20 +1604,6 @@ main.container .page-intro {
   /* Nav: name left, theme + hamburger right */
   .nav-container {
     flex-direction: row;
-  }
-
-  /* Optical centering: the em box is centred, but Newsreader's ascent leaves
-     the letterforms ~2px above the bar's midline. Its neighbours here are two
-     geometrically centred icons, so nudge the type down to match them. */
-  .nav-site-title {
-    position: relative;
-    top: 2px;
-  }
-
-  /* …and re-seat the dot on the cap-height centre (margin-bottom raises an
-     inline-block aligned to `middle`; it needs cap-height − x-height). */
-  .nav-site-title::before {
-    margin-bottom: 0.24em;
   }
 
   .nav-toggle {
