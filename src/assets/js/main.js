@@ -305,8 +305,6 @@ function initMobileNav() {
     if (Date.now() < swallowClickUntil) return;
     const isOpen = links.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen);
-    // Prevent body scroll when menu is open
-    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   // Close menu when clicking a nav link
@@ -488,16 +486,20 @@ function initMobileNav() {
   document.addEventListener('touchend', () => endOpenGesture(true), { passive: true });
   document.addEventListener('touchcancel', () => endOpenGesture(false), { passive: true });
 
+  /* No body scroll lock here. `overflow: hidden` on <body> makes it a scroll
+     container, which moves the sticky header's scrollport from the viewport to
+     the body — so opening the menu part-way down a page threw the header (and
+     the panel hanging off it) to the top of the document, out of sight. The
+     panel is a small dropdown pinned to the header, so it stays usable while
+     the page scrolls anyway. */
   function openMenu() {
     links.classList.add('open');
     toggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
   }
 }
 
