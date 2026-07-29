@@ -10,24 +10,24 @@
     the others; IDEAS/EconPapers is a Bootstrap bulb, standing in for the IDEAS
     lightbulb mark, which is a raster and cannot be traced reliably.
 
-    Two glyphs are too path-heavy to inline on every page (the UNU emblem alone
-    is 35 KB), so they live in /assets/img and are tinted with a CSS mask over
-    currentColor instead — same result, cached separately. See .link-icon-mask.
-
-    CV is a lettermark; textLength pins it to the box so it cannot overflow
-    whatever the body font's metrics are. -#}
+    UNU-WIDER and RAND are square marks with their lettering knocked out, built
+    with an SVG mask so the hole is genuinely transparent and the tile takes
+    currentColor. UNU uses the real wordmark paths from the supplied logo (fitted
+    to the box from its measured bbox, 188.41 6.56 313.98 113.77); RAND's R is
+    type, which is why both live inline — an external SVG used as a mask cannot
+    reach the page's fonts. -#}
 
 {%- macro linkIcon(name) -%}
 {%- if name == "cv" -%}
-<svg class="link-icon link-icon-text" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><text x="8" y="12.4" text-anchor="middle" font-size="13" font-weight="700" textLength="15" lengthAdjust="spacingAndGlyphs">CV</text></svg>
+<svg class="link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755"/></svg>
 {%- elif name == "orcid" -%}
 <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
 {%- elif name == "profile" -%}
-<span class="link-icon link-icon-mask link-icon-unu" aria-hidden="true"></span>
+<svg class="link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><mask id="unuMark"><rect width="16" height="16" rx="2" fill="#fff"/><g transform="translate(-4.1,5.777) scale(0.035034)"><path fill="#000" d="M254.32,72.98V6.56h28.11v68.43c0,31.96-20.08,45.34-47.01,45.34c-26.77,0-47.01-13.38-47.01-45.34V6.56 h28.28v66.42c0,14.56,5.35,23.92,18.74,23.92C248.8,96.9,254.32,87.54,254.32,72.98"/> <polygon fill="#000" points="367.53,6.56 394.47,6.56 394.47,118.32 369.54,118.32 323.7,49.39 323.36,49.39 323.36,118.32 296.43,118.32 296.43,6.56 323.03,6.56 367.2,75.15 367.53,75.15 "/> <path fill="#000" d="M474.28,72.98V6.56h28.11v68.43c0,31.96-20.08,45.34-47.01,45.34c-26.77,0-47.01-13.38-47.01-45.34V6.56 h28.28v66.42c0,14.56,5.35,23.92,18.74,23.92C468.76,96.9,474.28,87.54,474.28,72.98"/></g></mask><rect width="16" height="16" rx="2" fill="currentColor" mask="url(#unuMark)"/></svg>
 {%- elif name == "scholar" -%}
 <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
 {%- elif name == "rand" -%}
-<span class="link-icon link-icon-mask link-icon-rand" aria-hidden="true"></span>
+<svg class="link-icon link-icon-text" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><mask id="randMark"><rect width="16" height="16" rx="2" fill="#fff"/><text x="8" y="12.6" text-anchor="middle" font-size="13.5" font-weight="400" fill="#000">R</text></mask><rect width="16" height="16" rx="2" fill="currentColor" mask="url(#randMark)"/></svg>
 {%- elif name == "repec" -%}
 <svg class="link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/></svg>
 {%- elif name == "twitter" -%}
