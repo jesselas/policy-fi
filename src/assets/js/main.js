@@ -861,7 +861,6 @@ function initResearchLibrary() {
   const noResults = document.getElementById('no-results');
   const sections = Array.from(content.querySelectorAll('.lib-section'));
   const cards = Array.from(content.querySelectorAll('.research-card'));
-  const viewButtons = Array.from(document.querySelectorAll('.view-btn'));
 
   const DEFAULT_SECTION = 'Recently Added';
 
@@ -1038,28 +1037,10 @@ function initResearchLibrary() {
   /* Sorting removed: entries render in their source order (per section, newest
      by year first, from researchSections.js). */
 
-  /* --- View toggle (cards / list), persisted under its own key ---
-     Phones are list-only (the toggle is hidden and card view had cross-engine
-     rendering issues), so force list there without touching the saved
-     desktop preference. */
-  function setView(view) {
-    content.dataset.view = view;
-    viewButtons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
-    try { localStorage.setItem('researchView', view); } catch (e) {}
-  }
-
-  const listOnly = window.matchMedia('(max-width: 640px)').matches;
-  if (listOnly) {
-    content.dataset.view = 'list';
-  } else {
-    viewButtons.forEach(btn => {
-      btn.addEventListener('click', () => setView(btn.dataset.view));
-    });
-    try {
-      const savedView = localStorage.getItem('researchView');
-      if (savedView === 'list' || savedView === 'cards') setView(savedView);
-    } catch (e) {}
-  }
+  /* View toggle removed: the research library is list-only at every width.
+     Clear the old preference so a saved 'cards' value can't resurrect it. */
+  content.dataset.view = 'list';
+  try { localStorage.removeItem('researchView'); } catch (e) {}
 
   /* --- Whole-card click-to-toggle (disclosure itself handled by initPubToggles) --- */
   cards.forEach(card => {

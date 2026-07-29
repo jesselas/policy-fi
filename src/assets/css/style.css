@@ -8,7 +8,7 @@
   color-scheme: light;
   /* A warm paper stock rather than near-white, so the grain has something to
      sit in and the pure-white cards lift off the ground. */
-  --bg: #f7f5f0;
+  --bg: #f8f7f3;
   --bg-pure: #ffffff;
   --text: #1c1c1c;
   --text-secondary: #5a5a58;
@@ -22,19 +22,22 @@
   --gold: #c9a84c;
   --gold-pale: #faf5e8;
   --gold-border: #e0d5a8;
-  --neutral: #f1efe8; /* keeps its old step below --bg */
+  --neutral: #f2f1eb; /* keeps its old step below --bg */
   --border: #ddddd8;
   --border-light: #eaeae6;
-  /* The bars sit above the grain, so they render as their true colour —
-     kept near-white here (near-black in dark mode) so the chrome reads as a
-     clean band against the textured paper ground. */
-  --header-bg: rgba(249, 248, 244, 0.95);
+  /* The bars sit above the page grain, so they get their own copy of it (see
+     .site-header::after) — a flat band always reads brighter than a textured
+     one at the same value, which is why earlier, lighter values still looked
+     "too white". With the texture back, this only has to be a small step off
+     the ground to separate. */
+  --header-bg: rgba(252, 251, 248, 0.95);
   /* The noise texture is mid-grey, so composited normally it lightens a dark
      ground (visible) but can only darken a near-white one (invisible at any
      tasteful opacity). Multiply lets it darken proportionally instead, which
      reads as paper fibre — hence a higher opacity here than in dark mode. */
-  --grain-opacity: 0.17;
+  --grain-opacity: 0.15;
   --grain-blend: multiply;
+  --grain-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   /* Lifts a highlighted surface above the grain overlay — see body::before. */
   --z-above-grain: 10000;
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
@@ -91,7 +94,7 @@
   --neutral: #22262b;
   --border: #383c42;
   --border-light: #2b2f35;
-  --header-bg: rgba(14, 15, 18, 0.94);
+  --header-bg: rgba(17, 19, 22, 0.94);
   /* Unchanged: on the dark ground plain alpha compositing already lifts the
      grain. Multiplying here would only darken it into invisibility. */
   --grain-opacity: 0.04;
@@ -167,7 +170,26 @@ body::before {
   z-index: 9999;
   opacity: var(--grain-opacity);
   mix-blend-mode: var(--grain-blend, normal);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-image: var(--grain-image);
+  background-repeat: repeat;
+}
+
+/* The chrome bars sit above the page grain (they have to, so a lifted card
+   can't paint over them), which left them flat while everything else was
+   textured — and flat reads brighter. Give them their own copy of the same
+   noise so they match the paper, and the bar colour only has to carry a small
+   step off the ground. Sits above .nav-container (z-index 2), so the bar's
+   contents are grained exactly like page text. */
+.site-header::after,
+.bottom-nav::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend, normal);
+  background-image: var(--grain-image);
   background-repeat: repeat;
 }
 
@@ -588,6 +610,52 @@ h2.section-label {
 .info-list .institution {
   color: var(--text-secondary);
   font-size: 0.85rem;
+}
+
+/* --- Link glyphs (footer link lists + the contact line) ---
+   The glyphs are inline SVG filled with currentColor, so they take the link's
+   colour and follow it through hover with no rule of their own. Sized in em so
+   they track the label at every breakpoint. */
+.link-icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 auto;
+  fill: currentColor;
+  /* Optical: the glyphs read a touch heavy next to the text weight. */
+  opacity: 0.82;
+}
+
+/* The CV lettermark is type, not a path — it needs the page font and a fill. */
+.link-icon-text text {
+  fill: currentColor;
+  font-family: var(--font-body);
+}
+
+.icon-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* EconPapers & IDEAS is two links in one row, so the glyph sits outside them.
+   inline-flex on a wrapper rather than the <li> keeps the row's full-width
+   bottom rule and lets the mobile columns' text-align still centre/right it. */
+.icon-list .icon-li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  text-align: left;
+}
+
+.link-icon-lead {
+  display: inline-flex;
+  color: var(--text-secondary);
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 /* Compact sections (capacity dev, conferences, media, links at bottom) */
