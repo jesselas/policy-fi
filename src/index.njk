@@ -1,6 +1,9 @@
 ---
 layout: base.njk
 title: Home
+# Links/Contact go above Recent research here, so this page includes them itself
+# rather than letting base.njk append them last.
+linksFirst: true
 description: "Jesse Lastunen — Research Associate at UNU-WIDER. Tax-benefit microsimulation, social policy, AI in economics."
 jsonLd:
   "@context": "https://schema.org"
@@ -61,7 +64,11 @@ jsonLd:
   <p>Discover more about my work or get in touch through the links below.</p>
 </div>
 
+{% include "footer-links.njk" %}
+
 {% if recentResearch and recentResearch.length > 0 %}
+<div class="divider">·</div>
+
 <div class="info-section recent-research">
   <h2 class="section-label">Recent research</h2>
   <div class="recent-research-grid">

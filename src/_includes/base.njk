@@ -85,7 +85,9 @@
 
   <main id="main-content" class="container{% if wide %} container-wide{% endif %}">
     {{ content | safe }}
-    {% include "footer-links.njk" %}
+    {#- Links/Contact normally close the page. The home page sets linksFirst and
+        includes them itself, above Recent research. -#}
+    {% if not linksFirst %}{% include "footer-links.njk" %}{% endif %}
   </main>
 
   <footer class="site-footer">
