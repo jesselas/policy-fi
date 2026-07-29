@@ -1747,12 +1747,14 @@ main.container .page-intro {
 
   .footer-link-grid .info-block h2 {
     font-size: 0.85rem;
-    margin-bottom: 0.2rem;
+    /* Deliberately larger than the gap between links below, so each heading
+       groups with its own column rather than floating between them. */
+    margin-bottom: 0.85rem;
   }
 
   .footer-link-grid .info-list li {
     border-bottom: none;
-    padding: 0.16rem 0;
+    padding: 0.3rem 0;
     font-size: 0.78rem;
     line-height: 1.35;
   }
