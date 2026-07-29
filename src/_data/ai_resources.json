@@ -3794,5 +3794,43 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "coqueret-randomness-in-llms",
+    "title": "Randomness in Large Language Models: What Researchers Need to Know (and Report) (arXiv)",
+    "url": "https://arxiv.org/abs/2607.24372",
+    "author": "Guillaume Coqueret, Joan Llull, Florian Oswald, Christophe Pérignon, Christoph Scheuch, Lars Vilhuber",
+    "date": "2026-07",
+    "description": "LLM outputs vary across repeated requests even with unchanged prompts and settings — because of deliberate sampling, silent model updates, numerical rounding, and expert routing — and setting temperature to zero removes only the intentional sampling. Using sentiment analysis of corporate filings as an illustration, the authors argue LLM outputs should be treated as draws from a distribution rather than fixed measurements, and propose concrete reporting standards for researchers, authors, and data editors.",
+    "shortDescription": "Why LLM outputs vary even at temperature zero, and reporting standards for researchers, authors and data editors who use them.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "reproducibility"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "haase-reviewer3",
+    "title": "reviewer3",
+    "url": "https://github.com/haesleinhuepf/reviewer3",
+    "author": "Robert Haase",
+    "date": "2026-07",
+    "description": "An open-source command-line tool that uses LLMs to give constructive feedback on scientific manuscripts in .docx format. By default it runs a locally installed, privacy-preserving model via Ollama (gpt-oss:20b at localhost), and returns inline tracked edits, clarification comments, and a review preface summarizing the document, its scientific importance, and global feedback — useful for a quick referee-style pass when co-authors are unavailable.",
+    "shortDescription": "Open-source CLI that reviews .docx manuscripts with a local, privacy-preserving LLM (via Ollama), returning tracked edits, comments and a review preface.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "research",
+      "LLM",
+      "tools"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
