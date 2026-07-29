@@ -8,12 +8,12 @@
   color-scheme: light;
   /* A warm paper stock rather than near-white, so the grain has something to
      sit in and the pure-white cards lift off the ground. */
-  --bg: #f6f4ef;
+  --bg: #f7f5f0;
   --bg-pure: #ffffff;
   --text: #1c1c1c;
   --text-secondary: #5a5a58;
   /* Nudged a shade darker than the old #6e6e6a to hold AA on the deeper
-     ground (4.94 on --bg, 4.68 on the --neutral footer band). */
+     ground (4.99 on --bg, 4.72 on the --neutral footer band). */
   --text-tertiary: #6a6a66;
   --accent: #0b525b;
   --accent-hover: #127681;
@@ -22,15 +22,18 @@
   --gold: #c9a84c;
   --gold-pale: #faf5e8;
   --gold-border: #e0d5a8;
-  --neutral: #f0eee7; /* keeps its old step below --bg */
+  --neutral: #f1efe8; /* keeps its old step below --bg */
   --border: #ddddd8;
   --border-light: #eaeae6;
-  --header-bg: rgba(246, 244, 239, 0.92);
+  /* The bars sit above the grain, so they render as their true colour —
+     kept near-white here (near-black in dark mode) so the chrome reads as a
+     clean band against the textured paper ground. */
+  --header-bg: rgba(253, 253, 251, 0.95);
   /* The noise texture is mid-grey, so composited normally it lightens a dark
      ground (visible) but can only darken a near-white one (invisible at any
      tasteful opacity). Multiply lets it darken proportionally instead, which
      reads as paper fibre — hence a higher opacity here than in dark mode. */
-  --grain-opacity: 0.20;
+  --grain-opacity: 0.17;
   --grain-blend: multiply;
   /* Lifts a highlighted surface above the grain overlay — see body::before. */
   --z-above-grain: 10000;
@@ -57,7 +60,7 @@
      the set (teal/slate, dE 21) land four rows apart. The dark set below
      keeps each hue and re-tunes lightness for a dark ground rather than
      reusing the light values.
-     Light 4.9:1–6.7:1 on #f6f4ef/#ffffff; dark 6.7:1–9.4:1 on #15171a/#1c1f23. */
+     Light 4.9:1–6.7:1 on #f7f5f0/#ffffff; dark 6.7:1–9.4:1 on #15171a/#1c1f23. */
   --cat-1: #c9a84c; /* gold   — Highlights / Peer reviewed; same as the ★ */
   /* Slot 1 doubles as the colour of 0.62rem uppercase card banners, where the
      star's gold only reaches 2.3:1. --cat-ink carries a darkened version for
@@ -88,7 +91,7 @@
   --neutral: #22262b;
   --border: #383c42;
   --border-light: #2b2f35;
-  --header-bg: rgba(21, 23, 26, 0.9);
+  --header-bg: rgba(9, 10, 12, 0.94);
   /* Unchanged: on the dark ground plain alpha compositing already lifts the
      grain. Multiplying here would only darken it into invisibility. */
   --grain-opacity: 0.04;
@@ -825,7 +828,9 @@ h2.section-label {
 .resource-card:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--accent);
-  border-left-color: var(--accent);
+  /* The left edge is the category swatch — it keeps its own hue on hover
+     rather than being flattened to the accent by the border-color above. */
+  border-left-color: var(--cat, var(--accent));
   transform: translateX(2px);
 }
 
@@ -1676,7 +1681,7 @@ main.container .page-intro {
     min-width: 9.5rem;
     max-width: min(78vw, 18rem);
     flex-direction: column;
-    background: var(--bg);
+    background: var(--header-bg); /* the panel is part of the bar, not the page */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border);
@@ -2510,6 +2515,7 @@ main.container .page-intro {
 
 .lib-grid .research-card:hover {
   border-color: var(--accent);
+  border-left-color: var(--cat, var(--accent)); /* keep the category swatch */
   box-shadow: var(--shadow-md);
   background: var(--accent-faint);
   position: relative;
@@ -2773,7 +2779,11 @@ main.container .page-intro {
     right: 0;
     bottom: 0;
     z-index: 10001;
-    background: var(--bg);
+    /* Matches the top bar: also above the grain, so it needs the same clean
+       chrome colour rather than the (textured) page ground. */
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-top: 1px solid var(--border);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
     padding-bottom: env(safe-area-inset-bottom);
@@ -2836,6 +2846,10 @@ main.container .page-intro {
 
 .southmod-map-panel {
   position: sticky;
+  /* Sticky already makes this a stacking context; lifting it above the grain
+     keeps the map's land and data colours as drawn, rather than multiplied
+     through the noise. */
+  z-index: var(--z-above-grain);
   top: 4.75rem;
   background: transparent;
   border: none;
