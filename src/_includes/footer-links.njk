@@ -34,5 +34,7 @@
 
 <div class="info-section compact-section">
   <span class="section-label">Contact</span>
-  <p class="contact-line">{{ linkIcon("mail") }}<span>Get in touch at lastunen(at)wider.unu.edu</span></p>
+  {#- The visible address keeps the (at) spelling, but the href has to be a real
+      mailto: for the click to work — so the address is in the markup either way. -#}
+  <p class="contact-line"><a href="mailto:lastunen@wider.unu.edu">{{ linkIcon("mail") }}<span>Get in touch at lastunen(at)wider.unu.edu</span></a></p>
 </div>

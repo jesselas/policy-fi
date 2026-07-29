@@ -623,12 +623,40 @@ h2.section-label {
   fill: currentColor;
   /* Optical: the glyphs read a touch heavy next to the text weight. */
   opacity: 0.82;
+  /* Flex centring lines the glyph up on the line box, but text reads as centred
+     on its x-height, which sits lower — hence the nudge down. */
+  position: relative;
+  top: 0.07em;
 }
 
 /* The CV lettermark is type, not a path — it needs the page font and a fill. */
 .link-icon-text text {
   fill: currentColor;
   font-family: var(--font-body);
+}
+
+/* Two marks are far too path-heavy to inline on every page (the UNU emblem is
+   35 KB on its own), so they are external files used as a mask over
+   currentColor — same single-colour result, and cached separately. */
+.link-icon-mask {
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.link-icon-unu {
+  -webkit-mask-image: url("/assets/img/unu-emblem.svg");
+  mask-image: url("/assets/img/unu-emblem.svg");
+}
+
+.link-icon-rand {
+  -webkit-mask-image: url("/assets/img/rand-mark.svg");
+  mask-image: url("/assets/img/rand-mark.svg");
 }
 
 .icon-list a {
@@ -652,8 +680,8 @@ h2.section-label {
   color: var(--text-secondary);
 }
 
-.contact-line {
-  display: flex;
+.contact-line a {
+  display: inline-flex;
   align-items: center;
   gap: 0.5em;
 }
