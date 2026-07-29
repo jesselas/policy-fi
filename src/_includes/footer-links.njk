@@ -18,7 +18,9 @@
       <ul class="info-list icon-list">
         <li><a href="https://scholar.google.com/citations?user=TGdgvgIAAAAJ&hl=en">{{ linkIcon("scholar") }}<span>Google Scholar</span></a></li>
         <li><a href="https://www.rand.org/pubs/authors/l/lastunen_jesse.html">{{ linkIcon("rand") }}<span>RAND Publications</span></a></li>
-        <li><span class="icon-li"><span class="link-icon-lead">{{ linkIcon("repec") }}</span><span><a href="https://econpapers.repec.org/RAS/pla1105.htm">EconPapers</a> &amp; <a href="https://ideas.repec.org/f/pla1105.html">IDEAS</a></span></span></li>
+        {#- The glyph goes inside the first link, not beside the pair: outside an
+            <a> it had its own colour, ignored hover, and wasn't clickable. -#}
+        <li><a href="https://econpapers.repec.org/RAS/pla1105.htm">{{ linkIcon("repec") }}<span>EconPapers</span></a> &amp; <a href="https://ideas.repec.org/f/pla1105.html">IDEAS</a></li>
       </ul>
     </div>
     <div class="info-block">
