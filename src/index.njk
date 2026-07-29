@@ -4,6 +4,8 @@ title: Home
 # Links/Contact go above Recent research here, so this page includes them itself
 # rather than letting base.njk append them last.
 linksFirst: true
+# The closing bio line carries the email, so the Contact block is redundant here.
+contactInBio: true
 description: "Jesse Lastunen — Research Associate at UNU-WIDER. Tax-benefit microsimulation, social policy, AI in economics."
 jsonLd:
   "@context": "https://schema.org"
@@ -48,6 +50,8 @@ jsonLd:
     - "SOUTHMOD"
 ---
 
+{% from "link-icons.njk" import linkIcon %}
+
 <h1 class="sr-only">Jesse Lastunen</h1>
 
 <div class="hero-float">
@@ -61,7 +65,8 @@ jsonLd:
 
   <p>I received my PhD in policy analysis from the <a href="https://www.rand.edu/programs/phd-policy-analysis.html">RAND School of Public Policy</a>, with analytical concentrations in economics and quantitative methods. Before that, I studied public policy (<a href="https://harris.uchicago.edu/">UChicago</a>), international economics (<a href="https://bse.eu/study/masters-programs/international-trade-finance-and-development">BSE</a>), technology policy (<a href="https://www.jbs.cam.ac.uk/masters-degrees/mphil-technology-policy/">Cambridge</a>) and engineering and management (<a href="http://web.mit.edu/mit-mi-cp/">Masdar Institute</a> and <a href="https://www.tuni.fi/en/about-us/industrial-engineering-and-management">Tampere University</a>).</p>
 
-  <p>Discover more about my work or get in touch through the links below.</p>
+  <p>Discover more about my work through the links below, or get in touch:
+    <a class="inline-contact" href="mailto:lastunen@wider.unu.edu">{{ linkIcon("mail") }}lastunen(at)wider.unu.edu</a></p>
 </div>
 
 {% include "footer-links.njk" %}
