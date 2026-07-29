@@ -28,6 +28,8 @@
      reads as paper fibre — hence a higher opacity here than in dark mode. */
   --grain-opacity: 0.12;
   --grain-blend: multiply;
+  /* Lifts a highlighted surface above the grain overlay — see body::before. */
+  --z-above-grain: 10000;
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
   --shadow-md: 0 2px 8px rgba(0,0,0,0.07);
   --shadow-lg: 0 4px 16px rgba(0,0,0,0.08);
@@ -136,7 +138,20 @@ body {
   position: relative;
 }
 
-/* Subtle paper grain */
+/* Subtle paper grain.
+
+   The grain is a single fixed overlay, so everything painted below it picks up
+   the noise — including the faint accent tint on hovered/active boxes, which
+   made the highlight colour read as dirty rather than as a clean wash. There is
+   no way to punch a hole in one overlay, so the layer order is the contract:
+
+     9999   the grain
+     10000  surfaces that must stay clean when highlighted (--z-above-grain)
+     10001  sticky/fixed chrome, so a lifted card can't paint over it
+     10002  the skip link, which always wins
+
+   Anything lifted to 10000 loses its grain entirely while lifted — that's the
+   point: a highlighted box goes crisp against the textured page. */
 body::before {
   content: '';
   position: fixed;
@@ -264,7 +279,7 @@ a:focus-visible {
 .site-header {
   position: sticky;
   top: 3px; /* below accent strip */
-  z-index: 100;
+  z-index: 10001; /* above the grain, so a lifted card can't cover the bar */
   background: var(--header-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -638,6 +653,8 @@ h2.section-label {
   box-shadow: var(--shadow-md);
   border-color: var(--accent);
   background: var(--accent-faint);
+  position: relative;
+  z-index: var(--z-above-grain);
 }
 
 .accordion-header {
@@ -660,6 +677,8 @@ h2.section-label {
 
 .accordion-header:hover {
   background: var(--accent-faint);
+  position: relative;
+  z-index: var(--z-above-grain);
 }
 
 .accordion-count {
@@ -745,6 +764,12 @@ h2.section-label {
   cursor: pointer;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
   line-height: 1.4;
+}
+
+.sort-btn:hover,
+.sort-btn.active {
+  position: relative;
+  z-index: var(--z-above-grain);
 }
 
 .sort-btn:hover {
@@ -1028,6 +1053,8 @@ h2.section-label {
   border-color: var(--accent);
   box-shadow: var(--shadow-md);
   background: var(--accent-faint);
+  position: relative;
+  z-index: var(--z-above-grain);
 }
 
 /* Make the whole card a click target with a cursor hint */
@@ -1333,6 +1360,8 @@ h2.section-label {
   border-color: var(--accent);
   color: var(--accent);
   background: var(--accent-faint);
+  position: relative;
+  z-index: var(--z-above-grain);
 }
 
 .filter-pill.active {
@@ -1492,7 +1521,7 @@ ul:not(.nav-links):not(.inline-list):not(.filter-pills):not(.info-list) li {
   white-space: normal;
   background: var(--accent);
   color: #fff;
-  z-index: 10000;
+  z-index: 10002;
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 0.85rem;
@@ -1963,6 +1992,12 @@ main.container .page-intro {
 /* --- Sidebar --- */
 .library-sidebar {
   position: sticky;
+  /* Sticky makes this a stacking context, so a lifted .cat-link inside could
+     never escape the grain on its own — the whole column goes up instead. It
+     has no background of its own, so the paper texture still shows through
+     between the buttons; only what the sidebar actually paints goes clean.
+     (Ignored below 641px, where the sidebar is position: static.) */
+  z-index: var(--z-above-grain);
   top: 4.75rem; /* header + strip + breathing room */
   max-height: calc(100vh - 5.5rem);
   overflow-y: auto;
@@ -2052,6 +2087,15 @@ main.container .page-intro {
   line-height: 1.35;
 }
 
+/* Redundant on desktop, where the sticky sidebar already carries the column
+   above the grain — this covers the phone layout, where it goes static. */
+.cat-link:hover,
+.cat-link.active,
+.cat-link.scroll-active {
+  position: relative;
+  z-index: var(--z-above-grain);
+}
+
 .cat-link:hover {
   background: var(--accent-faint);
   color: var(--text);
@@ -2134,6 +2178,8 @@ main.container .page-intro {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--bg);
+  position: relative;
+  z-index: var(--z-above-grain);
 }
 
 /* Sidebar footer info */
@@ -2380,6 +2426,7 @@ main.container .page-intro {
 .library-content[data-view="list"] .resource-card:hover {
   transform: none;
   background: var(--accent-faint);
+  z-index: var(--z-above-grain);
 }
 
 .library-content[data-view="list"] .card-top {
@@ -2461,6 +2508,8 @@ main.container .page-intro {
   border-color: var(--accent);
   box-shadow: var(--shadow-md);
   background: var(--accent-faint);
+  position: relative;
+  z-index: var(--z-above-grain);
 }
 
 /* Interactive children keep their own cursor */
@@ -2719,7 +2768,7 @@ main.container .page-intro {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 200;
+    z-index: 10001;
     background: var(--bg);
     border-top: 1px solid var(--border);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
