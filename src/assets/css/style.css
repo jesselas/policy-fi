@@ -617,16 +617,17 @@ h2.section-label {
    colour and follow it through hover with no rule of their own. Sized in em so
    they track the label at every breakpoint. */
 .link-icon {
-  width: 1.05em;
-  height: 1.05em;
+  /* Whole pixels, not em. At 1.05em these landed on 14.109px with a 0.94px
+     offset, so a circle like ORCID's straddled device pixels and rasterised
+     visibly out-of-round on a 1x/2x display. */
+  width: 14px;
+  height: 14px;
   flex: 0 0 auto;
   fill: currentColor;
-  /* Optical: the glyphs read a touch heavy next to the text weight. */
-  opacity: 0.82;
-  /* Flex centring lines the glyph up on the line box, but text reads as centred
-     on its x-height, which sits lower — hence the nudge down. */
+  /* No opacity: the glyph should be exactly the link's colour, and fading it
+     also softened the edges. */
   position: relative;
-  top: 0.07em;
+  top: 1px; /* integer, for the same pixel-snapping reason */
 }
 
 /* The CV lettermark is type, not a path — it needs the page font and a fill. */
@@ -639,21 +640,6 @@ h2.section-label {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-}
-
-/* EconPapers & IDEAS is two links in one row, so the glyph sits outside them.
-   inline-flex on a wrapper rather than the <li> keeps the row's full-width
-   bottom rule and lets the mobile columns' text-align still centre/right it. */
-.icon-list .icon-li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  text-align: left;
-}
-
-.link-icon-lead {
-  display: inline-flex;
-  color: var(--text-secondary);
 }
 
 .contact-line a {
