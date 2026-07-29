@@ -1075,6 +1075,10 @@ h2.section-label {
 .pub-entry .pub-title a {
   color: var(--text);
   border-bottom: none;
+  /* WCAG 2.2 AA target size (2.5.8): the title is an inline link, so its hit
+     area was only the 15px text line. Vertical padding on an inline box grows
+     the hit area to ~25px without changing the line height, so nothing moves. */
+  padding: 0.32rem 0;
 }
 
 .pub-entry .pub-title a:hover {
@@ -1082,6 +1086,11 @@ h2.section-label {
 }
 
 /* Collapsible publication details */
+/* max-height/overflow clip the panel visually but leave the citation buttons and
+   abstract links inside it tabbable, so a keyboard user tabbing down the page
+   hit invisible controls inside every collapsed card. The fix is the `inert`
+   attribute, toggled with the class in initPubToggles — CSS visibility would
+   also work but interferes with the reveal timing. */
 .pub-details {
   max-height: 0;
   overflow: hidden;
@@ -1791,6 +1800,9 @@ main.container .page-intro {
     transform: translateY(-110%);
     opacity: 0;
     pointer-events: none;
+    /* The closed panel's links stay tabbable under opacity/pointer-events alone;
+       initMobileNav marks the panel `inert` instead, which keeps them out of the
+       tab order without affecting this animation. */
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
     overscroll-behavior: contain;
     touch-action: none;
