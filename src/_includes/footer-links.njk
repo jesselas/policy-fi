@@ -1,3 +1,5 @@
+{% from "link-icons.njk" import linkIcon %}
+
 <div class="divider">·</div>
 
 <div class="info-section compact-section">
@@ -5,26 +7,26 @@
   <div class="info-grid info-grid-3col footer-link-grid">
     <div class="info-block">
       <h2>CV/Profile</h2>
-      <ul class="info-list">
-        <li><a href="https://www.wider.unu.edu/sites/default/files/expert_cv/CV_Jesse_Lastunen_June_2026_dd13ac139543b4b522bb2ade5b97429d.pdf">CV</a></li>
-        <li><a href="https://orcid.org/0000-0001-6241-7504">ORCID</a></li>
-        <li><a href="https://www.wider.unu.edu/expert/jesse-lastunen"><span class="wide-only">UNU-</span>WIDER profile</a></li>
+      <ul class="info-list icon-list">
+        <li><a href="https://www.wider.unu.edu/sites/default/files/expert_cv/CV_Jesse_Lastunen_June_2026_dd13ac139543b4b522bb2ade5b97429d.pdf">{{ linkIcon("cv") }}<span>CV</span></a></li>
+        <li><a href="https://orcid.org/0000-0001-6241-7504">{{ linkIcon("orcid") }}<span>ORCID</span></a></li>
+        <li><a href="https://www.wider.unu.edu/expert/jesse-lastunen">{{ linkIcon("profile") }}<span><span class="wide-only">UNU-</span>WIDER profile</span></a></li>
       </ul>
     </div>
     <div class="info-block">
       <h2>Publications</h2>
-      <ul class="info-list">
-        <li><a href="https://scholar.google.com/citations?user=TGdgvgIAAAAJ&hl=en">Google Scholar</a></li>
-        <li><a href="https://www.rand.org/pubs/authors/l/lastunen_jesse.html">RAND Publications</a></li>
-        <li><a href="https://econpapers.repec.org/RAS/pla1105.htm">EconPapers</a> & <a href="https://ideas.repec.org/f/pla1105.html">IDEAS</a></li>
+      <ul class="info-list icon-list">
+        <li><a href="https://scholar.google.com/citations?user=TGdgvgIAAAAJ&hl=en">{{ linkIcon("scholar") }}<span>Google Scholar</span></a></li>
+        <li><a href="https://www.rand.org/pubs/authors/l/lastunen_jesse.html">{{ linkIcon("rand") }}<span>RAND Publications</span></a></li>
+        <li><span class="icon-li"><span class="link-icon-lead">{{ linkIcon("repec") }}</span><span><a href="https://econpapers.repec.org/RAS/pla1105.htm">EconPapers</a> &amp; <a href="https://ideas.repec.org/f/pla1105.html">IDEAS</a></span></span></li>
       </ul>
     </div>
     <div class="info-block">
       <h2>Social media</h2>
-      <ul class="info-list">
-        <li><a href="https://twitter.com/jesselastunen">Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/lastunen/">LinkedIn</a></li>
-        <li><a href="https://github.com/jesselas">GitHub</a></li>
+      <ul class="info-list icon-list">
+        <li><a href="https://twitter.com/jesselastunen">{{ linkIcon("twitter") }}<span>Twitter</span></a></li>
+        <li><a href="https://www.linkedin.com/in/lastunen/">{{ linkIcon("linkedin") }}<span>LinkedIn</span></a></li>
+        <li><a href="https://github.com/jesselas">{{ linkIcon("github") }}<span>GitHub</span></a></li>
       </ul>
     </div>
   </div>
@@ -32,5 +34,5 @@
 
 <div class="info-section compact-section">
   <span class="section-label">Contact</span>
-  <p>Get in touch at lastunen(at)wider.unu.edu</p>
+  <p class="contact-line">{{ linkIcon("mail") }}<span>Get in touch at lastunen(at)wider.unu.edu</span></p>
 </div>

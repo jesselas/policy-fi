@@ -26,7 +26,15 @@
 <title>SOUTHMOD &amp; EUROMOD-based Microsimulation Models</title>
 <style>
   :root {
-    --bg: #f7f5f0;
+    /* NOT the host page's --bg. The map panel is lifted above the site's grain
+       overlay, so it has to match the page as *rendered* — i.e. --bg already
+       multiplied by the noise. An iframe cannot be made transparent (Chrome
+       paints an opaque canvas whatever the document background), so matching
+       the rendered tone is the only way to avoid a visible block.
+         light: #f8f7f3 x 0.9798 = #f3f2ee
+         dark:  #15171a normal-blended at 0.04 = #181a1d
+       Re-derive both if --grain-opacity or --bg changes. */
+    --bg: #f3f2ee;
     --land: #e6e9ee;
     --land-edge: #c2c8d2;
     --euromod-a: #bccadf;
@@ -42,7 +50,7 @@
   /* Dark mode: blend with the site's dark background, dark land, light text.
      Data colours (SOUTHMOD orange, EUROMOD blue) stay vivid. */
   html[data-theme="dark"] {
-    --bg: #15171a;
+    --bg: #181a1d;
     --land: #262b31;
     --land-edge: #363c44;
     --text: #e8e6e1;
@@ -50,11 +58,7 @@
   }
   html, body {
     margin: 0; padding: 0;
-    /* Transparent so the host page's paper ground — grain and all — shows
-       through the ocean. The panel is lifted above the grain overlay, so only
-       what this map actually draws stays clean. --bg is still the page colour,
-       used for the label halos. */
-    background: transparent;
+    background: var(--bg);
     color: var(--text);
     font-family: "Avenir Next", Avenir, "Helvetica Neue", system-ui, sans-serif;
   }
@@ -197,6 +201,9 @@
       <rect x="1520" y="0" width="80" height="1060" fill="url(#fadeRight)"/>
     </mask>
   </defs>
+
+  <!-- Map background -->
+  <rect x="0" y="0" width="1600" height="882" fill="var(--bg)"/>
 
   <!-- Country layers -->
   <g id="other-layer" mask="url(#edgeFade)">
