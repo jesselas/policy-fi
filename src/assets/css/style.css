@@ -670,6 +670,9 @@ h2.section-label {
    from the address across a line break. */
 .inline-contact {
   white-space: nowrap;
+  /* The collapsed newline before this link leaves only one word space after the
+     colon. ~0.3em adds roughly a second one. */
+  margin-left: 0.3em;
 }
 
 /* Body text is larger than the footer's (14.72 vs 13.44px), so its cap height is
