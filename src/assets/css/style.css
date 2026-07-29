@@ -28,7 +28,7 @@
   /* The bars sit above the grain, so they render as their true colour —
      kept near-white here (near-black in dark mode) so the chrome reads as a
      clean band against the textured paper ground. */
-  --header-bg: rgba(251, 250, 247, 0.95);
+  --header-bg: rgba(249, 248, 244, 0.95);
   /* The noise texture is mid-grey, so composited normally it lightens a dark
      ground (visible) but can only darken a near-white one (invisible at any
      tasteful opacity). Multiply lets it darken proportionally instead, which
@@ -91,7 +91,7 @@
   --neutral: #22262b;
   --border: #383c42;
   --border-light: #2b2f35;
-  --header-bg: rgba(9, 10, 12, 0.94);
+  --header-bg: rgba(14, 15, 18, 0.94);
   /* Unchanged: on the dark ground plain alpha compositing already lifts the
      grain. Multiplying here would only darken it into invisibility. */
   --grain-opacity: 0.04;
