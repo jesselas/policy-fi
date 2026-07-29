@@ -630,6 +630,13 @@ h2.section-label {
   top: 1px; /* integer, for the same pixel-snapping reason */
 }
 
+/* The UNU tile is filled edge to edge, so unlike the line-art glyphs it has no
+   internal padding and hangs lower against the text. Back off the nudge by a
+   whole pixel — still integer, so it stays pixel-snapped. */
+.link-icon-unu {
+  top: 0;
+}
+
 /* The CV lettermark is type, not a path — it needs the page font and a fill. */
 .link-icon-text text {
   fill: currentColor;
