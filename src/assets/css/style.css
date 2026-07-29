@@ -626,18 +626,14 @@ h2.section-label {
   fill: currentColor;
   /* No opacity: the glyph should be exactly the link's colour, and fading it
      also softened the edges. */
-  /* Measured: -2px left the glyph centre 0.5px below the label's centre, so
-     -1.5px lands them on each other. A half pixel is still crisp — it is a whole
-     device pixel at 2x, and it is the glyph's *size* (once 14.109px) rather than
-     its offset that made circles rasterise out of round. */
-  vertical-align: -1.5px;
+  /* The eye centres a glyph on the text's cap height, not on its line box.
+     Measured cap height here is 10.17px, and a 14px box at vertical-align:-Xpx
+     puts its centre (7 - X) above the baseline, so the ideal X is 7 - 10.17/2 =
+     1.91. Rounded to a whole pixel: 0.09px out, and pixel-snapped.
+     (An earlier -1.5px came from measuring against the label's line box, which
+     includes leading — that sat every glyph 0.4px high.) */
+  vertical-align: -2px;
   margin-right: 0.5em;
-}
-
-/* The UNU tile is filled edge to edge, so unlike the line-art glyphs it has no
-   internal padding and hangs lower against the text — raise it a whole pixel. */
-.link-icon-unu {
-  vertical-align: -0.5px; /* the same 1px lift, relative to the new baseline */
 }
 
 /* The CV lettermark is type, not a path — it needs the page font and a fill. */
@@ -648,7 +644,12 @@ h2.section-label {
    width to punch all the way through. Set here rather than as a presentation
    attribute so it can use the page's own font token. */
 .link-icon-text text {
-  fill: currentColor; /* mask contents override this with fill="#000" */
+  /* No fill here. The only <text> is the one inside RAND's mask, and a CSS
+     declaration beats a presentation attribute — so `fill: currentColor` here
+     silently overrode the mask text's fill="#000", painting the mask in the link
+     colour. A mid-luminance mask is only partly transparent, which is why the R
+     came out grey instead of punched through, and worse in dark mode where the
+     link colour is lighter still. */
   font-family: var(--font-body);
   font-weight: 700;
 }
