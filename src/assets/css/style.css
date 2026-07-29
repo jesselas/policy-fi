@@ -666,6 +666,19 @@ h2.section-label {
   display: inline;
 }
 
+/* The email at the end of the bio. nowrap so the glyph can never be orphaned
+   from the address across a line break. */
+.inline-contact {
+  white-space: nowrap;
+}
+
+/* Body text is larger than the footer's (14.72 vs 13.44px), so its cap height is
+   11.14px and the ideal offset here is 7 - 11.14/2 = 1.43 rather than the shared
+   1.91. Without this the glyph sits ~0.6px low against the sentence. */
+.inline-contact .link-icon {
+  vertical-align: -1.5px;
+}
+
 
 /* Compact sections (capacity dev, conferences, media, links at bottom) */
 .compact-section {
