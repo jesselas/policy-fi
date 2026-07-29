@@ -1726,38 +1726,38 @@ main.container .page-intro {
     gap: 1.5rem;
   }
 
-  /* Footer links: each group's three links share one row rather than stacking,
-     which left most of the width empty. 1fr auto 1fr puts the middle item on
-     the centre line regardless of the other two widths; the hairline moves
-     from the individual links to the row. Scoped to .footer-link-grid so the
-     Research page's compact sections (which hold longer lists) are unaffected. */
-  .footer-link-grid {
-    gap: 1.1rem;
+  /* Footer links keep the desktop shape on mobile — a heading with its links
+     stacked beneath it — instead of collapsing to one column, which left most
+     of the width unused. The three columns are aligned left / centre / right
+     so the block spans the full width, and the per-link hairlines come off to
+     keep it compact. Scoped to .footer-link-grid so the Research page's
+     compact three-column section still stacks. */
+  .info-grid.footer-link-grid {
+    /* The middle column (Publications) holds the longest labels, so let it size
+       to its content; the equal 1fr columns either side keep it centred on the
+       page while absorbing what's left. Equal thirds would wrap it on a 375px
+       phone, where a third is only ~110px against its 115px widest item. */
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0 0.6rem;
   }
 
-  .footer-link-grid .info-list {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: baseline;
-    column-gap: 0.6rem;
-    border-bottom: 1px solid var(--border-light);
+  .footer-link-grid .info-block:nth-child(1) { text-align: left; }
+  .footer-link-grid .info-block:nth-child(2) { text-align: center; }
+  .footer-link-grid .info-block:nth-child(3) { text-align: right; }
+
+  .footer-link-grid .info-block h2 {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
   }
 
   .footer-link-grid .info-list li {
     border-bottom: none;
-    padding: 0.15rem 0 0.45rem;
-    font-size: 0.82rem;
+    padding: 0.16rem 0;
+    font-size: 0.78rem;
+    line-height: 1.35;
   }
 
-  .footer-link-grid .info-list li:nth-child(1) { justify-self: start; text-align: left; }
-  .footer-link-grid .info-list li:nth-child(2) { justify-self: center; text-align: center; }
-  .footer-link-grid .info-list li:nth-child(3) { justify-self: end; text-align: right; }
-
-  .footer-link-grid .info-block h2 {
-    margin-bottom: 0.15rem;
-  }
-
-  /* Trimmed on narrow rows: "UNU-WIDER profile" -> "WIDER profile" */
+  /* Trimmed to fit a third of the width: "UNU-WIDER profile" -> "WIDER profile" */
   .wide-only { display: none; }
 
   .container {
@@ -1844,15 +1844,15 @@ main.container .page-intro {
   h1 { font-size: 1.4rem; }
   h2 { font-size: 1.15rem; }
 
-  /* The Publications row is the widest of the three (~348px at 0.82rem, which
-     clears a 390px phone but not a 375px one), so tighten type and gap here
-     rather than abbreviating the link names. */
-  .footer-link-grid .info-list {
-    column-gap: 0.4rem;
+  /* Tighter type and gap on small phones: at 0.74rem the three columns need
+     ~284px of the 343px available at 375px, so nothing wraps (and it still
+     just clears a 320px screen). */
+  .info-grid.footer-link-grid {
+    gap: 0 0.4rem;
   }
 
   .footer-link-grid .info-list li {
-    font-size: 0.76rem;
+    font-size: 0.74rem;
   }
 
   .container {
