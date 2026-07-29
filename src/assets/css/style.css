@@ -635,30 +635,6 @@ h2.section-label {
   font-family: var(--font-body);
 }
 
-/* Two marks are far too path-heavy to inline on every page (the UNU emblem is
-   35 KB on its own), so they are external files used as a mask over
-   currentColor — same single-colour result, and cached separately. */
-.link-icon-mask {
-  display: inline-block;
-  background-color: currentColor;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
-.link-icon-unu {
-  -webkit-mask-image: url("/assets/img/unu-emblem.svg");
-  mask-image: url("/assets/img/unu-emblem.svg");
-}
-
-.link-icon-rand {
-  -webkit-mask-image: url("/assets/img/rand-mark.svg");
-  mask-image: url("/assets/img/rand-mark.svg");
-}
-
 .icon-list a {
   display: inline-flex;
   align-items: center;
