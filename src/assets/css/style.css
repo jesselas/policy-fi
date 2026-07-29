@@ -6,11 +6,15 @@
 /* --- Custom Properties --- */
 :root {
   color-scheme: light;
-  --bg: #fafaf8;
+  /* A warm paper stock rather than near-white, so the grain has something to
+     sit in and the pure-white cards lift off the ground. */
+  --bg: #f6f4ef;
   --bg-pure: #ffffff;
   --text: #1c1c1c;
   --text-secondary: #5a5a58;
-  --text-tertiary: #6e6e6a;
+  /* Nudged a shade darker than the old #6e6e6a to hold AA on the deeper
+     ground (4.94 on --bg, 4.68 on the --neutral footer band). */
+  --text-tertiary: #6a6a66;
   --accent: #0b525b;
   --accent-hover: #127681;
   --accent-pale: #e4f0f1;
@@ -18,15 +22,15 @@
   --gold: #c9a84c;
   --gold-pale: #faf5e8;
   --gold-border: #e0d5a8;
-  --neutral: #f4f4f0;
+  --neutral: #f0eee7; /* keeps its old step below --bg */
   --border: #ddddd8;
   --border-light: #eaeae6;
-  --header-bg: rgba(250, 250, 248, 0.92);
+  --header-bg: rgba(246, 244, 239, 0.92);
   /* The noise texture is mid-grey, so composited normally it lightens a dark
      ground (visible) but can only darken a near-white one (invisible at any
      tasteful opacity). Multiply lets it darken proportionally instead, which
      reads as paper fibre — hence a higher opacity here than in dark mode. */
-  --grain-opacity: 0.12;
+  --grain-opacity: 0.20;
   --grain-blend: multiply;
   /* Lifts a highlighted surface above the grain overlay — see body::before. */
   --z-above-grain: 10000;
@@ -53,7 +57,7 @@
      the set (teal/slate, dE 21) land four rows apart. The dark set below
      keeps each hue and re-tunes lightness for a dark ground rather than
      reusing the light values.
-     Light 4.9:1–6.7:1 on #fafaf8/#ffffff; dark 6.7:1–9.4:1 on #15171a/#1c1f23. */
+     Light 4.9:1–6.7:1 on #f6f4ef/#ffffff; dark 6.7:1–9.4:1 on #15171a/#1c1f23. */
   --cat-1: #c9a84c; /* gold   — Highlights / Peer reviewed; same as the ★ */
   /* Slot 1 doubles as the colour of 0.62rem uppercase card banners, where the
      star's gold only reaches 2.3:1. --cat-ink carries a darkened version for
