@@ -28,7 +28,7 @@
   /* The bars sit above the grain, so they render as their true colour —
      kept near-white here (near-black in dark mode) so the chrome reads as a
      clean band against the textured paper ground. */
-  --header-bg: rgba(253, 253, 251, 0.95);
+  --header-bg: rgba(251, 250, 247, 0.95);
   /* The noise texture is mid-grey, so composited normally it lightens a dark
      ground (visible) but can only darken a near-white one (invisible at any
      tasteful opacity). Multiply lets it darken proportionally instead, which
