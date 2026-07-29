@@ -213,12 +213,21 @@ function initPubToggles() {
     toggle.setAttribute('tabindex', '0');
     toggle.setAttribute('role', 'button');
 
+    /* A collapsed panel is clipped by max-height, which hides it visually but
+       leaves the citation buttons and abstract links inside it tabbable — focus
+       would vanish into a closed card. `inert` takes the whole subtree out of
+       the tab order and the accessibility tree without touching how it paints,
+       so the expand animation is unaffected. */
+    const collapsed = toggle.nextElementSibling;
+    if (collapsed) collapsed.inert = true;
+
     toggle.addEventListener('click', () => {
       const details = toggle.nextElementSibling;
       if (!details) return;
       const isOpen = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', !isOpen);
       details.classList.toggle('open', !isOpen);
+      details.inert = isOpen;
     });
 
     toggle.addEventListener('keydown', (e) => {
@@ -303,8 +312,7 @@ function initMobileNav() {
   toggle.addEventListener('click', (e) => {
     e.stopPropagation();
     if (Date.now() < swallowClickUntil) return;
-    const isOpen = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', isOpen);
+    if (links.classList.contains('open')) closeMenu(); else openMenu();
   });
 
   // Close menu when clicking a nav link
@@ -492,15 +500,35 @@ function initMobileNav() {
      the panel hanging off it) to the top of the document, out of sight. The
      panel is a small dropdown pinned to the header, so it stays usable while
      the page scrolls anyway. */
+  /* The closed panel is only hidden by opacity/transform, so its links stayed
+     tabbable — a keyboard user tabbing off the title landed on four invisible
+     off-screen links. `inert` takes them out of the tab order without touching
+     the slide animation. */
   function openMenu() {
     links.classList.add('open');
+    links.inert = false;
     toggle.setAttribute('aria-expanded', 'true');
   }
 
   function closeMenu() {
     links.classList.remove('open');
+    links.inert = isPanel();
     toggle.setAttribute('aria-expanded', 'false');
   }
+
+  /* Above 768px the same <ul> is the ordinary desktop nav — always reachable.
+     Only the collapsed dropdown may be inert, so this has to be re-evaluated
+     whenever the breakpoint is crossed. */
+  function isPanel() {
+    return window.matchMedia('(max-width: 768px)').matches;
+  }
+
+  function syncInert() {
+    links.inert = isPanel() && !links.classList.contains('open');
+  }
+
+  syncInert();
+  window.addEventListener('resize', syncInert);
 }
 
 /* --- Citation Copy Buttons --- */
