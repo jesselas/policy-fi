@@ -72,6 +72,10 @@ jsonLd:
 {% include "footer-links.njk" %}
 
 {% if recentResearch and recentResearch.length > 0 %}
+{#- A rule here only: the bio flows straight into Links, but Recent research is
+    a different kind of content and reads better set off. -#}
+<div class="divider">·</div>
+
 <div class="info-section recent-research">
   <h2 class="section-label">Recent research</h2>
   <div class="recent-research-grid">
