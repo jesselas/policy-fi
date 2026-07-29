@@ -1726,6 +1726,40 @@ main.container .page-intro {
     gap: 1.5rem;
   }
 
+  /* Footer links: each group's three links share one row rather than stacking,
+     which left most of the width empty. 1fr auto 1fr puts the middle item on
+     the centre line regardless of the other two widths; the hairline moves
+     from the individual links to the row. Scoped to .footer-link-grid so the
+     Research page's compact sections (which hold longer lists) are unaffected. */
+  .footer-link-grid {
+    gap: 1.1rem;
+  }
+
+  .footer-link-grid .info-list {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: baseline;
+    column-gap: 0.6rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .footer-link-grid .info-list li {
+    border-bottom: none;
+    padding: 0.15rem 0 0.45rem;
+    font-size: 0.82rem;
+  }
+
+  .footer-link-grid .info-list li:nth-child(1) { justify-self: start; text-align: left; }
+  .footer-link-grid .info-list li:nth-child(2) { justify-self: center; text-align: center; }
+  .footer-link-grid .info-list li:nth-child(3) { justify-self: end; text-align: right; }
+
+  .footer-link-grid .info-block h2 {
+    margin-bottom: 0.15rem;
+  }
+
+  /* Trimmed on narrow rows: "UNU-WIDER profile" -> "WIDER profile" */
+  .wide-only { display: none; }
+
   .container {
     padding: 1.75rem 1.25rem;
   }
@@ -1809,6 +1843,17 @@ main.container .page-intro {
 @media (max-width: 480px) {
   h1 { font-size: 1.4rem; }
   h2 { font-size: 1.15rem; }
+
+  /* The Publications row is the widest of the three (~348px at 0.82rem, which
+     clears a 390px phone but not a 375px one), so tighten type and gap here
+     rather than abbreviating the link names. */
+  .footer-link-grid .info-list {
+    column-gap: 0.4rem;
+  }
+
+  .footer-link-grid .info-list li {
+    font-size: 0.76rem;
+  }
 
   .container {
     padding: 1.25rem 1rem;
