@@ -1746,7 +1746,6 @@ main.container .page-intro {
   .footer-link-grid .info-block:nth-child(3) { text-align: right; }
 
   .footer-link-grid .info-block h2 {
-    font-size: 0.85rem;
     /* Deliberately larger than the gap between links below, so each heading
        groups with its own column rather than floating between them. */
     margin-bottom: 0.85rem;
@@ -1755,7 +1754,7 @@ main.container .page-intro {
   .footer-link-grid .info-list li {
     border-bottom: none;
     padding: 0.3rem 0;
-    font-size: 0.78rem;
+    font-size: 0.86rem;
     line-height: 1.35;
   }
 
@@ -1846,15 +1845,19 @@ main.container .page-intro {
   h1 { font-size: 1.4rem; }
   h2 { font-size: 1.15rem; }
 
-  /* Tighter type and gap on small phones: at 0.74rem the three columns need
-     ~284px of the 343px available at 375px, so nothing wraps (and it still
-     just clears a 320px screen). */
+  /* Tighter type and gap on small phones, headings and links scaled together:
+     at 0.82/0.9rem the three columns need ~313px of the 343px available at
+     375px. Below about 340px of content an item wraps within its column. */
   .info-grid.footer-link-grid {
     gap: 0 0.4rem;
   }
 
+  .footer-link-grid .info-block h2 {
+    font-size: 0.9rem;
+  }
+
   .footer-link-grid .info-list li {
-    font-size: 0.74rem;
+    font-size: 0.82rem;
   }
 
   .container {
