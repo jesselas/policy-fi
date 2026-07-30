@@ -668,6 +668,9 @@ h2.section-label {
 
 /* The email at the end of the bio. nowrap so the glyph can never be orphaned
    from the address across a line break. */
+/* Shown only below 768px; see the mobile block. */
+.narrow-only { display: none; }
+
 .inline-contact {
   white-space: nowrap;
   /* The collapsed newline before this link leaves only one word space after the
@@ -1901,8 +1904,10 @@ main.container .page-intro {
     line-height: 1.35;
   }
 
-  /* Trimmed to fit a third of the width: "UNU-WIDER profile" -> "WIDER profile" */
+  /* Trimmed to fit a third of the width: "UNU-WIDER profile" -> "Profile",
+     which is the longest form that still holds one line in the column. */
   .wide-only { display: none; }
+  .narrow-only { display: inline; }
 
   .container {
     padding: 1.75rem 1.25rem;
