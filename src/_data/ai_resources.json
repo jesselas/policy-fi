@@ -3832,5 +3832,100 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "liang-ml-generate-clarify-improve-econ-models",
+    "title": "Using Machine Learning to Generate, Clarify, and Improve Economic Models (JEL)",
+    "url": "https://www.aeaweb.org/articles?id=10.1257/jel.20261783",
+    "author": "Annie Liang",
+    "date": "2026-07",
+    "description": "Forthcoming in the Journal of Economic Literature, this article examines how machine learning and other computational techniques can contribute to building economic models — clarifying a model's strengths and limitations, identifying prediction failures through adversarial testing, creating hybrid models that combine economic theory with flexible algorithms, and exploring applications of large language models in economics.",
+    "shortDescription": "JEL article on how ML can help generate, stress-test, and improve economic models, including hybrid theory-plus-algorithm approaches and LLM uses.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "machine learning",
+      "economic theory"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cunningham-prose-is-not-constraints",
+    "title": "Prose is not constraints and other things I learned from Paul Goldsmith-Pinkham's NBER talk on AI in empirical research",
+    "url": "https://causalinf.substack.com/p/prose-is-not-constraints-and-other",
+    "author": "Scott Cunningham",
+    "date": "2026-07",
+    "description": "Reflecting on Paul Goldsmith-Pinkham's NBER talk and his own large-scale experiments with semi-autonomous agents, Cunningham argues that written rules in CLAUDE.md files and prompts do not actually constrain coding agents — 'prose is not a constraint.' Real constraints come from tools (for example, an R package that refuses invalid specifications) and hooks that make forbidden actions impossible, not from instructions the agent can ignore.",
+    "shortDescription": "Cunningham argues prose rules don't constrain coding agents in empirical research; only tools and hooks that forbid actions do.",
+    "category": "Coding with AI",
+    "tags": [
+      "economics",
+      "Claude Code",
+      "empirical research"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "sikic-how-economics-absorbed-ai",
+    "title": "How Economics Absorbed AI",
+    "url": "https://www.lukasikic.info/ai/",
+    "author": "Luka Šikić",
+    "date": "2026-07",
+    "description": "A data-driven field map of how AI has been integrated into economics, built from 661 resources (530 with full text) across six registers — working papers, tools, commentary, guides, podcasts, and courses. It traces the field's development from 2023 to 2026, documents how different formats cite one another (papers link mostly to papers, tools to tools), and forecasts developments through 2028, arguing that 'intelligence became cheap and trust did not,' so verified judgment is the new scarce factor.",
+    "shortDescription": "Field map of 661 resources on how AI entered economics, tracing citation flows across formats and forecasting the field through 2028.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "field map"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "nber-w35490-training-ai-when-humans-use-it",
+    "title": "Training AI for When Humans Will Use It (NBER)",
+    "url": "https://www.nber.org/papers/w35490",
+    "author": "Kevin A. Bryan, Joshua S. Gans",
+    "date": "2026-07",
+    "description": "AI predicts, and humans use those predictions — combined with human verification, other statistical models, and further analysis — to make decisions. The authors show that maximizing an AI model's prediction accuracy alone is generally suboptimal once you account for how humans actually use it, and analyze optimal model training (using geometric methods) with heterogeneous users and a monopoly trainer.",
+    "shortDescription": "NBER paper: because humans use AI predictions within larger decisions, maximizing prediction accuracy alone is suboptimal for training.",
+    "category": "Research Papers",
+    "tags": [
+      "economics of AI",
+      "decision theory",
+      "AI"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "project-ape-autonomous-policy-evaluation",
+    "title": "Project APE: Autonomous Policy Evaluation",
+    "url": "https://ape.socialcatalystlab.org",
+    "author": "Social Catalyst Lab (University of Zurich)",
+    "date": "2026-07",
+    "description": "An experiment by the Social Catalyst Lab at the University of Zurich testing whether AI can autonomously generate, replicate, and revise empirical economic research from publicly available data. Generated papers are scored in an automated tournament against human-authored benchmarks from leading economics journals; as of July 2026 the project had produced over 1,000 papers and run thousands of head-to-head comparisons.",
+    "shortDescription": "University of Zurich experiment testing whether AI can autonomously produce empirical policy papers, benchmarked against journal work.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "AI agents",
+      "policy evaluation"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
