@@ -2964,10 +2964,11 @@ main.container .page-intro {
 
 .southmod-map-panel {
   position: sticky;
-  /* Sticky already makes this a stacking context; lifting it above the grain
-     keeps the map's land and data colours as drawn, rather than multiplied
-     through the noise. */
-  z-index: var(--z-above-grain);
+  /* Deliberately NOT lifted to --z-above-grain. The map iframe is transparent,
+     so leaving the panel in normal paint order lets the page background and its
+     grain overlay carry straight through the map, seamlessly and in both themes.
+     Lifting it would restore crisp land colours but put a flat, untextured block
+     in the middle of a textured page. */
   top: 4.75rem;
   background: transparent;
   border: none;

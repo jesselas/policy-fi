@@ -26,15 +26,17 @@
 <title>SOUTHMOD &amp; EUROMOD-based Microsimulation Models</title>
 <style>
   :root {
-    /* NOT the host page's --bg. The map panel is lifted above the site's grain
-       overlay, so it has to match the page as *rendered* — i.e. --bg already
-       multiplied by the noise. An iframe cannot be made transparent (Chrome
-       paints an opaque canvas whatever the document background), so matching
-       the rendered tone is the only way to avoid a visible block.
-         light: #f8f7f3 x 0.9798 = #f3f2ee
-         dark:  #15171a normal-blended at 0.04 = #181a1d
-       Re-derive both if --grain-opacity or --bg changes. */
-    --bg: #f3f2ee;
+    /* The document itself is transparent (see html, body below): the panel is no
+       longer lifted above the site's grain, so the host page's real background
+       and its noise overlay show through and paint over the map. Nothing here
+       needs to restate or approximate the page colour.
+
+       --halo is the exception. It strokes country labels so they stay legible
+       over land, which needs an opaque colour, and it is the host page's raw
+       --bg rather than a grain-multiplied approximation: the parent's overlay
+       falls on the halo along with everything else, so the two land in the same
+       place. Keep in step with --bg in style.css. */
+    --halo: #f8f7f3;
     --land: #e6e9ee;
     --land-edge: #c2c8d2;
     --euromod-a: #bccadf;
@@ -50,7 +52,7 @@
   /* Dark mode: blend with the site's dark background, dark land, light text.
      Data colours (SOUTHMOD orange, EUROMOD blue) stay vivid. */
   html[data-theme="dark"] {
-    --bg: #181a1d;
+    --halo: #15171a;
     --land: #262b31;
     --land-edge: #363c44;
     --text: #e8e6e1;
@@ -58,7 +60,10 @@
   }
   html, body {
     margin: 0; padding: 0;
-    background: var(--bg);
+    /* Transparent, so the host page's background and grain show through. A
+       same-origin iframe composites transparently as long as neither the
+       document nor its root element paints a background. */
+    background: transparent;
     color: var(--text);
     font-family: "Avenir Next", Avenir, "Helvetica Neue", system-ui, sans-serif;
   }
@@ -91,7 +96,7 @@
   .zanmod-marker:hover { filter: drop-shadow(0 0 6px rgba(255, 126, 43, 0.7)); }
   .label {
     font-size: 22px; font-weight: 700; fill: var(--text);
-    paint-order: stroke; stroke: var(--bg); stroke-width: 4.5;
+    paint-order: stroke; stroke: var(--halo); stroke-width: 4.5;
     pointer-events: none;
   }
 
@@ -202,8 +207,7 @@
     </mask>
   </defs>
 
-  <!-- Map background -->
-  <rect x="0" y="0" width="1600" height="882" fill="var(--bg)"/>
+  <!-- No background rect: the host page shows through. -->
 
   <!-- Country layers -->
   <g id="other-layer" mask="url(#edgeFade)">
