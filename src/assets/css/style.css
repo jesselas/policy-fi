@@ -682,12 +682,15 @@ h2.section-label {
    the x-height rather than the cap height the footer list glyphs use. Plus
    Jakarta Sans' OS/2 table gives sxHeight 536/1000em: at body size (14.72px)
    that is 7.89px, so the ideal offset is 7 - 7.89/2 = 3.06; at footer size
-   (13.44px) it is 7.20px, ideal 3.40. Both round to the same whole
-   (pixel-snapped) -3px. Size stays at the shared 14px: 16px made the envelope
-   louder than the address it labels. */
+   (13.44px) it is 7.20px, ideal 3.40. That computes to -3px, nudged to -2.5px by
+   eye: the envelope's ink sits low in its 16-unit viewBox, so true geometric
+   centring reads slightly low. Half a pixel is a whole device pixel at 2x, and
+   the next whole step (-2px) is the cap-height value that sat visibly high.
+   Size stays at the shared 14px: 16px made the envelope louder than the address
+   it labels. */
 .inline-contact .link-icon,
 .contact-line .link-icon {
-  vertical-align: -3px;
+  vertical-align: -2.5px;
 }
 
 
