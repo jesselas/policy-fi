@@ -678,11 +678,14 @@ h2.section-label {
   margin-left: 0.3em;
 }
 
-/* Body text is larger than the footer's (14.72 vs 13.44px), so its cap height is
-   11.14px and the ideal offset here is 7 - 11.14/2 = 1.43 rather than the shared
-   1.91. Without this the glyph sits ~0.6px low against the sentence. */
-.inline-contact .link-icon {
-  vertical-align: -1.5px;
+/* The mail glyphs sit next to an almost-all-lowercase address, so they centre on
+   the x-height, not the cap height like the footer list glyphs. Plus Jakarta
+   Sans' OS/2 table gives sxHeight 536/1000em: at body size (14.72px) that is
+   7.89px, ideal offset 7 - 7.89/2 = 3.06; at footer size (13.44px) it is
+   7.20px, ideal 3.40. Both round to the same whole (pixel-snapped) -3px. */
+.inline-contact .link-icon,
+.contact-line .link-icon {
+  vertical-align: -3px;
 }
 
 
