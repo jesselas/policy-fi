@@ -679,17 +679,15 @@ h2.section-label {
 }
 
 /* The mail glyphs sit next to an almost-all-lowercase address, so they centre on
-   the x-height, not the cap height like the footer list glyphs, and run a touch
-   larger (16px, still a whole pixel) so the envelope holds its own against the
-   address. Plus Jakarta Sans' OS/2 table gives sxHeight 536/1000em: at body
-   size (14.72px) that is 7.89px, ideal offset 8 - 7.89/2 = 4.06; at footer
-   size (13.44px) it is 7.20px, ideal 4.40. Both round to the same whole
-   (pixel-snapped) -4px. */
+   the x-height rather than the cap height the footer list glyphs use. Plus
+   Jakarta Sans' OS/2 table gives sxHeight 536/1000em: at body size (14.72px)
+   that is 7.89px, so the ideal offset is 7 - 7.89/2 = 3.06; at footer size
+   (13.44px) it is 7.20px, ideal 3.40. Both round to the same whole
+   (pixel-snapped) -3px. Size stays at the shared 14px: 16px made the envelope
+   louder than the address it labels. */
 .inline-contact .link-icon,
 .contact-line .link-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: -4px;
+  vertical-align: -3px;
 }
 
 
