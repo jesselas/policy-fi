@@ -3927,5 +3927,81 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "choukhmane-ai-financial-advice",
+    "title": "AI Financial Advice: Supply, Demand, and Life Cycle Implications (arXiv)",
+    "url": "https://arxiv.org/abs/2608.01607",
+    "author": "Taha Choukhmane, Tim de Silva, Weidong Lin, Matthew Akuzawa",
+    "date": "2026-08",
+    "description": "Has a representative sample write prompts asking LLMs (GPT-5.2) for spending and investing guidance, then models the life-cycle consequences of following it. Advice would move people closer to life-cycle theory (diversified equity, age-declining equity shares, larger buffers), and equity-share recommendations vary by gender, AI familiarity, and financial literacy — with a two-thirds demand-side vs one-third supply-side decomposition of the gender gap.",
+    "shortDescription": "Modeling the life-cycle effects of following LLM (GPT-5.2) financial advice, and how it varies by gender, AI familiarity, and financial literacy.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "household finance"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "fu-humans-bargain-with-ai",
+    "title": "Do Humans Bargain Differently with AI? Evidence from Alternating-Offer Games (arXiv)",
+    "url": "https://arxiv.org/abs/2608.01212",
+    "author": "Yuhao Fu, Nobuyuki Hanaki, Haitao Wang",
+    "date": "2026-08",
+    "description": "A laboratory study using a three-stage alternating-offer bargaining game to compare how people negotiate with AI agents versus other humans. Fairness and reciprocity toward AI are weaker and more conditional than toward humans, but partially resurface when the AI’s outcomes affect real people’s payments.",
+    "shortDescription": "Lab bargaining games showing fairness and reciprocity toward AI are weaker and more conditional than toward humans.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "experimental economics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "bowles-digital-twins-financial-social-media",
+    "title": "Talking to Digital Twins: Selective Disclosure and Belief Measurement in Financial Social Media (arXiv)",
+    "url": "https://arxiv.org/abs/2608.01181",
+    "author": "Boone Bowles, Raymond Duch, Sorin Sorescu",
+    "date": "2026-08",
+    "description": "Uses LLMs to build and interview \"digital twins\" of financial influencers reconstructed from their X accounts, extracting measurable stock beliefs in real time. The resulting belief panel predicts large-cap stock returns while avoiding look-ahead bias, illustrating an LLM-based measurement approach for financial economics.",
+    "shortDescription": "An LLM method that interviews \"digital twins\" of financial influencers to measure stock beliefs that predict large-cap returns.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "finance"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "google-ai-economy-atlas",
+    "title": "Google's AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy (arXiv)",
+    "url": "https://arxiv.org/abs/2608.00038",
+    "author": "Zanna Iscenko, Scott Strand, Yiyuan Chen, Guillaume Aimard, Mihai Codreanu, Vivek Sampathkumar, Alex Imas, Julian Jacobs, Evalyne Muiruri, Juan Mateos-Garcia, Jia Jen Ng, Samirah Javed, Josh Martin, Omar Ajmeri, Denis Calin, Andrew Kim, Fabien Curto Millet, James Manyika",
+    "date": "2026-07",
+    "description": "Google's counterpart to usage-based AI economic indices: analyzes 15 million de-identified Gemini interactions mapped to over 800 occupations, 4000 tasks, 300 household activities, 150 countries, and 140 languages. Finds adoption spans roughly 88% of US employment but stays shallow and collaborative rather than fully automating tasks, covers about 98% of non-sleep US activities, and correlates with national wealth globally.",
+    "shortDescription": "Maps 15M Gemini interactions across 800+ occupations, 4000 tasks, and 150 countries to chart real-world AI adoption in the economy.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI adoption",
+      "measurement"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
