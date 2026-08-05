@@ -36,6 +36,16 @@
        --bg rather than a grain-multiplied approximation: the parent's overlay
        falls on the halo along with everything else, so the two land in the same
        place. Keep in step with --bg in style.css. */
+
+    /* REQUIRED for the transparency above to hold, and easy to lose.
+       Transparent html/body is not sufficient on its own: Chrome paints an
+       iframe's canvas from the document's *used* color-scheme, so a document
+       that never declares one computes to `normal`, is treated as light, and
+       gets an opaque WHITE canvas. That is the white block behind the map in
+       dark mode, and it appears only on a fresh load in dark: toggling the
+       theme after load leaves the already-composited canvas alone, so it does
+       not reproduce. Both values below must track data-theme. */
+    color-scheme: light;
     --halo: #f8f7f3;
     --land: #e6e9ee;
     --land-edge: #c2c8d2;
@@ -52,6 +62,9 @@
   /* Dark mode: blend with the site's dark background, dark land, light text.
      Data colours (SOUTHMOD orange, EUROMOD blue) stay vivid. */
   html[data-theme="dark"] {
+    /* Pairs with color-scheme: light in :root. Without this the canvas goes
+       opaque white on a dark page. See the note above before removing. */
+    color-scheme: dark;
     --halo: #15171a;
     --land: #262b31;
     --land-edge: #363c44;
