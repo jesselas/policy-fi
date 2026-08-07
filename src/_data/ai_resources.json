@@ -4003,5 +4003,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cruces-genai-productivity-gaps",
+    "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment (arXiv)",
+    "url": "https://arxiv.org/abs/2608.04198",
+    "author": "Guillermo Cruces, Diego Fernandez Meijide, Sebastian Galiani, Ramiro Galvez, Maria Lombardi",
+    "date": "2026-08",
+    "description": "A randomized online experiment with 1,174 adults aged 25-45 who completed a workplace-style problem-solving task with or without a generative AI assistant, followed by an unassisted module. AI raises performance for everyone, but gains are larger among the less educated, cutting the education-based performance gap by roughly three-quarters while assisted — though the gap partly re-emerges once the AI is removed.",
+    "shortDescription": "Randomized experiment: generative AI helps everyone but helps less-educated workers most, shrinking education-based productivity gaps by ~75% while assisted.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "productivity"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
