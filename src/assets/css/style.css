@@ -25,6 +25,11 @@
   --neutral: #f2f1eb; /* keeps its old step below --bg */
   --border: #ddddd8;
   --border-light: #eaeae6;
+  /* The nav's underline is its own token, not --border-light: it is meant to
+     read as a deliberate rule closing the header, so it runs near-black here
+     and near-white in dark mode rather than tracking the hairlines used
+     between list items. */
+  --header-rule: #232322;
   /* The bars sit above the page grain, so they get their own copy of it (see
      .site-header::after) — a flat band always reads brighter than a textured
      one at the same value, which is why earlier, lighter values still looked
@@ -94,6 +99,7 @@
   --neutral: #22262b;
   --border: #383c42;
   --border-light: #2b2f35;
+  --header-rule: #dcdad5;
   --header-bg: rgba(17, 19, 22, 0.94);
   /* Unchanged: on the dark ground plain alpha compositing already lifts the
      grain. Multiplying here would only darken it into invisibility. */
@@ -312,7 +318,7 @@ a:focus-visible {
   background: var(--header-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 2px solid var(--header-rule);
 }
 
 .nav-container {
