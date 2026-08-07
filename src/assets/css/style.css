@@ -199,17 +199,9 @@ body::before {
   background-repeat: repeat;
 }
 
-/* Top accent strip */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--accent) 70%, var(--gold) 100%);
-  z-index: 1000;
-}
+/* The teal-to-gold accent strip that used to run across the top of the viewport
+   is gone: the header's own rule now closes the chrome, and two stacked bands
+   read as clutter. body::before (the grain) is unrelated; leave it alone. */
 
 /* --- Typography --- */
 h1, h2, h3, h4 {
@@ -313,7 +305,7 @@ a:focus-visible {
 /* --- Header & Navigation --- */
 .site-header {
   position: sticky;
-  top: 3px; /* below accent strip */
+  top: 0;
   z-index: 10001; /* above the grain, so a lifted card can't cover the bar */
   background: var(--header-bg);
   backdrop-filter: blur(12px);
