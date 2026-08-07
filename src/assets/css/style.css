@@ -402,16 +402,9 @@ a:focus-visible {
   font-weight: 600;
 }
 
-.nav-links a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -0.75rem;
-  left: 0.8rem;
-  right: 0.8rem;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 1px;
-}
+/* No underline bar on the current page. The accent colour and the heavier
+   weight above already mark it, and against the header's own rule the bar read
+   as a stray line under whichever tab you were pointing at. */
 
 /* Mobile nav toggle */
 .nav-toggle {
@@ -1856,10 +1849,6 @@ main.container .page-intro {
 
   .nav-links a.active {
     background: var(--accent-faint);
-  }
-
-  .nav-links a.active::after {
-    display: none;
   }
 
   /* Hero float: keep float on mobile, just smaller */
