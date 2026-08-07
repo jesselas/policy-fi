@@ -2330,8 +2330,12 @@ main.container .page-intro {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
+  /* One line, always. With wrap enabled the two groups needed 706px inside a
+     700px column, so it broke in two at every desktop width. Gaps are tight
+     enough to clear that on their own; .toolbar-updated can also ellipsis if a
+     future label pushes it again. */
+  gap: 0.6rem;
+  flex-wrap: nowrap;
   padding: 0.6rem 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -2341,13 +2345,15 @@ main.container .page-intro {
 .toolbar-group {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.35rem;
+  flex: 0 0 auto;
 }
 
 .toolbar-end {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 0.7rem;
+  min-width: 0;
 }
 
 .toolbar-updated {
@@ -2355,6 +2361,11 @@ main.container .page-intro {
   font-size: 0.66rem;
   color: var(--text-tertiary);
   white-space: nowrap;
+  /* Last resort if the row ever runs out of room: shrink and clip rather than
+     push the view buttons onto a second line. */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 560px) {
@@ -2791,6 +2802,19 @@ main.container .page-intro {
 
   /* Undo the phone "full-bleed" card margins that the <=768 block applies */
   .library-content .resource-card { margin-left: 0; margin-right: 0; }
+
+  /* The toolbar no longer wraps, so it has to actually fit. With a 212px
+     sidebar the content column bottoms out near 340px here, which is under
+     what the full-width labels need. Same compact treatment as the phone
+     block below. */
+  .library-toolbar { gap: 0.4rem; }
+  .toolbar-group { gap: 0.3rem; }
+  .toolbar-end { gap: 0.45rem; }
+  .toolbar-label { font-size: 0.56rem; }
+  .sort-btn { font-size: 0.72rem; padding: 0.2em 0.5em; }
+  .sort-full { display: none; }
+  .sort-short { display: inline; }
+  .toolbar-updated { display: none; }
 }
 
 /* --- Library responsive: stacked layout on phones (portrait) --- */
