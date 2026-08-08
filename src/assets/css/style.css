@@ -2785,6 +2785,31 @@ main.container .page-intro {
 /* Short sort labels are hidden on desktop (shown on mobile) */
 .sort-short { display: none; }
 
+/* --- Auto-tucking top bar (mobile only) ---
+   The "quick return" pattern: the bar slides out of the way once you are well
+   past the top and comes straight back the moment you scroll up, so the nav is
+   always one flick away rather than a trip to the top of the page. Desktop
+   keeps the bar pinned; there it costs nothing and the hiding would be noise.
+
+   Two durations on purpose. Leaving is the slower half (200ms, accelerating
+   out) because nobody is waiting on it. Returning is quicker (160ms,
+   decelerating in) because by then you have asked for it and any lag reads as
+   lag. The reduced-motion block near the end of this file zeroes both, which
+   is the right answer for that preference: the bar snaps instead of sliding.
+
+   JS owns .nav-tucked; it never adds the class while the menu is open, since
+   the dropdown panel is a child of this element and would leave with it. */
+@media (max-width: 768px) {
+  .site-header {
+    transition: transform 160ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .site-header.nav-tucked {
+    transform: translateY(-100%);
+    transition: transform 200ms cubic-bezier(0.4, 0, 1, 1);
+  }
+}
+
 /* --- Mobile bottom tab bar (hidden on desktop) --- */
 .bottom-nav { display: none; }
 

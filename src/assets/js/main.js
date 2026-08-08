@@ -346,8 +346,46 @@ function initMobileNav() {
       if (window.innerWidth > 768 && links.classList.contains('open')) {
         closeMenu();
       }
+      // Never leave the bar tucked away on a viewport that can't re-show it.
+      if (!isPanel()) header.classList.remove('nav-tucked');
     }, 100);
   });
+
+  /* --- Tuck the bar on downward scroll (mobile only) ---
+     Reveal is immediate on any upward scroll: waiting until the top of the page
+     is what makes this pattern feel broken. TUCK_AFTER keeps the bar put until
+     you are clearly reading rather than nudging the page, and DELTA absorbs the
+     small oscillations of momentum scrolling and iOS rubber-banding, which
+     would otherwise flicker the bar. */
+  const TUCK_AFTER = 88; // px scrolled before hiding is allowed (~1.5 bar heights)
+  const DELTA = 6;       // px of travel in one direction before it reacts
+  let lastY = Math.max(0, window.scrollY);
+  let ticking = false;
+
+  function updateBar() {
+    ticking = false;
+    if (!isPanel()) { header.classList.remove('nav-tucked'); return; }
+    const y = Math.max(0, window.scrollY); // clamp iOS overscroll above the top
+    // Always visible near the top, while the menu is open, or while focus is
+    // inside the bar — tabbing to a link that then slid away is a trap.
+    if (y <= TUCK_AFTER ||
+        links.classList.contains('open') ||
+        header.contains(document.activeElement)) {
+      header.classList.remove('nav-tucked');
+      lastY = y;
+      return;
+    }
+    const diff = y - lastY;
+    if (Math.abs(diff) < DELTA) return; // let travel accumulate, don't reset lastY
+    lastY = y;
+    header.classList.toggle('nav-tucked', diff > 0);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
+  }, { passive: true });
+
+  header.addEventListener('focusin', () => header.classList.remove('nav-tucked'));
 
   // Swipe up to close menu on mobile
   let touchStartY = 0;
@@ -505,6 +543,9 @@ function initMobileNav() {
      off-screen links. `inert` takes them out of the tab order without touching
      the slide animation. */
   function openMenu() {
+    // The panel hangs off the bottom of the bar, so the bar has to be on screen
+    // before it can be shown — e.g. opening via the swipe gesture while tucked.
+    header.classList.remove('nav-tucked');
     links.classList.add('open');
     links.inert = false;
     toggle.setAttribute('aria-expanded', 'true');
