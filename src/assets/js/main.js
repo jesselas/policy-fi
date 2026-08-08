@@ -359,33 +359,79 @@ function initMobileNav() {
      would otherwise flicker the bar. */
   const TUCK_AFTER = 88; // px scrolled before hiding is allowed (~1.5 bar heights)
   const DELTA = 6;       // px of travel in one direction before it reacts
+
+  /* The slide is timed to how fast you are scrolling rather than run at one
+     fixed speed. Ease a page along slowly and the bar drifts in over ~320ms,
+     which reads as part of the same gesture; flick hard and it is back in
+     ~140ms, because at that speed anything slower feels like it is lagging
+     behind the content. Hiding gets a slightly wider, slower band: nobody is
+     waiting on the bar to leave, so it can afford to be unhurried. */
+  const REVEAL_MS = { fast: 140, slow: 320 };
+  const TUCK_MS = { fast: 190, slow: 380 };
+  const FAST_PX_PER_MS = 3; // roughly a deliberate flick; at or above this, full speed
+  const IDLE_MS = 200;      // gap after which a sample counts as a fresh gesture
+
   let lastY = Math.max(0, window.scrollY);
+  let lastT = performance.now();
   let ticking = false;
+
+  function durationFor(speed, range) {
+    const t = Math.min(1, speed / FAST_PX_PER_MS);
+    return Math.round(range.slow - (range.slow - range.fast) * t);
+  }
+
+  function setTucked(tuck, speed) {
+    if (header.classList.contains('nav-tucked') === tuck) return;
+    // Set the duration before the class flips: both land in the same style
+    // recalculation, so the transition starts with the value we just chose.
+    header.style.transitionDuration = durationFor(speed, tuck ? TUCK_MS : REVEAL_MS) + 'ms';
+    header.classList.toggle('nav-tucked', tuck);
+  }
 
   function updateBar() {
     ticking = false;
-    if (!isPanel()) { header.classList.remove('nav-tucked'); return; }
+    if (!isPanel()) {
+      header.classList.remove('nav-tucked');
+      // Clear it: outside the mobile block nothing sets transition-property, so
+      // it falls back to `all`, and a stray duration would animate every
+      // property of the bar on desktop.
+      header.style.transitionDuration = '';
+      return;
+    }
     const y = Math.max(0, window.scrollY); // clamp iOS overscroll above the top
+    const now = performance.now();
+    const diff = y - lastY;
+    const dt = now - lastT;
+    /* px per ms. Two corrections. The interval is floored at one frame, since a
+       near-zero gap would report an absurd speed and always pin the duration to
+       its fast end. And after a pause the gap is mostly idle time, which would
+       make even a hard flick measure as a crawl — but the distance covered in
+       that one sample is still a fair proxy for the gesture, so it is measured
+       against a single frame instead of the whole gap. */
+    const speed = Math.abs(diff) / (dt > IDLE_MS ? 16 : Math.max(16, dt));
+
     // Always visible near the top, while the menu is open, or while focus is
     // inside the bar — tabbing to a link that then slid away is a trap.
     if (y <= TUCK_AFTER ||
         links.classList.contains('open') ||
         header.contains(document.activeElement)) {
-      header.classList.remove('nav-tucked');
+      setTucked(false, speed);
       lastY = y;
+      lastT = now;
       return;
     }
-    const diff = y - lastY;
-    if (Math.abs(diff) < DELTA) return; // let travel accumulate, don't reset lastY
+    if (Math.abs(diff) < DELTA) return; // let travel accumulate, don't reset lastY/lastT
     lastY = y;
-    header.classList.toggle('nav-tucked', diff > 0);
+    lastT = now;
+    setTucked(diff > 0, speed);
   }
 
   window.addEventListener('scroll', () => {
     if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
   }, { passive: true });
 
-  header.addEventListener('focusin', () => header.classList.remove('nav-tucked'));
+  // Speed 0: no scroll drove this, so use the gentle end of the range.
+  header.addEventListener('focusin', () => setTucked(false, 0));
 
   // Swipe up to close menu on mobile
   let touchStartY = 0;
@@ -545,6 +591,8 @@ function initMobileNav() {
   function openMenu() {
     // The panel hangs off the bottom of the bar, so the bar has to be on screen
     // before it can be shown — e.g. opening via the swipe gesture while tucked.
+    // Fast end of the range: you have just asked for the menu, so no drift.
+    header.style.transitionDuration = '140ms';
     header.classList.remove('nav-tucked');
     links.classList.add('open');
     links.inert = false;

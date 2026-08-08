@@ -2791,11 +2791,16 @@ main.container .page-intro {
    always one flick away rather than a trip to the top of the page. Desktop
    keeps the bar pinned; there it costs nothing and the hiding would be noise.
 
-   Two durations on purpose. Leaving is the slower half (200ms, accelerating
-   out) because nobody is waiting on it. Returning is quicker (160ms,
-   decelerating in) because by then you have asked for it and any lag reads as
-   lag. The reduced-motion block near the end of this file zeroes both, which
-   is the right answer for that preference: the bar snaps instead of sliding.
+   The durations here are only defaults: JS overrides transition-duration
+   inline on each change, scaled to how fast you are actually scrolling, so a
+   slow drag gets a gentle slide and a hard flick gets a quick one. What stays
+   in CSS is the easing, which differs by direction — accelerating on the way
+   out, decelerating on the way back in — because that is a property of the
+   state, not of the speed.
+
+   The reduced-motion block near the end of this file zeroes the duration with
+   !important, which outranks an inline declaration, so that preference still
+   wins and the bar snaps rather than sliding.
 
    JS owns .nav-tucked; it never adds the class while the menu is open, since
    the dropdown panel is a child of this element and would leave with it. */
