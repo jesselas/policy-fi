@@ -352,27 +352,34 @@ function initMobileNav() {
   });
 
   /* --- Tuck the bar on downward scroll (mobile only) ---
-     Reveal is immediate on any upward scroll: waiting until the top of the page
-     is what makes this pattern feel broken. TUCK_AFTER keeps the bar put until
-     you are clearly reading rather than nudging the page, and DELTA absorbs the
-     small oscillations of momentum scrolling and iOS rubber-banding, which
-     would otherwise flicker the bar. */
-  const TUCK_AFTER = 88; // px scrolled before hiding is allowed (~1.5 bar heights)
-  const DELTA = 6;       // px of travel in one direction before it reacts
+     TUCK_AFTER keeps the bar put until you are clearly reading rather than
+     nudging the page.
 
-  /* The slide is timed to how fast you are scrolling rather than run at one
-     fixed speed. Ease a page along slowly and the bar drifts in over ~320ms,
-     which reads as part of the same gesture; flick hard and it is back in
-     ~140ms, because at that speed anything slower feels like it is lagging
-     behind the content. Hiding gets a slightly wider, slower band: nobody is
-     waiting on the bar to leave, so it can afford to be unhurried. */
-  const REVEAL_MS = { fast: 140, slow: 320 };
-  const TUCK_MS = { fast: 190, slow: 380 };
-  const FAST_PX_PER_MS = 3; // roughly a deliberate flick; at or above this, full speed
-  const IDLE_MS = 200;      // gap after which a sample counts as a fresh gesture
+     The two travel thresholds are deliberately lopsided. Hiding reacts to a
+     short push because that gesture is unambiguous, but revealing waits for a
+     real upward run: momentum scrolling settles with a small backwards bounce,
+     and iOS rubber-banding does the same at the ends, so a low reveal threshold
+     makes the bar appear when you did not ask for it. This is the "comes back
+     too soon" failure, and it is a distance problem, not a timing one. */
+  const TUCK_AFTER = 88;        // px down the page before hiding is allowed
+  const TRAVEL_TO_TUCK = 12;    // px of downward travel before it leaves
+  const TRAVEL_TO_REVEAL = 50;  // px of upward travel before it returns
+
+  /* Speed is measured over the whole directional run rather than one frame, so
+     it describes the gesture instead of the sampling noise inside it.
+
+     FAST_PX_PER_MS is the speed at which the duration bottoms out, and it has
+     to be set against real input: a touch flick with momentum easily runs
+     10-20px per millisecond, and even an ordinary drag passes 3. Setting the
+     ceiling anywhere near those numbers pins almost every scroll to the fast
+     end, which is the whole mapping collapsing back to one fixed speed. */
+  const REVEAL_MS = { fast: 210, slow: 560 };
+  const TUCK_MS = { fast: 250, slow: 620 };
+  const FAST_PX_PER_MS = 13;
 
   let lastY = Math.max(0, window.scrollY);
-  let lastT = performance.now();
+  let travel = 0;                      // signed px accumulated in one direction
+  let runStart = performance.now();    // when the current run began
   let ticking = false;
 
   function durationFor(speed, range) {
@@ -401,29 +408,31 @@ function initMobileNav() {
     const y = Math.max(0, window.scrollY); // clamp iOS overscroll above the top
     const now = performance.now();
     const diff = y - lastY;
-    const dt = now - lastT;
-    /* px per ms. Two corrections. The interval is floored at one frame, since a
-       near-zero gap would report an absurd speed and always pin the duration to
-       its fast end. And after a pause the gap is mostly idle time, which would
-       make even a hard flick measure as a crawl — but the distance covered in
-       that one sample is still a fair proxy for the gesture, so it is measured
-       against a single frame instead of the whole gap. */
-    const speed = Math.abs(diff) / (dt > IDLE_MS ? 16 : Math.max(16, dt));
+    lastY = y;
 
     // Always visible near the top, while the menu is open, or while focus is
     // inside the bar — tabbing to a link that then slid away is a trap.
     if (y <= TUCK_AFTER ||
         links.classList.contains('open') ||
         header.contains(document.activeElement)) {
-      setTucked(false, speed);
-      lastY = y;
-      lastT = now;
+      setTucked(false, 0); // no gesture drove this, so use the gentle end
+      travel = 0;
+      runStart = now;
       return;
     }
-    if (Math.abs(diff) < DELTA) return; // let travel accumulate, don't reset lastY/lastT
-    lastY = y;
-    lastT = now;
-    setTucked(diff > 0, speed);
+    if (diff === 0) return;
+
+    // A change of direction ends the run and starts a new one.
+    if (travel === 0 || (diff > 0) !== (travel > 0)) {
+      travel = diff;
+      runStart = now;
+    } else {
+      travel += diff;
+    }
+
+    const speed = Math.abs(travel) / Math.max(16, now - runStart);
+    if (travel >= TRAVEL_TO_TUCK) setTucked(true, speed);
+    else if (travel <= -TRAVEL_TO_REVEAL) setTucked(false, speed);
   }
 
   window.addEventListener('scroll', () => {
