@@ -4022,5 +4022,43 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "wdr-2026-promise-of-ai",
+    "title": "World Development Report 2026: The Promise of Artificial Intelligence",
+    "url": "https://www.worldbank.org/en/publication/wdr2026",
+    "author": "World Bank",
+    "date": "2026-08",
+    "description": "The World Bank Group’s flagship 2026 World Development Report, released 4 August 2026, is the first comprehensive assessment of AI’s implications for developing economies. It proposes an “adopt, adapt, and advance” framework and finds jobs in high-income countries are more than three times as likely to be at risk of automation by generative AI (14.2%) as in low- and middle-income countries (4.5%), while 16.2% of jobs in developing economies could see meaningful AI productivity gains.",
+    "shortDescription": "World Bank flagship WDR 2026 on AI in developing economies: an “adopt, adapt, advance” framework plus evidence on uneven automation and productivity gains.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "development"
+    ],
+    "featured": false,
+    "type": "other",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "better-not-more-research-skill-library",
+    "title": "Better, Not More: A Research Skill Library",
+    "url": "https://better-not-more-ai.lovable.app/",
+    "author": null,
+    "date": "2026-08",
+    "description": "A collection of 18 markdown skill files you can drop into AI coding agents (Claude, Codex, Cursor) to raise the quality — not just the quantity — of experimental research. Assembled at the AI Workshop of the Conference on Field Experiments in Strategy at Duke, with skills contributed by scholars including Bo Cowgill, Rem Koning, and David McKenzie, covering pre-flight design audits, literature mapping, hypothesis screening, power calculations, and manuscript preparation.",
+    "shortDescription": "18 drop-in AI-agent skill files (Claude/Codex/Cursor) for better — not just more — experimental research: design audits, power calcs, and lit mapping.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "AI",
+      "research"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
