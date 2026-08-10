@@ -2806,7 +2806,12 @@ main.container .page-intro {
    the dropdown panel is a child of this element and would leave with it. */
 @media (max-width: 768px) {
   .site-header {
-    transition: transform 160ms cubic-bezier(0, 0, 0.2, 1);
+    /* Returning uses an ease-in-out rather than a decelerate curve. A
+       decelerate curve spends most of its distance in the first few frames, so
+       however long the duration is the bar still reads as snapping into place
+       and then settling. Easing in at both ends spreads the movement out and is
+       most of what makes the return feel unhurried. */
+    transition: transform 420ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .site-header.nav-tucked {

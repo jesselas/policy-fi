@@ -373,7 +373,12 @@ function initMobileNav() {
      10-20px per millisecond, and even an ordinary drag passes 3. Setting the
      ceiling anywhere near those numbers pins almost every scroll to the fast
      end, which is the whole mapping collapsing back to one fixed speed. */
-  const REVEAL_MS = { fast: 210, slow: 560 };
+  /* Reveal is the slower half. That looks backwards next to the reasoning above,
+     but hiding and returning are not judged the same way: the bar leaving is
+     peripheral, while the bar arriving lands in the middle of what you are
+     reading, so the same duration reads as abrupt coming back. Even a hard
+     flick gets 320ms here. */
+  const REVEAL_MS = { fast: 320, slow: 700 };
   const TUCK_MS = { fast: 250, slow: 620 };
   const FAST_PX_PER_MS = 13;
 
