@@ -4060,5 +4060,42 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "siepr-really-happening-jobs-ai",
+    "title": "What is really happening to jobs? Separating AI hype from reality (SIEPR)",
+    "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+    "author": "Neale Mahoney, Erika McEntarfer, Karsen Wahal",
+    "date": "2026-07",
+    "description": "A Stanford SIEPR policy brief synthesizing early evidence on AI and the labor market into five conclusions: AI’s aggregate employment impact is likely small so far; recent graduates face a tougher market that AI may be dampening in fields like software and customer service; productivity effects are mixed but generally positive, disproportionately helping less-experienced workers; firm adoption is accelerating but concentrated in tech and finance; and early evidence is far from the last word.",
+    "shortDescription": "Stanford SIEPR brief separating AI-jobs hype from evidence: small aggregate employment effect so far, a tougher entry-level market, uneven firm adoption.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "labor",
+      "AI"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "aguiar-tabular-foundation-models-economic-behaviour",
+    "title": "Tabular Foundation Models and the Unity of Economic Behaviour (arXiv)",
+    "url": "https://arxiv.org/abs/2608.06842",
+    "author": "Victor H. Aguiar",
+    "date": "2026-08",
+    "description": "Tests whether a single foundation model can explain economic decision-making across domains. Using a tabular foundation model, the author hides choices in one behavioral domain and recovers them from choices in other domains plus other participants’ labeled data; the model beats baselines, the advantage vanishes when choices are reshuffled, and one random-utility model trained on the learned representation performs well across risk, time, loss aversion, valuation, and social-choice tasks — evidence for a unified structure of economic behavior.",
+    "shortDescription": "Uses a tabular foundation model to recover economic choices across domains, finding a single random-utility representation predicts held-out behavior.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "machine learning"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
