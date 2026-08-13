@@ -4153,5 +4153,24 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "korinek-mckelvey-ai-gdp-statistics",
+    "title": "Where is AI in GDP statistics?",
+    "url": "https://piie.com/publications/policy-briefs/2026/where-ai-gdp-statistics",
+    "author": "Anton Korinek, Patrick McKelvey",
+    "date": "2026-05",
+    "description": "PIIE policy brief arguing that the rapid growth of the AI economy is largely unmeasured in conventional GDP statistics, with quality-adjusted AI production in the US growing over 2,000 percent annually in 2024-2025. The authors recommend that statistics agencies begin developing AI-focused satellite accounts now to close the measurement gap before it becomes a policy problem.",
+    "shortDescription": "PIIE policy brief on why the fast-growing AI economy is largely missing from GDP statistics, urging agencies to build AI-focused satellite accounts now.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "measurement"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
