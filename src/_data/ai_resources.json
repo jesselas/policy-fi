@@ -4097,5 +4097,61 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "chatterji-how-organizations-use-ai-chatgpt",
+    "title": "How Organizations Use AI: Evidence from ChatGPT (arXiv)",
+    "url": "https://arxiv.org/abs/2608.12236",
+    "author": "Aaron Chatterji, David Holtz, Neel Rakholia, Prasanna Tambe, Gawesha Weeratunga",
+    "date": "2026-08",
+    "description": "Analyzes ChatGPT Enterprise usage linked to worker, task, and financial data through March 2026, covering more than 1,500 organizations and 17 million messages at the six-month mark. Finds enterprise adoption growing through both new adopters and deeper engagement by existing users, higher take-up among larger R&D-focused US public firms, use across job levels with especially strong engagement from junior employees, and applications spanning writing, technical work, communication, and information synthesis.",
+    "shortDescription": "Links ChatGPT Enterprise data from 1,500+ organizations to worker, task, and financial records to trace how firms are adopting generative AI.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "schubert-organizational-technology-ladders-genai",
+    "title": "Organizational Technology Ladders: Remote Work and Generative AI Adoption (arXiv)",
+    "url": "https://arxiv.org/abs/2608.11626",
+    "author": "Gregor Schubert",
+    "date": "2026-08",
+    "description": "Uses job-posting data to show that firms which expanded remote hiring during COVID-19 subsequently adopted generative AI at higher rates. Argues this reflects an organizational 'technology ladder' in which shifts toward technical talent and complementary capabilities accelerate later AI integration.",
+    "shortDescription": "Job-posting evidence that firms which shifted to remote hiring during COVID-19 later adopted generative AI faster — a technology adoption ladder.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "firms"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "serrano-ai-cheat-exam-universities",
+    "title": "I caught my students using AI to cheat in an exam — here's what universities must do to stamp this out",
+    "url": "https://www.nature.com/articles/d41586-026-02447-y",
+    "author": "Roberto Serrano",
+    "date": "2026-08",
+    "description": "A Nature World View (10 August 2026) in which Brown University economist Roberto Serrano recounts discovering widespread unauthorized AI use on a take-home exam in his welfare-economics and social-choice course — the average score fell from 96% to 48.6% once he switched to an in-person, closed-book final. He argues universities must restore a culture of academic integrity and adapt learning and assessment methods for the age of AI.",
+    "shortDescription": "Nature World View: a Brown economist recounts widespread AI cheating on a take-home exam and argues universities must defend academic integrity.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "education"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
