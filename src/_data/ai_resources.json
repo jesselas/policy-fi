@@ -4172,5 +4172,43 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "research-feedback-isaiah-andrews-skill",
+    "title": "Research Feedback in the Style of Isaiah Andrews",
+    "url": "https://economics.mit.edu/sites/default/files/2026-08/research-feedback-ia.zip",
+    "author": null,
+    "date": "2026-08",
+    "description": "A downloadable AI \"skill\" — a set of instructions that direct an LLM to give advisor-style feedback on economics research (paper drafts, slides, abstracts, and draft responses to referees) in the advising style of Isaiah Andrews. Built at his request from an audited corpus of his own written and spoken feedback, with models restricted not to train on the data. It produces a short overall assessment plus specific comments anchored to exact locations in the text, including proofs and appendices. Installable as a Claude skill or usable by pasting the included files into any LLM. Announced by Jonathan Roth alongside a companion skill for Jesse Shapiro.",
+    "shortDescription": "Downloadable AI skill giving advisor-style feedback on economics drafts, slides, and abstracts in Isaiah Andrews's style; use in Claude or any LLM.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "LLM",
+      "research-feedback"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "advising-as-jesse-shapiro-skill",
+    "title": "Advising as Jesse Shapiro",
+    "url": "https://shapiro.scholars.harvard.edu/sites/g/files/omnuum7731/files/2026-08/jesse.txt",
+    "author": null,
+    "date": "2026-08",
+    "description": "A skill / system-prompt file that directs an LLM to give research feedback and advising in the style of Harvard economist Jesse Shapiro — handling PhD students' research questions, document feedback, talks, and ideation. It emphasizes direct, substantive, concise responses grounded in concrete existing literature rather than abstract frameworks, and defaults to short comments on structure, exposition, and ideas. Released alongside a companion Isaiah Andrews skill and announced by Jonathan Roth.",
+    "shortDescription": "LLM prompt for research feedback and advising in Harvard economist Jesse Shapiro's style: direct, concise, grounded in concrete literature.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "LLM",
+      "research-feedback"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
