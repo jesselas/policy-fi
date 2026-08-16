@@ -4210,5 +4210,25 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "galiani-ai-agents-econometric-coding",
+    "title": "AI Agents and Prompt Engineering in Econometric Coding (NBER WP 35588)",
+    "url": "https://www.nber.org/papers/w35588",
+    "author": "Sebastian Galiani, Federico Ariel López, Raul A. Sosa",
+    "date": "2026-08",
+    "description": "Studies how LLMs generate code for econometric tasks along three dimensions: statistical software (Stata, R, Python), prompting strategy (zero-shot vs. few-shot), and level of AI autonomy (chatbot vs. self-executing agent). Moving from a chatbot to a constrained agent raises task success from 74% to 96% at roughly eight additional cents per run. Few-shot prompting helps basic chatbots far more than autonomous agents, and software choice matters for chatbots but becomes far less consequential once an autonomous agent is used.",
+    "shortDescription": "How software choice, prompting, and AI autonomy affect LLM-generated econometric code; a constrained agent lifts task success from 74% to 96%.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "coding",
+      "LLM",
+      "stata"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
