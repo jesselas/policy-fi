@@ -4230,5 +4230,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "gans-staged-access-liability-dual-use-ai",
+    "title": "Staged Access and Liability for Dual-Use Artificial Intelligence (NBER WP 35586)",
+    "url": "https://www.nber.org/papers/w35586",
+    "author": "Joshua S. Gans",
+    "date": "2026-08",
+    "description": "Models how regulators should combine staged (delayed or exclusive) access to a dual-use AI model with developer liability, framing a defender and an adversary searching for the same software flaws after release. Liability induces more defensive search but also makes the adversary's search harder, so staged access and liability act as complements in protection. Because defensive effort rises toward the release date, additional delay becomes progressively less productive and optimal evaluation windows are bounded; since defensive search consumes real resources, the efficient liability rate can fall below full internalisation of harm, leaving a distinct role for a timing mandate.",
+    "shortDescription": "An economic model of AI regulation: how staged model access and developer liability interact to limit harm from dual-use AI, and why evaluation windows are bounded.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI policy",
+      "regulation"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
