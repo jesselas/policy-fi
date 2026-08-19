@@ -4249,5 +4249,43 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "yao-stranded-credentials-genai-signaling",
+    "title": "Stranded credentials: how a skill-signaling market absorbed generative AI (arXiv 2608.17111)",
+    "url": "https://arxiv.org/abs/2608.17111",
+    "author": "Song Yao",
+    "date": "2026-08",
+    "description": "Uses Kaggle competition data spanning 2010-2026 (444,698 participations) to ask whether professional credentials still carry information about skill after generative AI. Finds credentials are informative but perishable, institution-bound, and interdependent: recent medals retain signaling power while older credential stocks decayed sharply (upload-competition medals lost 82% of their informativeness), a shift the author attributes largely to institutional change rather than to AI directly displacing skill.",
+    "shortDescription": "Kaggle data (2010-2026) on whether skill credentials still signal after generative AI: recent medals inform, older stocks decayed up to 82%.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "labor"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "fabrega-governing-delegation-genai",
+    "title": "Governing Delegation to Generative Artificial Intelligence: Human Direction, Work-Related Orientation, and Modes of Use (arXiv 2608.17624)",
+    "url": "https://arxiv.org/abs/2608.17624",
+    "author": "Jorge Fábrega",
+    "date": "2026-08",
+    "description": "Studies how delegating tasks to generative AI redistributes control between human and model, distinguishing specified delegation (human direction set before execution) from iterative coproduction (direction supplied during production). Using the Anthropic Economic Index for April-May 2026, it compares direct API traffic with Claude.ai usage and finds that work-oriented interaction is associated with more specified delegation (+2.76 points via API, +1.45 via Claude.ai), shifting attention from how much the AI executes to when human direction leaves observable traces.",
+    "shortDescription": "Uses Anthropic Economic Index data to show work-oriented AI use leaves stronger traces of prior human direction, across API vs Claude.ai modes.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "AI adoption"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
