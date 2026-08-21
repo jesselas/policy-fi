@@ -4287,5 +4287,63 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nora-local-privacy-statistical-analysis",
+    "title": "Nora — Local Privacy Layer for AI-Assisted Statistical Analysis on Sensitive Data",
+    "url": "https://github.com/junishka/Nora",
+    "author": "Junhyung Byun",
+    "date": "2026-08",
+    "description": "Open-source (Apache-2.0) macOS app for running AI-assisted statistical analysis on sensitive data without exposing raw data to the model. The data stays on the researcher’s machine and scripts run in a network-denied sandbox; the frontier model (Claude or GPT) sees only disclosure-control–sanitized summaries while the researcher sees raw R, Stata, or Python output. Covers regression, causal inference, survival analysis and other common methods through a Model Context Protocol interface.",
+    "shortDescription": "macOS app for AI-assisted stats on sensitive data — R/Stata/Python runs locally, the model sees only sanitized summaries, never the raw data.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "LLM",
+      "privacy",
+      "Stata"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "catalini-hui-wu-simple-economics-agi",
+    "title": "Some Simple Economics of AGI (arXiv 2602.20946)",
+    "url": "https://arxiv.org/abs/2602.20946",
+    "author": "Christian Catalini, Xiang Hui, Jane Wu",
+    "date": "2026-02",
+    "description": "Introduces a macroeconomic framework that models the transition to AGI as a collision between two cost curves: the exponentially falling cost of automating execution and the biologically bounded cost of human verification. Argues the binding constraint on growth becomes verification bandwidth — the capacity to validate, audit and underwrite responsibility when execution is abundant — reframing the story from skill-biased to measurability-biased technical change, and warning that when autonomous execution scales faster than verification the economy accumulates unpriced systemic risk.",
+    "shortDescription": "Macro framework for AGI: as execution automates toward zero cost, human verification bandwidth — not intelligence — becomes the binding growth constraint.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AGI",
+      "LLM"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "trobinger-doshi-chai-ai-suggestions-researchers",
+    "title": "How experience moderates the impact of AI suggestions on researchers’ perceptions of their ideas (Research Policy)",
+    "url": "https://doi.org/10.1016/j.respol.2026.105575",
+    "author": "Matthias Tröbinger, Anil R. Doshi, Sen Chai",
+    "date": "2026-08",
+    "description": "Open-access randomized experiment with 310 researchers testing how generative-AI idea suggestions affect their self-evaluation of subsequent research proposals. Experience negatively moderates AI’s effects: less-experienced researchers are more likely to adopt AI suggestions and rate their resulting ideas as more novel and impactful, while senior researchers tend to discount AI-originated ideas — with implications for how AI reshapes knowledge production.",
+    "shortDescription": "Randomized experiment with 310 researchers: junior researchers adopt AI-generated ideas and rate them more novel; senior researchers discount AI suggestions.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "research process"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
