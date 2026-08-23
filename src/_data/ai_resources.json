@@ -4367,13 +4367,13 @@
     "highlight": false
   },
   {
-    "id": "azar-ai-eroding-wages",
-    "title": "AI Is Already Eroding Wages: Quasi-Experimental Evidence From Occupational Exposure (SSRN)",
+    "id": "azar-wage-effects-generative-ai",
+    "title": "The Wage Effects of Generative AI (SSRN)",
     "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
     "author": "José Azar, Mireia Giné, Javier Sanz-Espín",
     "date": "2025-12",
-    "description": "Uses realized worker-firm matches for 138 million US workers to compare firms whose pre-ChatGPT occupation structure was more exposed to automation with less exposed firms. Average wages at exposed firms fell 4.5% relative to unexposed firms after ChatGPT's arrival, and starting wages for new junior and mid-level positions fell 6.3% and 5.9%, while senior pay held steady or rose. Exposed firms also shifted their hiring mix away from junior towards mid-level roles, consistent with mid-level workers using AI to substitute for tasks previously delegated downwards.",
-    "shortDescription": "Evidence from 138 million US workers: after ChatGPT, wages at AI-exposed firms fell 4.5%, with junior and mid-level starting pay hit hardest.",
+    "description": "Estimates how exposure to generative AI has affected wages and worker mobility, using occupation-by-industry data from the Occupational Employment and Wage Statistics alongside job postings and matched employer-employee records from Revelio. Moving from the 10th to the 90th percentile of GenAI exposure is associated with a 4.9% wage decline in OEWS, with no statistically detectable change in employment; in Revelio the same comparison implies falls of 8.71% in posted wages and 10.76% in starting wages. More exposed workers make job-to-job moves significantly less often, though transitions into persistent non-employment are unchanged, and wage declines are largest among junior workers across every age group. Exposure also lowers the elasticity of separation with respect to wages, which the authors read as evidence that firms' labor market power has risen in occupations exposed to automation by generative AI.",
+    "shortDescription": "Wages fall 4.9% (OEWS) and posted wages 8.71% (Revelio) moving from the 10th to 90th percentile of GenAI exposure, with junior workers hit hardest.",
     "category": "Research Papers",
     "tags": [
       "economics",
