@@ -1,7 +1,7 @@
 [
   {
     "id": "nber-w34713-teaching-economics-machines",
-    "title": "Teaching Economics to the Machines (NBER WP 34713)",
+    "title": "Teaching Economics to the Machines (NBER)",
     "url": "https://www.nber.org/papers/w34713",
     "author": "Kevin A. Bryan",
     "date": "2026-01",
@@ -20,7 +20,7 @@
   },
   {
     "id": "nber-w34330-making-ai-count",
-    "title": "Making AI Count: The Next Measurement Frontier (NBER WP 34330)",
+    "title": "Making AI Count: The Next Measurement Frontier (NBER)",
     "url": "https://www.nber.org/system/files/working_papers/w34330/w34330.pdf",
     "author": "Diane Coyle, John Poquiz",
     "date": "2025-10",
@@ -78,7 +78,7 @@
   },
   {
     "id": "simple-macroeconomic-acemoglu",
-    "title": "The Simple Macroeconomics of AI (NBER WP 32487)",
+    "title": "The Simple Macroeconomics of AI (NBER)",
     "url": "https://www.nber.org/papers/w32487",
     "author": "Daron Acemoglu",
     "date": "2025",
@@ -117,11 +117,11 @@
   },
   {
     "id": "deep-learning-economists-dell",
-    "title": "Deep Learning for Economists",
+    "title": "Deep Learning for Economists (arXiv)",
     "url": "https://arxiv.org/pdf/2407.15339",
     "author": "Melissa Dell",
     "date": "2024-07",
-    "description": "Comprehensive review of deep learning methods for economists (NBER WP 32768). Discusses how CNNs and transformers can impute structure from unstructured data like satellite images or text. Covers classification, record linkage, generative models, and introduces the EconDL companion site with demo notebooks. Emphasizes that with proper tuning, deep nets scale affordably to millions/billions of observations.",
+    "description": "Comprehensive review of deep learning methods for economists. Discusses how CNNs and transformers can impute structure from unstructured data like satellite images or text. Covers classification, record linkage, generative models, and introduces the EconDL companion site with demo notebooks. Emphasizes that with proper tuning, deep nets scale affordably to millions/billions of observations.",
     "category": "Research Papers",
     "tags": [
       "economics",
@@ -133,7 +133,7 @@
     "type": "paper",
     "internal": false,
     "highlight": false,
-    "shortDescription": "Comprehensive review of deep learning methods for economists (NBER WP 32768)."
+    "shortDescription": "Comprehensive review of deep learning methods for economists."
   },
   {
     "id": "predicting-social-assistance-bias",
@@ -176,7 +176,7 @@
   },
   {
     "id": "homo-silicus-horton",
-    "title": "Large Language Models as Simulated Economic Agents: Homo Silicus (NBER WP 31122)",
+    "title": "Large Language Models as Simulated Economic Agents: Homo Silicus (NBER)",
     "url": "https://www.nber.org/system/files/working_papers/w31122/w31122.pdf",
     "author": "John J. Horton",
     "date": "2023-04",
@@ -217,7 +217,7 @@
   },
   {
     "id": "doing-data-analysis-with-ai-bekes",
-    "title": "Doing Data Analysis with AI (Course)",
+    "title": "Doing Data Analysis with AI",
     "url": "https://gabors-data-analysis.com/ai-course/week00/",
     "author": "Gabor Bekes",
     "date": "2026-01",
@@ -238,7 +238,7 @@
   },
   {
     "id": "nber-transformative-ai-workshop-2025",
-    "title": "Economics of Transformative AI Workshop (NBER, 2025)",
+    "title": "Economics of Transformative AI Workshop (NBER)",
     "url": "https://www.nber.org/conferences/economics-transformative-ai-workshop-fall-2025",
     "author": "Anton Korinek",
     "date": "2025-09",
@@ -276,7 +276,7 @@
   },
   {
     "id": "aea-2026-ai-labor-market-li",
-    "title": "AI and the Labor Market (AEA 2026, Li)",
+    "title": "AI and the Labor Market (AEA 2026)",
     "url": "https://www.aeaweb.org/conference/webcasts/2026/recent-developments",
     "author": "Danielle Li",
     "date": "2026-01",
@@ -295,7 +295,7 @@
   },
   {
     "id": "aea-2026-language-models-economics-ash",
-    "title": "Language Models for Economics (AEA 2026, Ash)",
+    "title": "Language Models for Economics (AEA 2026)",
     "url": "https://www.aeaweb.org/conference/webcasts/2026/recent-developments",
     "author": "Elliott Ash",
     "date": "2026-01",
@@ -371,7 +371,7 @@
   },
   {
     "id": "kevin-bryan-gpt-economics-youtube",
-    "title": "A User's Guide to GPT/LLMs for Economic Research (video)",
+    "title": "A User's Guide to GPT/LLMs for Economic Research",
     "url": "https://www.youtube.com/watch?v=LJGQjozWr0E",
     "author": "Kevin Bryan",
     "date": "2023-05",
@@ -510,7 +510,7 @@
   },
   {
     "id": "vibe-researching-gans",
-    "title": "Reflections on Vibe Researching (in 2025)",
+    "title": "Reflections on Vibe Researching",
     "url": "https://joshuagans.substack.com/p/reflections-on-vibe-researching",
     "author": "Joshua Gans",
     "date": "2026-01",
@@ -915,25 +915,6 @@
     "shortDescription": "Guide on using Claude Code 2.0 and getting better at using coding agents."
   },
   {
-    "id": "claude-code-setup-santanna",
-    "title": "My Claude Code Setup",
-    "url": "https://psantanna.com/claude-code-my-workflow/",
-    "author": "Pedro H. C. Sant'Anna",
-    "date": null,
-    "description": "Pedro Sant'Anna's personal Claude Code workflow and setup guide.",
-    "category": "Coding with AI",
-    "tags": [
-      "claude",
-      "coding",
-      "tools"
-    ],
-    "featured": true,
-    "type": "guide",
-    "internal": false,
-    "highlight": false,
-    "shortDescription": "Pedro Sant'Anna's personal Claude Code workflow and setup guide."
-  },
-  {
     "id": "using-claude-code-stata-panjwani",
     "title": "Using Claude Code with Stata",
     "url": "https://x.com/aniketapanjwani/status/2021663279307706372",
@@ -1331,7 +1312,7 @@
   },
   {
     "id": "nber-w34953-ai-in-science",
-    "title": "AI in Science (NBER WP 34953)",
+    "title": "AI in Science (NBER)",
     "url": "https://www.nber.org/papers/w34953",
     "author": "Ajay K. Agrawal, John McHale, Alexander Oettl",
     "date": "2026-03",
@@ -1351,7 +1332,7 @@
   },
   {
     "id": "nber-w34984-ai-productivity-workforce",
-    "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives (NBER WP 34984)",
+    "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives (NBER)",
     "url": "https://www.nber.org/papers/w34984",
     "author": "Salomé Baslandze, Zachary Edwards, John Graham, Ty McClure, Brent H. Meyer, Michael Sparks, Sonya R. Waddell, Daniel Weitz",
     "date": "2026-03",
@@ -1371,7 +1352,7 @@
   },
   {
     "id": "nber-w34836-firm-data-on-ai",
-    "title": "Firm Data on AI (NBER WP 34836)",
+    "title": "Firm Data on AI (NBER)",
     "url": "https://www.nber.org/papers/w34836",
     "author": "Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven J. Davis, et al.",
     "date": "2026-02",
@@ -1392,7 +1373,7 @@
   },
   {
     "id": "nber-w34779-ai-economic-future-jones",
-    "title": "A.I. and Our Economic Future (NBER WP 34779)",
+    "title": "A.I. and Our Economic Future (NBER)",
     "url": "https://www.nber.org/papers/w34779",
     "author": "Charles I. Jones",
     "date": "2026-01",
@@ -1493,7 +1474,7 @@
   },
   {
     "id": "menu-pricing-llms-arxiv",
-    "title": "Menu Pricing of Large Language Models",
+    "title": "Menu Pricing of Large Language Models (arXiv)",
     "url": "https://arxiv.org/abs/2502.07736",
     "author": "Dirk Bergemann, Alessandro Bonatti, Alex Smolin",
     "date": "2026-03",
@@ -1593,7 +1574,7 @@
   },
   {
     "id": "claude-code-for-academics-spina",
-    "title": "Claude Code for Academics (presentation + tools)",
+    "title": "Claude Code for Academics",
     "url": "https://github.com/aspi6246/ClaudeCodeTools",
     "author": "Alessandro Spina",
     "date": "2026-03",
@@ -1675,7 +1656,7 @@
   },
   {
     "id": "nber-w33344-llm-econometric-framework",
-    "title": "Large Language Models: An Applied Econometric Framework (NBER WP 33344)",
+    "title": "Large Language Models: An Applied Econometric Framework (NBER)",
     "url": "https://www.nber.org/papers/w33344",
     "author": "Jens Ludwig, Sendhil Mullainathan, Ashesh Rambachan",
     "date": "2025-12",
@@ -1695,7 +1676,7 @@
   },
   {
     "id": "nber-w34444-ai-competition-welfare",
-    "title": "Artificial Intelligence, Competition, and Welfare (NBER WP 34444)",
+    "title": "Artificial Intelligence, Competition, and Welfare (NBER)",
     "url": "https://www.nber.org/papers/w34444",
     "author": "Susan Athey, Fiona Scott Morton",
     "date": "2025-11",
@@ -1715,7 +1696,7 @@
   },
   {
     "id": "nber-w34202-ai-agents-economic-research-korinek",
-    "title": "AI Agents for Economic Research (NBER WP 34202)",
+    "title": "AI Agents for Economic Research (NBER)",
     "url": "https://www.nber.org/papers/w34202",
     "author": "Anton Korinek",
     "date": "2026-01",
@@ -1835,7 +1816,7 @@
   },
   {
     "id": "nber-w34854-building-pro-worker-ai",
-    "title": "Building Pro-Worker Artificial Intelligence (NBER WP 34854)",
+    "title": "Building Pro-Worker Artificial Intelligence (NBER)",
     "url": "https://www.nber.org/papers/w34854",
     "author": "Daron Acemoglu, David Autor, Simon Johnson",
     "date": "2026-02",
@@ -1855,7 +1836,7 @@
   },
   {
     "id": "nber-w34813-politics-of-ai",
-    "title": "The Politics of AI (NBER WP 34813)",
+    "title": "The Politics of AI (NBER)",
     "url": "https://www.nber.org/papers/w34813",
     "author": "Nicholas Bloom, Christos Makridis",
     "date": "2026-02",
@@ -2072,7 +2053,7 @@
   },
   {
     "id": "nber-w34919-llm-ultimatum-game",
-    "title": "How Does AI Distribute the Pie? Large Language Models and the Ultimatum Game (NBER WP 34919)",
+    "title": "How Does AI Distribute the Pie? Large Language Models and the Ultimatum Game (NBER)",
     "url": "https://www.nber.org/papers/w34919",
     "author": "Douglas K.G. Araujo, Harald Uhlig",
     "date": "2026-03",
@@ -2092,7 +2073,7 @@
   },
   {
     "id": "nber-w34423-restrepo-agi-work",
-    "title": "We Won't Be Missed: Work and Growth in the AGI World (NBER WP 34423)",
+    "title": "We Won't Be Missed: Work and Growth in the AGI World (NBER)",
     "url": "https://www.nber.org/papers/w34423",
     "author": "Pascual Restrepo",
     "date": "2025-10",
@@ -2154,7 +2135,7 @@
   },
   {
     "id": "nber-w35046-forecasting-ai-economic-effects",
-    "title": "Forecasting the Economic Effects of AI (NBER WP 35046)",
+    "title": "Forecasting the Economic Effects of AI (NBER)",
     "url": "https://www.nber.org/papers/w35046",
     "author": "Ezra Karger, Otto Kuusela, Jason Abaluck, Kevin A. Bryan, Basil Halperin, Todd R. Jones, Connacher Murphy, Philip Trammell, Josh Rosenberg, Philip Tetlock, et al.",
     "date": "2026-04",
@@ -2194,7 +2175,7 @@
   },
   {
     "id": "nber-w35036-ai-aggregation-knowledge",
-    "title": "How AI Aggregation Affects Knowledge (NBER WP 35036)",
+    "title": "How AI Aggregation Affects Knowledge (NBER)",
     "url": "https://www.nber.org/papers/w35036",
     "author": "Daron Acemoglu, Tianyi Lin, Asuman Ozdaglar, James Siderius",
     "date": "2026-04",
@@ -2214,7 +2195,7 @@
   },
   {
     "id": "nber-w35053-trade-ai-products",
-    "title": "Trade in AI-Related Products (NBER WP 35053)",
+    "title": "Trade in AI-Related Products (NBER)",
     "url": "https://www.nber.org/papers/w35053",
     "author": "Michael E. Waugh",
     "date": "2026-04",
@@ -2400,7 +2381,7 @@
   },
   {
     "id": "ronkko-claude-academic-research",
-    "title": "Claude Academic Research (Claude Code plugin)",
+    "title": "Claude Academic Research",
     "url": "https://github.com/mronkko/claude-academic-research",
     "author": "Mikko Rönkkö",
     "date": "2026-04",
@@ -2468,7 +2449,7 @@
     "author": "Alejandro Lopez-Lira",
     "date": "2026-05",
     "description": "Companion paper for ZeroPaper (https://github.com/alejandroll10/zeropaper), an end-to-end autonomous research pipeline that takes a domain as input and produces a paper of roughly JFQA quality with no human in the loop between launch and finish. The system is built on three premises — state and control flow live outside the model, every stage is verified rather than trusted, and termination is mechanical — and coordinates ~30 specialized agents across 10 stages and 6 adversarial gates (math audit, novelty check, mechanism review, simulated refereeing) under any of three host runtimes (Claude Code, Codex, or Gemini CLI). The paper sets out the design discipline that makes a pipeline this long terminate without drift: ten premises about LLM behavior and six derived principles. Cost is roughly $2/paper amortized under a flat-fee max subscription (~100 papers/month), versus ~1000× more on pay-per-token APIs. Released under a custom share-alike research-use license — free for non-commercial research and education, but submitting any pipeline-produced work to a journal, preprint server, conference, or thesis committee requires prior written notice, and outputs carry a non-cosmetic provenance watermark.",
-    "shortDescription": "Companion paper for ZeroPaper, an autonomous end-to-end research pipeline (~30 agents, 10 stages, 6 adversarial gates) producing JFQA-quality papers at ~$2 each.",
+    "shortDescription": "Companion paper for ZeroPaper, an autonomous research pipeline (~30 agents, 10 stages, 6 adversarial gates) producing JFQA-quality papers at ~$2 each.",
     "category": "AI Tools for Research",
     "tags": [
       "AI",
@@ -2505,7 +2486,7 @@
   },
   {
     "id": "maresca-agi-interest-rates",
-    "title": "AGI Could Lower Interest Rates",
+    "title": "AGI Could Lower Interest Rates (SSRN)",
     "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6514781",
     "author": "Caleb Maresca",
     "date": "2026-05",
@@ -2527,7 +2508,7 @@
   },
   {
     "id": "davidson-halperin-houlden-korinek-explosive-growth",
-    "title": "When Does Automating AI Research Produce Explosive Growth? (NBER WP 35155)",
+    "title": "When Does Automating AI Research Produce Explosive Growth? (NBER)",
     "url": "https://www.nber.org/papers/w35155",
     "author": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
     "date": "2026-05",
@@ -2548,7 +2529,7 @@
   },
   {
     "id": "afonso-galiani-galvez-sosa-dril-datasets",
-    "title": "Deep Research on a Loop: Using AI Agents to Construct Economic Datasets (NBER WP 35188)",
+    "title": "Deep Research on a Loop: Using AI Agents to Construct Economic Datasets (NBER)",
     "url": "https://www.nber.org/papers/w35188",
     "author": "Santiago Afonso, Sebastian Galiani, Ramiro H. Gálvez, Raul A. Sosa",
     "date": "2026-05",
@@ -2569,7 +2550,7 @@
   },
   {
     "id": "babina-understanding-firms-ai-efforts",
-    "title": "Understanding Firms' AI Efforts and Their Economic Impact (NBER WP 35123)",
+    "title": "Understanding Firms' AI Efforts and Their Economic Impact (NBER)",
     "url": "https://www.nber.org/papers/w35123",
     "author": "Tania Babina",
     "date": "2026-04",
@@ -2591,7 +2572,7 @@
   },
   {
     "id": "beraja-talamas-organizational-learning-technologies",
-    "title": "The Value of Organizational Learning Technologies",
+    "title": "The Value of Organizational Learning Technologies (NBER)",
     "url": "https://conference.nber.org/confer/2026/DTs26/beraja.pdf",
     "author": "Martin Beraja, Eduard Talamàs",
     "date": "2026-03",
@@ -2635,7 +2616,7 @@
   },
   {
     "id": "nber-w35110-llm-occupational-exposure-unstable",
-    "title": "How (Un)stable Are LLM Occupational Exposure Scores? (NBER WP 35110)",
+    "title": "How (Un)stable Are LLM Occupational Exposure Scores? (NBER)",
     "url": "https://www.nber.org/papers/w35110",
     "author": "Michelle Yin, Hoa Vu, Claudia Persico",
     "date": "2026-04",
@@ -2697,7 +2678,7 @@
   },
   {
     "id": "ning-li-ideation-bottleneck-ai-econ-research",
-    "title": "The Ideation Bottleneck: Decomposing the Quality Gap Between AI-Generated and Human Economics Research",
+    "title": "The Ideation Bottleneck: Decomposing the Quality Gap Between AI-Generated and Human Economics Research (arXiv)",
     "url": "https://arxiv.org/abs/2604.03338",
     "author": "Ning Li",
     "date": "2026-04",
@@ -2824,7 +2805,7 @@
   },
   {
     "id": "panjwani-empirical-work-age-of-ai-transcript",
-    "title": "Empirical Work in the Age of AI (Stanford conference transcript)",
+    "title": "Empirical Work in the Age of AI (Stanford)",
     "url": "https://aieconomist.io/resources/empirical-work-in-the-age-of-ai",
     "author": "Aniket Panjwani",
     "date": "2026-05",
@@ -3100,7 +3081,7 @@
   },
   {
     "id": "nber-w35290-investment-data-ai-transition",
-    "title": "What Investment Data Implies about the AI Transition (NBER WP 35290)",
+    "title": "What Investment Data Implies about the AI Transition (NBER)",
     "url": "https://www.nber.org/papers/w35290",
     "author": "Jessica Wachter, Jonathan Wachter",
     "date": "2026-06",
@@ -3484,7 +3465,7 @@
   },
   {
     "id": "nber-w35374-practitioners-guide-llms-economic-history",
-    "title": "A Practitioner's Guide to Using Large Language Models and Generative AI in Economic History (NBER WP 35374)",
+    "title": "A Practitioner's Guide to Using Large Language Models and Generative AI in Economic History (NBER)",
     "url": "https://www.nber.org/papers/w35374",
     "author": "Andreas Ferrara",
     "date": "2026-06",
@@ -4213,7 +4194,7 @@
   },
   {
     "id": "galiani-ai-agents-econometric-coding",
-    "title": "AI Agents and Prompt Engineering in Econometric Coding (NBER WP 35588)",
+    "title": "AI Agents and Prompt Engineering in Econometric Coding (NBER)",
     "url": "https://www.nber.org/papers/w35588",
     "author": "Sebastian Galiani, Federico Ariel López, Raul A. Sosa",
     "date": "2026-08",
@@ -4233,12 +4214,12 @@
   },
   {
     "id": "gans-staged-access-liability-dual-use-ai",
-    "title": "Staged Access and Liability for Dual-Use Artificial Intelligence (NBER WP 35586)",
+    "title": "Staged Access and Liability for Dual-Use Artificial Intelligence (NBER)",
     "url": "https://www.nber.org/papers/w35586",
     "author": "Joshua S. Gans",
     "date": "2026-08",
     "description": "Models how regulators should combine staged (delayed or exclusive) access to a dual-use AI model with developer liability, framing a defender and an adversary searching for the same software flaws after release. Liability induces more defensive search but also makes the adversary's search harder, so staged access and liability act as complements in protection. Because defensive effort rises toward the release date, additional delay becomes progressively less productive and optimal evaluation windows are bounded; since defensive search consumes real resources, the efficient liability rate can fall below full internalisation of harm, leaving a distinct role for a timing mandate.",
-    "shortDescription": "An economic model of AI regulation: how staged model access and developer liability interact to limit harm from dual-use AI, and why evaluation windows are bounded.",
+    "shortDescription": "An economic model of how staged model access and developer liability interact to limit harm from dual-use AI, and why evaluation windows are bounded.",
     "category": "Research Papers",
     "tags": [
       "economics",
@@ -4382,6 +4363,25 @@
     ],
     "featured": false,
     "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "azar-ai-eroding-wages",
+    "title": "AI Is Already Eroding Wages: Quasi-Experimental Evidence From Occupational Exposure (SSRN)",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
+    "author": "José Azar, Mireia Giné, Javier Sanz-Espín",
+    "date": "2025-12",
+    "description": "Uses realized worker-firm matches for 138 million US workers to compare firms whose pre-ChatGPT occupation structure was more exposed to automation with less exposed firms. Average wages at exposed firms fell 4.5% relative to unexposed firms after ChatGPT's arrival, and starting wages for new junior and mid-level positions fell 6.3% and 5.9%, while senior pay held steady or rose. Exposed firms also shifted their hiring mix away from junior towards mid-level roles, consistent with mid-level workers using AI to substitute for tasks previously delegated downwards.",
+    "shortDescription": "Evidence from 138 million US workers: after ChatGPT, wages at AI-exposed firms fell 4.5%, with junior and mid-level starting pay hit hardest.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor"
+    ],
+    "featured": false,
+    "type": "paper",
     "internal": false,
     "highlight": false
   }
