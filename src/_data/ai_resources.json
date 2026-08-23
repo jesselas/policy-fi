@@ -4345,5 +4345,44 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nz-regulation-ai-econ-literature-review",
+    "title": "Artificial Intelligence: A Literature Review of Anticipated Economic Impacts and Regulatory Responses",
+    "url": "https://www.regulation.govt.nz/assets/Publication-Documents/Artificial-intelligence-A-literature-review-of-anticipated-economic-impacts-and-regulatory-responses.pdf",
+    "author": "Sam Le Quesne, Kevin Counsell, Isabelle Sin",
+    "date": "2026-08",
+    "description": "A New Zealand Ministry for Regulation literature review synthesising the emerging economic literature on AI and its implications for productivity, economic growth, labour markets, inequality, uncertainty, and market structure. Key takeaways: growth impacts are uncertain, distribution matters as much as growth, labour markets are the main transmission channel, markets may misdirect AI development, and effective policy should shape AI's direction (adaptive, risk-based approaches) rather than slow progress.",
+    "shortDescription": "NZ Ministry for Regulation review of the economics of AI — productivity, growth, labour, inequality, and market structure — and its regulatory implications.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "regulation",
+      "growth",
+      "labor"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "oxford-economics-ai-role-economists-mcfee",
+    "title": "How AI Is Changing the Role of Economists",
+    "url": "https://oxecon.io/ZNXpoV",
+    "author": "Innes McFee",
+    "date": "2026-08",
+    "description": "Oxford Economics CEO Innes McFee reflects on what AI can already support in economists' day-to-day work, where its limits lie, and what it means for the profession. His view: AI will not replace economists but lets them refocus where they add most value — judgement, interpreting conflicting evidence, and identifying signals others miss — the skills that become scarce as information grows abundant. Notes internal uses like AI-driven quality assurance across thousands of forecasts.",
+    "shortDescription": "Oxford Economics CEO Innes McFee on how AI reshapes economists' work — automating repetitive checks while judgement and interpretation grow more valuable.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "labor",
+      "tools"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
