@@ -2311,7 +2311,7 @@
       "Federal Reserve"
     ],
     "featured": false,
-    "type": "article",
+    "type": "report",
     "internal": false,
     "highlight": false
   },
@@ -2354,7 +2354,7 @@
       "IMF"
     ],
     "featured": false,
-    "type": "paper",
+    "type": "report",
     "internal": false,
     "highlight": false
   },
@@ -3183,7 +3183,7 @@
       "policy"
     ],
     "featured": false,
-    "type": "paper",
+    "type": "report",
     "internal": false,
     "highlight": false
   },
@@ -4019,7 +4019,7 @@
       "development"
     ],
     "featured": false,
-    "type": "other",
+    "type": "report",
     "internal": false,
     "highlight": false
   },
@@ -4057,7 +4057,7 @@
       "AI"
     ],
     "featured": false,
-    "type": "article",
+    "type": "report",
     "internal": false,
     "highlight": false
   },
@@ -4150,7 +4150,7 @@
       "measurement"
     ],
     "featured": false,
-    "type": "article",
+    "type": "report",
     "internal": false,
     "highlight": false
   },
@@ -4233,7 +4233,7 @@
   },
   {
     "id": "yao-stranded-credentials-genai-signaling",
-    "title": "Stranded credentials: how a skill-signaling market absorbed generative AI (arXiv 2608.17111)",
+    "title": "Stranded credentials: how a skill-signaling market absorbed generative AI (arXiv)",
     "url": "https://arxiv.org/abs/2608.17111",
     "author": "Song Yao",
     "date": "2026-08",
@@ -4252,7 +4252,7 @@
   },
   {
     "id": "fabrega-governing-delegation-genai",
-    "title": "Governing Delegation to Generative Artificial Intelligence: Human Direction, Work-Related Orientation, and Modes of Use (arXiv 2608.17624)",
+    "title": "Governing Delegation to Generative Artificial Intelligence: Human Direction, Work-Related Orientation, and Modes of Use (arXiv)",
     "url": "https://arxiv.org/abs/2608.17624",
     "author": "Jorge Fábrega",
     "date": "2026-08",
@@ -4291,7 +4291,7 @@
   },
   {
     "id": "catalini-hui-wu-simple-economics-agi",
-    "title": "Some Simple Economics of AGI (arXiv 2602.20946)",
+    "title": "Some Simple Economics of AGI (arXiv)",
     "url": "https://arxiv.org/abs/2602.20946",
     "author": "Christian Catalini, Xiang Hui, Jane Wu",
     "date": "2026-02",
@@ -4343,7 +4343,7 @@
       "labor"
     ],
     "featured": false,
-    "type": "paper",
+    "type": "report",
     "internal": false,
     "highlight": false
   },
