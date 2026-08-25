@@ -4384,5 +4384,43 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "hartley-labor-market-effects-genai-job-loss-fears",
+    "title": "The Labor Market Effects of Generative Artificial Intelligence and Job Loss Fears (NBER)",
+    "url": "https://conference.nber.org/conf_papers/f241790.pdf",
+    "author": "Jonathan S. Hartley, Filip Jolevski, Vitor Melo, Brendan Moore",
+    "date": "2026-07",
+    "description": "Fields a survey measuring US workers perceptions of AI-related job-loss risk and AI adoption (mid-to-high 30% by end of 2025). The average worker believes there is a 20% chance of losing their job to generative AI within two years, but a continuous-treatment difference-in-differences design finds these fears are not borne out: job postings and layoffs in more exposed occupations show no statistically significant response to AI diffusion, and exposure is associated with small positive wage effects. Presented at the NBER Summer Institute 2026 Digitization and AI meeting.",
+    "shortDescription": "Survey: the average US worker sees a 20% chance of AI job loss within two years, yet exposed occupations show no drop in postings or layoffs.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "firooz-leduc-liu-ai-market-competition",
+    "title": "Will AI Intensify or Weaken Market Competition? (FRBSF)",
+    "url": "https://www.frbsf.org/research-and-insights/publications/working-papers/2026/08/will-ai-intensify-or-weaken-market-competition/",
+    "author": "Hamid Firooz, Sylvain Leduc, Zheng Liu",
+    "date": "2026-08",
+    "description": "A San Francisco Fed working paper studies how AI affects market competition in a general-equilibrium model with heterogeneous firms and variable markups. It finds a non-monotonic relationship between AI adoption and industry concentration: at low adoption, large incumbents that adopt AI gain share, but as adoption diffuses, entry of new and smaller adopters erodes incumbent dominance and lowers concentration. The calibrated model implies concentration will likely fall as AI adoption rises above current levels, the AI-markup link depends on whether adoption is demand- or supply-driven, and a modest 3% revenue subsidy for AI adopters maximizes social welfare.",
+    "shortDescription": "SF Fed model finds a non-monotonic link between AI adoption and industry concentration; a modest 3% AI revenue subsidy maximizes welfare.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "competition"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
