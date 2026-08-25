@@ -4422,5 +4422,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "anthropic-economic-futures-research-fund-agenda",
+    "title": "A Research Agenda for the Economic Futures Research Fund",
+    "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+    "author": "Anthropic",
+    "date": "2026-07",
+    "description": "Anthropic commits $200 million to support external research on preparing society for AI economic impacts, and lays out a research agenda across five priority areas: shaping AI workplace effects, equipping workers for transitions, modernizing income support, building worker stakes in AI-driven gains, and evaluating public investments. Eligible applicants include accredited universities, independent research institutes, policy organizations, and experienced nonprofits, with typical project funding of roughly $5-30 million.",
+    "shortDescription": "Anthropic $200M fund and research agenda on AI economic impacts across five areas; open to universities, research institutes, policy orgs and nonprofits.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "funding"
+    ],
+    "featured": false,
+    "type": "other",
+    "internal": false,
+    "highlight": false
   }
 ]
