@@ -4441,5 +4441,43 @@
     "type": "other",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "hanney-ai-rcts-booming-evolve",
+    "title": "AI RCTs are booming – to be useful they must evolve",
+    "url": "https://voxdev.org/topic/methods-measurement/ai-rcts-are-booming-be-useful-they-must-evolve",
+    "author": "Oliver Hanney, Tim Ohlenburg, Sharif Kazemi, Joseph Levine, Shahrukh Wani",
+    "date": "2026-08",
+    "description": "Using the AEA RCT Registry and RIDIE, the authors document a fast-rising share of AI-related randomised trials in economics — on track to be one in five, up from one in thirty in under four years — spurred by new funding such as Anthropic's Economic Futures fund and J-PAL calls. They argue that randomising a rapidly evolving, widely adopted technology poses distinct challenges (iteration speed, control-group definition, generalisability, scale) and offer concrete proposals to make the coming wave of AI RCTs durable, generalisable and policy-relevant.",
+    "shortDescription": "AI-related RCTs are on track to be 1 in 5 economics trials; the piece maps the boom and proposes fixes to keep the studies durable and policy-relevant.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "RCT",
+      "development"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "dell-rambachan-measurement-revolution-ai",
+    "title": "The Measurement Revolution? Credible Measurement and Inference in the Age of AI (arXiv)",
+    "url": "https://arxiv.org/abs/2608.23524",
+    "author": "Melissa Dell, Ashesh Rambachan",
+    "date": "2026-08",
+    "description": "A review of how AI is reshaping economic measurement by cheaply converting unstructured text and images into structured variables — and the new challenge this creates, since researchers must now choose among multiple plausible AI-generated measures that can yield divergent findings. The paper identifies three pipeline stages where AI intervenes (discovery, construct definition, observation), argues for validation anchored to explicit criteria rather than informal 'reasonable proxy' claims, and shows how validation samples enable sound inference despite arbitrary AI prediction bias.",
+    "shortDescription": "Dell and Rambachan on doing credible economic measurement and inference with AI-generated variables, and why validation samples are essential.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "measurement"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
