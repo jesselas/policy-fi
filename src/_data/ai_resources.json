@@ -4479,5 +4479,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "hallman-genai-sophistication-large-firm",
+    "title": "Sophistication in GenAI Use: Field Evidence from a Large Firm (arXiv)",
+    "url": "https://arxiv.org/abs/2608.27364",
+    "author": "Nicholas J. Hallman, Zachary T. Kowaleski, Anu Puvvada, Jaime J. Schmidt",
+    "date": "2026-08",
+    "description": "Analyzing 713,564 prompts from nearly 4,000 back-office workers across 15 functional areas over eight months in 2025, the authors measure how 'sophisticated' employees' generative-AI use is. Senior employees exhibit more sophisticated use, and sophistication varies considerably across functions (highest in Strategy, Digital Innovation, and Project Management). Strikingly, they find neither improvement in sophistication over time nor lasting gains following formal AI training, suggesting usage patterns are resistant to conventional training.",
+    "shortDescription": "Field study of 713k prompts from ~4,000 workers: genAI sophistication rises with seniority, varies by function, and formal AI training yields no lasting gains.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "productivity"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
