@@ -4498,5 +4498,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "syverson-understanding-ai-productivity",
+    "title": "Understanding AI and Productivity",
+    "url": "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
+    "author": "Chad Syverson",
+    "date": "2026-08",
+    "description": "In this guest essay for EIG's Agglomerations (part of the American Worker Project), the University of Chicago productivity economist weighs whether AI is behind the recent acceleration in U.S. labor productivity growth (from roughly 1.5% to 2.2% annually since mid-2022). He argues economy-wide evidence remains inconclusive: cross-sector data show only mixed correlation between AI adoption and productivity gains, but the productivity J-curve means complementary intangible investments can depress measured productivity before benefits materialize, so slow measured growth should not be read as proof that AI is not working.",
+    "shortDescription": "Chicago productivity economist weighs whether AI explains recent U.S. productivity acceleration; sees inconclusive economy-wide evidence and a likely J-curve lag.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "productivity"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
