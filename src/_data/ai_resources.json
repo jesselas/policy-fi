@@ -4577,5 +4577,43 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cochrane-refine",
+    "title": "Refine",
+    "url": "https://www.grumpy-economist.com/p/refine",
+    "author": "John H. Cochrane",
+    "date": "2026-02",
+    "description": "Cochrane sends the current draft of his 80-page booklet on inflation to Refine, the AI referee tool built by Yann Calvó López and Ben Golub, and reports on what came back. He reproduces four of the comments in full (on operationalizing the fiscal-news narrative, the FTPL/New Keynesian \"completeness\" claim, an unresolved tension in the transmission mechanism, and whether the monetarist alternative is steelmanned) and rates the report in the top 5% of referee reports he has read in 40 years as an economist. It also caught a sign error in the solution of a differential equation. He suggests editors feed every submission to it on receipt, and expects to ask anyone requesting comments whether they have run it first. A separate note covers using Claude to write MATLAB code that pulls FRED series and plots them, an hour's work in five minutes, with the caveat that verifying unfamiliar generated code is a new burden. The post closes on a worry: if readers increasingly consume LLM digests rather than papers, getting your ideas into the training data becomes the game, and whichever view a widely used evaluation tool takes will steer the profession's consensus.",
+    "shortDescription": "Cochrane runs his 80-page inflation booklet through Refine and rates the AI's comments in the top 5% of referee reports he has read in 40 years.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "tools",
+      "writing",
+      "peer-review"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cochrane-ai-regulation",
+    "title": "AI regulation",
+    "url": "https://www.grumpy-economist.com/p/ai-regulation",
+    "author": "John H. Cochrane",
+    "date": "2026-07",
+    "description": "A two-part rebuttal, first to the \"We Must Act Now\" open letter on AI spearheaded by Stanford's Digital Economy Lab, and then to Governor Newsom's May 2026 executive order on AI and the California workforce. Against the letter, Cochrane argues that leading with job displacement is misplaced given three centuries of labor-substituting innovation, that nothing about displacement is irreversible enough to justify acting before the effects are known, and that regulating properly means documenting a market failure and a regulator capable of addressing it. Against the executive order, he reads the operative clauses in turn (subsidized employment, expanded unemployment enrolment, job training, a collective bargaining review, directing a share of AI revenue, securing compute, and promoting employee ownership) and argues they are New Deal instruments reattached to a new problem. A dissenting counterpart to the open letter, which is also listed here.",
+    "shortDescription": "Cochrane's rebuttal to the \"We Must Act Now\" AI letter and to Newsom's AI workforce executive order: don't regulate before the effects are known.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "policy"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
