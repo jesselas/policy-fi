@@ -4517,5 +4517,65 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "bick-blandin-deming-what-work-genai",
+    "title": "What Work Does Generative AI Do? (NBER)",
+    "url": "https://www.nber.org/papers/w35677",
+    "author": "Alexander Bick, Adam Blandin, David J. Deming, Tyler R. Schumacher",
+    "date": "2026-08",
+    "description": "A nationally representative survey builds the first task-level generative-AI adoption indexes across occupations. It finds adoption is widespread but shallow — genAI is used across many occupations and tasks, yet within most of them fewer than half of workers adopt — with large variation among workers in similar roles.",
+    "shortDescription": "First task-level genAI adoption indexes from a US survey: use is widespread but shallow, varying sharply even within the same occupation.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "labor",
+      "adoption"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gans-designing-ai-augmented-peer-review",
+    "title": "Designing AI-Augmented Peer Review (NBER)",
+    "url": "https://www.nber.org/papers/w35688",
+    "author": "Joshua S. Gans",
+    "date": "2026-08",
+    "description": "Models how journals should integrate AI-generated manuscript assessments into peer review. Sharing an AI assessment with reviewers can reduce the independent information editors obtain; giving it to only one of two reviewers may better preserve human investigation, and competing policies can be tested via randomized experiments on reviewer disagreement.",
+    "shortDescription": "A model of how journals should fold AI manuscript assessments into peer review without crowding out independent human judgment.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "peer review",
+      "publishing"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "centaurbench-augment-vs-automate-benchmark",
+    "title": "CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks (NBER)",
+    "url": "https://www.nber.org/papers/w35663",
+    "author": "Pattaraphon Kenny Wongchamcharoen, Kris Gulati, Min Min Fong, Abhishek Nagaraj",
+    "date": "2026-08",
+    "description": "Introduces a benchmark that separately measures whether an LLM automates a task versus augments a lower-capacity worker model across seven real-world tasks. Rankings across the two regimes are only modestly correlated — the automation winner loses on augmentation in five of seven tasks — showing automation skill does not predict how well a model assists people.",
+    "shortDescription": "A benchmark separating LLM automation from augmentation: the best automator often makes a poor assistant across seven real-world tasks.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "benchmark",
+      "productivity"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
