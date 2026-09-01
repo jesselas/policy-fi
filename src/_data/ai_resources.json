@@ -4615,5 +4615,24 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "mcafee-why-i-didnt-sign",
+    "title": "Why I Didn't Sign the AI Open Letter",
+    "url": "https://geekway.substack.com/p/why-i-didnt-sign-the-ai-open-letter",
+    "author": "Andrew McAfee",
+    "date": "2026-07",
+    "description": "McAfee walks through the three paragraphs of the \"We Must Act Now\" statement and explains why he declined to sign, despite Erik Brynjolfsson, his co-author and Workhelix co-founder, having helped organize it. He accepts the first claim and would use a stronger verb than \"may\", but finds the compressed time frame unpersuasive: transformation on an unprecedented scale by 2030 is not something he expects. His main objection is the decision to lead with job displacement rather than living standards, given AI's existing public and political hostility, and the failure to acknowledge the conventional view that the gains from technological progress outweigh the drawbacks. He reads the closing call to \"build the incentives, guardrails, and institutions needed to steer AI\" as upstream governance and dirigisme: acting before the impacts are known, when the evidence on displacement points both ways and the 2023 \"pause giant AI experiments\" letter is a reminder that interventions can be wrong. He ends with a redraft that keeps the structure but replaces guardrails with the capabilities needed to respond quickly. A sympathetic-insider counterpart to the statement itself and to Cochrane's harsher rebuttal, both also listed here.",
+    "shortDescription": "Brynjolfsson's longtime co-author explains why he declined to sign \"We Must Act Now\": wrong time frame, risk-first framing, and a whiff of dirigisme.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "policy"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
