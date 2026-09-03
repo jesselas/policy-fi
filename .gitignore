@@ -1,3 +1,22 @@
+# This repository tracks only what the site needs to build and deploy.
+# Everything else in the working directory is local-only: ignore all
+# top-level entries, then allow back the ones the build requires.
+
+/*
+
+!/.eleventy.js
+!/.gitignore
+!/CNAME
+!/package.json
+!/package-lock.json
+!/src/
+!/scripts/
+
+!/.github/
+/.github/*
+!/.github/workflows/
+
+# Never tracked, even under an allowed path.
 node_modules/
 _site/
 .DS_Store
