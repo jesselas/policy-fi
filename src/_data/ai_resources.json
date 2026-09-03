@@ -4672,5 +4672,24 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "zeytoon-nejad-ai-and-the-economy",
+    "title": "AI and the Economy: An Economic Examination of Production, Distribution, Firms, Labor, and Welfare (arXiv)",
+    "url": "https://arxiv.org/abs/2609.01263",
+    "author": "Ali Zeytoon-Nejad",
+    "date": "2026-09",
+    "description": "A single-authored survey essay arguing that AI is not merely a technological innovation but a major economic phenomenon—one best understood at once as capital, synthetic labor, a general-purpose technology, and economic infrastructure. It maps the channels (automation, augmentation, optimization, prediction, and innovation) through which AI drives productivity, then works through its effects on labor markets, firm structure, competition, and entrepreneurship before turning to welfare and policy. A broad conceptual entry point for economists orienting to the field.",
+    "shortDescription": "Survey essay framing AI as capital, synthetic labor, a general-purpose technology, and infrastructure, across productivity, labor, and welfare.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "survey"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
