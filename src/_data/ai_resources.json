@@ -4634,5 +4634,43 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "andrews-sarkar-dutch-books-llm",
+    "title": "Dutch Books for Language Models (arXiv)",
+    "url": "https://arxiv.org/abs/2609.02797",
+    "author": "Isaiah Andrews, Suproteem Sarkar",
+    "date": "2026-09",
+    "description": "Tests whether the probabilistic forecasts language models give for economic and real-world events are internally coherent. Building on de Finetti's theorem, the authors compute the largest guaranteed 'Dutch book' arbitrage profit against a model's stated probabilities as a label-free measure of incoherence. They find substantial incoherence that grows with richer logical relationships between events and can jump an order of magnitude when irrelevant context is added.",
+    "shortDescription": "Measures the coherence of LLM probability forecasts via guaranteed 'Dutch book' arbitrage profits, finding substantial, context-sensitive incoherence.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "forecasting"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "struski-competitive-market-behavior-llms",
+    "title": "Competitive Market Behavior of LLMs (arXiv)",
+    "url": "https://arxiv.org/abs/2609.02580",
+    "author": "Pawel Struski, Jakub Swistak, Inez Okulska, Przemyslaw Biecek",
+    "date": "2026-09",
+    "description": "Replaces human subjects with LLM agents in a classic double-auction experiment to test whether models can participate in market mechanisms designed for people. Markets populated by LLM agents converge to equilibrium more slowly or not at all, yielding less efficient allocations than human markets, with wide heterogeneity across model families and buyer/seller roles. The authors release their testing framework for future evaluations.",
+    "shortDescription": "Puts LLM agents in a double-auction experiment; their markets converge slower and allocate less efficiently than human markets, varying by model.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "experiments"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
