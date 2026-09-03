@@ -311,6 +311,17 @@ a:focus-visible {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 2px solid var(--header-rule);
+  /* Only the snap-backs are eased. While the bar is tracking a scroll, JS sets
+     transition:none inline, otherwise the easing leaves it lagging the wheel. */
+  transition: transform 200ms cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Keyboard focus inside the bar pins it open, overriding the inline transform.
+   :focus-visible, and not :hover or plain :focus-within — the pointer sits on
+   the bar while wheel-scrolling, and holding it open then would defeat the
+   point of hiding it at all. */
+.site-header:has(:focus-visible) {
+  transform: none !important;
 }
 
 .nav-container {
@@ -2784,41 +2795,6 @@ main.container .page-intro {
 
 /* Short sort labels are hidden on desktop (shown on mobile) */
 .sort-short { display: none; }
-
-/* --- Auto-tucking top bar (mobile only) ---
-   The "quick return" pattern: the bar slides out of the way once you are well
-   past the top and comes straight back the moment you scroll up, so the nav is
-   always one flick away rather than a trip to the top of the page. Desktop
-   keeps the bar pinned; there it costs nothing and the hiding would be noise.
-
-   The durations here are only defaults: JS overrides transition-duration
-   inline on each change, scaled to how fast you are actually scrolling, so a
-   slow drag gets a gentle slide and a hard flick gets a quick one. What stays
-   in CSS is the easing, which differs by direction — accelerating on the way
-   out, decelerating on the way back in — because that is a property of the
-   state, not of the speed.
-
-   The reduced-motion block near the end of this file zeroes the duration with
-   !important, which outranks an inline declaration, so that preference still
-   wins and the bar snaps rather than sliding.
-
-   JS owns .nav-tucked; it never adds the class while the menu is open, since
-   the dropdown panel is a child of this element and would leave with it. */
-@media (max-width: 768px) {
-  .site-header {
-    /* Returning uses an ease-in-out rather than a decelerate curve. A
-       decelerate curve spends most of its distance in the first few frames, so
-       however long the duration is the bar still reads as snapping into place
-       and then settling. Easing in at both ends spreads the movement out and is
-       most of what makes the return feel unhurried. */
-    transition: transform 420ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .site-header.nav-tucked {
-    transform: translateY(-100%);
-    transition: transform 200ms cubic-bezier(0.4, 0, 1, 1);
-  }
-}
 
 /* --- Mobile bottom tab bar (hidden on desktop) --- */
 .bottom-nav { display: none; }

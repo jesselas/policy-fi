@@ -2,6 +2,10 @@
    policy.fi — Main JavaScript
    ========================================================================== */
 
+/* Assigned by initAutoHideHeader; the mobile menu calls it to bring the bar
+   back before opening a panel that hangs off it. */
+let revealHeader = () => {};
+
 document.addEventListener('DOMContentLoaded', () => {
   initExternalLinks();
   initAccordions();
@@ -18,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLibrary();
   }
   initAuthorEtAl();
+  initAutoHideHeader();
   initMobileNav();
   initThemeToggle();
   initWebMCP();
@@ -297,6 +302,92 @@ function initRecentResearchEqualHeight() {
   }
 }
 
+/* --- Auto-hiding top bar ---
+   The bar is scroll-linked rather than threshold-based: it moves by exactly
+   the distance scrolled. Twelve pixels down raises it twelve, thirty back up
+   returns it thirty, clamped to its own height so it never travels further
+   than fully hidden or fully shown. A slow scroll slides it out slowly, a
+   flick throws it out at once, a short scroll leaves it part-way, and an
+   upward scroll anywhere mid-page brings it back proportionally. Nothing
+   snaps on a change of direction, so the bar is never doing something the
+   gesture did not ask for.
+
+   It stays position: sticky, so hiding it never shifts the content and the
+   body needs no compensating padding. */
+function initAutoHideHeader() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const links = document.querySelector('.nav-links');
+
+  let lastY = Math.max(0, window.scrollY);
+  let offset = 0;                       // px the bar is currently raised
+  let height = header.offsetHeight;     // cached: read per frame forces layout
+  let ticking = false;
+
+  /* The browser fires a scroll event when it restores the previous scroll
+     position after load. That is not the user scrolling down. */
+  const settledAt = performance.now() + 300;
+
+  function apply(animated) {
+    /* Tracking a scroll has to be instant. The eased transition is only for
+       the snap-backs; leaving it on here makes the bar lag the wheel. */
+    header.style.transition = animated ? '' : 'none';
+    header.style.transform = offset > 0 ? `translateY(${-offset}px)` : '';
+    header.classList.toggle('is-hidden', offset >= height);
+  }
+
+  function show() {
+    if (offset === 0) return;
+    offset = 0;
+    apply(true);
+  }
+  revealHeader = show;
+
+  function update() {
+    ticking = false;
+    const y = Math.max(0, window.scrollY); // clamp iOS overscroll above the top
+    const delta = y - lastY;
+    lastY = y;
+
+    /* Fully shown within one bar-height of the top; while the mobile dropdown
+       is open, since the panel is a child of the bar and would leave with it;
+       and while keyboard focus is inside, because tabbing to a link that then
+       slides away is a trap. */
+    if (y <= height ||
+        (links && links.classList.contains('open')) ||
+        header.querySelector(':focus-visible')) {
+      show();
+      return;
+    }
+    if (performance.now() < settledAt) return;
+
+    const next = Math.min(height, Math.max(0, offset + delta));
+    if (next === offset) return;
+    offset = next;
+    apply(false);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  }, { passive: true });
+
+  const remeasure = () => { height = header.offsetHeight; };
+  window.addEventListener('resize', debounce(remeasure, 150));
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+
+  /* Reaching for the bar is enough to bring it back, without scrolling. No
+     touch equivalent: on a phone, scrolling up is the way back. */
+  document.addEventListener('mousemove', (e) => {
+    if (e.clientY <= 4) show();
+  }, { passive: true });
+
+  header.addEventListener('focusin', (e) => {
+    if (e.target.matches(':focus-visible')) show();
+  });
+}
+
 /* --- Mobile Navigation --- */
 function initMobileNav() {
   const toggle = document.querySelector('.nav-toggle');
@@ -346,106 +437,8 @@ function initMobileNav() {
       if (window.innerWidth > 768 && links.classList.contains('open')) {
         closeMenu();
       }
-      // Never leave the bar tucked away on a viewport that can't re-show it.
-      if (!isPanel()) header.classList.remove('nav-tucked');
     }, 100);
   });
-
-  /* --- Tuck the bar on downward scroll (mobile only) ---
-     TUCK_AFTER keeps the bar put until you are clearly reading rather than
-     nudging the page.
-
-     The two travel thresholds are deliberately lopsided. Hiding reacts to a
-     short push because that gesture is unambiguous, but revealing waits for a
-     real upward run: momentum scrolling settles with a small backwards bounce,
-     and iOS rubber-banding does the same at the ends, so a low reveal threshold
-     makes the bar appear when you did not ask for it. This is the "comes back
-     too soon" failure, and it is a distance problem, not a timing one. */
-  const TUCK_AFTER = 88;        // px down the page before hiding is allowed
-  const TRAVEL_TO_TUCK = 12;    // px of downward travel before it leaves
-  const TRAVEL_TO_REVEAL = 50;  // px of upward travel before it returns
-
-  /* Speed is measured over the whole directional run rather than one frame, so
-     it describes the gesture instead of the sampling noise inside it.
-
-     FAST_PX_PER_MS is the speed at which the duration bottoms out, and it has
-     to be set against real input: a touch flick with momentum easily runs
-     10-20px per millisecond, and even an ordinary drag passes 3. Setting the
-     ceiling anywhere near those numbers pins almost every scroll to the fast
-     end, which is the whole mapping collapsing back to one fixed speed. */
-  /* Reveal is the slower half. That looks backwards next to the reasoning above,
-     but hiding and returning are not judged the same way: the bar leaving is
-     peripheral, while the bar arriving lands in the middle of what you are
-     reading, so the same duration reads as abrupt coming back. Even a hard
-     flick gets 320ms here. */
-  const REVEAL_MS = { fast: 320, slow: 700 };
-  const TUCK_MS = { fast: 250, slow: 620 };
-  const FAST_PX_PER_MS = 13;
-
-  let lastY = Math.max(0, window.scrollY);
-  let travel = 0;                      // signed px accumulated in one direction
-  let runStart = performance.now();    // when the current run began
-  let ticking = false;
-
-  function durationFor(speed, range) {
-    const t = Math.min(1, speed / FAST_PX_PER_MS);
-    return Math.round(range.slow - (range.slow - range.fast) * t);
-  }
-
-  function setTucked(tuck, speed) {
-    if (header.classList.contains('nav-tucked') === tuck) return;
-    // Set the duration before the class flips: both land in the same style
-    // recalculation, so the transition starts with the value we just chose.
-    header.style.transitionDuration = durationFor(speed, tuck ? TUCK_MS : REVEAL_MS) + 'ms';
-    header.classList.toggle('nav-tucked', tuck);
-  }
-
-  function updateBar() {
-    ticking = false;
-    if (!isPanel()) {
-      header.classList.remove('nav-tucked');
-      // Clear it: outside the mobile block nothing sets transition-property, so
-      // it falls back to `all`, and a stray duration would animate every
-      // property of the bar on desktop.
-      header.style.transitionDuration = '';
-      return;
-    }
-    const y = Math.max(0, window.scrollY); // clamp iOS overscroll above the top
-    const now = performance.now();
-    const diff = y - lastY;
-    lastY = y;
-
-    // Always visible near the top, while the menu is open, or while focus is
-    // inside the bar — tabbing to a link that then slid away is a trap.
-    if (y <= TUCK_AFTER ||
-        links.classList.contains('open') ||
-        header.contains(document.activeElement)) {
-      setTucked(false, 0); // no gesture drove this, so use the gentle end
-      travel = 0;
-      runStart = now;
-      return;
-    }
-    if (diff === 0) return;
-
-    // A change of direction ends the run and starts a new one.
-    if (travel === 0 || (diff > 0) !== (travel > 0)) {
-      travel = diff;
-      runStart = now;
-    } else {
-      travel += diff;
-    }
-
-    const speed = Math.abs(travel) / Math.max(16, now - runStart);
-    if (travel >= TRAVEL_TO_TUCK) setTucked(true, speed);
-    else if (travel <= -TRAVEL_TO_REVEAL) setTucked(false, speed);
-  }
-
-  window.addEventListener('scroll', () => {
-    if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
-  }, { passive: true });
-
-  // Speed 0: no scroll drove this, so use the gentle end of the range.
-  header.addEventListener('focusin', () => setTucked(false, 0));
 
   // Swipe up to close menu on mobile
   let touchStartY = 0;
@@ -604,10 +597,9 @@ function initMobileNav() {
      the slide animation. */
   function openMenu() {
     // The panel hangs off the bottom of the bar, so the bar has to be on screen
-    // before it can be shown — e.g. opening via the swipe gesture while tucked.
-    // Fast end of the range: you have just asked for the menu, so no drift.
-    header.style.transitionDuration = '140ms';
-    header.classList.remove('nav-tucked');
+    // before it can be shown — e.g. opening via the swipe gesture while the
+    // bar is part-way out.
+    revealHeader();
     links.classList.add('open');
     links.inert = false;
     toggle.setAttribute('aria-expanded', 'true');
