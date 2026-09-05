@@ -4711,5 +4711,25 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "georgetown-ai-referee-leaderboard",
+    "title": "AI Referee Paper Leaderboard",
+    "url": "https://d3jhl7jsny6f2h.cloudfront.net/",
+    "author": "Georgetown AI, Analytics, and the Future of Work Initiative",
+    "date": null,
+    "description": "An interactive leaderboard that ranks the top 100 finance and economics working papers as scored by an AI referee against a fixed rubric. Each paper gets an overall score plus separate ratings for significance, originality, correctness, data & methodology, and exposition; users can sort by any dimension and open a detailed assessment report for each paper. Built by Georgetown's AI, Analytics, and the Future of Work Initiative, it is a concrete look at how a frontier LLM evaluates research quality—and how your own paper might fare.",
+    "shortDescription": "Ranks the top 100 finance & economics working papers scored by an AI referee, with per-dimension ratings and a detailed report for each paper.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "tools",
+      "peer-review",
+      "economics",
+      "claude"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
