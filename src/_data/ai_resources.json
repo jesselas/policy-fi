@@ -4691,5 +4691,25 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cunningham-human-in-the-loop",
+    "title": "Where and How Will the Human Be in the Loop?",
+    "url": "https://causalinf.substack.com/p/where-and-how-will-the-human-be-in",
+    "author": "Scott Cunningham",
+    "date": "2026-09",
+    "description": "Scott Cunningham argues that once AI agents make cognitive work near-costless, the economic logic pushes toward removing humans entirely rather than keeping them in the loop. His worry: research traditionally produces three things at once—output, verification, and understanding—and agentic workflows decouple them, delivering results without the checking or the human capital that manual work built. He proposes deliberately engineering \"compound AI systems\" with dashboards, checklists, and visualizations that restore oversight and cognitive engagement inside automated research pipelines.",
+    "shortDescription": "Scott Cunningham on why cheap AI agents push humans out of research, and how to design systems that keep verification and understanding in the loop.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "claude",
+      "coding",
+      "advanced"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
