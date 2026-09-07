@@ -4731,5 +4731,25 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nber-economics-transformative-ai-book",
+    "title": "The Economics of Transformative AI (NBER / University of Chicago Press)",
+    "url": "https://www.nber.org/books-and-chapters/economics-transformative-ai",
+    "author": "Ajay K. Agrawal, Erik Brynjolfsson & Anton Korinek (eds.)",
+    "date": "2026-09",
+    "description": "A newly released edited volume collecting sixteen research studies on what happens to the economy when AI matches or exceeds human cognitive capabilities. Contributions from leading economists develop frameworks for innovation, market structure, employment, inequality, and human purpose, weighing upside cases (personalized algorithmic assistance, accelerated scientific discovery, new forms of organization) against risks (labor displacement, concentration of power, information-ecosystem collapse, existential risk). A reference volume for economists working on transformative AI.",
+    "shortDescription": "Edited NBER volume of sixteen studies on how transformative AI reshapes growth, labor, market structure, inequality, and policy.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "transformative AI",
+      "growth",
+      "labor"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
   }
 ]
