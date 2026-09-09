@@ -4731,5 +4731,63 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "nber-w35720-ai-assistance-expertise",
+    "title": "Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting (NBER)",
+    "url": "https://www.nber.org/papers/w35720",
+    "author": "David Autor et al.",
+    "date": "2026-09",
+    "description": "A randomized controlled trial with 133 patent lawyers across eleven US intellectual-property firms testing whether an AI drafting tool builds or erodes professional skill. Lawyers using AI improved benchmark work quality at both 10 and 90 days, and still outperformed controls when later working without AI—but the gains split by seniority. The largest durable gains accrued to the lawyers who retained the least, while junior attorneys' outcomes polarized. The authors argue that foundational expertise may be a prerequisite for converting temporary AI assistance into lasting competence.",
+    "shortDescription": "RCT with 133 patent lawyers finds AI drafting tools can build durable skill—but mainly for those with the foundational expertise to convert it.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "expertise",
+      "labor"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "nber-w35719-llm-audit-pre-analysis-plans",
+    "title": "The Utility of AI Tools in Auditing Adherence to Pre-Analysis Plans (NBER)",
+    "url": "https://www.nber.org/papers/w35719",
+    "author": "Jeffrey Clemens and Anwita Mahajan",
+    "date": "2026-09",
+    "description": "Pre-analysis plans (PAPs) curb researchers' analytical flexibility, but only if researchers actually follow them. Clemens and Mahajan propose LLMs as a practical, scalable way for both authors and referees to check PAP compliance. Applied to their own work, an LLM identified precommitted methodology, catalogued departures from the plan, and flagged specification shortcomings while sharply cutting manual effort—though results varied across models, so human judgment remains essential. The paper closes with concrete recommendations for implementing AI-assisted PAP review.",
+    "shortDescription": "Proposes and tests LLMs as a scalable tool for authors and referees to audit whether studies actually follow their pre-analysis plans.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "reproducibility"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "verschuere-cameron-ai-job-impact-map",
+    "title": "AI Job Impact Map — US Occupations by AI Substitution & Complement",
+    "url": "https://www.liminal-capital.com/apps/ai-job-map.html",
+    "author": "Benjamin Verschuere and Angus Cameron",
+    "date": "2026-09",
+    "description": "An interactive tool that maps 798 US occupations along two AI margins: substitution (the share of tasks AI can perform on its own) and complement (tasks that still require human presence), built on O*NET task statements and BLS employment data. Bubbles sized by employment sort jobs into 'Exposed,' 'Contested,' and 'Dividend' zones, with a signed-margin model projecting relative annual employment change. It operationalizes Verschuere and Cameron's argument that single occupation-level exposure indices hide offsetting task-level effects; figures are scenario outputs from the authors' model, not forecasts.",
+    "shortDescription": "Interactive map placing 798 US occupations on AI substitution vs. complement margins, with projected employment-change zones.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "AI",
+      "labor market"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
