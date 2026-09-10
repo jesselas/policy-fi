@@ -5,7 +5,9 @@ module.exports = function (eleventyConfig) {
 
   // Dynamic date values
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
-  eleventyConfig.addGlobalData("buildMonth", new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' }));
+  // Abbreviated ("Sep 2026"): the toolbar row this feeds is nowrap with an
+  // ellipsis fallback, and the full month name clipped at common widths.
+  eleventyConfig.addGlobalData("buildMonth", new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' }));
   eleventyConfig.addGlobalData("buildDate", new Date().toISOString().split('T')[0]);
   // Unique per build — appended to CSS/JS URLs so a deploy always busts the
   // browser cache (visitors never get stale styles/scripts after an update).
