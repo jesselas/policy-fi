@@ -580,16 +580,16 @@
     ]
   },
   {
-    "title": "Tax-benefit Microsimulation Models in the Global South",
+    "title": "Tax-benefit Microsimulation in the Global South",
     "authors": "H. Xavier Jara, Katrin Gasior, Pia Rattenhuber",
     "year": 2026,
     "type": "Book Chapter",
-    "publication": "EUROMOD: 30 Years of the EU Tax-benefit Microsimulation Model, Springer, 2026 (forthcoming)",
-    "url": "https://link.springer.com/book/9783032314130",
-    "abstract": "A forthcoming chapter in the EUROMOD 30th-anniversary volume describing the development and use of tax-benefit microsimulation models in the Global South, drawing on the experience of SAMOD, the SOUTHMOD model family, and EUROMOD-based models for Latin America.",
-    "citation": "Jara, H.X., Gasior, K., Lastunen, J. & Rattenhuber, P. Tax-benefit Microsimulation Models in the Global South: The Experience of SAMOD, SOUTHMOD and EUROMOD-based Models for Latin America (in 'EUROMOD: 30 Years of the EU Tax-benefit Microsimulation Model', edited by Figari, F. & Sutherland, H.), Springer, 2026 (forthcoming).",
-    "extras": null,
-    "added": "2026-06-08",
+    "publication": "EUROMOD: 30 Years of the EU Tax-Benefit Microsimulation Model, Springer Cham, 2026",
+    "url": "https://doi.org/10.1007/978-3-032-31414-7_25",
+    "abstract": "This chapter examines the experience of building and using tax-benefit microsimulation models for countries in the Global South in EUROMOD. The study focuses mainly on three key initiatives: the pioneering SAMOD model, the SOUTHMOD project, and EUROMOD-based models for Latin America. The chapter provides an overview of these initiatives and highlights the importance of taking the developing country context into account in the simulations. Research based on the models has made key contributions to the field of public finance and social policy in the Global South. A number of challenges remain for the update and use of microsimulation models in the Global South. Yet, these tools offer opportunities for new avenues of research and to contribute with evidence to the policy debate in view of strengthening social protection and increasing fiscal capacity.",
+    "citation": "Jara, H.X., Gasior, K., Lastunen, J. & Rattenhuber, P. Tax-Benefit Microsimulation in the Global South: The Experience of SAMOD, SOUTHMOD, and EUROMOD-Based Models for Latin America (in 'EUROMOD: 30 Years of the EU Tax-Benefit Microsimulation Model', edited by Figari, F. & Sutherland, H.), Contributions to Economics. Springer Cham, 2026, pp. 431-456. https://doi.org/10.1007/978-3-032-31414-7_25",
+    "extras": "A longer and more comprehensive version is available as a working paper: 'The Emergence of Tax-benefit Microsimulation Models in the Global South', WIDER Working Paper 2026/80. https://doi.org/10.35188/UNU-WIDER/2026/748-0",
+    "added": "2026-09-10",
     "topics": [
       "Microsim",
       "Data & methods"
