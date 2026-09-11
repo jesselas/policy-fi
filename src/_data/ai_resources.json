@@ -4789,5 +4789,24 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "anthropic-econ-scenarios-transformative-ai",
+    "title": "Economic Scenarios for Transformative AI (Anthropic)",
+    "url": "https://www.anthropic.com/institute/econ-scenarios",
+    "author": "Anton Korinek, Charles I. Jones, Szymon Sacher, Tess Cotter, Peter McCrory",
+    "date": "2026-09",
+    "description": "A framework from the Anthropic Institute for mapping AI capability trajectories into macroeconomic outcomes through 2030. In the model, AI automates a growing share of cognitive work, raising productivity while displacing workers who must reallocate to other occupations, and it traces the implied paths for GDP, the labor share, wages, and unemployment across three scenarios—modest, substantial, and extreme. Pairs the technical report with an interactive explorer and a survey of Americans expectations about AI.",
+    "shortDescription": "Anthropic Institute framework mapping AI capability paths into GDP, wage, and unemployment outcomes to 2030, plus an interactive scenario explorer.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "growth",
+      "automation"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
   }
 ]
