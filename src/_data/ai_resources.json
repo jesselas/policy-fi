@@ -4808,5 +4808,43 @@
     "type": "report",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cowen-simple-model-ai-aided-growth",
+    "title": "A Simple Model of AI-Aided Economic Growth",
+    "url": "https://marginalrevolution.com/marginalrevolution/2026/09/a-simple-model-of-ai-aided-economic-growth.html",
+    "author": "Tyler Cowen",
+    "date": "2026-09",
+    "description": "A Marginal Revolution post in which Cowen sketches an informal model of growth built on two complementary inputs: 'Intelligence' (formal reasoning and problem-solving) and 'Polanyi knowledge' (tacit, contextual expertise that resists articulation). Recent AI progress shocks the Intelligence sector upward, raising the relative value of scarce Polanyi knowledge even while displacing some AI-adjacent roles in transition. He argues wage gains concentrate in work requiring human judgment and that growth accelerates gradually, contrasting the setup with the Solow model.",
+    "shortDescription": "Cowen's informal model: AI boosts 'Intelligence' while tacit 'Polanyi knowledge' stays scarce and complementary, shifting wages toward human judgment.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "growth"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "tabarrok-ai-redistribution-size-of-pie",
+    "title": "AI, Redistribution, and the Size of the Pie",
+    "url": "https://marginalrevolution.com/marginalrevolution/2026/09/ai-redistribution-and-the-size-of-the-pie.html",
+    "author": "Alex Tabarrok",
+    "date": "2026-09",
+    "description": "A Marginal Revolution post in which Tabarrok argues that a falling labor share of GDP need not imply falling labor income if output grows enough. Drawing on Anthropic's transformative-AI scenarios—where in the extreme case the labor share drops by about a quarter while GDP rises by about a third, leaving total labor income roughly stable—he weighs three adjustment channels: workforce attrition and entry, shifting taxes from labor toward consumption, and government compensation. He grants that distribution within the labor force remains a real concern even if the aggregate holds.",
+    "shortDescription": "Tabarrok argues a falling labor share need not cut labor income if GDP grows enough, weighing attrition, tax shifts, and compensation as adjustments.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "inequality"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
