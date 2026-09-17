@@ -4846,5 +4846,62 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cunningham-economics-recursive-self-improvement",
+    "title": "The Economics of Recursive Self-Improvement (arXiv)",
+    "url": "https://arxiv.org/abs/2609.15802",
+    "author": "Tom Cunningham, Lukas Althoff, Basil Halperin, Brian Jabarian, Andrew Koh, Arjun Ramani, Phil Trammell, Parker Whitfill, Cheryl Wu",
+    "date": "2026-09",
+    "description": "A team of economists builds a sequence of increasingly rich models of AI progress to formalize the feedback loops behind recursive self-improvement (RSI), representing them as directed graphs and distinguishing narrow AI capabilities from broad, economically valuable abilities. Calibrating against existing data, they conclude the loops are not yet strong enough to generate self-sustaining acceleration, though they appear to be strengthening — a sober economic lens on \"intelligence explosion\" arguments.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "growth",
+      "advanced"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false,
+    "shortDescription": "Economic models of AI feedback loops find recursive self-improvement isn't yet self-sustaining, but the loops are strengthening."
+  },
+  {
+    "id": "manso-thompson-ai-enabled-scientific-frontier",
+    "title": "The AI-Enabled Scientific Frontier (arXiv)",
+    "url": "https://arxiv.org/abs/2609.16258",
+    "author": "Gabriel Manso, Emma Fu, Neil Thompson",
+    "date": "2026-09",
+    "description": "Tests the claim that AI is becoming a general scientific method by analyzing 2,507 head-to-head comparisons between AI and conventional methods across 27 disciplines (2000–early 2025). AI often beats traditional statistics but at much higher computational cost — and in roughly a quarter of cases performs worse while costing more. Against scientific computing it usually underperforms, though since 2020 it has pulled ahead in over half of comparisons. The authors frame AI as a valuable, improving part of the toolkit rather than a universal replacement.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "advanced"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false,
+    "shortDescription": "2,507 AI-vs-conventional comparisons across 27 fields: AI is a valuable, improving tool, not a universal replacement."
+  },
+  {
+    "id": "nova-hess-multitask-rl-choice-models",
+    "title": "Multitask Reinforcement Learning for Assisting Choice Model Specification (arXiv)",
+    "url": "https://arxiv.org/abs/2609.18441",
+    "author": "Gabriel Nova, Stephane Hess, Sander Van Cranenburgh",
+    "date": "2026-09",
+    "description": "Introduces Delphos, a multitask reinforcement-learning framework that learns transferable strategies for specifying discrete choice models — framing specification as a sequential decision problem and using a DeepSet-Q architecture over sets of modelling terms. Trained on nine transport datasets, the agent outperforms single-task alternatives and generalizes to unseen datasets without retraining, in about twenty minutes on a standard CPU. A concrete example of AI assisting, rather than replacing, the econometric modeller.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "econometrics",
+      "advanced"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false,
+    "shortDescription": "Delphos, an RL agent that helps specify discrete choice models and transfers across datasets without retraining."
   }
 ]
