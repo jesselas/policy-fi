@@ -4903,5 +4903,24 @@
     "internal": false,
     "highlight": false,
     "shortDescription": "Delphos, an RL agent that helps specify discrete choice models and transfers across datasets without retraining."
+  },
+  {
+    "id": "paper2agent-papers-as-ai-agents",
+    "title": "Paper2Agent: Research Papers as Interactive AI Agents",
+    "url": "https://github.com/jmiao24/Paper2Agent",
+    "author": "Jiacheng Miao et al. (Stanford)",
+    "date": "2026-09",
+    "description": "An open-source multi-agent system that automatically turns a research paper and its codebase into an interactive AI agent — building a Model Context Protocol (MCP) server of the paper’s tools and workflows that plugs into coding agents like Claude Code, so a reader can query methods, rerun analyses, and reproduce results in natural language. Published in Nature, its case studies (in genomics) built working agents in about 45 minutes for roughly $14 on a laptop; the domain-agnostic framework applies equally to reproducible, tool-rich economics workflows.",
+    "shortDescription": "Open-source system that turns any research paper and its code into an interactive AI agent (MCP server) you can query through Claude Code.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "AI",
+      "agents",
+      "research tools"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
