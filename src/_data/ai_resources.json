@@ -4922,5 +4922,24 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "seeing-not-perceiving-synthetic-consumers",
+    "title": "Seeing Is Not Perceiving: When Synthetic Consumers Can and Cannot Pretest Visual Marketing (arXiv)",
+    "url": "https://arxiv.org/abs/2609.25677",
+    "author": "Yi-Lin Tsai, Yung-Hsiu (Arvin) Lai",
+    "date": "2026-09",
+    "description": "Stress-tests the increasingly common practice of using generative-AI agents as synthetic consumers to pretest visual assets like logos, packaging, and ads at a fraction of human-panel cost. Across six canonical visual-marketing experiments, no LLM configuration reproduced more than two of the six human effects, and one reversed the human pattern. In-context steering helps but still understates consumer heterogeneity. The authors offer a Calibrate-Intervene-Deploy protocol for when synthetic subjects can responsibly stand in for human panels.",
+    "shortDescription": "Six experiments show LLM synthetic consumers rarely reproduce human responses to visual marketing; offers a protocol for when they can substitute for panels.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "methodology"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
