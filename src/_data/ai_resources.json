@@ -4941,5 +4941,43 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "wadi-ma-shopping-by-algorithm",
+    "title": "Shopping by Algorithm: How Agentic AI Deploys Human Heuristics as a Surrogate Consumer (arXiv)",
+    "url": "https://arxiv.org/abs/2609.28372",
+    "author": "Davood Wadi, Yu Ma",
+    "date": "2026-09",
+    "description": "As consumers increasingly delegate purchases to LLM “surrogate consumers,” this paper asks whether marketing cues like just-below pricing and promotional framing steer AI shopping agents. Using “Tool-Lab,” a process-tracing setup that hides product attributes behind costly tool calls, the authors trace information acquisition across eight commercially deployed LLMs. With free search, cues rarely mislead; but under acquisition costs and a vague goal, agents skip diagnostic attributes and make human-like suboptimal choices — a vulnerability driven by storefront information architecture, not immutable model flaws.",
+    "shortDescription": "Across eight deployed LLMs, pricing cues mislead AI shopping agents mainly when search is costly and goals vague — a storefront-design vulnerability.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "agents"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "yin-wen-trust-arbitrage-ai-fraud",
+    "title": "When Trust Attracts Fraud: AI and Trust Arbitrage (arXiv)",
+    "url": "https://arxiv.org/abs/2609.27404",
+    "author": "Xieyu Yin, Fenghua Wen",
+    "date": "2026-09",
+    "description": "A theoretical model of how generative AI reshapes fraud when cheap fabrication outpaces verification. Because AI lowers the cost of fabricating, verifying, and targeting claims, claim credibility first falls and then recovers as verification catches up. The authors identify “trust arbitrage”: deceptive sellers strategically target higher-quality, higher-trust markets, which temporarily suffer a reliability disadvantage. The resulting influx of fraud paradoxically triggers verification and deters further entry — a self-limiting mechanism that redirects deception across markets.",
+    "shortDescription": "Model of AI-enabled fraud: cheap fabrication lets sellers arbitrage trust, targeting high-trust markets until verification catches up and self-limits entry.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "theory"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
