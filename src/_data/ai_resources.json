@@ -4979,5 +4979,43 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "awuah-krenk-augment-or-automate-hiring",
+    "title": "Augment or Automate? An Early Field Experiment with Generative AI in Hiring",
+    "url": "https://ursakrenk.com/docs/AKY_GenAI_Automation.pdf",
+    "author": "Kobbina Awuah, Urša Krenk, David Yanagizawa-Drott",
+    "date": "2026-04",
+    "description": "A field experiment in Ghana embeds GPT-4 into a teacher-recruitment screening pipeline, comparing human-only evaluation, human-plus-AI assistance, and full automation. Automation raises offer and hiring rates by 84% and 73% over the human-only baseline; the mechanism is grading consistency, since AI applies the rubric systematically while human evaluators inject idiosyncratic noise. Human-AI assistance yields no gains because evaluators ignore the model, suggesting automation can outperform human-in-the-loop collaboration.",
+    "shortDescription": "Ghana field experiment: fully automating teacher-hiring screening with GPT-4 beats human-only by 73%, while human-AI assistance adds nothing as evaluators ignore it.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "hiring"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "ai-in-science-early-insights",
+    "title": "AI in Science: Early Insights (arXiv)",
+    "url": "https://arxiv.org/abs/2609.28504",
+    "author": "Mihai Codreanu, Alex Imas, et al.",
+    "date": "2026-09",
+    "description": "Drawing on 15 million Gemini interactions, an inventory of over 2,600 specialized AI models, and a survey of more than 600 scientists, this study maps how researchers actually use AI across the scientific workflow. Scientists adopt AI more than most occupations—nearly half use it daily—and report saving roughly seven hours per week, largely reinvested in more research. LLMs and specialized models act as complements, and as early research stages get easier, bottlenecks shift downstream to hypothesis testing and output verification.",
+    "shortDescription": "Gemini-usage data, 2,600+ specialized models, and a 600-scientist survey show heavy daily AI use and ~7 hours/week saved, with bottlenecks shifting downstream.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "science"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
