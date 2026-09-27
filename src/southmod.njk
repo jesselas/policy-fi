@@ -80,6 +80,25 @@ jsonLd:
           </div>
         </div>
       </div>
+      <div class="pub-entry">
+        <div class="pub-toggle" aria-expanded="false">
+          <span class="pub-toggle-icon"></span>
+          <span class="pub-title"><a href="/assets/southmod-policy-update-skill.zip" download onclick="event.stopPropagation()">SOUTHMOD policy update Claude skill</a></span>
+        </div>
+        <div class="pub-details">
+          <div class="pub-details-inner">
+            <div class="pub-description">A companion <a href="https://claude.com/claude-code">Claude Code</a> skill that runs the annual policy update of a SOUTHMOD country model from start to finish: from the previous release (bundle, country report, DRDs and data-preparation do-files) to a new, documented model version with one or more new policy systems. It builds on the SOUTHMOD skill above, which should be installed alongside it.</div>
+
+            <div class="pub-description"><strong>What it covers.</strong> Online legal research on taxes and benefits with source-level evidence and an independent verification pass; new policy systems and model edits as reviewable edit files, with uprating, within-year changes and corrections to earlier systems; checks after every EUROMOD run (all fiscal aggregates, base-year consistency of <code>yds</code>, post-fiscal poverty lines iterated to a fixed point); external statistics and validation tables; the country report updated section by section in Word tracked changes, with a check that rejecting all changes restores the previous report; input-data and do-file corrections with DRD summary statistics; the SM_LOG with an audit against the previous version; workbooks and draft emails for the national team; and a clean final folder with a handover note. It ships tested Python tools for each step.</div>
+
+            <div class="pub-description"><strong>How to use it.</strong> Unzip it into your Claude Code skills folder next to the SOUTHMOD skill (<code>unzip southmod-policy-update-skill.zip -d ~/.claude/skills/</code>; it expands to a <code>policy_update/</code> folder). Then start Claude Code in a folder with your files and write, for example, <em>"Work on the ZANMOD update for 2026. I have the DRD, input-data do-files, the recent country report and the recent SOUTHMOD bundle. Handle the whole thing."</em> Claude asks for anything missing, plans the work and stops at defined points: each EUROMOD run (which you do), any change to input data, and before any email is sent (it only drafts them).</div>
+
+            <p>
+              <a class="spotlight-cta" href="/assets/southmod-policy-update-skill.zip" download>Download the SOUTHMOD policy update skill (.zip) →</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="info-section">
