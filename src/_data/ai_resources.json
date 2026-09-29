@@ -5017,5 +5017,41 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "goldsmith-pinkham-ai-journals-conferences-submissions",
+    "title": "AI in Journals, Conferences, and Submissions",
+    "url": "https://paulgp.substack.com/p/ai-in-journals-conferences-and-submissions",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-09",
+    "description": "A data-driven look at how AI is reshaping the machinery of economics research. Goldsmith-Pinkham surveys journals' emerging AI-disclosure policies—often set at the publisher rather than the journal level—then brings new submission data from economics and finance conferences and from journal editors. The striking pattern: working-paper output on arXiv and NBER is up roughly a quarter year over year, with incumbent authors accounting for most of the rise, yet conference and journal submissions show no comparable surge, unlike the explosion at AI venues such as ICLR.",
+    "shortDescription": "New data on AI-disclosure policies plus conference and journal submissions: arXiv and NBER working-paper output is up ~25% YoY, but submissions stay calm.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "bansak-ai-refugee-matching-rct",
+    "title": "AI-Based Matching Improves Refugee Employment in a Double-Blind Randomized Trial (arXiv)",
+    "url": "https://arxiv.org/abs/2609.35448",
+    "author": "Kirk Bansak, Jens Hainmueller, Dominik Hangartner, et al.",
+    "date": "2026-09",
+    "description": "A double-blind randomized trial of algorithmic refugee placement, run with roughly 2,000 cases in Switzerland from 2020 to 2023. The approach combines administrative data, machine learning, and constrained optimization to recommend employment-optimized locations, tested head-to-head against standard assignment. Employment rose 2.2 percentage points overall and 3.9 points for the 2022–2023 cohorts; by 36 months the gain reached 5.2 points—comparable, the authors note, to hundreds of hours of intensive language training. Rare experimental evidence that AI-driven allocation can deliver real labor-market gains.",
+    "shortDescription": "Double-blind RCT (~2,000 cases, Switzerland) finds ML-plus-optimization refugee placement raises employment by up to 5.2 points at 36 months.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "machine learning"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
