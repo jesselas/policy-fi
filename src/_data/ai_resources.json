@@ -5053,5 +5053,23 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "brand-are-llms-making-papers-better",
+    "title": "Are LLMs Making Papers Better?",
+    "url": "https://jimbobrand.substack.com/p/are-llms-making-papers-better",
+    "author": "Jimbo Brand",
+    "date": "2026-09",
+    "description": "Brand pushes back on the story that AI is quietly improving research quality. Using Pangram to flag likely AI-written work and two GPT-5.6 review agents to comb a random sample of roughly 200 economics papers per year from 2023 to 2025 for internal consistency and the accuracy of claims and proofs, he finds the opposite of the optimistic take: a larger share of AI-detected papers carry at least one flagged error, spanning theorems, numerical reporting, and empirical claims. A skeptical, data-driven counterweight to 'AI accelerates science' narratives.",
+    "shortDescription": "Using AI-writing detection plus GPT-5.6 review agents on ~200 econ papers/year (2023–2025), Brand finds AI-detected papers carry more flagged errors, not fewer.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "LLM"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
