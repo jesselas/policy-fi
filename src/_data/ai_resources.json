@@ -5071,5 +5071,137 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "schwartz-andrews-shapiro-llm-workflow-replication",
+    "title": "An LLM Workflow That Reproduces, Improves, and Extends Published Economics Research (NBER)",
+    "url": "https://www.nber.org/papers/w35782",
+    "author": "Matthew Schwartz, Isaiah Andrews, Jesse M. Shapiro",
+    "date": "2026-09",
+    "description": "Introduces an open-source workflow that lets an LLM work from an article's published replication package to reproduce the original calculations, check them for discrepancies and run sensitivity analysis, improve the implementation, and propose extensions. Run across 4,452 replication packages from five economics journals, it flags discrepancies in 3,460 articles or their appendices, speeds up a calculation more than tenfold in 496, and produces an aligned extension in 923. A large-scale test of what AI agents can do with the replication record.",
+    "shortDescription": "Open-source LLM workflow run on 4,452 econ replication packages: flags discrepancies in 3,460, speeds up 496 by 10x+, extends 923.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "replication"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "michler-mining-meaning-ai-literature-reviews",
+    "title": "Mining Meaning: Measurement Error in AI-Assisted Literature Reviews (arXiv)",
+    "url": "https://arxiv.org/abs/2609.27686",
+    "author": "Jeffrey D. Michler, Kieran Douglas, Anna Josephson",
+    "date": "2026-09",
+    "description": "Treats LLM-assisted literature reviews as a measurement problem. Using three ChatGPT implementations to extract metadata from economics papers that use rainfall as an instrument, benchmarked against human labels, the authors find strong binary classification but worse performance as tasks require more interpretation. The same error barely moves broad claims about the literature yet substantially affects paper-level claims, so standard accuracy metrics alone don't establish the credibility of downstream inference.",
+    "shortDescription": "Frames LLM literature reviews as measurement systems: errors matter little for broad claims but a lot for paper-level ones (rainfall-IV test case).",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "literature review"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "blumenfeld-hazell-lian-schaab-ai-software-engineering-channel",
+    "title": "The Macroeconomic Effect of AI: Sizing the Software Engineering Channel (NBER)",
+    "url": "https://www.nber.org/papers/w35793",
+    "author": "Alex Blumenfeld, Jonathon Hazell, Chen Lian, Andreas Schaab",
+    "date": "2026-09",
+    "description": "Uses financial market data to size AI's macroeconomic effect through software engineering. The authors measure how firms' stock returns respond to an AI index according to their software-engineering payroll share, then map that sensitivity into a structural productivity estimate. From November 2022 to December 2025 they estimate a permanent 32.6% gain in expected software engineering productivity, implying GDP effects of 3.6% (6.5% if R&D productivity also rises), with effects more than doubling by mid-2026 as coding agents advanced.",
+    "shortDescription": "Stock-market-based estimate: AI raised expected software engineering productivity 32.6% (Nov 2022–Dec 2025), implying 3.6–6.5% higher GDP.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "productivity",
+      "macroeconomics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "fairlie-wu-ai-employment-recent-college-graduates",
+    "title": "The Early Impacts of AI on Employment among Recent College Graduates (NBER)",
+    "url": "https://www.nber.org/papers/w35796",
+    "author": "Robert W. Fairlie, Jane Wu",
+    "date": "2026-09",
+    "description": "Tests whether AI drove up joblessness among recent college graduates, a group flagged as especially exposed, using Current Population Survey data through summer 2026. Across difference-in-differences and event-study designs comparing recent graduates with older graduates and young non-college workers, the authors find no significant spike in unemployment in summer 2026 relative to prior summers, including under a broader definition that counts those who want a job. A timely empirical check on early displacement claims.",
+    "shortDescription": "CPS evidence finds no significant summer-2026 spike in unemployment among recent college graduates relative to comparison groups.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "labor market"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gans-liability-pricing-dual-use-ai",
+    "title": "Liability and Pricing of Dual-Use AI (NBER)",
+    "url": "https://www.nber.org/papers/w35828",
+    "author": "Joshua S. Gans",
+    "date": "2026-09",
+    "description": "Models how liability should be set for AI providers whose services serve both productive users and potential attackers. Liability can raise welfare while increasing some harms, and the optimal level trades off deterrence against excluding productive users. More provider competition generally lowers optimal liability, a monopolist warrants partial but never full liability when provision is viable, and when guardrails exist, high liability encourages universal adoption, so universal guarding requirements can make liability redundant.",
+    "shortDescription": "Gans models optimal liability and pricing for dual-use AI providers, showing how competition and available guardrails shape the right liability level.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI policy",
+      "regulation"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "judd-schmedders-deep-learning-projection-method",
+    "title": "Deep Learning as a Projection Method for Solving Economic Models (NBER)",
+    "url": "https://www.nber.org/papers/w35806",
+    "author": "Kenneth L. Judd, Karl Schmedders",
+    "date": "2026-09",
+    "description": "Argues that deep learning is not a revolutionary break from classical numerical methods in economics: the neural-network solvers emphasized in recent work are least-squares projection methods with an adaptive nonlinear parameterization. The authors propose folding deep learning into the established projection toolkit, finding that linear-basis and sparse-grid methods often beat neural networks on accuracy, speed, and verifiability in low to moderate dimensions, and that constraining the function space can tame high-dimensional problems.",
+    "shortDescription": "Judd and Schmedders recast neural-net solvers as least-squares projection methods and show when classical methods beat them for solving economic models.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "machine learning",
+      "computational economics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "kireyev-pricebench-llm-booking-agents",
+    "title": "PriceBench: A Diagnostic Benchmark for Price, Quality, and Brand Preferences in LLM Booking Agents (arXiv)",
+    "url": "https://arxiv.org/abs/2609.31468",
+    "author": "Pavel Kireyev",
+    "date": "2026-09",
+    "description": "A benchmark that recovers LLM purchasing agents' price, quality, and brand preferences by fitting a logit choice model to their booking decisions: 28 LLMs from 8 providers on 3,600 hotel tasks built from 179 real New York City properties. More capable models choose more consistently, but what they favor varies sharply across and within providers, with price sensitivity spanning over an order of magnitude and mean booked nightly price ranging from $247 to $393 on identical tasks. Tasks, code, and responses are released.",
+    "shortDescription": "Logit choice models on 28 LLM booking agents show price sensitivity varies 10x+ across models, moving mean booked hotel price from $247 to $393.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "AI agents"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
