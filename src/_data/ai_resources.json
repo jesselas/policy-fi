@@ -5203,5 +5203,25 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "gong-et-al-ai-adoption-adaptive-incentives",
+    "title": "When Less Is More: Managing AI Adoption with Adaptive Incentive Design (arXiv)",
+    "url": "https://arxiv.org/abs/2609.32859",
+    "author": "Jie Gong, Jiayi Hou, Jin Li, Fei Pu, Xinjue Yao",
+    "date": "2026-09",
+    "description": "Field evidence on gaming under an AI usage mandate: a medical-device firm required about 5,000 employees to submit at least 200 queries a month to an internal AI assistant, and queries bunched at the threshold with 31 percent repeated or off-task. Exploiting a staggered cut of the target to 100 across branches, the authors find query volume fell 30 percent, almost all of it gaming, while work-related use held steady and sales staff saw monthly sales rise 7 percent.",
+    "shortDescription": "Firm field evidence: a 200-query AI usage mandate induced gaming; cutting the target to 100 removed junk queries and raised sales by 7%.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI adoption",
+      "productivity",
+      "field experiment"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
