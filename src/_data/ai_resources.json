@@ -5223,5 +5223,68 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "chernozhukov-newey-pragmatic-dml-ai-representations",
+    "title": "Pragmatic DML with AI-Learned Representations (arXiv)",
+    "url": "https://arxiv.org/abs/2610.01935",
+    "author": "Andres Aradillas Fernandez, Victor Chernozhukov, Carlos Cinelli, Sven Klaassen, Whitney Newey, Martin Spindler, Jan Teichert-Kluge, Suhas Vijaykumar",
+    "date": "2026-10",
+    "description": "Econometric framework for causal inference when text, images or other rich covariates are compressed into AI-learned representations and used as controls. The authors show that an imperfect representation distorts the target parameter by the product of two representation errors, so cross-fitted DML still gives valid inference, fold-wise fine-tuning is compatible with it, and sensitivity regions apply when errors are large. Illustrated with a multi-modal demand application.",
+    "shortDescription": "Chernozhukov, Newey et al. on when AI embeddings of text/images can serve as controls in DML causal inference, with sensitivity bounds.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "econometrics",
+      "causal inference",
+      "machine learning",
+      "embeddings"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gans-holden-randomized-oversight-ai-agents",
+    "title": "When Does Randomized Oversight Align AI Agents That Can Conceal? (arXiv)",
+    "url": "https://arxiv.org/abs/2609.38262",
+    "author": "Joshua S. Gans, Richard Holden",
+    "date": "2026-09",
+    "description": "Economic theory of auditing AI agents that can hide misconduct and alter records. Gans and Holden show that stronger auditing makes undeterred violations better hidden, and that rare randomized audits can deter every agent type only if evidence survives concealment and audit draws cannot be learned. When evidence can be erased, deterrence must come from lower gains from violation or costlier concealment. They apply the conditions to a July 2026 AI-agent security incident.",
+    "shortDescription": "Gans & Holden model when randomized audits deter AI agents that can conceal misconduct, and what fails when evidence can be erased.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI agents",
+      "AI governance",
+      "contract theory",
+      "auditing"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "imas-schaal-has-ai-impacted-labor-market",
+    "title": "Has AI impacted the labor market yet?",
+    "url": "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market",
+    "author": "Alex Imas, Jacob Schaal",
+    "date": "2026-09-29",
+    "description": "A review of the evidence on generative AI and employment. Imas and Schaal find early-career hiring declines in exposed occupations across several countries, but argue that attribution is contested by remote work, pre-ChatGPT trends and null Nordic results. Adoption is broad but shallow, and aggregate unemployment and layoff data show little effect so far. A useful map of the main papers and their identification problems.",
+    "shortDescription": "Imas & Schaal survey the AI-labor evidence: junior hiring dips in exposed jobs, contested attribution, and little aggregate disruption yet.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "labor market",
+      "AI",
+      "employment",
+      "literature review"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
