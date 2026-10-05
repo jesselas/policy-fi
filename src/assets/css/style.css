@@ -2655,6 +2655,31 @@ main.container .page-intro {
   padding: 0;
 }
 
+/* Use a geometric triangle and centre it in the title's first line box. The
+   text glyph used by the shared publication toggle sits low on its baseline,
+   which made the Research arrows look attached to the bottom of the title. */
+.research-card .pub-toggle-icon {
+  width: 1rem;
+  height: 1.323rem; /* .98rem title × 1.35 line-height */
+  margin-top: 0;
+  font-size: 0;
+}
+
+.research-card .pub-toggle-icon::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid currentColor;
+  transition: transform var(--transition);
+}
+
+.research-card .pub-toggle[aria-expanded="true"] .pub-toggle-icon::before {
+  content: '';
+  transform: rotate(90deg);
+}
+
 .research-card .pub-toggle-body {
   flex: 1;
   display: flex;
