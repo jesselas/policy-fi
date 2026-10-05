@@ -6,7 +6,7 @@
   {#- No "Links" label on the home page: the bio's closing line already says the
       links follow, so the rule leads straight into CV/Profile and its siblings. -#}
   {% if not linksFirst %}<span class="section-label">Links</span>{% endif %}
-  <div class="info-grid info-grid-3col footer-link-grid">
+  <div class="info-grid info-grid-4col footer-link-grid">
     <div class="info-block">
       <h2>CV/Profile</h2>
       <ul class="info-list icon-list">
@@ -23,6 +23,14 @@
         {#- The glyph goes inside the first link, not beside the pair: outside an
             <a> it had its own colour, ignored hover, and wasn't clickable. -#}
         <li><a href="https://econpapers.repec.org/RAS/pla1105.htm">{{ linkIcon("repec") }}<span>EconPapers</span></a> &amp; <a href="https://ideas.repec.org/f/pla1105.html">IDEAS</a></li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h2>Projects</h2>
+      <ul class="info-list icon-list">
+        <li><a href="https://www.wider.unu.edu/project/firm-and-labour-market-effects-ai-developing-countries">{{ linkIcon("ai-impacts") }}<span>AI impacts</span></a></li>
+        <li><a href="https://sisustudio.fi/">{{ linkIcon("sisu") }}<span>SISU Studio</span></a></li>
+        <li><a href="https://www.wider.unu.edu/publication/ugamod-tax-microsimulation-model-taxation-uganda">{{ linkIcon("tax-model") }}<span>UGAMOD-TAX</span></a></li>
       </ul>
     </div>
     <div class="info-block">
