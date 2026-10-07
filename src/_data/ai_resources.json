@@ -5286,5 +5286,153 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "korinek-jel-generative-ai-economic-research",
+    "title": "Generative AI for Economic Research: Use Cases and Implications for Economists (Journal of Economic Literature)",
+    "url": "https://www.aeaweb.org/articles?id=10.1257/jel.20231736",
+    "author": "Anton Korinek",
+    "date": "2023-12",
+    "description": "The original JEL article that launched Korinek's widely used guide series. It describes dozens of ways LLMs can assist economists across six areas: ideation and feedback, writing, background research, data analysis, coding and mathematical derivations. Each capability is rated from experimental to highly useful. Korinek argues that automating research micro-tasks yields significant productivity gains, and he speculates on the longer-term implications of cognitive automation for economics.",
+    "shortDescription": "Korinek's foundational JEL guide: dozens of LLM use cases for economists across six research areas, rated from experimental to highly useful.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "research workflow",
+      "generative AI",
+      "guide"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "karapandza-nyarko-llms-voting-mechanisms",
+    "title": "Large Language Models as Voting Mechanisms (NBER)",
+    "url": "https://www.nber.org/papers/w35839",
+    "author": "Raša Karapandža, Yaw Nyarko",
+    "date": "2026-10",
+    "description": "A microeconomic framework that treats an LLM as a voting rule: each prompt is an election, possible continuations are candidates, and output probabilities are vote shares derived from the training corpus. Such rules can generate Condorcet cycles, making pairwise recommendations intransitive and open to money-pump exploitation. Using ChatGPT-4o, the authors find millions of cycles in pairwise investment choices among S&P 100 firms, and show how temperature changes the implied voting rule.",
+    "shortDescription": "Models LLMs as voting rules and finds millions of Condorcet cycles in ChatGPT-4o's pairwise investment recommendations among S&P 100 firms.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "social choice",
+      "finance",
+      "AI advice"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gross-shvadron-zhang-phd-dissertations-ai-writing",
+    "title": "How Heavily Are PhD Students Offloading Their Scientific Writing to AI? Evidence from US STEM PhD Dissertations (NBER)",
+    "url": "https://www.nber.org/papers/w35859",
+    "author": "Daniel P. Gross, Dror Shvadron, Hansen Zhang",
+    "date": "2026-10",
+    "description": "Measures AI-generated writing across nearly all US STEM PhD dissertations filed from 2019 to 2026. AI writing is absent before 2023 but appears in 29% of 2026 dissertations and is growing quickly, with higher rates among international students and at lower-ranked institutions. Graduates whose dissertations contain AI writing are less likely to enter academic research careers. The authors argue AI may raise output while displacing the work through which scientific expertise is built.",
+    "shortDescription": "AI writing appears in 29% of 2026 US STEM PhD dissertations; those graduates are less likely to enter academic research careers.",
+    "category": "Research Papers",
+    "tags": [
+      "economics of science",
+      "LLM",
+      "AI writing",
+      "PhD students",
+      "higher education"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "van-nieuwerburgh-financing-ai-buildout",
+    "title": "Financing the AI Buildout (NBER)",
+    "url": "https://www.nber.org/papers/w35865",
+    "author": "Stijn Van Nieuwerburgh",
+    "date": "2026-10",
+    "description": "Estimates the cost of the AI infrastructure boom: a 1 GW AI campus costs about $41 billion, and a full 188 GW US buildout by 2032 would require nearly $9 trillion, or 3.2% of annual GDP over 2025-2032. As hyperscaler capex outruns internal cash flow, financing is shifting to leases, joint ventures, project debt, private credit, securitization and special-purpose vehicles, raising risks from leverage, hidden contingent liabilities, tenant concentration and obsolescence.",
+    "shortDescription": "Prices the US AI data-center buildout at ~$9T by 2032 (3.2% of GDP) and maps the shift to leases, private credit and SPVs, plus the risks.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI investment",
+      "data centers",
+      "finance",
+      "macroeconomics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "lyu-thompson-auditing-llm-judges-occupational-ai",
+    "title": "Right Order, Wrong Scale: Auditing LLM Judges for Occupational AI Measurement (arXiv)",
+    "url": "https://arxiv.org/abs/2610.02492",
+    "author": "Harry Lyu, Neil Thompson",
+    "date": "2026-10",
+    "description": "A caution for researchers using LLMs to score occupational tasks and AI exposure. The authors build O*NET-BENCH, 4,501 test ratings drawn from 45,796 worker assessments, and evaluate 33 judge configurations across six model families. Judges often rank responses well, but their estimated acceptance rates range from 3.0% to 97.9% against 61.1% for occupation-matched workers. Calibrated scores explain at most 8.5% of worker-rating variance, so LLM judges need validation against human levels.",
+    "shortDescription": "LLM judges rank occupational task responses well but get absolute levels badly wrong; a benchmark built from 45,796 worker ratings shows why validation matters.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "measurement",
+      "AI exposure",
+      "labor",
+      "O*NET"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gonzalez-bonorino-synthetic-cultural-agents",
+    "title": "Synthetic Cultural Agents from Aggregate Anchors (arXiv)",
+    "url": "https://arxiv.org/abs/2610.06562",
+    "author": "Augusto Gonzalez-Bonorino, Kseniia Biriukova, Monica Capra",
+    "date": "2026-10",
+    "description": "Proposes LLM-based synthetic survey respondents whose answers reflect declared cultural preferences rather than pretraining associations. Global Preferences Survey coordinates label synthetic response pairs, and Direct Preference Optimization trains lightweight adapters, evaluated on World Values Survey items in sixteen countries. The adapters recover the imposed labels (0.74 rank correlation with GPS trust), but the authors stress that preserving declared signals is not the same as reproducing human behavior.",
+    "shortDescription": "Trains LLM adapters on Global Preferences Survey anchors to build culturally indexed synthetic respondents; matching declared signals is not mimicking humans.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "synthetic agents",
+      "surveys",
+      "experimental economics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cunningham-mixtape-checklist-dashboards",
+    "title": "Mixtape Checklist Repo and Creating Dashboards Liberally",
+    "url": "https://causalinf.substack.com/p/mixtape-checklist-repo-and-creating",
+    "author": "Scott Cunningham",
+    "date": "2026-10-06",
+    "description": "Cunningham shares the slide deck from his day-long Texas A&M workshop on using AI agents for empirical research, along with a new \"Mixtape harness\" GitHub repository. The repo holds a checklist for observational causal inference drawn from Rubin, Imbens and Sant'Anna. He argues that once Claude Code writes the code, researchers lose the instant verification they used to have, and he recommends having it build dashboards that serve as guardrails for checking the work.",
+    "shortDescription": "Cunningham shares his AI-agents workshop deck, a causal-inference checklist repo, and why Claude Code users should build verification dashboards.",
+    "category": "Coding with AI",
+    "tags": [
+      "economics",
+      "Claude Code",
+      "causal inference",
+      "research workflow",
+      "AI agents"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
