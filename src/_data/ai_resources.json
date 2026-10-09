@@ -5434,5 +5434,68 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "makridis-highfill-samuels-ai-utilization-economic-performance",
+    "title": "AI Utilization and Economic Performance (BEA)",
+    "url": "https://www.bea.gov/research/papers/2026/ai-utilization-and-economic-performance",
+    "author": "Christos A. Makridis, Tina Highfill, Jon D. Samuels",
+    "date": "2026-08",
+    "description": "A BEA working paper asking whether state-industry cells with more intensive AI use in 2025-2026 also show stronger economic performance. It links worker-reported frequent AI use from the Gallup Workforce Panel and employer-reported use from the Census BTOS to LEHD and BEA employment, earnings and real-output data. Cells with higher worker-reported AI use show stronger post-2020 real-output paths, while the industry-only BTOS measure does not; the authors stress the estimates are descriptive, not causal.",
+    "shortDescription": "BEA economists link Gallup worker-reported AI use to state-industry output and jobs: higher-use cells show stronger post-2020 real output (descriptive).",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI adoption",
+      "productivity",
+      "measurement",
+      "national accounts"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "kling-kling-stated-preference-validity-llm-evaluation",
+    "title": "Validity Without Ground Truth: What Stated-Preference Economics Offers the Evaluation of Language Models (arXiv)",
+    "url": "https://arxiv.org/abs/2610.10506",
+    "author": "Daniel Robert Kling Alexander, Catherine Louise Kling",
+    "date": "2026-10",
+    "description": "Argues that the validity framework stated-preference economists use for survey answers with no ground truth (content, construct and criterion validity, reliability, incentive compatibility, consequentiality) carries over to evaluating LLMs. The authors administer a published water-quality valuation survey to six models and test theory-based predictions such as downward-sloping demand and scope and income sensitivity of WTP: older models fail basic tests, newer ones pass but differ on convergent validity. Passing shows coherence, not correctness.",
+    "shortDescription": "Applies stated-preference validity tests to LLMs answering a water-quality valuation survey; newer models pass theory checks, but coherence is not correctness.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "evaluation",
+      "stated preference",
+      "environmental economics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "lee-algorithmic-collusion-heterogeneous-llms",
+    "title": "Who Leads and Who Collects: Algorithmic Collusion in Markets of Heterogeneous Language Models (arXiv)",
+    "url": "https://arxiv.org/abs/2610.11256",
+    "author": "Jun Yeong Lee",
+    "date": "2026-10",
+    "description": "Tests whether LLM pricing agents still collude when competing sellers use different models. Four providers' models play a four-firm logit Bertrand game without communication across homogeneous, paired and fully mixed markets. Collusion turns out to be a property of the model: Claude and Gemini markets reach 72-79% of monopoly rent, DeepSeek 24%, GPT none. Mixing alone does not reliably reduce collusion, and the model that leads prices up collects the smallest share of the rent.",
+    "shortDescription": "LLM pricing agents from four providers in a Bertrand market: collusion depends on the model, and mixing models does not reliably curb it.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "AI agents",
+      "algorithmic collusion",
+      "industrial organization"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
