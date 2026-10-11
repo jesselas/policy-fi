@@ -5497,5 +5497,67 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cunningham-marginal-user-not-average-user",
+    "title": "I Bet the Marginal User Will Not Be Today's Average User",
+    "url": "https://causalinf.substack.com/p/i-bet-the-marginal-user-will-not",
+    "author": "Scott Cunningham",
+    "date": "2026-10-09",
+    "description": "Cunningham asks who does empirical research once AI agents push its marginal cost toward zero. He frames it as an elasticity question: if demand for research is inelastic, the new marginal researcher is a stronger version of today's PhD incumbent; if elastic, as he expects, it may be someone with no statistical training at all. He concludes that data literacy should be taught to every student. Useful for thinking about where the profession is heading.",
+    "shortDescription": "Cunningham argues that with AI agents making research nearly free, the marginal empirical researcher may not be a PhD at all.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI agents",
+      "future of research",
+      "research workflow"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gans-acemoglu-gans-exchange-on-ai",
+    "title": "The Acemoglu-Gans Exchange on AI",
+    "url": "https://joshuagans.substack.com/p/the-acemoglu-gans-exchange-on-ai",
+    "author": "Joshua Gans",
+    "date": "2026-10-10",
+    "description": "Gans collects his debate with Daron Acemoglu, who posted seven daily \"Questions on AI\" on X, with Gans replying to each. They cover distorted versus superintelligent AI, democratic control, investment payback and capital's share, health, centralization, US-China competition and jobs. Both use the task-based model but disagree on key parameters, which makes this a compact map of where two leading economists of AI part ways.",
+    "shortDescription": "Gans collects his seven-round X debate with Acemoglu on AI risk, investment, inequality, centralization, US-China and jobs.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "labor market",
+      "AI policy",
+      "debate"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "global-macro-database-mcp-agent-plugin",
+    "title": "Global Macro Database: Access via MCP for Claude Code and Codex",
+    "url": "https://www.globalmacrodata.com/data.html#mcp",
+    "author": null,
+    "date": "2026-09",
+    "description": "With its September 2026 release, the open Global Macro Database (Müller, Xu, Lehbib & Chen) can be queried by AI agents through Anansi Data Analytics' MCP server. The page gives setup commands for a Claude Code plugin and a Codex plugin, and any MCP client can connect after signing in with an Anansi account. Lets a coding agent search, compare and plot long-run cross-country macro series directly.",
+    "shortDescription": "The Global Macro Database can now be queried from Claude Code, Codex or any MCP client via Anansi's MCP server and agent plugin.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "economics",
+      "MCP",
+      "Claude Code",
+      "Codex",
+      "macroeconomic data"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
   }
 ]
