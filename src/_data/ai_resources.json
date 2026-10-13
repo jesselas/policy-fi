@@ -5559,5 +5559,47 @@
     "type": "tool",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "cunningham-harness-workflows-production-to-paper",
+    "title": "More Harness Workflows: Production to Paper Pipelines",
+    "url": "https://causalinf.substack.com/p/more-harness-workflows-production",
+    "author": "Scott Cunningham",
+    "date": "2026-10-11",
+    "description": "Cunningham describes wiring his Claude Code workflow to his \"Mixtape harness\" project dashboard using the /loop command, which reruns a prompt on a timer. Pull loops have Claude pick up notes he leaves on the dashboard; push loops file new figures and tables into the right sections by naming convention; a further loop turns his readings of the exhibits into a .tex draft. He frames it around zero production errors, constant verification and keeping his own understanding, and warns against endless tooling.",
+    "shortDescription": "Cunningham uses Claude Code's /loop to sync a research dashboard with his project and turn exhibits into a paper draft, with verification first.",
+    "category": "Coding with AI",
+    "tags": [
+      "economics",
+      "Claude Code",
+      "research workflow",
+      "AI agents",
+      "causal inference"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "novosad-asher-nobel-laureates-ai-ready-digital-edition",
+    "title": "Access to Opportunity in the Sciences: Evidence from the Nobel Laureates (Digital Edition)",
+    "url": "https://nobel-prizes.devdatalab.org/replication",
+    "author": "Paul Novosad, Sam Asher, Catriona Farquharson, Eni Iljazi",
+    "date": "2026-09",
+    "description": "An interactive digital edition of a Development Data Lab paper on the family backgrounds of science Nobel laureates, built so readers can work with it through AI. Its \"Replicate or remix with AI\" page gives a copy-paste prompt pointing any assistant to a Markdown copy of the paper, the PDF and the replication package. The package ships README and AGENTS.md files to orient AI agents and a script that reproduces every result. A worked example of publishing research for AI-assisted readers.",
+    "shortDescription": "A paper's digital edition built for AI: Markdown full text, an Ask-an-AI prompt, and a replication package with AGENTS.md for coding agents.",
+    "category": "Coding with AI",
+    "tags": [
+      "economics",
+      "replication",
+      "AI agents",
+      "research communication",
+      "open science"
+    ],
+    "featured": false,
+    "type": "other",
+    "internal": false,
+    "highlight": false
   }
 ]
