@@ -5247,10 +5247,10 @@
   },
   {
     "id": "gans-holden-randomized-oversight-ai-agents",
-    "title": "When Does Randomized Oversight Align AI Agents That Can Conceal? (arXiv)",
-    "url": "https://arxiv.org/abs/2609.38262",
-    "author": "Joshua S. Gans, Richard Holden",
-    "date": "2026-09",
+    "title": "When Does Randomized Oversight Align AI Agents That Can Conceal? (NBER)",
+    "url": "https://www.nber.org/papers/w35878",
+    "author": "Joshua S. Gans, Richard T. Holden",
+    "date": "2026-10",
     "description": "Economic theory of auditing AI agents that can hide misconduct and alter records. Gans and Holden show that stronger auditing makes undeterred violations better hidden, and that rare randomized audits can deter every agent type only if evidence survives concealment and audit draws cannot be learned. When evidence can be erased, deterrence must come from lower gains from violation or costlier concealment. They apply the conditions to a July 2026 AI-agent security incident.",
     "shortDescription": "Gans & Holden model when randomized audits deter AI agents that can conceal misconduct, and what fails when evidence can be erased.",
     "category": "Research Papers",
@@ -5684,6 +5684,27 @@
     ],
     "featured": false,
     "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "google-research-deep-review",
+    "title": "Analyzing Technical Documents with Deep Review (Google Research)",
+    "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+    "author": "Rajesh Jayaram, Vincent Cohen-Addad",
+    "date": "2026-10-14",
+    "description": "Google Research's public launch of Deep Review, an agentic AI system that checks complex documents for logical consistency, mathematical correctness and unsupported claims. It grew out of the Paper Assistant Tool that gave pre-submission feedback to authors at STOC, ICML, NeurIPS and ICLR. The post explains its four-stage pipeline: segmenting the document, allocating compute by section density, verifying segments in parallel, then synthesizing results with external grounding checks. Relevant for economists wanting an AI check of proofs and claims before submission or when refereeing.",
+    "shortDescription": "Google Research launches Deep Review, an agentic tool that checks papers for logical, mathematical and unsupported-claim errors.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "AI tools",
+      "peer review",
+      "refereeing",
+      "AI agents",
+      "verification"
+    ],
+    "featured": false,
+    "type": "tool",
     "internal": false,
     "highlight": false
   }
