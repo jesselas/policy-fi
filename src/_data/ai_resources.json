@@ -5643,5 +5643,48 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "khosravi-liu-genai-firm-hiring-demand",
+    "title": "Generative AI and Firm Hiring Demand: Evidence from Advanced and Developing Economies (Working Paper)",
+    "url": "https://link-up.files.svdcdn.com/production/documents/Research/Generative_AI_and_Firm_Hiring_Demand_Georgia_State_University.pdf",
+    "author": "Faezeh Khosravi, Elaine M. Liu",
+    "date": "2026-03",
+    "description": "A global difference-in-differences study of how ChatGPT's release changed firm hiring, using 77.8 million online job postings from 37,395 firm-country pairs in 186 countries over 2021Q2-2025Q3. Exposure is fixed from firms' 2019 occupational mix using a complementarity-adjusted AI exposure index. More exposed firms cut the share of high-substitution postings, and the adjustment comes earlier and is more front-loaded in developing than in advanced economies. A rare cross-country view beyond US and UK data.",
+    "shortDescription": "77.8M job postings in 186 countries: firms more exposed to generative AI shift hiring away from substitutable roles, faster in developing economies.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "labor demand",
+      "job postings",
+      "development"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gmyrek-winkler-garganta-buffer-or-bottleneck",
+    "title": "Buffer or Bottleneck? Employment Exposure to Generative AI and the Digital Divide in Latin America (ILO Working Paper)",
+    "url": "https://www.ilo.org/publications/buffer-or-bottleneck-employment-exposure-generative-ai-and-digital-divide",
+    "author": "Paweł Gmyrek, Hernan Winkler, Santiago Garganta",
+    "date": "2024-07-31",
+    "description": "A joint ILO-World Bank working paper estimating how exposed jobs in Latin America and the Caribbean are to generative AI. It finds 26-38% of jobs exposed, mostly through augmentation rather than automation, which affects an estimated 2-5% of jobs. About 8-14% of jobs could become more productive, but gaps in digital access could block roughly half of those gains, around 17 million jobs. A useful reference on how infrastructure constraints shape AI's labour-market effects in developing economies.",
+    "shortDescription": "ILO-World Bank estimate: 26-38% of Latin American jobs exposed to generative AI, with the digital divide blocking about half the potential gains.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "labor market",
+      "exposure",
+      "Latin America",
+      "development"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
