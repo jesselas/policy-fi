@@ -5601,5 +5601,47 @@
     "type": "other",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "chen-wang-wang-bhatia-llm-weak-proxies-economic-preferences",
+    "title": "Simulated Responses from Large Language Models Are Weak Proxies for Human Economic Preferences across 74 Countries (Nature Human Behaviour)",
+    "url": "https://www.nature.com/articles/s41562-026-02611-4",
+    "author": "Fadong Chen, Qijun Wang, Lei Wang, Sudeep Bhatia",
+    "date": "2026-10-12",
+    "description": "A virtual Global Preference Survey that asks 20 LLM configurations to simulate six experimentally validated economic preferences for 67,201 matched respondents in 74 countries. The models recover some demographic patterns, getting the direction of gender, age and cognitive-ability associations right in 77.8% of cases. They manage only 48.1% for cultural dimensions and do worse in less developed, less connected countries. A key reference for anyone considering synthetic respondents in place of survey data.",
+    "shortDescription": "LLM-simulated survey answers capture some demographic patterns in economic preferences across 74 countries but miss cultural differences.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "synthetic respondents",
+      "surveys",
+      "preferences"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "conlon-schwardmann-human-ai-competition-experimental-market",
+    "title": "Creative Destruction: Human-AI Competition in an Experimental Market (arXiv)",
+    "url": "https://arxiv.org/abs/2610.18921",
+    "author": "John Conlon, Peter Schwardmann",
+    "date": "2026-10-12",
+    "description": "Three experiments with 1,025 participants who act as both producers, designing games with an AI coding agent, and consumers. The authors test two reasons humans might keep a role in production as AI improves: a lasting edge in judging what makes a good product, or consumer preference for human involvement. Neither holds. AI-only designs beat those of amateur and professional producers, producers did not foresee the gap, and labelling a game human-made did not raise willingness to pay.",
+    "shortDescription": "Experiments with 1,025 participants: AI-only game designs beat human producers, and consumers paid no premium for human-made products.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI agents",
+      "experimental economics",
+      "labor",
+      "automation"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
