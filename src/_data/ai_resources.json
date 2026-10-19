@@ -5791,5 +5791,108 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "kahn-will-ai-improve-undergraduate-economics-education",
+    "title": "Will AI Improve Undergraduate Economics Education? (working paper)",
+    "url": "https://drive.google.com/file/d/1EFoNC4wuclRGZcOO23EGM6BxvbSFF2af/view",
+    "author": "Matthew E. Kahn",
+    "date": "2026-09-07",
+    "description": "A prospective essay on how to restructure every phase of the undergraduate economics major now that AI lets students produce polished work with little effort. Kahn frames AI as a new form of moral hazard that weakens grades as a signal of understanding, and argues its effects are heterogeneous: stronger students use it as an accelerator, weaker ones as a substitute. Useful for economics faculty rethinking courses, assessment and curriculum.",
+    "shortDescription": "Kahn on AI as moral hazard in the econ major: polished output no longer signals learning, so courses and assessment need redesigning.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "education",
+      "teaching",
+      "LLM"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "backman-practical-ai-for-academics-workshop",
+    "title": "Practical AI for Academics",
+    "url": "https://claesbackman.com/ai_workshop/",
+    "author": "Claes Bäckman",
+    "date": "2026-09",
+    "description": "Bäckman's full two-session workshop for researchers: an introduction to LLMs and agentic tools (Claude Code vs. Codex, context windows), then practical workflows such as referee-style feedback on your own draft, checking code against paper claims, building slides, a personal writing-style file and working with restricted data. It bundles slides, a syllabus, a setup guide, hands-on exercises, a CLAUDE.md template and a public skills repository.",
+    "shortDescription": "Two-session AI workshop for academics: slides, setup guide, exercises, CLAUDE.md template and Claude Code skills for research workflows.",
+    "category": "Courses & Learning",
+    "tags": [
+      "Claude Code",
+      "Codex",
+      "workflows",
+      "teaching",
+      "agents"
+    ],
+    "type": "course",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "backman-beyond-stochastic-beamer-parrot",
+    "title": "Beyond the Stochastic Beamer Parrot",
+    "url": "https://claesbackman.substack.com/p/beyond-the-stochastic-beamer-parrot",
+    "author": "Claes Bäckman",
+    "date": "2026-09-29",
+    "description": "Bäckman argues that AI should help academics make better presentations, not just reproduce the standard conference Beamer deck faster. He introduces an \"explorable-deck\" Claude skill, adapted from an explorable-explanations skill, that turns a paper into an interactive slide deck with a clear narrative, and cautions that the paper still has to be strong and that skipping slide-making means more practice is needed.",
+    "shortDescription": "Using a Claude skill to turn papers into interactive, explorable slide decks instead of faster copies of standard Beamer slides.",
+    "category": "Coding with AI",
+    "tags": [
+      "Claude Code",
+      "skills",
+      "presentations",
+      "workflows"
+    ],
+    "type": "article",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "bichler-et-al-llm-agents-price-competition",
+    "title": "How language model agents reshape price competition (arXiv)",
+    "url": "https://arxiv.org/abs/2610.21711",
+    "author": "Martin Bichler, Philip Hierhager, Kassian Köck, Fabian Pieroth",
+    "date": "2026-10-15",
+    "description": "Studies LLM pricing agents in repeated Bertrand competition, a setting where standard learning algorithms usually converge to near-marginal-cost prices. The authors show outcomes hinge on deployment choices: agents posting prices from raw histories that include rival prices can sustain supracompetitive regimes in self-play, while agents working from summaries of their own profits move toward competitive prices. Relevant to the algorithmic-collusion and antitrust debate.",
+    "shortDescription": "LLM pricing agents can sustain or undercut supracompetitive prices in Bertrand markets, depending on how they are deployed.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "agents",
+      "algorithmic pricing",
+      "competition"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "windfall-trust-tax-risks-labour-displacing-ai",
+    "title": "Mapping Tax Risks From Labour-Displacing AI",
+    "url": "https://windfalltrust.org/publications/mapping-tax-risks-from-labour-displacing-ai",
+    "author": "Trish Ieong, Akbar Saputra, Anuja Maniar, Deric Cheng",
+    "date": "2026-05-13",
+    "description": "A Windfall Trust report arguing that AI could erode OECD tax bases even while raising output, because tax systems lean heavily on labour income. It sets out four fiscal channels, including the shift from labour to lower-taxed capital income and gains captured by non-resident AI providers, and simulates ten-year fiscal effects for an average OECD country as an illustration rather than a forecast. Discussed at the IMF/World Bank 2026 Annual Meetings panel on taxation in the AI era.",
+    "shortDescription": "Scenario modelling of how labour-displacing AI could erode OECD tax revenue even as the economy grows, and what governments should monitor.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "public finance",
+      "taxation",
+      "labor",
+      "policy"
+    ],
+    "type": "report",
+    "featured": false,
+    "internal": false,
+    "highlight": false
   }
 ]
