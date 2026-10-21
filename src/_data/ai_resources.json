@@ -5894,5 +5894,47 @@
     "featured": false,
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "zohrehvand-kapacinskaite-trace-governing-ai-assisted-research",
+    "title": "TRACE: Governing AI-Assisted Research with Principles from Computer Science (arXiv)",
+    "url": "https://arxiv.org/abs/2610.24035",
+    "author": "Amirhossein Zohrehvand, Aldona Kapačinskaitė",
+    "date": "2026-10-16",
+    "description": "Proposes a governance standard for AI-assisted research, borrowing from software engineering and security research on how humans and machines keep control of shared, multi-contributor work. The five TRACE principles cover tracking records, reviewing against sources, accepting outputs independently, controlling stage transitions, and evaluating corrections, pacing work to human attention rather than AI output speed. Comes with TRACE-OS, an open-source setup that implements the principles through shared instructions, tools and records.",
+    "shortDescription": "Five principles (TRACE) and an open-source project setup for keeping researchers in control of AI-assisted research workflows.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "research workflow",
+      "reproducibility",
+      "AI agents"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "fu-et-al-parallel-ai-deployment-service-workers",
+    "title": "When Better Opportunities Backfire: Service Worker Responses to Parallel AI Deployment in Customer Acquisition (arXiv)",
+    "url": "https://arxiv.org/abs/2610.25603",
+    "author": "Xinyu Fu, Shulong Luo, Narayan Ramasubbu, Peng Shen, Xincheng Wang, Yucheng Wang",
+    "date": "2026-10-19",
+    "description": "Studies a Chinese online health-insurance brokerage that deployed an AI voice agent on low-intent leads while routing higher-intent leads to human workers. Using over half a million outreach records and a regression-discontinuity-in-time design, the authors find that lead quality for humans improved, yet acquisition rates fell where the gain was largest: workers raised their reservation value, abandoning leads and shortening calls. A field example of behavioral responses blunting the gains from human-AI task allocation.",
+    "shortDescription": "Field evidence: routing low-intent leads to an AI voice agent improved humans' leads but lowered their conversion as workers abandoned leads faster.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI adoption",
+      "labor",
+      "field evidence",
+      "human-AI collaboration"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
   }
 ]
