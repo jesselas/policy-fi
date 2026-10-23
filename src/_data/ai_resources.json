@@ -5936,5 +5936,110 @@
     "featured": false,
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "huang-et-al-householdbench-llm-household-behavior",
+    "title": "HouseholdBench: Evaluating Large Language Models as Predictors of Household Economic Behavior (arXiv)",
+    "url": "https://arxiv.org/abs/2610.07563",
+    "author": "Jin Huang, Diego Ferreras Garrucho, Yutong Xie, Walter M. Yuan, Qiaozhu Mei, Chen Lian, Jonathon Hazell",
+    "date": "2026-10-06",
+    "description": "A benchmark that tests whether LLMs can predict real household decisions. It combines 6 U.S. household surveys and 32 tasks covering consumption, income, labor, expectations and housing, including how households respond to policy changes. Across 13 models, most beat a no-change baseline, but gradient-boosted trees still rank first on most tasks, and fine-tuning plus averaging lets a 4B open model match proprietary ones. Datasets, code and a leaderboard are released.",
+    "shortDescription": "Benchmark of 13 LLMs on 32 household-survey prediction tasks: most beat a no-change baseline, but gradient-boosted trees still lead.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "household finance",
+      "benchmark",
+      "simulation"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "fernandez-villaverde-saving-for-the-machines",
+    "title": "Saving for the Machines (working paper)",
+    "url": "https://www.sas.upenn.edu/~jesusfv/Saving_Machines.pdf",
+    "author": "Jesús Fernández-Villaverde",
+    "date": "2026-10-20",
+    "description": "A macro theory paper on growth under automation. In a standard task model, the paper argues, the supply of capital sets how big the automation growth boom is, while the task structure sets how long it lasts and how wages evolve. In the calibration, the same technology path gives 11.7% annual growth when saving is optimal but only 2.2% at a fixed 23% saving rate. Ten-year real yields jump from 5.1% to 13.6%. Slides are on the author's site.",
+    "shortDescription": "Task-model growth paper: capital accumulation, not technology alone, governs the size of an AI automation growth boom and the jump in real yields.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "automation",
+      "growth",
+      "macroeconomics",
+      "interest rates"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "espinal-jimenez-delegation-divide-agent-delegability-index",
+    "title": "The Delegation Divide: An Open Index of AI-Agent Delegability across Occupations and Countries (arXiv)",
+    "url": "https://arxiv.org/abs/2610.30752",
+    "author": "Cristian Espinal Maya, Santiago Jiménez Londoño",
+    "date": "2026-10-22",
+    "description": "Builds an open Agent Delegability Index. Two language models rate all 18,796 O*NET task statements against a preregistered rubric, and the scores are weighted by ILOSTAT employment in 146 countries. The authors estimate that about 35% of world task time is at least partly delegable to AI agents in 2026 but only 2.5% fully. Delegable employment rises from 22.5% in low-income to 48.7% in high-income countries. A reusable alternative to existing AI-exposure measures.",
+    "shortDescription": "Open index rating all O*NET tasks for AI-agent delegability across 146 countries: ~35% of task time partly delegable, 2.5% fully.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI agents",
+      "labor",
+      "occupations",
+      "exposure measures"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "zeinali-et-al-joules-to-gdp",
+    "title": "Joules-to-GDP: How Much Economic Value Do AI Systems Produce per Unit of Energy? (arXiv)",
+    "url": "https://arxiv.org/abs/2610.30858",
+    "author": "Amirreza Zeinali, Jon Saad-Falcon, Avanika Narayan, Mersad Abbasi, Jonathan S. Hartley, John Hennessy, Christopher Re, Azalia Mirhoseini",
+    "date": "2026-10-22",
+    "description": "Proposes measuring AI output in economic value per unit of energy. It defines Net Value per Joule and Time Saving per Joule and estimates them on 220 GDPval tasks across 44 occupations, running five open-weight models locally on four accelerator types. The occupations where AI succeeds most are not those with the best return per joule. A smaller model can deliver about 2.5x the value per joule of the top-value model. A useful framing for productivity and energy-cost debates.",
+    "shortDescription": "Measures AI's economic value per joule on 220 GDPval tasks: the most capable model or occupation isn't the most energy-efficient source of value.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "productivity",
+      "energy",
+      "GDPval",
+      "measurement"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "montagnani-et-al-jaxmarl-bc-macro-modelling",
+    "title": "JaxMARL-BC: Multi-Agent Reinforcement Learning for Macroeconomic Modelling, in Seconds (arXiv)",
+    "url": "https://arxiv.org/abs/2610.28907",
+    "author": "Daniele Montagnani, Andrea Coletta, Antonietta Mira, Aldo Glielmo",
+    "date": "2026-10-20",
+    "description": "Introduces an open-source, JAX-accelerated simulator for multi-agent reinforcement learning economies linked to DSGE models. It is reported at 75x to 724x faster than the reference implementation and scales to 200,000 learning households. The authors check correctness against known DSGE limits and run a proof-of-concept calibration with heterogeneous returns on capital in two hours instead of over a month. Aimed at removing the training-time barrier to agent-based macro.",
+    "shortDescription": "Open-source JAX simulator that trains multi-agent RL macro economies tied to DSGE models in seconds, scaling to 200,000 households.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "macroeconomics",
+      "reinforcement learning",
+      "agent-based models",
+      "open source"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
