@@ -6041,5 +6041,47 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "king-worthington-ai-article-reviews-dominate-human-peer-reviews",
+    "title": "AI Article Reviews Dominate Human Peer Reviews at Their Best: Evidence and Policy Choices (working paper)",
+    "url": "https://gking.harvard.edu/peerless",
+    "author": "Gary King, Steven Worthington",
+    "date": "2026-10-22",
+    "description": "Head-to-head experiments pitting AI-generated reviews against an unusually high-quality set of human reviews of social-science papers submitted to rapidPeer, a Harvard IQSS faculty review service. Judged blind by other AI models and by former editors of major journals, AI reviews win on every criterion the authors measured, with no fabricated sources and about a third the rate of incorrect claims. The paper then weighs what this means for journal policy, including the downsides.",
+    "shortDescription": "Blind head-to-head tests: AI reviews beat high-quality human peer reviews on every measured criterion; the authors discuss journal policy options.",
+    "category": "Research Papers",
+    "tags": [
+      "peer review",
+      "LLM",
+      "academic publishing",
+      "research workflow",
+      "social science"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "brynjolfsson-korinek-agrawal-research-agenda-economics-tai",
+    "title": "A Research Agenda for the Economics of Transformative AI (NBER)",
+    "url": "https://www.nber.org/papers/w34256",
+    "author": "Erik Brynjolfsson, Anton Korinek, Ajay K. Agrawal",
+    "date": "2025-09",
+    "description": "Argues that economists urgently need to understand how transformative AI could reshape economic models, institutions and policy, and organises a research agenda around nine Grand Challenges: growth, innovation, income distribution, decision-making power, geoeconomics, information flows, safety risks, human well-being and transition dynamics. A compact map of open questions for anyone choosing where to work on the economics of advanced AI.",
+    "shortDescription": "Brynjolfsson, Korinek and Agrawal set out nine Grand Challenges for the economics of transformative AI, from growth and inequality to transition dynamics.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "transformative AI",
+      "research agenda",
+      "growth",
+      "inequality"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
