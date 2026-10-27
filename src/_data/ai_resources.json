@@ -6083,5 +6083,67 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "kuhle-ai-augmented-research-free-to-write-costly-to-read",
+    "title": "AI-Augmented Research: Free to Write, Costly to Read (arXiv)",
+    "url": "https://arxiv.org/abs/2610.32355",
+    "author": "Wolfgang Kuhle",
+    "date": "2026-10-23",
+    "description": "A theory paper on what happens to science when AI makes writing papers cheaper than reading them. Time-limited readers such as referees choose to ignore, verify or trust papers; as writing costs fall, verification collapses and impact tracks author reputation alone. AI literature summaries only help if papers' errors are independent, and once many papers share the same AI they inherit its errors. A sharp model for anyone thinking about refereeing and AI-written research.",
+    "shortDescription": "Model of research when AI makes writing cheaper than reading: verification collapses, reputation rules, and shared-AI errors spread through summaries.",
+    "category": "Research Papers",
+    "tags": [
+      "economics of science",
+      "peer review",
+      "LLM",
+      "theory",
+      "academic publishing"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "shin-auditable-ai-agent-loop-empirical-economics",
+    "title": "An Auditable AI Agent Loop for Empirical Economics: A Case Study in Forecast Combination (Philadelphia Fed)",
+    "url": "https://www.philadelphiafed.org/the-economy/an-auditable-ai-agent-loop-for-empirical-economics-a-case-study-in-forecast-combination",
+    "author": "Minchul Shin",
+    "date": "2026-08",
+    "description": "A Philadelphia Fed working paper that adapts an open-source agent-loop architecture to an empirical economics workflow and adds a post-search holdout evaluation. In a forecast-combination illustration, independent AI agent searches find methods that improve on the original study's benchmarks. The logged search plus holdout is pitched as a way to make adaptive specification search transparent and separate robust gains from sample-specific discoveries. Useful template for auditable agentic empirical work.",
+    "shortDescription": "Philadelphia Fed paper: an auditable AI agent loop with logged search and holdout evaluation, applied to forecast combination.",
+    "category": "Research Papers",
+    "tags": [
+      "AI agents",
+      "forecasting",
+      "research workflow",
+      "econometrics",
+      "reproducibility"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "malo-yu-qiu-customer-is-the-builder-ai-coding-agents",
+    "title": "The Customer Is the Builder: How AI Coding Agents Are Rewriting the Economics of Software (arXiv)",
+    "url": "https://arxiv.org/abs/2610.30307",
+    "author": "Ripon Chandra Malo, Zimeng Yu, Tong Qiu",
+    "date": "2026-10-21",
+    "description": "Asks whether AI coding agents will push organisations to build software they would otherwise buy. Defines a 'software substitution frontier' of functions customers can build and maintain more cheaply than buying, and combines agent benchmark trends, a scan of open-source alternatives to commercial products and a buyer survey. The authors stress the evidence is mixed and their projections are extrapolation, not forecast. A useful framing for make-or-buy and software-market questions.",
+    "shortDescription": "Introduces a 'software substitution frontier' to study whether AI coding agents shift firms from buying software to building it.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "coding agents",
+      "software markets",
+      "industrial organization"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
