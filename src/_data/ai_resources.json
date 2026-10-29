@@ -6145,5 +6145,214 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "ahir-et-al-imf-global-fiscal-actions-gfa-dataset",
+    "title": "The Global Fiscal Actions (GFA) Dataset (IMF)",
+    "url": "https://ideas.repec.org/p/imf/imfwpa/2026-221.html",
+    "author": "Hites Ahir, Miyoko Asai, Matthieu Bellon, Maria Chiara Cavalleri, Shuvam Das, Davide Furceri, Faizaan Kisat, Aiko Mineshima, Irene Rausell Moreno, Vishal Parmar, Nikhil Patel, Adrian Peralta-Alva",
+    "date": "2026-10",
+    "description": "An IMF working paper introducing a quarterly global narrative database of discretionary fiscal actions covering 142 countries since 1990, built by applying large language models to Economist Intelligence Unit country reports to identify and classify tax and spending measures with their motivation, timing and implementation status. The authors validate it against economists' assessments, existing narrative datasets, fiscal aggregates and repeated AI extractions, and illustrate uses for fiscal cyclicality and multipliers.",
+    "shortDescription": "IMF dataset using LLMs on EIU country reports to build a quarterly narrative record of fiscal actions in 142 countries since 1990.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "fiscal policy",
+      "narrative identification",
+      "data construction"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "andrews-essig-aberg-shapiro-llm-functional-form-sensitivity",
+    "title": "An LLM Workflow for Functional Form Sensitivity Analysis (NBER)",
+    "url": "https://www.nber.org/papers/w35947",
+    "author": "Isaiah Andrews, Simon C. Essig Aberg, Jesse M. Shapiro",
+    "date": "2026-10",
+    "description": "Proposes an LLM-driven workflow for asking how much a key estimate could move under alternative functional forms that fit the data about as well as the researcher's working model. The workflow first searches for an analytic solution and otherwise falls back on numerical methods that keep the fit constraint, returning a verifiable lower bound on in-sample sensitivity. Applied to the welfare cost of adverse selection in health insurance; a concrete example of LLMs doing econometric robustness work.",
+    "shortDescription": "Andrews, Essig Aberg and Shapiro use an LLM workflow to bound how sensitive estimates are to functional-form choices, with verifiable results.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "econometrics",
+      "robustness",
+      "sensitivity analysis"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "jha-qian-weber-yang-genai-managerial-expectations",
+    "title": "Generative AI, Managerial Expectations, and Economic Activity (NBER)",
+    "url": "https://www.nber.org/papers/w35949",
+    "author": "Manish Jha, Jialin Qian, Michael Weber, Baozhong Yang",
+    "date": "2026-10",
+    "description": "Uses generative AI to extract managers' economic expectations from more than 120,000 corporate conference call transcripts, producing an 'AI Economy Score' that predicts GDP growth, production, employment and wages five or more quarters ahead beyond survey forecasts. Predictive power concentrates among historically more accurate managers, which the authors read as an information channel. A strong template for LLM-based measurement from text in macroeconomics.",
+    "shortDescription": "Builds an AI Economy Score from 120,000+ earnings-call transcripts that forecasts GDP, employment and wages beyond surveys.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "text as data",
+      "expectations",
+      "macroeconomic forecasting"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "egan-russel-shi-yao-competition-in-generative-ai",
+    "title": "Competition in Generative AI: Evidence from Consumer Demand (NBER)",
+    "url": "https://www.nber.org/papers/w35953",
+    "author": "Mark L. Egan, Dominic Russel, Claire Shi, Vincent Yao",
+    "date": "2026-10",
+    "description": "Uses card transaction data covering 174 million consumers to study paid generative AI adoption and competition. About 2.9% of U.S. consumers paid for at least one major AI service as of April 2026; retention is low, multihoming common and switching rises around model releases. A structural demand model finds high price sensitivity and growing substitutability across providers, implying limited pricing power unless quality differentiation grows.",
+    "shortDescription": "Card data on 174M consumers shows paid GenAI adoption, low switching costs and high price sensitivity across AI providers.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "industrial organization",
+      "demand estimation",
+      "competition"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "gans-landry-training-your-replacement",
+    "title": "Training Your Replacement: Worker Incentives and the Pace of Automation (NBER)",
+    "url": "https://www.nber.org/papers/w35950",
+    "author": "Joshua S. Gans, Peter Landry",
+    "date": "2026-10",
+    "description": "A theory paper on workers asked to help train the AI that will replace them. Because training ends the job, the threat of dismissal loses force, so firms must pay workers rents and workers gain from their own replacement. The model shows AI can create jobs that pay more than they produce, leave some jobs unautomated and slow training under wage-only contracts, and that a credible completion bonus removes the slowdown.",
+    "shortDescription": "Gans and Landry model workers training their AI replacements: dismissal threats weaken, rents rise, and completion bonuses restore the pace.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "automation",
+      "labor",
+      "contract theory"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "jiang-wang-equalizing-or-polarizing-genai-research-productivity",
+    "title": "Equalizing or Polarizing? Generative AI and Research Productivity in Economics (Job Market Paper)",
+    "url": "https://www.dropbox.com/scl/fi/rxhtxxuu395llneekpg4u/JMP_TJ.pdf?rlkey=yftwt78slys5n527m6b7iuee5&dl=0",
+    "author": "Tianyu Jiang, Yuqing (Claire) Wang",
+    "date": "2026-10",
+    "description": "Studies how generative AI affects productivity gaps among economists using NBER working-paper and publication records, text-based measures of LLM-assisted writing and a survey of 227 academic economists. Gaps narrowed after ChatGPT for authors without research assistants and on smaller teams, but AI exposure widens the gap between senior and junior researchers even though juniors use AI more. A model explains why early convergence may turn to divergence.",
+    "shortDescription": "NBER records and a survey of 227 economists show GenAI narrows the RA gap in research output but widens the senior-junior gap.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "research productivity",
+      "economics profession"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cunningham-cheap-talk-signaling-claude-code",
+    "title": "Cheap Talk, Signaling and Claude Code",
+    "url": "https://causalinf.substack.com/p/cheap-talk-signaling-and-claude-code",
+    "author": "Scott Cunningham",
+    "date": "2026-10-26",
+    "description": "Cunningham applies Spence's job-market signaling model to AI coding agents, arguing they have sharply lowered the cost of producing publishable empirical work and so threaten the separating equilibrium in which papers signal researcher quality. He is candid that he cannot yet say what signals replace them, and frames the outcome around how costs differ across researcher types. A useful lens for hiring, PhD training and evaluation debates.",
+    "shortDescription": "Cunningham uses Spence signaling to ask whether AI agents make empirical papers too cheap to signal researcher quality.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "Claude Code",
+      "AI agents",
+      "economics profession",
+      "signaling"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "levy-yeyati-judzik-barbiero-practice-makes-perfect-genai-returns",
+    "title": "Practice Makes Perfect: Tacit Knowledge, Generative AI, and Returns to Schooling and Experience (arXiv)",
+    "url": "https://arxiv.org/abs/2610.36008",
+    "author": "Eduardo Levy Yeyati, Darío Judzik, Juan Ignacio Barbiero",
+    "date": "2026-10-26",
+    "description": "Argues generative AI makes codified knowledge cheap while practice-based judgment stays with the worker, which should flatten returns to schooling and rotate returns to experience. Using CPS earnings from 2018 to mid-2026 and the Felten-Raj-Seamans exposure index, the authors find that in highly exposed occupations after ChatGPT the return to schooling falls and the return to early-career experience rises, with breaks timed to the release and absent in a pandemic placebo.",
+    "shortDescription": "CPS evidence that after ChatGPT, exposed occupations see lower returns to schooling and a rotated, steeper early experience profile.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "labor",
+      "human capital",
+      "wage structure"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "tadepalli-efficiency-vs-capability-intelligence-explosion",
+    "title": "Efficiency vs Capability in the Intelligence Explosion (arXiv)",
+    "url": "https://arxiv.org/abs/2610.33447",
+    "author": "Karthik Tadepalli",
+    "date": "2026-10-24",
+    "description": "A task-automation model of AI feeding back into AI research through two channels: capability gains that automate more research tasks and efficiency gains that raise output per unit of compute on tasks already automated. A software-driven intelligence explosion requires both to improve fast enough. Calibrated to recent progress, capability looks sufficient while efficiency is borderline; efficiency growth drives most of the uncertainty in Monte Carlo draws.",
+    "shortDescription": "Task-automation model: a software-only intelligence explosion needs both capability and efficiency gains; efficiency progress is the key unknown.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "economic growth",
+      "automation",
+      "AI progress"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "tarabeih-prospect-theory-llms-meta-analysis",
+    "title": "Prospect Theory in Large Language Models: A Meta-Analysis of Loss Aversion, Diminishing Sensitivity, and Probability Weighting (arXiv)",
+    "url": "https://arxiv.org/abs/2610.33103",
+    "author": "Adi Tarabeih",
+    "date": "2026-10-22",
+    "description": "Meta-analyses 102 fitted estimates from 11 studies covering 32 language models to ask whether LLMs exhibit prospect theory. Pooled loss aversion is modest and well below human benchmarks, diminishing sensitivity depends on the elicitation method, and probability weighting shows a human-like inverse S-shape on thinner evidence. Useful for researchers deciding whether LLMs can stand in for human subjects in risky-choice experiments.",
+    "shortDescription": "Meta-analysis of 32 LLMs: little loss aversion, method-dependent curvature, but human-like probability weighting in risky choice.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "behavioral economics",
+      "LLMs as subjects",
+      "meta-analysis"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
