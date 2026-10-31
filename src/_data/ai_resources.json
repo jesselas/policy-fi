@@ -6354,5 +6354,88 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "vivalt-can-ai-forecast-treatment-effects",
+    "title": "Can Artificial Intelligence Forecast Treatment Effects in Economics? (arXiv)",
+    "url": "https://arxiv.org/abs/2610.38883",
+    "author": "Eva Vivalt",
+    "date": "2026-10-28",
+    "description": "Vivalt has LLMs forecast treatment effects for studies pre-registered on the AEA RCT Registry and OSF whose results were first released in 2026, after the models' knowledge cut-offs. Models extract forecasting questions from pre-analysis plans and forecast 673 effects from 33 papers after screening; the best model's median absolute error is 0.054 SD, well ahead of zero-effect and mean-effect benchmarks. A clean, contamination-aware test of AI as a forecaster of research results.",
+    "shortDescription": "LLMs forecast 2026 RCT results from pre-registrations, beating zero- and mean-effect benchmarks (best median error 0.054 SD).",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "forecasting",
+      "RCTs",
+      "pre-registration"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "andrews-mikusheva-ai-in-econometric-theory",
+    "title": "AI in Econometric Theory: An Example (arXiv)",
+    "url": "https://arxiv.org/abs/2610.35831",
+    "author": "Isaiah Andrews, Anna Mikusheva",
+    "date": "2026-10-26",
+    "description": "A note that pairs a paper with a story. The paper concerns the admissibility of two-stage least squares with weak instruments, a topic the authors have worked on together since 2019; the story describes how their LLMs wrote it, with reflections on what this may mean for econometrics. A rare first-hand account from leading econometric theorists of AI doing theory work.",
+    "shortDescription": "Andrews and Mikusheva on how LLMs wrote their paper on 2SLS admissibility with weak instruments, and what it means for the field.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "econometrics",
+      "AI for theory",
+      "weak instruments"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cunningham-artifacts-in-claude-code",
+    "title": "Artifacts in Claude Code",
+    "url": "https://causalinf.substack.com/p/artifacts-in-claude-code",
+    "author": "Scott Cunningham",
+    "date": "2026-10-30",
+    "description": "While finishing a coauthored paper, Cunningham found that an HTML deck he asked Claude to build was a shareable Artifact that collaborators could interact with live. He sketches research uses, including figure-and-table voting, comment boxes, reference checking, shared final reviews and a /loop that pulls edits back into the local project. Practical for economists coordinating coauthor reviews.",
+    "shortDescription": "Cunningham on using Claude Artifacts as shareable, interactive tools for coauthor reviews, reference checks and paper feedback.",
+    "category": "Coding with AI",
+    "tags": [
+      "economics",
+      "Claude Code",
+      "Artifacts",
+      "collaboration",
+      "workflow"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cunningham-maybe-its-good-maybe-its-bad",
+    "title": "Maybe it's good, maybe it's bad, who knows",
+    "url": "https://causalinf.substack.com/p/maybe-its-good-maybe-its-bad-who",
+    "author": "Scott Cunningham",
+    "date": "2026-10-27",
+    "description": "Cunningham sets his optimism about AI in his own research against a more pessimistic view of its effects on the profession. Drawing on Becker's work on time allocation, he argues that in-person collaboration is what refines papers, and asks whether AI's fast manuscript drafts can replace that shared time. He closes with a parable warning against treating speculative forecasts as settled.",
+    "shortDescription": "Cunningham weighs AI's research speedups against the loss of shared collaborative time that refines papers.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "economics profession",
+      "collaboration"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
