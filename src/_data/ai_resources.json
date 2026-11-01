@@ -6437,5 +6437,26 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "hortacsu-yoo-when-cash-wakes-up-ai-money-market-funds",
+    "title": "When Cash Wakes Up: Inertia in Institutional Money Market Funds and the Potential Effects of AI Disruption (NBER)",
+    "url": "https://www.nber.org/papers/w35954",
+    "author": "Ali Hortaçsu, Younggeun Yoo",
+    "date": "2026-10",
+    "description": "Structural IO paper using monthly mutual-fund holdings of money market funds (2010-2024) to separate manager inattention from preferences; more than half of funds never switch despite yield gaps. Counterfactuals in which AI-driven automation removes inattention cut fees roughly in half and nearly eliminate yield dispersion, but sharply raise flows and redemption pressure, a useful template for modelling how AI agents could change market stability.",
+    "shortDescription": "Structural model of inattentive cash managers: AI automation would cut MMF fees by about half but raise flows and run risk.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI agents",
+      "industrial organization",
+      "financial stability",
+      "structural estimation"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
