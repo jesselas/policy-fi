@@ -6458,5 +6458,47 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "he-pastor-green-tastes-synthetic-investors",
+    "title": "Green Tastes, Beliefs, and Portfolios: Evidence from Synthetic Investors (NBER)",
+    "url": "https://www.nber.org/papers/w35982",
+    "author": "Xindi He and Lubos Pastor",
+    "date": "2026-10",
+    "description": "Uses LLMs as synthetic survey respondents to measure green tastes, return beliefs, portfolio allocations and investment motives across 480 retail and 60 institutional investor profiles. Synthetic institutions report weaker green tastes but greener portfolios, attributed to outside pressure, and re-running the survey under 2014–2025 information sets shows stable tastes but more pessimistic green-return beliefs after 2020. A worked example of LLM-simulated surveys in asset pricing.",
+    "shortDescription": "He and Pastor survey LLM 'synthetic investors' on green tastes, beliefs and portfolios, including re-runs under 2014–2025 information sets.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "synthetic respondents",
+      "finance",
+      "ESG"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "decclesiis-castellacci-ahmadi-validating-llm-synthetic-survey-samples",
+    "title": "Validating LLM-Generated Synthetic Survey Samples: A Use-Dependent Multi-Dimensional Framework for Social-Science Applications (arXiv)",
+    "url": "https://arxiv.org/abs/2611.00256",
+    "author": "Enrico Angelo Raffaele D'Ecclesiis, Fulvio Castellacci, Arash Ahmadi",
+    "date": "2026-10-30",
+    "description": "Argues that a single accuracy metric cannot tell you whether LLM-generated survey respondents are usable, and proposes judging them on predictive, distributional and substantive validity according to the intended use. Tested on Eurobarometer attitudes toward AI with four off-the-shelf LLMs against a supervised ML benchmark, some synthetic samples preserve heterogeneity, demographic ordering and cross-country variation even when respondent-level accuracy is imperfect. Useful for anyone deciding whether to trust silicon samples.",
+    "shortDescription": "Framework for validating LLM synthetic survey samples on predictive, distributional and substantive validity, tested on Eurobarometer data.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "synthetic respondents",
+      "surveys",
+      "methodology"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
