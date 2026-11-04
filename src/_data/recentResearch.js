@@ -7,7 +7,9 @@ const publications = require('./publications.json');
 //   2. then by year (newer first),
 //   3. finally by original JSON array order as a stable tiebreaker.
 // Add `"added": "YYYY-MM-DD"` to new publications.json entries to surface them here.
+// `"homePreview": false` keeps an entry off the home page; it still appears on /research.
 module.exports = publications
+  .filter((p) => p.homePreview !== false)
   .map((p, idx) => ({ ...p, _idx: idx }))
   .sort((a, b) => {
     if (a.added && b.added) return b.added.localeCompare(a.added);

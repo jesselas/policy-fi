@@ -596,20 +596,21 @@
     ]
   },
   {
-    "title": "Informal Consumption in the Microsimulation of VAT: Application to Rwanda, Peru, Mozambique, and Uganda",
+    "title": "Looking Upstream: How Much VAT Do Informal Purchases Carry?",
     "authors": "Rodrigo Chang",
     "year": 2026,
     "type": "Working Paper",
     "publication": "UNU-WIDER Working Paper Series, 2026 (forthcoming)",
     "url": "",
-    "abstract": "A forthcoming WIDER working paper examining how to account for informal consumption when modelling value-added tax (VAT) in SOUTHMOD tax-benefit microsimulation models, with applications to Rwanda, Peru, Mozambique, and Uganda.",
-    "citation": "Chang, R. & Lastunen, J. Informal Consumption in the Microsimulation of VAT: Application to Rwanda, Peru, Mozambique, and Uganda, WIDER Working Paper, Helsinki: UNU-WIDER, 2026 (forthcoming).",
+    "abstract": "A forthcoming WIDER working paper on how much VAT informal purchases carry from earlier stages of the supply chain. Linking household surveys and input-output tables to tax-benefit models for Rwanda, Uganda, Mozambique, and Peru, it estimates this upstream tax, shows how it changes the progressivity gain attributed to informal consumption, and simulates how food exemptions can protect informal buyers through their suppliers.",
+    "citation": "Lastunen, J. & Chang, R. Looking Upstream: How Much VAT Do Informal Purchases Carry?, WIDER Working Paper, Helsinki: UNU-WIDER, 2026 (forthcoming).",
     "extras": null,
     "added": "2026-06-08",
     "topics": [
       "Microsim",
       "Data & methods"
-    ]
+    ],
+    "homePreview": false
   },
   {
     "title": "The Emergence of Tax-benefit Microsimulation Models in the Global South",
@@ -625,6 +626,23 @@
     "topics": [
       "Microsim",
       "Data & methods"
+    ]
+  },
+  {
+    "title": "Worth the Overhead? Administrative Costs and the Poverty Impact of Social Protection",
+    "authors": "Anna Zasova, Pia Rattenhuber",
+    "year": 2026,
+    "type": "Working Paper",
+    "publication": "UNU-WIDER Working Paper Series, 2026 (forthcoming)",
+    "url": "",
+    "abstract": "A forthcoming WIDER working paper measuring how much administrative costs limit the poverty impact of 59 non-contributory social protection programmes in 13 African and Latin American countries, combining cost estimates with tax-benefit microsimulation models. It finds that these costs explain little of the differences between programmes, compared with how much spending reaches the poor, and compares each programme with a universal transfer per dollar of total cost.",
+    "citation": "Lastunen, J., Zasova, A. & Rattenhuber, P. Worth the Overhead? Administrative Costs and the Poverty Impact of Social Protection, WIDER Working Paper, Helsinki: UNU-WIDER, 2026 (forthcoming).",
+    "extras": null,
+    "added": "2026-11-04",
+    "homePreview": false,
+    "topics": [
+      "Microsim",
+      "Poverty & Inequality"
     ]
   }
 ]
