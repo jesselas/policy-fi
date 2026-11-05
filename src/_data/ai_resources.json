@@ -6500,5 +6500,110 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "goldsmith-pinkham-will-ai-replace-ras-professors-economists",
+    "title": "Will AI replace RAs/Professors/Economists?",
+    "url": "https://paulgp.substack.com/p/will-ai-replace-rasprofessorseconomists",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-11-04",
+    "description": "Write-up of a lecture on AI that Goldsmith-Pinkham gave at Emory's economics department, with slides linked. He uses a production, verification and judgment framework to argue that AI substitutes for routine coding and lecture-style work but complements judgment. His main warning is that the bigger risk is weakening the pipeline that trains junior researchers. A good thing to read before a department discussion about RAs and PhD training.",
+    "shortDescription": "Emory lecture: AI substitutes for routine research work but complements judgment. The real risk is the junior-researcher training pipeline.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "LLM",
+      "research workflow",
+      "academia",
+      "labor"
+    ],
+    "type": "article"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "hull-different-differences-in-differences-meta-analysis",
+    "title": "How Different are Different Differences-in-Differences? A Large-Scale Meta-Analysis (NBER)",
+    "url": "https://www.nber.org/papers/w35974",
+    "author": "Peter Hull",
+    "date": "2026-10",
+    "description": "Uses AI-assisted replication to re-run 1,430 staggered-adoption specifications from 116 economics papers, comparing two-way fixed effects with modern difference-in-differences estimators. TWFE and modern estimates are highly correlated, and opposite-sign significant results are rare, which suggests negative weights matter less in practice than feared. It also shows how AI can make large-scale assessment of new econometric methods feasible.",
+    "shortDescription": "AI-assisted replication of 1,430 DiD specifications from 116 papers finds TWFE and modern DiD estimates largely agree.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "replication",
+      "econometrics",
+      "difference-in-differences"
+    ],
+    "type": "paper"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "popov-same-text-different-filename-llm-judges",
+    "title": "Same Text, Different Filename: Are LLM Judges Biased? (arXiv)",
+    "url": "https://arxiv.org/abs/2611.01829",
+    "author": "Sergey V. Popov",
+    "date": "2026-11-01",
+    "description": "Motivated by economics journals adopting LLM tools such as Refine.ink to screen submissions, this paper tests whether renaming a file changes how frontier LLMs score the same document. All three models tested gave different scores depending on the filename label. The bias depends on context rather than following a simple pattern such as self-preference or a penalty for Asian names. Relevant to anyone using LLMs to referee or grade.",
+    "shortDescription": "Three frontier LLMs score identical documents differently depending only on the filename, a warning for AI-assisted refereeing.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "LLM-as-judge",
+      "peer review",
+      "bias"
+    ],
+    "type": "paper"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "na-zhu-cross-bakker-behavioral-profiles-llm-simulation",
+    "title": "Designing Behavioral Profiles for Language Model Simulation of Out-of-Distribution Human Behavior (arXiv)",
+    "url": "https://arxiv.org/abs/2611.00661",
+    "author": "Robin Na, Kehang Zhu, Logan Cross, Michiel A. Bakker",
+    "date": "2026-10-31",
+    "description": "Asks which descriptions of people actually improve LLM simulations of human behavior when the experimental design changes. Profiles are built from prior experiments and chosen by forward feature selection. Across public-goods, multi-party bargaining and 11-20 money-request games, a single well-chosen feature beats both no profile and generic personas. Reusing profiles across game families gives uneven results. Practical guidance for silicon-subject experiments.",
+    "shortDescription": "For LLM simulation of experimental subjects, one well-chosen behavioral feature beats generic personas, but profiles transfer unevenly across games.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "simulation",
+      "experimental economics",
+      "synthetic agents"
+    ],
+    "type": "paper"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "alidaee-khanna-koning-learning-markets-ai-hiring-platform",
+    "title": "Learning about Markets from Models: Evidence from an AI Hiring Platform (arXiv)",
+    "url": "https://arxiv.org/abs/2611.01226",
+    "author": "Hossein Alidaee, Tarun Khanna, Rembrand Koning",
+    "date": "2026-10-31",
+    "description": "Uses an AI hiring platform for large low-skill employers, which builds firm-specific retention-prediction models from a psychometric assessment. Each firm's model predicts well for that firm but no better than chance at other firms. Scoring every applicant at every firm shows large, trait-specific gains from reallocation and disagreement among firms about which traits matter. The paper argues that context-specific models are a lens for learning how markets work.",
+    "shortDescription": "Firm-specific ML hiring models predict well in-house but at chance elsewhere, revealing how employers differ in valuing applicant traits.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "machine learning",
+      "labor",
+      "hiring",
+      "platforms"
+    ],
+    "type": "paper"
   }
 ]
