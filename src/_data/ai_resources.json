@@ -6605,5 +6605,26 @@
       "platforms"
     ],
     "type": "paper"
+  },
+  {
+    "id": "saxena-caccioli-delriochanona-decision-models-economic-surrogates",
+    "title": "Decision Models as Scalable Economic Surrogates that Capture Human Variation (arXiv)",
+    "url": "https://arxiv.org/abs/2611.05553",
+    "author": "Maxime Saxena, Fabio Caccioli, R. Maria del Rio-Chanona",
+    "date": "2026-11-03",
+    "description": "Benchmarks 10 \"Decision Models\" — AI models that output a probability distribution over a fixed set of options — against 8 LLMs as stand-ins for human subjects in a household spending survey, classic economic games, and a labour-market field experiment. The authors find top DMs reproduce the spread of human responses more closely than LLMs while running roughly ten times faster and at a fraction of the cost. Useful for anyone using synthetic respondents or agent-based simulations who worries LLMs flatten human heterogeneity.",
+    "shortDescription": "Compares Decision Models with LLMs as human surrogates in surveys, economic games and a field experiment; DMs better capture human variation, far cheaper.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "simulation",
+      "synthetic respondents",
+      "experiments"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
