@@ -6626,5 +6626,110 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "imas-koh-legg-organizing-intelligence",
+    "title": "Organizing Intelligence (arXiv)",
+    "url": "https://arxiv.org/abs/2611.05417",
+    "author": "Alex Imas, Andrew Koh, Shane Legg",
+    "date": "2026-10-31",
+    "description": "Economic theory of when AI advances translate into economic transformation, built around firms as the unit of production. Human and AI agents with multidimensional capabilities sort into competing firms; the model separates competence (productivity levels) from coordination (how productivity scales with size). Because AI expertise is reproducible and may escape human coordination limits, better AI coordination can break the Coasean ceiling on firm size, and job losses are gradual or sudden depending on whether displacement happens inside mixed firms or through AI firms outcompeting human ones.",
+    "shortDescription": "Imas, Koh & Legg model how AI competence vs. coordination reshapes firm size, market structure, employment and wages.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "theory",
+      "firms",
+      "labor"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "achim-verification-bottleneck",
+    "title": "The Verification Bottleneck (arXiv)",
+    "url": "https://arxiv.org/abs/2611.02265",
+    "author": "Peter Achim",
+    "date": "2026-11-01",
+    "description": "General-equilibrium model of peer review asking what happens to scientific verification when generative AI makes research cheaper to produce. Costly output helps screen quality, so cheaper production lets weaker researchers imitate stronger ones; past a technological threshold, reviewer capacity and verified knowledge decline even under optimal editorial decisions, and reviewer withdrawal can amplify the loss. A theory companion to current debates about AI-generated submissions flooding journals.",
+    "shortDescription": "Model of peer review showing cheaper AI-assisted research production can reduce reviewer capacity and verified knowledge.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "peer review",
+      "publishing",
+      "theory"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "qian-yu-screening-ai-equipped-applicants",
+    "title": "Screening AI-equipped applicants (arXiv)",
+    "url": "https://arxiv.org/abs/2610.34508",
+    "author": "Pengyu Qian, Sophie H. Yu",
+    "date": "2026-10-25",
+    "description": "Mechanism-design paper on hiring when generative AI makes polished application materials cheap without improving ability. An employer sees observable quality but must infer other traits from manipulable reports; as manipulation ability becomes more dispersed, optimal hiring collapses to observables alone (\"strategic feature collapse\"). The authors propose a dual-track mechanism — direct admission for high observable quality plus a report-based route for others — that is asymptotically optimal.",
+    "shortDescription": "Theory of hiring when GenAI makes applications cheap to polish: optimal screening collapses to observables; a dual-track rule recovers value.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "mechanism design",
+      "hiring",
+      "labor"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "xu-vilan-fed-monetary-policy-llms-semi-structural",
+    "title": "Assessing Monetary Policy Globally: Evidence from LLMs and Semi-structural Models (FEDS Notes)",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/assessing-monetary-policy-globally-evidence-from-llms-and-semi-structural-models-20261009.html",
+    "author": "WanTing Xu, Diego Vilán",
+    "date": "2026-10-09",
+    "description": "Federal Reserve note comparing a dictionary-based sentiment measure with a Claude Haiku 4.5-based measure of policy tone, applied to the BIS collection of central bank speeches (1996–2025), and benchmarking both against semi-structural estimates of each country's stance relative to its neutral rate. The LLM measure tends to move earlier than the model-based one, especially around the post-pandemic tightening, suggesting LLM communication indicators are a timely complement to conventional measures. A worked example of LLM text measurement in macro.",
+    "shortDescription": "Fed note using an LLM to score central bank speeches' policy tone and benchmarking it against dictionary and semi-structural measures.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "text as data",
+      "monetary policy",
+      "Federal Reserve"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "tito-fed-ai-factory-floor-job-postings",
+    "title": "AI on the Factory Floor: Evidence from Manufacturing Job Postings (FEDS Notes)",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-on-the-factory-floor-evidence-from-manufacturing-job-postings-20260930.html",
+    "author": "Maria D. Tito",
+    "date": "2026-09-30",
+    "description": "Federal Reserve note using Lightcast job postings to track whether AI adoption is changing the skills manufacturers hire for. Classifying postings by AI skills (Acemoglu et al. 2022) and computer skills (Deming and Kahn 2018), it finds AI skill requirements rose sharply in the second half of 2025, driven mostly by machine learning rather than generative AI, and that AI-skill postings advertise substantially higher wages. Useful for measurement of AI diffusion in labor demand.",
+    "shortDescription": "Fed note on Lightcast postings: AI skill demand in manufacturing jumped in late 2025, mostly machine learning, with a large wage premium.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor demand",
+      "job postings",
+      "Federal Reserve"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
   }
 ]
