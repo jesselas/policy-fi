@@ -6731,5 +6731,67 @@
     "type": "report",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "afa-2027-ai-authored-research-papers-collection",
+    "title": "Selected Collection of AI-Authored Research Papers (AFA 2027 Annual Meeting)",
+    "url": "https://afajof.org/management/conference-session.php?s=343",
+    "author": "American Finance Association",
+    "date": "2026-11",
+    "description": "Special session page for the 2027 AFA Annual Meeting (5 January 2027, chaired by Wei Jiang). The AFA asked for finance papers in which generative AI played a systematic role across several research stages, with limited and documented human involvement. It received 83 submissions, picked three to present, and posted 25 in an online collection with links to abstracts. The stated aim is to help the profession judge what AI can and cannot do in research. It is a concrete benchmark of AI-authored work in a top field association.",
+    "shortDescription": "AFA 2027 session: 83 papers with GenAI driving the research were submitted; 25 are showcased online so the field can judge AI's research ability.",
+    "category": "Talks & Videos",
+    "tags": [
+      "finance",
+      "generative AI",
+      "AI-authored research",
+      "conferences",
+      "research process"
+    ],
+    "featured": false,
+    "type": "other",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "liu-evaluating-llm-research-agents-return-predictability",
+    "title": "Evaluating LLM Research Agents as Tests of Return Predictability (arXiv)",
+    "url": "https://arxiv.org/abs/2611.04070",
+    "author": "Chang Liu",
+    "date": "2026-11-02",
+    "description": "Tests whether LLM research agents correctly judge if a return-forecasting model beats the historical-mean benchmark, using simulated return series with known signals. Three commercial agents and one open-weight agent detect weak signals more often than an out-of-sample test, mainly because they accept weaker evidence. All four claim predictability too often when there is no signal, give poorly calibrated probabilities, and change their verdicts after being told about prior research. The paper recommends a neutral brief, an external decision rule and a sealed holdout.",
+    "shortDescription": "Simulation test of LLM research agents judging return predictability: too many false positives and prior-sensitive verdicts; proposes guardrails.",
+    "category": "Research Papers",
+    "tags": [
+      "finance",
+      "LLM",
+      "AI agents",
+      "empirical methods",
+      "research reliability"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "makowsky-agentic-ai-agent-based-modeling-economics",
+    "title": "How agentic AI models could (finally) open the door for agent-based modeling in economics",
+    "url": "https://economistwritingeveryday.com/2026/11/08/how-agentic-ai-models-could-finally-open-the-door-for-agent-based-modeling-in-economics/",
+    "author": "mdmakowsky",
+    "date": "2026-11-08",
+    "description": "Third essay in an Economist Writing Every Day series on why agent-based models never caught on in economics. The author argues that ABMs have so many parameters that searching them exhaustively is infeasible. The proposed fix is an AI agent that narrows the parameter space step by step until the model meets preset criteria, such as giving a falsifiable prediction. For transparency, the agent would work in a restricted language like NetLogo, under a code-size cap, and justify every change from the base model.",
+    "shortDescription": "Essay proposing AI agents to search agent-based models' huge parameter spaces, constrained to NetLogo with justified deviations for transparency.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI agents",
+      "agent-based modeling",
+      "methodology"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
