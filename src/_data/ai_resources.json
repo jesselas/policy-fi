@@ -6793,5 +6793,68 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "ilo-ai-developing-economies-decent-work-brief",
+    "title": "AI and developing economies: Promoting decent work in a time of rapid technological change (ILO)",
+    "url": "https://www.ilo.org/publications/ai-and-developing-economies-promoting-decent-work-time-rapid-technological",
+    "author": "International Labour Organization",
+    "date": "2026-11-04",
+    "description": "ILO policy brief arguing that AI's labour-market effects so far are modest and gradual, even in advanced economies, which gives developing economies time to build the foundations for inclusive growth. It separates exposure, adoption and actual outcomes. It warns that weaker capacity in compute, data and skills could bring disruption before the gains, and it flags job-quality risks in data annotation, content moderation and platform work. It is a concise policy framing for development economists working on AI and labour.",
+    "shortDescription": "ILO brief: AI's labour effects are modest so far; developing economies risk disruption before gains without investment in capabilities and decent-work rules.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor markets",
+      "developing countries",
+      "policy"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "deming-how-to-use-ai-to-learn-better-video",
+    "title": "How to Use A.I. to Learn Better: What the Research Says",
+    "url": "https://www.youtube.com/watch?v=s4rH33Mq4hE",
+    "author": "David Deming",
+    "date": "2026-11",
+    "description": "Episode of David Deming's video and podcast series The Context Window, which reviews more than a dozen recent randomized trials and other well-designed studies of AI in learning. Deming says the evidence mostly points to real benefits from thoughtful use, and he draws three lessons: try the problem before turning to AI, use AI to personalize productive struggle, and make appropriate use easy and inappropriate use hard. It is useful for economists who teach and want an evidence-based take on student AI use.",
+    "shortDescription": "Deming reviews RCT evidence on AI and learning: think first, use AI to personalize productive struggle, and make good use easy and bad use hard.",
+    "category": "Talks & Videos",
+    "tags": [
+      "economics",
+      "AI",
+      "education",
+      "teaching",
+      "RCTs"
+    ],
+    "featured": false,
+    "type": "video",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "seamans-aspen-skills-alignment-ai-economy",
+    "title": "Skills Alignment for the AI Economy: A Framework for US Labor Market Policy (Aspen Economic Strategy Group)",
+    "url": "https://www.economicstrategygroup.org/publication/skills-alignment-for-the-ai-economy-a-framework-for-us-labor-market-policy/",
+    "author": "Robert Seamans",
+    "date": "2026-09-21",
+    "description": "Policy paper arguing that official data show no broad AI-driven job displacement so far, even though AI raises individual productivity and adoption is spreading unevenly across firms and places. Instead of AI-specific measures such as robot taxes or targeted layoff aid, Seamans proposes a skills-alignment framework: tighter feedback between employers, workers and training providers, modernized unemployment insurance and workforce programs, wage insurance, less tax preference for capital, and better labour statistics.",
+    "shortDescription": "Seamans finds no broad AI displacement yet and proposes a skills-alignment framework for US labor policy over robot taxes or AI-specific layoff aid.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor policy",
+      "workforce training",
+      "United States"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
   }
 ]
