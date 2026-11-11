@@ -6856,5 +6856,89 @@
     "type": "report",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "dell-rambachan-nber-si-2026-methods-lecture-ai-generated-data",
+    "title": "Estimation and Inference with AI-Generated Data (NBER Summer Institute 2026 Methods Lecture)",
+    "url": "https://www.nber.org/research/videos/2026-methods-lecture-melissa-dell-and-ashesh-rambachan-estimation-and-inference-ai-generated-data",
+    "author": "Melissa Dell, Ashesh Rambachan",
+    "date": "2026-07-30",
+    "description": "Recorded NBER Methods Lecture in which Melissa Dell (Harvard) and Ashesh Rambachan (MIT) survey the fast-growing ways economists use large language models and other AI tools for measurement, and the econometric problems that follow. The lectures cover the theory behind the new econometric tools and show them applied in several settings. The page lists background readings, including Dell's Deep Learning for Economists and Ludwig, Mullainathan and Rambachan's applied econometric framework for LLMs. It works well as a video companion to the authors' Measurement Revolution paper.",
+    "shortDescription": "Dell and Rambachan's NBER Methods Lecture on using LLMs and other AI for economic measurement, and valid inference with AI-generated data.",
+    "category": "Talks & Videos",
+    "tags": [
+      "economics",
+      "LLM",
+      "econometrics",
+      "measurement",
+      "NBER"
+    ],
+    "featured": false,
+    "type": "video",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "goldsmith-pinkham-nber-si-2026-using-ai-household-finance-research",
+    "title": "Using AI in Household Finance Research: A Practical Guide (NBER Summer Institute 2026)",
+    "url": "https://www.nber.org/research/videos/2026-si-household-finance-paul-goldsmith-pinkham-using-ai-household-finance-research-practical-guide",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-07-24",
+    "description": "Recording of Paul Goldsmith-Pinkham's invited talk at the NBER Summer Institute Household Finance meeting. In his companion Substack post he describes it as a 75-minute \"best hits\" collection of his thinking on using AI in research, aimed at household finance but broadly useful. The slides and talk materials are on GitHub (paulgp/nber_hf_2026), and he has also posted a set of Claude Code recordings. A good starting point for applied researchers who want a practical overview from an economist who uses these tools heavily.",
+    "shortDescription": "Goldsmith-Pinkham's NBER SI talk: a practical, 75-minute guide to using AI in empirical research, with slides and Claude Code recordings posted online.",
+    "category": "Talks & Videos",
+    "tags": [
+      "economics",
+      "AI",
+      "Claude Code",
+      "household finance",
+      "NBER"
+    ],
+    "featured": false,
+    "type": "video",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "anthropic-ai-scientific-discovery-how-researchers-use-claude",
+    "title": "AI for Scientific Discovery: How Researchers Use Claude (Anthropic)",
+    "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+    "author": "Johannes Hermle, Ben Jones, Lukas Althoff, Ryan Heller, Thomas Lyttelton, Carolyn Stein, Nathan Wilmers, Maxim Massenkoff, Peter McCrory",
+    "date": "2026-11-05",
+    "description": "Report from Anthropic's Economics team that classifies about 207,000 Claude and Claude Code research sessions by field and research task, and compares usage with researcher counts and time use. Data analysis and writing dominate, and use tracks a task-level AI capability score. Economics is used well above its researcher share and is the one relatively quantitative social science on Claude Code. Using an ideas production function, the authors estimate that wide adoption of current capabilities could free 27–52% of research time.",
+    "shortDescription": "Anthropic economists map 207k research sessions by field and task, and estimate that wide AI adoption could free 27–52% of researcher time.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "Claude Code",
+      "science of science",
+      "research productivity"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "sahm-ode-to-the-juniors",
+    "title": "Ode to the Juniors",
+    "url": "https://stayathomemacro.substack.com/p/ode-to-the-juniors",
+    "author": "Claudia Sahm",
+    "date": "2026-11-08",
+    "description": "Claudia Sahm, a former CEA senior economist, responds to Jason Furman's argument that AI could replace much of the Council of Economic Advisers' staff, especially its junior economists. She grants that AI can do many of the tasks but argues that a job also serves a mission, and at CEA that mission includes stopping bad policy ideas. Junior staff, she argues, are more willing than AI to challenge a plan's premises, and they are the profession's training pipeline. A useful counterpoint in the debate over AI and economist jobs.",
+    "shortDescription": "Sahm pushes back on replacing junior CEA economists with AI: tasks can be automated, but challenging bad policy and training the pipeline need people.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "policy economists",
+      "labor",
+      "CEA"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
