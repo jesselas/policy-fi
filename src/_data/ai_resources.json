@@ -6940,5 +6940,114 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "huang-hazell-householdbench-llm-household-behavior",
+    "title": "HouseholdBench: Evaluating Large Language Models as Predictors of Household Economic Behavior (NBER)",
+    "url": "https://www.nber.org/papers/w35927",
+    "author": "Jin Huang, Diego Ferreras Garrucho, Yutong Xie, Walter M. Yuan, Qiaozhu Mei, Chen Lian, Jonathon Hazell",
+    "date": "2026-10",
+    "description": "A benchmark built from six U.S. household surveys and 32 prediction tasks (consumption, income, labor, expectations, housing, and policy responses) that tests how well LLMs predict household behavior. Across 13 proprietary and open-weight models, most beat a no-change baseline, but gradient-boosted trees still rank first on most tasks. A fine-tuned 4B open-weight model can match proprietary performance. Datasets, code and a leaderboard are public, so it is a ready yardstick for anyone using LLMs as simulated households.",
+    "shortDescription": "Benchmark of 13 LLMs on 32 household-survey prediction tasks: most beat naive baselines, but gradient-boosted trees still lead. Data and code public.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "benchmark",
+      "household finance",
+      "simulation",
+      "surveys"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "wang-brynjolfsson-yang-tasknet-occupational-task-inventories",
+    "title": "TaskNet: Building Occupational Task Inventories from Worker Interviews at Scale (NBER)",
+    "url": "https://www.nber.org/papers/w35987",
+    "author": "Jennifer Wang, Andreas Haupt, Isaac Robinson, Phil Lewis, Erik Brynjolfsson, Diyi Yang",
+    "date": "2026-11",
+    "description": "Introduces the Stanford Task Network, an occupational taxonomy built from a system that interviews workers, turns their reports into task lists, and aggregates them into occupational task inventories. Across six occupations it matches 75% of published O*NET tasks, adds 79 new ones and refines 58, and covers more of what held-out workers report. Because the task lists differ, it shifts AI exposure estimates in both directions. Relevant to anyone building or relying on task-based AI exposure measures.",
+    "shortDescription": "Stanford's TaskNet builds O*NET-style task lists from worker interviews at scale, adding new tasks and shifting occupational AI exposure estimates.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor",
+      "AI exposure",
+      "O*NET",
+      "measurement"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "barwick-ai-shared-business-infrastructure-firm-growth",
+    "title": "AI as Shared Business Infrastructure: Firm Growth and the Distribution of Gains (NBER)",
+    "url": "https://www.nber.org/papers/w36003",
+    "author": "Panle Jia Barwick, Lu Fang, Jinhan Liu, Huilan Xu, Zhe Yuan",
+    "date": "2026-11",
+    "description": "Studies a large Chinese e-commerce platform that in 2024 built generative AI tools into the software its merchants use to run their stores. Linking each firm's AI use to monthly operations, a matched difference-in-differences design finds adoption raises small merchants' monthly sales by 51.6%, mostly through more orders, with the largest proportional gains among the smallest firms. The authors trace the gains to lower costs of routine work and reduced information frictions, and find little sign of business-stealing from non-adopters.",
+    "shortDescription": "Platform-provided generative AI raised small Chinese e-commerce merchants' sales by about 52%, with the biggest gains for the smallest firms.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "generative AI",
+      "firms",
+      "productivity",
+      "e-commerce",
+      "China"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "chetty-katz-experimentally-validated-digital-twins",
+    "title": "Experimentally Validated Digital Twins: Evaluating Workforce Training Programs in the Age of Big Data (Opportunity Insights)",
+    "url": "https://opportunityinsights.org/wp-content/uploads/2026/09/DigitalTwins_FullPaper.pdf",
+    "author": "Raj Chetty, Jamie Fogel, Lawrence F. Katz, Kadeem Noray, Sonya Porter, James Reisinger",
+    "date": "2026-11",
+    "description": "Uses machine learning on income tax records covering all U.S. adults (1999-2025) to predict counterfactual earnings for job-training participants, then uses 37 RCTs to estimate the bias of these observational estimates. The ML estimates closely match the experiments, with error comparable to the RCTs themselves and 60% lower than older parametric estimators. A prominent case that ML plus administrative data can build 'digital twins' for program evaluation; Tyler Cowen called it work that will revolutionize economic method.",
+    "shortDescription": "Chetty, Katz et al. show ML counterfactuals from tax data match 37 job-training RCTs, a scalable 'digital twin' approach to program evaluation.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "machine learning",
+      "causal inference",
+      "program evaluation",
+      "administrative data"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "sanecite-checking-ai-audit-saez-zucman",
+    "title": "Checking the AI audit of Saez and Zucman's research",
+    "url": "https://sanecite.com/saez-zucman-check",
+    "author": "SaneCite",
+    "date": "2026-11-09",
+    "description": "An audit of the anonymous AI review that flagged 147 problems in Emmanuel Saez and Gabriel Zucman's inequality research, which Marginal Revolution featured in October 2026. Using several AI models as readers, with quotes checked by program, SaneCite finds the audit's checkable facts held up on 131 of 147 flags, but only 21 would change a headline result under the papers' own methods. Code and data are open. A concrete test case for how far AI-generated replication audits of economics research can be trusted.",
+    "shortDescription": "An AI-assisted check of the anonymous AI audit of Saez-Zucman: facts mostly right, but only 21 of 147 flags change a headline number.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "AI",
+      "replication",
+      "auditing",
+      "inequality",
+      "research integrity"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
   }
 ]
