@@ -7049,5 +7049,47 @@
     "type": "article",
     "internal": false,
     "highlight": false
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "chin-kunievsky-rebundling-freelance-work-ai-age",
+    "title": "The Rebundling of Freelance Work in the AI Age (arXiv)",
+    "url": "https://arxiv.org/abs/2611.14708",
+    "author": "Caroline Chin, Shagun Kala, Nadav Kunievsky, Teng Liu, Alex Martin Richmond, Carl Shan",
+    "date": "2026-11-10",
+    "description": "Compares what people do in ChatGPT with the work clients post on Upwork to see how generative AI is reshaping freelance demand. Activities more common in ChatGPT lose share on Upwork while less common ones gain. AI-related postings combine tasks rarely requested together before generative AI and carry much larger budgets and hours, with little difference in hourly rates. Useful for labor economists studying AI's effect on task bundling, not just task substitution.",
+    "shortDescription": "ChatGPT usage vs. Upwork postings: AI shifts which freelance tasks are outsourced and rebundles them into larger, higher-value projects.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "LLM",
+      "labor markets",
+      "freelance",
+      "task bundling"
+    ],
+    "type": "paper"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "dehaan-huang-tabular-foundation-models-financial-predictions",
+    "title": "Tabular Foundation Models in Financial Predictions (arXiv)",
+    "url": "https://arxiv.org/abs/2611.13550",
+    "author": "Ed deHaan, Allen H. Huang",
+    "date": "2026-11-10",
+    "description": "A technical note introducing tabular foundation models to accounting and finance research, tested on the standard benchmark of predicting next-year earnings changes. Because these models learn in context and are pretrained on synthetic tables, they need no tuning and avoid look-ahead bias from memorized firm outcomes. Google Research's TabFM beats a fine-tuned open-weight LLM and tree-based models on accuracy while using less compute. The authors caution that it is a single benchmark.",
+    "shortDescription": "Tabular foundation models beat a fine-tuned LLM and tree models at earnings prediction while avoiding look-ahead bias from memorization.",
+    "category": "Research Papers",
+    "tags": [
+      "finance",
+      "accounting",
+      "forecasting",
+      "foundation models",
+      "look-ahead bias"
+    ],
+    "type": "paper"
   }
 ]
