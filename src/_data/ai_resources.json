@@ -7091,5 +7091,68 @@
       "look-ahead bias"
     ],
     "type": "paper"
+  },
+  {
+    "id": "worldbank-dime-ai-research-code-review-skill",
+    "title": "AI Is Writing More Research Code: Who Is Reviewing It? (Development Impact blog)",
+    "url": "https://blogs.worldbank.org/en/impactevaluations/ai-is-writing-more-research-code---who-is-reviewing-it--",
+    "author": "Ankriti Singh, María Reyes Retana Torre, Maria Jones",
+    "date": "2026-11-03",
+    "description": "World Bank DIME researchers turn their peer code-review checklists and lessons from reproducibility reviews into an open-source AI skill for reviewing research code in Stata, R and Python. The skill runs a read-only review first, after confirming no confidential data is exposed, and rates findings by severity across 60+ checks. Only fixes the researcher approves are applied, tracked in Git. The authors stress it does not run code or inspect data, so it cannot certify reproducibility.",
+    "shortDescription": "World Bank DIME releases an open-source AI skill that reviews Stata/R/Python research code against 60+ checks, with severity-rated findings.",
+    "category": "Coding with AI",
+    "tags": [
+      "code review",
+      "reproducibility",
+      "skills",
+      "stata",
+      "development economics"
+    ],
+    "featured": false,
+    "type": "guide",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "ec-living-guidelines-generative-ai-research-4th-ed",
+    "title": "Living Guidelines on the Responsible Use of Generative AI in Research, Fourth Version (European Commission)",
+    "url": "https://research-and-innovation.ec.europa.eu/document/download/2b6cf7e5-36ac-41cb-aab5-0d32050143dc_en?filename=ec_rtd_ai-guidelines.pdf",
+    "author": "European Commission, DG Research and Innovation",
+    "date": "2026-10",
+    "description": "The October 2026 edition of the Commission’s ERA Forum guidelines on generative AI in research, now covering agentic AI. It sets out recommendations for researchers, research organisations and funders: researchers remain accountable for output, disclose substantial AI use (e.g. for hypotheses or identifying research gaps, not basic editing), and protect unpublished or sensitive work, including when granting agents access to data. It also reviews current developments and the policy context.",
+    "shortDescription": "EC’s updated guidelines on generative and agentic AI in research: accountability, disclosure of substantial use, data protection, and advice for funders.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "policy",
+      "research integrity",
+      "disclosure",
+      "agentic AI",
+      "EU"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "haaland-phd-students-leverage-ai-research-thread",
+    "title": "How Should PhD Students Leverage AI in Their Research?",
+    "url": "https://www.linkedin.com/posts/ihaal_how-should-phd-students-leverage-ai-in-their-share-7526559136910622721-nUTS/",
+    "author": "Ingar Haaland",
+    "date": "2026-11-12",
+    "description": "A thread of advice for economics PhD students. Haaland urges students to write papers that use AI to analyse text at scale, such as a million books, articles or company reports, while investing heavily in prompt validation before spending on API calls. He also suggests running behavioural interventions or software-based experiments with LLMs. Studying LLM properties is possible, but he notes models change fast and advises using LLMs to answer big economic questions.",
+    "shortDescription": "Economist Ingar Haaland’s advice to PhD students: use AI to analyse text at scale, validate prompts first, and run LLM-based experiments.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "PhD students",
+      "LLM",
+      "text as data",
+      "experiments",
+      "advice"
+    ],
+    "featured": false,
+    "type": "thread",
+    "internal": false,
+    "highlight": false
   }
 ]
