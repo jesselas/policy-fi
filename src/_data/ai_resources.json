@@ -7154,5 +7154,110 @@
     "type": "thread",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "bjorkegren-lagakos-vanvuren-ai-growth-developing-world",
+    "title": "Will AI Growth Reach the Developing World? (NBER)",
+    "url": "https://www.nber.org/papers/w36035",
+    "author": "Daniel Björkegren, David Lagakos, Mitchell VanVuren",
+    "date": "2026-11",
+    "description": "A two-country growth model in which AI services are traded on world markets and may substitute for or complement different kinds of labor. It predicts developing countries may gain less from AI-driven growth because they lack complementary skills and can be priced out of world markets by lower productivity. Simulations compare policies such as skills complementary to AI, compute subsidies, faster diffusion and cash transfers, and the authors argue AI's effects on poorer countries should be studied in real time.",
+    "shortDescription": "Growth model: developing countries may gain less from AI, lacking complementary skills and priced out of world markets; simulates policy responses.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "growth",
+      "development",
+      "trade"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "van-nieuwerburgh-su-clouds-of-credit-ai-compute",
+    "title": "Clouds of Credit: Mapping the Financial Web Behind AI Compute (NBER)",
+    "url": "https://www.nber.org/papers/w36032",
+    "author": "Stijn Van Nieuwerburgh, Zijin Su",
+    "date": "2026-11",
+    "description": "Maps the network of equity and debt financing the AI compute buildout as of mid-2026 and builds a calibrated model of it. Equity cushions protect creditors, but concentrated exposures and interconnected claims create weak links; debt funds nearly 60% of the expansion, and investment exceeds the social optimum because firms ignore effects on rivals' revenues. In a low-productivity state losses reach $16.8 trillion. A useful reference for finance and macro economists assessing AI-related financial risk.",
+    "shortDescription": "Maps who finances AI compute: debt funds ~60% of the buildout, overinvestment vs. the social optimum, and $16.8T losses in a bad state.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "finance",
+      "financial stability",
+      "compute"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "sacerdote-parris-bacon-ai-higher-education-undergraduate-survey",
+    "title": "Impacts of AI in Higher Education: A Panel Survey of Undergraduates (NBER)",
+    "url": "https://www.nber.org/papers/w36021",
+    "author": "Bruce Sacerdote, Mason Parris-Bacon",
+    "date": "2026-11",
+    "description": "First wave of a panel survey of Dartmouth students, graduating high school seniors and a broader sample of U.S. college students on how they use AI. Students report use for tasks likely to harm learning and tasks likely to help it, see far more misuse among peers than in themselves, and 92% agree AI use is harmful to writing. Perceived value and harm vary widely by discipline. Relevant to economists who teach and are rethinking out-of-class assessment and AI in the curriculum.",
+    "shortDescription": "Survey of undergraduates on AI: heavy use for helpful and harmful tasks, 92% say it harms writing, and views vary widely by discipline.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "education",
+      "teaching",
+      "survey"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "esposito-zhang-ai-two-margins-of-work",
+    "title": "AI and the Two Margins of Work: Why Job Losses Show Up Before Job Creation (arXiv)",
+    "url": "https://arxiv.org/abs/2611.17530",
+    "author": "Mark Esposito, Liu Zhang",
+    "date": "2026-11-12",
+    "description": "Argues technology changes labor demand on two margins: adjustment within existing activities, which payroll data capture quickly, and new activities, often by new firms, which they capture late. Evidence from the computing era shows incumbents in automation-exposed industries contracted before entrants grew. A model in which AI lowers the cost of acceptable output implies hours fall first, then recover. The authors propose a net reinstatement ratio and argue current statistics overstate AI displacement for years.",
+    "shortDescription": "Why AI job losses show up in the data before job creation: new activities and firms are measured late, so statistics overstate displacement.",
+    "category": "Research Papers",
+    "tags": [
+      "economics",
+      "AI",
+      "labor markets",
+      "firm entry",
+      "measurement"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "stanford-ai100-2026-report-ai-goes-mainstream",
+    "title": "AI Goes Mainstream: The Scaling Era and the Rise of Generative AI (Stanford AI100 2026 Report)",
+    "url": "https://ai100.stanford.edu/reports/2026-report",
+    "author": "Michael Wooldridge, Peter Asaro, Lucie Flek, Iryna Gurevych, Sara Hooker, Gina Neff, Peter Norvig, Raymond Perrault, Iyad Rahwan, Samantha Shorey, Toby Walsh, Luke Zettlemoyer",
+    "date": "2026-11",
+    "description": "The third five-yearly study panel report of Stanford's One Hundred Year Study on AI, structured around standing questions and deep dives. Its takeaways state that AI's economic impact is not yet evident in aggregate macroeconomic data, warn of ripple effects if an AI bubble bursts, and describe governance as fragmented and increasingly framed around national security. The socioeconomic chapter covers algorithmic management, gig-style task work and the hidden labor of data annotation.",
+    "shortDescription": "Stanford AI100's 2026 panel report: AI's macro impact not yet visible, bubble risk, fragmented governance, and AI's effects on work relationships.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "AI",
+      "policy",
+      "governance",
+      "labor",
+      "report"
+    ],
+    "featured": false,
+    "type": "report",
+    "internal": false,
+    "highlight": false
   }
 ]
