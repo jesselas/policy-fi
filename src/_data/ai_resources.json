@@ -7259,5 +7259,125 @@
     "type": "report",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "gunsilius-vandijcke-wuthrich-inference-after-coding-agents",
+    "title": "Inference after Coding Agents (arXiv)",
+    "url": "https://arxiv.org/abs/2611.23174",
+    "author": "Florian Gunsilius, David Van Dijcke, Kaspar Wüthrich",
+    "date": "2026-11-17",
+    "description": "Argues that AI coding agents doing empirical research create a new, supercharged form of post-selection inference: open-ended search over estimators combined with replayable code. On simulated data with zero effects, four frontier agents asked for a compelling finding report significant p-values 54–98% of the time. The authors propose a correction that resets and replays the agent on subsamples to estimate its selection probability, bringing false rejection rates back near 5%.",
+    "shortDescription": "Coding agents asked for a compelling finding report false positives 54–98% of the time; a replay-on-subsamples correction restores valid inference.",
+    "category": "Research Papers",
+    "tags": [
+      "econometrics",
+      "coding agents",
+      "inference",
+      "research methods"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "farahat-auditing-ai-labeled-treatments",
+    "title": "Who Is the Regression About? Auditing AI-Labeled Treatments When Effects Differ (arXiv)",
+    "url": "https://arxiv.org/abs/2611.21207",
+    "author": "Ayman Farahat",
+    "date": "2026-11-16",
+    "description": "Examines regressions where the treatment variable is labeled by a large language model. With heterogeneous effects, a label's bias combines classical attenuation from misclassification with a selective term when errors correlate with outcomes. In LinkedIn job postings, the model misses better-paid remote jobs, so the remote pay gap is understated by nearly 40% even though a precision check passes; a stratified blind audit of both labeled groups corrects it.",
+    "shortDescription": "LLM-labeled treatments can bias regressions in ways precision checks miss; a stratified blind audit recovers the true effects.",
+    "category": "Research Papers",
+    "tags": [
+      "econometrics",
+      "LLM",
+      "measurement",
+      "text as data"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "zhang-evidence-audit-91-llm-trading-papers",
+    "title": "Short Windows, Unmodelled Costs, Unknown Cutoffs: A Pre-Registered Evidence Audit of 91 LLM Trading Papers (arXiv)",
+    "url": "https://arxiv.org/abs/2611.18934",
+    "author": "Henry Zhang",
+    "date": "2026-11-13",
+    "description": "A pre-registered meta-research audit of 91 papers on LLM trading agents and alpha mining. Of 75 papers with a trading test, 51% deduct no trading costs, the median test window is 12 months, and 98% of those whose window may overlap training data neither test after the model's cutoff nor use a chronologically consistent model. Only five papers combine costs, leakage control and a trial count; the author releases codes and proposes a six-line reporting minimum.",
+    "shortDescription": "Pre-registered audit of 91 LLM trading papers: most ignore trading costs and look-ahead leakage; proposes a minimum reporting standard.",
+    "category": "Research Papers",
+    "tags": [
+      "finance",
+      "LLM",
+      "look-ahead bias",
+      "meta-research"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "mit-stone-center-forecasting-ai-productivity-tool",
+    "title": "Forecasting the Impacts of AI on Productivity",
+    "url": "https://shapingwork.mit.edu/forecasting-the-impacts-of-ai-on-productivity",
+    "author": "MIT Stone Center on Inequality and Shaping the Future of Work",
+    "date": "2026-11",
+    "description": "An interactive tool that puts three forecasts of AI's effect on total factor productivity side by side: Acemoglu (2024), Aghion and Bunel (2024) and Korinek et al. (2026). Within Acemoglu's task-based framework, users set the GDP share of exposed tasks, the share profitable to automate, average cost savings and the adjusted labor share, or adopt each author's values, to see where and why the estimates diverge. It also compiles other published TFP, labor productivity and GDP estimates.",
+    "shortDescription": "Interactive MIT tool comparing Acemoglu, Aghion–Bunel and Korinek et al. AI productivity forecasts; tweak the inputs to see why they differ.",
+    "category": "AI Tools for Research",
+    "tags": [
+      "productivity",
+      "macroeconomics",
+      "forecasting",
+      "interactive"
+    ],
+    "featured": false,
+    "type": "tool",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "emery-data-analysis-intl-econ-finance-r-ai",
+    "title": "Data Analysis for International Economics and Finance Using R and AI",
+    "url": "https://tealinsights.com/sais-r-workshop-winter-2026-27/",
+    "author": "Teal Emery",
+    "date": "2026-11-11",
+    "description": "A free online course book written for a Johns Hopkins SAIS workshop for international economics and finance students. It teaches exploratory analysis of messy real-world IMF World Economic Outlook and World Bank data in R (dplyr, ggplot2, imports and joins) alongside AI-assisted coding, with exercises built around checking whether AI-produced answers make sense. Open to self-learners; the draft is dated November 2026.",
+    "shortDescription": "Free course book teaching R data analysis with AI assistance on IMF and World Bank data, built for a Johns Hopkins SAIS workshop.",
+    "category": "Courses & Learning",
+    "tags": [
+      "R",
+      "teaching",
+      "international economics",
+      "AI-assisted coding"
+    ],
+    "featured": false,
+    "type": "course",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "hanney-lagakos-ideas-in-development-left-behind-ai",
+    "title": "Who Will Get Left Behind in the AI Era? (Ideas in Development podcast)",
+    "url": "https://ideasindevelopment.substack.com/p/who-will-get-left-behind-in-the-ai",
+    "author": "Oliver Hanney, David Lagakos",
+    "date": "2026-11-17",
+    "description": "Oliver Hanney interviews David Lagakos about his new NBER paper with Daniel Björkegren and Mitchell VanVuren, an early macroeconomic framework for how AI could affect developing countries. The conversation covers poor countries being priced out of AI by rich-country demand, rising inequality between workers who complement AI and those it substitutes, why only building AI-complementary skills consistently helped catch-up among the policies modeled, and the measurement gaps.",
+    "shortDescription": "Podcast with David Lagakos on his NBER paper: why poor countries may be priced out of AI and which policies help them catch up.",
+    "category": "Talks & Videos",
+    "tags": [
+      "development",
+      "growth",
+      "podcast",
+      "inequality"
+    ],
+    "featured": false,
+    "type": "video",
+    "internal": false,
+    "highlight": false
   }
 ]
