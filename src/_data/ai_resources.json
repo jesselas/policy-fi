@@ -7379,5 +7379,26 @@
     "type": "video",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "dahl-wray-american-medical-directory-ai-transcription",
+    "title": "The American Medical Directory Panel: Comparing AI-Assisted and LLM Transcription with Manual Data Entry at Scale (arXiv)",
+    "url": "https://arxiv.org/abs/2611.25218",
+    "author": "Christian M. Dahl, Sophie Li, Rasmus Emil Nyholm, Maja U. Pedersen, Anthony Wray",
+    "date": "2026-11-18",
+    "description": "A head-to-head test of machine digitization for economic history, built on the 1912 and 1921 American Medical Directory (roughly 140,000 and 150,000 physician entries). Five extraction workflows are benchmarked against a full double-entered manual transcription: a commercial-OCR parser with rules written by coding agents recovers about 97% of records, beating a multimodal LLM workflow, and reconciling the two lifts recall and precision to about 98% at a fraction of manual cost per page.",
+    "shortDescription": "Benchmarks OCR+coding-agent parsers and LLM pipelines against manual double entry on 290,000 historical records; combined methods reach ~98% agreement.",
+    "category": "Research Papers",
+    "tags": [
+      "economic history",
+      "data digitization",
+      "LLM",
+      "OCR",
+      "research methods"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
