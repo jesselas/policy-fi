@@ -7400,5 +7400,46 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "refine-ai-audit-100-top-five-economics-papers",
+    "title": "An AI-assisted audit of 100 papers from the top five economics journals",
+    "url": "https://www.refine.ink/blog/top-five-economics-audit",
+    "author": "Refine",
+    "date": "2026-11-19",
+    "description": "Refine ran its AI review pipeline over 100 randomly drawn papers published in the top five economics journals in the first nine months of 2026, then had separate models and an expert rater audit the flagged issues. The headline: 10 of the 100 peer-reviewed papers contain at least one serious issue bearing on an important result. Worth opening for the audit design, the breakdown of 5,421 flagged issues, and the caveats on what \"serious\" does and does not mean. It is the data behind The Economist’s Free Exchange column.",
+    "shortDescription": "Refine audits 100 random 2026 top-five economics papers with AI; 10 contain at least one serious issue bearing on an important result.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "peer review",
+      "AI referee",
+      "replication",
+      "research quality"
+    ],
+    "featured": false,
+    "type": "article",
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "lombardi-park-perezcruz-marco-bis-agentic-econometrics",
+    "title": "MaRCo@BIS: AI-agentic econometric analysis for central bankers (BIS)",
+    "url": "https://www.bis.org/publications/working-paper-1395-marcobis-ai-agentic-econometric-analysis-central-bankers",
+    "author": "Marco Jacopo Lombardi, Taejin Park, Fernando Perez-Cruz",
+    "date": "2026-11-12",
+    "description": "A BIS working paper introducing MaRCo@BIS, a framework that runs macroeconometric work through an off-the-shelf agentic coding environment using plain-text workflow files, a verified dictionary of canonical model specifications, and a tested reference library. The agent proposes models, harmonises data, estimates, checks results against economic priors, and logs every decision while the researcher confirms consequential choices. Benchmarked by replicating three widely used structural VARs; the paper also discusses specification-search and automation-bias risks. The framework is released publicly.",
+    "shortDescription": "BIS framework for agentic macroeconometrics: coding agents propose and estimate models under human sign-off; benchmarked on three structural VAR replications.",
+    "category": "Research Papers",
+    "tags": [
+      "AI agents",
+      "econometrics",
+      "central banking",
+      "VAR",
+      "macroeconomics"
+    ],
+    "featured": false,
+    "type": "paper",
+    "internal": false,
+    "highlight": false
   }
 ]
