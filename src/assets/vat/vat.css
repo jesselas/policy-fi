@@ -1,14 +1,16 @@
-/* policy.fi/vat: the page inside the site's own layout */
+/* policy.fi/vat: the page inside the site's own layout, with its header in the site bar */
 html { scroll-behavior: auto; }
 .nav-container, .site-footer .container { max-width: 1440px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-@media (min-width: 1100px) { .nav-container, .site-footer .container { padding-left: 28px; padding-right: 28px; } .nav-container { height: 48px; } }
+@media (min-width: 1100px) { .nav-container, .site-footer .container { padding-left: 28px; padding-right: 28px; } }
+.nav-container { gap: 14px; }
+@media (max-width: 1100px) { .nav-toggle { display: none; } }
+.nav-theme-item { margin-left: 0; flex: none; }
 .site-footer { margin-top: 0; }
 .site-footer .container { padding-top: 1.1rem; padding-bottom: 1.1rem; }
 .vatx :where(*:not(svg, svg *)) { all: revert; }
 .vatx :where([hidden]) { display: none; }
 /* the site gives every element a 0.01 ms transition here, which makes measured sizes lag one step behind */
 @media (prefers-reduced-motion: reduce) { .vatx, .vatx *, .vatx *::before, .vatx *::after { transition: none !important; animation: none !important; } }
-@media (min-width: 1100px) and (max-height: 769px) { .nav-container { height: 40px; } }
 .vatx {
   --bg: #ffffff;
   --surface: #f5f6f8;
@@ -523,6 +525,7 @@ html { scroll-behavior: auto; }
 .vatx .drawer-body ul.defs { list-style: none; padding-left: 0; margin: 4px 0 12px; }
 .vatx .drawer-body ul.defs li { padding-left: 14px; text-indent: -14px; margin-bottom: 3px; }
 .vatx .drawer-body sup, .vatx .drawer-body sub { line-height: 0; }
+.vatx .key.boxed { box-shadow: inset 0 0 0 1px var(--ink-3); }
 /* Site colours: the site's paper ground and teal links in light, its slate ground in dark */
 .vatx {
   --bg: #f8f7f3; --card: #ffffff; --surface: #efeee8; --surface-2: #e6e4dc;
@@ -546,5 +549,17 @@ html { scroll-behavior: auto; }
 .vatx .drawer { z-index: 10011; }
 .vatx .tip { z-index: 10020; }
 .vatx .brand h1 { color: var(--ink); }
-@media (min-width: 1100px) and (max-height: 769px) { .vatx .page { padding-top: 6px; } .vatx .top { padding-bottom: 6px; } .vatx .work { margin-top: 9px; } }
-[data-theme="dark"] .vatx .drawer { --surface: #2a2f35; }
+/* the bar keeps the site header's height and ground: title and subtitle left, links and countries right, then the
+   theme switch. Where one row is too narrow, the links and countries move to the top of the page (app.js) */
+.vat-bar.vatx { flex: 1; min-width: 0; white-space: nowrap; display: flex; align-items: center; gap: 0 18px; }
+.vat-bar .brand { align-items: baseline; column-gap: 12px; row-gap: 0; }
+.vat-bar .brand h1 { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1.3; position: relative; top: 2px; }
+.vat-bar .brand h1::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; margin: 0 0.5rem 0.24em 0; vertical-align: middle; }
+.vat-bar .brand .sub { font-size: 1.02rem; line-height: 1.3; color: var(--ink-2); position: relative; top: 2px; }
+.vatx .page { padding-top: 12px; }
+.vatx .work { margin-top: 0; }
+.vatx .page-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 18px; margin-bottom: 12px; }
+.vatx .page-top:empty { display: none; }
+@media (max-width: 1239px) { .vat-bar .toplinks, .vat-bar .countries { display: none; } }
+@media (max-width: 560px) { .vat-bar .brand { flex-direction: column; } .vat-bar .brand h1 { line-height: 1.1; } .vat-bar .brand .sub { font-size: 0.95rem; line-height: 1.2; } .vat-bar .brand .sub, .vat-bar .brand h1 { top: 1px; } }
+@media (max-width: 379px) { .vat-bar .brand .sub { font-size: 0.8rem; } }

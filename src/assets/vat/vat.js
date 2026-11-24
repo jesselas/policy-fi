@@ -316,9 +316,11 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     $$("#chain .stage").forEach((t, i) => t.setAttribute("x", [G.px, G.whole.x, G.retail.x, G.house.x][i]));
   }
   function layoutPage() {
-    const work = $(".work"), root = $(".vatx") || document.documentElement;
+    const bar = $(".vat-bar"), spot = $("#page-top");
+    if (bar && spot) { const to = window.innerWidth < 1240 ? spot : bar; ["#countries", ".toplinks"].forEach((q) => { const e = $(q); if (e.parentNode !== to) to.appendChild(e); }); }
+    const work = $(".work"), root = $("#vatx") || document.documentElement;
     work.style.minHeight = ""; root.style.setProperty("--fold-top", "28px"); G.xh = 0; G.extra = 0; root.style.setProperty("--xh", "0px");
-    G.cut = $(".site-header") && window.innerWidth >= 1100 && window.innerHeight < 760 ? Math.min(20, 760 - window.innerHeight) : 0; root.style.setProperty("--cut", G.cut + "px");
+    G.cut = $(".site-header") && window.innerWidth >= 1100 && window.innerHeight < 720 ? Math.min(20, 720 - window.innerHeight) : 0; root.style.setProperty("--cut", G.cut + "px");
     layoutChain(); sizeIncidence();
     if (window.innerWidth < 1100) return;
     const top = work.getBoundingClientRect().top + window.scrollY, target = Math.round(window.innerHeight * 0.925) - 8;
@@ -663,7 +665,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       .transition().duration(dur(600)).ease(d3.easeCubicInOut).attr("x", (d) => (x(d.x0) + x(d.x1)) / 2).style("opacity", (d) => (x(d.x1) - x(d.x0) > 26 ? 1 : 0));
     const KEYT = { formal: "Formal purchases", border: "Border VAT alone", dom: "Added by the domestic chain", up: "Upstream VAT, border and domestic", short: "Not collected" };
     const KEYTIP = { up: "<b>Upstream VAT, combined</b><br>For this assumption only the total was computed, so border and domestic VAT can’t be shown separately." };
-    setHTML($("#rev-key"), s.filter((d) => d.v > 0.05 || d.k === "short").map((d) => `<span${KEYTIP[d.k] ? ` class="term" tabindex="0" data-tip="${KEYTIP[d.k].replace(/"/g, "&quot;")}"` : ""}><i class="key" style="background:${d.k === "short" ? "repeating-linear-gradient(45deg,var(--untaxed) 0 2px,transparent 2px 5px)" : d.fill}"></i>${KEYT[d.k]}</span>`).join(""));
+    setHTML($("#rev-key"), s.filter((d) => d.v > 0.05 || d.k === "short").map((d) => `<span${KEYTIP[d.k] ? ` class="term" tabindex="0" data-tip="${KEYTIP[d.k].replace(/"/g, "&quot;")}"` : ""}><i class="key${d.k === "short" ? " boxed" : ""}" style="background:${d.k === "short" ? "repeating-linear-gradient(45deg,var(--untaxed) 0 2px,transparent 2px 5px)" : d.fill}"></i>${KEYT[d.k]}</span>`).join(""));
     if (S.scope === "formal") {
       setRoll($("#rev-v"), `<span class="n" data-cap="‘formal only’"><span class="num">${f0(R.sfF)}%</span></span>`);
     } else {
@@ -929,7 +931,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
   }
 
   function remKey() {
-    $("#cmp-key").innerHTML = [["var(--collected)", "Formal purchases"], ["var(--alone)", "Border VAT alone"], ["var(--up-light)", "Added by the domestic chain"], ["repeating-linear-gradient(45deg,var(--untaxed) 0 2px,transparent 2px 5px)", "Not collected"]].map(([c, t]) => `<span><i class="key" style="background:${c}"></i>${t}</span>`).join("");
+    $("#cmp-key").innerHTML = [["var(--collected)", "Formal purchases"], ["var(--alone)", "Border VAT alone"], ["var(--up-light)", "Added by the domestic chain"], ["repeating-linear-gradient(45deg,var(--untaxed) 0 2px,transparent 2px 5px)", "Not collected"]].map(([c, t]) => `<span><i class="key${t === "Not collected" ? " boxed" : ""}" style="background:${c}"></i>${t}</span>`).join("");
     $("#rem-key").innerHTML = `<span><i class="key" style="background:var(--alone);width:9px;height:9px"></i>Border VAT alone</span><span><i class="key" style="background:var(--up);border-radius:50%;width:10px;height:10px"></i>Headline</span><span><i class="key" style="background:var(--untaxed);height:5px"></i>Alternative assumptions</span>`;
   }
   function drawPolicy() {
