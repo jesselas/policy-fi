@@ -555,7 +555,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
         ? `The <i class="key" style="background:var(--alone)"></i> <b class="cname-alone">plum</b> ribbon is ${term("upstream", "upstream VAT")} under ${term("alone", "border VAT alone")}:<br>VAT charged on imports, with every domestic supplier treated as unregistered.`
         : R.ribbons === "faded"
           ? `Faded ribbons show the split of ${term("upstream", "upstream VAT")} in the paper’s headline case.<br>The split wasn’t computed for this setting. The bars on the right are for this setting.`
-          : `All coloured ribbons are ${term("upstream", "upstream VAT")}: paid before the informal sale and not deducted.<br><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b>: border VAT that unregistered wholesalers and service sellers can’t deduct. <i class="key" style="background:var(--up)"></i> <b class="cname-amber">Amber</b>: all other upstream VAT.`);
+          : `All coloured ribbons are ${term("upstream", "upstream VAT")}: paid before the informal sale and not deducted.<br><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b>: border VAT that unregistered wholesalers and service sellers can’t deduct. <i class="key sp" style="background:var(--up)"></i> <b class="cname-amber">Amber</b>: other upstream VAT.`);
     $(".work").classList.toggle("alone", S.scope === "import");
     drawHouse(R, yFB, yRI, T);
     const em = $("#endpoint-m");
