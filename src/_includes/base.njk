@@ -8,7 +8,8 @@
   <meta name="description" content="{{ description or site.description }}">
   <meta name="author" content="Jesse Lastunen">
   <meta name="theme-color" content="#0b525b">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% if noindex %}<meta name="robots" content="noindex, nofollow">
+  {% endif %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title }} | {{ site.title }}">
@@ -52,6 +53,7 @@
   <noscript><link rel="stylesheet" href="{{ fontHref }}"></noscript>
   <link rel="stylesheet" href="/assets/css/style.css?v={{ buildId }}">
 
+  {% if pageHead %}{% include pageHead %}{% endif %}
   <script type="application/ld+json">{{ siteSchema | dump | safe }}</script>
   {% if jsonLd %}
   <script type="application/ld+json">{{ jsonLd | dump | safe }}</script>
@@ -83,12 +85,12 @@
     </nav>
   </header>
 
-  <main id="main-content" class="container{% if wide %} container-wide{% endif %}">
+  <main id="main-content" class="{% if fullPage %}full-page{% else %}container{% if wide %} container-wide{% endif %}{% endif %}">
     {{ content | safe }}
     {#- Links/Contact normally close the page, set off by a divider. The home page
         sets linksFirst and includes them itself, above Recent research and
         without any rules. -#}
-    {% if not linksFirst %}<div class="divider">·</div>{% include "footer-links.njk" %}{% endif %}
+    {% if not linksFirst and not fullPage %}<div class="divider">·</div>{% include "footer-links.njk" %}{% endif %}
   </main>
 
   <footer class="site-footer">

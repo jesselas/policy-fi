@@ -1,0 +1,196 @@
+---
+layout: base.njk
+title: Looking Upstream
+description: "How much VAT do informal purchases carry? An interactive guide to the results for Rwanda, Uganda, Mozambique and Peru."
+permalink: /vat/
+noindex: true
+fullPage: true
+pageHead: vat-head.njk
+eleventyExcludeFromCollections: true
+---
+<div class="vatx">
+{% raw %}
+<div class="page">
+  <header class="top">
+    <div class="brand">
+      <h1>Looking Upstream</h1>
+      <p class="sub">How much VAT do informal purchases carry?</p>
+    </div>
+    <div class="countries" role="tablist" aria-label="Country" id="countries"></div>
+    <div class="toplinks">
+      <button class="linkbtn" type="button" data-drawer="intro">What this page shows</button>
+      <a href="#paper">Paper</a>
+      <a href="/">Back to homepage</a>
+    </div>
+  </header>
+
+  <div class="work">
+    <section class="panel" aria-labelledby="h-chain">
+      <div class="panel-head">
+        <h2 id="h-chain">VAT along the supply chain</h2>
+        <span class="head-tools"><button class="hlink" type="button" data-drawer="chain">How the chain works</button></span>
+      </div>
+      <div class="chain-scroll"><svg id="chain" role="img" aria-label="VAT along the supply chain" aria-describedby="chain-desc"><desc id="chain-desc"></desc></svg></div>
+      <p class="chain-cap" id="chain-cap"></p>
+      <div class="endpoint-m" id="endpoint-m"></div>
+
+      <div class="controls" id="controls">
+        <div class="ctl">
+          <div class="ctl-label"><span>How far up the chain VAT is counted</span><button class="hlink" type="button" data-drawer="revenue">More</button></div>
+          <div class="seg" role="radiogroup" aria-label="How far up the supply chain VAT is counted" data-key="scope">
+            <button type="button" role="radio" data-v="formal">Not at all</button>
+            <button type="button" role="radio" data-v="import">Border VAT alone</button>
+            <button type="button" role="radio" data-v="chain">Full chain</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span><span class="term" data-term="cls" tabindex="0">Outlets counted as formal</span></span><button class="hlink" type="button" data-drawer="classification">More</button></div>
+          <div class="seg" role="radiogroup" aria-label="Outlet classification" data-key="cls">
+            <button type="button" role="radio" data-v="low">Low formal</button>
+            <button type="button" role="radio" data-v="formal">Headline</button>
+            <button type="button" role="radio" data-v="med">Medium</button>
+            <button type="button" role="radio" data-v="high">High</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span><span class="term" data-term="sorting" tabindex="0">Who registered suppliers sell to</span></span><button class="hlink" type="button" data-drawer="sourcing">More</button></div>
+          <div class="seg" role="radiogroup" aria-label="Sourcing" data-key="alt" data-group="sourcing">
+            <button type="button" role="radio" data-v="headline">Random</button>
+            <button type="button" role="radio" data-v="sort50">Partial sorting</button>
+            <button type="button" role="radio" data-v="sort100">Full sorting</button>
+            <button type="button" role="radio" data-v="sortm">Measured</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span><span class="term" data-term="registration" tabindex="0">Suppliers registered for VAT</span></span><button class="hlink" type="button" data-drawer="registration">More</button></div>
+          <div class="seg" role="radiogroup" aria-label="Registration proxies" data-key="alt" data-group="registration" id="seg-reg">
+            <button type="button" role="radio" data-v="reg25">×¼</button>
+            <button type="button" role="radio" data-v="reg50">×½</button>
+            <button type="button" role="radio" data-v="headline">Headline</button>
+            <button type="button" role="radio" data-v="reg150">×1.5</button>
+            <button type="button" role="radio" data-v="allreg">All</button>
+          </div>
+        </div>
+        <div class="ctl wide">
+          <div class="ctl-label"><span><span class="term" data-term="passthrough" tabindex="0">Pass-through</span> of upstream VAT into informal prices, <i>λ</i></span><button class="hlink" type="button" data-drawer="passthrough">More</button></div>
+          <div class="lam-row">
+            <div class="lam-track">
+              <input type="range" id="lam" min="0" max="1" step="0.01" value="1" aria-describedby="lam-val">
+              <div class="lam-ticks" id="lam-ticks"></div>
+            </div>
+            <div class="lam-val" id="lam-val"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="side">
+      <section class="panel" aria-labelledby="h-rev">
+        <div class="panel-head">
+          <h2 id="h-rev">VAT revenue on household purchases</h2>
+          <span class="head-tools"><button class="hlink" type="button" data-drawer="revenue">Method</button></span>
+        </div>
+        <svg id="revenue" role="img" aria-label="Revenue decomposition bar"></svg>
+        <div class="keyrow fixed1" id="rev-key"></div>
+        <div class="shortline"><span class="t" id="rev-t"><b class="term" data-term="shortfall" tabindex="0">Revenue shortfall</b><span>Share of VAT not collected</span></span><span class="v" id="rev-v"></span></div>
+      </section>
+
+      <section class="panel" aria-labelledby="h-inc">
+        <div class="panel-head">
+          <h2 id="h-inc">Who bears VAT, by <span class="term" data-term="decile" tabindex="0">consumption decile</span></h2>
+          <span class="head-tools"><button class="hlink" type="button" data-drawer="incidence">Method</button></span>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Incidence view" id="inc-tabs">
+          <button type="button" role="tab" data-tab="rate" data-term="effrate">Effective VAT rate</button>
+          <button type="button" role="tab" data-tab="basket" data-term="basket">Purchases by outlet</button>
+          <button type="button" role="tab" data-tab="ushare" data-term="ushare">Upstream share</button>
+        </div>
+        <div class="tabpanel">
+          <svg id="incidence" role="img" aria-label="Incidence by decile"></svg>
+          <div class="keyrow fixed2" id="inc-key"></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="h-meter">
+        <div class="panel-head">
+          <h2 id="h-meter">Progressivity of VAT (<span class="term" data-term="kakwani" tabindex="0">Kakwani index</span>)</h2>
+          <span class="head-tools"><button class="hlink" type="button" data-drawer="incidence">Method</button></span>
+        </div>
+        <div class="figline"><span class="v" id="meter-v"></span><span class="t" id="meter-t"></span></div>
+        <svg id="meter" role="img" aria-label="Kakwani index positions"></svg>
+      </section>
+    </div>
+  </div>
+
+  <details class="fold" id="compare">
+    <summary><h2 id="h-compare">Results by country</h2><span class="fold-hint">Show</span></summary>
+    <div class="fold-body">
+    <div class="cols">
+      <div class="fig">
+        <h3>VAT collected, % of the amount if <span class="term" data-term="alltaxed" tabindex="0">all purchases were taxed</span></h3>
+        <p class="lede-s">In Mozambique and Peru, less taxable spending is informal and more wholesale supply is registered. The <span class="term" data-term="formalonly" tabindex="0">‘formal only’</span> <span class="term" data-term="shortfall" tabindex="0">revenue shortfall</span> is smaller, and upstream VAT reduces it by a larger share.</p>
+        <svg id="cmp-rev" role="img" aria-label="Revenue decomposition for four countries"></svg>
+        <div class="keyrow" id="cmp-key"></div>
+        <div class="notes"><p class="notes-label">Notes and sources</p><p>Remaining shortfall = (1 − <i>s</i><sub>F</sub>)(1 − <i>ū</i>), where 1 − <i>s</i><sub>F</sub> is the ‘formal only’ shortfall and <i>ū</i> the upstream share. Border VAT alone is a separate calculation (‘import only’ in the paper). Headline outlet classification. Paper, Figure 3 and Table 5 (panel B). Online appendix, Proposition OA.1.</p></div>
+      </div>
+      <div class="fig">
+        <h3>Share of the <span class="term" data-term="formalonly" tabindex="0">‘formal only’</span> <span class="term" data-term="gain" tabindex="0">progressivity gain</span> removed by upstream VAT</h3>
+        <p class="lede-s">In the headline case, upstream VAT removes 66.5 to 87.7 per cent of the gain. Under the alternative assumptions shown, it still removes at least half in every country.</p>
+        <svg id="cmp-rem" role="img" aria-label="Share of gain removed across assumptions"></svg>
+        <div class="keyrow" id="rem-key"></div>
+        <div class="notes"><p class="notes-label">Notes and sources</p><p>The <b class="cname-grey">grey</b> band is the range over three sorting cases, registration proxies ×0.5 and ×1.5, and the alternative outlet classifications that leave a gain. The <b class="cname-alone">plum</b> square is border VAT alone. Pass-through is full throughout. Paper, Tables 4 and 5. Online appendix, Tables OA.5 and OA.15.</p></div>
+      </div>
+    </div>
+  </div>
+  </details>
+
+  <details class="fold" id="policy">
+    <summary><h2 id="h-policy">Policy simulations</h2><span class="fold-hint">Show</span></summary>
+    <div class="fold-body">
+    <div class="cols">
+      <div class="fig">
+        <h3>Taxing food at the standard rate</h3>
+        <p class="lede-s">With a revenue-neutral cut in the standard rate, the poorest decile loses 0.3 to 0.7 per cent of consumption once VAT reaching informal food through suppliers is counted.</p>
+        <svg id="pol-food" role="img" aria-label="Food reform: change in consumption by decile and convention"></svg>
+        <div class="keyrow" id="food-key"></div>
+        <div class="notes"><p class="notes-label">Notes and sources</p><p>Change in consumption after VAT, % of consumption before indirect taxes. Purchases, outlets, and suppliers held fixed. Each convention uses its own revenue-neutral standard rate. Under ‘formal only’ accounting the poorest decile is almost unaffected. Paper Section 5.1, Table 6, and Figure 6.</p></div>
+      </div>
+      <div class="fig">
+        <h3>Registering informal retailers</h3>
+        <p class="lede-s">With suppliers fixed, registering selected outlets raises 40 to 85 per cent of the statutory VAT on their sales, because part of the tax is already collected upstream.</p>
+        <svg id="pol-reg" role="img" aria-label="Retail registration revenue relative to statutory forecast"></svg>
+        <div class="keyrow" id="reg-key"></div>
+        <div class="notes"><p class="notes-label">Notes and sources</p><p>Revenue: gain from registering the outlets with suppliers fixed, % of statutory VAT on the same net purchases. Bottom decile: added VAT borne, % of consumption before indirect taxes. The newly registered retailer deducts the VAT on its suppliers’ invoices. Paper Section 5.2 and Table 7.</p></div>
+      </div>
+    </div>
+  </div>
+  </details>
+
+  <details class="fold" id="paper">
+    <summary><h2 id="h-paper">Paper</h2><span class="fold-hint">Show</span></summary>
+    <div class="fold-body">
+    <p class="cite">Lastunen, J., and R. Chang (2026). ‘Looking Upstream: How Much VAT Do Informal Purchases Carry?’ WIDER Working Paper. Helsinki: UNU-WIDER.</p>
+    <div class="foot-links">
+      <a class="soon" tabindex="0" data-tip="Available when the WIDER Working Paper is published.">Paper (PDF)</a>
+      <a class="soon" tabindex="0" data-tip="Available when the WIDER Working Paper is published.">Online appendix</a>
+      <button class="linkbtn" type="button" data-drawer="data">Data and models</button>
+      <button class="linkbtn" type="button" data-drawer="caveats">Caveats</button>
+    </div>
+    <div class="notes"><p class="notes-label">About the numbers</p><p>The results link household surveys, input-output tables, and SOUTHMOD tax-benefit models (RWAMOD, UGAMOD, MOZMOD, PERUMOD). The page shows results reported in the paper and online appendix, together with authors’ calculations from the same data, models, and code for settings that they don’t tabulate. No household records are included. Results describe the 23 November 2026 working paper version.</p></div>
+    </div>
+  </details>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <div class="drawer-head">
+    <h2 id="drawer-title"></h2>
+    <button class="close" type="button" id="drawer-close" aria-label="Close"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+{% endraw %}
+</div>
+<script src="/assets/vat/d3.min.js"></script>
+<script src="/assets/vat/vat.js?v={{ buildId }}"></script>
