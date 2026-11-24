@@ -26,33 +26,33 @@ eleventyExcludeFromCollections: true
 
       <div class="controls" id="controls">
         <div class="ctl">
-          <div class="ctl-label"><span>How far up the chain VAT is counted</span><button class="hlink" type="button" data-drawer="revenue">More</button></div>
+          <div class="ctl-label"><span><span class="lg">How far up the chain VAT is counted</span><span class="sm"><span class="term" data-term="upstream" tabindex="0">Chain</span></span></span><button class="hlink" type="button" data-drawer="revenue" aria-label="More"><span class="lg">More</span><span class="sm">?</span></button></div>
           <div class="seg" role="radiogroup" aria-label="How far up the supply chain VAT is counted" data-key="scope">
             <button type="button" role="radio" data-v="formal">Not at all</button>
-            <button type="button" role="radio" data-v="import">Border VAT alone</button>
+            <button type="button" role="radio" data-v="import"><span class="lg">Border VAT alone</span><span class="sm">Border alone</span></button>
             <button type="button" role="radio" data-v="chain">Full chain</button>
           </div>
         </div>
         <div class="ctl">
-          <div class="ctl-label"><span><span class="term" data-term="cls" tabindex="0">Outlets counted as formal</span></span><button class="hlink" type="button" data-drawer="classification">More</button></div>
+          <div class="ctl-label"><span><span class="term" data-term="cls" tabindex="0"><span class="lg">Outlets counted as formal</span><span class="sm">Outlets</span></span></span><button class="hlink" type="button" data-drawer="classification" aria-label="More"><span class="lg">More</span><span class="sm">?</span></button></div>
           <div class="seg" role="radiogroup" aria-label="Outlet classification" data-key="cls">
-            <button type="button" role="radio" data-v="low">Low formal</button>
+            <button type="button" role="radio" data-v="low"><span class="lg">Low formal</span><span class="sm">Low</span></button>
             <button type="button" role="radio" data-v="formal">Headline</button>
             <button type="button" role="radio" data-v="med">Medium</button>
             <button type="button" role="radio" data-v="high">High</button>
           </div>
         </div>
         <div class="ctl">
-          <div class="ctl-label"><span><span class="term" data-term="sorting" tabindex="0">Who registered suppliers sell to</span></span><button class="hlink" type="button" data-drawer="sourcing">More</button></div>
+          <div class="ctl-label"><span><span class="term" data-term="sorting" tabindex="0"><span class="lg">Who registered suppliers sell to</span><span class="sm">Sourcing</span></span></span><button class="hlink" type="button" data-drawer="sourcing" aria-label="More"><span class="lg">More</span><span class="sm">?</span></button></div>
           <div class="seg" role="radiogroup" aria-label="Sourcing" data-key="alt" data-group="sourcing">
             <button type="button" role="radio" data-v="headline">Random</button>
-            <button type="button" role="radio" data-v="sort50">Partial sorting</button>
-            <button type="button" role="radio" data-v="sort100">Full sorting</button>
+            <button type="button" role="radio" data-v="sort50"><span class="lg">Partial sorting</span><span class="sm">Partial</span></button>
+            <button type="button" role="radio" data-v="sort100"><span class="lg">Full sorting</span><span class="sm">Full</span></button>
             <button type="button" role="radio" data-v="sortm">Measured</button>
           </div>
         </div>
         <div class="ctl">
-          <div class="ctl-label"><span><span class="term" data-term="registration" tabindex="0">Suppliers registered for VAT</span></span><button class="hlink" type="button" data-drawer="registration">More</button></div>
+          <div class="ctl-label"><span><span class="term" data-term="registration" tabindex="0"><span class="lg">Suppliers registered for VAT</span><span class="sm">Registration</span></span></span><button class="hlink" type="button" data-drawer="registration" aria-label="More"><span class="lg">More</span><span class="sm">?</span></button></div>
           <div class="seg" role="radiogroup" aria-label="Registration proxies" data-key="alt" data-group="registration" id="seg-reg">
             <button type="button" role="radio" data-v="reg25">×¼</button>
             <button type="button" role="radio" data-v="reg50">×½</button>
@@ -62,7 +62,7 @@ eleventyExcludeFromCollections: true
           </div>
         </div>
         <div class="ctl wide">
-          <div class="ctl-label"><span><span class="term" data-term="passthrough" tabindex="0">Pass-through</span> of upstream VAT into informal prices, <i>λ</i></span><button class="hlink" type="button" data-drawer="passthrough">More</button></div>
+          <div class="ctl-label"><span><span class="term" data-term="passthrough" tabindex="0">Pass-through</span><span class="lg"> of upstream VAT into informal prices, <i>λ</i></span></span><button class="hlink" type="button" data-drawer="passthrough" aria-label="More"><span class="lg">More</span><span class="sm">?</span></button></div>
           <div class="lam-row">
             <div class="lam-track">
               <input type="range" id="lam" min="0" max="1" step="0.01" value="1" aria-describedby="lam-val">
@@ -171,6 +171,7 @@ eleventyExcludeFromCollections: true
   </details>
 </div>
 
+<button class="mini" id="mini" type="button" aria-label="Main numbers for this setting. Go to the results"><span><b id="mini-u"></b>VAT carried, of 100</span><span><b id="mini-s"></b>revenue shortfall</span><span><b id="mini-a"></b>of the gain removed</span></button>
 <div class="scrim" id="scrim" hidden></div>
 <div class="tip" id="tip" role="tooltip" hidden></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
