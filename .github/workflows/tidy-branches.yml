@@ -1,0 +1,22 @@
+name: Tidy branches
+# Deletes working branches once everything on them is in main.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '30 5 * * *'
+permissions:
+  contents: write
+jobs:
+  tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - run: |
+          git fetch -q origin '+refs/heads/*:refs/remotes/origin/*'
+          for b in $(git for-each-ref --format='%(refname:lstrip=3)' refs/remotes/origin); do
+            [ "$b" = main ] || [ "$b" = HEAD ] && continue
+            if git merge-base --is-ancestor "origin/$b" origin/main; then git push -q origin --delete "$b"; fi
+          done

@@ -15,7 +15,7 @@ window, sources, or filters **here**, in the repo; no scheduler edit needed.
 ## Environment
 
 You run in an isolated cloud sandbox with WebSearch, WebFetch, Bash/git, and the
-connected Gmail MCP connector — but **not** the Claude-in-Chrome browser tools.
+connected Gmail MCP connector — but **not** the interactive browser tools.
 For X/Twitter and LinkedIn URLs, try WebFetch; if it returns an empty shell you
 cannot verify, list the item under "Found but could not verify" rather than
 guessing.
@@ -36,9 +36,11 @@ page itself:
 If you cannot visit a URL to verify, DO NOT add it; list it under "Found but
 could not verify" in your report.
 
-The repo is PUBLIC and contains only site files. Commit as Jesse (Step 4). Do
-NOT add `Co-Authored-By:` or `Claude-Session:` trailers, and do not mention
-Claude/Anthropic in commit messages.
+The repo is PUBLIC and contains only site files. Commit as Jesse (Step 4), with
+a plain message and nothing after it: no co-author, session, or tool trailers,
+and no AI assistant or vendor named as having done the work. Push to `main`
+only. If the environment made you push a working branch as well, delete it
+from the remote when you are done (`git push origin --delete <branch>`).
 
 ## Self-healing lookback window
 
