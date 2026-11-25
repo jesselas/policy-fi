@@ -551,7 +551,7 @@ window.Kit = (function () {
   const mkClass = (v, up) => `mk-${v}${up ? " up" : ""}`;
   const mk = (v, up) => `<svg class="mk ${mkClass(v, up)}" viewBox="-6 -6 12 12" width="12" height="12" aria-hidden="true"><circle r="4.6"/><path d="${MK_D}"/></svg>`;
   const mkOf = (p, a, au) => mk(verdict(p, a, au), passes(p, a, au));
-  const flagText = (p) => [p.sel === "welfare" ? "Selected by the same consumption that measures poverty, so all benefits reach the poor by construction." : p.sel === "reported" ? "Recipients as reported in the survey." : "Recipients simulated from the rules, which tends to overstate the share reaching the poor."].concat(p.imputed ? "Cost estimate imputed." : []).join(" ");
+  const flagText = (p) => [p.sel === "welfare" ? "Recipients selected by the same survey consumption that measures poverty, so all benefits reach the poor by construction." : p.sel === "reported" ? "Recipients as reported in the survey." : "Recipients simulated from the rules. Such simulations tend to overstate the share reaching the poor."].concat(p.imputed ? "Cost estimate imputed." : []).join(" ");
   const fineText = (eg) => `The universal transfer is a yardstick. We don’t propose it as a policy at the programme’s scale. ${eg ? "Poverty line in Egypt: a line calibrated to the national poverty rate." : "Poverty line: $3.00 a day (2021 PPP)."} Cost estimates: Zasova et al. (2026).`;
   const lowerText = (moved) => `${term("n27", String(C.incidence.pass))} if the share reaching the poor falls as the surveys suggest${moved ? ", at the estimates" : ""}`;
   const SETTINGS = " at these settings", moved = () => S.au !== null || S.a !== null;
@@ -569,7 +569,6 @@ window.Kit = (function () {
     const ph = phone(), wide = window.innerWidth >= 1100, work = $(".work"), panel = $(".work > .panel"), side = $(".side");
     reserve("#flag", Array.from(new Set(P.map(flagText)))); reserve("#fine", [fineText(false), fineText(true)]); reserve("#lower", [lowerText(false), lowerText(true)]);
     { const t = $("#n-text"), was = $("#n-set").textContent; t.style.minHeight = ""; $("#n-set").textContent = SETTINGS; const h = t.offsetHeight; $("#n-set").textContent = was; t.style.minHeight = h + "px"; }
-    { const cap = $("#why-cap"), more = $("#why-more"); more.hidden = true; const h = cap.offsetHeight; more.hidden = false; more.hidden = cap.offsetHeight > h; }
     $("#result").style.height = ""; $("#result").classList.remove("stack"); if (ph && $("#r-verdict").clientWidth < 9 * parseFloat(getComputedStyle($("#r-verdict")).fontSize)) $("#result").classList.add("stack");
     reserve("#r-verdict", VERDICTS.map((t) => `<span class="mkbox"></span><span>${t}</span>`));
     const W = $("#dots").parentNode.clientWidth, probe = Kit.el("text", { style: "font-size:12px;visibility:hidden" }, $("#dots")), tw = (names) => d3.max(names, (t) => { probe.textContent = t; return probe.getComputedTextLength(); }) + 14;
@@ -688,7 +687,7 @@ window.Kit = (function () {
       return n;
     };
     const be = none ? "no break-even share" : on ? `break-even ${pct1(R.star)}%` : "◂ break-even below 0";
-    lab("tbe", be, xs, 16, on ? 9 : -THUMB / 2, swap).attr("tabindex", 0).attr("data-tip", tbe);
+    lab("tbe", be, xs, 15, on ? 9 : -THUMB / 2, swap).attr("tabindex", 0).attr("data-tip", tbe);
     const es = lab("tes", `estimate ${pct1(R.p.a)}%`, xe, 50, 9), ex = [Math.min(xe - 6, es.x) - 4, Math.max(xe + 6, es.x + es.w) + 4];
     scale(g, [0, 0.3, 0.6, 0.9], x, 50, ex);
     const r = $("#a-range"), v = fmt(100 * R.a, 1);
@@ -715,8 +714,9 @@ window.Kit = (function () {
     T("tn", ["Administrative cost share", "Share reaching the poor"], (s, d) => s.attr("x", X[d[0] === "A" ? 0 : 1](0) + w / 2).attr("y", H - 3).attr("text-anchor", "middle").text(d));
     const pts = P.flatMap((p, i) => [0, 1].map((k) => ({ p, k, key: i + "-" + k, x: X[k](k ? p.V : p.a), y: y(gap(p, p.a)) }))).sort((b, c) => (c.p === R.p) - (b.p === R.p));
     const tip = (p) => { const a = aOf(p), au = auOf(p); return `<b>${withCountry(p, p.short)}</b>` + tipTable([["var(--c2)", "Administrative cost share", pct1(a) + "%"], [SOFTKEY, "Share reaching the poor", pct0(p.V) + "%"], ["var(--c1)", "Gap closed per dollar", cents(gap(p, a)) + "¢"], [UKEY, "Universal transfer", cents(gapU(p, au)) + "¢"]]) + (star(p, au) === null ? "Reaches no poor people in the data." : `${upper(WORD[verdict(p, a, au)])}.`); };
+    const also = (d) => { const o = pts.filter((q) => q !== d && q.k === d.k && Math.abs(q.x - d.x) < 0.5 && Math.abs(q.y - d.y) < 0.5).sort((b, c) => b.p.order - c.p.order).map(({ p }) => `${p.short.replace(`, ${p.country}`, "")} (${p.country})`); return o.length ? `<br>Also here: ${o.length > 2 ? `${o.slice(0, -1).join(", ")}, and ${o[o.length - 1]}` : o.join(" and ")}.` : ""; };
     SC = { pts, tip };
-    g.selectAll("circle.dot").data(pts, (d) => d.key).join("circle").order().attr("class", (d) => "dot" + (d.p === R.p ? " own" : "")).attr("r", 3.5).attr("cx", (d) => d.x).attr("cy", (d) => d.y).attr("data-id", (d) => d.p.id).attr("data-tip", (d) => tip(d.p));
+    g.selectAll("circle.dot").data(pts, (d) => d.key).join("circle").order().attr("class", (d) => "dot" + (d.p === R.p ? " own" : "")).attr("r", 3.5).attr("cx", (d) => d.x).attr("cy", (d) => d.y).attr("data-id", (d) => d.p.id).attr("data-tip", (d) => tip(d.p) + also(d));
     const moved = S.a !== null, over = R.a > XA;
     const own = [0, 1].map((k) => { const at = pts.find((d) => d.p === R.p && d.k === k); return { k, x: k ? at.x : moved ? X[0](R.a) : at.x, y: y(gap(R.p, R.a)), x0: at.x, y0: at.y }; });
     g.selectAll("line.path").data(own).join("line").attr("class", "path").style("stroke", "var(--ink-3)").style("stroke-dasharray", "2 2").attr("x1", (d) => d.x0).attr("y1", (d) => d.y0).attr("x2", (d) => d.x).attr("y2", (d) => d.y).style("opacity", moved ? 1 : 0);
@@ -726,7 +726,7 @@ window.Kit = (function () {
     g.selectAll("circle.ring").data(own).join("circle").attr("class", "ring").attr("r", 7.5).style("fill", "none").style("stroke", "var(--ink)").style("stroke-width", 1.8).call((s) => tr(s).attr("cx", (d) => d.x).attr("cy", (d) => d.y));
     g.selectAll("path.over").data([0]).join("path").attr("class", "over").attr("d", "M0,-4 L5,0 L0,4").style("fill", "none").style("stroke", "var(--ink)").style("stroke-width", 1.6).attr("transform", `translate(${X[0](XA) + 10},${own[0].y})`).style("opacity", over ? 1 : 0);
     g.selectAll("circle.kb").data([0]).join("circle").attr("class", "kb").raise();
-    $$("#explains b").forEach((b, i) => { b.textContent = fmt([D.a, D.rate, D.adv, D.S][i].v) + "%"; });
+    $$("#explains b").forEach((b, i) => { b.textContent = fmt([D.a, D.V, D.S][i].v) + "%"; }); $$("#explains i").forEach((b, i) => { b.textContent = fmt([D.rate, D.adv][i].v); });
   }
   const MORD = (p) => ({ more: 0, unclear: passes(p) ? 1 : 2, less: 3 })[verdict(p)];
   const RANK = new Map(DATA.types.map((t) => [t.id, P.filter((p) => p.type === t.id).sort((a, b) => MORD(a) - MORD(b) || ((1 - b.a) * b.PRE0) / b.PRE0_u - ((1 - a.a) * a.PRE0) / a.PRE0_u || a.order - b.order)]));
@@ -769,10 +769,11 @@ window.Kit = (function () {
       if (e.target.closest("text[data-tip]")) return;
       const d = q ? q.hit : near(e, "mouse"); if (d) choose(d.id);
     });
-    svg.addEventListener("pointermove", (e) => { if (e.pointerType === "mouse") svg.style.cursor = near(e, "mouse") ? "pointer" : ""; });
+    const ring = (d) => { const c = svg.querySelector("circle.kb"); if (!d) { c.style.opacity = 0; return; } c.setAttribute("cx", d.x); c.setAttribute("cy", d.y); c.setAttribute("r", 10); c.style.opacity = 1; };
+    svg.addEventListener("pointermove", (e) => { if (e.pointerType !== "mouse") return; const m = Kit.markAt(e, 9), on = m && m.dataset.id; svg.style.cursor = on ? "pointer" : ""; if (!k) ring(on ? m.__data__ : null); });
+    svg.addEventListener("pointerleave", () => { if (!k) ring(null); });
     const show = () => {
-      const c = svg.querySelector("circle.kb"); if (!k) { c.style.opacity = 0; return; }
-      c.setAttribute("cx", k.x); c.setAttribute("cy", k.y); c.setAttribute("r", 10); c.style.opacity = 1;
+      ring(k); if (!k) return;
       const m = $$("[data-id]", svg).filter((n) => n.dataset.id === k.p.id), at = m.length > 1 ? m[k.k] : m[0]; Kit.openTip(at, null, null);
     };
     svg.addEventListener("focus", () => { if (!svg.matches(":focus-visible")) return; k = geo().pts.find((d) => d.p === cur()); show(); });
@@ -848,7 +849,7 @@ window.Kit = (function () {
       const own = $("#opt-" + S.p); reveal(own, true); setTimeout(() => { if (open) own.focus({ preventScroll: true }); }, 30);
     }
     function close() {
-      if (!open) return; open = false; Kit.lockScroll(box(), false);
+      if (!open) return; open = false; Kit.closeTip(true); Kit.lockScroll(box(), false);
       const b = box(), sc = $("#pick-scrim"); b.classList.remove("open"); sc.classList.remove("open"); b.style.transform = "";
       $("#case").setAttribute("aria-expanded", "false"); $("#case").focus({ preventScroll: true });
       clearTimeout(hid); hid = setTimeout(() => { b.hidden = true; sc.hidden = true; }, dur(1) && sheet() ? 300 : 0);
@@ -856,7 +857,7 @@ window.Kit = (function () {
     function swipe() {
       const h = $("#pick-head"), b = box(); let q = null;
       h.addEventListener("touchstart", (e) => { q = sheet() && e.touches.length === 1 && !e.target.closest("button") ? { y: e.touches[0].clientY, t: e.timeStamp, d: 0 } : null; }, { passive: true });
-      h.addEventListener("touchmove", (e) => { if (!q) return; e.preventDefault(); q.d = Math.max(0, e.touches[0].clientY - q.y); b.style.transition = "none"; b.style.transform = `translateY(${q.d}px)`; }, { passive: false });
+      h.addEventListener("touchmove", (e) => { if (!q) return; e.preventDefault(); if (!q.d) Kit.closeTip(true); q.d = Math.max(0, e.touches[0].clientY - q.y); b.style.transition = "none"; b.style.transform = `translateY(${q.d}px)`; }, { passive: false });
       const end = (e) => { if (!q) return; const z = q; q = null; void b.offsetWidth; b.style.transition = ""; b.style.transform = ""; if (e.type === "touchend" && (z.d > 110 || (z.d > 30 && z.d / (e.timeStamp - z.t) > 0.5))) close(); };
       h.addEventListener("touchend", end); h.addEventListener("touchcancel", end);
     }
@@ -890,17 +891,19 @@ window.Kit = (function () {
     $("#l-text").innerHTML = ["Recipients of 38 programmes are simulated from the rules, without errors of implementation. This tends to overstate the share reaching the poor. For the 16 that can be compared with the surveys, the reported share is a median 6 per cent lower.", `Six programmes reach only the poor by construction, because the model selects recipients by the same survey consumption that measures poverty. They are six of the ${DATA.types[0].pass} proxy- or community-targeted cash transfers that close more. Of the other ${DATA.types[0].n - 6}, ${DATA.types[0].pass - 6} do.`, `With administrative cost shares drawn from similar programmes, ${C.draws.pass} programmes close more than a universal transfer and ${C.draws.fail} close less in at least 90 per cent of draws. For the other ${C.draws.other}, the answer depends on the cost estimate.`, "Two cost estimates are imputed, for Rwanda’s local government education support and Bolivia’s birth bonus.", "Egypt is evaluated at a line calibrated to the World Bank’s estimate of its national poverty rate, because almost no one in its survey is below $3.00 a day.", "The comparison leaves out leakage, the costs of applying, and the social, incentive, and political costs of targeting. Leaving out the costs of applying and targeting favours targeted programmes. In-kind benefits are valued at cost. Pensions, school meals, and public works also have aims other than poverty reduction."].map((t) => `<li>${t}</li>`).join("");
   }
   const ci = (q) => `95 per cent interval from ${fmt(q.countries[0])} to ${fmt(q.countries[1])}`, WI = DATA.diff.within;
+  const SPLIT = `The share reaching the poor contributes ${fmt(D.V.v)}%. It splits into how poor the country is (${fmt(D.rate.v)}%) and whom the programme pays and how much (${fmt(D.adv.v)}%, rounded).`;
   const GLOSS = {
     gap: "<b>Poverty gap closed</b><br>The fall in the total distance of poor people to the poverty line, per dollar of total cost.",
     uni: "<b>Universal transfer</b><br>The programme’s benefit spending, paid equally to every person. The cents are per dollar of the universal transfer’s own total cost.",
     a: "<b>Administrative cost share</b><br>The share of total cost spent on administration. Moving it changes neither the recipients nor how benefits are split among them.",
     au: "<b>Universal transfer’s cost share</b><br>The share of its total cost spent on administration. It applies to all 59 programmes. The estimates are 4.5 per cent in Africa and 4.0 per cent in Latin America, the median estimates for categorical cash programmes in each region.",
     band: "<b>No clear difference</b><br>The cost share lies inside the 95 per cent interval of the break-even share, which reflects survey sampling only.",
-    unclear: "<b>No clear difference</b><br>The cost share lies inside the 95 per cent interval of the break-even share, which reflects survey sampling only. Blue: the programme closes more at the estimates. Grey: less.",
+    unclear: "<b>No clear difference</b><br>The cost share lies inside the 95 per cent interval of the break-even share, which reflects survey sampling only. Blue: the cost share is below the point estimate of the break-even share. Grey: above.",
     n27: "<b>27 of 59</b><br>For each simulated programme, the share reaching the poor is scaled by the ratio of reported to simulated shares, or by the median ratio where the survey doesn’t report it.",
     partA: `<b>Administration: ${fmt(D.a.v)}%</b><br>Administration’s contribution to the differences in the gap closed per dollar, with a ${ci(D.a)}. A negative part moves against the others.`,
-    partR: `<b>Country’s poverty rate: ${fmt(D.rate.v)}%</b><br>Part of the share reaching the poor (${fmt(D.V.v)}%), which consists of how poor the country is and whom the programme pays and how much (${fmt(D.adv.v)}%, rounded). The ${ci(D.rate)} is wide, and the split depends on the poverty line.`,
-    partP: `<b>Whom the programme pays: ${fmt(D.adv.v)}%</b><br>Part of the share reaching the poor (${fmt(D.V.v)}%), which consists of how poor the country is (${fmt(D.rate.v)}%) and whom the programme pays and how much (rounded). The ${ci(D.adv)} is wide, and the split depends on the poverty line.`,
+    partV: `<b>Share reaching the poor: ${fmt(D.V.v)}%</b><br>The contribution of the share of benefits reaching people who are poor without the programme, with a ${ci(D.V)}.`,
+    partR: `<b>Country’s poverty rate: ${fmt(D.rate.v)}%</b><br>${SPLIT} The ${ci(D.rate)} is wide, and the split depends on the poverty line.`,
+    partP: `<b>Whom the programme pays: ${fmt(D.adv.v)}%</b><br>${SPLIT} The ${ci(D.adv)} is wide, and the split depends on the poverty line.`,
     partS: `<b>Spillover: ${fmt(D.S.v)}%</b><br>The contribution of benefits beyond what the poor need to reach the line, with a ${ci(D.S)}.`,
   };
   const TYPE_TIP = {
@@ -913,10 +916,10 @@ window.Kit = (function () {
   const PRE = "<i>PRE</i>", G = DATA.region, ss = "<span class=\"ss\"><span>0</span><span><i>u</i></span></span>", sub = (x, s) => `<i>${x}</i><sub><i>${s}</i></sub>`;
   const DRAWERS = {
     intro: () => ({ title: "What is this?", src: "Paper (draft); cost estimates: Zasova et al. (2026)", html: `
-      <p>The paper, by Jesse Lastunen, Anna Zasova, and Pia Rattenhuber, asks how much administrative costs limit the poverty reduction of social benefits, and how 59 programmes in 13 countries compare with a universal transfer once they are counted.</p>
-      <p>The poverty gap is poor people’s total distance to the poverty line. Administration takes ${G.SSA.whole} per cent of total cost in Sub-Saharan Africa and ${G.LA.whole} per cent in Latin America. Paid out to the same recipients, this money would close at most ${G.SSA.more} and ${G.LA.more} per cent more of the gap.</p>
-      <p>Programmes differ mostly in the share reaching the poor.</p>
-      <p>Of the 59 programmes, ${C.main.pass} close more of the gap per dollar of total cost than the yardstick, a universal transfer that pays everyone the same amount. Of the ${DATA.types[0].n} cash transfers targeted by a proxy-means test (a score of household characteristics) or communities, ${DATA.types[0].pass} do. Most in-kind and categorical programmes don’t.</p>` }),
+      <p>The paper, by Jesse Lastunen, Anna Zasova, and Pia Rattenhuber, asks how much administrative costs limit the poverty reduction potential of social benefits, and how 59 programmes in 13 countries (Zanzibar counts separately) compare with a universal transfer, which pays everyone the same.</p>
+      <p>Administration takes ${G.SSA.whole} per cent of total cost in Sub-Saharan Africa and ${G.LA.whole} per cent in Latin America. Paid to the same recipients, it would close at most ${G.SSA.more} and ${G.LA.more} per cent more of the poverty gap, poor people’s total distance to the poverty line.</p>
+      <p>Yet it explains almost none of the differences between programmes in the gap closed per dollar. Most come from the share of spending that reaches the poor.</p>
+      <p>Of the 59, ${C.main.pass} close more per dollar of total cost than the universal transfer, including ${DATA.types[0].pass} of the ${DATA.types[0].n} cash transfers targeted by proxy-means tests or communities. Most in-kind and categorical programmes don’t.</p>` }),
     measure: () => ({ title: "One dollar of total cost", src: "Paper, Section 2 and Table A1; other numbers: authors’ calculations", html: `
       <p>The poverty gap closed per dollar of total cost (benefits plus administration) is</p>
       <div class="eq"><span>${PRE} = (1 − <i>a</i>) · <i>V</i> · (1 − <i>S</i>)</span><span class="lab">Eq. (2)</span></div>
@@ -927,10 +930,10 @@ window.Kit = (function () {
       <p>The programme closes more of the poverty gap per dollar of total cost than a universal transfer if its administrative share of total cost, <i>a</i>, is below</p>
       <div class="eq"><span><i>a</i>* = 1 − (1 − ${sub("a", "u")}) · <span class="frac"><span>${PRE}${ss}</span><span>${PRE}<sup>0</sup></span></span></span><span class="lab">Eq. (3)</span></div>
       <ul class="defs"><li>${PRE}<sup>0</sup>: gap closed per dollar of the programme’s benefits</li><li>${PRE}${ss}: gap closed per dollar of benefits of a universal transfer, the programme’s benefit spending paid equally to every person</li><li>${sub("a", "u")}: administrative share of the universal transfer’s total cost</li></ul>
-      <p>If <i>a</i>* is below 0, the programme closes less even without administrative costs. “No clear difference” means that <i>a</i> lies inside the 95 per cent interval of <i>a</i>*, which reflects survey sampling only. It is likely too narrow, because the data don’t identify survey clusters. Of the ${C.main.pass} programmes, ${C.main.clear} clearly close more.</p>` }),
+      <p>If <i>a</i>* is below 0, the programme closes less even without administrative costs. “No clear difference” means that <i>a</i> lies inside the 95 per cent interval of <i>a</i>*, which reflects survey sampling only and is likely too narrow. At the estimates, ${C.main.pass} of the 59 programmes close more than the universal transfer, ${C.main.clear} of them clearly.</p>` }),
     differ: () => ({ title: "Why programmes differ", src: "Paper, Section 4.2, Figure 2, and Table C5", html: `
       <p>The variance of the log of the gap closed per dollar, across the 54 programmes that close some of the gap, is split into three parts. The 95 per cent intervals come from resampling countries.</p>
-      ${tbl(["Contribution to the differences", "% (rounded)", "95% interval"], [["Administration", D.a], ["Share reaching the poor", D.V], ["– poverty rate", D.rate], ["– advantage over a universal transfer", D.adv], ["Spillover", D.S]].map(([t, q]) => [t.replace(/^– /, '<span class="ind"></span>'), fmt(q.v), `${fmt(q.countries[0])} to ${fmt(q.countries[1])}`]))}
+      ${tbl(["Contribution to the differences", "% (rounded)", "95% interval"], [["Administration", D.a], ["Share reaching the poor", D.V], ["– poverty rate", D.rate], ["– advantage over a universal transfer", D.adv], ["Spillover", D.S]].map(([t, q]) => [t.replace(/^– (.*)$/, '<span class="ind">$1</span>'), fmt(q.v), `${fmt(q.countries[0])} to ${fmt(q.countries[1])}`]))}
       <p>A negative part moves against the others. The advantage is the share reaching the poor divided by the poverty rate. The split into these two is less certain and depends on the poverty line. Among programmes of the same country, the share reaching the poor contributes ${fmt(WI.V.v)} per cent, spillover ${fmt(WI.S.v)}, and administration ${fmt(WI.a.v)}.</p>
       <p>These data can’t show whether more administration within a programme would reach the poor better.</p>` }),
   };
