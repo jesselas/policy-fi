@@ -320,7 +320,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     G.W = W; G.pad = W < 760 ? 8 : 12; G.house = { x: W - L - 1, L };
     ["prod", "whole", "retail"].forEach((k, i) => (G[k] = { x: Math.round(1 + i * (nw + gp)), w: nw }));
     G.px = G.prod.x + 14; G.pw = G.prod.w - 14;
-    G.y1 = G.y0 + 174 - (G.cut || 0) + Math.round(0.38 * G.xh) + G.extra; G.stubY = G.y1 + 16; G.H = G.y1 + 34;
+    G.y1 = G.y0 + 174 + (window.innerWidth < 1100 ? 14 : 0) - (G.cut || 0) + Math.round(0.38 * G.xh) + G.extra; G.stubY = G.y1 + 13; G.H = G.y1 + 20;
     svg.setAttribute("viewBox", `0 0 ${W} ${G.H}`); const z = avail / W;
     svg.style.width = W * z + "px"; svg.style.height = G.H * z + "px";
     svg.classList.toggle("tight", W < 700);
@@ -328,7 +328,8 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
   }
   function layoutPage() {
     const bar = $(".vat-bar"), spot = $("#page-top");
-    if (bar && spot) { const to = window.innerWidth < 1240 ? spot : bar; ["#countries", ".toplinks"].forEach((q) => { const e = $(q); if (e.parentNode !== to) to.appendChild(e); }); }
+    if (bar && spot) { const to = window.innerWidth < 1240 ? spot : bar; const nav = $("#topnav"); if (nav.parentNode !== to) to.appendChild(nav); }
+    measureNav();
     const work = $(".work"), root = $("#vatx") || document.documentElement;
     work.style.minHeight = ""; root.style.setProperty("--fold-top", "28px"); G.xh = 0; G.extra = 0; root.style.setProperty("--xh", "0px");
     G.cut = $(".site-header") && window.innerWidth >= 1100 && window.innerHeight < 720 ? Math.min(20, 720 - window.innerHeight) : 0; root.style.setProperty("--cut", G.cut + "px");
@@ -343,7 +344,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     const last = Math.max(...$$("#controls .ctl").map((e) => e.getBoundingClientRect().bottom));
     const slack = ctl.getBoundingClientRect().bottom - last - parseFloat(getComputedStyle(ctl).paddingBottom);
     ctl.style.alignContent = "";
-    if (slack > 2) { G.extra = Math.floor(slack * 0.55); layoutChain(); }
+    if (slack > 2) { G.extra = Math.floor(slack * 0.9); layoutChain(); }
     root.style.setProperty("--fold-top", Math.max(28, Math.min(80, window.innerHeight + 4 - Math.round(work.getBoundingClientRect().bottom + window.scrollY))) + "px");
   }
   function incHeight() { return window.innerWidth < 700 ? 190 : window.innerWidth < 1100 ? 236 : 203 - (G.cut || 0) + Math.round(0.42 * G.xh); }
@@ -468,7 +469,8 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       "wr-ri": `M${xW2},${yWR} ${cur(xW2, yWR, xR1, yRk.invoice)}`,
       "in-ri": `M${G.retail.x + 96},${G.stubY} L${G.retail.x + 96},${Rt.bot[1]}`,
     };
-    return { boxes, links, inD, puD, widths, wB, paths, hits, yFB, yRI };
+    const dots = { wholesale_inputs: [G.whole.x + 64, G.stubY], retail_inputs: [G.retail.x + 96, G.stubY] };
+    return { boxes, links, inD, puD, widths, wB, paths, hits, dots, yFB, yRI };
   }
   function portGeom(R, infAll) {
     const { W: A, w3, bh, yImp, hImp, yP, yW, yR } = G, widths = ribbonWidths(R.ch), wB = borderWidth(R), gap = 10, minW = Math.min(112, (A - gap) * 0.36);
@@ -505,7 +507,8 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       "imp-wu": `M${xIG},${yP2} ${v(xIG, yP2, xW.border_final, yW)}`, "pr-wu": `M${xPR},${yP2} ${v(xPR, yP2, xW.producer_invoice, yW)}`, "pu-wu": `M${xPU},${yP2} ${v(xPU, yP2, xW.inherited, yW)}`,
       "in-wu": `M${xI},${yW - 18} L${xI},${yW}`, "wu-ri": `M${avg(xW)},${yW2} ${v(avg(xW), yW2, avg(xR), yR)}`, "wr-ri": `M${xWR},${yW2} ${v(xWR, yW2, xR.invoice, yR)}`, "in-ri": `M${xJ},${yR - 18} L${xJ},${yR}`,
     };
-    return { boxes, links, inD, puD, widths, wB, paths, hits, yFB: 0, yRI: 0 };
+    const dots = { wholesale_inputs: [xI, yW - 18], retail_inputs: [xJ, yR - 18] };
+    return { boxes, links, inD, puD, widths, wB, paths, hits, dots, yFB: 0, yRI: 0 };
   }
 
   function drawChain(R, quick) {
@@ -563,6 +566,13 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       (T ? sp.transition().duration(dur(700)).ease(d3.easeCubicInOut) : sp).attr("d", paths[kk]).attr("stroke-width", w);
       (T ? sf.transition().duration(dur(700)).ease(d3.easeCubicInOut) : sf).attr("d", paths[kk]).attr("stroke-width", w > 3 ? Math.min(2, w / 3) : 0);
       f.style.display = kk !== "exit" && w > 3 && !(isCh && R.ribbons === "faded") ? "" : "none";
+      if (Q.dots[kk]) {
+        let o = rib.querySelector("#o-" + kk);
+        if (!o) { o = el("circle", { id: "o-" + kk, class: "ribbon indot", "data-ch": kk, cx: Q.dots[kk][0], cy: Q.dots[kk][1], r: 0 }, rib); o.style.fill = color; }
+        o.classList.toggle("faded", R.ribbons === "faded");
+        const so = d3.select(o);
+        (T ? so.transition().duration(dur(700)).ease(d3.easeCubicInOut) : so).attr("cx", Q.dots[kk][0]).attr("cy", Q.dots[kk][1]).attr("r", w > 0 ? Math.max(4.2, w / 2 + 2.4) : 0);
+      }
     });
     const note = R.ribbons === "faded" ? `<span class="u">These values are for the headline case, shown for reference. This setting’s total is ${f1(100 * uShow)}.</span>` : `<span class="u">Points per 100 of VAT on a comparable formal purchase, all goods and services together. They don’t show which firm remits the tax.${R.key === "chain/formal/headline" ? " Online appendix, Table OA.10." : " Authors’ calculations."}</span>`;
     const CHNOTE = {
@@ -880,24 +890,36 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     }
     STILL = wasStill;
   }
+  function kakAxis(R) {
+    const v = [R.KT, R.KF, R.KP], a = Math.min(...v), b = Math.max(...v);
+    if (!G.port) return { lo: Math.min(0, 5 * Math.floor(a / 5)), hi: Math.max(30, 5 * Math.ceil(b / 5)), step: 5 };
+    const pad = Math.max(1, 0.12 * (b - a), (8 - (b - a)) / 2), lo = Math.floor(a - pad), hi = Math.ceil(b + pad);
+    return { lo, hi, step: hi - lo <= 14 ? 2 : 5 };
+  }
   function drawMeter(R) {
     const svg = $("#meter");
     const W = Math.max(280, svg.parentNode.clientWidth), H = 106;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
     const c = C();
-    const [lo, hi] = DATA.axes.kakwani;
-    const x = d3.scaleLinear().domain([lo, hi]).range([10, W - 10]);
+    const { lo, hi, step } = kakAxis(R);
+    const x = d3.scaleLinear().domain([lo, hi]).range([10, W - 10]), x0 = svg.xOld || x; // ticks slide from the old axis to the new one
+    svg.xOld = x;
     const yA = 67;
     ensureDefs(svg, "mhatch");
     const g = d3.select(svg);
     const tr = (s) => s.transition().duration(dur(650)).ease(d3.easeCubicInOut);
-    const ticks = d3.range(lo, hi + 0.1, 5);
+    const ticks = d3.range(Math.ceil(lo / step) * step, hi + 0.01, step);
     g.selectAll("line.ax").data([0]).join("line").attr("class", "ax").attr("x1", 10).attr("x2", W - 10).attr("y1", yA).attr("y2", yA).style("stroke", "var(--ink-3)");
-    g.selectAll("g.tk").data(ticks, (d) => d).join((en) => { const q = en.append("g").attr("class", "tk"); q.append("line"); q.append("text"); return q; })
+    g.selectAll("g.tk").data(ticks, (d) => d).join(
+      (en) => { const q = en.append("g").attr("class", "tk").style("opacity", svg.drawn ? 0 : 1); q.append("line").attr("x1", (d) => x0(d)).attr("x2", (d) => x0(d)); q.append("text").attr("x", (d) => x0(d)); return q; },
+      (up) => up,
+      (ex) => ex.call((q) => { tr(q.select("line")).attr("x1", (d) => x(d)).attr("x2", (d) => x(d)); tr(q.select("text")).attr("x", (d) => x(d)); tr(q).style("opacity", 0).remove(); }))
+      .call((q) => tr(q).style("opacity", 1))
       .call((q) => { q.select("line").attr("y1", yA).attr("y2", yA + 4).style("stroke", "var(--ink-3)"); q.select("text").attr("y", yA + 15).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text((d) => fx(d, 0)); })
       .call((q) => tr(q.select("line")).attr("x1", (d) => x(d)).attr("x2", (d) => x(d)))
       .call((q) => tr(q.select("text")).attr("x", (d) => x(d)));
     g.selectAll("text.cap").data([0]).join("text").attr("class", "cap").attr("x", W / 2).attr("y", yA + 34).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text("Kakwani index of VAT × 100; higher is more progressive");
+    svg.drawn = true;
     const gainL = Math.min(R.KT, R.KF), gainR = Math.max(R.KT, R.KF);
     g.selectAll("rect.gain").data([0]).join("rect").attr("class", "gain").attr("y", yA - 12).attr("height", 12).style("fill", "url(#mhatch)").call((s) => tr(s).attr("x", x(gainL)).attr("width", x(gainR) - x(gainL)));
     const showP = S.scope !== "formal";
@@ -1101,7 +1123,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
   const DRAWERS = {
     intro() {
       return {
-        title: "What this page shows",
+        title: "What is this?",
         src: "Lastunen and Chang (2026), WIDER Working Paper, version of 23 November 2026",
         html: `
 <p>Studies of who pays VAT in developing countries often assume that purchases from informal shops carry no VAT. But informal shops buy from importers, manufacturers, and wholesalers, and the VAT those suppliers pay or charge stays in the shop’s costs because the shop can’t reclaim it. This page shows how much VAT informal purchases carry in Rwanda, Uganda, Mozambique, and Peru, and what that changes for revenue and for how progressive VAT looks.</p>
@@ -1495,6 +1517,38 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     const tab = $("#tab-" + S.cc); if (tab) tab.focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: RM.matches ? "auto" : "smooth" });
   }
+  function buildSwipe() {
+    const dr = $("#drawer"), sc = $("#scrim");
+    let g = null;
+    const blocked = (t) => { if (t.closest("input, select, textarea")) return true; for (let e = t; e && e !== dr; e = e.parentElement) if (e.scrollLeft > 0) return true; return false; };
+    const place = (x) => { dr.style.transform = x === null ? "" : `translateX(${x}px)`; sc.style.opacity = x === null ? "" : String(1 - x / dr.offsetWidth); };
+    const live = (on) => { dr.style.transition = sc.style.transition = on ? "none" : ""; };
+    dr.addEventListener("touchstart", (e) => {
+      if (g && g.on) { g.on = false; live(false); place(null); }
+      g = e.touches.length === 1 && dr.classList.contains("open") && !blocked(e.target) ? { x: e.touches[0].clientX, y: e.touches[0].clientY, on: false, dx: 0, log: [[e.timeStamp, 0]] } : null;
+    }, { passive: true });
+    dr.addEventListener("touchmove", (e) => {
+      if (!g) return;
+      const t = e.touches[0], dx = t.clientX - g.x, dy = t.clientY - g.y;
+      if (!g.on) {
+        if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+        if (dx <= 0 || Math.abs(dx) < 1.2 * Math.abs(dy) || !e.cancelable) { g = null; return; }
+        g.on = true; live(true);
+      }
+      e.preventDefault();
+      g.dx = Math.max(0, dx - 8); g.log.push([e.timeStamp, g.dx]);
+      place(g.dx);
+    }, { passive: false });
+    const end = (e) => {
+      const q = g; g = null;
+      if (!q || !q.on) return;
+      const z = q.log[q.log.length - 1], a = q.log.find((m) => z[0] - m[0] < 130), v = z[0] > a[0] && e.timeStamp - z[0] < 110 ? (z[1] - a[1]) / (z[0] - a[0]) : 0; // speed over the last moments, px per ms
+      const out = e.type === "touchend" && (q.dx > dr.offsetWidth / 3 || (q.dx > 30 && v > 0.25));
+      void dr.offsetWidth; live(false); place(null); // the normal transition takes over from where the finger left the panel
+      if (out) closeDrawer();
+    };
+    dr.addEventListener("touchend", end); dr.addEventListener("touchcancel", end);
+  }
   function buildDrawers() {
     document.addEventListener("click", (e) => {
       const b = e.target.closest("[data-drawer]");
@@ -1502,6 +1556,7 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     });
     $("#drawer-close").addEventListener("click", closeDrawer);
     $("#scrim").addEventListener("click", closeDrawer);
+    buildSwipe();
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && !$("#drawer").hidden) closeDrawer();
       if (e.key === "Tab" && !$("#drawer").hidden) {
@@ -1685,7 +1740,7 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     const to = folds.map((d) => (d.id === openId ? clipOf(d).firstElementChild.getBoundingClientRect().height : 0));
     folds.forEach((d, k) => { if (d.open) height(d, to[k]); });
     const headEnd = sum.getBoundingClientRect().top + window.scrollY, maxEnd = Math.max(0, root.scrollHeight - window.innerHeight);
-    const bar = $(".site-header"), barH = bar ? bar.offsetHeight : 0, barNow = bar ? Math.max(0, bar.getBoundingClientRect().bottom) : 0;
+    const bar = window.innerWidth <= 560 ? null : $(".site-header"), barH = bar ? bar.offsetHeight : 0, barNow = bar ? Math.max(0, bar.getBoundingClientRect().bottom) : 0;
     const goal = headEnd - 20 - scroll0 >= barNow ? headEnd - 20 : headEnd - 20 - barH;
     const want = openId ? goal : Math.min(scroll0, headEnd - 20 - barH);
     const scrollEnd = Math.max(0, Math.min(want, maxEnd)), after = headEnd - scrollEnd;
@@ -1726,6 +1781,24 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     });
     $$('a[href="#paper"]').forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); openFold("paper"); }));
   }
+  const NAV = { at: 0, away: false, queued: false };
+  function measureNav() {
+    const nav = $("#topnav");
+    nav.style.position = "static"; NAV.at = nav.getBoundingClientRect().top + window.scrollY; nav.style.position = "";
+    trackNav();
+  }
+  function trackNav() {
+    NAV.queued = false;
+    const nav = $("#topnav"), root = document.documentElement, phone = window.innerWidth <= 560;
+    root.style.setProperty("--p", phone ? Math.max(0, Math.min(1, window.scrollY / Math.max(1, NAV.at))).toFixed(3) : "0");
+    const top = $("#compare").getBoundingClientRect().top / window.innerHeight;
+    NAV.away = phone && top < (NAV.away ? 0.5 : 0.45);
+    nav.classList.toggle("away", NAV.away);
+  }
+  function buildNav() {
+    window.addEventListener("scroll", () => { if (!NAV.queued) { NAV.queued = true; requestAnimationFrame(trackNav); } }, { passive: true });
+    trackNav();
+  }
   function buildMini() {
     const bar = $("#mini"), ctl = $("#controls");
     if (!bar || !("IntersectionObserver" in window)) return;
@@ -1760,6 +1833,7 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     buildDrawers();
     buildTips();
     buildMini();
+    buildNav();
     buildPops();
     syncTabs();
     layoutPage();
