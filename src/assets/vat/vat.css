@@ -12,7 +12,7 @@ html { scroll-behavior: auto; }
 /* the site gives every element a 0.01 ms transition here, which makes measured sizes lag one step behind */
 @media (prefers-reduced-motion: reduce) { .vatx, .vatx *, .vatx *::before, .vatx *::after { transition: none !important; animation: none !important; } }
 /* phones: the title bar scrolls away with the page, and the links and countries (.topnav) take its place */
-@media (max-width: 560px) { .site-header { position: relative; transform: none !important; touch-action: auto; border-bottom-color: color-mix(in srgb, var(--header-rule) calc((1 - var(--p, 0)) * 100%), transparent); } }
+@media (max-width: 640px) { .site-header { position: relative; transform: none !important; touch-action: auto; border-bottom-color: color-mix(in srgb, var(--header-rule) calc((1 - var(--p, 0)) * 100%), transparent); } }
 .vatx {
   --bg: #ffffff;
   --surface: #f5f6f8;
@@ -230,7 +230,7 @@ html { scroll-behavior: auto; }
 @media (max-width: 1099px) {
 .vatx .result { font-size: 17px; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
 .vatx .brand h1 { font-size: 24px; }
 .vatx .brand .sub { font-size: 15px; }
 .vatx .countries { width: 100%; }
@@ -249,7 +249,7 @@ html { scroll-behavior: auto; }
 .vatx .endpoint-m b.col { color: var(--collected); }
 .vatx .endpoint-m b.up { color: var(--up-text); }
 .vatx .endpoint-m p { margin: 0; color: var(--ink-3); font-size: 11.5px; height: 32px; overflow: hidden; }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
 .vatx .countries small { display: none; }
 }
 .vatx .drawer-body { overflow-wrap: break-word; overflow-x: hidden; }
@@ -540,7 +540,7 @@ html { scroll-behavior: auto; }
 .vatx #chain.port.tiny .node .t1 { font-size: 11.5px; letter-spacing: -0.15px; }
 .vatx #chain.port.tiny .node .t2 { font-size: 10.5px; }
 .vatx #chain.port .stage { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
 .vatx .tabs { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 0; }
 .vatx .tabs button { font-size: 12.5px; padding: 4px 3px 5px; white-space: nowrap; letter-spacing: -0.1px; }
 .vatx .mini { position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); z-index: 35; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 8px 6px 7px; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); color: var(--ink); box-shadow: var(--pop-shadow); cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(14px); transition: opacity 0.2s ease, transform 0.25s ease, visibility 0s 0.25s; }
@@ -578,7 +578,7 @@ html { scroll-behavior: auto; }
 .vatx .tabpanel { height: 236px; }
 .vatx .figline { height: 46px; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
 .vatx .lg { display: none; }
 .vatx .sm { display: inline; }
 .vatx .page { padding-top: 8px; }
@@ -621,10 +621,10 @@ html { scroll-behavior: auto; }
 .vatx .shortline .to { width: 14px; }
 .vatx .shortline .n::after { font-size: 10px; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
 .vatx .seg button[aria-checked="true"] { font-weight: 400; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
 .vatx .dt.tight { font-size: 10.5px; }
 .vatx .dt.tight th, .vatx .dt.tight td { padding: 4px 1.5px; }
 .vatx .dt.tight thead th { font-size: 9.5px; letter-spacing: -0.2px; }
@@ -638,7 +638,7 @@ html { scroll-behavior: auto; }
 @media (max-width: 1099px) {
 .vatx { --sp-side: 12px; --ctl-row: 13px; --sp-ctl-top: 16px; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
 .vatx .shortline { height: 62px; }
 .vatx .side { scroll-margin-top: 96px; }
 .vatx .top { display: contents; }
@@ -662,6 +662,14 @@ html { scroll-behavior: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
 .vatx .topnav, .vatx .topnav.away { transition: none; }
+}
+.vatx .ph-tabs { display: none; }
+@media (max-width: 640px) {
+.vatx .tabs.ph-tabs { display: flex; justify-content: flex-start; gap: 14px; margin: 2px 0 8px; }
+.vatx #reg-key { min-height: 38px; align-content: flex-start; }
+}
+@media (max-width: 340px) {
+.vatx .figline .t { font-size: 12px; }
 }
 /* Site colours: the site's paper ground and teal links in light, its slate ground in dark */
 .vatx {
@@ -699,9 +707,9 @@ html { scroll-behavior: auto; }
 .vatx .page-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 18px; margin-bottom: 12px; }
 .vatx .page-top:empty { display: none; }
 @media (max-width: 1239px) { .vat-bar .toplinks, .vat-bar .countries { display: none; } }
-@media (max-width: 560px) { .vat-bar .brand { flex-direction: column; } .vat-bar .brand h1 { line-height: 1.1; } .vat-bar .brand .sub { font-size: 0.95rem; line-height: 1.2; } .vat-bar .brand .sub, .vat-bar .brand h1 { top: 1px; } }
+@media (max-width: 640px) { .vat-bar .brand { flex-direction: column; } .vat-bar .brand h1 { line-height: 1.1; } .vat-bar .brand .sub { font-size: 0.95rem; line-height: 1.2; } .vat-bar .brand .sub, .vat-bar .brand h1 { top: 1px; } }
 @media (max-width: 379px) { .vat-bar .brand .sub { font-size: 0.8rem; } }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .vatx .page { padding-top: 0; }
   .vatx .page-top { display: contents; }
   .vatx .topnav { z-index: 10002; --bar-bg: linear-gradient(var(--header-bg), var(--header-bg)), var(--bg); --bar-rule: var(--header-rule); }

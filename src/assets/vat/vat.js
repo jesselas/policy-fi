@@ -12,6 +12,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
   const $ = (s, el) => (el || document).querySelector(s);
   const $$ = (s, el) => Array.from((el || document).querySelectorAll(s));
   const NS = "http://www.w3.org/2000/svg";
+  const PHONE = 640; // the phone view ends at this window width (same number in the CSS)
   let STILL = true;
   const textState = new WeakMap(), NUM = /[−-]?\d+(?:\.\d+)?/g;
   const shape = (t) => t.replace(NUM, "#");
@@ -266,6 +267,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       const s = document.createElement("span"); s.style.left = t * 100 + "%"; s.textContent = t === 1 ? "1 (headline)" : String(t);
       ticks.appendChild(s);
     });
+    $$("#reg-tabs button").forEach((b) => b.addEventListener("click", () => { if (regTab !== b.dataset.v) { regTab = b.dataset.v; STILL = false; drawPolicy(true); } }));
     $$("#inc-tabs button").forEach((b) => b.addEventListener("click", () => { S.tab = b.dataset.tab; drawIncidence(resolve()); syncTabs(); }));
   }
   function syncControls(R) {
@@ -304,7 +306,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
   const G = { W: 800, H: 300, prod: { x: 0, w: 0 }, whole: { x: 0, w: 0 }, retail: { x: 0, w: 0 }, house: { x: 0, L: 1 }, px: 0, pw: 0, imp: [2, 46], stageY: 66, y0: 76, y1: 260, gap: 10, k: 0.62, minH: 42, stubY: 276, xh: 0, extra: 0 };
   function layoutChain() {
     const box = $(".chain-scroll"), avail = Math.floor(box.getBoundingClientRect().width), svg = $("#chain");
-    G.port = avail < 560;
+    G.port = window.innerWidth <= PHONE;
     box.classList.toggle("port", G.port); svg.classList.toggle("port", G.port); svg.classList.toggle("tiny", avail < 330);
     const house = $("#ch-house"), stages = $$("#chain .stage");
     if (house) house.style.display = G.port ? "none" : "";
@@ -333,7 +335,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     const work = $(".work"), root = $("#vatx") || document.documentElement;
     work.style.minHeight = ""; root.style.setProperty("--fold-top", "28px"); G.xh = 0; G.extra = 0; root.style.setProperty("--xh", "0px");
     G.cut = $(".site-header") && window.innerWidth >= 1100 && window.innerHeight < 720 ? Math.min(20, 720 - window.innerHeight) : 0; root.style.setProperty("--cut", G.cut + "px");
-    layoutChain(); sizeIncidence();
+    layoutChain(); sizeIncidence(); reserve();
     if (window.innerWidth < 1100) return;
     const top = work.getBoundingClientRect().top + window.scrollY, target = Math.round(window.innerHeight * 0.925) - 8;
     G.xh = Math.max(0, Math.min(340, target - (top + work.offsetHeight)));
@@ -348,6 +350,24 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     root.style.setProperty("--fold-top", Math.max(28, Math.min(80, window.innerHeight + 4 - Math.round(work.getBoundingClientRect().bottom + window.scrollY))) + "px");
   }
   function incHeight() { return window.innerWidth < 700 ? 190 : window.innerWidth < 1100 ? 236 : 203 - (G.cut || 0) + Math.round(0.42 * G.xh); }
+  function reserve() {
+    const cap = $("#chain-cap"), rk = $("#rev-key"), ik = $("#inc-key"), tp = $(".tabpanel"), narrow = window.innerWidth < 1100;
+    [cap, rk, ik, tp].forEach((e) => { e.style.height = e.style.minHeight = ""; });
+    if (!narrow) return;
+    const tall = (e, list) => {
+      const c = e.cloneNode(false); c.removeAttribute("id"); c.setAttribute("aria-hidden", "true");
+      Object.assign(c.style, { position: "absolute", visibility: "hidden", left: 0, top: 0, width: e.getBoundingClientRect().width + "px", height: "auto", minHeight: 0 });
+      e.parentNode.appendChild(c);
+      const h = Math.max(...list.map((t) => { c.innerHTML = t; return c.getBoundingClientRect().height; }));
+      c.remove(); return Math.ceil(h);
+    };
+    const keys = (a) => a.map((t) => `<span><i class="key"></i>${t}</span>`).join("");
+    const set = (e, h) => { e.style.height = e.style.minHeight = h + "px"; return h; };
+    set(cap, tall(cap, ["formal", "import", "faded", "chain"].map((k) => capText(k, G.port))));
+    set(rk, tall(rk, [keys(["Formal purchases", "Border VAT alone", "Added by the domestic chain", "Not collected"])]));
+    const h = set(ik, tall(ik, [keys(["All taxed", "Not collected", "Border VAT alone", "Formal purchases"]), keys(["Exempt or zero-rated", "Taxable, informal outlet", "Taxable, formal outlet"]), keys(["Full chain, this setting", "Border VAT alone"])]));
+    tp.style.height = incHeight() + parseFloat(getComputedStyle(ik).marginTop) + h + 2 + "px";
+  }
   function sizeIncidence() { const h = incHeight(); $("#incidence").setAttribute("height", h); }
   const CH = [
     { key: "invoice", color: "var(--up)", label: "Immediate supplier’s invoice VAT" },
@@ -511,6 +531,16 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     return { boxes, links, inD, puD, widths, wB, paths, hits, dots, yFB: 0, yRI: 0 };
   }
 
+  function capText(kind, port) {
+    return kind === "formal"
+      ? `No ribbons: this setting counts no VAT on informal purchases.`
+      : kind === "import"
+        ? port ? `<span class="nw"><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b></span>: ${term("alone", "border VAT alone")}, with every domestic supplier treated as unregistered.` : `The <i class="key" style="background:var(--alone)"></i> <b class="cname-alone">plum</b> ribbon is ${term("upstream", "upstream VAT")} under ${term("alone", "border VAT alone")}:<br>VAT charged on imports, with every domestic supplier treated as unregistered.`
+        : kind === "faded"
+          ? port ? `Faded ribbons: the split of ${term("upstream", "upstream VAT")} in the headline case. The bars are for this setting.` : `Faded ribbons show the split of ${term("upstream", "upstream VAT")} in the paper’s headline case.<br>The split wasn’t computed for this setting. The bars ${port ? "below" : "on the right"} are for this setting.`
+          : port ? `<span class="nw"><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b></span>: border VAT that isn’t deducted. <span class="nw"><i class="key sp" style="background:var(--up)"></i> <b class="cname-amber">Amber</b></span>: other ${term("upstream", "upstream VAT")}.`
+          : `All coloured ribbons are ${term("upstream", "upstream VAT")}: paid before the informal sale and not deducted.<br><span class="nw"><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b></span>: border VAT that unregistered wholesalers and service sellers can’t deduct. <span class="nw"><i class="key sp" style="background:var(--up)"></i> <b class="cname-amber">Amber</b></span>: other upstream VAT.`;
+  }
   function drawChain(R, quick) {
     if (!chainBuilt) { buildChain(); layoutChain(); }
     const c = C(), ch = R.ch, svg = $("#chain");
@@ -619,14 +649,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       hg.addEventListener("focusout", () => lit(null));
     }
 
-    setHTML($("#chain-cap"), S.scope === "formal"
-      ? `No ribbons: this setting counts no VAT on informal purchases.`
-      : S.scope === "import"
-        ? port ? `<span class="nw"><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b></span>: ${term("alone", "border VAT alone")}, with every domestic supplier treated as unregistered.` : `The <i class="key" style="background:var(--alone)"></i> <b class="cname-alone">plum</b> ribbon is ${term("upstream", "upstream VAT")} under ${term("alone", "border VAT alone")}:<br>VAT charged on imports, with every domestic supplier treated as unregistered.`
-        : R.ribbons === "faded"
-          ? port ? `Faded ribbons: the split of ${term("upstream", "upstream VAT")} in the headline case. The bars are for this setting.` : `Faded ribbons show the split of ${term("upstream", "upstream VAT")} in the paper’s headline case.<br>The split wasn’t computed for this setting. The bars ${port ? "below" : "on the right"} are for this setting.`
-          : port ? `<span class="nw"><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b></span>: border VAT that isn’t deducted. <span class="nw"><i class="key sp" style="background:var(--up)"></i> <b class="cname-amber">Amber</b></span>: other ${term("upstream", "upstream VAT")}.`
-          : `All coloured ribbons are ${term("upstream", "upstream VAT")}: paid before the informal sale and not deducted.<br><span class="nw"><i class="key" style="background:var(--alone)"></i> <b class="cname-alone">Plum</b></span>: border VAT that unregistered wholesalers and service sellers can’t deduct. <span class="nw"><i class="key sp" style="background:var(--up)"></i> <b class="cname-amber">Amber</b></span>: other upstream VAT.`);
+    setHTML($("#chain-cap"), capText(S.scope === "chain" ? (R.ribbons === "faded" ? "faded" : "chain") : S.scope, port));
     $(".work").classList.toggle("alone", S.scope === "import");
     drawHouse(R, Q.yFB, Q.yRI, T);
     const em = $("#endpoint-m");
@@ -968,7 +991,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
   }
   function drawCompare() {
     const svg = $("#cmp-rev");
-    const W = Math.max(300, svg.parentNode.clientWidth), rowH = 38, H = rowH * 4 + 40, lw = 92, rw = 62;
+    const W = Math.max(280, svg.parentNode.clientWidth), rowH = 38, H = rowH * 4 + 40, lw = 92, rw = 62;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
     ensureDefs(svg, "chatch");
     const x = d3.scaleLinear().domain([0, 100]).range([lw, W - rw]);
@@ -986,7 +1009,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     });
     g.selectAll("text.hd").data([0]).join("text").attr("class", "hd").attr("text-anchor", "end").attr("x", W - 1).attr("y", H - 12).style("font-size", "11px").style("fill", "var(--ink-3)").text("shortfall %");
     const s2 = $("#cmp-rem");
-    const W2 = Math.max(300, s2.parentNode.clientWidth), H2 = rowH * 4 + 40;
+    const W2 = Math.max(280, s2.parentNode.clientWidth), H2 = rowH * 4 + 40;
     s2.setAttribute("viewBox", `0 0 ${W2} ${H2}`); s2.setAttribute("width", W2); s2.setAttribute("height", H2);
     const x2 = d3.scaleLinear().domain([0, DATA.axes.removed_max]).range([lw, W2 - 14]);
     const g2 = d3.select(s2);
@@ -1024,23 +1047,25 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     $("#cmp-key").innerHTML = [["var(--collected)", "Formal purchases"], ["var(--alone)", "Border VAT alone"], ["var(--up-light)", "Added by the domestic chain"], ["repeating-linear-gradient(45deg,var(--untaxed) 0 2px,transparent 2px 5px)", "Not collected"]].map(([c, t]) => `<span><i class="key${t === "Not collected" ? " boxed" : ""}" style="background:${c}"></i>${t}</span>`).join("");
     $("#rem-key").innerHTML = `<span><i class="key" style="background:var(--alone);width:9px;height:9px"></i>Border VAT alone</span><span><i class="key" style="background:var(--up);border-radius:50%;width:10px;height:10px"></i>Headline</span><span><i class="key" style="background:var(--untaxed);height:5px"></i>Alternative assumptions</span>`;
   }
-  function drawPolicy() {
+  let regTab = "revenue"; // phones show one of the two registration charts at a time
+  function drawPolicy(move) {
+    const phone = window.innerWidth <= PHONE;
     const svg = $("#pol-food");
-    const W = Math.max(300, svg.parentNode.clientWidth), rowH = 19, lw = W < 520 ? 84 : 118, headH = 17, gapC = 12;
+    const W = Math.max(280, svg.parentNode.clientWidth), rowH = 19, lw = W < 520 ? 84 : 118, headH = 17, gapC = 12;
     const H = D.order.length * (headH + 2 * rowH + gapC) + 26;
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
     const x = d3.scaleLinear().domain(DATA.axes.food).range([lw + 34, W - 40]);
     const g = d3.select(svg); g.selectAll("*").remove();
     d3.range(DATA.axes.food[0], DATA.axes.food[1] + 0.01, 0.4).forEach((v) => {
       g.append("line").attr("x1", x(v)).attr("x2", x(v)).attr("y1", 4).attr("y2", H - 22).style("stroke", v === 0 ? "var(--ink-3)" : "var(--grid)");
-      g.append("text").attr("x", x(v)).attr("y", H - 8).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text((v > 0 ? "+" : "") + fx(v, 1) + "%");
+      g.append("text").attr("x", x(v)).attr("y", H - 8).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(W < 310 && Math.abs(Math.abs(v) - 0.4) < 0.01 ? "" : (v > 0 ? "+" : "") + fx(v, 1) + "%");
     });
     let y = 4;
     D.order.forEach((cc) => {
       const t6 = D.countries[cc].t6;
       const hd = g.append("text").attr("x", 0).attr("y", y + 12).style("font-size", "12.5px").style("font-weight", 600).style("fill", "var(--ink)");
       hd.append("tspan").text(D.countries[cc].name);
-      hd.append("tspan").attr("dx", 8).style("font-weight", 400).style("font-size", "11px").style("fill", "var(--ink-3)").text(`revenue-neutral rate ${f1(t6.resolved.rate)}%`);
+      if (!phone) hd.append("tspan").attr("dx", 8).style("font-weight", 400).style("font-size", "11px").style("fill", "var(--ink-3)").text(`revenue-neutral rate ${f1(t6.resolved.rate)}%`);
       ["d1", "d10"].forEach((d, j) => {
         const yy = y + headH + 8 + j * rowH;
         g.append("text").attr("x", 0).attr("y", yy + 4).style("font-size", "11px").style("fill", "var(--ink-2)").text(j ? "richest 10%" : "poorest 10%");
@@ -1057,12 +1082,12 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     });
     $("#food-key").innerHTML = `<span><i class="key" style="background:var(--up);border-radius:50%;width:10px;height:10px"></i>With upstream VAT, recalculated after the reform (value shown)</span><span><i class="key" style="border:1.8px solid var(--collected);border-radius:50%;width:9px;height:9px"></i>‘Formal only’</span>`;
     const s2 = $("#pol-reg");
-    const W2 = Math.max(300, s2.parentNode.clientWidth);
+    const W2 = Math.max(280, s2.parentNode.clientWidth);
     const regRows = [
       ["RW", "high", "Rwanda", "markets, meat/fish shops"], ["UG", "high", "Uganda", "general shops, meat/fish shops"],
       ["MZ", "high", "Mozambique", "all market vendors"], ["PE", "high", "Peru", "all market vendors"], ["PE", "high_bodegas", "Peru", "markets and retail bodegas"],
     ];
-    const side2 = window.innerWidth >= 980, H2 = side2 ? H : regRows.length * 38 + 52, rh = (H2 - 52) / regRows.length, split2 = W2 < 520 ? 0.56 : 0.58, top2 = 17;
+    const side2 = window.innerWidth >= 980, H2 = side2 ? H : regRows.length * (phone ? 46 : 38) + (phone ? 68 : 52), rh = (H2 - (phone ? 68 : 52)) / regRows.length, foot = phone ? 42 : 26, split2 = W2 < 520 ? 0.56 : 0.58, top2 = 17;
     s2.setAttribute("viewBox", `0 0 ${W2} ${H2}`); s2.setAttribute("width", W2); s2.setAttribute("height", H2);
     const g2 = d3.select(s2); g2.selectAll("*").remove();
     const maxLW = Math.min(190, Math.max(96, W2 * 0.34));
@@ -1070,34 +1095,41 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     const labs = regRows.map(([, , nm, cat]) => {
       let lines = [cat];
       if (measure(cat, "11px", 400) > maxLW - 12 && cat.includes(", ")) { const i = cat.indexOf(", "); lines = [cat.slice(0, i + 1), cat.slice(i + 2)]; }
+      else if (phone && measure(cat, "11px", 400) > 110 && cat.includes(" and ")) { const i = cat.indexOf(" and ") + 4; lines = [cat.slice(0, i), cat.slice(i + 1)]; }
       return { nm, lines, w: Math.max(measure(nm, "12.5px", 600), ...lines.map((l) => measure(l, "11px", 400))) };
     });
     const lw2 = Math.ceil(Math.max(...labs.map((l) => l.w))) + 14;
-    const xa = d3.scaleLinear().domain([0, DATA.axes.reg_revenue_max]).range([lw2, W2 * split2 - 34]);
-    const xbb = d3.scaleLinear().domain([0, DATA.axes.burden_max]).range([W2 * split2 + 14, W2 - 10]);
-    [0, 50, 100].forEach((v) => {
-      g2.append("line").attr("x1", xa(v)).attr("x2", xa(v)).attr("y1", top2).attr("y2", H2 - 26).style("stroke", v === 100 ? "var(--ink-3)" : "var(--grid)").style("stroke-dasharray", v === 100 ? "4 3" : null);
-      g2.append("text").attr("x", xa(v)).attr("y", H2 - 12).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(v + "%");
+    const xa = d3.scaleLinear().domain([0, DATA.axes.reg_revenue_max]).range([lw2, phone ? W2 - 18 : W2 * split2 - 34]);
+    const xbb = d3.scaleLinear().domain([0, DATA.axes.burden_max]).range([phone ? lw2 : W2 * split2 + 14, W2 - (phone ? 36 : 10)]);
+    const both = !phone, rev = both || regTab === "revenue", bur = both || regTab === "burden", grow = (s, f) => (move && dur(1) ? f(s.transition().duration(dur(600)).ease(d3.easeCubicOut)) : f(s));
+    if (rev) [0, 50, 100].forEach((v) => {
+      g2.append("line").attr("x1", xa(v)).attr("x2", xa(v)).attr("y1", top2).attr("y2", H2 - foot).style("stroke", v === 100 ? "var(--ink-3)" : "var(--grid)").style("stroke-dasharray", v === 100 ? "4 3" : null);
+      g2.append("text").attr("x", xa(v)).attr("y", H2 - foot + 14).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(v + "%");
     });
-    g2.append("text").attr("x", xa(100)).attr("y", 12).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text("statutory forecast");
-    d3.range(0, DATA.axes.burden_max + 0.01, 1).forEach((v) => {
-      g2.append("line").attr("x1", xbb(v)).attr("x2", xbb(v)).attr("y1", top2).attr("y2", H2 - 26).style("stroke", "var(--grid)");
-      if (v > 0) g2.append("text").attr("x", xbb(v)).attr("y", H2 - 12).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(v + "%");
+    if (rev) g2.append("text").attr("x", phone ? W2 - 1 : xa(100)).attr("y", 12).attr("text-anchor", phone ? "end" : "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text("statutory forecast");
+    if (bur) d3.range(0, DATA.axes.burden_max + 0.01, 1).forEach((v) => {
+      g2.append("line").attr("x1", xbb(v)).attr("x2", xbb(v)).attr("y1", top2).attr("y2", H2 - foot).style("stroke", "var(--grid)");
+      if (v > 0 || phone) g2.append("text").attr("x", xbb(v)).attr("y", H2 - foot + 14).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(v + "%");
     });
-    g2.append("text").attr("x", xbb(1.5)).attr("y", 12).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text("poorest decile’s burden");
+    if (phone) g2.append("text").attr("x", W2 / 2).attr("y", H2 - 5).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(rev ? "Revenue gained, % of the statutory forecast" : "VAT added for the poorest decile, % of consumption");
+    else g2.append("text").attr("x", xbb(1.5)).attr("y", 12).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text("poorest decile’s burden");
     regRows.forEach(([cc, k, nm, cat], i) => {
       const t = D.countries[cc].t7[k], y = top2 + 8 + i * rh;
       g2.append("text").attr("class", "rlab").attr("x", 0).attr("y", y + 9).style("font-size", "12.5px").style("font-weight", 600).style("fill", "var(--ink)").text(nm);
       labs[i].lines.forEach((ln, j) => g2.append("text").attr("class", "rlab").attr("x", 0).attr("y", y + 22 + 11 * j).style("font-size", "11px").style("fill", "var(--ink-3)").text(ln));
-      g2.append("rect").attr("class", "rbar").attr("tabindex", 0).attr("data-tip", `<b>${nm}, ${cat}</b><br>Revenue gained: ${f1(t.revenue)}% of statutory VAT on the same net purchases`).attr("x", xa(0)).attr("y", y + 2).attr("height", 14).attr("width", xa(t.revenue) - xa(0)).style("fill", "var(--collected)");
-      g2.append("text").attr("x", xa(t.revenue) + 5).attr("y", y + 13).style("font-size", "11.5px").style("font-weight", 600).style("fill", "var(--ink)").style("font-variant-numeric", "tabular-nums").text(f0(t.revenue));
+      if (rev) g2.append("rect").attr("class", "rbar").attr("tabindex", 0).attr("data-tip", `<b>${nm}, ${cat}</b><br>Revenue gained: ${f1(t.revenue)}% of statutory VAT on the same net purchases`).attr("x", xa(0)).attr("y", y + 2).attr("height", 14).attr("width", move ? 0 : xa(t.revenue) - xa(0)).style("fill", "var(--collected)").call((s) => grow(s, (q) => q.attr("width", xa(t.revenue) - xa(0))));
+      if (rev) g2.append("text").attr("x", xa(t.revenue) + 5).attr("y", y + 13).style("font-size", "11.5px").style("font-weight", 600).style("fill", "var(--ink)").style("font-variant-numeric", "tabular-nums").text(f0(t.revenue));
       const yy = y + 9;
+      if (!bur) return;
       g2.append("line").attr("x1", xbb(Math.min(t.d1_chain, t.d1_statutory))).attr("x2", xbb(Math.max(t.d1_chain, t.d1_statutory))).attr("y1", yy).attr("y2", yy).style("stroke", "var(--rule)").style("stroke-width", 2);
       const tb = (what, v) => `<b>${nm}, ${cat}</b><br>Poorest decile’s added burden, ${what}: ${f2(v)}% of consumption`;
-      g2.append("circle").attr("tabindex", 0).attr("data-tip", tb("if sales were untaxed before", t.d1_statutory)).attr("cx", xbb(t.d1_statutory)).attr("cy", yy).attr("r", 4.5).style("fill", "var(--bg)").style("stroke", "var(--ink-2)").style("stroke-width", 1.6);
-      g2.append("circle").attr("tabindex", 0).attr("data-tip", tb("with upstream VAT already in prices", t.d1_chain)).attr("cx", xbb(t.d1_chain)).attr("cy", yy).attr("r", 5).style("fill", "var(--up)");
+      g2.append("circle").attr("tabindex", 0).attr("data-tip", tb("if sales were untaxed before", t.d1_statutory)).attr("cx", xbb(move ? 0 : t.d1_statutory)).attr("cy", yy).attr("r", 4.5).style("fill", "var(--bg)").style("stroke", "var(--ink-2)").style("stroke-width", 1.6).call((s) => grow(s, (q) => q.attr("cx", xbb(t.d1_statutory))));
+      g2.append("circle").attr("tabindex", 0).attr("data-tip", tb("with upstream VAT already in prices", t.d1_chain)).attr("cx", xbb(move ? 0 : t.d1_chain)).attr("cy", yy).attr("r", 5).style("fill", "var(--up)").call((s) => grow(s, (q) => q.attr("cx", xbb(t.d1_chain))));
+      if (phone) [[t.d1_chain, -10, "end", "var(--up-text)"], [t.d1_statutory, 10, "start", "var(--ink-2)"]].forEach(([v, dx, a, c]) => g2.append("text").attr("x", xbb(v) + dx).attr("y", yy + 4).attr("text-anchor", a).style("font-size", "11px").style("font-weight", 600).style("fill", c).style("font-variant-numeric", "tabular-nums").text(f2(v)));
     });
-    $("#reg-key").innerHTML = `<span><i class="key" style="background:var(--collected)"></i>Revenue gained</span><span><i class="key" style="background:var(--up);border-radius:50%;width:10px;height:10px"></i>Burden with upstream VAT</span><span><i class="key" style="border:1.6px solid var(--ink-2);border-radius:50%;width:9px;height:9px"></i>Burden if sales were untaxed before</span>`;
+    const kRev = `<span><i class="key" style="background:var(--collected)"></i>Revenue gained</span>`, kBur = `<span><i class="key" style="background:var(--up);border-radius:50%;width:10px;height:10px"></i>Burden with upstream VAT</span><span><i class="key" style="border:1.6px solid var(--ink-2);border-radius:50%;width:9px;height:9px"></i>Burden if sales were untaxed before</span>`;
+    $("#reg-key").innerHTML = (rev ? kRev : "") + (bur ? kBur : "");
+    $$("#reg-tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.v === regTab)));
   }
   function tbl(head, rows, opts) {
     opts = opts || {};
@@ -1740,7 +1772,7 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     const to = folds.map((d) => (d.id === openId ? clipOf(d).firstElementChild.getBoundingClientRect().height : 0));
     folds.forEach((d, k) => { if (d.open) height(d, to[k]); });
     const headEnd = sum.getBoundingClientRect().top + window.scrollY, maxEnd = Math.max(0, root.scrollHeight - window.innerHeight);
-    const bar = window.innerWidth <= 560 ? null : $(".site-header"), barH = bar ? bar.offsetHeight : 0, barNow = bar ? Math.max(0, bar.getBoundingClientRect().bottom) : 0;
+    const bar = window.innerWidth <= PHONE ? null : $(".site-header"), barH = bar ? bar.offsetHeight : 0, barNow = bar ? Math.max(0, bar.getBoundingClientRect().bottom) : 0;
     const goal = headEnd - 20 - scroll0 >= barNow ? headEnd - 20 : headEnd - 20 - barH;
     const want = openId ? goal : Math.min(scroll0, headEnd - 20 - barH);
     const scrollEnd = Math.max(0, Math.min(want, maxEnd)), after = headEnd - scrollEnd;
@@ -1789,7 +1821,7 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
   }
   function trackNav() {
     NAV.queued = false;
-    const nav = $("#topnav"), root = document.documentElement, phone = window.innerWidth <= 560;
+    const nav = $("#topnav"), root = document.documentElement, phone = window.innerWidth <= PHONE;
     root.style.setProperty("--p", phone ? Math.max(0, Math.min(1, window.scrollY / Math.max(1, NAV.at))).toFixed(3) : "0");
     const top = $("#compare").getBoundingClientRect().top / window.innerHeight;
     NAV.away = phone && top < (NAV.away ? 0.5 : 0.45);
