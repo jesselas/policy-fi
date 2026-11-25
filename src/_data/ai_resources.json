@@ -7441,5 +7441,145 @@
     "type": "paper",
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "graham-harvey-jha-cfos-meet-llms",
+    "title": "CFOs Meet LLMs (NBER)",
+    "url": "https://www.nber.org/papers/w36057",
+    "author": "John R. Graham, Campbell R. Harvey, Manish Jha",
+    "date": "2026-11",
+    "description": "Tests whether LLMs can stand in for business-sentiment surveys. The authors prompt an LLM to role-play the CFO of a specific company on a specific date for every public-company respondent to the Duke–Federal Reserve CFO Survey from 2002 to 2025. LLM-generated forecasts reasonably match the cross-section of CFO expectations, with accuracy rising as the model gets more information. A useful reference on the promise and hurdles of using digital twins to mimic individual decision-makers.",
+    "shortDescription": "LLMs role-play CFOs from the Duke–Fed CFO Survey (2002–2025); their forecasts reasonably match the cross-section of real CFO expectations.",
+    "category": "Research Papers",
+    "tags": [
+      "LLM",
+      "surveys",
+      "expectations",
+      "digital twins",
+      "finance"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "raymond-dillon-ai-assisted-programming-labor-demand",
+    "title": "AI-Assisted Programming and Labor Demand (arXiv)",
+    "url": "https://arxiv.org/abs/2611.31083",
+    "author": "Lindsey Raymond, Eleanor Wiske Dillon",
+    "date": "2026-11-23",
+    "description": "Studies how firms' adoption of GitHub Copilot affects technical hiring across 5,414 multinational firms covering 38% of the U.S. programming workforce, using predetermined software procurement cycles as a natural experiment. A year after adoption, quarterly technical hiring falls 29%, with no change in separations, headcount, or vacancy duration. The slowdown is concentrated in junior, coding-heavy roles, shifting demand toward experienced workers and design-oriented roles.",
+    "shortDescription": "Copilot adoption across 5,414 firms cut quarterly technical hiring 29% a year later, concentrated in junior coding-heavy roles.",
+    "category": "Research Papers",
+    "tags": [
+      "labor markets",
+      "AI coding",
+      "natural experiment",
+      "hiring"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "borri-cheremukhin-liu-tsyvinski-rise-of-agents-labor-market",
+    "title": "The Rise of Agents and the Labor Market (arXiv)",
+    "url": "https://arxiv.org/abs/2611.27210",
+    "author": "Nicola Borri, Anton Cheremukhin, Yukun Liu, Aleh Tsyvinski",
+    "date": "2026-11-20",
+    "description": "Economy-wide, cross-model evidence on agentic AI and labor demand, combining OpenRouter data on about two quadrillion tokens of AI use with 34.8 million U.S. job postings from public firms. A firm-level \"agentic beta\" built from stock-return comovement with aggregate agentic token use predicts lower job-posting growth (2.11% over six months per standard deviation), and an event study around Claude Code 2.0 finds a 4.73% decline, concentrated in non-senior jobs.",
+    "shortDescription": "Token-usage data plus 34.8M job postings: firms more exposed to agentic AI post fewer jobs, mostly non-senior roles.",
+    "category": "Research Papers",
+    "tags": [
+      "AI agents",
+      "labor markets",
+      "job postings",
+      "measurement"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "cowen-ai-gains-gdp-misses",
+    "title": "Tyler Cowen on the AI gains GDP misses (The Humanist Review of AI)",
+    "url": "https://humanistreview.ai/issue-2/cowen-hidden-dividend/",
+    "author": "Tyler Cowen",
+    "date": "2026-11-18",
+    "description": "An essay arguing that AI will raise GDP but also improve welfare in ways national accounts miss, so official figures will understate its benefits. Cowen points to four channels: time savings and convenience, better matching of people to products and experiences, higher service quality when consumers can check professionals' work, and unmeasured investment in the data people generate for training. A short, readable framing for economists thinking about measuring AI's impact.",
+    "shortDescription": "Cowen essay: AI's welfare gains via leisure, matching, service quality and unmeasured data investment will be understated by GDP.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "measurement",
+      "GDP",
+      "welfare",
+      "productivity"
+    ],
+    "type": "article",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "revoltella-brasili-feas-bruegel-europe-returns-from-ai",
+    "title": "Owning the road, not paying the toll: how Europe can keep the returns from AI (Bruegel)",
+    "url": "https://www.bruegel.org/working-paper/owning-road-not-paying-toll-how-europe-can-keep-returns-ai",
+    "author": "Debora Revoltella, Andrea Brasili, Enrique Feás",
+    "date": "2026-11-24",
+    "description": "A Bruegel working paper arguing that Europe's best AI opportunity lies in applying the technology across business and industry, but that without a presence in compute and secure, diversified access to models a growing share of productivity gains could flow to outside actors. It sets out five priorities: excel at deployment, build on existing strengths in the AI stack, reduce LLM dependency through diversification, invest in EU compute and sovereign cloud, and use the size of the single market as leverage.",
+    "shortDescription": "Bruegel working paper: Europe should excel at AI deployment while limiting dependency costs so productivity gains are not paid away as rents.",
+    "category": "Research Papers",
+    "tags": [
+      "Europe",
+      "industrial policy",
+      "AI policy",
+      "compute"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "ransom-ai-pipeline-problem-academic-research-videos",
+    "title": "How to Address the AI \"Pipeline Problem\" in Academic Research (video series)",
+    "url": "https://www.youtube.com/watch?v=-jcd7fiuVvs",
+    "author": "Tyler Ransom",
+    "date": "2026-11",
+    "description": "The first of three videos by economist Tyler Ransom on responsible AI use in academia, posted on his YouTube channel The Structural Econ Guy. This one tackles the \"pipeline problem\" with Paul Goldsmith-Pinkham, Peter Hull and Andrew Heiss; the companion videos cover when AI-written text and code is acceptable (with Goldsmith-Pinkham) and Ransom's nine rules for AI use, prompted by how fast things changed in 2026, especially for PhD education.",
+    "shortDescription": "Tyler Ransom's 3-video series on responsible AI use in academia: the pipeline problem, AI-written text and code, and his nine rules.",
+    "category": "Talks & Videos",
+    "tags": [
+      "PhD training",
+      "research practice",
+      "responsible use",
+      "video"
+    ],
+    "type": "video",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "saadaoui-two-cents-ai-economic-research",
+    "title": "My Two Cents on AI use in Economic Research",
+    "url": "https://www.jamelsaadaoui.com/my-two-cents-on-ai-use-in-economic-research/",
+    "author": "Jamel Saadaoui",
+    "date": "2026-11-20",
+    "description": "A short practitioner essay by macroeconomist Jamel Saadaoui arguing that AI's main benefit is shrinking the time between an idea and its implementation, and that whether research improves depends on how that saved time is used. Three working rules: keep presenting in person, keep AI-generated Stata code simple enough to read line by line, and use AI as a reasoning partner, stating what a robustness check should show before running it.",
+    "shortDescription": "Saadaoui's practical rules for AI in research: present in person, keep AI-written Stata readable, use AI to test reasoning, not replace it.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "research practice",
+      "Stata",
+      "workflow"
+    ],
+    "type": "article",
+    "featured": false,
+    "internal": false,
+    "highlight": false
   }
 ]
