@@ -1,0 +1,112 @@
+---
+layout: base.njk
+title: "Worth the overhead?"
+description: "Administrative costs and the poverty gap closed per dollar for 59 social protection programmes in 13 countries, compared with a universal transfer."
+permalink: /admin/
+noindex: true
+fullPage: true
+pageHead: admin-head.njk
+pageHeader: admin-header.njk
+eleventyExcludeFromCollections: true
+---
+<div class="paperx" id="paperx">
+{% raw %}
+<div class="page">
+  <div class="page-top" id="page-top"></div>
+
+  <div class="work">
+    <section class="panel" aria-labelledby="h-dollar">
+      <div class="panel-head"><h2 id="h-dollar">One dollar of total cost <span class="lg" id="k-name"></span></h2><button class="hlink" type="button" data-drawer="measure">Method</button></div>
+      <p class="cap" id="dollar-cap">Follow one dollar of a programme’s total cost, and one dollar of a universal transfer with the same benefit spending.</p>
+      <div class="keyrow" id="dollar-key"><span><i class="key thick"></i>Programme</span><span><i class="key thin"></i>Universal transfer</span><span><i class="key vdash"></i><span class="lg">Universal transfer’s gap closed</span><span class="sm">Universal’s gap closed</span></span></div>
+      <svg id="dollar" role="img"></svg>
+      <div class="result" id="result">
+        <span class="lead">Gap closed</span>
+        <div class="res"><span class="v" id="r-gap"></span><span class="term t" data-term="gap" data-place="below" tabindex="0"><span class="lg">Gap closed by the programme</span><span class="sm">Programme</span></span></div>
+        <div class="res"><span class="v u" id="r-uni"></span><span class="term t" data-term="uni" data-place="below" tabindex="0"><span class="lg">by a universal transfer</span><span class="sm"><span class="wd">Universal transfer</span><span class="nr">Universal</span></span></span></div>
+        <div class="verdict" id="r-verdict"></div>
+      </div>
+      <div class="controls" id="controls">
+        <div class="ctl2">
+          <div class="ctl-head"><label for="a-range"><span class="term" data-term="a" tabindex="0"><span class="wd">Administrative cost share</span><span class="nr">Admin. cost share</span></span></label><output class="num" id="a-val" for="a-range"></output><button class="reset" type="button" id="a-reset" aria-label="Reset the administrative cost share to the paper’s estimate">Reset</button><button class="hlink" type="button" data-drawer="star">Method</button></div>
+          <div class="meter" id="meter-box"><svg id="meter" aria-hidden="true"></svg><input type="range" id="a-range" min="0" max="90" step="0.1"></div>
+          <div class="keyrow mkey"><span><i class="key z-more"></i>Clearly more</span><span><i class="key z-un"></i><span class="term" data-term="band" tabindex="0">No clear difference</span></span><span><i class="key z-less"></i>Clearly less</span></div>
+        </div>
+        <div class="ctl2 row">
+          <div class="ctl-head"><label for="u-range"><span class="term" data-term="au" data-place="below" tabindex="0"><span class="lg">Universal transfer’s cost share, all programmes</span><span class="sm">Universal’s cost share, all 59</span></span></label><output class="num" id="u-val" for="u-range"></output><button class="reset" type="button" id="u-reset" aria-label="Reset the universal transfer’s cost share to the paper’s estimate">Reset</button></div>
+          <div class="plain"><svg id="umeter" aria-hidden="true"></svg><input type="range" id="u-range" min="0" max="30" step="0.5"></div>
+        </div>
+      </div>
+      <p class="flag" id="flag"></p>
+      <p class="fine" id="fine"></p>
+      <noscript><p class="fine">This page needs JavaScript.</p></noscript>
+    </section>
+
+    <div class="side">
+      <section class="panel" aria-labelledby="h-why">
+        <div class="panel-head"><h2 id="h-why">Why programmes differ</h2><button class="hlink" type="button" data-drawer="differ">Method</button></div>
+        <p class="cap" id="why-cap">Administration takes 18 per cent of total cost in Sub-Saharan Africa and 3 per cent in Latin America, yet explains almost none of the differences in the gap closed per dollar.<span id="why-more"> They come from how poor the country is and whom the programme pays.</span></p>
+        <svg id="scat" data-reach="22" tabindex="0" role="application" aria-label="59 programmes by administrative cost share and by share reaching the poor. Use the arrow keys to move between programmes and Enter to select one."></svg>
+        <div class="explains" id="explains"><h3>Contribution to the differences</h3><p><b></b><span class="term" data-term="partA" data-place="below" tabindex="0">Administration</span></p><p><b></b><span class="term" data-term="partR" data-place="below" tabindex="0">Country’s poverty rate</span></p><p><b></b><span class="term" data-term="partP" data-place="below" tabindex="0"><span class="wd">Whom the programme pays</span><span class="nr">Whom it pays</span></span></p><p><b></b><span class="term" data-term="partS" data-place="below" tabindex="0">Spillover</span></p></div>
+      </section>
+      <section class="panel" aria-labelledby="h-test">
+        <div class="panel-head"><h2 id="h-test">Compared with a universal transfer</h2><button class="hlink" type="button" data-drawer="star">Method</button></div>
+        <div class="figline"><span class="v" id="n-pass"></span><span class="t" id="n-text">of 59<span class="lg"> programmes</span> close more of the <span class="term" data-term="gap" tabindex="0">poverty gap</span> per dollar than a universal transfer<span id="n-set"></span>, <b id="n-clear"></b> of them clearly.</span></div>
+        <svg id="dots" data-reach="22" tabindex="0" role="application" aria-label="59 programmes by type, and whether each closes clearly more of the poverty gap per dollar than a universal transfer, clearly less, or neither. Use the arrow keys to move between programmes and Enter to select one."></svg>
+        <div class="keyrow" id="dots-key"></div>
+        <p class="lower" id="lower"></p>
+      </section>
+    </div>
+  </div>
+
+  <details class="fold" id="all">
+    <summary><h2>All 59 programmes</h2><span class="fold-hint">Show</span></summary>
+    <div class="fold-body"><div class="fig"><h3>Estimated and break-even administrative cost shares</h3>
+      <div class="keyrow" id="all-key"></div><div id="all-list"></div>
+      <div class="notes"><p class="notes-label">Notes and sources</p><p>At the paper’s estimates. Order as in the chart above. Break-even shares below −5% are at the left edge. Select a programme to see it above. Source: Figure 4 and Table A1.</p></div></div></div>
+  </details>
+
+  <details class="fold" id="countries-fold">
+    <summary><h2>Countries</h2><span class="fold-hint">Show</span></summary>
+    <div class="fold-body"><div class="fig"><h3>Poverty gap closed per dollar of total cost, all programmes of each country together</h3>
+      <div class="keyrow" id="c-key"></div><div id="c-list"></div>
+      <div class="notes"><p class="notes-label">Notes and sources</p><p>Here the universal transfer has the same total cost as the country’s programmes. Above, it has the same benefit spending as one programme. In Tanzania, all benefits reach the poor by construction. Egypt is evaluated at a line calibrated to its national poverty rate. “Clearly” means that the 95% interval of the difference excludes zero. Zanzibar counts separately. Source: Figure 5, Table 3, and Table C3.</p></div></div></div>
+  </details>
+
+  <details class="fold" id="limits">
+    <summary><h2>Limits and checks</h2><span class="fold-hint">Show</span></summary>
+    <div class="fold-body"><div class="cols"><div class="fig"><h3>Programmes that close more than a universal transfer, of 59</h3><div id="l-list"></div>
+      <div class="notes"><p class="notes-label">Notes and sources</p><p>The poverty rate doesn’t show how far below the line people are. Selected checks from Table C1, and from Section 4.5 for the surveys.</p></div></div>
+      <div class="fig"><h3>Limits</h3><ul class="limits" id="l-text"></ul></div></div></div>
+  </details>
+
+  <details class="fold" id="paper">
+    <summary><h2>Paper</h2><span class="fold-hint">Show</span></summary>
+    <div class="fold-body">
+      <p class="cite">Lastunen, J., A. Zasova, and P. Rattenhuber (2026). ‘Worth the overhead? Administrative costs and the poverty impact of social protection’. Draft.</p>
+      <div class="foot-links"><a class="soon" tabindex="0" data-tip="Available when the working paper is published.">Paper <span class="later">(forthcoming)</span></a> <a class="soon" tabindex="0" data-tip="Available when the working paper is published.">Appendix <span class="later">(forthcoming)</span></a></div>
+      <p class="cite small">Cost estimates: Zasova, A., J. Lastunen, and P. Rattenhuber (2026). ‘The Administrative Costs of Social Protection Programmes: Evidence from Sub-Saharan Africa and Latin America’. WIDER Working Paper. Helsinki: UNU-WIDER.</p>
+      <div class="notes"><p class="notes-label">About the numbers</p><p>Cost shares, break-even shares, shares reaching the poor, and gaps closed are from Table A1, counts from Tables 4 and C1 and Section 4.5, regional shares from Table 2, contributions to the differences from Figure 2, and country results from Figure 5 and Tables 3 and C3. Other numbers are the authors’ calculations with the same data and formulas.</p><p>Poverty line: $3.00 a day per person (2021 PPP), and in Egypt a line calibrated to the national poverty rate. Welfare: consumption per person in Africa, income per person in Latin America. SOUTHMOD models A4.0, 2025 policies (2023 in mainland Tanzania).</p></div>
+    </div>
+  </details>
+</div>
+
+<button class="mini" id="mini" type="button"><span><b class="cg" id="m-gap"></b>gap closed</span><span><b id="m-uni"></b><span class="wd">by universal transfer</span><span class="nr">by universal</span></span><span><b id="m-n"></b>of 59 close more</span></button>
+
+<div class="scrim pick-scrim" id="pick-scrim" hidden></div>
+<div class="picker" id="picker" role="dialog" aria-modal="true" aria-labelledby="pick-title" hidden>
+  <div class="pick-head" id="pick-head"><h2 id="pick-title">Choose a programme</h2><button class="close" type="button" id="pick-close" aria-label="Close"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
+  <div class="pick-filter"><div class="chips" id="chips-region" role="group" aria-label="Region"></div><div class="chips" id="chips-type" role="group" aria-label="Type"></div></div>
+  <div class="pick-list" id="pick-list" data-scrolls role="listbox" aria-label="Programmes"></div>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <div class="drawer-head"><h2 id="drawer-title"></h2><button class="close" type="button" id="drawer-close" aria-label="Close"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+{% endraw %}
+</div>
+<script src="/assets/admin/d3.min.js"></script>
+<script src="/assets/admin/page.js?v={{ buildId }}"></script>
