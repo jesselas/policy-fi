@@ -1959,20 +1959,6 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     window.addEventListener("scroll", () => { if (!NAV.queued) { NAV.queued = true; requestAnimationFrame(trackNav); } }, { passive: true });
     trackNav();
   }
-  function buildMini() {
-    const bar = $("#mini"), ctl = $("#controls");
-    if (!bar || !("IntersectionObserver" in window)) return;
-    const show = () => bar.classList.toggle("on", buildMini.ctl && !buildMini.res);
-    new IntersectionObserver((es) => { buildMini.ctl = es[es.length - 1].isIntersecting; show(); }, { rootMargin: "-25% 0px -15% 0px" }).observe(ctl);
-    new IntersectionObserver((es) => { buildMini.res = es[es.length - 1].isIntersecting; show(); }, { rootMargin: "0px 0px -35% 0px" }).observe($("#revenue"));
-    bar.addEventListener("click", () => $(".side").scrollIntoView({ behavior: RM.matches ? "auto" : "smooth", block: "start" }));
-  }
-  function drawMini(R) {
-    $("#mini").classList.toggle("alone", S.scope === "import");
-    setText($("#mini-u"), f0(100 * (S.scope === "formal" ? 0 : R.ubar)));
-    setText($("#mini-s"), f0(S.scope === "formal" ? R.sfF : R.sfP) + "%");
-    setText($("#mini-a"), R.removed == null ? "–" : f1(R.removed) + "%");
-  }
   function update(quick) {
     STILL = !!quick;
     if (!available("alt", S.alt)[0]) S.alt = "headline";
@@ -1985,7 +1971,6 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     drawRevenue(R);
     drawIncidence(R);
     drawMeter(R);
-    drawMini(R);
   }
   function init() {
     renderLimits();
@@ -1993,7 +1978,6 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     buildControls();
     buildDrawers();
     buildTips();
-    buildMini();
     buildNav();
     buildPops();
     syncTabs();
