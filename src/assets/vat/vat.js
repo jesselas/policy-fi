@@ -337,7 +337,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     G.cut = $(".site-header") && window.innerWidth >= 1100 && window.innerHeight < 720 ? Math.min(20, 720 - window.innerHeight) : 0; root.style.setProperty("--cut", G.cut + "px");
     layoutChain(); sizeIncidence(); reserve();
     if (window.innerWidth < 1100) return;
-    const top = work.getBoundingClientRect().top + window.scrollY, target = Math.round(window.innerHeight * 0.925) - 8;
+    const top = work.getBoundingClientRect().top + window.scrollY, target = window.innerHeight - 50;
     G.xh = Math.max(0, Math.min(340, target - (top + work.offsetHeight)));
     root.style.setProperty("--xh", G.xh + "px");
     if (G.xh > 0) work.style.minHeight = Math.min(target - top, work.offsetHeight + G.xh) + "px";
