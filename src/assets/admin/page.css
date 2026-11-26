@@ -323,7 +323,16 @@ html { scroll-behavior: auto; }
 .paperx .leg text { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
 .paperx .leg circle { stroke: var(--bg); stroke-width: 2px; paint-order: stroke; }
 .paperx .cdots { opacity: 0; transition: opacity 0.35s ease; pointer-events: none; }
-.paperx .cdots circle { fill-opacity: 1; stroke: var(--bg); stroke-width: 0.8; transition: fill 0.35s ease; }
+.paperx .cdots circle { fill-opacity: 1; stroke: var(--bg); stroke-width: 0.8; transform-box: fill-box; transform-origin: center; transition: fill 0.35s ease, transform 0.3s ease, opacity 0.3s ease; }
+.paperx .cdots circle.out:not(.own) { fill: var(--ink-3) !important; stroke: none; transform: scale(0.55); opacity: 0.4; }
+.paperx .vdots g circle, .paperx .vdots g path { transition: transform 0.3s ease, opacity 0.3s ease, fill 0.3s ease; }
+.paperx .vdots g.out:not(.own) circle { fill: var(--ink-3); stroke: none; transform: scale(0.6); opacity: 0.4; }
+.paperx .vdots g.out:not(.own) path { opacity: 0; }
+.paperx .leg .lhit { fill: transparent; stroke: none; }
+.paperx .leg.on g.li { pointer-events: auto; cursor: pointer; outline: none; }
+.paperx .leg g.li > :not(.lhit) { transition: opacity 0.3s ease; }
+.paperx .leg g.li.dim > :not(.lhit) { opacity: 0.35; }
+.paperx .leg g.li:focus-visible .lhit { stroke: var(--focus); stroke-width: 1.5px; }
 .paperx .cdots circle.own { opacity: 0; }
 .paperx .vdots { opacity: 0; transition: opacity 0.35s ease; pointer-events: none; }
 .paperx #scat[data-col="verdict"] .vdots { opacity: 1; }
@@ -445,7 +454,7 @@ html { scroll-behavior: auto; }
 .paperx .side .figline { min-height: 36px; }
 .paperx .side .figline .t b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
 .paperx .side .figline .t .term { color: inherit; }
-.paperx .side .figline .v { color: var(--c1-text); min-width: 36px; font-size: 30px; }
+.paperx .side .figline .v { color: var(--c1-text); min-width: 36px; font-size: 30px; position: relative; top: 0.107em; }
 .paperx .lower { margin: 3px 0 0; font-size: 12.5px; line-height: 18px; color: var(--ink-2); }
 .paperx .lower .term { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .paperx #dots-key { margin-top: 6px; font-size: 12.5px; gap: 3px 12px; }
@@ -518,11 +527,18 @@ html { scroll-behavior: auto; }
 .paperx .paxis .pl i { position: absolute; transform: translateX(-50%); font-style: normal; font-size: 11px; color: var(--ink-3); top: 4px; }
 .paperx .prow .pl u { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); }
 .paperx .prow .pl .ln { position: absolute; top: 10.5px; height: 1px; background: var(--ink-3); }
-.paperx .keyrow .kmarks { display: contents; }
+.paperx .keyrow .kmarks, .paperx .keyrow .ksyms { display: contents; }
 @media (min-width: 561px) {
 .paperx .keyrow .kmarks { display: inline-flex; flex-wrap: wrap; gap: inherit; padding: 2px 9px; border: 1.7px solid var(--ink); border-radius: 6px; }
 }
 .paperx .kbr { flex-basis: 100%; height: 3px; }
+@media (min-width: 561px) {
+.paperx .keyrow .kbr { display: none; }
+.paperx .keyrow:has(.kmarks) { row-gap: 7px; }
+.paperx .keyrow .kmarks { margin-right: 6px; }
+.paperx .keyrow .ksyms { display: inline-flex; flex-wrap: wrap; gap: inherit; }
+.paperx #c-key { margin-bottom: 8px; }
+}
 .paperx #all .fig, .paperx #countries-fold .fig { position: relative; }
 .paperx .karrow { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; pointer-events: none; }
 .paperx .karrow .line { fill: none; stroke: var(--ink); stroke-width: 1.7; }
@@ -552,8 +568,17 @@ html { scroll-behavior: auto; }
 .paperx .cb2 { top: 12px; height: 5px; background: var(--c1); box-shadow: inset 0 0 0 1px var(--c1-edge); }
 .paperx .lrow { display: grid; grid-template-columns: 345px 26px minmax(0, 1fr); align-items: center; gap: 10px; min-height: 30px; font-size: 13.5px; }
 .paperx .lrow b { text-align: right; font-variant-numeric: tabular-nums; }
-.paperx .ltrack { height: 12px; background: var(--surface-2); border-radius: 1px; }
-.paperx .ltrack i { display: block; height: 100%; background: var(--c1); box-shadow: inset 0 0 0 1px var(--c1-edge); opacity: 0.5; }
+.paperx .ltwrap { container-type: inline-size; margin: 2px 0 10px; }
+.paperx .ltseg { display: inline-flex; flex-wrap: nowrap; max-width: 100%; }
+.paperx .ltseg button { flex: none; padding: 3px 9px; font-size: 12.5px; line-height: 16px; }
+@container (max-width: 540px) { .ltseg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; } .ltseg button { border-left: 1px solid var(--rule); border-top: 1px solid var(--rule); margin: -1px 0 0 -1px; } }
+@container (max-width: 400px) { .ltseg { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.paperx .ltrack { position: relative; height: 12px; background: var(--surface-2); border-radius: 1px; }
+.paperx .ltrack u { position: absolute; left: 0; top: -2px; bottom: -2px; box-sizing: border-box; border: 1.5px dashed var(--ink-3); border-radius: 2px; opacity: 0; transition: width 0.45s ease, opacity 0.3s ease; }
+.paperx .ltrack u.on { opacity: 1; }
+.paperx #dollar .rl1, .paperx #dollar .rl2, .paperx #dollar .rn1, .paperx #dollar .rn2, .paperx #dollar .sr1, .paperx #dollar .sr2 { transition: opacity 0.3s ease; }
+.paperx #dollar .z0 { opacity: 0; }
+.paperx .ltrack i { position: relative; display: block; height: 100%; transition: width 0.45s ease; background: var(--c1); box-shadow: inset 0 0 0 1px var(--c1-edge); opacity: 0.5; }
 .paperx .ltrack i.main { opacity: 1; }
 .paperx .limits { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.5; max-width: 64ch; }
 .paperx .limits li { margin-bottom: 5px; }
@@ -728,7 +753,7 @@ html { scroll-behavior: auto; }
 .paperx .opt { min-height: 32px; padding-top: 3px; padding-bottom: 3px; }
 }
 @media (prefers-reduced-motion: reduce) {
-.paperx .picker, .paperx .mk circle, .paperx .mk path, .paperx .univ, .paperx .solo .univ, .paperx .switch i, .paperx .switch i::after, .paperx .alone, .paperx .panel:not(.solo) .alone, .paperx .topnav.off, .paperx .leg, .paperx .cdots, .paperx .cdots circle, .paperx .dot, .paperx .vdots, .paperx .meter .aa { transition: none; }
+.paperx .picker, .paperx .mk circle, .paperx .mk path, .paperx .univ, .paperx .solo .univ, .paperx .switch i, .paperx .switch i::after, .paperx .alone, .paperx .panel:not(.solo) .alone, .paperx .topnav.off, .paperx .leg, .paperx .cdots, .paperx .cdots circle, .paperx .dot, .paperx .vdots, .paperx .vdots g circle, .paperx .vdots g path, .paperx .leg g.li > :not(.lhit), .paperx .meter .aa, .paperx .ltrack u, .paperx .ltrack i, .paperx #dollar .rl1, .paperx #dollar .rl2, .paperx #dollar .rn1, .paperx #dollar .rn2, .paperx #dollar .sr1, .paperx #dollar .sr2 { transition: none; }
 }
 .paperx { --c1: #338a7f; --c1-edge: #17675e; --c1-text: #005c55; --c1-soft: #dceae8; --c1-line: #a4cac4; --c1-un: #c4dfda; --on-c1: #00140f; --c2: #eeaa98; --c2-edge: #cf6f59; --c2-text: #a93a24; --c2-mark: #b4472b; --on-c2: #2e0a02; --c3: #a094d6; --c3-edge: #7d70ba; --on-c3: #17102f; --d1: #c9d6e6; --d1-edge: #93abc9; --d2: #6d8db7; --d2-edge: #4c6f9f; --on-d2: #06121f; --r1: #a8462a; --r2: #c9a227; --r3: #6e4fa8; --g1: #2f6db5; --g2: #d9921a; --g3: #a8407f; --g4: #5bb4d8; --g5: #5d5a55; }
 /* Site colours: the site's paper ground and teal links in light, its slate ground in dark. Check these against the
