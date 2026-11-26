@@ -496,7 +496,7 @@ window.Kit = (function () {
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", go); else go();
   }
   const still = (on, f) => { const was = STILL; STILL = was || on; f(); STILL = was; };
-  return { $, $$, el, dur, setText, setHTML, setRoll, f0, f1, f2, esc, term, tipTable, key, HATCH, hatch: ensureDefs, size, tbl, openDrawer, closeDrawer, lockScroll, backToMain, openTip, closeTip, markAt, update, still, start, get xh() { return O.xh || 0; }, get motion() { return !RM.matches && !STILL; } };
+  return { $, $$, el, dur, setText, setHTML, setRoll, f0, f1, f2, esc, term, tipTable, key, HATCH, hatch: ensureDefs, size, tbl, openDrawer, closeDrawer, openFold, lockScroll, backToMain, openTip, closeTip, markAt, update, still, start, get xh() { return O.xh || 0; }, get motion() { return !RM.matches && !STILL; } };
 })();
 (function () {
   "use strict";
@@ -600,13 +600,13 @@ window.Kit = (function () {
     L.nw = tb("88¢"); L.pair = STEP.map((s) => { const n = s.pairs.findIndex(([a, b]) => 18 + tw(a) + 5 + L.nw + 18 + 18 + tw(b) + 5 + L.nw <= W - 1); return n < 0 ? s.pairs.length - 1 : n; });
     end(); endB();
     const [t2, end2] = textWidth(svg, ph ? 12.5 : 13), nw = t2("88¢") + 2; L.ul = Math.max(0, UL.findIndex((q) => 2 * (t2(q) + 5 + nw + 8) <= W)); if (UL.every((q) => 2 * (t2(q) + 5 + nw + 8) > W)) L.ul = UL.length - 1; L.uls = [L.ul, Math.max(3, L.ul)].map((i) => ({ t: UL[i], w: t2(UL[i]) })); L.unw = nw; end2();
-    const [t3, end3] = textWidth(svg, 11); L.uw = t3("Universal transfer"); end3(); const [t5, end5] = textWidth(svg, 12.5); L.pn = new Map(P.map((p) => [p.id, t5(p.short)])); end5();
+    const [t3, end3] = textWidth(svg, 10); L.uw = t3("Universal transfer"); end3(); const [t5, end5] = textWidth(svg, 12.5); L.pn = new Map(P.map((p) => [p.id, t5(p.short)])); end5();
     const [t4, end4] = textWidth($("#scat"), 13), g = scatGeom($("#scat").parentNode.clientWidth); L.two2 = g.w + g.gapX - d3.sum(AXT, (q) => t4(q.join(" "))) / 2 < 14;
     const wrap = $("#scat-wrap"), box = $("#colrow"); wrap.classList.add("own"); const beside = t4(YT) + 24 + $("span", box).offsetWidth + 8 + $(".seg", box).offsetWidth <= wrap.clientWidth; wrap.classList.toggle("own", !beside); end4();
     const [t6, end6] = textWidth($("#scat"), LEGF); L.legw = Object.fromEntries(Object.entries(GROUPS).map(([k, q]) => [k, q.map((d) => t6(d.name) + 13)])); end6();
-    L.legH = legendFits(g.w, 178 - 71) ? 0 : 16 * d3.max(["region", "type"], (k) => legendRows(k, $("#scat").parentNode.clientWidth).n) + 4;
+    L.legH = legendFits(g.w, 178 - 71) ? 0 : 16 * d3.max(Object.keys(GROUPS), (k) => legendRows(k, $("#scat").parentNode.clientWidth).n) + 4;
   }
-  const GROUPS = { region: ["SSA", "EG", "LA"].map((k, i) => ({ k, name: REGION[k], c: `var(--g${i + 1})` })), type: [["PCT", 1], ["MT", 5], ["PW", 4], ["CAT", 2], ["INK", 3]].map(([k, i]) => ({ k, name: TYPE_S[k], c: `var(--g${i})` })) };
+  const GROUPS = { region: ["SSA", "EG", "LA"].map((k, i) => ({ k, name: REGION[k], c: `var(--r${i + 1})` })), type: [["PCT", 1], ["MT", 5], ["PW", 4], ["CAT", 2], ["INK", 3]].map(([k, i]) => ({ k, name: TYPE_S[k], c: `var(--g${i})` })), verdict: [["more", "Closes clearly more"], ["unclear", "No clear difference"], ["less", "Closes clearly less"]].map(([k, name]) => ({ k, name, mk: k })) };
   const YT = "Poverty gap closed per dollar", LEGF = 11.5, LEGR = 13.5;
   const legendFits = (w, h) => Object.keys(GROUPS).every((k) => L.legw[k].every((q, i) => !P.some((p) => p.V * w < q + 6 + 8 && (1 - p.PRE0) * h < LEGR * i + 11)));
   const legendRows = (k, W) => { let x = 0, n = 1; const at = L.legw[k].map((q) => { if (x && x + q > W) { x = 0; n++; } const r = { x, y: n - 1 }; x += q + 12; return r; }); return { n, at }; };
@@ -615,8 +615,8 @@ window.Kit = (function () {
     const g = d3.select(svg).selectAll("g.leg").data(Object.keys(GROUPS)).join("g").attr("class", "leg").attr("aria-hidden", "true");
     g.each(function (k) {
       const at = L.legH ? legendRows(k, W).at.map((q) => [q.x, H - L.legH + 14 + 16 * q.y]) : L.legw[k].map((_, i) => [x0, 34 + LEGR * i]);
-      const r = d3.select(this).selectAll("g").data(GROUPS[k]).join((e) => { const n = e.append("g"); n.append("circle").attr("r", 4); n.append("text"); return n; }).attr("transform", (d, i) => `translate(${at[i]})`);
-      r.select("circle").attr("cx", 4).attr("cy", -4).style("fill", (d) => d.c); r.select("text").attr("x", 13).style("font-size", LEGF + "px").style("fill", "var(--ink-2)").text((d) => d.name);
+      const r = d3.select(this).selectAll("g").data(GROUPS[k]).join((e) => { const n = e.append("g"); n.append("circle").attr("r", 4); n.append("path"); n.append("text"); return n; }).attr("transform", (d, i) => `translate(${at[i]})`).attr("class", (d) => (d.mk ? `mk mk-${d.mk}` : null));
+      r.select("circle").attr("cx", 4).attr("cy", -4).style("fill", (d) => (d.mk ? null : d.c)); r.select("path").attr("d", (d) => (d.mk ? "M4,-8 A4,4 0 0 0 4,0 Z" : null)); r.select("text").attr("x", 13).style("font-size", LEGF + "px").style("fill", "var(--ink-2)").text((d) => d.name);
     });
   }
   const tr = (sel) => (dur(1) ? sel.transition().duration(650).ease(d3.easeCubicOut) : sel.interrupt());
@@ -650,15 +650,15 @@ window.Kit = (function () {
     const pn = g.selectAll("text.pn").data([0]).join("text").attr("class", "pn").attr("x", x(0) + 7).attr("y", top + bh / 2 + 4.4).style("font-size", "12.5px").style("fill", "var(--ink-2)");
     setText(pn.node(), R.p.short); tr(pn).style("opacity", w(steps[0].p[0]) >= L.pn.get(R.p.id) + 14 ? 1 : 0);
     un.selectAll("g.un").data(steps).join((e) => { const n = e.append("g").attr("class", "un"); n.append("rect"); n.append("text").text("Universal transfer"); return n; }).each(function (d) {
-      const n = d3.select(this), end = x(d.u[0] + d.u[1]), inside = w(d.u[0]) >= L.uw + 14, at = inside ? x(0) + 7 : x(d.u[0]) + 8, on = inside || (d.i < 2 && at + L.uw + 7 <= end);
+      const n = d3.select(this), end = x(d.u[0] + d.u[1]), inside = w(d.u[0]) >= L.uw + 14, at = inside ? x(0) + 7 : x(d.u[0]) + 8, on = d.i === 0 && (inside || at + L.uw + 7 <= end);
       n.select("rect").attr("x", -7.4).attr("y", 1.2).attr("width", L.uw + 12.4).attr("height", th - 2.4).style("fill", "var(--bg)");
-      n.select("text").attr("y", th / 2 + 3.9).style("font-size", "11px");
+      n.select("text").attr("y", th / 2 + 3.6).style("font-size", "10px");
       settle(n, !on ? "off" : inside ? "in" : "out", `translate(${at},${d.y + ty})`, on, (q) => { q.select("rect").style("display", !inside && d.i < 2 ? null : "none"); q.select("text").style("fill", inside && d.i === 2 ? "var(--on-c1)" : "var(--ink-2)"); });
     });
-    const s3 = steps[2], yb = s3.y + ty + th;
+    const s3 = steps[2], yb = s3.y + ty + th, y0 = s3.y + ty - 2;
     const vert = (cls, y1, y2) => un.selectAll("line." + cls).data([0]).join("line").attr("class", cls).attr("y1", y1).attr("y2", y2).call((s) => tr(s).attr("x1", x(R.u.gap)).attr("x2", x(R.u.gap)));
-    vert("ugb", s3.y + top, yb - th - 3).style("stroke", "var(--bg)").style("stroke-width", 3.4);
-    vert("ug", s3.y + top, yb + 16).style("stroke", "var(--ink)").style("stroke-width", 1.7).style("stroke-dasharray", "3.5 2.5");
+    un.selectAll("line.ugb").remove();
+    vert("ug", y0, yb + 16).style("stroke", "var(--ink)").style("stroke-width", 1.7).style("stroke-dasharray", "3.5 2.5");
     const uf = phone() ? "12.5px" : "13px", ux = x(R.u.gap), fit = L.uls.findIndex((q) => ux + 7 + q.w + 5 + L.unw <= W), right = fit >= 0, ulab = L.uls[right ? fit : 0];
     const ul = un.selectAll("g.ugl").data([0]).join((e) => { const n = e.append("g").attr("class", "ugl"); n.append("text").attr("class", "uw"); n.append("text").attr("class", "uv"); return n; });
     ul.selectAll("text").attr("y", 0).style("font-size", uf);
@@ -689,7 +689,7 @@ window.Kit = (function () {
       { k: `l${d.i}${k}`, d, t: tips[d.i][k], x: room[d.i][2 * k], w: room[d.i][2 * k + 1], y: d.y, h: top - 1, f: 1 },
       { k: `p${d.i}${k}`, d, t: tips[d.i][k], x: k ? x(d.p[0]) : x(0), w: w(d.p[k]), y: d.y + top, h: bh + 1 },
       { k: `u${d.i}${k}`, d, t: cmp ? tips[d.i][k] : null, x: k ? x(d.u[0]) : x(0), w: w(d.u[k]), y: d.y + ty - 2, h: th + 4 },
-    ])).concat([{ k: "g0", x: ux - 5, w: 10, y: s3.y + top, h: yb + 18 - s3.y - top }, { k: "g1", x: right ? ux : ux - 12 - ulab.w - L.unw, w: 12 + ulab.w + L.unw, y: yb + 3, h: 17 }].map((d) => ({ ...d, t: cmp ? tips[2][0] : null })));
+    ])).concat([{ k: "g0", x: ux - 5, w: 10, y: y0, h: yb + 18 - y0 }, { k: "g1", x: right ? ux : ux - 12 - ulab.w - L.unw, w: 12 + ulab.w + L.unw, y: yb + 3, h: 17 }].map((d) => ({ ...d, t: cmp ? tips[2][0] : null })));
     root.selectAll("rect.hit").data(hits, (d) => d.k).join("rect").attr("class", "hit").attr("tabindex", (d) => (d.f ? 0 : null)).attr("x", (d) => d.x).attr("width", (d) => d.w).attr("y", (d) => d.y).attr("height", (d) => d.h).style("pointer-events", (d) => (d.t ? null : "none")).attr("data-tip", (d) => (d.w >= 3 ? d.t : null)).raise();
     svg.setAttribute("aria-label", `One dollar of total cost, ${n}: ${R.d.adm}¢ administration, ${R.d.np}¢ to people who aren’t poor, ${R.d.sp}¢ spillover above the line, ${R.d.gap}¢ poverty gap closed.${cmp ? ` Universal transfer: ${R.du.gap}¢ poverty gap closed.` : ""}`);
     setText($("#k-name"), "· " + n);
@@ -700,13 +700,17 @@ window.Kit = (function () {
     $(".work > .panel").classList.toggle("solo", !cmp); $("#cmp").setAttribute("aria-checked", String(cmp));
   }
   const AMAX = 90, THUMB = 18, UTHUMB = 16, MET = { y0: 29, h: 12, H: 63 };
-  const BE_TEXT = ["As long as the programme’s administrative costs are below this share of its total cost, it closes more of the poverty gap per dollar than a universal transfer would.", "Even without administrative costs, the programme closes less of the poverty gap per dollar than a universal transfer would.", "The programme reaches no poor people in the data.", "Even without administrative costs, the programme closes less of the poverty gap per dollar than a universal transfer would, but then the difference isn’t clear."];
+  const BE_TEXT = ["As long as the programme’s administrative costs are below this share of its total cost, it closes more of the poverty gap per dollar than a universal transfer would.", "Even without administrative costs, the programme closes less of the poverty gap per dollar than a universal transfer would.", "The programme reaches no poor people in the data.", "Even without administrative costs, it closes less of the poverty gap per dollar than a universal transfer would, but the difference isn’t clear."];
   const U_NOTE = [["estimate for Africa", "estimate for Latin America", "for all programmes"], ["Africa", "Latin America", "all programmes"]];
   function arrowPath({ x, tip, m }, box) {
     const pad = box.l < 8 ? (m > 0 ? 4 + 34 * m : 4) : 16, sx = Math.max(box.l + pad, Math.min(box.r - pad, x)), an = (m * Math.PI) / 2, yl = 8 + 5 * m, ty = tip + (yl - tip) * m, ex = x + 7 * Math.sin(an), ey = Math.max(yl, ty - 7 * Math.cos(an));
     const q = Math.min(7, yl, Math.abs(sx - ex) / 2), q2 = Math.min(q, (ey - yl) / 2), d = Math.sign(ex - sx);
     const pt = (u, v) => `${x + u * Math.cos(an) - v * Math.sin(an)},${ty + u * Math.sin(an) + v * Math.cos(an)}`;
     return [`M${sx},0 ${q < 0.5 ? "" : `V${yl - q} Q${sx},${yl} ${sx + d * q},${yl} H${ex - d * q2} Q${ex},${yl} ${ex},${yl + q2}`} V${ey}`, `M${pt(0, 0)} L${pt(-5, -8.5)} L${pt(5, -8.5)} Z`];
+  }
+  function aPath({ sx, sy, yl, x, tip }) {
+    const d = Math.sign(x - sx), ey = tip - 7, q = Math.min(7, Math.abs(x - sx) / 2, (yl - sy) / 2), q2 = Math.min(q, Math.max(0, (ey - yl) / 2));
+    return [`M${sx},${sy} ${q < 0.5 ? "" : `V${yl - q} Q${sx},${yl} ${sx + d * q},${yl} H${x - d * q2} Q${x},${yl} ${x},${yl + q2}`} V${ey}`, `M${x},${tip} L${x - 5},${tip - 8.5} L${x + 5},${tip - 8.5} Z`];
   }
   function beHead(state, word, val) {
     const h = $("#be-head"), was = h.dataset.s, set = () => { setText($("#be-term"), word); setText($("#be-val"), val); }; h.dataset.s = state;
@@ -751,6 +755,14 @@ window.Kit = (function () {
     const was = an.at || to;
     const place = (q) => { an.at = q; arrowPath(q, box).forEach((d, k) => an.children[k].setAttribute("d", d)); };
     if (dur(1)) { const it = d3.interpolateObject({ ...was }, { ...to }); tr(ar).style("opacity", none ? 0 : 1).tween("arrow", () => (k) => place(k < 1 ? { ...it(k) } : to)); } else { ar.interrupt().style("opacity", none ? 0 : 1); place(to); }
+    { const rg = document.createRange(); rg.selectNodeContents($("#a-val")); const nb = rg.getBoundingClientRect(), xa = x(R.a), show = !phone() && on && R.a < R.star && nb.width > 0;
+      const aa = g.selectAll("g.aa").data([0]).join((e) => { const n = e.append("g").attr("class", "aa off"); n.append("path").attr("class", "line"); n.append("path").attr("class", "head"); return n; }), node = aa.node(), wasOn = !node.classList.contains("off");
+      if (show) {
+        const nl = nb.left - sb.left, nr = nb.right - sb.left, ny = nb.bottom - sb.top, high = xa < box.l - 12 && ny <= -16;
+        const to = { sx: Math.max(nl + 6, Math.min(nr - 6, xa)), sy: ny + 3, yl: high ? -6 : 14, x: xa, tip: 23 }, put = (q) => { node.at = q; aPath(q).forEach((d, k) => node.children[k].setAttribute("d", d)); };
+        if (wasOn && dur(1) && node.at) { const it = d3.interpolateObject({ ...node.at }, to); tr(aa).tween("aarrow", () => (k) => put(k < 1 ? { ...it(k) } : to)); } else { aa.interrupt(); put(to); }
+      }
+      node.classList.toggle("off", !show); }
     beHead(none ? "none" : on ? "pos" : "neg", none ? "No break-even share" : "Break-even share", none ? "" : `: ${R.star < 0 ? "below 0" : pct1(R.star)}%`);
     $("#be-term").setAttribute("data-tip", tbe); setHTML($("#be-text"), BE_TEXT[none ? 2 : on ? 0 : R.hi >= 0 ? 3 : 1]);
     g.selectAll("path.es").data([0]).join("path").attr("class", "es").attr("d", "M0,0 L4.5,6.5 L-4.5,6.5 Z").style("fill", "var(--c2-edge)").call((s) => tr(s).attr("transform", `translate(${xe},${y0 + h + 1.5})`));
@@ -775,7 +787,7 @@ window.Kit = (function () {
   let SC = null;
   function drawScatter(R) {
     const svg = $("#scat"), H = L.scat, W = size(svg, H), g = d3.select(svg), { ml, gapX, w } = scatGeom(W), mt = 30, mb = (L.two2 ? 56 : 41) + L.legH;
-    const col = S.col, was = svg.dataset.was || "region";
+    const col = S.col, was = svg.dataset.was || "region", plain = col === "none" || col === "verdict";
     const y = (v) => H - mb - v * (H - mb - mt), X = [(f) => ml + (Math.min(f, XA) / XA) * w, (f) => ml + w + gapX + f * w];
     const T = (cls, data, f) => g.selectAll("text." + cls).data(data).join("text").attr("class", cls + " ax").each(function (d) { f(d3.select(this), d); });
     g.selectAll("line.gr").data([0, 0.25, 0.5, 0.75, 1].flatMap((v) => [0, 1].map((k) => [v, k]))).join("line").attr("class", "gr").attr("x1", (d) => X[d[1]](0)).attr("x2", (d) => X[d[1]](0) + w).attr("y1", (d) => y(d[0])).attr("y2", (d) => y(d[0])).style("stroke", (d) => (d[0] ? "var(--grid)" : "var(--ink-3)"));
@@ -788,17 +800,19 @@ window.Kit = (function () {
     const tip = (p, more = "") => { const a = aOf(p), au = auOf(p); return `<b>${withCountry(p, p.short)}</b>${more}` + tipTable([[key3("c2"), "Administrative cost share", pct1(a) + "%"], [SOFTKEY, "Share reaching the poor", pct0(p.V) + "%"], [key3("c1"), "Poverty gap closed per dollar", cents(gap(p, a)) + "¢"], [thin(key3("c1")), "Universal transfer", cents(gapU(p, au)) + "¢"]]) + (star(p, au) === null ? "Reaches no poor people in the data." : `${upper(WORD[verdict(p, a, au)])}.`); };
     const also = (d) => { const o = pts.filter((q) => q !== d && q.k === d.k && Math.abs(q.x - d.x) < 0.5 && Math.abs(q.y - d.y) < 0.5).sort((b, c) => b.p.order - c.p.order).map(({ p }) => `${p.short.replace(`, ${p.country}`, "")} (${p.country})`); return o.length ? `<br>Also here: ${o.length > 2 ? `${o.slice(0, -1).join(", ")}, and ${o[o.length - 1]}` : o.join(" and ")}.` : ""; };
     SC = { pts, tip };
-    g.selectAll("circle.dot").data(pts, (d) => d.key).join("circle").order().attr("class", (d) => "dot" + (d.p === R.p ? " own" : "")).attr("r", 3.5).attr("cx", (d) => d.x).attr("cy", (d) => d.y).attr("data-id", (d) => d.p.id).attr("data-tip", (d) => tip(d.p, col === "none" ? "" : `<br>${col === "type" ? TYPE[d.p.type] : REGION[d.p.region]}`) + also(d));
-    svg.dataset.col = col; const fillOf = (p) => GROUPS[col === "none" ? was : col].find((q) => q.k === p[col === "none" ? was : col]).c;
+    g.selectAll("circle.dot").data(pts, (d) => d.key).join("circle").order().attr("class", (d) => "dot" + (d.p === R.p ? " own" : "")).attr("r", 3.5).attr("cx", (d) => d.x).attr("cy", (d) => d.y).attr("data-id", (d) => d.p.id).attr("data-tip", (d) => tip(d.p, plain ? "" : `<br>${col === "type" ? TYPE[d.p.type] : REGION[d.p.region]}`) + also(d));
+    svg.dataset.col = col; const fillOf = (p) => GROUPS[plain ? was : col].find((q) => q.k === p[plain ? was : col]).c;
     g.selectAll("g.cdots").data([0]).join("g").attr("class", "cdots").selectAll("circle").data(pts.slice().sort((b, c) => SIZE.type[c.p.type] - SIZE.type[b.p.type] || SIZE.region[c.p.region] - SIZE.region[b.p.region] || b.p.order - c.p.order), (d) => d.key).join("circle").attr("class", (d) => (d.p === R.p ? "own" : null)).attr("r", 3.8).attr("cx", (d) => d.x).attr("cy", (d) => d.y).style("fill", (d) => fillOf(d.p));
+    const VO = { less: 0, unclear: 1, more: 2 }, vpts = pts.map((d) => ({ ...d, v: verdict(d.p, aOf(d.p), auOf(d.p)) })).sort((b, c) => VO[b.v] - VO[c.v] || b.p.order - c.p.order);
+    g.selectAll("g.vdots").data([0]).join("g").attr("class", "vdots").selectAll("g").data(vpts, (d) => d.key).join((e) => { const n = e.append("g"); n.append("circle").attr("r", 3.4); n.append("path").attr("d", "M0,-3.4 A3.4,3.4 0 0 0 0,3.4 Z"); return n; }).order().attr("class", (d) => `mk mk-${d.v}${d.p === R.p ? " own" : ""}`).attr("transform", (d) => `translate(${d.x},${d.y})`);
     if (svg.firstElementChild.classList.contains("leg")) g.selectAll("g.leg").raise();
-    g.selectAll("g.leg").classed("on", (k) => k === col); if (col !== "none") svg.dataset.was = col;
+    g.selectAll("g.leg").classed("on", (k) => k === col); if (!plain) svg.dataset.was = col;
     const moved = S.a !== null, over = R.a > XA;
     const own = [0, 1].map((k) => { const at = pts.find((d) => d.p === R.p && d.k === k); return { k, x: k ? at.x : moved ? X[0](R.a) : at.x, y: y(gap(R.p, R.a)), x0: at.x, y0: at.y }; });
     g.selectAll("line.path").data(own).join("line").attr("class", "path").style("stroke", "var(--ink-3)").style("stroke-dasharray", "2 2").attr("x1", (d) => d.x0).attr("y1", (d) => d.y0).attr("x2", (d) => d.x).attr("y2", (d) => d.y).style("opacity", moved ? 1 : 0);
     g.selectAll("circle.ghost").data(own).join("circle").attr("class", "ghost").attr("r", 3.5).style("fill", "var(--bg)").style("stroke", "var(--ink-2)").style("stroke-width", 1.4).attr("cx", (d) => d.x0).attr("cy", (d) => d.y0).style("opacity", moved ? 1 : 0);
     const sel = g.selectAll("g.sel").data(own).join((e) => { const n = e.append("g").attr("transform", (d) => `translate(${d.x},${d.y})`); n.append("circle").attr("r", 4.4); n.append("path").attr("d", "M0,-4.4 A4.4,4.4 0 0 0 0,4.4 Z"); return n; }).attr("class", `sel mk ${mkClass(R.v, R.up)}`);
-    sel.select("circle").style("fill", col === "none" ? null : fillOf(R.p)).style("stroke", col === "none" ? null : fillOf(R.p)); sel.select("path").style("fill", col === "none" ? null : "transparent");
+    sel.select("circle").style("fill", plain ? null : fillOf(R.p)).style("stroke", plain ? null : fillOf(R.p)); sel.select("path").style("fill", plain ? null : "transparent");
     tr(sel).attr("transform", (d) => `translate(${d.x},${d.y})`);
     g.selectAll("circle.ring").data(own).join("circle").attr("class", "ring").attr("r", 7.5).style("fill", "none").style("stroke", "var(--ink)").style("stroke-width", 1.8).call((s) => tr(s).attr("cx", (d) => d.x).attr("cy", (d) => d.y));
     g.selectAll("path.over").data([0]).join("path").attr("class", "over").attr("d", "M0,-4 L5,0 L0,4").style("fill", "none").style("stroke", "var(--ink)").style("stroke-width", 1.6).attr("transform", `translate(${X[0](XA) + 10},${own[0].y})`).style("opacity", over ? 1 : 0);
@@ -974,9 +988,9 @@ window.Kit = (function () {
     S: "The share of benefits to the poor that goes beyond what they need to reach the poverty line.",
   };
   const XROWS = [
-    ["all", `All ${DF.n} programmes`, "", `Administration accounts for almost none of the differences. The country’s poverty rate and whom the programme pays together make the share of benefits reaching the poor, which accounts for ${fmt(DF.all.V.v)} per cent.`],
-    ["between", "Between countries", `${DF.between_share}% of the variation`, "Compares the averages of countries. Poverty rates range from 7 to 80 per cent across the 13 countries and account for about all of the differences. Whom the programmes pay makes them smaller, but the 95 per cent interval of this part includes zero."],
-    ["within", "Within countries", `${DF.within_share}% of the variation`, `Compares programmes with others in the same country, where the poverty rate is nearly the same for all. Whom the programme pays accounts for ${fmt(DF.within.adv.v)} per cent, and administration for ${fmt(DF.within.a.v)} per cent.`],
+    ["all", `All ${DF.n} programmes`, "", `Administration accounts for almost none of the differences, and the share of benefits reaching the poor for ${fmt(DF.all.V.v)} per cent.`],
+    ["between", "Between countries", `${DF.between_share}% of the variation`, "Compares country averages. Poverty rates, from 7 to 80 per cent across the 13 countries, account for about all of the differences. Whom the programmes pay makes them smaller, though its 95 per cent interval includes zero."],
+    ["within", "Within countries", `${DF.within_share}% of the variation`, `Compares programmes within a country, where the poverty rate is nearly the same. Whom the programme pays accounts for ${fmt(DF.within.adv.v)} per cent, and administration for ${fmt(DF.within.a.v)} per cent.`],
   ];
   const ciOf = (q) => `95 per cent interval from resampling countries: ${fmt(q.countries[0])} to ${fmt(q.countries[1])}%.`;
   function drawExplain() {
@@ -1005,39 +1019,15 @@ window.Kit = (function () {
       svg.setAttribute("aria-label", `${XROWS[i][1]}: ${ps.map((d) => `${lower(d.t)} ${fmt(d.v)}%`).join(", ")}.`);
     });
   }
-  let xAnim = null;
-  function moveExplain(open) {
-    const d = $("#explain"), s = $("summary", d), clip = $(".fold-clip", d), root = document.documentElement, still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (xAnim) { cancelAnimationFrame(xAnim); xAnim = null; }
-    const from = d.open ? clip.getBoundingClientRect().height : 0; d.classList.toggle("on", open);
-    if (open) { d.open = true; clip.style.height = ""; drawExplain(); if (!still) { d.classList.add("flash"); setTimeout(() => d.classList.remove("flash"), 1500); } }
-    const to = open ? clip.firstElementChild.getBoundingClientRect().height : 0, y0 = window.scrollY, head = s.getBoundingClientRect().top + y0;
-    const bar = window.innerWidth <= 560 ? null : $(".site-header"), barH = bar ? bar.offsetHeight : 0, barNow = bar ? Math.max(0, bar.getBoundingClientRect().bottom) : 0;
-    const now = d.open ? clip.getBoundingClientRect().height : 0, max = Math.max(0, root.scrollHeight - now + to - window.innerHeight), want = open ? (head - 10 - y0 >= barNow ? head - 10 : head - 10 - barH) : Math.min(y0, head - 10 - barH), y1 = Math.max(0, Math.min(want, max));
-    const end = () => { clip.style.height = clip.style.overflow = ""; if (!open) d.open = false; root.style.overflowAnchor = ""; };
-    if (still) { end(); window.scrollTo(0, y1); return; }
-    root.style.overflowAnchor = "none"; clip.style.overflow = "hidden";
-    let steer = true, t0 = null; const free = () => { steer = false; };
-    window.addEventListener("wheel", free, { passive: true, once: true }); window.addEventListener("touchmove", free, { passive: true, once: true });
-    const step = (n) => {
-      if (t0 === null) t0 = n;
-      const t = Math.min(1, (n - t0) / 950), e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      clip.style.height = from + (to - from) * e + "px"; if (steer) window.scrollTo(0, y0 + (y1 - y0) * e);
-      if (t < 1) xAnim = requestAnimationFrame(step); else { xAnim = null; end(); window.removeEventListener("wheel", free); window.removeEventListener("touchmove", free); }
-    };
-    clip.style.height = from + "px"; xAnim = requestAnimationFrame(step);
-  }
   function buildExplain() {
-    const d = $("#explain"), body = $(".fold-body", d), clip = document.createElement("div"); clip.className = "fold-clip"; d.insertBefore(clip, body); clip.append(body);
-    $("summary", d).addEventListener("click", (e) => { e.preventDefault(); moveExplain(!d.classList.contains("on")); });
-    d.addEventListener("toggle", () => { if (xAnim || d.open === d.classList.contains("on")) return; d.classList.toggle("on", d.open); if (d.open) drawExplain(); });
+    const d = $("#explain");
     let away = false, queued = false; const nav = $("#topnav"), track = () => { queued = false; const top = d.getBoundingClientRect().top / window.innerHeight; away = window.innerWidth <= 560 && top < (away ? 0.5 : 0.45); nav.classList.toggle("off", away); };
     window.addEventListener("scroll", () => { if (!queued) { queued = true; requestAnimationFrame(track); } }, { passive: true }); track();
   }
   function toExplain(e) {
     e.preventDefault(); const d = $("#explain"), s = $("summary", d);
     if (!(history.state && history.state.fold)) history.pushState({ fold: 1 }, "");
-    if (!d.classList.contains("on")) { moveExplain(true); return; }
+    if (!d.classList.contains("on")) { Kit.openFold("explain"); return; }
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!still) { d.classList.add("flash"); setTimeout(() => d.classList.remove("flash"), 1500); }
     window.scrollTo({ top: s.getBoundingClientRect().top + window.scrollY - 10, behavior: still ? "auto" : "smooth" });
@@ -1121,6 +1111,6 @@ window.Kit = (function () {
   fromHash();
   let booted = false;
   Kit.start({ state: S, groupKey: "p", groups: [], home: "#case", gloss: GLOSS, drawers: DRAWERS, resolve, layout,
-    draw: (R) => { if (!booted) { booted = true; boot(); drawExplain(); } drawCase(R); drawDollar(R); drawMeter(R); drawScatter(R); drawDots(R); Pick.sync(); if ($("#all").open) drawAll(); },
+    draw: (R) => { if (!booted) { booted = true; boot(); } drawCase(R); drawDollar(R); drawMeter(R); drawScatter(R); drawDots(R); Pick.sync(); if ($("#all").open) drawAll(); },
     folds: { explain: drawExplain, all: drawAll, "countries-fold": drawCountries, limits: drawLimits, paper: null } });
 })();
