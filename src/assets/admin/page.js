@@ -1009,12 +1009,13 @@ window.Kit = (function () {
     $("#c-key").innerHTML = `<span class="kmarks">${markKey("<b>No clear difference</b><br>The 95% interval of the difference includes zero, whichever closes more at the estimates.", MORE_LONG)}</span><span class="kbr" aria-hidden="true"></span><span class="ksyms"><span class="bars"><i class="key" style="background:${key3("c1")}"></i>Programmes</span><span class="bars"><i class="key thin"></i>Universal transfer of the same total cost</span></span>`;
     const COLS = [["name", "Country", "Country"], ["a", "Administrative cost share", "Admin. share"], ["V", "Share reaching the poor", "To the poor"], [null, "Cents per dollar", null, "plot"], ["PRE", "Poverty gap closed", "Gap closed"], ["PRE_u", "Universal transfer", "Universal"]];
     const head = `<tr>${COLS.map(([k, lg, sm, cls], i) => (k ? `<th${cls ? ` class="${cls}"` : ""} aria-sort="none"><button class="sortb" type="button" data-i="${i}">${sm ? `<span class="lg">${lg}</span><span class="sm">${sm}</span>` : lg}</button></th>` : `<th class="${cls}">${lg}</th>`)).join("")}</tr>`;
+    const val = (c, k) => (c[k] !== undefined ? c[k] : +c.printed[k]);
     const order = { i: null, dir: 0 }, rowsOf = (list) => list.map((c) => { return `<tr><td>${mk(MARK[c.mark], c.up)}${c.name}<span class="sr-only">, ${WORD[MARK[c.mark]]}</span></td><td>${c.printed.a}%</td><td>${c.printed.V}%</td><td class="plot"><span class="cbar"><i class="cb1" style="width:${100 * c.PRE}%"></i><i class="cb2" style="width:${100 * c.PRE_u}%"></i></span></td><td${MARK[c.mark] === "more" ? ' class="win"' : ""}>${fmt(100 * +c.printed.PRE)}¢</td><td${MARK[c.mark] === "less" ? ' class="win-u"' : ""}>${fmt(100 * +c.printed.PRE_u)}¢</td></tr>`; }).join("");
     box.innerHTML = `<table class="dt ctab"><thead>${head}</thead><tbody>${rowsOf(DATA.countries)}</tbody></table>`;
     $("thead", box).addEventListener("click", (e) => {
       const b = e.target.closest("button.sortb"); if (!b) return; const i = +b.dataset.i, k = COLS[i][0], first = k === "name" ? 1 : -1;
       order.dir = order.i === i ? -order.dir : first; order.i = i;
-      const list = DATA.countries.slice().sort((p, q) => order.dir * (k === "name" ? p.name.localeCompare(q.name) : p[k] - q[k]) || p.name.localeCompare(q.name));
+      const list = DATA.countries.slice().sort((p, q) => order.dir * (k === "name" ? p.name.localeCompare(q.name) : val(p, k) - val(q, k)) || p.name.localeCompare(q.name));
       $("tbody", box).innerHTML = rowsOf(list); $$("thead th", box).forEach((th, j) => { if (COLS[j][0]) th.setAttribute("aria-sort", j === i ? (order.dir > 0 ? "ascending" : "descending") : "none"); }); arrow();
     });
     arrow();
