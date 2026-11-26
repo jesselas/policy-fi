@@ -693,7 +693,7 @@ html { scroll-behavior: auto; }
 .vatx .lim-in { display: grid; grid-template-columns: 2.5em minmax(0, 1fr); align-items: center; column-gap: 9px; }
 .vatx .lim-ngt { font-size: 12px; font-style: italic; color: var(--ink-2); }
 .vatx .lim-n { text-align: right; white-space: nowrap; color: var(--ink); }
-.vatx .lim-two .lim-n { line-height: 1.25; }
+.vatx .lim-two .lim-n { justify-self: end; }
 .vatx .lim-t { position: relative; display: block; height: 16px; }
 .vatx .lim-t::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--rule); }
 .vatx .lim-t i, .vatx .lim-k { display: block; }

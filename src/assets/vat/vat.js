@@ -1066,7 +1066,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       ] },
       { label: "How much VAT suppliers charge", rows: [
         { label: "Registration shares halved", tip: "Every domestic registration proxy multiplied by 0.5.", values: [57.9, 73.1, 57.4, 66.1], src: "Online appendix, Table OA.5" },
-        { label: "Peru: 2007 accounts calibration", tip: "Registration scaled down to match VAT recorded in Peru’s 2007 national accounts (two targets).", values: [null, null, null, [39.8, 57.6]], parts: ["VAT recorded on household purchases", "Also VAT on their inputs"], src: "Paper, Table 5" },
+        { label: "Peru: 2007 accounts calibration", short: "Peru: 2007 calibration", tip: "Registration scaled down to match VAT recorded in Peru’s 2007 national accounts (two targets).", values: [null, null, null, [39.8, 57.6]], parts: ["VAT recorded on household purchases", "Also VAT on their inputs"], src: "Paper, Table 5" },
       ] },
       { label: "How much reaches prices", rows: [
         { label: "Half pass-through", tip: "Informal sellers pass half of their upstream VAT into prices.", values: [42.1, 57.4, 41.0, 50.8], src: "Paper, Table 5" },
@@ -1134,12 +1134,12 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       const cls = row.mark === "alone" ? "lim-sq" : "lim-dot";
       if (Array.isArray(v)) {
         const tip = head + v.map((x, k) => `${row.parts[k]}: ${pct(x)} of the gain removed.`).join("<br>") + `<br><span class="u">${diff(v[0], h)}</span>`;
-        return `<td class="lim-c lim-two" data-tip="${qa(tip)}"><span class="lim-in"><span class="lim-n">${v.map(f1).join("<br>")}</span>${track(v.map((x) => ({ v: x, cls })), h)}</span></td>`;
+        return `<td class="lim-c lim-two" data-tip="${qa(tip)}"><span class="lim-in"><span class="lim-n">${v.map(f1).join(" / ")}</span>${track(v.map((x) => ({ v: x, cls })), h)}</span></td>`;
       }
       const tip = head + `${pct(v)} of the gain removed.<br><span class="u">${diff(v, h)}</span>`;
       return `<td class="lim-c" data-tip="${qa(tip)}"><span class="lim-in"><span class="lim-n">${f1(v)}</span>${track([{ v, cls }], h)}</span></td>`;
     };
-    const label = (row) => `<th scope="row"><span class="term" tabindex="0" data-tip="${qa(`<b>${row.label}</b><br>${row.tip}`)}">${row.label}</span></th>`;
+    const label = (row) => `<th scope="row"><span class="term" tabindex="0" data-tip="${qa(`<b>${row.label}</b><br>${row.tip}`)}">${row.short ? `<span class="lg">${row.label}</span><span class="sm" aria-hidden="true">${row.short}</span>` : row.label}</span></th>`; // phones show the short label
     const ax = `<span class="lim-ax">${[lo, S0.half, hi].map((t) => `<b style="left:${pos(t)}"${t === S0.half ? ' class="h"' : ""}>${t}</b>`).join("")}</span>`;
     const thead = `<thead><tr><th scope="col" class="lim-a"><span class="sr-only">Assumption</span></th>${S0.countries.map((c, i) => `<th scope="col"><span class="lg">${c}</span><span class="sm" aria-hidden="true">${S0.short[i]}</span></th>`).join("")}</tr>` +
       `<tr class="lim-axr" aria-hidden="true"><td></td>${S0.countries.map(() => `<td><span class="lim-in"><span class="lim-n"></span>${ax}</span></td>`).join("")}</tr></thead>`;
