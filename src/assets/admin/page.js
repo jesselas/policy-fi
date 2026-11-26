@@ -603,20 +603,23 @@ window.Kit = (function () {
     const [t3, end3] = textWidth(svg, 10); L.uw = t3("Universal transfer"); end3(); const [t5, end5] = textWidth(svg, 12.5); L.pn = new Map(P.map((p) => [p.id, t5(p.short)])); end5();
     const [t4, end4] = textWidth($("#scat"), 13), g = scatGeom($("#scat").parentNode.clientWidth); L.two2 = g.w + g.gapX - d3.sum(AXT, (q) => t4(q.join(" "))) / 2 < 14;
     const wrap = $("#scat-wrap"), box = $("#colrow"); wrap.classList.add("own"); const beside = t4(YT) + 24 + $("span", box).offsetWidth + 8 + $(".seg", box).offsetWidth <= wrap.clientWidth; wrap.classList.toggle("own", !beside); end4();
-    const [t6, end6] = textWidth($("#scat"), LEGF); L.legw = Object.fromEntries(Object.entries(GROUPS).map(([k, q]) => [k, q.map((d) => t6(d.name) + 13)])); end6();
-    L.legH = legendFits(g.w, 178 - 71) ? 0 : 16 * d3.max(Object.keys(GROUPS), (k) => legendRows(k, $("#scat").parentNode.clientWidth).n) + 4;
+    const fits = pickKey(g.w, 178 - 71);
+    L.legH = fits ? 0 : 17 * d3.max(Object.keys(GROUPS), (k) => legendRows(k, $("#scat").parentNode.clientWidth).n) + 4;
   }
   const GROUPS = { region: ["SSA", "EG", "LA"].map((k, i) => ({ k, name: REGION[k], c: `var(--r${i + 1})` })), type: [["PCT", 1], ["MT", 5], ["PW", 4], ["CAT", 2], ["INK", 3]].map(([k, i]) => ({ k, name: TYPE_S[k], c: `var(--g${i})` })), verdict: [["more", "Closes clearly more"], ["unclear", "No clear difference"], ["less", "Closes clearly less"]].map(([k, name]) => ({ k, name, mk: k })) };
-  const YT = "Poverty gap closed per dollar", LEGF = 11.5, LEGR = 13.5;
-  const legendFits = (w, h) => Object.keys(GROUPS).every((k) => L.legw[k].every((q, i) => !P.some((p) => p.V * w < q + 6 + 8 && (1 - p.PRE0) * h < LEGR * i + 11)));
+  const YT = "Poverty gap closed per dollar", LEGS = [[13, 17, 46], [12.5, 15.5, 42], [11.5, 13.5, 34]];
+  const legendFits = (w, h, ring) => Object.keys(GROUPS).every((k) => L.legw[k].every((q, i) => !P.some((p) => p.V * w < q + 6 + (ring ? 10 : 8) && (1 - p.PRE0) * h < L.lt - 30 + L.lr * i + (ring ? 12 : 7))));
+  const keyAt = (f) => { const [t6, end6] = textWidth($("#scat"), f); L.kf = f; L.legw = Object.fromEntries(Object.entries(GROUPS).map(([k, q]) => [k, q.map((d) => t6(d.name) + (f >= 12.5 ? 15 : 13))])); end6(); };
+  const pickKey = (w, h, ring) => { const ok = LEGS.some(([f, r, t]) => { Object.assign(L, { lr: r, lt: t }); keyAt(f); return legendFits(w, h, ring); }); if (!ok) keyAt(12.5); return ok; };
   const legendRows = (k, W) => { let x = 0, n = 1; const at = L.legw[k].map((q) => { if (x && x + q > W) { x = 0; n++; } const r = { x, y: n - 1 }; x += q + 12; return r; }); return { n, at }; };
   function legend() {
     const svg = $("#scat"), H = L.scat, W = svg.parentNode.clientWidth, { ml, gapX, w } = scatGeom(W), x0 = ml + w + gapX + 6;
+    if (!L.legH && !pickKey(w, H - 30 - (L.two2 ? 56 : 41), true)) { Object.assign(L, { lr: 13.5, lt: 34 }); keyAt(11.5); }
     const g = d3.select(svg).selectAll("g.leg").data(Object.keys(GROUPS)).join("g").attr("class", "leg").attr("aria-hidden", "true");
     g.each(function (k) {
-      const at = L.legH ? legendRows(k, W).at.map((q) => [q.x, H - L.legH + 14 + 16 * q.y]) : L.legw[k].map((_, i) => [x0, 34 + LEGR * i]);
-      const r = d3.select(this).selectAll("g").data(GROUPS[k]).join((e) => { const n = e.append("g"); n.append("circle").attr("r", 4); n.append("path"); n.append("text"); return n; }).attr("transform", (d, i) => `translate(${at[i]})`).attr("class", (d) => (d.mk ? `mk mk-${d.mk}` : null));
-      r.select("circle").attr("cx", 4).attr("cy", -4).style("fill", (d) => (d.mk ? null : d.c)); r.select("path").attr("d", (d) => (d.mk ? "M4,-8 A4,4 0 0 0 4,0 Z" : null)); r.select("text").attr("x", 13).style("font-size", LEGF + "px").style("fill", "var(--ink-2)").text((d) => d.name);
+      const at = L.legH ? legendRows(k, W).at.map((q) => [q.x, H - L.legH + 15 + 17 * q.y]) : L.legw[k].map((_, i) => [x0, L.lt + L.lr * i]);
+      const r = d3.select(this).selectAll("g").data(GROUPS[k]).join((e) => { const n = e.append("g"); n.append("circle").attr("r", 4.5); n.append("path"); n.append("text"); return n; }).attr("transform", (d, i) => `translate(${at[i]})`).attr("class", (d) => (d.mk ? `mk mk-${d.mk}` : null));
+      const cr = L.kf >= 12.5 ? 4.5 : 4; r.select("circle").attr("r", cr).attr("cx", cr).attr("cy", -cr).style("fill", (d) => (d.mk ? null : d.c)); r.select("path").attr("d", (d) => (d.mk ? `M${cr},${-2 * cr} A${cr},${cr} 0 0 0 ${cr},0 Z` : null)); r.select("text").attr("x", 2 * cr + 6 - (cr < 4.5 ? 1 : 0)).style("font-size", L.kf + "px").style("fill", "var(--ink-2)").text((d) => d.name);
     });
   }
   const tr = (sel) => (dur(1) ? sel.transition().duration(650).ease(d3.easeCubicOut) : sel.interrupt());
@@ -882,9 +885,10 @@ window.Kit = (function () {
   const Pick = (function () {
     const F = { region: "all", type: "all" }, sheet = () => phone() || window.innerHeight < 500; let open = false, ty = "", tt = 0, hid = 0;
     const box = () => $("#picker"), list = () => $("#pick-list"), shown = () => $$(".opt:not([hidden])", list());
-    const REG = [["all", "All", P.length], ...["SSA", "EG", "LA"].map((r) => [r, REGION[r], P.filter((p) => p.region === r).length])];
+    const RN = { ...REGION, AF: "Africa" }, inReg = (p, r) => p.region === r || (r === "AF" && p.region !== "LA");
+    const REG = [["all", "All", P.length], ...["AF", "SSA", "EG", "LA"].map((r) => [r, RN[r], P.filter((p) => inReg(p, r)).length])];
     const TY = [["all", "All types"], ["PCT", "Proxy or community"], ["MT", "Means-tested"], ["CAT", "Categorical"], ["INK", "In-kind"], ["PW", "Public works"]];
-    const match = (p, f) => (f.region === "all" || p.region === f.region) && (f.type === "all" || p.type === f.type);
+    const match = (p, f) => (f.region === "all" || inReg(p, f.region)) && (f.type === "all" || p.type === f.type);
     function build() {
       const chip = (key, [v, t, n]) => { const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.key = key; b.dataset.v = v; b.innerHTML = t + (n ? ` <small>${n}</small>` : ""); b.addEventListener("click", () => { if (b.getAttribute("aria-disabled") === "true") { Kit.openTip(b, null, null); return; } F[key] = v; sync(); list().scrollTop = 0; }); return b; };
       REG.forEach((r) => $("#chips-region").append(chip("region", r))); TY.forEach((t) => $("#chips-type").append(chip("type", t)));
@@ -918,9 +922,9 @@ window.Kit = (function () {
     function reveal(o, mid) { const l = list(), lr = l.getBoundingClientRect(), r = o.getBoundingClientRect(), top = r.top - lr.top + l.scrollTop; if (mid) l.scrollTop = top - l.clientHeight / 2 + r.height / 2; else if (top - 30 < l.scrollTop) l.scrollTop = top - 30; else if (top + r.height > l.scrollTop + l.clientHeight) l.scrollTop = top + r.height - l.clientHeight; }
     function sync() {
       $$(".chip", box()).forEach((b) => {
-        const k = b.dataset.key, v = b.dataset.v, f = { ...F, [k]: v }, none = !P.some((p) => match(p, f)), inR = F.region === "all" ? "" : REGION[F.region];
+        const k = b.dataset.key, v = b.dataset.v, f = { ...F, [k]: v }, none = !P.some((p) => match(p, f)), inR = F.region === "all" ? "" : RN[F.region];
         b.setAttribute("aria-pressed", String(F[k] === v)); b.setAttribute("aria-disabled", String(none));
-        if (none) b.setAttribute("data-tip", k === "type" ? `No such programme in ${inR}.` : `No such programme in ${REGION[v]}.`); else b.removeAttribute("data-tip");
+        if (none) b.setAttribute("data-tip", k === "type" ? `No such programme in ${inR}.` : `No such programme in ${RN[v]}.`); else b.removeAttribute("data-tip");
       });
       $$(".grp", list()).forEach((g) => { let any = false; $$(".opt", g).forEach((o) => { const p = byId.get(o.dataset.id), on = match(p, F); o.hidden = !on; any = any || on; o.setAttribute("aria-selected", String(p.id === S.p)); o.querySelector(".mkbox").innerHTML = mkOf(p, aOf(p), auOf(p)); o.querySelector(".vd").textContent = `, ${WORD[verdict(p, aOf(p), auOf(p))]}`; }); g.hidden = !any; });
       const os = shown(), own = os.find((o) => o.dataset.id === S.p); $$(".opt", list()).forEach((q) => { q.tabIndex = -1; }); (own || os[0]).tabIndex = 0;
@@ -932,7 +936,7 @@ window.Kit = (function () {
       b.style.left = Math.max(12, Math.min(r.right - w, document.documentElement.clientWidth - w - 12)) + "px"; b.style.top = top + "px"; b.style.height = Math.min(560, window.innerHeight - top - 14) + "px";
     }
     function show() {
-      clearTimeout(hid); open = true; F.region = F.type = "all";
+      clearTimeout(hid); open = true; F.region = F.type = "all"; $$("#chips-region .chip").forEach((c) => { c.hidden = phone() ? c.dataset.v === "SSA" || c.dataset.v === "EG" : c.dataset.v === "AF"; });
       const b = box(), sc = $("#pick-scrim"); b.hidden = false; sync(); place();
       Kit.closeTip(true); $("#case").setAttribute("aria-expanded", "true"); b.style.transform = "";
       void b.offsetWidth; b.classList.add("open");
@@ -957,7 +961,7 @@ window.Kit = (function () {
     const box = $("#all-list"), lo = -0.05, hi = 0.8, pos = (v) => 100 * (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo);
     if (!box.dataset.done) {
       box.dataset.done = 1;
-      $("#all-key").innerHTML = `<span><i class="tri"></i>Estimated share</span><span><i class="dia"></i>Break-even share</span>${markKey()}`;
+      $("#all-key").innerHTML = `${markKey()}<span class="kgap" aria-hidden="true"></span><span><i class="tri"></i>Estimated share</span><span><i class="dia"></i>Break-even share</span>`;
       const tick = [0, 0.2, 0.4, 0.6, 0.8], axis = `<div class="prow paxis" aria-hidden="true"><span></span><span></span><span class="pl">${tick.map((t) => `<i class="${t === 0.2 || t === 0.6 ? "mid" : ""}" style="left:${pos(t)}%">${Math.round(100 * t)}%</i>`).join("")}</span></div>`;
       const grid = tick.map((t) => `<u style="left:${pos(t)}%"></u>`).join("");
       box.innerHTML = [["PCT", "MT", "PW"], ["CAT", "INK"]].map((col) => `<div class="pcol">${col.map((t) => `<section class="psec" style="order:${DATA.types.findIndex((q) => q.id === t)}"><h4>${TYPE[t]}</h4>${axis}${RANK.get(t).map((p) => {
@@ -966,13 +970,23 @@ window.Kit = (function () {
       box.addEventListener("click", (e) => { const b = e.target.closest("button.prow"); if (!b) return; choose(b.dataset.id); Kit.backToMain(); });
     }
     $$("button.prow", box).forEach((b) => b.classList.toggle("own", b.dataset.id === S.p));
+    keyArrow($("#all .fig"), $("#all-key svg.mk"), $("#all-list .prow:not(.paxis) svg.mk"));
   }
   const MARK = { "✓": "more", "≈": "unclear", "✗": "less" };
   function drawCountries() {
-    const box = $("#c-list"); if (box.dataset.done) return; box.dataset.done = 1;
-    $("#c-key").innerHTML = `<span class="bars"><i class="key" style="background:${key3("c1")}"></i>Programmes</span><span class="bars"><i class="key thin"></i>Universal transfer of the same total cost</span>${markKey("<b>No clear difference</b><br>The 95 per cent interval of the difference includes zero, whichever closes more at the estimates.")}`;
+    const box = $("#c-list"), arrow = () => keyArrow($("#countries-fold .fig"), $("#c-key svg.mk"), $("#c-list tbody svg.mk")); if (box.dataset.done) { arrow(); return; } box.dataset.done = 1;
+    $("#c-key").innerHTML = `${markKey("<b>No clear difference</b><br>The 95 per cent interval of the difference includes zero, whichever closes more at the estimates.")}<span class="kgap" aria-hidden="true"></span><span class="bars"><i class="key" style="background:${key3("c1")}"></i>Programmes</span><span class="bars"><i class="key thin"></i>Universal transfer of the same total cost</span>`;
     const head = `<tr><th>Country</th><th><span class="lg">Administrative cost share</span><span class="sm">Admin. share</span></th><th><span class="lg">Share reaching the poor</span><span class="sm">To the poor</span></th><th class="plot">Cents per dollar</th><th><span class="lg">Poverty gap closed</span><span class="sm">Gap closed</span></th><th><span class="lg">Universal transfer</span><span class="sm">Universal</span></th></tr>`;
     box.innerHTML = `<table class="dt ctab"><thead>${head}</thead><tbody>${DATA.countries.map((c) => { return `<tr><td>${mk(MARK[c.mark], c.up)}${c.name}<span class="sr-only">, ${WORD[MARK[c.mark]]}</span></td><td>${c.printed.a}%</td><td>${c.printed.V}%</td><td class="plot"><span class="cbar"><i class="cb1" style="width:${100 * c.PRE}%"></i><i class="cb2" style="width:${100 * c.PRE_u}%"></i></span></td><td><b>${fmt(100 * +c.printed.PRE)}¢</b></td><td>${fmt(100 * +c.printed.PRE_u)}¢</td></tr>`; }).join("")}</tbody></table>`;
+    arrow();
+  }
+  function keyArrow(fig, from, to) {
+    const s = d3.select(fig).selectAll("svg.karrow").data([0]).join((e) => { const n = e.append("svg").attr("class", "karrow").attr("aria-hidden", "true"); n.append("path").attr("class", "line"); n.append("path").attr("class", "head"); return n; });
+    const show = window.innerWidth > 560 && from && to && from.getClientRects().length && to.getClientRects().length; s.style("display", show ? null : "none"); if (!show) return;
+    const f = fig.getBoundingClientRect(), a = from.getBoundingClientRect(), b = to.getBoundingClientRect(), sx = a.left - f.left - 3, sy = (a.top + a.bottom) / 2 - f.top, ex = b.left - f.left - 2, ey = (b.top + b.bottom) / 2 - f.top;
+    const xl = Math.max(4 - f.left, Math.min(sx, ex) - 16), r1 = Math.min(6, (sx - xl) / 2, (ey - sy) / 2), r2 = Math.max(0, Math.min(6, (ex - 8.5 - xl) / 2, (ey - sy) / 2));
+    s.select("path.line").attr("d", `M${sx},${sy} H${xl + r1} Q${xl},${sy} ${xl},${sy + r1} V${ey - r2} Q${xl},${ey} ${xl + r2},${ey} H${Math.max(xl + r2, ex - 7)}`);
+    s.select("path.head").attr("d", `M${ex},${ey} L${ex - 8.5},${ey - 5} L${ex - 8.5},${ey + 5} Z`);
   }
   function drawLimits() {
     const box = $("#l-list"); if (box.dataset.done) return; box.dataset.done = 1;
@@ -1071,10 +1085,10 @@ window.Kit = (function () {
       <ul class="defs"><li>${PRE}<sup>0</sup>: poverty gap closed per dollar of the programme’s benefits</li><li>${PRE}${ss}: poverty gap closed per dollar of benefits of a universal transfer, the programme’s benefit spending paid equally to every person</li><li>${sub("a", "u")}: administrative share of the universal transfer’s total cost</li></ul>
       <p>If <i>a</i>* is below 0, the programme closes less even without administrative costs. “No clear difference” means that <i>a</i> lies inside the 95 per cent interval of <i>a</i>*, which reflects survey sampling only and is likely too narrow. At the estimates, ${C.main.pass} of the 59 programmes close more than the universal transfer, ${C.main.clear} of them clearly.</p>` }),
     differ: () => ({ title: "Why programmes differ", src: "Paper, Section 4.2, Figure 2, and Table C5", html: `
-      <p>The variance of the log of the poverty gap closed per dollar, across the 54 programmes that close some of the gap, is split into parts. Administration, the share reaching the poor, and spillover add up to 100 in each column before rounding. Below each number is its 95 per cent interval from resampling countries.</p>
+      <p>The variance of the log of the poverty gap closed per dollar, across the 54 programmes that close some of it, is split into parts. Administration, the share reaching the poor, and spillover add up to 100 per column before rounding. Below each number is its 95 per cent interval from resampling countries.</p>
       ${tbl(["% of the variation", "All", `Between countries (${DF.between_share}%)`, `Within countries (${DF.within_share}%)`], [["Administration", "a"], ["Share reaching the poor", "V"], ["– poverty rate", "rate"], ["– whom the programme pays", "adv"], ["Spillover", "S"]].map(([t, k]) => [t.replace(/^– (.*)$/, '<span class="ind">$1</span>')].concat(["all", "between", "within"].map((b) => `${fmt(DF[b][k].v)}<br><small>${fmt(DF[b][k].countries[0])} to ${fmt(DF[b][k].countries[1])}</small>`))), { cls: "exdt" })}
-      <p>A negative part makes the differences smaller. “Whom the programme pays” is the share reaching the poor divided by the poverty rate. This split is less certain and depends on the poverty line.</p>
-      <p>These data can’t show whether more administration within a programme would reach the poor better.</p>` }),
+      <p>A negative part makes the differences smaller. “Whom the programme pays” is the share reaching the poor over the poverty rate. This split is less certain and depends on the poverty line.</p>
+      <p>The parts explain differences between programmes. They can’t show whether more administration within a programme would reach the poor better.</p>` }),
   };
   function drawCase(R) {
     setText($("#c-country"), R.p.country); setText($("#c-name"), R.p.base);

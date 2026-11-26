@@ -504,7 +504,6 @@ html { scroll-behavior: auto; }
 .paperx .ex-txt p { margin: 0; font-size: 13.5px; line-height: 19px; color: var(--ink-2); text-wrap: pretty; }
 .paperx .ex-plot { min-width: 0; }
 .paperx .ex-plot text { pointer-events: none; }
-.paperx .ex-note { margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
 .paperx .exdt small { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
 .paperx .pcol h4 { font-size: 13px; font-weight: 600; margin: 14px 0 0; }
 .paperx .prow { display: grid; grid-template-columns: 16px 240px minmax(0, 1fr); align-items: center; gap: 8px; width: 100%; height: 24px; padding: 0; border: 0; background: none; text-align: left; font-size: 12.5px; line-height: 16px; color: var(--ink); cursor: pointer; border-radius: 2px; }
@@ -519,6 +518,11 @@ html { scroll-behavior: auto; }
 .paperx .paxis .pl i { position: absolute; transform: translateX(-50%); font-style: normal; font-size: 11px; color: var(--ink-3); top: 4px; }
 .paperx .prow .pl u { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); }
 .paperx .prow .pl .ln { position: absolute; top: 11.5px; height: 1px; background: var(--ink-3); }
+.paperx .kgap { width: 14px; }
+.paperx #all .fig, .paperx #countries-fold .fig { position: relative; }
+.paperx .karrow { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; pointer-events: none; }
+.paperx .karrow .line { fill: none; stroke: var(--ink); stroke-width: 1.7; }
+.paperx .karrow .head { fill: var(--ink); }
 .paperx .tri { display: inline-block; width: 0; height: 0; border: 5px solid transparent; border-top: 0; border-bottom: 8px solid var(--c2-edge); }
 .paperx .dia { display: inline-block; width: 8px; height: 8px; background: var(--ink); transform: rotate(45deg); }
 .paperx .prow .pl .tri { position: absolute; top: 8px; margin-left: -5px; }
@@ -701,12 +705,16 @@ html { scroll-behavior: auto; }
 .paperx .switch i::after { left: 4.5px; top: 4.5px; width: 11px; height: 11px; }
 .paperx .switch[aria-checked="true"] i::after { transform: translateX(14px); }
 .paperx #dollar { margin-top: 8px; }
+.paperx .kgap { display: none; }
 .paperx #all-key { position: sticky; top: 0; z-index: 3; margin-top: 0; padding: 7px 0 6px; background: var(--bg); box-shadow: 0 1px 0 var(--rule); }
 }
 @media (max-width: 319px) {
 .paperx .co-head b { font-size: 12.5px; }
 .paperx .panel-head h2 { white-space: normal; }
 .paperx .ctl-head label .term { white-space: normal; }
+}
+@media (max-width: 560px) {
+.paperx .opt { min-height: 32px; padding-top: 3px; padding-bottom: 3px; }
 }
 @media (prefers-reduced-motion: reduce) {
 .paperx .picker, .paperx .mk circle, .paperx .mk path, .paperx .univ, .paperx .solo .univ, .paperx .switch i, .paperx .switch i::after, .paperx .alone, .paperx .panel:not(.solo) .alone, .paperx .topnav.off, .paperx .leg, .paperx .cdots, .paperx .cdots circle, .paperx .dot, .paperx .vdots, .paperx .meter .aa { transition: none; }
