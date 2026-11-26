@@ -518,6 +518,10 @@ html { scroll-behavior: auto; }
 .paperx .paxis .pl i { position: absolute; transform: translateX(-50%); font-style: normal; font-size: 11px; color: var(--ink-3); top: 4px; }
 .paperx .prow .pl u { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); }
 .paperx .prow .pl .ln { position: absolute; top: 10.5px; height: 1px; background: var(--ink-3); }
+.paperx .keyrow .kmarks { display: contents; }
+@media (min-width: 561px) {
+.paperx .keyrow .kmarks { display: inline-flex; flex-wrap: wrap; gap: inherit; padding: 2px 9px; border: 1.7px solid var(--ink); border-radius: 6px; }
+}
 .paperx .kbr { flex-basis: 100%; height: 3px; }
 .paperx #all .fig, .paperx #countries-fold .fig { position: relative; }
 .paperx .karrow { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; pointer-events: none; }

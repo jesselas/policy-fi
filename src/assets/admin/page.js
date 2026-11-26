@@ -965,7 +965,7 @@ window.Kit = (function () {
     const box = $("#all-list"), lo = -0.05, hi = 0.8, pos = (v) => 100 * (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo);
     if (!box.dataset.done) {
       box.dataset.done = 1;
-      $("#all-key").innerHTML = `${markKey(undefined, MORE_LONG)}<span class="kbr" aria-hidden="true"></span><span><i class="tri"></i>Estimated share</span><span><i class="dia"></i>Break-even share</span>`;
+      $("#all-key").innerHTML = `<span class="kmarks">${markKey(undefined, MORE_LONG)}</span><span class="kbr" aria-hidden="true"></span><span><i class="tri"></i>Estimated share</span><span><i class="dia"></i>Break-even share</span>`;
       const tick = [0, 0.2, 0.4, 0.6, 0.8], axis = `<div class="prow paxis" aria-hidden="true"><span></span><span></span><span class="pl">${tick.map((t) => `<i class="${t === 0.2 || t === 0.6 ? "mid" : ""}" style="left:${pos(t)}%">${Math.round(100 * t)}%</i>`).join("")}</span></div>`;
       const grid = tick.map((t) => `<u style="left:${pos(t)}%"></u>`).join("");
       box.innerHTML = [["PCT", "MT", "PW"], ["CAT", "INK"]].map((col) => `<div class="pcol">${col.map((t) => `<section class="psec" style="order:${DATA.types.findIndex((q) => q.id === t)}"><h4>${TYPE[t]}</h4>${axis}${RANK.get(t).map((p) => {
@@ -974,12 +974,12 @@ window.Kit = (function () {
       box.addEventListener("click", (e) => { const b = e.target.closest("button.prow"); if (!b) return; choose(b.dataset.id); Kit.backToMain(); });
     }
     $$("button.prow", box).forEach((b) => b.classList.toggle("own", b.dataset.id === S.p));
-    keyArrow($("#all .fig"), $("#all-key svg.mk"), $("#all-list .prow:not(.paxis) svg.mk"));
+    keyArrow($("#all .fig"), $("#all-key .kmarks"), $("#all-list .prow:not(.paxis) svg.mk"));
   }
   const MARK = { "✓": "more", "≈": "unclear", "✗": "less" };
   function drawCountries() {
-    const box = $("#c-list"), arrow = () => keyArrow($("#countries-fold .fig"), $("#c-key svg.mk"), $("#c-list tbody svg.mk")); if (box.dataset.done) { arrow(); return; } box.dataset.done = 1;
-    $("#c-key").innerHTML = `${markKey("<b>No clear difference</b><br>The 95% interval of the difference includes zero, whichever closes more at the estimates.", MORE_LONG)}<span class="kbr" aria-hidden="true"></span><span class="bars"><i class="key" style="background:${key3("c1")}"></i>Programmes</span><span class="bars"><i class="key thin"></i>Universal transfer of the same total cost</span>`;
+    const box = $("#c-list"), arrow = () => keyArrow($("#countries-fold .fig"), $("#c-key .kmarks"), $("#c-list tbody svg.mk")); if (box.dataset.done) { arrow(); return; } box.dataset.done = 1;
+    $("#c-key").innerHTML = `<span class="kmarks">${markKey("<b>No clear difference</b><br>The 95% interval of the difference includes zero, whichever closes more at the estimates.", MORE_LONG)}</span><span class="kbr" aria-hidden="true"></span><span class="bars"><i class="key" style="background:${key3("c1")}"></i>Programmes</span><span class="bars"><i class="key thin"></i>Universal transfer of the same total cost</span>`;
     const COLS = [["name", "Country", "Country"], ["a", "Administrative cost share", "Admin. share"], ["V", "Share reaching the poor", "To the poor"], [null, "Cents per dollar", null, "plot"], ["PRE", "Poverty gap closed", "Gap closed"], ["PRE_u", "Universal transfer", "Universal"]];
     const head = `<tr>${COLS.map(([k, lg, sm, cls], i) => (k ? `<th${cls ? ` class="${cls}"` : ""} aria-sort="none"><button class="sortb" type="button" data-i="${i}">${sm ? `<span class="lg">${lg}</span><span class="sm">${sm}</span>` : lg}</button></th>` : `<th class="${cls}">${lg}</th>`)).join("")}</tr>`;
     const order = { i: null, dir: 0 }, rowsOf = (list) => list.map((c) => { return `<tr><td>${mk(MARK[c.mark], c.up)}${c.name}<span class="sr-only">, ${WORD[MARK[c.mark]]}</span></td><td>${c.printed.a}%</td><td>${c.printed.V}%</td><td class="plot"><span class="cbar"><i class="cb1" style="width:${100 * c.PRE}%"></i><i class="cb2" style="width:${100 * c.PRE_u}%"></i></span></td><td><b>${fmt(100 * +c.printed.PRE)}¢</b></td><td>${fmt(100 * +c.printed.PRE_u)}¢</td></tr>`; }).join("");
@@ -995,7 +995,7 @@ window.Kit = (function () {
   function keyArrow(fig, from, to) {
     const s = d3.select(fig).selectAll("svg.karrow").data([0]).join((e) => { const n = e.append("svg").attr("class", "karrow").attr("aria-hidden", "true"); n.append("path").attr("class", "line"); n.append("path").attr("class", "head"); return n; });
     const show = window.innerWidth > 560 && from && to && from.getClientRects().length && to.getClientRects().length; s.style("display", show ? null : "none"); if (!show) return;
-    const f = fig.getBoundingClientRect(), a = from.getBoundingClientRect(), b = to.getBoundingClientRect(), sx = a.left - f.left - 3, sy = (a.top + a.bottom) / 2 - f.top, ex = b.left - f.left - 2, ey = (b.top + b.bottom) / 2 - f.top;
+    const f = fig.getBoundingClientRect(), a = from.getBoundingClientRect(), b = to.getBoundingClientRect(), sx = a.left - f.left + 0.85, sy = (a.top + a.bottom) / 2 - f.top, ex = b.left - f.left - 2, ey = (b.top + b.bottom) / 2 - f.top;
     const xl = Math.max(4 - f.left, Math.min(sx, ex) - 16), r1 = Math.min(6, (sx - xl) / 2, (ey - sy) / 2), r2 = Math.max(0, Math.min(6, (ex - 8.5 - xl) / 2, (ey - sy) / 2));
     s.select("path.line").attr("d", `M${sx},${sy} H${xl + r1} Q${xl},${sy} ${xl},${sy + r1} V${ey - r2} Q${xl},${ey} ${xl + r2},${ey} H${Math.max(xl + r2, ex - 7)}`);
     s.select("path.head").attr("d", `M${ex},${ey} L${ex - 8.5},${ey - 5} L${ex - 8.5},${ey + 5} Z`);
