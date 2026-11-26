@@ -383,8 +383,9 @@ html { scroll-behavior: auto; }
 .vatx .lk.lit { background: var(--up-pale); box-shadow: 0 0 0 2px var(--up-pale); }
 .vatx #incidence, .vatx #revenue, .vatx #meter { display: block; }
 .vatx .eqrow.fill { display: block; }
-.vatx .tip table.tt { border-collapse: collapse; margin: 4px 0 3px; }
+.vatx .tip table.tt { border-collapse: collapse; margin: 4px 0 3px; width: 100%; }
 .vatx .tip table.tt td { padding: 1px 6px 1px 0; vertical-align: top; }
+.vatx .tip table.tt td:first-child:has(> .key) { width: 1px; }
 .vatx .tip table.tt td.n { text-align: right; padding-right: 0; padding-left: 8px; font-weight: 600; white-space: nowrap; }
 .vatx .tip table.tt tr.tot td { border-top: 1px solid var(--rule); padding-top: 3px; font-weight: 600; }
 .vatx .tip .key { display: inline-block; width: 10px; height: 8px; border-radius: 1px; margin-top: 4px; }
