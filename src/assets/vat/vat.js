@@ -1156,7 +1156,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     const pax = `<span class="lim-ax">${P.ticks.map((t) => `<b style="left:${pp(t)}"${t === 0 ? ' class="h"' : ""}>${fx(t, 0)}</b>`).join("")}</span>`;
     const prow = (r, i) => {
       const [n, obs, ci, none, head, cal] = r, c = S0.countries[i];
-      const tip = `<b>${c}, ${n} items</b>` + tipTable([["var(--ink)", P.key.obs, `${f1(obs)} [${f1(ci[0])}, ${f1(ci[1])}]`], ["var(--collected)", P.key.none, f1(none)], ["var(--up)", P.key.head, f1(head)]].concat(cal ? [["var(--untaxed)", P.key.cal, `${f1(cal[0])} to ${f1(cal[1])}`]] : [])) + `<span class="u">${P.head}</span>`;
+      const tip = `<b>${c}, ${n} items</b>` + tipTable([["var(--ink)", P.key.obs, `${f1(obs)} [${f1(ci[0])}, ${f1(ci[1])}]`], ["var(--collected)", "No VAT on informal purchases", f1(none)], ["var(--up)", P.key.head, f1(head)]].concat(cal ? [["var(--untaxed)", P.key.cal, `${f1(cal[0])} to ${f1(cal[1])}`]] : [])) + `<span class="u">${P.head}</span>`;
       const marks = `<i class="lim-r0" style="left:${pp(0)}"></i>` + (cal ? `<i class="lim-band" style="left:${pp(cal[0])};width:calc(${pp(cal[1])} - ${pp(cal[0])})"></i>` : "") +
         `<i class="lim-ci" style="left:${pp(ci[0])};width:calc(${pp(ci[1])} - ${pp(ci[0])})"></i><i class="lim-m lim-none" style="left:${pp(none)}"></i><i class="lim-m lim-ph" style="left:${pp(head)}"></i><i class="lim-m lim-dot" style="left:${pp(obs)}"></i>`;
       return `<tr data-tip="${qa(tip)}"><th scope="row">${c} <span class="lim-items">${n} items</span></th><td class="pn">${f1(obs)}</td><td class="pn">${f1(none)}</td><td class="pn">${f1(head)}</td><td class="pc"><span class="lim-t" aria-hidden="true">${marks}</span></td></tr>`;

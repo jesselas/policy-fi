@@ -385,10 +385,10 @@ html { scroll-behavior: auto; }
 .vatx .eqrow.fill { display: block; }
 .vatx .tip table.tt { border-collapse: collapse; margin: 4px 0 3px; }
 .vatx .tip table.tt td { padding: 1px 6px 1px 0; vertical-align: top; }
-.vatx .tip table.tt td.n { text-align: right; padding-right: 0; padding-left: 8px; font-weight: 600; }
+.vatx .tip table.tt td.n { text-align: right; padding-right: 0; padding-left: 8px; font-weight: 600; white-space: nowrap; }
 .vatx .tip table.tt tr.tot td { border-top: 1px solid var(--rule); padding-top: 3px; font-weight: 600; }
 .vatx .tip .key { display: inline-block; width: 10px; height: 8px; border-radius: 1px; margin-top: 4px; }
-.vatx .tip { max-width: 330px; }
+.vatx .tip { max-width: min(360px, calc(100vw - 16px)); }
 .vatx { --sp-side: 16px; --sp-pad: 15px; --sp-head: 8px; --ctl-pad: 15px; --ctl-row: 18px; --ctl-lab: 6px; --sp-ctl-top: 18px; --sp-status: 12px; }
 @media (min-width: 1400px) {
 .vatx { --sp-side: 24px; --sp-pad: 18px; --sp-head: 9px; --ctl-pad: 16px; --ctl-row: 18px; --ctl-lab: 8px; --sp-ctl-top: 20px; --sp-status: 14px; }
@@ -466,7 +466,7 @@ html { scroll-behavior: auto; }
 @media (prefers-reduced-motion: reduce) {
 .vatx .tip, .vatx .tip.on, .vatx .tip.jump { transition: none; translate: 0 0; scale: 1; }
 }
-.vatx .tip.tip-narrow { max-width: 236px; }
+.vatx .tip.tip-narrow { max-width: min(330px, calc(100vw - 16px)); }
 @media (max-width: 700px) {
 .vatx .eq { white-space: normal; font-size: 15.5px; line-height: 1.7; }
 .vatx .eqs { font-size: 14.5px; }
