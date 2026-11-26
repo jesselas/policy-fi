@@ -559,7 +559,7 @@ html { scroll-behavior: auto; }
 .paperx .ctab td:first-child { padding-right: 12px; }
 .paperx .ctab th.plot { text-align: left; }
 .paperx .ctab td.win { color: var(--c1-text); }
-.paperx .ctab td.win-u { color: var(--c2-text); font-weight: 600; }
+.paperx .ctab td.win-u { color: var(--c2-text); }
 .paperx .sortb { all: unset; box-sizing: border-box; cursor: pointer; display: inline; text-align: inherit; position: relative; }
 .paperx .sortb::after { content: ""; display: inline-block; width: 0; height: 0; margin-left: 4px; vertical-align: 2px; border: 3.5px solid transparent; border-top: 4.5px solid currentColor; border-bottom: 0; opacity: 0.3; }
 .paperx .ctab th[aria-sort="ascending"] .sortb::after { border-top: 0; border-bottom: 4.5px solid currentColor; opacity: 1; }
