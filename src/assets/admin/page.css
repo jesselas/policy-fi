@@ -313,8 +313,8 @@ html { scroll-behavior: auto; }
 .paperx .mini .nr { display: none; }
 .paperx #dollar { margin-top: 6px; }
 .paperx #dollar .halo { stroke-width: 5px; }
-.paperx .scat-wrap { position: relative; margin-top: 10px; }
-.paperx .colrow { position: absolute; right: 0; top: -4px; display: flex; align-items: center; gap: 8px; font-size: 12px; line-height: 16px; color: var(--ink-2); }
+.paperx .scat-wrap { position: relative; margin-top: 18px; }
+.paperx .colrow { position: absolute; right: 0; top: -2px; display: flex; align-items: center; gap: 8px; font-size: 12px; line-height: 16px; color: var(--ink-2); }
 .paperx .scat-wrap.own .colrow { position: static; margin-bottom: 8px; flex-wrap: wrap; row-gap: 4px; }
 .paperx .colrow .seg { flex-wrap: nowrap; }
 .paperx .colrow .seg button { flex: none; padding: 2px 8px; font-size: 12px; line-height: 16px; position: relative; }
@@ -454,7 +454,11 @@ html { scroll-behavior: auto; }
 .paperx .side .figline { min-height: 36px; }
 .paperx .side .figline .t b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
 .paperx .side .figline .t .term { color: inherit; }
-.paperx .side .figline .v { color: var(--c1-text); min-width: 36px; font-size: 30px; position: relative; top: 0.107em; }
+.paperx .side .figline .v { color: var(--c1-text); min-width: 36px; font-size: 30px; }
+@media (min-width: 561px) {
+.paperx .side .figline { align-items: flex-start; }
+.paperx .side .figline .v { margin-top: var(--vm, 0px); }
+}
 .paperx .lower { margin: 3px 0 0; font-size: 12.5px; line-height: 18px; color: var(--ink-2); }
 .paperx .lower .term { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .paperx #dots-key { margin-top: 6px; font-size: 12.5px; gap: 3px 12px; }
@@ -554,6 +558,8 @@ html { scroll-behavior: auto; }
 .paperx .ctab .plot { width: 36%; }
 .paperx .ctab td:first-child { padding-right: 12px; }
 .paperx .ctab th.plot { text-align: left; }
+.paperx .ctab td.win { color: var(--c1-text); }
+.paperx .ctab td.win-u { color: var(--c2-text); font-weight: 600; }
 .paperx .sortb { all: unset; box-sizing: border-box; cursor: pointer; display: inline; text-align: inherit; position: relative; }
 .paperx .sortb::after { content: ""; display: inline-block; width: 0; height: 0; margin-left: 4px; vertical-align: 2px; border: 3.5px solid transparent; border-top: 4.5px solid currentColor; border-bottom: 0; opacity: 0.3; }
 .paperx .ctab th[aria-sort="ascending"] .sortb::after { border-top: 0; border-bottom: 4.5px solid currentColor; opacity: 1; }
@@ -579,8 +585,6 @@ html { scroll-behavior: auto; }
 .paperx .ltseg { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .paperx .ltrack { position: relative; height: 12px; background: var(--surface-2); border-radius: 1px; }
-.paperx .ltrack u { position: absolute; left: 0; top: -2px; bottom: -2px; box-sizing: border-box; border: 1.5px dashed var(--ink-3); border-radius: 2px; opacity: 0; transition: width 0.45s ease, opacity 0.3s ease; }
-.paperx .ltrack u.on { opacity: 1; }
 .paperx #dollar .rl1, .paperx #dollar .rl2, .paperx #dollar .rn1, .paperx #dollar .rn2, .paperx #dollar .sr1, .paperx #dollar .sr2 { transition: opacity 0.3s ease; }
 .paperx #dollar .z0 { opacity: 0; }
 .paperx .ltrack i { position: relative; display: block; height: 100%; transition: width 0.45s ease; background: var(--c1); box-shadow: inset 0 0 0 1px var(--c1-edge); opacity: 0.5; }
@@ -758,7 +762,7 @@ html { scroll-behavior: auto; }
 .paperx .opt { min-height: 32px; padding-top: 3px; padding-bottom: 3px; }
 }
 @media (prefers-reduced-motion: reduce) {
-.paperx .picker, .paperx .mk circle, .paperx .mk path, .paperx .univ, .paperx .solo .univ, .paperx .switch i, .paperx .switch i::after, .paperx .alone, .paperx .panel:not(.solo) .alone, .paperx .topnav.off, .paperx .leg, .paperx .cdots, .paperx .cdots circle, .paperx .dot, .paperx .vdots, .paperx .vdots g circle, .paperx .vdots g path, .paperx .leg g.li > :not(.lhit), .paperx .meter .aa, .paperx .ltrack u, .paperx .ltrack i, .paperx #dollar .rl1, .paperx #dollar .rl2, .paperx #dollar .rn1, .paperx #dollar .rn2, .paperx #dollar .sr1, .paperx #dollar .sr2 { transition: none; }
+.paperx .picker, .paperx .mk circle, .paperx .mk path, .paperx .univ, .paperx .solo .univ, .paperx .switch i, .paperx .switch i::after, .paperx .alone, .paperx .panel:not(.solo) .alone, .paperx .topnav.off, .paperx .leg, .paperx .cdots, .paperx .cdots circle, .paperx .dot, .paperx .vdots, .paperx .vdots g circle, .paperx .vdots g path, .paperx .leg g.li > :not(.lhit), .paperx .meter .aa, .paperx .ltrack i, .paperx #dollar .rl1, .paperx #dollar .rl2, .paperx #dollar .rn1, .paperx #dollar .rn2, .paperx #dollar .sr1, .paperx #dollar .sr2 { transition: none; }
 }
 .paperx { --c1: #338a7f; --c1-edge: #17675e; --c1-text: #005c55; --c1-soft: #dceae8; --c1-line: #a4cac4; --c1-un: #c4dfda; --on-c1: #00140f; --c2: #eeaa98; --c2-edge: #cf6f59; --c2-text: #a93a24; --c2-mark: #b4472b; --on-c2: #2e0a02; --c3: #a094d6; --c3-edge: #7d70ba; --on-c3: #17102f; --d1: #c9d6e6; --d1-edge: #93abc9; --d2: #6d8db7; --d2-edge: #4c6f9f; --on-d2: #06121f; --r1: #a8462a; --r2: #c9a227; --r3: #6e4fa8; --g1: #2f6db5; --g2: #d9921a; --g3: #a8407f; --g4: #5bb4d8; --g5: #5d5a55; }
 /* Site colours: the site's paper ground and teal links in light, its slate ground in dark. Check these against the

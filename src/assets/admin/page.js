@@ -576,7 +576,7 @@ window.Kit = (function () {
   function layout() {
     const ph = phone(), wide = window.innerWidth >= 1100, work = $(".work"), panel = $(".work > .panel"), side = $(".side");
     reserve("#be-text", BE_TEXT); { const e = $("#u-note"), was = e.textContent, need = (l) => d3.max(U_NOTE[l], (t) => { e.textContent = t; return Math.ceil(e.getBoundingClientRect().width); }); e.style.minWidth = ""; const w0 = need(0); L.un = 0; e.style.minWidth = w0 + "px"; if ($("#umeter").parentNode.clientWidth < 180) { e.style.minWidth = ""; L.un = 1; e.style.minWidth = need(1) + "px"; } e.textContent = was; } reserve("#lower", [lowerText(false), lowerText(true)]); reserve("#r-sub", ["= 100¢ −\u00a088¢\u00a0administration −\u00a088¢\u00a0to people who aren’t poor −\u00a088¢\u00a0spillover above the line", "= 100¢ −\u00a00¢\u00a0administration −\u00a0100¢\u00a0to people who aren’t poor −\u00a00¢\u00a0spillover above the line"]);
-    { const t = $("#n-text"), was = $("#n-set").textContent; t.style.minHeight = ""; $("#n-set").textContent = SETTINGS; const h = t.offsetHeight; $("#n-set").textContent = was; t.style.minHeight = h + "px"; }
+    { const t = $("#n-text"), f = t.parentNode, was = $("#n-set").textContent; f.style.minHeight = ""; $("#n-set").textContent = SETTINGS; const h = t.offsetHeight; $("#n-set").textContent = was; f.style.minHeight = h + "px"; centreNum(); }
     $("#result").style.height = ""; $("#result").classList.remove("stack"); if (ph && $("#r-verdict").clientWidth < 9 * parseFloat(getComputedStyle($("#r-verdict")).fontSize)) $("#result").classList.add("stack");
     reserve("#r-verdict", VERDICTS.map((t) => `<span class="mkbox"></span><span>${t}</span>`));
     const W = $("#dots").parentNode.clientWidth, probe = Kit.el("text", { style: "font-size:12px;visibility:hidden" }, $("#dots")), tw = (names) => d3.max(names, (t) => { probe.textContent = t; return probe.getComputedTextLength(); }) + 14;
@@ -881,6 +881,7 @@ window.Kit = (function () {
     svg.addEventListener("click", (e) => { const k = item(e); if (k === null) return; e.stopPropagation(); toggle(k); }, true);
     svg.addEventListener("keydown", (e) => { const k = item(e); if (k === null) return; if (e.key === "Enter" || e.key === " ") { toggle(k); e.preventDefault(); e.stopPropagation(); } else if (e.key === "Escape" && FOC.pin) { FOC.pin = null; focusDots(); e.stopPropagation(); } }, true);
   }
+  function centreNum() { const v = $("#n-pass"), t = $("#n-text"); v.style.setProperty("--vm", Math.max(0, (t.offsetHeight - v.offsetHeight) / 2 + 1.5) + "px"); }
   function dotPicker(svg, geo) {
     let k = null;
     let down = null;
@@ -1008,7 +1009,7 @@ window.Kit = (function () {
     $("#c-key").innerHTML = `<span class="kmarks">${markKey("<b>No clear difference</b><br>The 95% interval of the difference includes zero, whichever closes more at the estimates.", MORE_LONG)}</span><span class="kbr" aria-hidden="true"></span><span class="ksyms"><span class="bars"><i class="key" style="background:${key3("c1")}"></i>Programmes</span><span class="bars"><i class="key thin"></i>Universal transfer of the same total cost</span></span>`;
     const COLS = [["name", "Country", "Country"], ["a", "Administrative cost share", "Admin. share"], ["V", "Share reaching the poor", "To the poor"], [null, "Cents per dollar", null, "plot"], ["PRE", "Poverty gap closed", "Gap closed"], ["PRE_u", "Universal transfer", "Universal"]];
     const head = `<tr>${COLS.map(([k, lg, sm, cls], i) => (k ? `<th${cls ? ` class="${cls}"` : ""} aria-sort="none"><button class="sortb" type="button" data-i="${i}">${sm ? `<span class="lg">${lg}</span><span class="sm">${sm}</span>` : lg}</button></th>` : `<th class="${cls}">${lg}</th>`)).join("")}</tr>`;
-    const order = { i: null, dir: 0 }, rowsOf = (list) => list.map((c) => { return `<tr><td>${mk(MARK[c.mark], c.up)}${c.name}<span class="sr-only">, ${WORD[MARK[c.mark]]}</span></td><td>${c.printed.a}%</td><td>${c.printed.V}%</td><td class="plot"><span class="cbar"><i class="cb1" style="width:${100 * c.PRE}%"></i><i class="cb2" style="width:${100 * c.PRE_u}%"></i></span></td><td><b>${fmt(100 * +c.printed.PRE)}¢</b></td><td>${fmt(100 * +c.printed.PRE_u)}¢</td></tr>`; }).join("");
+    const order = { i: null, dir: 0 }, rowsOf = (list) => list.map((c) => { return `<tr><td>${mk(MARK[c.mark], c.up)}${c.name}<span class="sr-only">, ${WORD[MARK[c.mark]]}</span></td><td>${c.printed.a}%</td><td>${c.printed.V}%</td><td class="plot"><span class="cbar"><i class="cb1" style="width:${100 * c.PRE}%"></i><i class="cb2" style="width:${100 * c.PRE_u}%"></i></span></td><td${MARK[c.mark] === "more" ? ' class="win"' : ""}><b>${fmt(100 * +c.printed.PRE)}¢</b></td><td${MARK[c.mark] === "less" ? ' class="win-u"' : ""}>${fmt(100 * +c.printed.PRE_u)}¢</td></tr>`; }).join("");
     box.innerHTML = `<table class="dt ctab"><thead>${head}</thead><tbody>${rowsOf(DATA.countries)}</tbody></table>`;
     $("thead", box).addEventListener("click", (e) => {
       const b = e.target.closest("button.sortb"); if (!b) return; const i = +b.dataset.i, k = COLS[i][0], first = k === "name" ? 1 : -1;
@@ -1032,10 +1033,10 @@ window.Kit = (function () {
     Kit.setText($("#l-n"), String(n));
     if (!box.dataset.done) {
       box.dataset.done = 1;
-      box.innerHTML = LROWS.map(([t], i) => `<div class="lrow"><span>${t}</span><b></b><span class="ltrack"><u></u><i class="${i ? "" : "main"}"></i></span></div>`).join("");
+      box.innerHTML = LROWS.map(([t], i) => `<div class="lrow"><span>${t}</span><b></b><span class="ltrack"><i class="${i ? "" : "main"}"></i></span></div>`).join("");
     $("#l-text").innerHTML = ["Recipients of 38 programmes are simulated from the rules, without errors of implementation. This tends to overstate the share reaching the poor. For the 16 that can be compared with the surveys, the reported share is a median 6% lower.", `Six programmes reach only the poor by construction, because the model selects recipients by the same survey consumption that measures poverty. They are six of the ${DATA.types[0].pass} proxy- or community-targeted cash transfers that close more. Of the other ${DATA.types[0].n - 6}, ${DATA.types[0].pass - 6} do.`, `With administrative cost shares drawn from similar programmes, ${C.draws.pass} programmes close more than a universal transfer and ${C.draws.fail} close less in at least 90% of draws. For the other ${C.draws.other}, the answer depends on the cost estimate.`, "Two cost estimates are imputed, for Rwanda’s local government education support and Bolivia’s birth bonus.", "Egypt is evaluated at a line calibrated to the World Bank’s estimate of its national poverty rate, because almost no one in its survey is below $3.00 a day.", "The comparison leaves out leakage, the costs of applying, and the social, incentive, and political costs of targeting. Leaving out the costs of applying and targeting favours targeted programmes. In-kind benefits are valued at cost. Pensions, school meals, and public works also have aims other than poverty reduction."].map((t) => `<li>${t}</li>`).join("");
     }
-    $$(".lrow", box).forEach((r, i) => { const v = T ? T.pass[i] : C[LROWS[i][1]].pass; Kit.setText($("b", r), String(v)); $("i", r).style.width = `${(100 * v) / 59}%`; const u = $("u", r); u.style.width = `${(100 * n) / 59}%`; u.classList.toggle("on", !!T); });
+    $$(".lrow", box).forEach((r, i) => { const v = T ? T.pass[i] : C[LROWS[i][1]].pass; Kit.setText($("b", r), String(v)); $("i", r).style.width = `${(100 * v) / n}%`; });
   }
   const PART = [["a", "Administration", "c2", "var(--on-c2)"], ["rate", "Country’s poverty rate", "d1", "var(--ink)"], ["adv", "Whom the programme pays", "d2", "var(--on-d2)"], ["S", "Spillover above the line", "c3", "var(--on-c3)"]].map(([k, t, c, on]) => [k, t, `var(--${c})`, on, `var(--${c}-edge)`]);
   const PART_TIP = {
@@ -1162,7 +1163,7 @@ window.Kit = (function () {
     $$("#prev, #next").forEach((b) => b.addEventListener("click", () => step(b.id === "prev" ? -1 : 1)));
     $("#case").addEventListener("keydown", (e) => { const d = { ArrowLeft: -1, ArrowRight: 1 }[e.key]; if (d) { e.preventDefault(); step(d); } });
     $("#cmp").addEventListener("click", () => { S.cmp = !S.cmp; Kit.update(); }); $("#to-explain").addEventListener("click", toExplain); buildExplain();
-    Pick.build(); buildSliders(); buildMini(); dotsKey(); dotPicker($("#scat"), () => SC); dotPicker($("#dots"), () => DT); keyPicker();
+    Pick.build(); buildSliders(); buildMini(); dotsKey(); dotPicker($("#scat"), () => SC); dotPicker($("#dots"), () => DT); keyPicker(); if (window.ResizeObserver) new ResizeObserver(centreNum).observe($("#n-text"));
     window.addEventListener("hashchange", () => { Pick.close(); if (!location.hash) { if (S.p !== DATA.meta.default) S.a = null; S.p = DATA.meta.default; } else if (!fromHash()) return; Kit.update(); });
   }
   fromHash();
