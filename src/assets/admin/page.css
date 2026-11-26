@@ -764,6 +764,14 @@ html { scroll-behavior: auto; }
 @media (prefers-reduced-motion: reduce) {
 .paperx .picker, .paperx .mk circle, .paperx .mk path, .paperx .univ, .paperx .solo .univ, .paperx .switch i, .paperx .switch i::after, .paperx .alone, .paperx .panel:not(.solo) .alone, .paperx .topnav.off, .paperx .leg, .paperx .cdots, .paperx .cdots circle, .paperx .dot, .paperx .vdots, .paperx .vdots g circle, .paperx .vdots g path, .paperx .leg g.li > :not(.lhit), .paperx .meter .aa, .paperx .ltrack i, .paperx #dollar .rl1, .paperx #dollar .rl2, .paperx #dollar .rn1, .paperx #dollar .rn2, .paperx #dollar .sr1, .paperx #dollar .sr2 { transition: none; }
 }
+.paperx #ex-key .ks { display: none; }
+@media (max-width: 700px) {
+.paperx .fold-body #ex-key { display: grid; grid-template-columns: repeat(2, max-content); gap: 10px 26px; margin: 10px 0 16px; }
+}
+@media (max-width: 560px) {
+.paperx #ex-key .kl { display: none; }
+.paperx #ex-key .ks { display: inline; }
+}
 .paperx { --c1: #338a7f; --c1-edge: #17675e; --c1-text: #005c55; --c1-soft: #dceae8; --c1-line: #a4cac4; --c1-un: #c4dfda; --on-c1: #00140f; --c2: #eeaa98; --c2-edge: #cf6f59; --c2-text: #a93a24; --c2-mark: #b4472b; --on-c2: #2e0a02; --c3: #a094d6; --c3-edge: #7d70ba; --on-c3: #17102f; --d1: #c9d6e6; --d1-edge: #93abc9; --d2: #6d8db7; --d2-edge: #4c6f9f; --on-d2: #06121f; --r1: #a8462a; --r2: #c9a227; --r3: #6e4fa8; --g1: #2f6db5; --g2: #d9921a; --g3: #a8407f; --g4: #5bb4d8; --g5: #5d5a55; }
 /* Site colours: the site's paper ground and teal links in light, its slate ground in dark. Check these against the
    site's current style.css, and give every data colour of kit.css a dark value */

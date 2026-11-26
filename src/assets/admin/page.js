@@ -1027,7 +1027,7 @@ window.Kit = (function () {
     s.select("path.line").attr("d", `M${sx},${sy} H${xl + r1} Q${xl},${sy} ${xl},${sy + r1} V${ey - r2} Q${xl},${ey} ${xl + r2},${ey} H${Math.max(xl + r2, ex - 7)}`);
     s.select("path.head").attr("d", `M${ex},${ey} L${ex - 8.5},${ey - 5} L${ex - 8.5},${ey + 5} Z`);
   }
-  const LROWS = [["Main result", "main"], ["Share reaching the poor lowered as the surveys suggest", "incidence"], ["Poverty line of $4.20 a day", "line420"], ["Poverty line of the country’s World Bank income group", "linegroup"], ["National poverty lines and equivalence scales", "natline"], ["Consumption as welfare in all countries", "consumption"], ["Square root equivalence scale", "sqrt"], ["Poverty rate in place of the poverty gap", "headcount"], ["Squared poverty gap in place of the poverty gap", "sqgap"]];
+  const LROWS = [["Main result", "main"], ["Share reaching the poor lowered as surveys suggest", "incidence"], ["Poverty line of $4.20 a day", "line420"], ["Poverty line of the country’s World Bank income group", "linegroup"], ["National poverty lines and equivalence scales", "natline"], ["Consumption as welfare in all countries", "consumption"], ["Square root equivalence scale", "sqrt"], ["Poverty rate in place of the poverty gap", "headcount"], ["Squared poverty gap in place of the poverty gap", "sqgap"]];
   function drawLimits() {
     const box = $("#l-list"), T = S.lt === "all" ? null : C.bytype[S.lt], n = T ? T.n : DATA.programmes.length;
     Kit.setText($("#l-n"), String(n));
@@ -1038,6 +1038,7 @@ window.Kit = (function () {
     }
     $$(".lrow", box).forEach((r, i) => { const v = T ? T.pass[i] : C[LROWS[i][1]].pass; Kit.setText($("b", r), String(v)); $("i", r).style.width = `${(100 * v) / n}%`; });
   }
+  const PART_SHORT = { a: "Administration", rate: "Poverty rate", adv: "Whom it pays", S: "Spillover" };
   const PART = [["a", "Administration", "c2", "var(--on-c2)"], ["rate", "Country’s poverty rate", "d1", "var(--ink)"], ["adv", "Whom the programme pays", "d2", "var(--on-d2)"], ["S", "Spillover above the line", "c3", "var(--on-c3)"]].map(([k, t, c, on]) => [k, t, `var(--${c})`, on, `var(--${c}-edge)`]);
   const PART_TIP = {
     a: "The administrative share of total cost.",
@@ -1055,7 +1056,7 @@ window.Kit = (function () {
     const box = $("#ex-list");
     if (!box.dataset.done) {
       box.dataset.done = 1;
-      $("#ex-key").innerHTML = PART.map(([k, t, f, , b]) => `<span><i class="key" style="background:${f};box-shadow:inset 0 0 0 1px ${b}"></i><span class="term" tabindex="0" data-tip="<b>${t}</b><br>${PART_TIP[k]}">${t}</span></span>`).join("");
+      $("#ex-key").innerHTML = PART.map(([k, t, f, , b]) => `<span><i class="key" style="background:${f};box-shadow:inset 0 0 0 1px ${b}"></i><span class="term" tabindex="0" data-tip="<b>${t}</b><br>${PART_TIP[k]}"><span class="kl">${t}</span><span class="ks">${PART_SHORT[k]}</span></span></span>`).join("");
       box.innerHTML = XROWS.map(([k, t, s, w]) => `<div class="ex-row" data-k="${k}"><div class="ex-txt"><h4>${t}${s ? ` <small>${s}</small>` : ""}</h4><p>${w}</p></div><div class="ex-plot"><svg role="img"></svg></div></div>`).join("");
     }
     const lo = -30, hi = 130;
