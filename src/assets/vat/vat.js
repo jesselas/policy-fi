@@ -1049,7 +1049,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
   }
   const SENS = {
     title: "Share of the <span class=\"term\" data-term=\"formalonly\" tabindex=\"0\">‘formal only’</span> <span class=\"term\" data-term=\"gain\" tabindex=\"0\">progressivity gain</span> removed by upstream VAT (%)",
-    lede: "With other assumptions about who sells to whom, supplier registration, and outlets, upstream VAT still removes about half or more of the progressivity gain. It removes less when informal sellers pass on only part of the tax and in Peru’s calibration to its 2007 national accounts, and observed prices fit these cases less well. Border VAT alone, a lower bound, removes 29 to 46%.",
+    lede: "With other assumptions about who sells to whom, supplier registration, and outlets, upstream VAT still removes about half or more of the progressivity gain. It removes less when informal sellers pass on only part of the tax and in Peru’s calibration to its 2007 national accounts, and observed prices fit these cases less well.",
     caption: "Share of the ‘formal only’ progressivity gain removed by upstream VAT, %, by assumption and country. 0 leaves the gain from treating informal purchases as untaxed intact, and 100 removes all of it. Each row changes one assumption from the headline.",
     countries: ["Rwanda", "Uganda", "Mozambique", "Peru"],
     short: ["Rwa.", "Uga.", "Moz.", "Peru"],
@@ -1066,7 +1066,6 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
       ] },
       { label: "How much VAT suppliers charge", rows: [
         { label: "Registration shares halved", tip: "Every domestic registration proxy multiplied by 0.5.", values: [57.9, 73.1, 57.4, 66.1], src: "Online appendix, Table OA.5" },
-        { label: "Border VAT only", mark: "alone", tip: "No domestic supplier registered, so only VAT paid on imports reaches informal goods.", values: [46.2, 37.6, 38.5, 29.4], src: "Paper, Table 5" },
         { label: "Peru: 2007 accounts calibration", tip: "Registration scaled down to match VAT recorded in Peru’s 2007 national accounts (two targets).", values: [null, null, null, [39.8, 57.6]], parts: ["VAT recorded on household purchases", "Also VAT on their inputs"], src: "Paper, Table 5" },
       ] },
       { label: "How much reaches prices", rows: [
@@ -1080,7 +1079,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     ],
     noGain: "No gain",
     noGainTip: "Treating informal purchases as untaxed doesn’t make VAT more progressive in Mozambique under this classification, so there is nothing to remove.",
-    key: { headline: "Headline", alt: "Changed assumption", tick: "Headline value", alone: "Border VAT only", half: "Half of the gain" },
+    key: { headline: "Headline", alt: "Changed assumption", tick: "Headline value", half: "Half of the gain" },
     notes: "0 leaves the gain from treating informal purchases as untaxed intact, and 100 removes all of it. Each row changes one assumption from the headline. “No gain”: treating informal purchases as untaxed doesn’t make VAT more progressive in Mozambique under this classification, so there is nothing to remove. Sorting, registration, and outlet rows use the item-level calculation and have no sampling intervals. Headline 95% intervals: Rwanda 65.3–67.8, Uganda 84.8–91.0, Mozambique 69.1–71.8, Peru 82.8–83.8. Paper, Tables 4 and 5. Online appendix, Tables OA.5, OA.15, and OA.32.",
     price: {
       title: "Price evidence",
@@ -1151,7 +1150,7 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     $("#lim-lede").textContent = S0.lede;
     $("#lim-tab").innerHTML = `<caption class="sr-only">${S0.caption}</caption><colgroup><col class="lim-cl">${S0.countries.map(() => "<col>").join("")}</colgroup>` + thead + headRow + body;
     const K = S0.key;
-    $("#lim-key").innerHTML = `<span><i class="lim-k lim-big"></i>${K.headline}</span><span><i class="lim-k lim-dot"></i>${K.alt}</span><span><i class="lim-k lim-tick"></i>${K.tick}</span><span><i class="lim-k lim-sq"></i>${K.alone}</span><span><i class="lim-k lim-half"></i>${K.half}</span>`;
+    $("#lim-key").innerHTML = `<span><i class="lim-k lim-big"></i>${K.headline}</span><span><i class="lim-k lim-dot"></i>${K.alt}</span><span><i class="lim-k lim-tick"></i>${K.tick}</span><span><i class="lim-k lim-half"></i>${K.half}</span>`;
     $("#lim-notes").innerHTML = `<p class="notes-label">Notes and sources</p><p>${S0.notes}</p>`;
     const P = S0.price, [plo, phi] = P.scale, pp = (v) => (100 * (Math.max(plo, Math.min(phi, v)) - plo) / (phi - plo)).toFixed(2) + "%";
     const pax = `<span class="lim-ax">${P.ticks.map((t) => `<b style="left:${pp(t)}"${t === 0 ? ' class="h"' : ""}>${fx(t, 0)}</b>`).join("")}</span>`;
