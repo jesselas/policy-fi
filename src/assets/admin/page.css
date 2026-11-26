@@ -506,34 +506,42 @@ html { scroll-behavior: auto; }
 .paperx .ex-plot text { pointer-events: none; }
 .paperx .exdt small { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
 .paperx .pcol h4 { font-size: 13px; font-weight: 600; margin: 14px 0 0; }
-.paperx .prow { display: grid; grid-template-columns: 16px 240px minmax(0, 1fr); align-items: center; gap: 8px; width: 100%; height: 24px; padding: 0; border: 0; background: none; text-align: left; font-size: 12.5px; line-height: 16px; color: var(--ink); cursor: pointer; border-radius: 2px; }
+.paperx .prow { display: grid; grid-template-columns: 16px 240px minmax(0, 1fr); align-items: center; gap: 8px; width: 100%; height: 22px; padding: 0; border: 0; background: none; text-align: left; font-size: 12.5px; line-height: 16px; color: var(--ink); cursor: pointer; border-radius: 2px; }
 .paperx .prow .nm { white-space: nowrap; }
 .paperx .prow small { font-size: 11.5px; color: var(--ink-3); }
 @media (hover: hover) {
 .paperx button.prow:hover { background: var(--hover); }
 }
 .paperx button.prow.own { background: var(--surface-2); }
-.paperx .prow .pl { position: relative; height: 24px; margin: 0 16px 0 8px; }
+.paperx .prow .pl { position: relative; height: 22px; margin: 0 16px 0 8px; }
 .paperx .paxis { height: 18px; cursor: default; }
 .paperx .paxis .pl i { position: absolute; transform: translateX(-50%); font-style: normal; font-size: 11px; color: var(--ink-3); top: 4px; }
 .paperx .prow .pl u { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); }
-.paperx .prow .pl .ln { position: absolute; top: 11.5px; height: 1px; background: var(--ink-3); }
-.paperx .kgap { width: 14px; }
+.paperx .prow .pl .ln { position: absolute; top: 10.5px; height: 1px; background: var(--ink-3); }
+.paperx .kbr { flex-basis: 100%; height: 3px; }
 .paperx #all .fig, .paperx #countries-fold .fig { position: relative; }
 .paperx .karrow { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; pointer-events: none; }
 .paperx .karrow .line { fill: none; stroke: var(--ink); stroke-width: 1.7; }
 .paperx .karrow .head { fill: var(--ink); }
 .paperx .tri { display: inline-block; width: 0; height: 0; border: 5px solid transparent; border-top: 0; border-bottom: 8px solid var(--c2-edge); }
 .paperx .dia { display: inline-block; width: 8px; height: 8px; background: var(--ink); transform: rotate(45deg); }
-.paperx .prow .pl .tri { position: absolute; top: 8px; margin-left: -5px; }
-.paperx .prow .pl .dia { position: absolute; top: 8px; margin-left: -4px; }
-.paperx .prow .pl .clip { position: absolute; top: 7px; margin-left: -5px; border: 5px solid transparent; border-left: 0; border-right: 8px solid var(--ink); }
+.paperx .prow .pl .tri { position: absolute; top: 7px; margin-left: -5px; }
+.paperx .prow .pl .dia { position: absolute; top: 7px; margin-left: -4px; }
+.paperx .prow .pl .clip { position: absolute; top: 6px; margin-left: -5px; border: 5px solid transparent; border-left: 0; border-right: 8px solid var(--ink); }
 .paperx .ctab td, .paperx .ctab th { vertical-align: middle; }
 .paperx .ctab td:first-child { white-space: nowrap; }
 .paperx .ctab .mk { margin-right: 8px; vertical-align: -2px; display: inline-block; }
 .paperx .ctab .plot { width: 36%; }
 .paperx .ctab td:first-child { padding-right: 12px; }
 .paperx .ctab th.plot { text-align: left; }
+.paperx .sortb { all: unset; box-sizing: border-box; cursor: pointer; display: inline; text-align: inherit; position: relative; }
+.paperx .sortb::after { content: ""; display: inline-block; width: 0; height: 0; margin-left: 4px; vertical-align: 2px; border: 3.5px solid transparent; border-top: 4.5px solid currentColor; border-bottom: 0; opacity: 0.3; }
+.paperx .ctab th[aria-sort="ascending"] .sortb::after { border-top: 0; border-bottom: 4.5px solid currentColor; opacity: 1; }
+.paperx .ctab th[aria-sort="descending"] .sortb::after { opacity: 1; }
+@media (hover: hover) {
+.paperx .sortb:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+}
+.paperx .sortb:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
 .paperx .cbar { position: relative; display: block; height: 19px; }
 .paperx .cbar i { position: absolute; left: 0; }
 .paperx .cb1 { top: 0; height: 10px; background: var(--c1); box-shadow: inset 0 0 0 1px var(--c1-edge); }
@@ -612,13 +620,13 @@ html { scroll-behavior: auto; }
 .paperx .cap { line-height: 17px; }
 .paperx #dots-key { font-size: 12.5px; gap: 3px 12px; }
 .paperx .lower { font-size: 12px; }
-.paperx .prow { grid-template-columns: 14px 158px minmax(0, 1fr); gap: 5px; font-size: 11.5px; height: 34px; }
+.paperx .prow { grid-template-columns: 14px 158px minmax(0, 1fr); gap: 5px; font-size: 11.5px; height: 31px; }
 .paperx .prow .nm { line-height: 14px; }
 .paperx .prow small { display: block; font-size: 11px; line-height: 12px; }
-.paperx .prow .pl { height: 34px; margin: 0 15px 0 5px; }
-.paperx .prow .pl .tri, .paperx .prow .pl .dia { top: 13px; }
-.paperx .prow .pl .clip { top: 12px; }
-.paperx .prow .pl .ln { top: 16.5px; }
+.paperx .prow .pl { height: 31px; margin: 0 15px 0 5px; }
+.paperx .prow .pl .tri, .paperx .prow .pl .dia { top: 11.5px; }
+.paperx .prow .pl .clip { top: 10.5px; }
+.paperx .prow .pl .ln { top: 15px; }
 .paperx .paxis { height: 18px; }
 .paperx .ctab .plot, .paperx #c-key .bars { display: none !important; }
 .paperx .ctab { font-size: 12px; }
@@ -705,7 +713,6 @@ html { scroll-behavior: auto; }
 .paperx .switch i::after { left: 4.5px; top: 4.5px; width: 11px; height: 11px; }
 .paperx .switch[aria-checked="true"] i::after { transform: translateX(14px); }
 .paperx #dollar { margin-top: 8px; }
-.paperx .kgap { display: none; }
 .paperx #all-key { position: sticky; top: 0; z-index: 3; margin-top: 0; padding: 7px 0 6px; background: var(--bg); box-shadow: 0 1px 0 var(--rule); }
 }
 @media (max-width: 319px) {
