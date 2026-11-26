@@ -173,7 +173,7 @@ html { scroll-behavior: auto; }
 .paperx .tip { position: fixed; left: 0; top: 0; z-index: 70; pointer-events: none; background: var(--card); color: var(--ink); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--pop-shadow); padding: 9px 12px; font-size: 12px; line-height: 1.42; max-width: min(330px, calc(100vw - 16px)); font-variant-numeric: tabular-nums; opacity: 0; translate: 0 5px; scale: 0.965; transition: opacity 0.2s ease, translate 0.22s ease, scale 0.22s ease; }
 .paperx .tip.on { opacity: 1; translate: 0 0; scale: 1; transition: opacity 0.2s ease, translate 0.42s cubic-bezier(0.3, 1.7, 0.5, 1), scale 0.42s cubic-bezier(0.3, 1.7, 0.5, 1); }
 .paperx .tip.jump { transition: none; }
-.paperx .tip.tip-narrow { max-width: min(236px, calc(100vw - 16px)); }
+.paperx .tip.tip-narrow { max-width: min(330px, calc(100vw - 16px)); }
 .paperx .tip b { font-weight: 600; }
 .paperx .tip .u { color: var(--ink-3); }
 .paperx .tip .gap { display: block; height: 5px; }
@@ -514,7 +514,7 @@ html { scroll-behavior: auto; }
 }
 .paperx .ex-txt h4 { margin: 0 0 3px; font-size: 14.5px; line-height: 20px; font-weight: 600; }
 .paperx .ex-txt h4 small { font-size: 13px; font-weight: 400; color: var(--ink-2); margin-left: 4px; }
-.paperx .ex-txt p { margin: 0; font-size: 13.5px; line-height: 19px; color: var(--ink-2); text-wrap: pretty; }
+.paperx .ex-txt p { margin: 0; font-size: 12.5px; line-height: 17.5px; color: var(--ink-2); text-wrap: pretty; }
 .paperx .ex-plot { min-width: 0; }
 .paperx .ex-plot text { pointer-events: none; }
 .paperx .exdt small { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
@@ -533,7 +533,7 @@ html { scroll-behavior: auto; }
 .paperx .prow .pl .ln { position: absolute; top: 10.5px; height: 1px; background: var(--ink-3); }
 .paperx .keyrow .kmarks, .paperx .keyrow .ksyms { display: contents; }
 @media (min-width: 561px) {
-.paperx .keyrow .kmarks { display: inline-flex; flex-wrap: wrap; gap: inherit; padding: 2px 9px; border: 1.7px solid var(--ink); border-radius: 6px; }
+.paperx .keyrow .kmarks { display: inline-flex; flex-wrap: wrap; gap: inherit; padding: 2px 9px; border: 1px solid var(--ink); border-radius: 6px; }
 }
 .paperx .kbr { flex-basis: 100%; height: 3px; }
 @media (min-width: 561px) {
@@ -545,7 +545,8 @@ html { scroll-behavior: auto; }
 }
 .paperx #all .fig, .paperx #countries-fold .fig { position: relative; }
 .paperx .karrow { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; pointer-events: none; }
-.paperx .karrow .line { fill: none; stroke: var(--ink); stroke-width: 1.7; }
+.paperx .karrow .line { fill: none; stroke: none; }
+.paperx .karrow .taper { fill: var(--ink); }
 .paperx .karrow .head { fill: var(--ink); }
 .paperx .tri { display: inline-block; width: 0; height: 0; border: 5px solid transparent; border-top: 0; border-bottom: 8px solid var(--c2-edge); }
 .paperx .dia { display: inline-block; width: 8px; height: 8px; background: var(--ink); transform: rotate(45deg); }
@@ -558,8 +559,8 @@ html { scroll-behavior: auto; }
 .paperx .ctab .plot { width: 36%; }
 .paperx .ctab td:first-child { padding-right: 12px; }
 .paperx .ctab th.plot { text-align: left; }
-.paperx .ctab td.win { color: var(--c1-text); }
-.paperx .ctab td.win-u { color: var(--c2-text); }
+.paperx .ctab td.win { color: var(--c1-text); font-weight: 600; }
+.paperx .ctab td.win-u { color: var(--c2-text); font-weight: 600; }
 .paperx .sortb { all: unset; box-sizing: border-box; cursor: pointer; display: inline; text-align: inherit; position: relative; }
 .paperx .sortb::after { content: ""; display: inline-block; width: 0; height: 0; margin-left: 4px; vertical-align: 2px; border: 3.5px solid transparent; border-top: 4.5px solid currentColor; border-bottom: 0; opacity: 0.3; }
 .paperx .ctab th[aria-sort="ascending"] .sortb::after { border-top: 0; border-bottom: 4.5px solid currentColor; opacity: 1; }

@@ -1021,11 +1021,14 @@ window.Kit = (function () {
     arrow();
   }
   function keyArrow(fig, from, to) {
-    const s = d3.select(fig).selectAll("svg.karrow").data([0]).join((e) => { const n = e.append("svg").attr("class", "karrow").attr("aria-hidden", "true"); n.append("path").attr("class", "line"); n.append("path").attr("class", "head"); return n; });
+    const s = d3.select(fig).selectAll("svg.karrow").data([0]).join((e) => { const n = e.append("svg").attr("class", "karrow").attr("aria-hidden", "true"); n.append("path").attr("class", "line"); n.append("path").attr("class", "taper"); n.append("path").attr("class", "head"); return n; });
     const show = window.innerWidth > 560 && from && to && from.getClientRects().length && to.getClientRects().length; s.style("display", show ? null : "none"); if (!show) return;
-    const f = fig.getBoundingClientRect(), a = from.getBoundingClientRect(), b = to.getBoundingClientRect(), sx = a.left - f.left + 0.85, sy = (a.top + a.bottom) / 2 - f.top, ex = b.left - f.left - 2, ey = (b.top + b.bottom) / 2 - f.top;
+    const f = fig.getBoundingClientRect(), a = from.getBoundingClientRect(), b = to.getBoundingClientRect(), sx = a.left - f.left + 0.5, sy = (a.top + a.bottom) / 2 - f.top, ex = b.left - f.left - 2, ey = (b.top + b.bottom) / 2 - f.top;
     const xl = Math.max(4 - f.left, Math.min(sx, ex) - 16), r1 = Math.min(6, (sx - xl) / 2, (ey - sy) / 2), r2 = Math.max(0, Math.min(6, (ex - 8.5 - xl) / 2, (ey - sy) / 2));
-    s.select("path.line").attr("d", `M${sx},${sy} H${xl + r1} Q${xl},${sy} ${xl},${sy + r1} V${ey - r2} Q${xl},${ey} ${xl + r2},${ey} H${Math.max(xl + r2, ex - 7)}`);
+    const L = s.select("path.line").attr("d", `M${sx},${sy} H${xl + r1} Q${xl},${sy} ${xl},${sy + r1} V${ey - r2} Q${xl},${ey} ${xl + r2},${ey} H${Math.max(xl + r2, ex - 7)}`).node();
+    const len = L.getTotalLength(), N = Math.max(16, Math.round(len / 2)), w0 = 1, w1 = 1.8, P = d3.range(N + 1).map((i) => L.getPointAtLength((len * i) / N));
+    const side = (sg) => P.map((p, i) => { const q = P[Math.min(N, i + 1)], o = P[Math.max(0, i - 1)], dx = q.x - o.x, dy = q.y - o.y, d = Math.hypot(dx, dy) || 1, h = (sg * (w0 + (w1 - w0) * Math.pow(i / N, 0.8))) / 2; return `${(p.x - (dy / d) * h).toFixed(2)},${(p.y + (dx / d) * h).toFixed(2)}`; });
+    s.select("path.taper").attr("d", `M${side(1).join("L")}L${side(-1).reverse().join("L")}Z`);
     s.select("path.head").attr("d", `M${ex},${ey} L${ex - 8.5},${ey - 5} L${ex - 8.5},${ey + 5} Z`);
   }
   const LROWS = [["Main result", "main"], ["Share reaching the poor lowered as surveys suggest", "incidence"], ["Poverty line of $4.20 a day", "line420"], ["Poverty line of the country’s World Bank income group", "linegroup"], ["National poverty lines and equivalence scales", "natline"], ["Consumption as welfare in all countries", "consumption"], ["Square root equivalence scale", "sqrt"], ["Poverty rate in place of the poverty gap", "headcount"], ["Squared poverty gap in place of the poverty gap", "sqgap"]];
