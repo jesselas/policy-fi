@@ -1047,6 +1047,131 @@ const DATA = {"order":["RW","UG","MZ","PE"],"countries":{"RW":{"code":"RW","name
     $("#cmp-key").innerHTML = [["var(--collected)", "Formal purchases"], ["var(--alone)", "Border VAT alone"], ["var(--up-light)", "Added by the domestic chain"], ["repeating-linear-gradient(45deg,var(--untaxed) 0 2px,transparent 2px 5px)", "Not collected"]].map(([c, t]) => `<span><i class="key${t === "Not collected" ? " boxed" : ""}" style="background:${c}"></i>${t}</span>`).join("");
     $("#rem-key").innerHTML = `<span><i class="key" style="background:var(--alone);width:9px;height:9px"></i>Border VAT alone</span><span><i class="key" style="background:var(--up);border-radius:50%;width:10px;height:10px"></i>Headline</span><span><i class="key" style="background:var(--untaxed);height:5px"></i>Alternative assumptions</span>`;
   }
+  const SENS = {
+    title: "Share of the <span class=\"term\" data-term=\"formalonly\" tabindex=\"0\">‘formal only’</span> <span class=\"term\" data-term=\"gain\" tabindex=\"0\">progressivity gain</span> removed by upstream VAT (%)",
+    lede: "With other assumptions about who sells to whom, supplier registration, and outlets, upstream VAT still removes about half or more of the progressivity gain. It removes less when informal sellers pass on only part of the tax and in Peru’s calibration to its 2007 national accounts, and observed prices fit these cases less well. Border VAT alone, a lower bound, removes 29 to 46%.",
+    caption: "Share of the ‘formal only’ progressivity gain removed by upstream VAT, %, by assumption and country. 0 leaves the gain from treating informal purchases as untaxed intact, and 100 removes all of it. Each row changes one assumption from the headline.",
+    countries: ["Rwanda", "Uganda", "Mozambique", "Peru"],
+    short: ["Rwa.", "Uga.", "Moz.", "Peru"],
+    scale: [0, 100], half: 50,
+    headline: {
+      label: "Headline", tip: "Suppliers sell to all buyers alike, and informal prices pass on all upstream VAT.",
+      values: [66.5, 87.7, 70.4, 83.3], ci: [[65.3, 67.8], [84.8, 91.0], [69.1, 71.8], [82.8, 83.8]],
+      src: "Paper, Tables 4 and 5",
+    },
+    groups: [
+      { label: "Who sells to whom", rows: [
+        { label: "Full sorting of suppliers", tip: "Registered suppliers sell first to buyers who can claim credits (equal demand shares).", values: [50.7, 70.3, 71.4, 86.1], src: "Paper, Table 5" },
+        { label: "Full sorting, measured demand shares", tip: "Demand shares of credit-claiming buyers taken from the accounts and surveys.", values: [72.2, 90.2, 76.9, 87.5], src: "Paper, Table 5" },
+      ] },
+      { label: "How much VAT suppliers charge", rows: [
+        { label: "Registration shares halved", tip: "Every domestic registration proxy multiplied by 0.5.", values: [57.9, 73.1, 57.4, 66.1], src: "Online appendix, Table OA.5" },
+        { label: "Border VAT only", mark: "alone", tip: "No domestic supplier registered, so only VAT paid on imports reaches informal goods.", values: [46.2, 37.6, 38.5, 29.4], src: "Paper, Table 5" },
+        { label: "Peru: 2007 accounts calibration", tip: "Registration scaled down to match VAT recorded in Peru’s 2007 national accounts (two targets).", values: [null, null, null, [39.8, 57.6]], parts: ["VAT recorded on household purchases", "Also VAT on their inputs"], src: "Paper, Table 5" },
+      ] },
+      { label: "How much reaches prices", rows: [
+        { label: "Half pass-through", tip: "Informal sellers pass half of their upstream VAT into prices.", values: [42.1, 57.4, 41.0, 50.8], src: "Paper, Table 5" },
+        { label: "Quarter pass-through", tip: "Informal sellers pass a quarter of their upstream VAT into prices.", values: [24.2, 34.0, 22.4, 28.6], src: "Paper, Table 5" },
+        { label: "Mexican pass-through estimates", tip: "75% pass-through of statutory VAT at formal and 16% at informal outlets, as estimated for Mexico.", values: [46.2, 44.3, 31.5, 33.2], src: "Online appendix, Table OA.32" },
+      ] },
+      { label: "Measurement", rows: [
+        { label: "Ambiguous outlets counted formal", tip: "Outlets of uncertain status treated as VAT-remitting (‘high formal’).", values: [57.9, 68.4, "nogain", 79.2], src: "Online appendix, Table OA.15" },
+      ] },
+    ],
+    noGain: "No gain",
+    noGainTip: "Treating informal purchases as untaxed doesn’t make VAT more progressive in Mozambique under this classification, so there is nothing to remove.",
+    key: { headline: "Headline", alt: "Changed assumption", tick: "Headline value", alone: "Border VAT only", half: "Half of the gain" },
+    notes: "0 leaves the gain from treating informal purchases as untaxed intact, and 100 removes all of it. Each row changes one assumption from the headline. “No gain”: treating informal purchases as untaxed doesn’t make VAT more progressive in Mozambique under this classification, so there is nothing to remove. Sorting, registration, and outlet rows use the item-level calculation and have no sampling intervals. Headline 95% intervals: Rwanda 65.3–67.8, Uganda 84.8–91.0, Mozambique 69.1–71.8, Peru 82.8–83.8. Paper, Tables 4 and 5. Online appendix, Tables OA.5, OA.15, and OA.32.",
+    price: {
+      title: "Price evidence",
+      text: "If informal purchases carried no VAT, informal shops would be about 15–17% cheaper on taxable goods than on exempt goods, relative to formal shops. In Peru, Uganda, and Mozambique the observed extra gap is between −2% and 3%, smaller than even the headline predicts (4–7%). The low cases predict a larger gap and fit less well: Peru’s 2007 calibrations predict 9–12% against 0.4% observed. Unit values also reflect quality and shop differences, and Rwanda’s 16 items fit both predictions, so the paper concludes that prices do not identify a preferred sourcing or pass-through assumption.",
+      head: "Extra price advantage of informal shops on taxable goods (%)",
+      cols: ["Observed", "No VAT", "Headline"],
+      rows: [
+        [16, 12.7, [2.5, 23.2], 16.6, 9.9, null],
+        [33, 2.9, [-1.8, 8.1], 15.9, 6.5, null],
+        [34, -2.0, [-6.3, 3.4], 15.3, 5.4, null],
+        [123, 0.4, [-2.6, 3.7], 16.6, 4.3, [9.3, 12.0]],
+      ],
+      scale: [-10, 25], ticks: [-10, 0, 10, 20],
+      key: { obs: "Observed, 95% interval", none: "If informal purchases carried no VAT", head: "Headline", cal: "Peru 2007 calibrations" },
+      notes: "Taxed-minus-exempt difference in the formal-minus-informal log unit value, × 100. A larger value means informal shops are cheaper on taxable goods. Online appendix, Table OA.21.",
+      src: "Online appendix, Table OA.21, panels A and B",
+    },
+    caveats: {
+      title: "Caveats",
+      items: [
+        ["Compliance.", "The model assumes registered suppliers remit VAT on every taxable sale and claim all the credits they are entitled to, so under-reporting would mean less upstream VAT and unclaimed credits would mean more."],
+        ["Registration proxies.", "Sector-level proxies can overstate the share of sales made with a VAT invoice, and one national wholesale share applies to all goods."],
+        ["Dated accounts.", "The input-output tables for Uganda (2016/17) and Mozambique (2019) predate the surveys, and Peru’s product table is reconstructed from its 2022 supply and use table, which can shift the estimates either way."],
+        ["Fixed behaviour.", "Purchases, outlet choices, and trading links stay fixed in every scenario and policy simulation, and no behavioural responses are estimated."],
+        ["Survey coverage.", "Surveys under-represent the richest households and some purchases, and simulated household VAT equals 65% of reported collections in Rwanda, 61% in Uganda, 41% in Mozambique, and 20% in Peru, where collections also cover business and government purchases."],
+      ],
+      notes: "Paper, Sections 2.1, 2.3, 2.6, 4, 5, and 6, Table 1, and Appendix B.2. Online appendix, Table OA.1.",
+    },
+  };
+
+  function renderLimits() {
+    const S0 = SENS, [lo, hi] = S0.scale, pos = (v) => (100 * (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo)).toFixed(2) + "%";
+    const qa = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+    const pct = (v) => f1(v) + "%";
+    const H = S0.headline.values;
+    const refs = `<i class="lim-r50" style="left:${pos(S0.half)}"></i><i class="lim-r100" style="left:${pos(100)}"></i>`;
+    const track = (marks, h) => {
+      let s = refs;
+      if (h != null) {
+        s += `<i class="lim-hd" style="left:${pos(h)}"></i>`;
+        const ends = [h, ...marks.map((m) => m.v)], a = Math.min(...ends), b = Math.max(...ends);
+        s += `<i class="lim-ln" style="left:${pos(a)};width:calc(${pos(b)} - ${pos(a)})"></i>`;
+      }
+      marks.forEach((m) => { s += `<i class="lim-m ${m.cls}" style="left:${pos(m.v)}"></i>`; });
+      return `<span class="lim-t" aria-hidden="true">${s}</span>`;
+    };
+    const diff = (v, h) => { const d = v - h; return Math.abs(d) < 0.05 ? "Same as the headline" : `${f1(Math.abs(d))} points ${d < 0 ? "below" : "above"} the headline (${pct(h)})`; };
+    const cell = (row, i) => {
+      const v = row.values[i], c = S0.countries[i], h = H[i], head = `<b>${c}: ${row.label}</b><br>`;
+      if (v === null) return `<td class="lim-c lim-na"><span class="sr-only">Not computed</span></td>`;
+      if (v === "nogain") return `<td class="lim-c lim-ng" data-tip="${qa(head + S0.noGainTip)}"><span class="lim-in"><span class="lim-n"></span><span class="lim-ngt">${S0.noGain}</span></span></td>`;
+      const cls = row.mark === "alone" ? "lim-sq" : "lim-dot";
+      if (Array.isArray(v)) {
+        const tip = head + v.map((x, k) => `${row.parts[k]}: ${pct(x)} of the gain removed.`).join("<br>") + `<br><span class="u">${diff(v[0], h)}</span>`;
+        return `<td class="lim-c lim-two" data-tip="${qa(tip)}"><span class="lim-in"><span class="lim-n">${v.map(f1).join("<br>")}</span>${track(v.map((x) => ({ v: x, cls })), h)}</span></td>`;
+      }
+      const tip = head + `${pct(v)} of the gain removed.<br><span class="u">${diff(v, h)}</span>`;
+      return `<td class="lim-c" data-tip="${qa(tip)}"><span class="lim-in"><span class="lim-n">${f1(v)}</span>${track([{ v, cls }], h)}</span></td>`;
+    };
+    const label = (row) => `<th scope="row"><span class="term" tabindex="0" data-tip="${qa(`<b>${row.label}</b><br>${row.tip}`)}">${row.label}</span></th>`;
+    const ax = `<span class="lim-ax">${[lo, S0.half, hi].map((t) => `<b style="left:${pos(t)}"${t === S0.half ? ' class="h"' : ""}>${t}</b>`).join("")}</span>`;
+    const thead = `<thead><tr><th scope="col" class="lim-a"><span class="sr-only">Assumption</span></th>${S0.countries.map((c, i) => `<th scope="col"><span class="lg">${c}</span><span class="sm" aria-hidden="true">${S0.short[i]}</span></th>`).join("")}</tr>` +
+      `<tr class="lim-axr" aria-hidden="true"><td></td>${S0.countries.map(() => `<td><span class="lim-in"><span class="lim-n"></span>${ax}</span></td>`).join("")}</tr></thead>`;
+    const hl = S0.headline;
+    const headRow = `<tbody class="lim-hl"><tr>${label(hl)}${H.map((v, i) => `<td class="lim-c" data-tip="${qa(`<b>${S0.countries[i]}: ${hl.label}</b><br>${pct(v)} of the gain removed.<br><span class="u">95% interval ${f1(hl.ci[i][0])} to ${f1(hl.ci[i][1])}</span>`)}"><span class="lim-in"><span class="lim-n">${f1(v)}</span>${track([{ v, cls: "lim-big" }], null)}</span></td>`).join("")}</tr></tbody>`;
+    const body = S0.groups.map((g) => `<tbody><tr class="lim-g"><th scope="rowgroup" colspan="${S0.countries.length + 1}">${g.label}</th></tr>${g.rows.map((r) => `<tr>${label(r)}${S0.countries.map((_, i) => cell(r, i)).join("")}</tr>`).join("")}</tbody>`).join("");
+    $("#lim-h").innerHTML = S0.title;
+    $("#lim-lede").textContent = S0.lede;
+    $("#lim-tab").innerHTML = `<caption class="sr-only">${S0.caption}</caption><colgroup><col class="lim-cl">${S0.countries.map(() => "<col>").join("")}</colgroup>` + thead + headRow + body;
+    const K = S0.key;
+    $("#lim-key").innerHTML = `<span><i class="lim-k lim-big"></i>${K.headline}</span><span><i class="lim-k lim-dot"></i>${K.alt}</span><span><i class="lim-k lim-tick"></i>${K.tick}</span><span><i class="lim-k lim-sq"></i>${K.alone}</span><span><i class="lim-k lim-half"></i>${K.half}</span>`;
+    $("#lim-notes").innerHTML = `<p class="notes-label">Notes and sources</p><p>${S0.notes}</p>`;
+    const P = S0.price, [plo, phi] = P.scale, pp = (v) => (100 * (Math.max(plo, Math.min(phi, v)) - plo) / (phi - plo)).toFixed(2) + "%";
+    const pax = `<span class="lim-ax">${P.ticks.map((t) => `<b style="left:${pp(t)}"${t === 0 ? ' class="h"' : ""}>${fx(t, 0)}</b>`).join("")}</span>`;
+    const prow = (r, i) => {
+      const [n, obs, ci, none, head, cal] = r, c = S0.countries[i];
+      const tip = `<b>${c}, ${n} items</b>` + tipTable([["var(--ink)", P.key.obs, `${f1(obs)} [${f1(ci[0])}, ${f1(ci[1])}]`], ["var(--collected)", P.key.none, f1(none)], ["var(--up)", P.key.head, f1(head)]].concat(cal ? [["var(--untaxed)", P.key.cal, `${f1(cal[0])} to ${f1(cal[1])}`]] : [])) + `<span class="u">${P.head}</span>`;
+      const marks = `<i class="lim-r0" style="left:${pp(0)}"></i>` + (cal ? `<i class="lim-band" style="left:${pp(cal[0])};width:calc(${pp(cal[1])} - ${pp(cal[0])})"></i>` : "") +
+        `<i class="lim-ci" style="left:${pp(ci[0])};width:calc(${pp(ci[1])} - ${pp(ci[0])})"></i><i class="lim-m lim-none" style="left:${pp(none)}"></i><i class="lim-m lim-ph" style="left:${pp(head)}"></i><i class="lim-m lim-dot" style="left:${pp(obs)}"></i>`;
+      return `<tr data-tip="${qa(tip)}"><th scope="row">${c} <span class="lim-items">${n} items</span></th><td class="pn">${f1(obs)}</td><td class="pn">${f1(none)}</td><td class="pn">${f1(head)}</td><td class="pc"><span class="lim-t" aria-hidden="true">${marks}</span></td></tr>`;
+    };
+    $("#lim-price-h").textContent = P.title;
+    $("#lim-price").innerHTML = `<p class="lim-p">${P.text}</p>` +
+      `<table class="lim-pt" aria-label="${qa(P.head)}"><thead><tr><th scope="col"><span class="sr-only">Country</span></th>${P.cols.map((t) => `<th scope="col" class="pn">${t}</th>`).join("")}<th class="pc" aria-hidden="true">${pax}</th></tr></thead><tbody>${P.rows.map(prow).join("")}</tbody></table>` +
+      `<div class="keyrow lim-pkey"><span><i class="lim-k lim-obsk"></i>${P.key.obs}</span><span><i class="lim-k lim-none"></i>${P.key.none}</span><span><i class="lim-k lim-ph"></i>${P.key.head}</span><span><i class="lim-k lim-bandk"></i>${P.key.cal}</span></div>` +
+      `<div class="notes"><p class="notes-label">Notes and sources</p><p>${P.notes}</p></div>`;
+    $("#lim-cav-h").textContent = S0.caveats.title;
+    $("#lim-cav").innerHTML = S0.caveats.items.map(([b, t]) => `<li><b>${b}</b> ${t}</li>`).join("");
+    $("#lim-cav-notes").innerHTML = `<p class="notes-label">Notes and sources</p><p>${S0.caveats.notes}</p>`;
+  }
+
   let regTab = "revenue"; // phones show one of the two registration charts at a time
   function drawPolicy(move) {
     const phone = window.innerWidth <= PHONE;
@@ -1762,7 +1887,7 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeAll(); });
   }
-  const FOLD_DRAW = { compare: () => { drawCompare(); remKey(); }, policy: () => drawPolicy(), paper: () => {} };
+  const FOLD_DRAW = { compare: () => { drawCompare(); remKey(); }, policy: () => drawPolicy(), limits: () => {}, paper: () => {} };
   let foldAnim = null;
   const clipOf = (d) => d.querySelector(".fold-clip");
   function animateFolds(anchor, openId) {
@@ -1864,6 +1989,7 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     drawMini(R);
   }
   function init() {
+    renderLimits();
     buildCountries();
     buildControls();
     buildDrawers();
