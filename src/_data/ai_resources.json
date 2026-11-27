@@ -7701,5 +7701,85 @@
     "featured": false,
     "internal": false,
     "highlight": false
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "furman-ai-could-do-my-first-job-not-my-last",
+    "title": "AI Could Do My First Job. Not My Last.",
+    "url": "https://econvitals.org/posts/2026-11-01-ai-first-job/",
+    "author": "Jason Furman",
+    "date": "2026-11-01",
+    "description": "Former CEA chair Jason Furman estimates that about ten people with AI could now do most of the work of the roughly 35-person Council of Economic Advisers he ran, and that AI could do nearly all of his own Clinton-era junior job. He describes building a tool that drafted a weak but passable 65-page economics paper from a short prompt, weighs evidence on junior employment, and argues that if junior work no longer pays for itself, training the pipeline will need explicit funding through fellowships and grants.",
+    "shortDescription": "Furman: about ten people with AI could do most of a 35-person CEA's work; training junior economists will need explicit funding.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "economics",
+      "policy",
+      "labor",
+      "academia"
+    ],
+    "type": "article"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "goldsmith-pinkham-writing-thinking-ai-assistance",
+    "title": "Writing & Thinking with AI Assistance",
+    "url": "https://paulgp.substack.com/p/writing-and-thinking-with-ai-assistance",
+    "author": "Paul Goldsmith-Pinkham",
+    "date": "2026-04-12",
+    "description": "Part 5 of Goldsmith-Pinkham's series on Claude for empirical research, with a companion video. He separates banal writing (emails, first-pass memos, documentation), where LLMs are an easy win, from writing that is thinking, where offloading is a real risk. His test: can you discuss the ideas in depth without the model? Practical advice includes building a style guide from your own prose, asking for margin comments instead of rewrites, and a skill that turns referee reports into an ordered revision plan.",
+    "shortDescription": "Where LLMs help with writing and where they replace thinking: style guides, margin comments, and a referee-report revision skill.",
+    "category": "Coding with AI",
+    "tags": [
+      "academic writing",
+      "LLM",
+      "research workflow",
+      "Claude"
+    ],
+    "type": "guide"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "heiss-friction-worth-keeping-r-ai-keynote",
+    "title": "Friction Worth Keeping: What Keeps Us Human When AI Makes Everything Easy (R + AI 2026 keynote)",
+    "url": "https://www.andrewheiss.com/blog/2026/11/10/r-ai-keynote-friction/",
+    "author": "Andrew Heiss",
+    "date": "2026-11-10",
+    "description": "Heiss's keynote at the R Consortium's 2026 R + AI conference, posted as a full write-up with slides. He separates incidental friction, which AI should remove, from formative friction that builds learning, taste and trust. Drawing on desirable-difficulties research, he sorts tasks into the gym (learning: keep the struggle), the warehouse (routine work: use the LLM) and recertification (relearning lapsed skills with little AI). A useful framework for teaching and supervising students.",
+    "shortDescription": "Keynote: AI should remove incidental friction but not the formative friction that builds learning, taste and trust.",
+    "category": "Talks & Videos",
+    "tags": [
+      "teaching",
+      "LLM",
+      "learning",
+      "R"
+    ],
+    "type": "other"
+  },
+  {
+    "featured": false,
+    "internal": false,
+    "highlight": false,
+    "id": "newport-good-thing-about-hard-things",
+    "title": "The Good Thing About Hard Things",
+    "url": "https://calnewport.com/the-good-thing-about-hard-things/",
+    "author": "Cal Newport",
+    "date": "2026-10-19",
+    "description": "Cal Newport discusses a new study, \"AI Assistance Reduces Persistence and Hurts Independent Performance,\" in which participants solving fraction problems with ChatGPT did better at first but, once the chatbot was removed, did worse than a control group and skipped more questions. He reads it as evidence that LLMs erode cognitive fitness unusually fast, after only short exposure. Relevant to anyone deciding how much students and RAs should lean on AI.",
+    "shortDescription": "Newport on a study where brief ChatGPT use cut persistence and independent performance once the tool was taken away.",
+    "category": "Commentary & Analysis",
+    "tags": [
+      "learning",
+      "LLM",
+      "teaching",
+      "cognition"
+    ],
+    "type": "article"
   }
 ]
