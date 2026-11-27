@@ -871,7 +871,6 @@ window.Kit = (function () {
     const n = count(P);
     setRoll($("#n-pass"), String(n)); setText($("#n-clear"), String(countClear(P)));
     setHTML($("#lower"), lowerText(moved())); setText($("#n-set"), moved() ? SETTINGS : "");
-    const mm = $("#mini"); setText($("#m-gap"), R.d.gap + "¢"); setText($("#m-uni"), R.du.gap + "¢"); setText($("#m-n"), String(n)); mm.setAttribute("aria-label", `${R.d.gap}¢ poverty gap closed, by universal transfer ${R.du.gap}¢, ${n} of 59 close more. Go to the top`);
   }
   const MORE_LONG = "Closes clearly more of the poverty gap per dollar than a universal transfer";
   const markKey = (tip = GLOSS.unclear, more = "Closes clearly more") => `<span>${mk("more", true)}${more}</span><span>${mk("unclear", true)}<span class="term" tabindex="0" data-tip="${tip.replace(/"/g, "&quot;")}">No clear difference</span></span><span>${mk("less", false)}Closes clearly less</span>`;
@@ -1180,18 +1179,12 @@ window.Kit = (function () {
       $(rs).addEventListener("click", () => { const f = document.activeElement === $(rs); S[key] = null; Kit.update(); if (f) r.focus({ preventScroll: true }); });
     });
   }
-  function buildMini() {
-    const bar = $("#mini"), seen = new Map(), upd = () => bar.classList.toggle("on", !!seen.get("controls") && seen.get("result") === false), steps = d3.range(0, 1.01, 0.05);
-    const io = (id, m, test) => new IntersectionObserver((es) => { es.forEach((e) => seen.set(id, e.isIntersecting && test(e))); upd(); }, { rootMargin: m, threshold: steps }).observe($("#" + id));
-    io("controls", "-96px 0px -70px 0px", (e) => e.intersectionRect.height >= 24); io("result", "-92px 0px 0px 0px", (e) => e.intersectionRatio >= 0.95);
-    bar.addEventListener("click", () => window.scrollTo({ top: Math.max(0, $("#h-dollar").getBoundingClientRect().top + window.scrollY - 96), behavior: dur(1) ? "smooth" : "auto" }));
-  }
   const fromHash = () => { const h = location.hash.slice(1); if (byId.has(h)) { if (h !== S.p) S.a = null; S.p = h; return true; } return false; };
   function boot() {
     $$("#prev, #next").forEach((b) => b.addEventListener("click", () => step(b.id === "prev" ? -1 : 1)));
     $("#case").addEventListener("keydown", (e) => { const d = { ArrowLeft: -1, ArrowRight: 1 }[e.key]; if (d) { e.preventDefault(); step(d); } });
     $("#cmp").addEventListener("click", () => { S.cmp = !S.cmp; Kit.update(); }); $("#to-explain").addEventListener("click", toExplain); buildExplain();
-    Pick.build(); buildSliders(); buildMini(); dotsKey(); dotPicker($("#scat"), () => SC); dotPicker($("#dots"), () => DT); keyPicker(); if (window.ResizeObserver) new ResizeObserver(centreNum).observe($("#n-text"));
+    Pick.build(); buildSliders(); dotsKey(); dotPicker($("#scat"), () => SC); dotPicker($("#dots"), () => DT); keyPicker(); if (window.ResizeObserver) new ResizeObserver(centreNum).observe($("#n-text"));
     window.addEventListener("hashchange", () => { Pick.close(); if (!location.hash) { if (S.p !== DATA.meta.default) S.a = null; S.p = DATA.meta.default; } else if (!fromHash()) return; Kit.update(); });
   }
   fromHash();
