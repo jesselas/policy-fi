@@ -376,7 +376,7 @@ window.Kit = (function () {
     const folds = $$("details.fold"), sum = anchor.querySelector("summary"), root = document.documentElement;
     const before = sum.getBoundingClientRect().top, scroll0 = window.scrollY;
     const from = folds.map((d) => (d.open ? clipOf(d).getBoundingClientRect().height : 0));
-    const height = (d, h) => { const c = clipOf(d); c.style.height = h === null ? "" : h + "px"; c.style.overflow = h === null ? "" : "hidden"; };
+    const height = (d, h) => { const c = clipOf(d); c.style.height = h === null ? "" : h + "px"; c.style.clipPath = h === null ? "" : "inset(0 -100vw)"; };
     folds.forEach((d, k) => { d.classList.toggle("on", d.id === openId); if (d.id === openId) d.open = true; height(d, d.open ? from[k] : null); });
     if (openId && O.folds[openId]) O.folds[openId]();
     const to = folds.map((d) => (d.id === openId ? clipOf(d).firstElementChild.getBoundingClientRect().height : 0));
