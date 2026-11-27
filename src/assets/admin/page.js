@@ -260,7 +260,9 @@ window.Kit = (function () {
     left = Math.max(m, Math.min(left, vw - w - m)); top = Math.max(8, Math.min(top, vh - h - 8));
     return [left, top];
   }
-  const TIP = { el: null, want: null, showT: 0, hideT: 0, offT: 0, lastHide: -1e9, muted: null };
+  const TIP = { el: null, want: null, showT: 0, hideT: 0, offT: 0, lastHide: -1e9, muted: null, pin: null, lastBox: null, wx: 0, wy: 0, quick: false };
+  const isText = (el) => el.classList.contains("term") || el.hasAttribute("data-slow");
+  const boxOf = (el) => (el.closest && el.closest("svg, table")) || null;
   const isCtl = (el) => !el.classList.contains("term") && !!el.closest("button, summary, a[href], input, label");
   function openTip(el, x, y) {
     const t = tipEl(), html = el.getAttribute("data-tip");
@@ -275,14 +277,15 @@ window.Kit = (function () {
     moveTip(l, tp, jump);
     if (jump) { t.classList.remove("on"); t.classList.add("jump"); void t.offsetWidth; }
     t.classList.remove("jump"); t.classList.add("on");
-    TIP.el = el; TIP.want = null;
+    TIP.el = el; TIP.want = null; TIP.pin = null;
   }
-  function closeTip(now) {
+  function closeTip(now, keep) {
     const t = tipEl();
-    clearTimeout(TIP.showT); clearTimeout(TIP.hideT); clearTimeout(TIP.offT);
-    TIP.want = null;
+    clearTimeout(TIP.hideT); clearTimeout(TIP.offT);
+    if (!keep) { clearTimeout(TIP.showT); TIP.want = null; }
+    TIP.pin = null;
     if (!t || t.hidden) { TIP.el = null; return; }
-    if (TIP.el) TIP.lastHide = performance.now();
+    if (TIP.el) { TIP.lastHide = performance.now(); TIP.lastBox = boxOf(TIP.el); }
     TIP.el = null;
     t.classList.remove("on");
     if (now || RM.matches) t.hidden = true; else TIP.offT = setTimeout(() => { t.hidden = true; }, 240);
@@ -310,15 +313,17 @@ window.Kit = (function () {
       if (el && el === TIP.muted) return;
       if (!el) {
         clearTimeout(TIP.showT); TIP.want = null;
-        if (TIP.el && !TIP.leaving) { TIP.leaving = true; const same = TIP.el.ownerSVGElement && e.target.closest && e.target.closest("svg") === TIP.el.ownerSVGElement; TIP.hideT = setTimeout(() => { TIP.leaving = false; closeTip(); }, same ? 320 : 140); }
+        if (TIP.el && !TIP.leaving && TIP.pin !== TIP.el) { TIP.leaving = true; const same = TIP.el.ownerSVGElement && e.target.closest && e.target.closest("svg") === TIP.el.ownerSVGElement; TIP.hideT = setTimeout(() => { TIP.leaving = false; closeTip(); }, same ? 320 : 140); }
         return;
       }
       clearTimeout(TIP.hideT); TIP.leaving = false;
-      if (el === TIP.want) return;
-      clearTimeout(TIP.showT); TIP.want = el;
-      const warm = TIP.el || performance.now() - TIP.lastHide < 300, ctl = isCtl(el);
-      const wait = ctl ? 650 : warm ? 40 : el.classList.contains("term") ? 200 : 110;
-      if (ctl && TIP.el) TIP.hideT = setTimeout(() => closeTip(), 80);
+      if (el === TIP.want && (TIP.quick || Math.hypot(e.clientX - TIP.wx, e.clientY - TIP.wy) <= 4)) return;
+      clearTimeout(TIP.showT); TIP.want = el; TIP.wx = e.clientX; TIP.wy = e.clientY;
+      const ctl = isCtl(el) && !isText(el), box = boxOf(el);
+      const warm = !ctl && !!box && ((TIP.el && boxOf(TIP.el) === box) || (performance.now() - TIP.lastHide < 300 && TIP.lastBox === box));
+      const wait = ctl ? 700 : warm ? 40 : isText(el) ? 450 : 150;
+      TIP.quick = warm;
+      if (TIP.el && !warm && TIP.pin !== TIP.el) TIP.hideT = setTimeout(() => closeTip(false, true), ctl ? 80 : 140);
       const x = e.clientX, y = e.clientY;
       TIP.showT = setTimeout(() => { if (TIP.want === el && el.isConnected) openTip(el, x, y); }, wait);
     };
@@ -326,7 +331,11 @@ window.Kit = (function () {
     document.documentElement.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") closeTip(); });
     document.addEventListener("pointerdown", (e) => {
       let el = e.target.closest && e.target.closest("[data-tip]");
-      if (e.pointerType === "mouse") { if ((el && !isCtl(el)) || (e.target.closest && e.target.closest("svg[data-reach]"))) return; TIP.muted = el; closeTip(); return; }
+      if (e.pointerType === "mouse") {
+        if (TIP.pin && TIP.pin !== el) closeTip();
+        if (el && isText(el) && el.getAttribute("data-tip")) { if (TIP.pin === el) { TIP.muted = el; closeTip(); } else { if (TIP.el !== el) openTip(el, e.clientX, e.clientY); TIP.pin = el; } return; }
+        if ((el && !isCtl(el)) || (e.target.closest && e.target.closest("svg[data-reach]"))) return; TIP.muted = el; closeTip(); return;
+      }
       const sv = !el && e.target.closest && e.target.closest("svg[data-reach]"); if (sv) el = markAt(e, +sv.dataset.reach);
       TIP.tap = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now(), el, was: TIP.el };
     }, { passive: true });
@@ -692,14 +701,14 @@ window.Kit = (function () {
     const tips = [
       [tip("Benefits", "Total cost less administration.", SOFTKEY, (d) => 100 - d.adm), tip("Administration", "The share of total cost spent on administration." + (R.p.imputed ? " The cost estimate is imputed." : ""), key3("c2"), (d) => d.adm)],
       [tip("To the poor", "Benefits to people who are poor without the programme.", SOFTKEY, (d) => 100 - d.adm - d.np, `Share of benefits reaching the poor: ${pct0(R.p.V)}%${cmp ? `, universal transfer ${pct0(R.p.V_u)}%` : ""}. ${flagShort(R.p)}`), tip("To people who aren’t poor", "Benefits to people above the poverty line without the programme.", HATCHKEY, (d) => d.np)],
-      [tip("Poverty gap closed", "The fall in the total distance of poor people to the poverty line.", key3("c1"), (d) => d.gap, R.p.region === "EG" ? EGLINE : ""), tip("Spillover above the line", "Benefits to the poor beyond what they need to reach the line.", key3("c3"), (d) => d.sp)],
+      [tip("Poverty gap closed", "The fall in the total distance of poor people to the poverty line.", key3("c1"), (d) => d.gap, R.p.region === "EG" ? EGLINE : ""), tip("Spillover above the line", "Benefits to the poor beyond what they need to reach the line.", key3("c3"), (d) => d.sp, cmp ? "A universal transfer spreads the money over everyone. Almost no one gets enough to cross the line." : "")],
     ];
     const hits = steps.flatMap((d) => [0, 1].flatMap((k) => [
       { k: `l${d.i}${k}`, d, t: tips[d.i][k], x: room[d.i][2 * k], w: room[d.i][2 * k + 1], y: d.y, h: top - 1, f: 1 },
       { k: `p${d.i}${k}`, d, t: tips[d.i][k], x: k ? x(d.p[0]) : x(0), w: w(d.p[k]), y: d.y + top, h: bh + 1 },
       { k: `u${d.i}${k}`, d, t: cmp ? tips[d.i][k] : null, x: k ? x(d.u[0]) : x(0), w: w(d.u[k]), y: d.y + ty - 2, h: th + 4 },
     ])).concat([{ k: "g0", x: ux - 5, w: 10, y: y0, h: yb + 18 - y0 }, { k: "g1", x: right ? ux : ux - 12 - ulab.w - L.unw, w: 12 + ulab.w + L.unw, y: yb + 3, h: 17 }].map((d) => ({ ...d, t: cmp ? tips[2][0] : null })));
-    root.selectAll("rect.hit").data(hits, (d) => d.k).join("rect").attr("class", "hit").attr("tabindex", (d) => (d.f ? 0 : null)).attr("x", (d) => d.x).attr("width", (d) => d.w).attr("y", (d) => d.y).attr("height", (d) => d.h).style("pointer-events", (d) => (d.t ? null : "none")).attr("data-tip", (d) => (d.w >= 3 ? d.t : null)).raise();
+    root.selectAll("rect.hit").data(hits, (d) => d.k).join("rect").attr("class", "hit").attr("tabindex", (d) => (d.f ? 0 : null)).attr("data-slow", (d) => (d.f ? "" : null)).attr("x", (d) => d.x).attr("width", (d) => d.w).attr("y", (d) => d.y).attr("height", (d) => d.h).style("pointer-events", (d) => (d.t ? null : "none")).attr("data-tip", (d) => (d.w >= 3 ? d.t : null)).raise();
     svg.setAttribute("aria-label", `One dollar of total cost, ${n}: ${R.d.adm}¢ administration, ${R.d.np}¢ to people who aren’t poor, ${R.d.sp}¢ spillover above the line, ${R.d.gap}¢ poverty gap closed.${cmp ? ` Universal transfer: ${R.du.gap}¢ poverty gap closed.` : ""}`);
     setText($("#k-name"), "· " + n);
     setText($("#r-gap"), R.d.gap + "¢"); setText($("#r-uni"), R.du.gap + "¢");
