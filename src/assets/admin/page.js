@@ -321,7 +321,7 @@ window.Kit = (function () {
       clearTimeout(TIP.showT); TIP.want = el; TIP.wx = e.clientX; TIP.wy = e.clientY;
       const ctl = isCtl(el) && !isText(el), box = boxOf(el);
       const warm = !ctl && !!box && ((TIP.el && boxOf(TIP.el) === box) || (performance.now() - TIP.lastHide < 300 && TIP.lastBox === box));
-      const wait = ctl ? 700 : warm ? 40 : isText(el) ? 450 : 150;
+      const wait = ctl ? 800 : warm ? 40 : isText(el) ? 600 : 400;
       TIP.quick = warm;
       if (TIP.el && !warm && TIP.pin !== TIP.el) TIP.hideT = setTimeout(() => closeTip(false, true), ctl ? 80 : 140);
       const x = e.clientX, y = e.clientY;
@@ -1061,7 +1061,7 @@ window.Kit = (function () {
   };
   const XROWS = [
     ["all", `All ${DF.n} programmes`, "", `Administration accounts for almost none of the differences, and the share of benefits reaching the poor for ${fmt(DF.all.V.v)}%.`],
-    ["between", "Between countries", `${DF.between_share}% of the variation`, "Compares country averages. Poverty rates, from 7 to 80% across the 13 countries, account for about all of the differences. Whom the programmes pay makes them smaller, though its 95% interval includes zero."],
+    ["between", "Between countries", `${DF.between_share}% of the variation`, "Compares country averages. Poverty rates, from 7 to 80% across the 13 countries, account for nearly all of the differences. Whom the programmes pay makes them smaller, though its 95% interval includes zero."],
     ["within", "Within countries", `${DF.within_share}% of the variation`, `Compares programmes within a country, where the poverty rate is nearly the same. Whom the programme pays accounts for ${fmt(DF.within.adv.v)}%, and administration for ${fmt(DF.within.a.v)}%.`],
   ];
   const ciOf = (q) => `95% interval from resampling countries: ${fmt(q.countries[0])} to ${fmt(q.countries[1])}%.`;
@@ -1127,9 +1127,9 @@ window.Kit = (function () {
       <p>Choosing who receives a benefit, paying it out, and monitoring it take money that could reach poor people. Studies tend to report these costs as shares of spending, often for single programmes, and say little about what they mean for poverty.</p>
       <p>The paper behind this page combines cost estimates for 59 programmes (Zasova et al. 2026) with tax-benefit models of 13 countries in Africa and Latin America. It asks how much administrative costs limit what benefits do for poverty, and whether programmes do better than a universal transfer, which pays everyone the same.</p>
       <p>It brings administrative costs into the measurement of poverty reduction with one method for all programmes, proposes a break-even administrative cost share, which shows how much overhead a programme can bear, and compares programmes as designed with the recipients that surveys report.</p>
-      <p>Administration takes ${G.SSA.whole}% of total cost in Sub-Saharan Africa and ${G.LA.whole}% in Latin America, yet explains almost none of the differences between programmes in the poverty gap (poor people’s total distance to the poverty line) closed per dollar. The share of benefits reaching the poor explains most of them. Of the 59, ${C.main.pass} close more per dollar than a universal transfer, including ${DATA.types[0].pass} of ${DATA.types[0].n} cash transfers targeted by proxy-means tests or communities. Most in-kind and categorical programmes don’t.</p>
+      <p>Administrative costs are ${G.SSA.whole}% of total cost in Sub-Saharan Africa and ${G.LA.whole}% in Latin America, yet explain almost none of the differences between programmes in the poverty gap (poor people’s total distance to the poverty line) closed per dollar. The share of benefits reaching the poor explains most of them. Of the 59, ${C.main.pass} close more per dollar than a universal transfer, including ${DATA.types[0].pass} of ${DATA.types[0].n} cash transfers targeted by proxy-means tests or communities. Most in-kind and categorical programmes don’t.</p>
       <p>The page follows one dollar of a programme’s total cost and shows how high its administrative cost share could be before a universal transfer does better. Choose a programme at the top and move the cost shares. Next: why programmes differ, and which ones close more than a universal transfer. Below: what explains the differences, all programmes, countries, and limits.</p>
-      <p>The universal transfer is a yardstick. We don’t propose it as a policy at the programme’s scale. Poverty line: $3.00 a day (2021 PPP), and in Egypt a line calibrated to the national poverty rate. Hover over or tap charts and dotted terms for values and definitions.</p>` }),
+      <p>The universal transfer is a benchmark for comparison. We don’t propose it as a policy at the programme’s scale. Poverty line: $3.00 a day (2021 PPP), and in Egypt a line calibrated to the national poverty rate. Hover over or tap charts and dotted terms for values and definitions.</p>` }),
     measure: () => ({ title: "One dollar of total cost", src: "Paper, Section 2 and Table A1; other numbers: authors’ calculations", html: `
       <p>The poverty gap closed per dollar of total cost (benefits plus administration) is</p>
       <div class="eq"><span>${PRE} = (1 − <i>a</i>) · <i>V</i> · (1 − <i>S</i>)</span><span class="lab">Eq. (2)</span></div>
