@@ -7581,5 +7581,125 @@
     "featured": false,
     "internal": false,
     "highlight": false
+  },
+  {
+    "id": "bastani-graetz-pla-skans-ai-automation-fiscal-pressure",
+    "title": "AI, Automation, and Fiscal Pressure (arXiv)",
+    "url": "https://arxiv.org/abs/2611.34234",
+    "author": "Spencer Bastani, Georg Graetz, Bernat Pla, Oskar N. Skans",
+    "date": "2026-11-25",
+    "description": "A two-sector general equilibrium model with task-level automation, calibrated to EU countries, asking what AI does to public finances where labor is taxed more heavily than capital and services are tax-funded. Automation shifts income toward lightly taxed capital, so deficits grow at unchanged tax rates even if the public sector automates as fast as the private one. In the EU-27 benchmark the deficit rises by nearly one percentage point of value added while output rises about twelve percent.",
+    "shortDescription": "Calibrated EU model: automation shifts income to lightly taxed capital, raising deficits ~1pp of value added even as output grows ~12%.",
+    "category": "Research Papers",
+    "tags": [
+      "public finance",
+      "automation",
+      "taxation",
+      "macroeconomics"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "rost-stephany-will-ai-replace-juniors",
+    "title": "Will AI Replace Juniors? How Task Complexity Reduces Automation Risk (arXiv)",
+    "url": "https://arxiv.org/abs/2611.34099",
+    "author": "Vincent Rost, Fabian Stephany",
+    "date": "2026-11-25",
+    "description": "A pre-registered survey experiment with managers at 1,435 German firms in the information economy and manufacturing, randomly framing a long-term capacity need as either standardized or complex tasks. For complex tasks requiring judgment and contextual knowledge, managers are less willing to use AI instead of hiring an entry-level employee and place more weight on human oversight. Before treatment, managers expected AI to cut entry-level hiring more than experienced hiring.",
+    "shortDescription": "Survey experiment with 1,435 German firms: managers are less willing to substitute AI for entry-level hires when tasks are complex.",
+    "category": "Research Papers",
+    "tags": [
+      "labor markets",
+      "entry-level workers",
+      "survey experiment",
+      "automation"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "levy-yeyati-burning-the-bridge-agentification",
+    "title": "Burning the Bridge: Agentification and Domestic Value Added (arXiv)",
+    "url": "https://arxiv.org/abs/2611.31518",
+    "author": "Eduardo Levy Yeyati",
+    "date": "2026-11-23",
+    "description": "A small-open-economy model of firms replacing local work with foreign AI agents: output per paid hour rises but domestic income can fall. Once wages hit a reservation floor, more agent use in local services lowers domestic income, and value added can fall if suppliers capture enough of the savings. Calibrated to Brazilian and Mexican accounts, the paper derives the export growth needed to pay for agents while preserving income and consumption.",
+    "shortDescription": "Open-economy model: replacing local work with foreign AI agents can shrink domestic value added; calibrated to Brazil and Mexico.",
+    "category": "Research Papers",
+    "tags": [
+      "AI agents",
+      "international trade",
+      "development",
+      "macroeconomics"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "mohnen-gans-ai-quest-for-knowledge-alphafold2",
+    "title": "How AI Impacts the Quest for Knowledge: Evidence from AlphaFold2 (NBER)",
+    "url": "https://www.nber.org/papers/w36045",
+    "author": "Myra Mohnen, Joshua S. Gans",
+    "date": "2026-11",
+    "description": "Uses AlphaFold2 as a test case for whether AI pushes scientists toward new questions or deeper work on known ones. Linking 530,471 proteins to experiments from 2017 to 2025, the authors compare activity after the 2021 release across proteins with differing prediction confidence. More confident predictions meant fewer first-time structures for proteins without known relatives and more follow-up work on known structures, suggesting AI deepens existing knowledge more than it widens it.",
+    "shortDescription": "AlphaFold2 evidence on 530k proteins: confident AI predictions shifted science from new structures toward follow-up work on known ones.",
+    "category": "Research Papers",
+    "tags": [
+      "science of science",
+      "innovation",
+      "knowledge production",
+      "difference-in-differences"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "jones-tonetti-past-automation-future-ai-weak-links",
+    "title": "Past Automation and Future AI: How Weak Links Tame the Growth Explosion (NBER)",
+    "url": "https://www.nber.org/papers/w36050",
+    "author": "Charles I. Jones, Christopher Tonetti",
+    "date": "2026-11",
+    "description": "Task-based growth accounting finds that capital's task productivity in the U.S. has grown roughly 5 percentage points a year faster than labor's, so much of automation's historical benefit came from fast-improving machines replacing slow-improving humans across more tasks. The authors use these measurements to calibrate a growth model in which goods and idea production are progressively automated: growth accelerates and may explode, but weak-link tasks still done by labor slow it.",
+    "shortDescription": "Growth accounting plus a calibrated model: AI automation can accelerate growth, but weak-link tasks still done by labor slow the explosion.",
+    "category": "Research Papers",
+    "tags": [
+      "economic growth",
+      "automation",
+      "growth accounting",
+      "macroeconomics"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
+  },
+  {
+    "id": "kansoy-can-a-language-model-write-like-an-economist",
+    "title": "Can a Language Model Write Like an Economist? (working paper)",
+    "url": "https://fatih.ai/ai_economist.pdf",
+    "author": "Fatih Kansoy",
+    "date": "2026-11",
+    "description": "Asks whether LLM-edited prose can pass as economists' own writing. Even with detailed rules and examples, outside judges usually told frontier-model revisions from authors' paragraphs. The paper fine-tunes an open model on 5,267 draft/author pairs, then trains it adversarially against a co-trained judge, cutting detectability; blind checks show the trained writers alter claims more often, so authors must verify meaning. Code and evaluation data are public on GitHub.",
+    "shortDescription": "Fine-tunes an open model adversarially to write like economists; detection drops, but rewrites alter claims more often, so authors must check.",
+    "category": "Research Papers",
+    "tags": [
+      "academic writing",
+      "LLM",
+      "fine-tuning",
+      "replication package"
+    ],
+    "type": "paper",
+    "featured": false,
+    "internal": false,
+    "highlight": false
   }
 ]
