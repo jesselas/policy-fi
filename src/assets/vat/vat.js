@@ -1794,15 +1794,25 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     left = Math.max(8, Math.min(left, vw - w - 8)); top = Math.max(8, Math.min(top, vh - h - 8));
     return [left, top];
   }
-  const TIP = { el: null, want: null, showT: 0, hideT: 0, offT: 0, lastHide: -1e9, muted: null, pin: null, lastBox: null, wx: 0, wy: 0, quick: false };
+  const TIP = { el: null, want: null, showT: 0, hideT: 0, offT: 0, lastHide: -1e9, muted: null, pin: null, lastEl: null, wx: 0, wy: 0, quick: false, staleT: 0 };
   const isText = (el) => el.classList.contains("term") || el.hasAttribute("data-slow");
   const boxOf = (el) => (el.closest && el.closest("svg, table")) || null;
+  const near = (el) => {
+    const ref = TIP.el || (performance.now() - TIP.lastHide < 400 ? TIP.lastEl : null);
+    if (!ref || !ref.isConnected || ref === TIP.muted || ref === TIP.pin) return false;
+    const box = boxOf(el), rb = boxOf(ref); if (box || rb) return box === rb; // charts and tables: only within the same one
+    if (kind(el) !== kind(ref)) return false; // elsewhere: the next button of a group, the next word, at most 24 px away
+    const a = ref.getBoundingClientRect(), b = el.getBoundingClientRect();
+    return Math.hypot(Math.max(a.left - b.right, b.left - a.right, 0), Math.max(a.top - b.bottom, b.top - a.bottom, 0)) <= 24;
+  };
+  const kind = (el) => (isText(el) ? "w" : isCtl(el) ? "c" : "m");
+  const within = (el, e, d) => { const r = el.getBoundingClientRect(); return e.clientX >= r.left - d && e.clientX <= r.right + d && e.clientY >= r.top - d && e.clientY <= r.bottom + d; };
   const isCtl = (el) => !!el.closest("button, summary, a, input, label");
   function openTip(el, x, y) {
     const t = tipEl(), html = el.getAttribute("data-tip");
     if (!html) return;
-    clearTimeout(TIP.showT); clearTimeout(TIP.hideT); clearTimeout(TIP.offT);
-    const fresh = t.hidden || !t.classList.contains("on");
+    clearTimeout(TIP.showT); clearTimeout(TIP.hideT); clearTimeout(TIP.offT); clearTimeout(TIP.staleT); TIP.staleT = 0;
+    const fresh = t.hidden; // one still fading out comes back from where it is
     if (t.dataset.src !== html || t.hidden) { t.innerHTML = html; t.dataset.src = html; tipLines(t); }
     t.hidden = false;
     t.classList.toggle("tip-narrow", el.classList.contains("hit"));
@@ -1815,14 +1825,14 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
   }
   function closeTip(now, keep) {
     const t = tipEl();
-    clearTimeout(TIP.hideT); clearTimeout(TIP.offT);
+    clearTimeout(TIP.hideT); clearTimeout(TIP.offT); clearTimeout(TIP.staleT); TIP.staleT = 0;
     if (!keep) { clearTimeout(TIP.showT); TIP.want = null; }
     TIP.pin = null;
     if (!t || t.hidden) { TIP.el = null; return; }
-    if (TIP.el) { TIP.lastHide = performance.now(); TIP.lastBox = boxOf(TIP.el); }
+    if (TIP.el) { TIP.lastHide = now ? -1e9 : performance.now(); TIP.lastEl = TIP.el; }
     TIP.el = null;
     t.classList.remove("on");
-    if (now || RM.matches) t.hidden = true; else TIP.offT = setTimeout(() => { t.hidden = true; }, 240);
+    if (now || RM.matches) t.hidden = true; else TIP.offT = setTimeout(() => { t.hidden = true; }, 130);
   }
   function markAt(e) {
     const direct = e.target.closest && e.target.closest("[data-tip]");
@@ -1840,34 +1850,38 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
   function buildTips() {
     const onMove = (e) => {
       if (e.pointerType !== "mouse" || e.buttons) return;
-      const el = markAt(e);
+      if (TIP.pin && TIP.el === TIP.pin) return; // a tooltip opened by a click stays until a click: hovering doesn’t replace it
+      let el = markAt(e);
+      if (TIP.el && el !== TIP.el && TIP.el.isConnected && within(TIP.el, e, 4)) el = TIP.el;
       if (TIP.muted && el !== TIP.muted) TIP.muted = null;
-      if (el && el === TIP.el) { TIP.leaving = false; clearTimeout(TIP.hideT); clearTimeout(TIP.showT); TIP.want = null; return; }
+      if (el && el === TIP.el) { TIP.leaving = false; clearTimeout(TIP.hideT); clearTimeout(TIP.showT); clearTimeout(TIP.staleT); TIP.staleT = 0; TIP.want = null; return; }
       if (el && el === TIP.muted) return;
       if (!el) {
         clearTimeout(TIP.showT); TIP.want = null;
-        if (TIP.el && !TIP.leaving && TIP.pin !== TIP.el) { TIP.leaving = true; const same = TIP.el.ownerSVGElement && e.target.closest && e.target.closest("svg") === TIP.el.ownerSVGElement; TIP.hideT = setTimeout(() => { TIP.leaving = false; closeTip(); }, same ? 320 : 140); }
+        if (TIP.el && !TIP.leaving) { TIP.leaving = true; const same = TIP.el.ownerSVGElement && e.target.closest && e.target.closest("svg") === TIP.el.ownerSVGElement; TIP.hideT = setTimeout(() => { TIP.leaving = false; closeTip(); }, same ? 150 : 60); }
         return;
       }
       clearTimeout(TIP.hideT); TIP.leaving = false;
-      if (el === TIP.want && (TIP.quick || Math.hypot(e.clientX - TIP.wx, e.clientY - TIP.wy) <= 4)) return;
+      if (el === TIP.want && Math.hypot(e.clientX - TIP.wx, e.clientY - TIP.wy) <= (TIP.quick ? 6 : 4)) return;
       clearTimeout(TIP.showT); TIP.want = el; TIP.wx = e.clientX; TIP.wy = e.clientY;
-      const ctl = isCtl(el) && !isText(el), box = boxOf(el);
-      const warm = !ctl && !!box && ((TIP.el && boxOf(TIP.el) === box) || (performance.now() - TIP.lastHide < 300 && TIP.lastBox === box));
-      const wait = ctl ? 800 : warm ? 40 : isText(el) ? 600 : 400; // controls, the same chart, words, marks
+      const box = boxOf(el);
+      if (TIP.el && ((TIP.el.getAttribute("data-tip") === el.getAttribute("data-tip") && near(el)) || (box && box.tagName.toLowerCase() === "svg" && box === boxOf(TIP.el) && kind(el) === "m" && kind(TIP.el) === "m"))) { openTip(el, e.clientX, e.clientY); return; }
+      const ctl = isCtl(el) && !isText(el), warm = near(el);
+      const wait = warm ? 50 : ctl ? 800 : isText(el) ? 600 : 400; // nearby, controls, words, marks
       TIP.quick = warm;
-      if (TIP.el && !warm && TIP.pin !== TIP.el) TIP.hideT = setTimeout(() => closeTip(false, true), ctl ? 80 : 140);
+      if (TIP.el && !TIP.staleT) TIP.staleT = setTimeout(() => { TIP.staleT = 0; closeTip(false, true); }, warm ? 150 : 60);
       const x = e.clientX, y = e.clientY;
       TIP.showT = setTimeout(() => { if (TIP.want === el && el.isConnected) openTip(el, x, y); }, wait);
     };
     document.addEventListener("pointermove", onMove, { passive: true });
     document.documentElement.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") closeTip(); });
     document.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse") TIP.tapped = performance.now(); // the focus change that follows a click doesn’t close the tooltip
       const el = e.target.closest && e.target.closest("[data-tip]");
       if (e.pointerType === "mouse") {
         if (TIP.pin && TIP.pin !== el) closeTip();
         if (el && isText(el) && el.getAttribute("data-tip")) { if (TIP.pin === el) { TIP.muted = el; closeTip(); } else { if (TIP.el !== el) openTip(el, e.clientX, e.clientY); TIP.pin = el; } return; }
-        if (el && !isCtl(el)) return; TIP.muted = el; closeTip(); return;
+        if (el && !isCtl(el)) return; TIP.muted = el; closeTip(true); return;
       }
       TIP.tap = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now(), el, was: TIP.el };
     }, { passive: true });
@@ -1882,9 +1896,9 @@ ${tbl(["Sourcing", "Gain removed (%)", "Shortfall (%)"], rows.map(([n, a, b], i)
     window.addEventListener("scroll", () => closeTip(true), { passive: true });
     document.addEventListener("focusin", (e) => {
       const el = e.target.closest && e.target.closest("[data-tip]");
-      if (el && el.getAttribute("data-tip") && el.matches(":focus-visible") && el !== TIP.muted) { clearTimeout(TIP.showT); TIP.want = el; TIP.showT = setTimeout(() => { if (document.activeElement === el) openTip(el, null, null); }, isCtl(el) ? 650 : 80); }
+      if (el && el.getAttribute("data-tip") && el.matches(":focus-visible") && el !== TIP.muted) { clearTimeout(TIP.showT); TIP.want = el; TIP.showT = setTimeout(() => { if (document.activeElement === el) openTip(el, null, null); }, TIP.el || performance.now() - TIP.lastHide < 150 ? 30 : isCtl(el) ? 650 : 80); }
     });
-    document.addEventListener("focusout", () => { if (performance.now() - TIP.tapped > 600 || !TIP.tapped) closeTip(); });
+    document.addEventListener("focusout", () => { if (TIP.pin) return; if (performance.now() - TIP.tapped > 600 || !TIP.tapped) closeTip(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" || e.key === "Enter" || e.key === " " || e.key.startsWith("Arrow")) { TIP.muted = isCtl(e.target) ? e.target : null; closeTip(); } });
   }
   function buildPops() {
