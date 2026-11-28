@@ -853,6 +853,7 @@ window.Kit = (function () {
   }
   const MORD = (p) => ({ more: 0, unclear: passes(p) ? 1 : 2, less: 3 })[verdict(p)];
   const RANK = new Map(DATA.types.map((t) => [t.id, P.filter((p) => p.type === t.id).sort((a, b) => MORD(a) - MORD(b) || ((1 - b.a) * b.PRE0) / b.PRE0_u - ((1 - a.a) * a.PRE0) / a.PRE0_u || a.order - b.order)]));
+  const ALLRANK = new Map(DATA.types.map((t) => [t.id, RANK.get(t.id).slice().sort((a, b) => MORD(a) - MORD(b) || (star(b) ?? -Infinity) - (star(a) ?? -Infinity) || a.order - b.order)]));
   let DT = null;
   function drawDots(R) {
     const svg = $("#dots"), H = Math.round(5 * L.dotRow), W = size(svg, H), g = d3.select(svg), two = L.two, fs = W < 340 ? 11.5 : 12;
@@ -1017,7 +1018,7 @@ window.Kit = (function () {
       $("#all-key").innerHTML = `<span class="kmarks">${markKey(undefined, MORE_LONG)}</span><span class="kbr" aria-hidden="true"></span><span class="ksyms"><span><i class="tri"></i>Estimated share</span><span><i class="dia"></i>Break-even share</span></span>`;
       const tick = [0, 0.2, 0.4, 0.6, 0.8], axis = `<div class="prow paxis" aria-hidden="true"><span></span><span></span><span class="pl">${tick.map((t) => `<i class="${t === 0.2 || t === 0.6 ? "mid" : ""}" style="left:${pos(t)}%">${Math.round(100 * t)}%</i>`).join("")}</span></div>`;
       const grid = tick.map((t) => `<u style="left:${pos(t)}%"></u>`).join("");
-      box.innerHTML = [["PCT", "MT", "PW"], ["CAT", "INK"]].map((col) => `<div class="pcol">${col.map((t) => `<section class="psec" style="order:${DATA.types.findIndex((q) => q.id === t)}"><h4>${TYPE[t]}</h4>${axis}${RANK.get(t).map((p) => {
+      box.innerHTML = [["PCT", "MT", "PW"], ["CAT", "INK"]].map((col) => `<div class="pcol">${col.map((t) => `<section class="psec" style="order:${DATA.types.findIndex((q) => q.id === t)}"><h4>${TYPE[t]}</h4>${axis}${ALLRANK.get(t).map((p) => {
         const s = star(p), clip = s === null || s < lo, sx = clip ? 0 : pos(s), ax = pos(p.a);
         return `<button class="prow" type="button" data-id="${p.id}" data-tip="${`<b>${withCountry(p, p.name)}</b>${tipTable([["var(--c2-edge)", "Estimated share", p.printed.a + "%"]].concat(p.as === null ? [] : [["var(--ink)", "Break-even share", p.printed.as + "%"]]))}${p.as === null ? "No break-even share. The programme reaches no poor people in the data." : ""}`.replace(/"/g, "&quot;")}"><span class="mkbox">${mkOf(p)}</span><span class="nm">${p.base}<small><span class="lg">, </span>${p.country}</small></span><span class="pl">${grid}${s === null ? "" : `<b class="ln" style="left:${Math.min(sx, ax)}%;width:${Math.abs(sx - ax)}%"></b>`}${s === null ? "" : clip ? `<i class="clip" style="left:0"></i>` : `<i class="dia" style="left:${sx}%"></i>`}<i class="tri" style="left:${ax}%"></i></span><span class="sr-only">, estimated share ${p.printed.a}%, ${starWords(p)}, ${WORD[verdict(p)]}</span></button>`; }).join("")}</section>`).join("")}</div>`).join("");
       box.addEventListener("click", (e) => { const b = e.target.closest("button.prow"); if (!b) return; choose(b.dataset.id); Kit.backToMain(); });
